@@ -768,7 +768,7 @@
         "uuid": "4421edd3-111c-4598-ae8a-42354541d0a6"
       }
     ],
-    "used_designators": "Cres1,SLAVEHIGH1,Ql1-2,Masterinductor1,Qh1-2,Css1,Cbst1-2,SLAVELOW1,Cin1-3,MASTERHIGH1,Q2,Cvcc1-2,Slaveinductor1,L1-2,MASTERLOW1,Dbst1-2,Cout1-3",
+    "used_designators": "R2,R12,Slaveinductor1,Cvcc1-2,Q2,MASTERHIGH1,SLAVEHIGH1,Ql1-2,Cout1-3,Dbst1-2,MASTERLOW1,L1-2,Qh1-2,Css1,Cbst1-2,SLAVELOW1,Cres1,Masterinductor1,Cin1-3",
     "variants": []
   },
   "sheets": [

@@ -513,6 +513,349 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "2026-06-21_01-10-03:TLRP3A30CR005FTE"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 5.715 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "TLRP3A30CR005FTE"
+				(at 6.35 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "RES_TLRP-3A_TEC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773449-4&DocType=Data+Sheet&DocLang=English&PartCntxt=1-2176422-9&DocFormat=pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "TLRP3A30CR005FTE"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "RES_TLRP-3A_TEC RES_TLRP-3A_TEC-M RES_TLRP-3A_TEC-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLRP3A30CR005FTE_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.175 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 1.27) (xy 4.445 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -1.27) (xy 5.715 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 1.27) (xy 6.985 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 -1.27) (xy 8.255 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 1.27) (xy 9.525 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 -1.27) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLRP3A30CR005FTE_1_2"
+				(polyline
+					(pts
+						(xy -1.27 8.255) (xy 1.27 9.525)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.715) (xy 1.27 6.985)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 3.175) (xy 1.27 4.445)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy -1.27 3.175)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 9.525) (xy 0 10.16)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 6.985) (xy -1.27 8.255)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 4.445) (xy -1.27 5.715)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x01_Pin"
 			(pin_names
 				(offset 1.016)
@@ -2368,6 +2711,12 @@
 		(uuid "0669a295-e49a-43c2-9c85-683959b72d97")
 	)
 	(junction
+		(at 168.91 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1af5d6c8-95ba-41d2-ae6d-404a58e150cc")
+	)
+	(junction
 		(at 76.2 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2446,12 +2795,6 @@
 		(uuid "59a59b2a-0fa0-457c-9f3c-6ea3a06e8701")
 	)
 	(junction
-		(at 168.91 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5f32089a-794e-4079-ae9e-e217aa0356e1")
-	)
-	(junction
 		(at 38.1 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2488,6 +2831,18 @@
 		(uuid "81777b3c-f1ac-46b3-97e8-a7184be7b983")
 	)
 	(junction
+		(at 187.96 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "832af524-170a-4cf3-a590-015592d24345")
+	)
+	(junction
+		(at 171.45 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8499f690-696f-4b36-8ca1-66c0cac45e5c")
+	)
+	(junction
 		(at 217.17 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2498,12 +2853,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "928cda6a-e4ac-4f73-866e-93355679f7d3")
-	)
-	(junction
-		(at 171.45 77.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "97edeb05-834e-4ba3-a8a2-67a59e66b930")
 	)
 	(junction
 		(at 246.38 124.46)
@@ -2522,12 +2871,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a772c588-8236-4708-a098-b05cd6121797")
-	)
-	(junction
-		(at 179.07 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b142d04c-4b32-4404-893b-fc538a3729ce")
 	)
 	(junction
 		(at 251.46 107.95)
@@ -2590,10 +2933,10 @@
 		(uuid "e3b464bf-2ff5-4ea5-9e77-a3ccd177daf5")
 	)
 	(junction
-		(at 182.88 77.47)
+		(at 179.07 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ebfee23e-8d52-4532-9167-3ab482ab8bd3")
+		(uuid "e6d7e4ff-7153-40ad-a4e3-bb6d2b36ed40")
 	)
 	(junction
 		(at 154.94 88.9)
@@ -2741,7 +3084,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 83.82) (xy 182.88 83.82)
+			(xy 170.18 83.82) (xy 187.96 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2771,7 +3114,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 77.47) (xy 182.88 83.82)
+			(xy 187.96 77.47) (xy 187.96 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2808,6 +3151,16 @@
 			(type default)
 		)
 		(uuid "16dda9be-3d46-46e8-8e62-abc59d195ba1")
+	)
+	(wire
+		(pts
+			(xy 185.42 77.47) (xy 187.96 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "179272f4-a573-492a-ad3f-f382d3b85976")
 	)
 	(wire
 		(pts
@@ -3061,6 +3414,16 @@
 	)
 	(wire
 		(pts
+			(xy 171.45 77.47) (xy 172.72 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4142344c-4612-44f7-9a4a-5ce31f0f23e0")
+	)
+	(wire
+		(pts
 			(xy 179.07 107.95) (xy 181.61 107.95)
 		)
 		(stroke
@@ -3231,16 +3594,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 27.94) (xy 171.45 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "578c636d-d6ec-4beb-a50d-7262f025a379")
-	)
-	(wire
-		(pts
 			(xy 92.71 66.04) (xy 71.12 66.04)
 		)
 		(stroke
@@ -3328,6 +3681,16 @@
 			(type default)
 		)
 		(uuid "61b683df-30fd-4107-b303-661eacde207c")
+	)
+	(wire
+		(pts
+			(xy 163.83 27.94) (xy 163.83 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62450c11-29a7-4a41-b1ed-13337102db4f")
 	)
 	(wire
 		(pts
@@ -3921,16 +4284,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 27.94) (xy 168.91 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "98d7684b-da6b-4808-8789-e31120c3864e")
-	)
-	(wire
-		(pts
 			(xy 163.83 87.63) (xy 172.72 87.63)
 		)
 		(stroke
@@ -4038,16 +4391,6 @@
 			(type default)
 		)
 		(uuid "a98c88f7-ecd2-4e01-b9ac-5912c3f953e2")
-	)
-	(wire
-		(pts
-			(xy 172.72 77.47) (xy 171.45 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab1687ca-771e-4f9c-81d1-8412414a3da0")
 	)
 	(wire
 		(pts
@@ -4171,6 +4514,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 34.29) (xy 168.91 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3179cee-ed28-415d-9586-1a51be313a98")
+	)
+	(wire
+		(pts
 			(xy 250.19 96.52) (xy 251.46 96.52)
 		)
 		(stroke
@@ -4258,16 +4611,6 @@
 			(type default)
 		)
 		(uuid "c234dc7e-070e-4c5d-9e7e-c3a86570716b")
-	)
-	(wire
-		(pts
-			(xy 180.34 77.47) (xy 182.88 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c485184b-eeea-4459-9fc5-4448197e7bf4")
 	)
 	(wire
 		(pts
@@ -4401,7 +4744,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 77.47) (xy 189.23 77.47)
+			(xy 187.96 77.47) (xy 189.23 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4468,6 +4811,16 @@
 			(type default)
 		)
 		(uuid "d1dabd7a-5aed-4799-89c9-c9923f96f980")
+	)
+	(wire
+		(pts
+			(xy 163.83 34.29) (xy 168.91 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d46a023f-86b5-4462-b58d-e03e6a635b93")
 	)
 	(wire
 		(pts
@@ -4801,6 +5154,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 27.94) (xy 179.07 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7933522-dfe5-4ecc-a22e-bf0ce7ff7eba")
+	)
+	(wire
+		(pts
 			(xy 27.94 44.45) (xy 29.21 44.45)
 		)
 		(stroke
@@ -4908,85 +5271,6 @@
 			(type default)
 		)
 		(uuid "ffb4dace-f81c-47b1-b32e-a01197d6bb8d")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 175.26 27.94 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00c534e4-46e8-41a1-9f3d-d8b5165d978a")
-		(property "Reference" "R2"
-			(at 176.784 24.13 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3m"
-			(at 174.244 25.654 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 175.26 29.718 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 175.26 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "3909dd77-b895-461a-a206-607989759ea4")
-		)
-		(pin "1"
-			(uuid "21cedd6f-9a08-490e-b582-d8501d0f15ce")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:Earth")
@@ -8980,6 +9264,88 @@
 		)
 	)
 	(symbol
+		(lib_id "2026-06-21_01-10-03:TLRP3A30CR005FTE")
+		(at 172.72 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b46a6d49-f84e-4bdb-b275-db93ab919f94")
+		(property "Reference" "R2"
+			(at 179.07 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "TLRP3A30CR005FTE"
+			(at 179.07 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "current sense:RES_TLRP-3A_TEC"
+			(at 172.72 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773449-4&DocType=Data+Sheet&DocLang=English&PartCntxt=1-2176422-9&DocFormat=pdf"
+			(at 172.72 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f41ea6ec-506c-4fed-8917-1f5eaaf8b267")
+		)
+		(pin "2"
+			(uuid "d70c9fcc-3478-4bdc-a7bc-f76040a54895")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:Earth")
 		(at 80.01 102.87 0)
 		(unit 1)
@@ -9213,8 +9579,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 176.53 77.47 90)
+		(lib_id "2026-06-21_01-10-03:TLRP3A30CR005FTE")
+		(at 163.83 27.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9222,29 +9588,54 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "cb46c734-7ad6-415b-a880-986a2cc24cc8")
-		(property "Reference" "R1"
-			(at 175.514 73.66 90)
+		(fields_autoplaced yes)
+		(uuid "caaab288-96a4-43e1-91c2-d2781a9c9f75")
+		(property "Reference" "R12"
+			(at 170.18 21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "TLRP3A30CR005FTE"
+			(at 170.18 24.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "current sense:RES_TLRP-3A_TEC"
+			(at 163.83 27.94 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
 			)
 		)
-		(property "Value" "3m"
-			(at 177.546 75.184 90)
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773449-4&DocType=Data+Sheet&DocLang=English&PartCntxt=1-2176422-9&DocFormat=pdf"
+			(at 163.83 27.94 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 176.53 79.248 90)
+		(property "Description" ""
+			(at 163.83 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9253,39 +9644,17 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(property "Datasheet" ""
-			(at 176.53 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 176.53 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c514dd24-8857-4b5b-8012-e5408c40a814")
 		)
 		(pin "1"
-			(uuid "ae573465-e06d-4284-947c-7aa9de06c436")
+			(uuid "ccd87183-6d63-471f-bd51-e33851cb66be")
+		)
+		(pin "2"
+			(uuid "2a56a91b-a53b-4b4c-9994-8051b470fc1d")
 		)
 		(instances
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "R1")
+					(reference "R12")
 					(unit 1)
 				)
 			)
