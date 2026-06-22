@@ -1,15 +1,15 @@
 
 
 
-[![Status](https://img.shields.io/badge/status-early%20design-yellow.svg)]
-[![Hardware License](https://img.shields.io/badge/Hardware-CERN--OHL--W%20v2.0-orange.svg)]
-[![Firmware License](https://img.shields.io/badge/Firmware-GPLv3-blue.svg)]
+![Status](https://img.shields.io/badge/status-early%20design-yellow.svg)
+![Hardware License](https://img.shields.io/badge/Hardware-CERN--OHL--W%20v2.0-orange.svg)
+![Firmware License](https://img.shields.io/badge/Firmware-GPLv3-blue.svg)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)

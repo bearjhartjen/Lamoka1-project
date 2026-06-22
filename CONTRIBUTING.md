@@ -7,7 +7,7 @@
 
 [![Firmware License](https://img.shields.io/badge/Firmware-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Hardware License](https://img.shields.io/badge/Hardware-CERN--OHL--W%20v2.0-orange.svg)](https://ohwr.org/cern_ohl_w_v2.txt)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#how-to-contribute)
+
 
 </div>
 
