@@ -4,4 +4,5 @@
 	(lib (name "7443641000B") (type "KiCad") (uri "${KIPRJMOD}/7443641000B") (options "") (descr ""))
 	(lib (name "LM5122") (type "KiCad") (uri "${KIPRJMOD}/ul_LM5122MHE-NOPB/LM5122-kicadfiles/footprints.pretty") (options "") (descr ""))
 	(lib (name "footprints") (type "KiCad") (uri "${KIPRJMOD}/CSD19531Q5A/CSD19531Q5A-kicadfiles/footprints.pretty") (options "") (descr ""))
+	(lib (name "incapsmall") (type "KiCad") (uri "${KIPRJMOD}/UCD2A220MNL1GS/UCD2A220MNL1GS-kicadfiles/footprints.pretty") (options "") (descr ""))
 )
