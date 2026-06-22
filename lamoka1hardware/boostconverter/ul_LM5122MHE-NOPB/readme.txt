@@ -7,9 +7,3 @@ Notes:
 	b. or they will need to be converted to slots (assuming the targeted tool has a slot capability) using the process defined in your cad tool for identifying a padstack as a slot.  
 		i. Typically this is only capable of a width and length of the slot and a size of the mill radius that creates the slot.  
 		ii. Choosing to use the native tool slots will require removing entities on the board outline and the associated pads in the footprint.
-
-		"I greatly appreciate Texas Instruments for their absolute commitment to providing the best doccumentation, tools, calculators, etc."
-		-Bear J. Hartjen
-
-
-		Texas Instruments is fully responsible for the creation of the LM5122 these kicad files were found on ultra librarian.

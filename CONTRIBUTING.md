@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤝 Contributing to Lamoka
+#  Contributing to Lamoka
 
 **An open-source ecosystem of power conversion hardware and firmware**
 *Managed by Flamingo and Cactus*
@@ -13,7 +13,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Before You Start](#-before-you-start)
 - [How to Contribute](#-how-to-contribute)
@@ -23,35 +23,33 @@
 - [Code of Conduct](#-code-of-conduct)
 - [Questions?](#-questions)
 
-This guide applies across **all products** in the Lamoka ecosystem — Lamoka1 and everything that comes after it.
-
 ---
 
-## 🚦 Before You Start
+##  Before You Start
 
 > [!IMPORTANT]
 > For anything beyond a small fix — new features, hardware revisions, architectural changes — **open an issue first.** It saves you from doing work that might not align with the project's direction, and gives us a chance to talk through the approach together.
 
 ---
 
-## 🛠️ How to Contribute
+##  How to Contribute
 
 1. **Open an issue** — describe what you want to change and why.
 2. **Fork the repo** and create a branch for your work.
 3. **Make your changes**, following the licensing and documentation rules below.
 4. **Add an `ADDITION.md`** in the exact folder where you made your change.
-5. **Submit a pull request** to `main` with a clear description of what changed and why.
+5. **Submit a pull request** to `Lamoka1` with a clear description of what changed and why.
 
 ---
 
-## ⚖️ Licensing
+##  Licensing
 
 Lamoka splits licensing by content type:
 
 | Content Type | License | Applies To |
 |:---|:---|:---|
-| 💾 **Firmware / software** | [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html) | Any `*software` folder (e.g. `Lamoka1software`) |
-| 🔧 **Hardware designs** | [CERN-OHL-W v2.0](https://ohwr.org/cern_ohl_w_v2.txt) | Any `*hardware` folder (e.g. `lamoka1hardware`) |
+| **Firmware / software** | [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html) | Any `*software` folder (e.g. `Lamoka1software`) |
+| **Hardware designs** | [CERN-OHL-W v2.0](https://ohwr.org/cern_ohl_w_v2.txt) | Any `*hardware` folder (e.g. `lamoka1hardware`) |
 
 The applicable license file lives in each relevant folder (`LICENSE-SOFT` / `LICENSE-HARD`). Read the one that covers the area you're touching — the two have different obligations:
 
@@ -69,19 +67,19 @@ The applicable license file lives in each relevant folder (`LICENSE-SOFT` / `LIC
 
 ---
 
-## 📝 Documenting Your Contribution
+## Documenting Your Contribution
 
 Every contribution needs an `ADDITION.md` placed **only** in the folder where the change happened — not at the repo root, not duplicated elsewhere. One file, one location, one clear record of who changed what.
 
 Each `ADDITION.md` should include:
 
-- ✏️ **Your name** (or handle)
-- 📄 **A short description** of the change
-- ⚖️ **The license** it falls under
-- 📅 **The date**
+-  **Your name** (or handle)
+-  **A short description** of the change
+-  **The license** it falls under
+-  **The date**
 
 <details>
-<summary><b>📄 Click to see an example ADDITION.md</b></summary>
+<summary><b> Click to see an example ADDITION.md</b></summary>
 
 ```markdown
 # Addition
@@ -102,7 +100,7 @@ If your PR spans multiple folders, add a separate `ADDITION.md` in each one rath
 
 ---
 
-## ✅ Guidelines
+##  Guidelines
 
 - **Code style:** Match what's already there in the file/folder you're editing.
 - **Documentation:** Adding a component, feature, or folder? Update the relevant `README.md` so it doesn't go stale.
@@ -111,12 +109,12 @@ If your PR spans multiple folders, add a separate `ADDITION.md` in each one rath
 
 ---
 
-## 🌱 Code of Conduct
+##  Code of Conduct
 
-Be respectful. Lamoka should be a welcoming, collaborative project no matter someone's experience level — questions are always welcome in Issues or Discussions.
+Be respectful. This projectshould be a welcoming, collaborative project no matter someone's experience level — questions are always welcome in Issues or Discussions.
 
 ---
 
-## 💬 Questions?
+##  Questions?
 
 Open an issue or start a thread in **Discussions** — we're happy to help.
