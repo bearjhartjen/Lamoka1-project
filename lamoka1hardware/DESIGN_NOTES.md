@@ -16,3 +16,14 @@ The LM5122 (the controller IC for the boost converter) has a MODE pin, to put it
 The boost converter is utilizing two absolute tanks of inductors, specifically the We switched to the Würth Elektronik 7443641000B, we are using this unit because it has a extremely low DCR. 
 
 The Lamoka1 design is attempting to make the MVP product for a craft fair. Certain parts of the project are being dumbed just to fit price and time constraints, new models and designs will be made to fix these issues later. We are just trying to get as many people interested as soon as possible, so we need a cheap and low time consuming product.
+
+The Lamoka1 will have a USB-C connection soley for data and the MCU, you will be able to program the MCU. This port  connection will also connect to a memory device that stores all of the source code for the whole device, this complies with the licensing used, so anyone can distribute the unit so long as they state that all of the source code can be accessed via the usb connection. 
+
+
+
+
+
+
+## future model plans
+ 
+ The lamoka1 is just trying to make a cheap MVP product for a craft fair, the Lamoka project strives to make the best in class systems. For future models, we need the USB-C port to work for fast data transfer, and high power delivery (Im not sure at what voltage the USB-C will be yet). I plan to have that feature in the next Lamoka model. In much futher along models, i hope to put in a AI chip to the model so it can handle complex tasks to optimize everything, a self aware agent to control the system only, some cool LED interface. i prefer to refrain from wireless connecting just for security, it doesnt seem to clear to me why these systems would need wireless, they should just work well themselves, an AI chip would help this "work by itself ideal". On the next model there should be a bracket plate, you screw the plate into the surface, then you slide the Lamoka unit right onto that, this allows you to grab the Lamoka unit to configure it without having to unscrew things all the itme. 

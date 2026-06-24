@@ -9,7 +9,7 @@
 
 ---
 
-## Overview
+## Scope of Lamoka1
 
  The **Lamoka1** is a fully open-source, pure sine wave inverter and charger system, controlled by an RP2350. It's built to be fully transparent, modular, and repeatable, aiming to be the best in its class rather than a closed, disposable black box. Every schematic, every line of firmware, and every design decision is published — nothing is hidden behind proprietary lock-in.
 
@@ -18,7 +18,7 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 
 ---
 
-## Key Features
+## notable features
 
 -  **Pure sine wave output** — or virtually any waveform you want, up to a 180V peak limit
 -  **Modular & repairable** — built from replaceable, well-documented sections instead of a sealed, disposable unit
@@ -42,18 +42,6 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 
 ---
 
-## Operating Modes
-
-### Standard Mode
-Produces a true sine wave (or any custom waveform within the 180V peak limit) via the H-bridge — ideal for sensitive electronics and general use.
-
-### Dumb Mode
-A simplified mode intended **only for purely resistive loads**. Instead of synthesizing a sine wave, the H-bridge generates simple square pulses, using an adjusted Vrms calculation to land on 120V output. One leg of the H-bridge handles the entire waveform — switching directly between positive and negative — rather than splitting the duty cycle across both halves.
-
-> [!TIP]
-> Dumb mode trades waveform purity for simplicity and efficiency — don't use it with anything other than purely resistive loads (e.g. resistive heating elements).
-
----
 
 ## Software-Defined Control
 

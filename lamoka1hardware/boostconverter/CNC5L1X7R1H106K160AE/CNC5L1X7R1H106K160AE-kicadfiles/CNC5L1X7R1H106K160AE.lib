@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model CNC5L1X7R1H106K160AE
+#/17453831/2091789/2.50/2/3/Capacitor
+DEF CNC5L1X7R1H106K160AE C 0 30 Y Y 1 F N
+F0 "C" 350 250 50 H V L CNN
+F1 "CNC5L1X7R1H106K160AE" 350 150 50 H V L CNN
+F2 "CAPC3216X190N" 350 50 50 H I L CNN
+F3 "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_soft_cnc_en.pdf" 350 -50 50 H I L CNN
+F4 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1206 50VDC 10uF 10% 1.6mm X7R AEC-Q200" 350 -150 50 H I L CNN "Description"
+F5 "1.9" 350 -250 50 H I L CNN "Height"
+F6 "TDK" 350 -350 50 H I L CNN "Manufacturer_Name"
+F7 "CNC5L1X7R1H106K160AE" 350 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "810-CNC5L171H106K160" 350 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/TDK/CNC5L1X7R1H106K160AE?qs=Y0Uzf4wQF3k%252BLw%252Boiz8FLA%3D%3D" 350 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "" 350 -750 50 H I L CNN "Arrow Part Number"
+F11 "" 350 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 500 0 200 L 50 50 0 0 P
+P 2 0 1 6 220 100 220 -100 N
+P 2 0 1 6 280 100 280 -100 N
+P 2 0 1 6 200 0 220 0 N
+P 2 0 1 6 280 0 300 0 N
+ENDDRAW
+ENDDEF
+#
+#End Library

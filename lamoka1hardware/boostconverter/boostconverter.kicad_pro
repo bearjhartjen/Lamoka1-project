@@ -718,6 +718,48 @@
           "label": "L (µH)",
           "name": "L (µH)",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Price/Stock",
+          "name": "Arrow Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Part Number",
+          "name": "Arrow Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -768,7 +810,7 @@
         "uuid": "4421edd3-111c-4598-ae8a-42354541d0a6"
       }
     ],
-    "used_designators": "C1-6,Q2,MASTERHIGH1,R2,R12,Cres1,Masterinductor1,Cin1-3,Cbst1-2,Css1,Qh1-2,SLAVELOW1,IC1-2,SLAVEHIGH1,Ql1-2,Cvcc1-2,Slaveinductor1,L1-2,MASTERLOW1,Cout1-3,Dbst1-2",
+    "used_designators": "Cbst1-2,Cvcc1-2,Dbst1-2,C7-8,C11,R7,R13-14",
     "variants": []
   },
   "sheets": [

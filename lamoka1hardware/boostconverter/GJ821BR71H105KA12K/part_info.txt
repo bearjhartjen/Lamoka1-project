@@ -1,0 +1,9 @@
+Manufacturer=Murata Electronics
+PartNumber=GJ821BR71H105KA12K
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=2.1
+Released=2024-01-09 09:15:21
+Downloaded=2026-06-24 15:46:07
+3D=Y
