@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model KRM55WR72A226MH01L
+#/683389/2091789/2.50/2/2/Capacitor
+DEF KRM55WR72A226MH01L C 0 30 Y Y 1 F N
+F0 "C" 350 250 50 H V L CNN
+F1 "KRM55WR72A226MH01L" 350 150 50 H V L CNN
+F2 "CAPC6153X670N" 350 50 50 H I L CNN
+F3 "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/KRM55_25V-100V_E.pdf" 350 -50 50 H I L CNN
+F4 "Capacitor KRM55 L=6.1mm W=5.3mm T=6.4mm" 350 -150 50 H I L CNN "Description"
+F5 "6.7" 350 -250 50 H I L CNN "Height"
+F6 "Murata Electronics" 350 -350 50 H I L CNN "Manufacturer_Name"
+F7 "KRM55WR72A226MH01L" 350 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "81-KRM55WR72A226MH1L" 350 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Murata-Electronics/KRM55WR72A226MH01L?qs=qkDYIeTQ%252BEnTj7DsBXk4Cw%3D%3D" 350 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "KRM55WR72A226MH01L" 350 -750 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/krm55wr72a226mh01l/murata-manufacturing?region=europe" 350 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 500 0 200 L 50 50 0 0 P
+P 2 0 1 6 220 100 220 -100 N
+P 2 0 1 6 280 100 280 -100 N
+P 2 0 1 6 200 0 220 0 N
+P 2 0 1 6 280 0 300 0 N
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,9 @@
+Manufacturer=Diodes Incorporated
+PartNumber=SDM1U100S1F-7
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Diode Flat Lead
+PinCount=2
+Version=1.1
+Released=2019-05-03 12:04:40
+Downloaded=2026-06-23 19:17:46
+3D=Y

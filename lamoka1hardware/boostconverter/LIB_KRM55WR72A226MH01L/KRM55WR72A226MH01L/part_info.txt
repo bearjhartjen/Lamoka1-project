@@ -1,0 +1,9 @@
+Manufacturer=Murata Electronics
+PartNumber=KRM55WR72A226MH01L
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=3.1
+Released=2019-10-01 09:24:05
+Downloaded=2026-06-22 21:17:47
+3D=Y

@@ -856,6 +856,596 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "2026-06-22_18-02-40:UCD2A220MNL1GS"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 3.81 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "UCD2A220MNL1GS"
+				(at 3.81 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "PCAP_8x10-ELECT_NCH"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "UCD2A220MNL1GS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "UCD2A220MNL1GS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "PCAP_8x10-ELECT_NCH PCAP_8x10-ELECT_NCH-M PCAP_8x10-ELECT_NCH-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "UCD2A220MNL1GS_1_1"
+				(polyline
+					(pts
+						(xy 1.5748 1.27) (xy 2.8448 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.2098 0.635) (xy 2.2098 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.4798 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.4798 -1.905) (xy 3.4798 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 4.7541 -1.9108)
+					(mid 4.1148 0)
+					(end 4.7541 1.9108)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "UCD2A220MNL1GS_1_2"
+				(polyline
+					(pts
+						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.1148) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.9108 -4.7541)
+					(mid 0 -4.1148)
+					(end 1.9108 -4.7541)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -2.2098) (xy 1.905 -2.2098)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.5748) (xy 1.27 -2.8448)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "2026-06-23_14-35-42:UCD2A101MNJ1MS"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 3.81 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "UCD2A101MNJ1MS"
+				(at 3.81 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "CAP_UCD2A_NCH"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "UCD2A101MNJ1MS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "UCD2A101MNJ1MS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CAP_UCD2A_NCH CAP_UCD2A_NCH-M CAP_UCD2A_NCH-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "UCD2A101MNJ1MS_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.4798 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.4798 -1.905) (xy 3.4798 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "UCD2A101MNJ1MS_1_2"
+				(polyline
+					(pts
+						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.1148) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x01_Pin"
 			(pin_names
 				(offset 1.016)
@@ -1134,194 +1724,6 @@
 					(at 0 -3.81 90)
 					(length 2.794)
 					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:D"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1836,6 +2238,442 @@
 					(at 3.81 0 180)
 					(length 1.27)
 					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "KRM55WR72A226MH01L:KRM55WR72A226MH01L"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 8.89 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "KRM55WR72A226MH01L"
+				(at 8.89 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "CAPC6153X670N"
+				(at 8.89 -96.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/KRM55_25V-100V_E.pdf"
+				(at 8.89 -196.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "Capacitor KRM55 L=6.1mm W=5.3mm T=6.4mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "6.7"
+				(at 8.89 -396.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "Murata Electronics"
+				(at 8.89 -496.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Part_Number" "KRM55WR72A226MH01L"
+				(at 8.89 -596.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" "81-KRM55WR72A226MH1L"
+				(at 8.89 -696.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Murata-Electronics/KRM55WR72A226MH01L?qs=qkDYIeTQ%252BEnTj7DsBXk4Cw%3D%3D"
+				(at 8.89 -796.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Part Number" "KRM55WR72A226MH01L"
+				(at 8.89 -896.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/krm55wr72a226mh01l/murata-manufacturing?region=europe"
+				(at 8.89 -996.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "KRM55WR72A226MH01L_1_1"
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 5.588 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.588 2.54) (xy 5.588 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.112 2.54) (xy 7.112 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.112 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0 180)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "SDM1U100S1F-7:SDM1U100S1F-7"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "IC"
+				(at 16.51 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "SDM1U100S1F-7"
+				(at 16.51 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "SODFL3518X115N"
+				(at 16.51 -94.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/SDM1U100S1F.pdf"
+				(at 16.51 -194.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "Schottky Rectifier 100V 1A 0.7Vf SOD123F"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "1.15"
+				(at 16.51 -394.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "Diodes Incorporated"
+				(at 16.51 -494.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Part_Number" "SDM1U100S1F-7"
+				(at 16.51 -594.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" "621-SDM1U100S1F-7"
+				(at 16.51 -694.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=621-SDM1U100S1F-7"
+				(at 16.51 -794.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Part Number" "SDM1U100S1F-7"
+				(at 16.51 -894.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/sdm1u100s1f-7/diodes-incorporated"
+				(at 16.51 -994.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "SDM1U100S1F-7_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 15.24 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2542,6 +3380,325 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "dos input caps:UUX2A470MNL1GS"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 3.81 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "UUX2A470MNL1GS"
+				(at 3.81 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "PCAP_10x10-ELECT_NCA"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "UUX2A470MNL1GS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "UUX2A470MNL1GS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "PCAP_10x10-ELECT_NCA PCAP_10x10-ELECT_NCA-M PCAP_10x10-ELECT_NCA-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "UUX2A470MNL1GS_1_1"
+				(polyline
+					(pts
+						(xy 1.5748 1.27) (xy 2.8448 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.2098 0.635) (xy 2.2098 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.4798 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.4798 -1.905) (xy 3.4798 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 4.7541 -1.9108)
+					(mid 4.1148 0)
+					(end 4.7541 1.9108)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "UUX2A470MNL1GS_1_2"
+				(polyline
+					(pts
+						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.1148) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.9108 -4.7541)
+					(mid 0 -4.1148)
+					(end 1.9108 -4.7541)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -2.2098) (xy 1.905 -2.2098)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.5748) (xy 1.27 -2.8448)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:Earth"
 			(power global)
 			(pin_numbers
@@ -2705,16 +3862,16 @@
 		(uuid "d092b2aa-24d9-468b-9e21-29e51968617e")
 	)
 	(junction
-		(at 217.17 85.09)
+		(at 251.46 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0669a295-e49a-43c2-9c85-683959b72d97")
+		(uuid "006c7088-bff3-432a-9cf0-a1063f5f8f2d")
 	)
 	(junction
-		(at 168.91 40.64)
+		(at 251.46 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1af5d6c8-95ba-41d2-ae6d-404a58e150cc")
+		(uuid "0d0aa980-3943-4770-b22c-3c7fc39950ff")
 	)
 	(junction
 		(at 76.2 90.17)
@@ -2735,18 +3892,6 @@
 		(uuid "232adb09-3f19-4ae1-b7c2-2b67af70039f")
 	)
 	(junction
-		(at 181.61 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "28371fcf-d66a-4b64-857b-c26295f7caca")
-	)
-	(junction
-		(at 251.46 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2b3d064c-f7f2-4cb6-acb0-088c437533ff")
-	)
-	(junction
 		(at 224.79 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2765,12 +3910,6 @@
 		(uuid "34b555b6-ede0-495d-a69a-8c91c6dd71b3")
 	)
 	(junction
-		(at 193.04 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3833d00f-c80b-4fb1-8c66-2b09f9294e53")
-	)
-	(junction
 		(at 71.12 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2783,22 +3922,16 @@
 		(uuid "4f383d06-f37f-4e80-8c14-bd9ea5850be8")
 	)
 	(junction
+		(at 83.82 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "503fe1a7-0a36-4a15-853d-2796fb8543be")
+	)
+	(junction
 		(at 251.46 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "55e25884-1a45-40af-a363-b62f3619cc18")
-	)
-	(junction
-		(at 242.57 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "59a59b2a-0fa0-457c-9f3c-6ea3a06e8701")
-	)
-	(junction
-		(at 38.1 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6259e876-a65c-4419-825b-5a1e646f4531")
 	)
 	(junction
 		(at 238.76 96.52)
@@ -2807,7 +3940,7 @@
 		(uuid "63b746ee-bf5f-4278-9e22-4b8c5b005518")
 	)
 	(junction
-		(at 173.99 142.24)
+		(at 172.72 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6501e4ab-ea2a-4f61-95e8-2c75af37983f")
@@ -2819,22 +3952,16 @@
 		(uuid "69566fba-17ba-413d-92a9-c9c89c63e01c")
 	)
 	(junction
-		(at 193.04 88.9)
+		(at 179.07 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "74b26346-d9ce-4a48-92fa-86bb4a350b1e")
+		(uuid "70db64e8-b06a-4aab-a939-e153f77d46d2")
 	)
 	(junction
 		(at 207.01 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "81777b3c-f1ac-46b3-97e8-a7184be7b983")
-	)
-	(junction
-		(at 187.96 77.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "832af524-170a-4cf3-a590-015592d24345")
 	)
 	(junction
 		(at 171.45 77.47)
@@ -2855,6 +3982,12 @@
 		(uuid "928cda6a-e4ac-4f73-866e-93355679f7d3")
 	)
 	(junction
+		(at 193.04 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9364b1e6-7c84-4997-9bbf-462ba9499cd1")
+	)
+	(junction
 		(at 246.38 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2867,22 +4000,34 @@
 		(uuid "9cecb49c-1248-4ca2-b5a3-5ef8553c5646")
 	)
 	(junction
-		(at 242.57 90.17)
+		(at 186.69 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a772c588-8236-4708-a098-b05cd6121797")
+		(uuid "a411eb32-4e81-4364-9e5b-db001ddcd661")
+	)
+	(junction
+		(at 207.01 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a501e75e-6f1c-42d9-aa03-6b7c8d3feca6")
+	)
+	(junction
+		(at 193.04 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9f2a33f-6c2a-4ead-8939-5b2ecd9823ca")
+	)
+	(junction
+		(at 181.61 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae5f9473-575e-48c1-b439-4244a6a3a2cb")
 	)
 	(junction
 		(at 251.46 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b5a7a664-0067-40e4-9242-5c4836ed75b1")
-	)
-	(junction
-		(at 207.01 77.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b664c96d-1dec-4f80-90df-7ff254c4b47d")
 	)
 	(junction
 		(at 55.88 44.45)
@@ -2900,13 +4045,7 @@
 		(at 181.61 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "be73b796-d081-4eba-a13d-10f4441bc041")
-	)
-	(junction
-		(at 242.57 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c141e1c9-de76-437e-8576-ab4a4f2d85fc")
+		(uuid "c1fa75e6-25f8-4cc8-b24e-3de33ba37e88")
 	)
 	(junction
 		(at 170.18 118.11)
@@ -2915,16 +4054,16 @@
 		(uuid "cdee21f0-c6f7-4d08-bedb-d4d1d444ee22")
 	)
 	(junction
-		(at 251.46 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d5f7026d-357f-4310-a3ba-9b7b4a69d0f3")
-	)
-	(junction
 		(at 207.01 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "de75759a-e7ce-4fb6-ad78-452ee2e84eaa")
+	)
+	(junction
+		(at 38.1 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e267bdcf-08c4-4421-be3c-c0852ccbdd85")
 	)
 	(junction
 		(at 77.47 44.45)
@@ -2933,10 +4072,10 @@
 		(uuid "e3b464bf-2ff5-4ea5-9e77-a3ccd177daf5")
 	)
 	(junction
-		(at 179.07 27.94)
+		(at 217.17 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e6d7e4ff-7153-40ad-a4e3-bb6d2b36ed40")
+		(uuid "e5a0cafb-c48e-4f47-b8c0-48618379d302")
 	)
 	(junction
 		(at 154.94 88.9)
@@ -2951,16 +4090,16 @@
 		(uuid "ed2c2818-9775-45a4-aee8-b637943f3d0f")
 	)
 	(junction
+		(at 207.01 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed99519a-e542-441e-8f9d-7eeb15aee139")
+	)
+	(junction
 		(at 179.07 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f19da8ac-9fb0-4de9-bee2-73ce0beaaa73")
-	)
-	(junction
-		(at 207.01 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fb04c54b-4ff5-484e-a038-2d17aa8590c2")
 	)
 	(wire
 		(pts
@@ -3044,6 +4183,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 82.55) (xy 189.23 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d456c5b-e29f-469b-81eb-93eeac054e75")
+	)
+	(wire
+		(pts
 			(xy 46.99 44.45) (xy 55.88 44.45)
 		)
 		(stroke
@@ -3051,16 +4200,6 @@
 			(type default)
 		)
 		(uuid "0f0e4891-f339-4bcf-aae6-1796a6ff4be4")
-	)
-	(wire
-		(pts
-			(xy 181.61 88.9) (xy 184.15 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f639454-2239-4888-8728-ebe1b7ad7fe9")
 	)
 	(wire
 		(pts
@@ -3084,16 +4223,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 83.82) (xy 187.96 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0fe08707-b5d1-4143-9029-5adc3fa3936f")
-	)
-	(wire
-		(pts
 			(xy 163.83 107.95) (xy 179.07 107.95)
 		)
 		(stroke
@@ -3114,13 +4243,13 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 77.47) (xy 187.96 83.82)
+			(xy 181.61 41.91) (xy 181.61 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1173b833-fa65-4e37-b4ac-c11d1e332793")
+		(uuid "142e799a-0a60-4a7f-ae09-8cbdd6275a64")
 	)
 	(wire
 		(pts
@@ -3154,7 +4283,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 77.47) (xy 187.96 77.47)
+			(xy 185.42 77.47) (xy 186.69 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3221,16 +4350,6 @@
 			(type default)
 		)
 		(uuid "203f925c-3e64-491b-abc4-47182ae23dbe")
-	)
-	(wire
-		(pts
-			(xy 83.82 41.91) (xy 168.91 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20980290-741c-49b3-929a-763339c44997")
 	)
 	(wire
 		(pts
@@ -3364,16 +4483,6 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 96.52) (xy 251.46 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c5c56e4-b9a1-418d-8c2b-7f57c711a1e5")
-	)
-	(wire
-		(pts
 			(xy 163.83 100.33) (xy 193.04 100.33)
 		)
 		(stroke
@@ -3444,7 +4553,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 77.47) (xy 207.01 77.47)
+			(xy 200.66 77.47) (xy 207.01 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3494,7 +4603,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 95.25) (xy 217.17 85.09)
+			(xy 217.17 104.14) (xy 217.17 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3524,6 +4633,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 41.91) (xy 193.04 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bca5978-d285-4fe7-823f-9ed7181544f2")
+	)
+	(wire
+		(pts
 			(xy 203.2 41.91) (xy 207.01 41.91)
 		)
 		(stroke
@@ -3541,16 +4660,6 @@
 			(type default)
 		)
 		(uuid "4f5af35f-5199-4f1f-94ad-80749b484c1c")
-	)
-	(wire
-		(pts
-			(xy 251.46 96.52) (xy 251.46 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50ee4a69-0bb1-4c85-8e6f-4a22d8c3bdad")
 	)
 	(wire
 		(pts
@@ -3634,16 +4743,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 41.91) (xy 184.15 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "597502dd-0166-4f83-9109-7b7855abc73d")
-	)
-	(wire
-		(pts
 			(xy 194.31 120.65) (xy 194.31 121.92)
 		)
 		(stroke
@@ -3684,7 +4783,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 27.94) (xy 163.83 34.29)
+			(xy 163.83 27.94) (xy 163.83 40.64)
 		)
 		(stroke
 			(width 0)
@@ -3754,7 +4853,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 144.78) (xy 173.99 142.24)
+			(xy 175.26 144.78) (xy 172.72 142.24)
 		)
 		(stroke
 			(width 0)
@@ -3774,7 +4873,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 124.46) (xy 203.2 93.98)
+			(xy 203.2 124.46) (xy 203.2 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3824,13 +4923,13 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 93.98) (xy 200.66 93.98)
+			(xy 251.46 73.66) (xy 251.46 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "701e6894-e7c9-43bc-b729-ad70a8c7eb0d")
+		(uuid "6f79dc09-3f52-441e-8b42-7df5f675eeeb")
 	)
 	(wire
 		(pts
@@ -3861,6 +4960,26 @@
 			(type default)
 		)
 		(uuid "735e6dca-a845-4eef-96eb-a13513c9f157")
+	)
+	(wire
+		(pts
+			(xy 186.69 82.55) (xy 181.61 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7361702b-3ae7-4af2-95da-f874e44033f4")
+	)
+	(wire
+		(pts
+			(xy 181.61 82.55) (xy 181.61 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "736dc1ea-8c71-4f8c-9ac9-5f0a60d23f98")
 	)
 	(wire
 		(pts
@@ -3954,6 +5073,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 36.83) (xy 186.69 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b2ebc4b-4f00-42cf-a777-af318d83be04")
+	)
+	(wire
+		(pts
 			(xy 55.88 110.49) (xy 55.88 44.45)
 		)
 		(stroke
@@ -3964,23 +5093,13 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 142.24) (xy 175.26 142.24)
+			(xy 172.72 142.24) (xy 175.26 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7d2fd52f-90ac-4b49-a671-d360baec99e4")
-	)
-	(wire
-		(pts
-			(xy 191.77 41.91) (xy 193.04 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d44231c-4e42-4ac8-8829-5c8065f0d72f")
 	)
 	(wire
 		(pts
@@ -4054,13 +5173,13 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 88.9) (xy 193.04 88.9)
+			(xy 193.04 88.9) (xy 193.04 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "844b282d-ff07-43f8-a641-0392cb2fa6b9")
+		(uuid "8428f84d-4a78-4d57-ad93-7a291cde746e")
 	)
 	(wire
 		(pts
@@ -4134,7 +5253,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 27.94) (xy 207.01 27.94)
+			(xy 196.85 27.94) (xy 207.01 27.94)
 		)
 		(stroke
 			(width 0)
@@ -4264,7 +5383,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 101.6) (xy 171.45 101.6)
+			(xy 171.45 101.6) (xy 203.2 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4281,6 +5400,16 @@
 			(type default)
 		)
 		(uuid "92b7d0f9-b17c-44fa-8e83-25b497478eb8")
+	)
+	(wire
+		(pts
+			(xy 83.82 40.64) (xy 163.83 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "953a0a45-3cb9-4c4d-b4fa-40b252c73acd")
 	)
 	(wire
 		(pts
@@ -4394,7 +5523,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 85.09) (xy 251.46 85.09)
+			(xy 250.19 86.36) (xy 251.46 86.36)
 		)
 		(stroke
 			(width 0)
@@ -4434,7 +5563,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 60.96) (xy 83.82 41.91)
+			(xy 83.82 60.96) (xy 83.82 40.64)
 		)
 		(stroke
 			(width 0)
@@ -4454,6 +5583,16 @@
 	)
 	(wire
 		(pts
+			(xy 251.46 96.52) (xy 251.46 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af6fe180-8843-41ed-8b12-0602bff2ed44")
+	)
+	(wire
+		(pts
 			(xy 246.38 124.46) (xy 246.38 125.73)
 		)
 		(stroke
@@ -4461,6 +5600,16 @@
 			(type default)
 		)
 		(uuid "afc513ef-bb1f-47eb-800c-c0a892e56100")
+	)
+	(wire
+		(pts
+			(xy 189.23 36.83) (xy 193.04 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aff70fe1-9bf2-44dc-9039-f367410a3448")
 	)
 	(wire
 		(pts
@@ -4514,26 +5663,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 34.29) (xy 168.91 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3179cee-ed28-415d-9586-1a51be313a98")
-	)
-	(wire
-		(pts
-			(xy 250.19 96.52) (xy 251.46 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b4ee817c-7096-4f7b-9241-83d94ec97de2")
-	)
-	(wire
-		(pts
 			(xy 92.71 76.2) (xy 92.71 88.9)
 		)
 		(stroke
@@ -4574,7 +5703,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 44.45) (xy 38.1 46.99)
+			(xy 38.1 44.45) (xy 38.1 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4664,7 +5793,17 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 40.64) (xy 168.91 40.64)
+			(xy 179.07 80.01) (xy 186.69 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6c208c4-f9c0-4718-9b8d-2acb4a267637")
+	)
+	(wire
+		(pts
+			(xy 77.47 40.64) (xy 83.82 40.64)
 		)
 		(stroke
 			(width 0)
@@ -4714,7 +5853,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 142.24) (xy 173.99 142.24)
+			(xy 170.18 142.24) (xy 172.72 142.24)
 		)
 		(stroke
 			(width 0)
@@ -4741,16 +5880,6 @@
 			(type default)
 		)
 		(uuid "cae8563e-c126-4522-8160-c3597ac82fdc")
-	)
-	(wire
-		(pts
-			(xy 187.96 77.47) (xy 189.23 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb908abc-da94-4623-a8cd-dd102387ce84")
 	)
 	(wire
 		(pts
@@ -4794,13 +5923,13 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 93.98) (xy 200.66 101.6)
+			(xy 179.07 83.82) (xy 179.07 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ce29ea36-d4c1-46fc-8eeb-a3df6ff7e45e")
+		(uuid "cfb3e654-314f-4cc8-aea2-15619af7069b")
 	)
 	(wire
 		(pts
@@ -4811,16 +5940,6 @@
 			(type default)
 		)
 		(uuid "d1dabd7a-5aed-4799-89c9-c9923f96f980")
-	)
-	(wire
-		(pts
-			(xy 163.83 34.29) (xy 168.91 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d46a023f-86b5-4462-b58d-e03e6a635b93")
 	)
 	(wire
 		(pts
@@ -4844,7 +5963,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 104.14) (xy 201.93 104.14)
+			(xy 193.04 104.14) (xy 217.17 104.14)
 		)
 		(stroke
 			(width 0)
@@ -4861,16 +5980,6 @@
 			(type default)
 		)
 		(uuid "d55d1ab2-cd2d-4fed-a6cd-4e2d6ff941e9")
-	)
-	(wire
-		(pts
-			(xy 251.46 85.09) (xy 251.46 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d65b9a37-8a3a-4c84-a94e-49cb48257439")
 	)
 	(wire
 		(pts
@@ -4924,13 +6033,13 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 104.14) (xy 201.93 95.25)
+			(xy 186.69 80.01) (xy 186.69 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "de7e0eeb-8546-4e2a-9b51-749df95c9433")
+		(uuid "de1d7d13-8827-4153-9b22-5eb5a9e525c4")
 	)
 	(wire
 		(pts
@@ -5024,7 +6133,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 85.09) (xy 242.57 90.17)
+			(xy 242.57 86.36) (xy 242.57 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5044,26 +6153,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 96.52) (xy 242.57 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6e93663-9ad9-46ac-974b-ad1d2a3e5eb8")
-	)
-	(wire
-		(pts
-			(xy 168.91 40.64) (xy 168.91 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e869c152-68f9-4b74-93e8-4f1b8b6c2598")
-	)
-	(wire
-		(pts
 			(xy 179.07 88.9) (xy 181.61 88.9)
 		)
 		(stroke
@@ -5071,16 +6160,6 @@
 			(type default)
 		)
 		(uuid "eacefd98-26c5-4467-9181-81962e37f7e0")
-	)
-	(wire
-		(pts
-			(xy 201.93 95.25) (xy 217.17 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec7e695b-61fc-4217-99b7-510426a63f9e")
 	)
 	(wire
 		(pts
@@ -5114,7 +6193,17 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 27.94) (xy 184.15 27.94)
+			(xy 186.69 77.47) (xy 193.04 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f17496e1-bdbc-419d-a319-472cc4e9b29b")
+	)
+	(wire
+		(pts
+			(xy 179.07 27.94) (xy 189.23 27.94)
 		)
 		(stroke
 			(width 0)
@@ -5134,13 +6223,33 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 54.61) (xy 38.1 58.42)
+			(xy 38.1 55.88) (xy 38.1 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f48ab999-4ac6-4ca7-9039-cf2bf9c54ceb")
+	)
+	(wire
+		(pts
+			(xy 175.26 144.78) (xy 176.53 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4bd99f9-39e0-43b8-8938-6d731180db81")
+	)
+	(wire
+		(pts
+			(xy 170.18 83.82) (xy 179.07 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f67df4aa-1574-4463-9978-08497ba3d2b2")
 	)
 	(wire
 		(pts
@@ -5194,6 +6303,16 @@
 	)
 	(wire
 		(pts
+			(xy 251.46 86.36) (xy 251.46 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f94ea029-c858-4f14-95e6-ce9c2d2038fa")
+	)
+	(wire
+		(pts
 			(xy 86.36 118.11) (xy 92.71 118.11)
 		)
 		(stroke
@@ -5211,16 +6330,6 @@
 			(type default)
 		)
 		(uuid "fa7312d1-3b67-411f-a7e3-3eea93e33452")
-	)
-	(wire
-		(pts
-			(xy 242.57 90.17) (xy 242.57 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fce0fe08-6af6-4952-aa8a-a6b9ed33ef68")
 	)
 	(wire
 		(pts
@@ -5271,6 +6380,173 @@
 			(type default)
 		)
 		(uuid "ffb4dace-f81c-47b1-b32e-a01197d6bb8d")
+	)
+	(symbol
+		(lib_id "SDM1U100S1F-7:SDM1U100S1F-7")
+		(at 189.23 82.55 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "011d404f-51bc-4cc8-9c2a-74cc2430e226")
+		(property "Reference" "IC2"
+			(at 186.436 90.932 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SDM1U100S1F-7"
+			(at 181.102 94.742 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SDM1U100S1F-7-kicadfiles:SODFL3518X115N"
+			(at 94.31 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/SDM1U100S1F.pdf"
+			(at -5.69 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Schottky Rectifier 100V 1A 0.7Vf SOD123F"
+			(at 189.23 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1.15"
+			(at -205.69 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Incorporated"
+			(at -305.69 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SDM1U100S1F-7"
+			(at -405.69 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "621-SDM1U100S1F-7"
+			(at -505.69 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=621-SDM1U100S1F-7"
+			(at -605.69 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" "SDM1U100S1F-7"
+			(at -705.69 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/sdm1u100s1f-7/diodes-incorporated"
+			(at -805.69 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "1"
+			(uuid "3ef81ff0-3bb4-4205-8040-9b083f781de2")
+		)
+		(pin "2"
+			(uuid "4653af17-8ff2-42f8-8bfb-a8ffeadfc2d6")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "IC2")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:Earth")
@@ -5481,6 +6757,89 @@
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
 					(reference "MASTER1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dos input caps:UUX2A470MNL1GS")
+		(at 38.1 48.26 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0cc82cbc-16f5-4bbb-9525-6eaec284ae78")
+		(property "Reference" "C2"
+			(at 38.608 48.006 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "UUX2A470MNL1GS"
+			(at 42.164 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "footprint:PCAP_10x10-ELECT_NCA"
+			(at 38.1 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "UUX2A470MNL1GS"
+			(at 38.1 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 38.1 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1da0025b-239b-43d5-a0a3-9244ee126111")
+		)
+		(pin "2"
+			(uuid "e9b0b2a1-a02b-49b4-b6b7-ed847f329f37")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -5815,7 +7174,7 @@
 	)
 	(symbol
 		(lib_id "Inductor_Wurth_WE-HCF:2818B_7443641000B")
-		(at 187.96 27.94 0)
+		(at 193.04 27.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5826,7 +7185,7 @@
 		(fields_autoplaced yes)
 		(uuid "2dd9b809-8066-4a63-aa5b-5d5995402f41")
 		(property "Reference" "L1"
-			(at 188.1823 21.59 0)
+			(at 193.2623 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5836,7 +7195,7 @@
 			)
 		)
 		(property "Value" "2818B_7443641000B"
-			(at 187.96 30.48 0)
+			(at 193.04 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5847,7 +7206,7 @@
 			)
 		)
 		(property "Footprint" "7443641000B:L_Wurth_WE-HCF-2818B"
-			(at 187.96 20.32 0)
+			(at 193.04 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5858,7 +7217,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.we-online.com/catalog/datasheet/7443641000B.pdf?ki"
-			(at 240.03 10.16 0)
+			(at 245.11 10.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5869,7 +7228,7 @@
 			)
 		)
 		(property "Description" "Shielded High Current Inductor"
-			(at 187.96 27.94 0)
+			(at 193.04 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5880,7 +7239,7 @@
 			)
 		)
 		(property "Manufacturer" "Wurth Elektronik"
-			(at 240.03 12.7 0)
+			(at 245.11 12.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5891,7 +7250,7 @@
 			)
 		)
 		(property "Manufacturer URL" "https://www.we-online.com"
-			(at 240.03 15.24 0)
+			(at 245.11 15.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5902,7 +7261,7 @@
 			)
 		)
 		(property "Published Date" "20250325"
-			(at 240.03 17.78 0)
+			(at 245.11 17.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5913,7 +7272,7 @@
 			)
 		)
 		(property "Match Code" "WE-HCF"
-			(at 240.03 20.32 0)
+			(at 245.11 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5924,7 +7283,7 @@
 			)
 		)
 		(property "Part Number" "7443641000B"
-			(at 240.03 22.86 0)
+			(at 245.11 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5935,7 +7294,7 @@
 			)
 		)
 		(property "Size" "2818B"
-			(at 240.03 25.4 0)
+			(at 245.11 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5946,7 +7305,7 @@
 			)
 		)
 		(property "Mounting Technology" "SMT"
-			(at 240.03 27.94 0)
+			(at 245.11 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5957,7 +7316,7 @@
 			)
 		)
 		(property "L (µH)" "10.0"
-			(at 240.03 30.48 0)
+			(at 245.11 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5968,7 +7327,7 @@
 			)
 		)
 		(property "IRP,40K (A)" "59.2"
-			(at 240.03 33.02 0)
+			(at 245.11 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5979,7 +7338,7 @@
 			)
 		)
 		(property "ISAT,10% (A)" "22.9"
-			(at 240.03 35.56 0)
+			(at 245.11 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5990,7 +7349,7 @@
 			)
 		)
 		(property "ISAT,30% (A)" "25.1"
-			(at 240.03 38.1 0)
+			(at 245.11 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6001,7 +7360,7 @@
 			)
 		)
 		(property "RDC max. (mΩ)" "0.97"
-			(at 240.03 40.64 0)
+			(at 245.11 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6012,7 +7371,7 @@
 			)
 		)
 		(property "fres (MHz)" "15.0"
-			(at 240.03 43.18 0)
+			(at 245.11 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6023,7 +7382,7 @@
 			)
 		)
 		(property "Wire Type" "Flat"
-			(at 240.03 45.72 0)
+			(at 245.11 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6034,7 +7393,7 @@
 			)
 		)
 		(property "Critical Parameter" "10.0 µH"
-			(at 188.1823 24.13 0)
+			(at 193.2623 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6053,85 +7412,6 @@
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
 					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 246.38 107.95 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2ed0aa6c-ca17-4d78-a473-0a7a9f066f51")
-		(property "Reference" "Cout3"
-			(at 246.38 112.522 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "C"
-			(at 246.38 110.998 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 250.19 106.9848 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 246.38 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c625d478-3cb2-4a28-a7c0-2f132401a612")
-		)
-		(pin "2"
-			(uuid "ed8bbe2e-e44c-4129-946f-ff2f610346a0")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "Cout3")
 					(unit 1)
 				)
 			)
@@ -6286,289 +7566,6 @@
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 187.96 88.9 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "35a6c4f0-e390-4b57-9718-3312279dcc01")
-		(property "Reference" "Dbst2"
-			(at 187.96 91.44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 188.468 93.472 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Diode"
-			(at 187.96 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 187.96 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 187.96 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a6a991bf-46f8-4eaa-abe1-c0eb2ce6cd41")
-		)
-		(pin "2"
-			(uuid "ad62bc02-ce74-497f-b31e-91e18670c3d9")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "Dbst2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 38.1 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "35e67811-afd2-4177-8744-6870697cea74")
-		(property "Reference" "Cin2"
-			(at 38.354 48.768 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C"
-			(at 39.116 53.086 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.0652 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 38.1 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f7460711-5873-4b2f-8480-23f3a75d3477")
-		)
-		(pin "2"
-			(uuid "a48c8e75-4070-476a-a2d6-04d56e5ca16b")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "Cin2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 187.96 41.91 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "37bf0c9e-5fa0-4141-b6ce-ea8191516fe8")
-		(property "Reference" "Dbst1"
-			(at 189.484 38.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 185.674 39.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Diode"
-			(at 187.96 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 187.96 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 187.96 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9a7df9e4-61a6-4e80-bedf-226ae58b681d")
-		)
-		(pin "2"
-			(uuid "edccbc36-585c-45f2-b74e-b1e2322e7344")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "Dbst1")
 					(unit 1)
 				)
 			)
@@ -7754,6 +8751,173 @@
 		)
 	)
 	(symbol
+		(lib_id "SDM1U100S1F-7:SDM1U100S1F-7")
+		(at 189.23 36.83 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "64ace713-cf8f-4838-8a93-b4731d342352")
+		(property "Reference" "IC1"
+			(at 187.198 45.974 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SDM1U100S1F-7"
+			(at 180.848 48.514 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SDM1U100S1F-7-kicadfiles:SODFL3518X115N"
+			(at 94.31 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/SDM1U100S1F.pdf"
+			(at -5.69 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Schottky Rectifier 100V 1A 0.7Vf SOD123F"
+			(at 189.23 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1.15"
+			(at -205.69 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Incorporated"
+			(at -305.69 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SDM1U100S1F-7"
+			(at -405.69 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "621-SDM1U100S1F-7"
+			(at -505.69 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=621-SDM1U100S1F-7"
+			(at -605.69 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" "SDM1U100S1F-7"
+			(at -705.69 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/sdm1u100s1f-7/diodes-incorporated"
+			(at -805.69 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "2"
+			(uuid "33a62cb1-461f-4c36-b301-598104333a84")
+		)
+		(pin "1"
+			(uuid "02b2b608-c527-422a-ab5b-10a7dcb02dce")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "IC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x01_Pin")
 		(at 256.54 138.43 180)
 		(unit 1)
@@ -7824,6 +8988,89 @@
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
 					(reference "VOUT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dos input caps:UUX2A470MNL1GS")
+		(at 29.21 46.99 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6e7e217c-8b85-4492-890c-cfe5bf9b0405")
+		(property "Reference" "C3"
+			(at 29.718 46.99 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "UUX2A470MNL1GS"
+			(at 32.512 47.752 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "footprint:PCAP_10x10-ELECT_NCA"
+			(at 29.21 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "UUX2A470MNL1GS"
+			(at 29.21 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 29.21 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "887a8a97-c267-42aa-9e16-f5b4f0f0cabf")
+		)
+		(pin "1"
+			(uuid "b3dc33ae-ce9c-4ca7-95d7-74efe08ec171")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -8384,7 +9631,7 @@
 	)
 	(symbol
 		(lib_id "Inductor_Wurth_WE-HCF:2818B_7443641000B")
-		(at 193.04 77.47 0)
+		(at 196.85 77.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8395,7 +9642,7 @@
 		(fields_autoplaced yes)
 		(uuid "9492b585-c9fd-4384-9201-bf9d8d922dc6")
 		(property "Reference" "L2"
-			(at 193.2623 71.12 0)
+			(at 197.0723 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8405,7 +9652,7 @@
 			)
 		)
 		(property "Value" "2818B_7443641000B"
-			(at 193.04 80.01 0)
+			(at 196.85 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8416,7 +9663,7 @@
 			)
 		)
 		(property "Footprint" "7443641000B:L_Wurth_WE-HCF-2818B"
-			(at 193.04 69.85 0)
+			(at 196.85 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8427,7 +9674,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.we-online.com/catalog/datasheet/7443641000B.pdf?ki"
-			(at 245.11 59.69 0)
+			(at 248.92 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8438,7 +9685,7 @@
 			)
 		)
 		(property "Description" "Shielded High Current Inductor"
-			(at 193.04 77.47 0)
+			(at 196.85 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8449,7 +9696,7 @@
 			)
 		)
 		(property "Manufacturer" "Wurth Elektronik"
-			(at 245.11 62.23 0)
+			(at 248.92 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8460,7 +9707,7 @@
 			)
 		)
 		(property "Manufacturer URL" "https://www.we-online.com"
-			(at 245.11 64.77 0)
+			(at 248.92 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8471,7 +9718,7 @@
 			)
 		)
 		(property "Published Date" "20250325"
-			(at 245.11 67.31 0)
+			(at 248.92 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8482,7 +9729,7 @@
 			)
 		)
 		(property "Match Code" "WE-HCF"
-			(at 245.11 69.85 0)
+			(at 248.92 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8493,7 +9740,7 @@
 			)
 		)
 		(property "Part Number" "7443641000B"
-			(at 245.11 72.39 0)
+			(at 248.92 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8504,7 +9751,7 @@
 			)
 		)
 		(property "Size" "2818B"
-			(at 245.11 74.93 0)
+			(at 248.92 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8515,7 +9762,7 @@
 			)
 		)
 		(property "Mounting Technology" "SMT"
-			(at 245.11 77.47 0)
+			(at 248.92 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8526,7 +9773,7 @@
 			)
 		)
 		(property "L (µH)" "10.0"
-			(at 245.11 80.01 0)
+			(at 248.92 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8537,7 +9784,7 @@
 			)
 		)
 		(property "IRP,40K (A)" "59.2"
-			(at 245.11 82.55 0)
+			(at 248.92 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8548,7 +9795,7 @@
 			)
 		)
 		(property "ISAT,10% (A)" "22.9"
-			(at 245.11 85.09 0)
+			(at 248.92 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8559,7 +9806,7 @@
 			)
 		)
 		(property "ISAT,30% (A)" "25.1"
-			(at 245.11 87.63 0)
+			(at 248.92 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8570,7 +9817,7 @@
 			)
 		)
 		(property "RDC max. (mΩ)" "0.97"
-			(at 245.11 90.17 0)
+			(at 248.92 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8581,7 +9828,7 @@
 			)
 		)
 		(property "fres (MHz)" "15.0"
-			(at 245.11 92.71 0)
+			(at 248.92 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8592,7 +9839,7 @@
 			)
 		)
 		(property "Wire Type" "Flat"
-			(at 245.11 95.25 0)
+			(at 248.92 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8603,7 +9850,7 @@
 			)
 		)
 		(property "Critical Parameter" "10.0 µH"
-			(at 193.2623 73.66 0)
+			(at 197.0723 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8781,6 +10028,169 @@
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-06-23_14-35-42:UCD2A101MNJ1MS")
+		(at 242.57 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a3de6e36-f50d-4cc2-a9ea-e1bc357458ea")
+		(property "Reference" "C6"
+			(at 246.38 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "UCD2A101MNJ1MS"
+			(at 246.38 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "footprint3:CAP_UCD2A_NCH"
+			(at 242.57 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "UCD2A101MNJ1MS"
+			(at 242.57 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "bed0bd24-88fc-404c-99aa-f89f1fb0dee5")
+		)
+		(pin "1"
+			(uuid "52591079-d821-44de-acb3-9ee0f5541d84")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-06-22_18-02-40:UCD2A220MNL1GS")
+		(at 250.19 86.36 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ad1b65e1-2b7d-4219-93ef-1a0feb49f0ae")
+		(property "Reference" "C4"
+			(at 249.682 89.154 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "UCD2A220MNL1GS"
+			(at 245.364 83.566 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "incapsmall:PCAP_8x10-ELECT_NCH"
+			(at 250.19 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "UCD2A220MNL1GS"
+			(at 250.19 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2f68ae55-c6c6-4481-b197-03867ac5a15a")
+		)
+		(pin "2"
+			(uuid "3e16d95a-dde9-4883-b129-c497d178c2a4")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -9019,87 +10429,6 @@
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
 					(reference "Cvcc2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 29.21 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b2e8e434-7062-435d-9688-3c011d0dcb43")
-		(property "Reference" "Cin1"
-			(at 29.464 48.768 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C"
-			(at 29.972 53.086 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 30.1752 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 29.21 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 29.21 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "686941dd-de65-47d5-8780-86927a695579")
-		)
-		(pin "1"
-			(uuid "520b9dc9-35be-4361-a2df-64082af4d48c")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "Cin1")
 					(unit 1)
 				)
 			)
@@ -9579,6 +10908,89 @@
 		)
 	)
 	(symbol
+		(lib_id "2026-06-22_18-02-40:UCD2A220MNL1GS")
+		(at 46.99 46.99 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c2fd8662-e990-4960-b5e8-71db96c40cbd")
+		(property "Reference" "C1"
+			(at 48.26 47.752 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "UCD2A220MNL1GS"
+			(at 50.546 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "incapsmall:PCAP_8x10-ELECT_NCH"
+			(at 46.99 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "UCD2A220MNL1GS"
+			(at 46.99 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 46.99 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e4f9a4d-aac4-4234-9108-c2a5e94d8e3d")
+		)
+		(pin "2"
+			(uuid "d070621b-5b79-4675-a658-0a873ddb5daa")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "2026-06-21_01-10-03:TLRP3A30CR005FTE")
 		(at 163.83 27.94 0)
 		(unit 1)
@@ -9831,85 +11243,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 246.38 85.09 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dd142648-f946-4520-802d-18e1e4cb0cc4")
-		(property "Reference" "Cout1"
-			(at 246.634 89.662 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "C"
-			(at 246.38 88.392 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 250.19 84.1248 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 246.38 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "94ad8d91-bddc-474a-a53a-a84719a59da0")
-		)
-		(pin "1"
-			(uuid "6874c87c-a39c-4b0f-a545-9255af62e560")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "Cout1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Simulation_SPICE:NMOS")
 		(at 173.99 149.86 0)
 		(unit 1)
@@ -10021,166 +11354,6 @@
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
 					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 246.38 96.52 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e00ef2e1-8189-4d6a-9cc5-6dff6c92148b")
-		(property "Reference" "Cout2"
-			(at 246.634 101.092 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "C"
-			(at 246.38 99.568 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 250.19 95.5548 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 246.38 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "4861cf2d-71b4-4a19-99e6-29fdc19def0c")
-		)
-		(pin "1"
-			(uuid "3cb92cff-2a45-4e95-b607-383cea83ea8b")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "Cout2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 46.99 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e5a2505b-6828-4990-aa2e-8e0ec4ea000d")
-		(property "Reference" "Cin3"
-			(at 47.498 48.768 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C"
-			(at 47.752 53.086 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 47.9552 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 46.99 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 46.99 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "501b4190-fa97-4f7d-b443-25a40d780b37")
-		)
-		(pin "2"
-			(uuid "a57b2040-4ba6-4b5d-9383-1d2573f41a49")
-		)
-		(instances
-			(project "boostconverter"
-				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
-					(reference "Cin3")
 					(unit 1)
 				)
 			)
@@ -10505,6 +11678,171 @@
 			(project "boostconverter"
 				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "KRM55WR72A226MH01L:KRM55WR72A226MH01L")
+		(at 238.76 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f6cb2b53-88f2-4e73-ad69-32811978a60e")
+		(property "Reference" "C5"
+			(at 245.364 91.186 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "KRM55WR72A226MH01L"
+			(at 245.11 92.964 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "KRM55WR72A226MH01L-kicadfiles:CAPC6153X670N"
+			(at 247.65 192.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/KRM55_25V-100V_E.pdf"
+			(at 247.65 292.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Capacitor KRM55 L=6.1mm W=5.3mm T=6.4mm"
+			(at 238.76 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "6.7"
+			(at 247.65 492.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Murata Electronics"
+			(at 247.65 592.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "KRM55WR72A226MH01L"
+			(at 247.65 692.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "81-KRM55WR72A226MH1L"
+			(at 247.65 792.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Murata-Electronics/KRM55WR72A226MH01L?qs=qkDYIeTQ%252BEnTj7DsBXk4Cw%3D%3D"
+			(at 247.65 892.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" "KRM55WR72A226MH01L"
+			(at 247.65 992.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/krm55wr72a226mh01l/murata-manufacturing?region=europe"
+			(at 247.65 1092.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "2"
+			(uuid "c6be9301-7361-4832-acb8-8eec1987e549")
+		)
+		(pin "1"
+			(uuid "518b3c2e-aa8d-4275-a052-34ef74aa928c")
+		)
+		(instances
+			(project "boostconverter"
+				(path "/4421edd3-111c-4598-ae8a-42354541d0a6"
+					(reference "C5")
 					(unit 1)
 				)
 			)

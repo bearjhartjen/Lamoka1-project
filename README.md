@@ -9,17 +9,6 @@
 
 ---
 
-##  Table of Contents
-
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Specifications](#-specifications)
-- [Operating Modes](#-operating-modes)
-- [Software-Defined Control](#-software-defined-control)
-- [License](#-license)
-
----
-
 ## Overview
 
  The **Lamoka1** is a fully open-source, pure sine wave inverter and charger system, controlled by an RP2350. It's built to be fully transparent, modular, and repeatable, aiming to be the best in its class rather than a closed, disposable black box. Every schematic, every line of firmware, and every design decision is published — nothing is hidden behind proprietary lock-in.
