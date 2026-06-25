@@ -1,3 +1,0 @@
-For calculating the requirements out of a transformer we will have to do some math. 
-
-The boost section max input is 40v @ 30a, meaning the max power in will be 1.2kw, then we have to factor in the losses of the boost converter (lets assume 90% efficiency) that is a output of 1,080w from the boost converter. The boost converter outputs 48v so 1,080w divided by 48v to find the current is, 22.5a, lets just go a little bit higher for safety and say the maximum output of the boost converter is 48v @ 25a (even if the efficiency were to be 100% 48v times 25a is 1.2kw, which we know is our maximum input) So we can judge our best fit transformer by assuming that there will be a constant 25 amps going through it. 

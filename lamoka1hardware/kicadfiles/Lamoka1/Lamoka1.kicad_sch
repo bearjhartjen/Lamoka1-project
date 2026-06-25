@@ -1,0 +1,70 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "50fe8bbc-b3f6-4de5-9677-9b5870b87390")
+	(paper "User" 762 762)
+	(lib_symbols)
+	(sheet
+		(at 26.67 24.13)
+		(size 354.33 232.41)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0")
+		(property "Sheetname" "Boost"
+			(at 26.67 23.4184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Boost.kicad_sch"
+			(at 26.67 257.1246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VIN-SOURCE" input
+			(at 26.67 130.81 180)
+			(uuid "cdad630b-1a9f-4184-a22b-52849e38e570")
+			(effects
+				(font
+					(size 3.81 3.81)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

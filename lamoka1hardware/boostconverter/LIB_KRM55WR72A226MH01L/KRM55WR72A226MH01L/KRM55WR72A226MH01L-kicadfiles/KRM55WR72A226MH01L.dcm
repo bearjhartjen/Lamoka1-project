@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP KRM55WR72A226MH01L
-D Capacitor KRM55 L=6.1mm W=5.3mm T=6.4mm
-K
-F https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/KRM55_25V-100V_E.pdf
-$ENDCMP
-#
-#End Doc Library

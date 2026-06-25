@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP SDM1U100S1F-7
-D Schottky Rectifier 100V 1A 0.7Vf SOD123F
-K
-F https://www.diodes.com/assets/Datasheets/SDM1U100S1F.pdf
-$ENDCMP
-#
-#End Doc Library

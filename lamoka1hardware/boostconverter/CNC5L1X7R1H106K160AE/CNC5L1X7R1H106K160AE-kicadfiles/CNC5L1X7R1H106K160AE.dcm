@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP CNC5L1X7R1H106K160AE
-D Multilayer Ceramic Capacitors MLCC - SMD/SMT 1206 50VDC 10uF 10% 1.6mm X7R AEC-Q200
-K
-F https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_soft_cnc_en.pdf
-$ENDCMP
-#
-#End Doc Library

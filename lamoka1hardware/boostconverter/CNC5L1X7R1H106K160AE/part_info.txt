@@ -1,9 +1,0 @@
-Manufacturer=TDK
-PartNumber=CNC5L1X7R1H106K160AE
-PartCategory=Capacitor
-PackageCategory=Capacitor Chip Non-polarised
-PinCount=2
-Version=1.1
-Released=2024-05-14 09:34:02
-Downloaded=2026-06-24 15:53:55
-3D=Y
