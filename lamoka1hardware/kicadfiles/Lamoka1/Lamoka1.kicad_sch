@@ -21,13 +21,13 @@
 			(color 0 0 0 0)
 		)
 		(uuid "a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0")
-		(property "Sheetname" "Boost"
-			(at 26.67 23.4184 0)
+		(property "Sheetname" "BOOST-SECTION"
+			(at 26.67 21.5134 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 5.08 5.08)
 				)
 				(justify left bottom)
 			)
@@ -51,6 +51,26 @@
 					(size 3.81 3.81)
 				)
 				(justify left)
+			)
+		)
+		(pin "SIGM" input
+			(at 210.82 256.54 270)
+			(uuid "2f9e9fa0-8d1d-4ccc-ae50-1c171ef1d165")
+			(effects
+				(font
+					(size 3.81 3.81)
+				)
+				(justify left)
+			)
+		)
+		(pin "VOUT-BOOST" input
+			(at 381 129.54 0)
+			(uuid "45c870ed-11a3-43f0-859f-0e8f678f2475")
+			(effects
+				(font
+					(size 3.81 3.81)
+				)
+				(justify right)
 			)
 		)
 		(instances

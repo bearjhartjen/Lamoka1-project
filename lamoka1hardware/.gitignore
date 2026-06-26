@@ -11,12 +11,14 @@
 *.kicad_pcb-bak
 *.kicad_sch~
 *.kicad_pcb~
+_autosave-*
 
 # Cache and lock files
 fp-info-cache
 sym-lib-cache
 *.kicad_sch.lock
 *.kicad_pcb.lock
+*.Kicad_pro.Ick
 
 ################################
 # KiCad Backups
