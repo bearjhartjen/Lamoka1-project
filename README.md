@@ -4,7 +4,6 @@
 ![Status](https://img.shields.io/badge/status-early%20design-yellow.svg)
 ![Hardware License](https://img.shields.io/badge/Hardware-CERN--OHL--W%20v2.0-orange.svg)
 ![Firmware License](https://img.shields.io/badge/Firmware-GPLv3-blue.svg)
-[![Design Notes](https://img.shields.io/badge/Design-Notes-brightgreen?style=flat-square)](./DESIGN_NOTES.md)
 </div>
 
 ---
