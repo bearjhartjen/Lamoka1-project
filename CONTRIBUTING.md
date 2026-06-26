@@ -13,18 +13,6 @@
 
 ---
 
-##  Table of Contents
-
-- [Before You Start](#-before-you-start)
-- [How to Contribute](#-how-to-contribute)
-- [Licensing](#-licensing)
-- [Documenting Your Contribution](#-documenting-your-contribution)
-- [Guidelines](#-guidelines)
-- [Code of Conduct](#-code-of-conduct)
-- [Questions?](#-questions)
-
----
-
 ##  Before You Start
 
 > [!IMPORTANT]
@@ -67,51 +55,9 @@ The applicable license file lives in each relevant folder (`LICENSE-SOFT` / `LIC
 
 ---
 
-## Documenting Your Contribution
-
-Every contribution needs an `ADDITION.md` placed **only** in the folder where the change happened — not at the repo root, not duplicated elsewhere. One file, one location, one clear record of who changed what.
-
-Each `ADDITION.md` should include:
-
--  **Your name** (or handle)
--  **A short description** of the change
--  **The license** it falls under
--  **The date**
-
-<details>
-<summary><b> Click to see an example ADDITION.md</b></summary>
-
-```markdown
-# Addition
-
-**Contributor:** Jane Doe
-**Date:** 2026-06-17
-**License:** CERN Open Hardware Licence v2.0 (Weakly Reciprocal)
-
-## Change
-
-Added reverse-polarity protection to the input stage of the boost converter,
-using a P-channel MOSFET instead of a series diode to reduce conduction losses.
-```
-
-</details>
-
-If your PR spans multiple folders, add a separate `ADDITION.md` in each one rather than summarizing everything in a single file.
-
----
-
-##  Guidelines
-
-- **Code style:** Match what's already there in the file/folder you're editing.
-- **Documentation:** Adding a component, feature, or folder? Update the relevant `README.md` so it doesn't go stale.
-- **Hardware/PCB files:** Keep schematics, layouts, 3D models, and footprint libraries consistent — and make sure DRC passes before submitting.
-- **Commit messages:** Be specific. *"Fix slope-comp resistor value for 250kHz phase"* > *"update stuff."*
-
----
-
 ##  Code of Conduct
 
-Be respectful. This projectshould be a welcoming, collaborative project no matter someone's experience level — questions are always welcome in Issues or Discussions.
+Be respectful. This project should be a welcoming, collaborative project no matter someone's experience level — questions are always welcome in Issues or Discussions.
 
 ---
 

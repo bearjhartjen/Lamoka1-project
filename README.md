@@ -1,10 +1,10 @@
-
+<div align="center">
 
 
 ![Status](https://img.shields.io/badge/status-early%20design-yellow.svg)
 ![Hardware License](https://img.shields.io/badge/Hardware-CERN--OHL--W%20v2.0-orange.svg)
 ![Firmware License](https://img.shields.io/badge/Firmware-GPLv3-blue.svg)
-
+[![Design Notes](https://img.shields.io/badge/Design-Notes-brightgreen?style=flat-square)](./DESIGN_NOTES.md)
 </div>
 
 ---
@@ -18,7 +18,7 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 
 ---
 
-## notable features
+## Notable features
 
 -  **Pure sine wave output** — or virtually any waveform you want, up to a 180V peak limit
 -  **Modular & repairable** — built from replaceable, well-documented sections instead of a sealed, disposable unit
@@ -34,20 +34,18 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 | Parameter | Value |
 |:---|:---|
 | **DC Input** | 5–40V |
-| **AC Output** | 120V RMS |
-| **Peak Output Voltage** | 180V max peak (configurable waveform) |
+| **Inverter Output** | AC 120 Vrms or Configurable |
 | **Control** | RP2350 microcontroller |
 | **User Interface** | 10× RGB LEDs + 1 push button |
-| **Cooling** | PWM-controlled fan, per-section temperature sensing |
-
+| **Cooling** | Pulse width modulated fan |
 ---
 
 
-## Software-Defined Control
+## Software-Defined Control (INVERTER)
 
-The entire H-bridge is driven directly by the RP2350 — there's no separate analog waveform generator or fixed-function inverter chip in the way. Every switching decision, every waveform shape, every mode is just code running on the microcontroller.
+The entire H-bridge is driven directly by the RP2350 — there's no separate analog waveform generator or fixed-function inverter chip in the way. Every waveform is articulated by the microcontroller.
 
-Out of the box, Lamoka1 ships with **basic stock firmware**: clean sine wave output and the resistive-load "dumb mode" described above. That's intentionally a starting point, not a ceiling.
+Out of the box, Lamoka1 ships with **basic stock firmware**: clean sine wave output and a resistive-load "dumb mode". That's intentionally a starting point, not a ceiling.
 
 > [!TIP]
 > Because the RP2350 controls switching directly, the unit can be reprogrammed to do far more than the stock firmware — custom waveforms, different control strategies, alternative protection logic, whatever you can get the math to do safely. This is exactly where the open-source firmware license matters: if you build something cool, you can share it back with the community, and anyone else with a Lamoka1 can run it.
