@@ -44,20 +44,28 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 
 The entire H-bridge is driven directly by the RP2350 — there's no separate analog waveform generator or fixed-function inverter chip in the way. Every waveform is articulated by the microcontroller.
 
-Out of the box, Lamoka1 ships with **basic stock firmware**: clean sine wave output and a resistive-load "dumb mode". That's intentionally a starting point, not a ceiling.
+Out of the box, Lamoka1 comes with **basic stock firmware**: clean sine wave output and a resistive-load "dumb mode". This can be a starting point, not a limit of function.
 
 > [!TIP]
-> Because the RP2350 controls switching directly, the unit can be reprogrammed to do far more than the stock firmware — custom waveforms, different control strategies, alternative protection logic, whatever you can get the math to do safely. This is exactly where the open-source firmware license matters: if you build something cool, you can share it back with the community, and anyone else with a Lamoka1 can run it.
+> Because the RP2350 controls switching directly, the unit can be reprogrammed to do far more than the stock firmware — custom waveforms, different control strategies, alternative protection logic, whatever you can get the math to do safely. This is where the open-source firmware license really matters: if you build something, you can share it back with the community, and anyone else with a Lamoka1 can run it.
 
 ---
+
 
 ## License
 
 Lamoka1 uses a split license, matching the folder you're in:
 
-- **Hardware** (`lamoka1hardware/`) — Licensed under [CERN-OHL-W v2.0](https://ohwr.org/cern_ohl_w_v2.txt)
-- **Firmware** (`Lamoka1software/`) — Licensed under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+- **Hardware**  — Licensed under [CERN-OHL-W v2.0](https://ohwr.org/cern_ohl_w_v2.txt)
+- **Firmware**  — Licensed under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 ---
 
+## Lamoka project goals
 
+We want anyone to be able to pick up any Lamoka unit, and use it for what they need, whether that be charging up a 12v battery with AC power, or managing whole solar setups. These units are designed to be reliable and usefull. We are taking the "smart" functions of inverter/chargers and actually allowing the unit to utilize its smarts, there is no reason that a smart inverter charger NEEDs a bluetooth or WIFI connection, the unit should just take care of everything. 
+
+
+## Lamoka1 caution 
+
+The Lamoka1 is simply designed to be as cheap as possible while still being the MVP product, this is just so we can get people interested while maintaining funds to keep going. 
 
