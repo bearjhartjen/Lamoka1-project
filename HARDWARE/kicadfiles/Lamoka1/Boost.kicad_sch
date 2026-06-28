@@ -6807,8 +6807,8 @@
 		)
 	)
 	(rectangle
-		(start 127 151.13)
-		(end 158.75 184.15)
+		(start 99.06 160.02)
+		(end 130.81 193.04)
 		(stroke
 			(width 0)
 			(type default)
@@ -6820,7 +6820,7 @@
 	)
 	(text "MODE select circuit "
 		(exclude_from_sim no)
-		(at 137.414 153.162 0)
+		(at 109.474 162.052 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6829,13 +6829,7 @@
 		(uuid "7c57f365-47d7-49a9-ac17-bb79116ca50b")
 	)
 	(junction
-		(at 177.8 25.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02ff6f7d-63bf-40f5-883b-c96486fe2edd")
-	)
-	(junction
-		(at 144.78 162.56)
+		(at 116.84 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0d4c589a-5a22-4d91-8fd7-84d15bc097c5")
@@ -6919,6 +6913,12 @@
 		(uuid "7234c2f9-6408-4790-b5c7-c7a494efe83b")
 	)
 	(junction
+		(at 185.42 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "73ddaafa-8c8a-403f-a04b-29e58e77b812")
+	)
+	(junction
 		(at 205.74 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6937,6 +6937,12 @@
 		(uuid "7dae367d-a4a9-4f06-b4a8-d72582b98249")
 	)
 	(junction
+		(at 177.8 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83c5d53b-3578-4b48-876b-1eb21b663250")
+	)
+	(junction
 		(at 205.74 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6953,6 +6959,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8f91961f-601c-46ee-92c4-f7f9d1765b30")
+	)
+	(junction
+		(at 250.19 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9255cdb9-20bc-4c66-88fe-33b6c9f89e4d")
 	)
 	(junction
 		(at 153.67 85.09)
@@ -6979,6 +6991,12 @@
 		(uuid "ac3903dc-6905-486a-8097-f2b803478291")
 	)
 	(junction
+		(at 250.19 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad0980af-bc4d-4cee-932d-291e34a875e5")
+	)
+	(junction
 		(at 205.74 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6997,22 +7015,16 @@
 		(uuid "ba744f7b-7008-410b-ae32-013271fff6d6")
 	)
 	(junction
-		(at 185.42 74.93)
+		(at 250.19 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "be36eac8-cbb8-446e-afd7-2081bda5eb50")
+		(uuid "cab191f0-4e79-4f85-a67d-6eabba445f03")
 	)
 	(junction
 		(at 74.93 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cff45d70-c7d3-44a5-9199-84caabcaabd3")
-	)
-	(junction
-		(at 250.19 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dbec7cf1-3c7f-4cc5-a02f-37d1290985d3")
 	)
 	(junction
 		(at 191.77 86.36)
@@ -7027,34 +7039,16 @@
 		(uuid "ecc49e2f-65f0-4251-add9-e3eeb437246e")
 	)
 	(junction
-		(at 237.49 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f0bd0494-f008-4067-a024-eb994b5fca12")
-	)
-	(junction
 		(at 250.19 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f17d2c27-edca-446f-824d-696637fd3e29")
 	)
 	(junction
-		(at 250.19 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f4676bd9-58df-4b6c-b98a-9dedff22740f")
-	)
-	(junction
 		(at 54.61 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f58adc29-4a2f-4541-b7a5-ff97640e386d")
-	)
-	(junction
-		(at 250.19 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fafc8e82-e584-4c02-b533-04c8b1d6a5e9")
 	)
 	(junction
 		(at 45.72 41.91)
@@ -7090,7 +7084,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 175.26) (xy 144.78 179.07)
+			(xy 116.84 184.15) (xy 116.84 187.96)
 		)
 		(stroke
 			(width 0)
@@ -7107,16 +7101,6 @@
 			(type default)
 		)
 		(uuid "04c9bba6-613e-4e3f-a5a8-32f34aec0220")
-	)
-	(wire
-		(pts
-			(xy 241.3 87.63) (xy 237.49 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "064f0380-7455-4855-b469-00184770d9f0")
 	)
 	(wire
 		(pts
@@ -7150,7 +7134,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 105.41) (xy 250.19 105.41)
+			(xy 248.92 104.14) (xy 250.19 104.14)
 		)
 		(stroke
 			(width 0)
@@ -7170,7 +7154,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 93.98) (xy 233.68 110.49)
+			(xy 234.95 92.71) (xy 234.95 95.25)
 		)
 		(stroke
 			(width 0)
@@ -7260,17 +7244,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 83.82) (xy 250.19 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15c1b5f8-cfc2-4546-9703-777ab2a488fb")
-	)
-	(wire
-		(pts
-			(xy 163.83 27.94) (xy 177.8 27.94)
+			(xy 163.83 29.21) (xy 177.8 29.21)
 		)
 		(stroke
 			(width 0)
@@ -7280,7 +7254,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 156.21) (xy 149.86 156.21)
+			(xy 116.84 165.1) (xy 121.92 165.1)
 		)
 		(stroke
 			(width 0)
@@ -7310,7 +7284,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 93.98) (xy 233.68 93.98)
+			(xy 237.49 92.71) (xy 234.95 92.71)
 		)
 		(stroke
 			(width 0)
@@ -7330,7 +7304,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 162.56) (xy 147.32 162.56)
+			(xy 116.84 171.45) (xy 119.38 171.45)
 		)
 		(stroke
 			(width 0)
@@ -7350,7 +7324,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 153.67) (xy 149.86 153.67)
+			(xy 171.45 162.56) (xy 121.92 162.56)
 		)
 		(stroke
 			(width 0)
@@ -7450,7 +7424,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 58.42) (xy 175.26 157.48)
+			(xy 175.26 58.42) (xy 175.26 166.37)
 		)
 		(stroke
 			(width 0)
@@ -7477,6 +7451,26 @@
 			(type default)
 		)
 		(uuid "284e20b6-11fc-4525-a75d-de16495f75c7")
+	)
+	(wire
+		(pts
+			(xy 236.22 81.28) (xy 236.22 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "297f73fa-5e8d-4fe2-84e8-a195a5f63fcc")
+	)
+	(wire
+		(pts
+			(xy 236.22 81.28) (xy 241.3 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29d29ad0-ae6f-446b-996f-21231b0ca94f")
 	)
 	(wire
 		(pts
@@ -7680,7 +7674,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 153.67) (xy 149.86 156.21)
+			(xy 121.92 162.56) (xy 121.92 165.1)
 		)
 		(stroke
 			(width 0)
@@ -7710,7 +7704,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 157.48) (xy 147.32 162.56)
+			(xy 119.38 166.37) (xy 119.38 171.45)
 		)
 		(stroke
 			(width 0)
@@ -7810,7 +7804,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 71.12) (xy 250.19 83.82)
+			(xy 250.19 71.12) (xy 250.19 81.28)
 		)
 		(stroke
 			(width 0)
@@ -7820,7 +7814,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 83.82) (xy 250.19 83.82)
+			(xy 248.92 81.28) (xy 250.19 81.28)
 		)
 		(stroke
 			(width 0)
@@ -7910,7 +7904,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 170.18) (xy 137.16 170.18)
+			(xy 105.41 179.07) (xy 109.22 179.07)
 		)
 		(stroke
 			(width 0)
@@ -8000,16 +7994,6 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 93.98) (xy 250.19 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f1b94b6-848c-4e6c-b719-baae18370abe")
-	)
-	(wire
-		(pts
 			(xy 74.93 87.63) (xy 78.74 87.63)
 		)
 		(stroke
@@ -8017,16 +8001,6 @@
 			(type default)
 		)
 		(uuid "5f7d882a-7702-4282-9c9f-b115c96442f5")
-	)
-	(wire
-		(pts
-			(xy 237.49 100.33) (xy 241.3 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61777600-e1e3-47b7-9cf6-9ce6a602154f")
 	)
 	(wire
 		(pts
@@ -8080,7 +8054,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 156.21) (xy 144.78 162.56)
+			(xy 116.84 165.1) (xy 116.84 171.45)
 		)
 		(stroke
 			(width 0)
@@ -8180,6 +8154,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 104.14) (xy 250.19 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "738f8b08-dafe-4b03-96b7-d46fc24b2e0b")
+	)
+	(wire
+		(pts
 			(xy 90.17 100.33) (xy 91.44 100.33)
 		)
 		(stroke
@@ -8227,6 +8211,26 @@
 			(type default)
 		)
 		(uuid "768474f8-f787-44d5-a23e-2a7558d5b656")
+	)
+	(wire
+		(pts
+			(xy 236.22 104.14) (xy 236.22 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77943b6b-d96e-4da9-923b-d3c6a6058b8e")
+	)
+	(wire
+		(pts
+			(xy 250.19 81.28) (xy 250.19 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77e9dfa3-bfc6-4eee-b446-152b0fb69a2a")
 	)
 	(wire
 		(pts
@@ -8280,16 +8284,6 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 87.63) (xy 237.49 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e95068c-9ffd-4de6-9992-0abe5905d989")
-	)
-	(wire
-		(pts
 			(xy 217.17 62.23) (xy 217.17 38.1)
 		)
 		(stroke
@@ -8330,7 +8324,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 157.48) (xy 147.32 157.48)
+			(xy 121.92 166.37) (xy 119.38 166.37)
 		)
 		(stroke
 			(width 0)
@@ -8440,7 +8434,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 137.16) (xy 151.13 137.16)
+			(xy 163.83 118.11) (xy 163.83 133.35)
 		)
 		(stroke
 			(width 0)
@@ -8500,7 +8494,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 81.28) (xy 177.8 77.47)
+			(xy 177.8 81.28) (xy 177.8 78.74)
 		)
 		(stroke
 			(width 0)
@@ -8540,7 +8534,17 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 40.64) (xy 163.83 27.94)
+			(xy 250.19 92.71) (xy 250.19 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a097084e-ecf9-478e-aff1-644af89c2b82")
+	)
+	(wire
+		(pts
+			(xy 163.83 40.64) (xy 163.83 29.21)
 		)
 		(stroke
 			(width 0)
@@ -8557,16 +8561,6 @@
 			(type default)
 		)
 		(uuid "a1d2bdd9-7b89-4cba-b427-cdc794378dd0")
-	)
-	(wire
-		(pts
-			(xy 241.3 100.33) (xy 241.3 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a281ed84-87fd-4ea0-8e36-645655bd7d6a")
 	)
 	(wire
 		(pts
@@ -8730,16 +8724,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 137.16) (xy 163.83 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b069523a-7863-4170-826d-a04f67360d81")
-	)
-	(wire
-		(pts
 			(xy 45.72 52.07) (xy 45.72 55.88)
 		)
 		(stroke
@@ -8890,7 +8874,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 162.56) (xy 144.78 165.1)
+			(xy 116.84 171.45) (xy 116.84 173.99)
 		)
 		(stroke
 			(width 0)
@@ -8920,17 +8904,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 105.41) (xy 250.19 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c66bf952-ba41-4252-a2ef-a3e6ee780244")
-	)
-	(wire
-		(pts
-			(xy 177.8 77.47) (xy 185.42 77.47)
+			(xy 177.8 78.74) (xy 185.42 78.74)
 		)
 		(stroke
 			(width 0)
@@ -8947,16 +8921,6 @@
 			(type default)
 		)
 		(uuid "ca124f04-2ae7-42db-b952-aa35e0d9c4e2")
-	)
-	(wire
-		(pts
-			(xy 143.51 129.54) (xy 143.51 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca500c53-fe8e-4835-8951-abd185db29bc")
 	)
 	(wire
 		(pts
@@ -9010,7 +8974,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 157.48) (xy 175.26 157.48)
+			(xy 129.54 166.37) (xy 175.26 166.37)
 		)
 		(stroke
 			(width 0)
@@ -9150,17 +9114,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 83.82) (xy 241.3 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd666c08-fcf5-4a46-8dc4-69768aea9ada")
-	)
-	(wire
-		(pts
-			(xy 185.42 77.47) (xy 185.42 74.93)
+			(xy 185.42 78.74) (xy 185.42 74.93)
 		)
 		(stroke
 			(width 0)
@@ -9217,6 +9171,16 @@
 			(type default)
 		)
 		(uuid "e7e27f2b-e0da-4b46-b64c-658d2cf85be1")
+	)
+	(wire
+		(pts
+			(xy 163.83 146.05) (xy 163.83 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e80dd4b7-e14e-422c-ba5f-858ed1264fad")
 	)
 	(wire
 		(pts
@@ -9300,16 +9264,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 129.54) (xy 143.51 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f27ad82b-634c-4803-a27b-91a46d1f4ea3")
-	)
-	(wire
-		(pts
 			(xy 69.85 63.5) (xy 62.23 63.5)
 		)
 		(stroke
@@ -9327,6 +9281,16 @@
 			(type default)
 		)
 		(uuid "f5463809-6c98-4475-958c-6cc724e61c05")
+	)
+	(wire
+		(pts
+			(xy 236.22 104.14) (xy 241.3 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f637f4dd-9ef6-4620-80a0-a31fba8c9816")
 	)
 	(wire
 		(pts
@@ -9420,7 +9384,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 115.57) (xy 171.45 153.67)
+			(xy 171.45 115.57) (xy 171.45 162.56)
 		)
 		(stroke
 			(width 0)
@@ -9430,27 +9394,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 118.11) (xy 163.83 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbff71ba-dfa8-4fae-b77d-14b39296939a")
-	)
-	(wire
-		(pts
-			(xy 237.49 93.98) (xy 237.49 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc319887-8e86-4d44-8c1e-c42ec4b56e75")
-	)
-	(wire
-		(pts
-			(xy 177.8 27.94) (xy 177.8 25.4)
+			(xy 177.8 29.21) (xy 177.8 25.4)
 		)
 		(stroke
 			(width 0)
@@ -9492,7 +9436,7 @@
 	)
 	(hierarchical_label "SIGM"
 		(shape input)
-		(at 133.35 170.18 180)
+		(at 105.41 179.07 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9525,6 +9469,7 @@
 		)
 		(property "Value" "Earth"
 			(at 80.01 104.394 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9588,10 +9533,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "10e08226-c6a5-4825-8168-4e256e05a41d")
 		(property "Reference" "Cbst8"
-			(at 199.39 80.01 0)
+			(at 199.644 83.312 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9600,8 +9544,8 @@
 				)
 			)
 		)
-		(property "Value" "C1206C224M1REC7210"
-			(at 199.39 82.55 0)
+		(property "Value" "0.22u"
+			(at 199.136 89.662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9685,6 +9629,7 @@
 		)
 		(property "Value" "Earth"
 			(at 27.94 60.96 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9740,7 +9685,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 153.67 157.48 90)
+		(at 125.73 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9750,7 +9695,7 @@
 		(dnp no)
 		(uuid "17288f8c-d0a6-45e7-b5d8-7ab22ab37981")
 		(property "Reference" "R41"
-			(at 155.448 159.766 90)
+			(at 127.508 168.656 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9761,7 +9706,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 154.686 154.94 90)
+			(at 126.746 163.83 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9772,7 +9717,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 153.67 159.258 90)
+			(at 125.73 168.148 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9783,7 +9728,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 153.67 157.48 0)
+			(at 125.73 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9794,7 +9739,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 153.67 157.48 0)
+			(at 125.73 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9843,6 +9788,7 @@
 		)
 		(property "Value" "Earth"
 			(at 88.392 77.216 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9908,7 +9854,7 @@
 		(dnp no)
 		(uuid "2e8a6fb6-e8f4-4c6d-84c6-3faa494583c4")
 		(property "Reference" "Dbst7"
-			(at 185.928 43.434 90)
+			(at 184.15 43.434 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9919,7 +9865,8 @@
 			)
 		)
 		(property "Value" "SDM1U100S1F-7"
-			(at 182.88 38.354 0)
+			(at 192.278 42.418 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10085,8 +10032,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "RN73R1JTTD4992F25"
-			(at 59.182 42.164 0)
+		(property "Value" "49.9k"
+			(at 55.372 58.42 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10171,6 +10118,7 @@
 		)
 		(property "Value" "Earth"
 			(at 36.83 60.96 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10236,7 +10184,7 @@
 		(dnp no)
 		(uuid "41762bdc-9cab-45e5-82dd-4aebcdec4a5c")
 		(property "Reference" "R35"
-			(at 77.724 71.882 0)
+			(at 80.264 70.104 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10246,8 +10194,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "RC0603FR-0736KL"
-			(at 72.644 67.31 0)
+		(property "Value" "36k"
+			(at 80.01 80.01 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10330,7 +10278,8 @@
 			)
 		)
 		(property "Value" "CSD19531Q5A"
-			(at 216.154 80.01 0)
+			(at 217.17 79.756 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10422,8 +10371,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "CL10B104KB8NNNC"
-			(at 75.184 89.916 0)
+		(property "Value" "100n"
+			(at 78.74 97.028 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10508,6 +10457,7 @@
 		)
 		(property "Value" "Earth"
 			(at 45.72 60.96 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10563,7 +10513,7 @@
 	)
 	(symbol
 		(lib_id "KRM55WR72A226MH01L:KRM55WR72A226MH01L")
-		(at 237.49 93.98 0)
+		(at 237.49 92.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10573,7 +10523,7 @@
 		(dnp no)
 		(uuid "5037cf03-18a0-4915-8b4d-48b61373e085")
 		(property "Reference" "C30"
-			(at 244.094 88.646 0)
+			(at 243.84 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10582,8 +10532,8 @@
 				)
 			)
 		)
-		(property "Value" "KRM55WR72A226MH01L"
-			(at 243.84 90.424 0)
+		(property "Value" "22u"
+			(at 244.094 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10593,7 +10543,7 @@
 			)
 		)
 		(property "Footprint" "Components:CAPC6153X670N"
-			(at 246.38 190.17 0)
+			(at 246.38 188.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10605,7 +10555,7 @@
 			)
 		)
 		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/KRM55_25V-100V_E.pdf"
-			(at 246.38 290.17 0)
+			(at 246.38 288.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10617,7 +10567,7 @@
 			)
 		)
 		(property "Description" "Capacitor KRM55 L=6.1mm W=5.3mm T=6.4mm"
-			(at 237.49 93.98 0)
+			(at 237.49 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10628,7 +10578,7 @@
 			)
 		)
 		(property "Height" "6.7"
-			(at 246.38 490.17 0)
+			(at 246.38 488.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10640,7 +10590,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Murata Electronics"
-			(at 246.38 590.17 0)
+			(at 246.38 588.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10652,7 +10602,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KRM55WR72A226MH01L"
-			(at 246.38 690.17 0)
+			(at 246.38 688.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10664,7 +10614,7 @@
 			)
 		)
 		(property "Mouser Part Number" "81-KRM55WR72A226MH1L"
-			(at 246.38 790.17 0)
+			(at 246.38 788.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10676,7 +10626,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Murata-Electronics/KRM55WR72A226MH01L?qs=qkDYIeTQ%252BEnTj7DsBXk4Cw%3D%3D"
-			(at 246.38 890.17 0)
+			(at 246.38 888.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10688,7 +10638,7 @@
 			)
 		)
 		(property "Arrow Part Number" "KRM55WR72A226MH01L"
-			(at 246.38 990.17 0)
+			(at 246.38 988.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10700,7 +10650,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/krm55wr72a226mh01l/murata-manufacturing?region=europe"
-			(at 246.38 1090.17 0)
+			(at 246.38 1088.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10750,6 +10700,7 @@
 		)
 		(property "Value" "Earth"
 			(at 239.268 143.256 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10828,6 +10779,7 @@
 		)
 		(property "Value" "Earth"
 			(at 85.09 53.3399 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10894,7 +10846,7 @@
 		(dnp no)
 		(uuid "560c8acf-c342-43fc-b9d7-e70ac200981b")
 		(property "Reference" "Dbst8"
-			(at 185.166 88.392 90)
+			(at 183.896 89.154 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10905,7 +10857,8 @@
 			)
 		)
 		(property "Value" "SDM1U100S1F-7"
-			(at 183.388 83.058 0)
+			(at 193.04 81.026 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11051,7 +11004,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-23_14-35-42:UCD2A101MNJ1MS")
-		(at 241.3 105.41 0)
+		(at 241.3 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11059,10 +11012,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5613d755-3d2e-48ba-ad4a-4443eedd1194")
 		(property "Reference" "C31"
-			(at 245.11 99.06 0)
+			(at 245.364 100.838 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11071,8 +11023,8 @@
 				)
 			)
 		)
-		(property "Value" "UCD2A101MNJ1MS"
-			(at 245.11 101.6 0)
+		(property "Value" "10u"
+			(at 245.618 107.188 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11082,7 +11034,7 @@
 			)
 		)
 		(property "Footprint" "Components:CAP_UCD2A_NCH"
-			(at 241.3 105.41 0)
+			(at 241.3 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11094,7 +11046,7 @@
 			)
 		)
 		(property "Datasheet" "UCD2A101MNJ1MS"
-			(at 241.3 105.41 0)
+			(at 241.3 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11106,7 +11058,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 241.3 105.41 0)
+			(at 241.3 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11143,7 +11095,7 @@
 		(dnp no)
 		(uuid "5915fdea-7cc7-4f2e-a05f-7a15fd991177")
 		(property "Reference" "R1"
-			(at 95.25 83.82 0)
+			(at 96.266 84.074 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11152,8 +11104,8 @@
 				)
 			)
 		)
-		(property "Value" "RC0603FR-0756K2L"
-			(at 94.234 89.154 0)
+		(property "Value" "56.2k"
+			(at 96.774 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11237,6 +11189,7 @@
 		)
 		(property "Value" "Earth"
 			(at 166.37 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11291,6 +11244,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:Earth")
+		(at 236.22 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6040a39e-7dcd-4d95-986c-410c2543a08f")
+		(property "Reference" "#PWR044"
+			(at 236.22 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Earth"
+			(at 236.22 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 236.22 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "892f08e3-fa79-410f-801b-ffdae85db6e5")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "dos input caps:UUX2A470MNL1GS")
 		(at 36.83 45.72 270)
 		(unit 1)
@@ -11312,8 +11344,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "UUX2A470MNL1GS"
-			(at 40.894 46.99 0)
+		(property "Value" "47u"
+			(at 32.004 53.848 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11398,6 +11430,7 @@
 		)
 		(property "Value" "Earth"
 			(at 170.18 97.79 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11473,8 +11506,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "UCD2A220MNL1GS"
-			(at 49.276 46.99 0)
+		(property "Value" "22u"
+			(at 40.894 52.324 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11558,6 +11591,7 @@
 		)
 		(property "Value" "Earth"
 			(at 90.932 101.6 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11633,8 +11667,8 @@
 				)
 			)
 		)
-		(property "Value" "CNC5L1X7R1H106K160AE"
-			(at 171.704 88.9 90)
+		(property "Value" "10u"
+			(at 173.228 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11779,7 +11813,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:NMOS")
-		(at 142.24 170.18 0)
+		(at 114.3 179.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11789,7 +11823,7 @@
 		(dnp no)
 		(uuid "87581cda-1960-4870-b7f8-c6b78b0d90c0")
 		(property "Reference" "Q4"
-			(at 145.796 173.99 0)
+			(at 117.856 182.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11800,7 +11834,7 @@
 			)
 		)
 		(property "Value" "NMOS"
-			(at 145.288 175.768 0)
+			(at 117.348 184.658 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11811,7 +11845,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 167.64 0)
+			(at 119.38 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11822,7 +11856,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 142.24 182.88 0)
+			(at 114.3 191.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11833,7 +11867,7 @@
 			)
 		)
 		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 142.24 170.18 0)
+			(at 114.3 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11844,7 +11878,7 @@
 			)
 		)
 		(property "Sim.Device" "NMOS"
-			(at 142.24 187.325 0)
+			(at 114.3 196.215 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11855,7 +11889,7 @@
 			)
 		)
 		(property "Sim.Type" "VDMOS"
-			(at 142.24 189.23 0)
+			(at 114.3 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11866,7 +11900,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 142.24 185.42 0)
+			(at 114.3 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11896,7 +11930,7 @@
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 233.68 110.49 0)
+		(at 234.95 95.25 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11907,7 +11941,7 @@
 		(fields_autoplaced yes)
 		(uuid "8932ec24-c528-4240-b7e4-3c67c465d9e1")
 		(property "Reference" "#PWR041"
-			(at 233.68 116.84 0)
+			(at 234.95 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11918,7 +11952,8 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 233.68 115.57 0)
+			(at 234.95 100.33 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11928,7 +11963,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 110.49 0)
+			(at 234.95 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11939,7 +11974,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 110.49 0)
+			(at 234.95 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11950,7 +11985,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 233.68 110.49 0)
+			(at 234.95 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11996,6 +12031,7 @@
 		)
 		(property "Value" "CSD19531Q5A"
 			(at 224.028 33.02 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12089,6 +12125,7 @@
 		)
 		(property "Value" "Earth"
 			(at 193.04 123.444 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12165,6 +12202,7 @@
 		)
 		(property "Value" "CSD19531Q5A"
 			(at 249.936 27.432 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12235,6 +12273,85 @@
 	)
 	(symbol
 		(lib_id "power:Earth")
+		(at 236.22 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "904bbb74-0a0b-4d06-b2b3-6947fbdc243f")
+		(property "Reference" "#PWR043"
+			(at 236.22 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Earth"
+			(at 236.22 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 236.22 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0b9f7182-7b70-465a-8832-d6928c04ff42")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR043")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
 		(at 62.23 95.25 0)
 		(unit 1)
 		(body_style 1)
@@ -12258,6 +12375,7 @@
 		)
 		(property "Value" "Earth"
 			(at 62.23 100.33 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12323,7 +12441,7 @@
 		(dnp no)
 		(uuid "93645178-ec49-423b-b931-1b77273afdd5")
 		(property "Reference" "R4"
-			(at 243.078 128.016 90)
+			(at 243.078 125.984 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12333,8 +12451,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "RC0603FR-0710KL"
-			(at 243.078 130.556 90)
+		(property "Value" "10k"
+			(at 234.95 132.08 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12406,7 +12524,7 @@
 		(dnp no)
 		(uuid "96becb48-b692-4842-9aeb-57bc1d92f596")
 		(property "Reference" "R40"
-			(at 178.308 70.358 0)
+			(at 179.324 72.644 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12415,8 +12533,8 @@
 				)
 			)
 		)
-		(property "Value" "TLRP3A30CR005FTE"
-			(at 178.054 72.39 0)
+		(property "Value" "5m"
+			(at 178.816 77.216 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12500,6 +12618,7 @@
 		)
 		(property "Value" "Earth"
 			(at 88.9 124.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12578,6 +12697,7 @@
 		)
 		(property "Value" "Earth"
 			(at 223.52 45.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12656,6 +12776,7 @@
 		)
 		(property "Value" "Earth"
 			(at 222.25 92.71 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12711,7 +12832,7 @@
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 163.83 138.43 0)
+		(at 163.83 148.59 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12721,7 +12842,7 @@
 		(dnp no)
 		(uuid "a9108f7f-2d31-4311-9a29-1eadee14134f")
 		(property "Reference" "#PWR034"
-			(at 163.83 144.78 0)
+			(at 163.83 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12732,7 +12853,8 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 163.576 141.986 0)
+			(at 163.576 152.146 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12742,7 +12864,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 138.43 0)
+			(at 163.83 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12753,7 +12875,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 138.43 0)
+			(at 163.83 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12764,7 +12886,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 163.83 138.43 0)
+			(at 163.83 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12798,7 +12920,7 @@
 		(dnp no)
 		(uuid "ab387c5c-6560-4a2e-ab0f-751aa6b1da77")
 		(property "Reference" "C1"
-			(at 193.802 112.522 90)
+			(at 187.96 112.776 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12808,8 +12930,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "C1206C474K5RACTU"
-			(at 196.088 113.792 0)
+		(property "Value" "0.47u"
+			(at 193.294 117.348 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12879,10 +13001,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "acdacd8f-b3ba-413d-b815-5ec2599535ce")
 		(property "Reference" "Cbst7"
-			(at 198.12 31.75 0)
+			(at 198.12 34.036 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12891,8 +13012,8 @@
 				)
 			)
 		)
-		(property "Value" "C1206C224M1REC7210"
-			(at 198.12 34.29 0)
+		(property "Value" "220n"
+			(at 198.12 41.656 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12963,7 +13084,7 @@
 		(dnp no)
 		(uuid "af13659a-a1f6-47c1-94eb-c518a48f3ba9")
 		(property "Reference" "Cvcc7"
-			(at 173.736 33.528 0)
+			(at 173.736 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12972,8 +13093,8 @@
 				)
 			)
 		)
-		(property "Value" "CNC5L1X7R1H106K160AE"
-			(at 170.688 35.56 0)
+		(property "Value" "100n"
+			(at 174.244 43.434 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13126,10 +13247,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b01161f6-beda-4cc5-8d2f-cc6fb23ce32c")
 		(property "Reference" "R39"
-			(at 168.91 19.05 0)
+			(at 169.164 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13138,8 +13258,8 @@
 				)
 			)
 		)
-		(property "Value" "TLRP3A30CR005FTE"
-			(at 168.91 21.59 0)
+		(property "Value" "5m"
+			(at 169.164 27.432 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13464,8 +13584,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "RN73R1JTTD1842F25"
-			(at 58.674 70.358 0)
+		(property "Value" "18.4k"
+			(at 56.388 85.852 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13926,7 +14046,8 @@
 			)
 		)
 		(property "Value" "CSD19531Q5A"
-			(at 238.506 74.422 90)
+			(at 228.854 77.978 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13997,7 +14118,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-22_18-02-40:UCD2A220MNL1GS")
-		(at 248.92 83.82 180)
+		(at 248.92 81.28 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14007,7 +14128,7 @@
 		(dnp no)
 		(uuid "d8487eae-e0a7-4e0b-b91d-0d6e5cfa59e1")
 		(property "Reference" "C32"
-			(at 248.412 86.614 0)
+			(at 244.348 78.232 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14016,8 +14137,8 @@
 				)
 			)
 		)
-		(property "Value" "UCD2A220MNL1GS"
-			(at 244.094 81.026 0)
+		(property "Value" "22u"
+			(at 245.364 84.328 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14027,7 +14148,7 @@
 			)
 		)
 		(property "Footprint" "Components:PCAP_8x10-ELECT_NCH"
-			(at 248.92 83.82 0)
+			(at 248.92 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14039,7 +14160,7 @@
 			)
 		)
 		(property "Datasheet" "UCD2A220MNL1GS"
-			(at 248.92 83.82 0)
+			(at 248.92 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14051,7 +14172,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 248.92 83.82 0)
+			(at 248.92 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14088,7 +14209,7 @@
 		(dnp no)
 		(uuid "dc510b3b-7eea-4c19-8ae9-007078807102")
 		(property "Reference" "R3"
-			(at 243.078 115.316 90)
+			(at 242.57 112.776 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14098,8 +14219,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "RC0603FR-07392KL"
-			(at 243.078 117.856 90)
+		(property "Value" "392k"
+			(at 233.934 119.634 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14183,6 +14304,7 @@
 		)
 		(property "Value" "Earth"
 			(at 135.382 90.424 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14258,8 +14380,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "UUX2A470MNL1GS"
-			(at 31.242 45.212 0)
+		(property "Value" "47u"
+			(at 23.368 53.848 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14331,7 +14453,7 @@
 		(dnp no)
 		(uuid "e12d9338-c9c5-4912-9807-10b723d62d6f")
 		(property "Reference" "C2"
-			(at 111.506 87.884 0)
+			(at 111.506 88.138 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14340,8 +14462,8 @@
 				)
 			)
 		)
-		(property "Value" "CC0603KRX7R9BB223"
-			(at 118.872 83.312 0)
+		(property "Value" "22n"
+			(at 107.95 89.408 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14421,8 +14543,8 @@
 				)
 			)
 		)
-		(property "Value" "RC0603FR-0736KL"
-			(at 142.24 84.582 0)
+		(property "Value" "36k"
+			(at 142.494 89.916 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14618,7 +14740,7 @@
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 144.78 179.07 0)
+		(at 116.84 187.96 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14628,7 +14750,7 @@
 		(dnp no)
 		(uuid "e67a2c06-8296-4fb3-9ee1-830786665a1c")
 		(property "Reference" "#PWR037"
-			(at 144.78 185.42 0)
+			(at 116.84 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14639,7 +14761,8 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 145.034 182.372 0)
+			(at 117.094 191.262 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14649,7 +14772,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 179.07 0)
+			(at 116.84 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14660,7 +14783,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 179.07 0)
+			(at 116.84 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14671,7 +14794,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 144.78 179.07 0)
+			(at 116.84 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14695,7 +14818,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-24_19-49-47:RC0603FR-0736KL")
-		(at 151.13 137.16 0)
+		(at 163.83 133.35 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14703,30 +14826,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f58a76ec-8996-4449-bdea-7e962c41d051")
 		(property "Reference" "R38"
-			(at 157.48 130.81 0)
+			(at 157.48 136.398 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "RC0603FR-0736KL"
-			(at 157.48 133.35 0)
+		(property "Value" "36k"
+			(at 164.084 144.018 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 151.13 137.16 0)
+			(at 163.83 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14738,7 +14862,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0736KL"
-			(at 151.13 137.16 0)
+			(at 163.83 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14750,7 +14874,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 151.13 137.16 0)
+			(at 163.83 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14798,7 +14922,8 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 77.978 83.566 90)
+			(at 76.708 82.804 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
