@@ -53,16 +53,6 @@
 				(justify left)
 			)
 		)
-		(pin "SIGM" input
-			(at 210.82 256.54 270)
-			(uuid "2f9e9fa0-8d1d-4ccc-ae50-1c171ef1d165")
-			(effects
-				(font
-					(size 3.81 3.81)
-				)
-				(justify left)
-			)
-		)
 		(pin "VOUT-BOOST" input
 			(at 381 129.54 0)
 			(uuid "45c870ed-11a3-43f0-859f-0e8f678f2475")
@@ -71,6 +61,16 @@
 					(size 3.81 3.81)
 				)
 				(justify right)
+			)
+		)
+		(pin "SIGM" input
+			(at 213.36 256.54 270)
+			(uuid "82c2a29e-740a-4df8-9dd9-d1ac3b91c3b5")
+			(effects
+				(font
+					(size 3.81 3.81)
+				)
+				(justify left)
 			)
 		)
 		(instances
