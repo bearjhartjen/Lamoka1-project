@@ -4,6 +4,8 @@
 
 ![Boost converter](Images/Boostconverter.jpg)
 
+This is the Lamoka1s boost converter schematic thus far. More information regarding the design choices can be found ![here.](HARDWARE/DESIGN_NOTES.md)
+
 </div>
 
 ## General information
