@@ -5444,6 +5444,378 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Pads:Tomachie_TP_N"
+			(pin_names
+				(offset 1.27)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Tomachie_TP_N"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Pads:TPS127"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "Undefined"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Test Point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Tomachie_TP_N_0_1"
+				(polyline
+					(pts
+						(xy -0.25 0.33) (xy 0.25 0.33)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.33) (xy 0 -0.2)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0.1)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type color)
+						(color 56 161 105 1)
+					)
+				)
+				(pin bidirectional line
+					(at 0 -0.762 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Pads:Tomachie_TP_S"
+			(pin_names
+				(offset 1.27)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Tomachie_TP_S"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Pads:TPS127"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "Undefined"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Test Point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Tomachie_TP_S_0_1"
+				(polyline
+					(pts
+						(xy -0.25 0.33) (xy 0.25 0.33)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.33) (xy 0 -0.2)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0.1)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type color)
+						(color 56 161 105 1)
+					)
+				)
+				(pin bidirectional line
+					(at 0 0.762 270)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Pads:Tomachie_TP_W"
+			(pin_names
+				(offset 1.27)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Tomachie_TP_W"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Pads:TPS127"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "Undefined"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Test Point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Tomachie_TP_W_0_1"
+				(polyline
+					(pts
+						(xy -0.25 0.33) (xy 0.25 0.33)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.33) (xy 0 -0.2)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0.1)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type color)
+						(color 56 161 105 1)
+					)
+				)
+				(pin bidirectional line
+					(at 0.762 0 180)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "RN73R1JTTD1842F25:RN73R1JTTD1842F25"
 			(pin_names
 				(offset 1.016)
@@ -6701,20 +7073,56 @@
 		)
 		(uuid "7c57f365-47d7-49a9-ac17-bb79116ca50b")
 	)
+	(text "VOUT-BOOST = 48v"
+		(exclude_from_sim no)
+		(at 213.868 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8c3daf95-0304-4646-9c96-4df7eaf6c697")
+	)
+	(text "SIGM = Connection to signal (MODE select)"
+		(exclude_from_sim no)
+		(at 247.65 169.164 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9a9cffce-a6f5-4579-bbcc-73c290d43d55")
+	)
+	(text "VIN-SOURCE = 5-40V"
+		(exclude_from_sim no)
+		(at 189.738 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "be012b5d-1a0b-4465-9414-a9504a6e2ca9")
+	)
 	(junction
-		(at 187.96 110.49)
+		(at 224.282 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "08b45e1d-7909-4a86-b82c-c9a40e6fbd5e")
+	)
+	(junction
+		(at 124.46 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d9fd108-fa9b-452b-be99-8b4244fe5cc2")
 	)
 	(junction
-		(at 86.36 97.79)
+		(at 68.58 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2ef96ec9-dd12-4b26-8223-fda4543f4817")
 	)
 	(junction
-		(at 250.19 135.89)
+		(at 240.03 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3a6f7e0d-00cb-40ff-984e-85aa4b256e6c")
@@ -6726,16 +7134,34 @@
 		(uuid "44cfaac0-58f6-427c-967f-991fd364a943")
 	)
 	(junction
+		(at 40.64 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e517f18-9d04-4861-96ee-d924072b2cae")
+	)
+	(junction
 		(at 146.05 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4e8bf68d-18f1-460e-b8a2-4db4fe7e4ded")
 	)
 	(junction
-		(at 92.71 46.99)
+		(at 63.5 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5b8ecce5-d584-4f84-87e2-1d5f12f68985")
+	)
+	(junction
+		(at 105.41 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5ea58452-4c18-4ac4-a3a4-bc47629c8a65")
+	)
+	(junction
+		(at 99.06 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "624107ad-3231-4ca9-8230-05caf156088e")
 	)
 	(junction
 		(at 72.39 175.26)
@@ -6750,13 +7176,13 @@
 		(uuid "6cff43d0-40b6-4c44-9e68-87f449b6ae70")
 	)
 	(junction
-		(at 74.93 46.99)
+		(at 87.63 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9b0098b4-6e3b-456a-ab71-b680c0e5b23e")
 	)
 	(junction
-		(at 74.93 97.79)
+		(at 57.15 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9c3fa904-9ba4-41b9-a220-c204b5ce9210")
@@ -6768,19 +7194,25 @@
 		(uuid "b37c5534-5507-4d33-9b56-22c1b50edb13")
 	)
 	(junction
-		(at 74.93 29.21)
+		(at 71.12 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cdba6f84-1a56-4a77-90f3-a1a588533bbb")
 	)
 	(junction
-		(at 176.53 110.49)
+		(at 92.71 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce06b344-4f0f-4e31-9485-e5df7275bb67")
+	)
+	(junction
+		(at 113.03 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d13180ed-07e7-43a6-9e84-4442d7878b1c")
 	)
 	(junction
-		(at 91.44 29.21)
+		(at 87.63 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d6018feb-6dae-414c-b1ff-c06af4f42ac7")
@@ -6813,7 +7245,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 110.49) (xy 191.77 110.49)
+			(xy 124.46 111.76) (xy 128.27 111.76)
 		)
 		(stroke
 			(width 0)
@@ -6833,7 +7265,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 110.49) (xy 163.83 110.49)
+			(xy 99.06 111.76) (xy 100.33 111.76)
 		)
 		(stroke
 			(width 0)
@@ -6843,7 +7275,7 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 130.81) (xy 22.86 130.81)
+			(xy 220.98 91.44) (xy 222.25 91.44)
 		)
 		(stroke
 			(width 0)
@@ -6873,7 +7305,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 97.79) (xy 58.42 100.33)
+			(xy 40.64 111.76) (xy 40.64 114.3)
 		)
 		(stroke
 			(width 0)
@@ -6893,7 +7325,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 110.49) (xy 184.15 110.49)
+			(xy 124.46 111.76) (xy 120.65 111.76)
 		)
 		(stroke
 			(width 0)
@@ -6923,7 +7355,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 110.49) (xy 203.2 110.49)
+			(xy 135.89 111.76) (xy 139.7 111.76)
 		)
 		(stroke
 			(width 0)
@@ -6933,7 +7365,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 29.21) (xy 74.93 29.21)
+			(xy 62.23 49.53) (xy 71.12 49.53)
 		)
 		(stroke
 			(width 0)
@@ -6953,7 +7385,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 135.89) (xy 262.89 135.89)
+			(xy 255.27 151.13) (xy 252.73 151.13)
 		)
 		(stroke
 			(width 0)
@@ -6963,7 +7395,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 110.49) (xy 187.96 99.06)
+			(xy 124.46 111.76) (xy 124.46 100.33)
 		)
 		(stroke
 			(width 0)
@@ -6973,7 +7405,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 43.18) (xy 74.93 46.99)
+			(xy 87.63 22.86) (xy 87.63 26.67)
 		)
 		(stroke
 			(width 0)
@@ -6993,7 +7425,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 137.16) (xy 154.94 143.51)
+			(xy 142.24 144.78) (xy 142.24 151.13)
 		)
 		(stroke
 			(width 0)
@@ -7013,7 +7445,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 97.79) (xy 88.9 97.79)
+			(xy 68.58 111.76) (xy 71.12 111.76)
 		)
 		(stroke
 			(width 0)
@@ -7033,7 +7465,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 100.33) (xy 142.24 102.87)
+			(xy 115.57 143.51) (xy 115.57 146.05)
 		)
 		(stroke
 			(width 0)
@@ -7043,7 +7475,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 46.99) (xy 106.68 46.99)
+			(xy 116.84 26.67) (xy 119.38 26.67)
 		)
 		(stroke
 			(width 0)
@@ -7083,7 +7515,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 124.46) (xy 83.82 125.73)
+			(xy 156.21 144.78) (xy 156.21 146.05)
 		)
 		(stroke
 			(width 0)
@@ -7163,7 +7595,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 130.81) (xy 49.53 130.81)
+			(xy 243.84 91.44) (xy 248.92 91.44)
 		)
 		(stroke
 			(width 0)
@@ -7173,13 +7605,23 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 110.49) (xy 181.61 110.49)
+			(xy 113.03 111.76) (xy 118.11 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4aef58ce-dfbe-4ce9-9edb-9422bc9bca8d")
+	)
+	(wire
+		(pts
+			(xy 105.41 27.94) (xy 105.41 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cf0642a-6181-423c-af35-ed3bc1c52487")
 	)
 	(wire
 		(pts
@@ -7243,7 +7685,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 43.18) (xy 92.71 46.99)
+			(xy 105.41 22.86) (xy 105.41 26.67)
 		)
 		(stroke
 			(width 0)
@@ -7313,7 +7755,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 146.05) (xy 50.8 149.86)
+			(xy 49.53 144.78) (xy 49.53 148.59)
 		)
 		(stroke
 			(width 0)
@@ -7333,7 +7775,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 46.99) (xy 74.93 46.99)
+			(xy 88.9 26.67) (xy 87.63 26.67)
 		)
 		(stroke
 			(width 0)
@@ -7343,7 +7785,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 97.79) (xy 74.93 86.36)
+			(xy 57.15 111.76) (xy 57.15 100.33)
 		)
 		(stroke
 			(width 0)
@@ -7353,7 +7795,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 99.06) (xy 176.53 110.49)
+			(xy 113.03 100.33) (xy 113.03 111.76)
 		)
 		(stroke
 			(width 0)
@@ -7363,7 +7805,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 97.79) (xy 62.23 97.79)
+			(xy 40.64 111.76) (xy 44.45 111.76)
 		)
 		(stroke
 			(width 0)
@@ -7383,7 +7825,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 29.21) (xy 101.6 29.21)
+			(xy 87.63 49.53) (xy 97.79 49.53)
 		)
 		(stroke
 			(width 0)
@@ -7403,7 +7845,17 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 151.13) (xy 30.48 151.13)
+			(xy 63.5 63.5) (xy 63.5 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77b7f109-c44e-419a-a771-4ba903d13c7b")
+	)
+	(wire
+		(pts
+			(xy 166.37 55.88) (xy 170.18 55.88)
 		)
 		(stroke
 			(width 0)
@@ -7413,7 +7865,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 105.41) (xy 245.11 115.57)
+			(xy 187.96 137.16) (xy 187.96 147.32)
 		)
 		(stroke
 			(width 0)
@@ -7423,7 +7875,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 139.7) (xy 83.82 138.43)
+			(xy 156.21 160.02) (xy 156.21 158.75)
 		)
 		(stroke
 			(width 0)
@@ -7483,13 +7935,33 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 107.95) (xy 113.03 109.22)
+			(xy 128.27 144.78) (xy 128.27 146.05)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "87c8414d-7702-478d-a7e7-eb48d45cc254")
+	)
+	(wire
+		(pts
+			(xy 224.282 149.86) (xy 224.282 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "881d38e6-c832-42d3-8a94-4d6abf5bf62c")
+	)
+	(wire
+		(pts
+			(xy 97.79 111.76) (xy 99.06 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8910dc2c-c9cb-40d5-b093-98e11a135459")
 	)
 	(wire
 		(pts
@@ -7553,7 +8025,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 105.41) (xy 266.7 115.57)
+			(xy 209.55 137.16) (xy 209.55 147.32)
 		)
 		(stroke
 			(width 0)
@@ -7563,7 +8035,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 124.46) (xy 266.7 123.19)
+			(xy 209.55 156.21) (xy 209.55 154.94)
 		)
 		(stroke
 			(width 0)
@@ -7583,7 +8055,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 130.81) (xy 36.83 130.81)
+			(xy 234.95 91.44) (xy 236.22 91.44)
 		)
 		(stroke
 			(width 0)
@@ -7613,7 +8085,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 97.79) (xy 86.36 97.79)
+			(xy 64.77 111.76) (xy 68.58 111.76)
 		)
 		(stroke
 			(width 0)
@@ -7633,7 +8105,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 124.46) (xy 245.11 123.19)
+			(xy 187.96 156.21) (xy 187.96 154.94)
 		)
 		(stroke
 			(width 0)
@@ -7653,7 +8125,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 25.4) (xy 74.93 29.21)
+			(xy 71.12 45.72) (xy 71.12 49.53)
 		)
 		(stroke
 			(width 0)
@@ -7703,7 +8175,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 46.99) (xy 92.71 46.99)
+			(xy 101.6 26.67) (xy 105.41 26.67)
 		)
 		(stroke
 			(width 0)
@@ -7733,7 +8205,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 115.57) (xy 142.24 116.84)
+			(xy 115.57 158.75) (xy 115.57 166.37)
 		)
 		(stroke
 			(width 0)
@@ -7753,7 +8225,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 29.21) (xy 76.2 29.21)
+			(xy 71.12 49.53) (xy 72.39 49.53)
 		)
 		(stroke
 			(width 0)
@@ -7783,7 +8255,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 146.05) (xy 55.88 149.86)
+			(xy 54.61 144.78) (xy 54.61 148.59)
 		)
 		(stroke
 			(width 0)
@@ -7813,7 +8285,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 105.41) (xy 256.54 110.49)
+			(xy 199.39 137.16) (xy 199.39 142.24)
 		)
 		(stroke
 			(width 0)
@@ -7833,7 +8305,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 124.46) (xy 256.54 123.19)
+			(xy 199.39 156.21) (xy 199.39 154.94)
 		)
 		(stroke
 			(width 0)
@@ -7843,7 +8315,17 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 29.21) (xy 91.44 29.21)
+			(xy 92.71 48.26) (xy 92.71 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9673a58-5bfa-4f91-8139-4b7d02dfccba")
+	)
+	(wire
+		(pts
+			(xy 85.09 49.53) (xy 87.63 49.53)
 		)
 		(stroke
 			(width 0)
@@ -7883,6 +8365,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 43.18) (xy 146.05 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfecdf97-6878-4304-b5d0-a5050e31e5a0")
+	)
+	(wire
+		(pts
 			(xy 195.58 30.48) (xy 199.39 30.48)
 		)
 		(stroke
@@ -7893,7 +8385,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 86.36) (xy 86.36 97.79)
+			(xy 68.58 100.33) (xy 68.58 111.76)
 		)
 		(stroke
 			(width 0)
@@ -7903,7 +8395,17 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 110.49) (xy 162.56 113.03)
+			(xy 115.57 77.47) (xy 116.84 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2bee87b-e6b1-4ace-a93a-02e7f4f29c40")
+	)
+	(wire
+		(pts
+			(xy 99.06 111.76) (xy 99.06 114.3)
 		)
 		(stroke
 			(width 0)
@@ -7933,7 +8435,17 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 25.4) (xy 91.44 29.21)
+			(xy 40.64 110.49) (xy 40.64 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc710fd5-5759-4e1d-a3e7-6402a17a053a")
+	)
+	(wire
+		(pts
+			(xy 87.63 45.72) (xy 87.63 49.53)
 		)
 		(stroke
 			(width 0)
@@ -7943,7 +8455,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 97.79) (xy 100.33 97.79)
+			(xy 78.74 111.76) (xy 82.55 111.76)
 		)
 		(stroke
 			(width 0)
@@ -7953,7 +8465,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 46.99) (xy 96.52 46.99)
+			(xy 105.41 26.67) (xy 109.22 26.67)
 		)
 		(stroke
 			(width 0)
@@ -7963,7 +8475,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 46.99) (xy 74.93 46.99)
+			(xy 80.01 26.67) (xy 87.63 26.67)
 		)
 		(stroke
 			(width 0)
@@ -7973,7 +8485,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 140.97) (xy 250.19 135.89)
+			(xy 240.03 156.21) (xy 240.03 151.13)
 		)
 		(stroke
 			(width 0)
@@ -7983,7 +8495,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 97.79) (xy 80.01 97.79)
+			(xy 57.15 111.76) (xy 62.23 111.76)
 		)
 		(stroke
 			(width 0)
@@ -8013,7 +8525,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 121.92) (xy 113.03 123.19)
+			(xy 128.27 158.75) (xy 128.27 160.02)
 		)
 		(stroke
 			(width 0)
@@ -8043,7 +8555,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 135.89) (xy 233.68 135.89)
+			(xy 227.33 151.13) (xy 223.52 151.13)
 		)
 		(stroke
 			(width 0)
@@ -8073,7 +8585,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 29.21) (xy 114.3 29.21)
+			(xy 105.41 49.53) (xy 110.49 49.53)
 		)
 		(stroke
 			(width 0)
@@ -8083,7 +8595,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 151.13) (xy 154.94 152.4)
+			(xy 142.24 158.75) (xy 142.24 160.02)
 		)
 		(stroke
 			(width 0)
@@ -8152,7 +8664,7 @@
 		(uuid "05100701-1aac-4d51-9aeb-6c155deded60")
 	)
 	(label "VCCS"
-		(at 176.53 99.06 180)
+		(at 113.03 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8162,7 +8674,7 @@
 		(uuid "05436601-dfb6-4505-98df-91164534886f")
 	)
 	(label "SLOPEM"
-		(at 83.82 124.46 0)
+		(at 156.21 144.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8202,7 +8714,7 @@
 		(uuid "1215c093-f953-4426-a9bd-5b03b6539f5f")
 	)
 	(label "CSNS"
-		(at 92.71 43.18 180)
+		(at 105.41 22.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8212,7 +8724,7 @@
 		(uuid "146d1966-387e-4a58-9f6b-4f92da812576")
 	)
 	(label "SWM"
-		(at 114.3 29.21 0)
+		(at 110.49 49.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8272,7 +8784,7 @@
 		(uuid "2448d005-2373-461b-9278-e88f7a76e0f8")
 	)
 	(label "OPT"
-		(at 50.8 146.05 180)
+		(at 49.53 144.78 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8302,7 +8814,7 @@
 		(uuid "2960adeb-dcd2-4db3-b6eb-7448d024e9e2")
 	)
 	(label "VCCM"
-		(at 74.93 86.36 180)
+		(at 57.15 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8322,7 +8834,7 @@
 		(uuid "37e33ac4-1fcb-45a5-b848-e090de99a561")
 	)
 	(label "VIN"
-		(at 66.04 29.21 180)
+		(at 62.23 49.53 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8332,7 +8844,7 @@
 		(uuid "3af490e7-fac2-48a2-8c4e-48770f1b7794")
 	)
 	(label "VIN"
-		(at 67.31 46.99 180)
+		(at 80.01 26.67 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8361,8 +8873,18 @@
 		)
 		(uuid "405da68e-848d-4547-8d4d-27b67ed330bd")
 	)
+	(label "AGND"
+		(at 115.57 166.37 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4e02c041-3318-49bc-bb87-374dd238344a")
+	)
 	(label "SYNCOUT"
-		(at 30.48 151.13 0)
+		(at 170.18 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8372,7 +8894,7 @@
 		(uuid "4e322261-6a63-4d48-bedf-e3a9307d66a9")
 	)
 	(label "FBM"
-		(at 250.19 140.97 0)
+		(at 240.03 156.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8382,7 +8904,7 @@
 		(uuid "4eade83e-a961-47cf-ae66-d20837002619")
 	)
 	(label "SWS"
-		(at 203.2 110.49 0)
+		(at 139.7 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8402,7 +8924,7 @@
 		(uuid "5a08fb8d-f278-4db6-8162-1f952c7d2a71")
 	)
 	(label "BSTS"
-		(at 187.96 99.06 180)
+		(at 124.46 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8412,7 +8934,7 @@
 		(uuid "627c43bb-c7ec-43ff-b18d-078123969063")
 	)
 	(label "SYNCIN{slash}RTM"
-		(at 142.24 100.33 180)
+		(at 115.57 143.51 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8432,7 +8954,7 @@
 		(uuid "63607c59-6fe4-4c80-940c-a934284a585c")
 	)
 	(label "CSPM"
-		(at 74.93 25.4 180)
+		(at 71.12 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8452,7 +8974,7 @@
 		(uuid "6b9ac5eb-7e61-4725-8751-c9cdef2df9a5")
 	)
 	(label "SWM"
-		(at 100.33 97.79 0)
+		(at 82.55 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8482,7 +9004,7 @@
 		(uuid "71c1b921-8094-4c7a-ac88-c6b9cae83431")
 	)
 	(label "SLOPES"
-		(at 113.03 107.95 0)
+		(at 128.27 144.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8512,7 +9034,7 @@
 		(uuid "76b669c1-1ecb-4397-9cb9-d833c8ecc7d4")
 	)
 	(label "SWS"
-		(at 106.68 46.99 0)
+		(at 119.38 26.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8532,7 +9054,7 @@
 		(uuid "7bb40ead-55a9-4cee-891d-fa09f0529a31")
 	)
 	(label "BSTM"
-		(at 86.36 86.36 180)
+		(at 68.58 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8592,7 +9114,7 @@
 		(uuid "916da904-0a1d-471e-a4d7-c844570c40cb")
 	)
 	(label "COMP"
-		(at 49.53 130.81 0)
+		(at 248.92 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8602,7 +9124,7 @@
 		(uuid "92e7f0ff-3acf-4be7-92ce-da794023209c")
 	)
 	(label "SYNCIN{slash}RTS"
-		(at 26.67 151.13 180)
+		(at 166.37 55.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8692,7 +9214,7 @@
 		(uuid "a54dfa12-8b17-4c6a-bb36-eb0ff744d580")
 	)
 	(label "RES"
-		(at 154.94 137.16 0)
+		(at 142.24 144.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8722,7 +9244,7 @@
 		(uuid "ac2c1d4a-558d-4d5b-9f30-3b5fed3239ad")
 	)
 	(label "AGND"
-		(at 55.88 146.05 0)
+		(at 54.61 144.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8802,7 +9324,7 @@
 		(uuid "c4512775-816e-4fba-8201-b7e32a2bb1f9")
 	)
 	(label "FBM"
-		(at 21.59 130.81 180)
+		(at 220.98 91.44 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8842,7 +9364,7 @@
 		(uuid "d29820f6-9164-4283-a18b-e6cc4b158a25")
 	)
 	(label "CSPS"
-		(at 74.93 43.18 180)
+		(at 87.63 22.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8862,7 +9384,7 @@
 		(uuid "d843f0cd-63a5-422e-9e48-28ee0b4e9889")
 	)
 	(label "CSNM"
-		(at 91.44 25.4 180)
+		(at 87.63 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8943,7 +9465,7 @@
 	)
 	(hierarchical_label "VOUT-BOOST"
 		(shape input)
-		(at 245.11 105.41 180)
+		(at 187.96 137.16 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8954,7 +9476,7 @@
 	)
 	(hierarchical_label "VOUT-BOOST"
 		(shape input)
-		(at 265.43 135.89 0)
+		(at 255.27 151.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8976,7 +9498,7 @@
 	)
 	(hierarchical_label "VOUT-BOOST"
 		(shape input)
-		(at 256.54 105.41 90)
+		(at 199.39 137.16 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9020,7 +9542,7 @@
 	)
 	(hierarchical_label "VOUT-BOOST"
 		(shape input)
-		(at 266.7 105.41 0)
+		(at 209.55 137.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9028,6 +9550,88 @@
 			(justify left)
 		)
 		(uuid "efb6c0b2-6326-4021-99ea-2939663374ca")
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_S")
+		(at 105.41 28.702 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "05ecb7fc-be36-4944-9bab-fffbba0d05d2")
+		(property "Reference" "TP2"
+			(at 105.41 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_S"
+			(at 105.41 28.702 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 105.41 28.702 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 28.702 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 105.41 28.702 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f9778843-a4da-492b-b80f-566e6576ab51")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:Earth")
@@ -9105,11 +9709,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-24_23-31-22:C1206C224M1REC7210")
-		(at 191.77 110.49 0)
+		(at 128.27 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9118,8 +9728,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "10e08226-c6a5-4825-8168-4e256e05a41d")
-		(property "Reference" "Cbst8"
-			(at 195.834 107.442 0)
+		(property "Reference" "C6"
+			(at 132.334 108.712 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9129,7 +9739,7 @@
 			)
 		)
 		(property "Value" "0.22u"
-			(at 195.326 113.792 0)
+			(at 131.826 115.062 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9139,7 +9749,7 @@
 			)
 		)
 		(property "Footprint" "Components:CAP_C1206C-EC_KEM"
-			(at 191.77 110.49 0)
+			(at 128.27 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9151,7 +9761,7 @@
 			)
 		)
 		(property "Datasheet" "C1206C224M1REC7210"
-			(at 191.77 110.49 0)
+			(at 128.27 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9163,7 +9773,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 191.77 110.49 0)
+			(at 128.27 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 128.27 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 128.27 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 128.27 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9182,7 +9825,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Cbst8")
+					(reference "C6")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -9265,6 +9914,12 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9333,6 +9988,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 78.74 177.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 78.74 177.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 78.74 177.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "beb571fa-6419-4251-8d95-dbc205ca5c72")
 		)
@@ -9346,11 +10034,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R41")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "KRM55WR72A226MH01L:KRM55WR72A226MH01L")
-		(at 256.54 123.19 90)
+		(at 199.39 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9360,7 +10054,7 @@
 		(dnp no)
 		(uuid "17c663fb-2974-4ba1-87aa-4659888fd8c9")
 		(property "Reference" "C33"
-			(at 252.73 116.84 0)
+			(at 195.58 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9370,7 +10064,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 260.35 116.586 0)
+			(at 203.2 148.336 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9380,7 +10074,7 @@
 			)
 		)
 		(property "Footprint" "Components:CAPC6153X670N"
-			(at 352.73 114.3 0)
+			(at 295.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9392,7 +10086,7 @@
 			)
 		)
 		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/KRM55_25V-100V_E.pdf"
-			(at 452.73 114.3 0)
+			(at 395.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9404,7 +10098,7 @@
 			)
 		)
 		(property "Description" "Capacitor KRM55 L=6.1mm W=5.3mm T=6.4mm"
-			(at 256.54 123.19 0)
+			(at 199.39 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9415,7 +10109,7 @@
 			)
 		)
 		(property "Height" "6.7"
-			(at 652.73 114.3 0)
+			(at 595.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9427,7 +10121,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Murata Electronics"
-			(at 752.73 114.3 0)
+			(at 695.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9439,7 +10133,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KRM55WR72A226MH01L"
-			(at 852.73 114.3 0)
+			(at 795.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9451,7 +10145,7 @@
 			)
 		)
 		(property "Mouser Part Number" "81-KRM55WR72A226MH1L"
-			(at 952.73 114.3 0)
+			(at 895.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9463,7 +10157,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Murata-Electronics/KRM55WR72A226MH01L?qs=qkDYIeTQ%252BEnTj7DsBXk4Cw%3D%3D"
-			(at 1052.73 114.3 0)
+			(at 995.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9475,7 +10169,7 @@
 			)
 		)
 		(property "Arrow Part Number" "KRM55WR72A226MH01L"
-			(at 1152.73 114.3 0)
+			(at 1095.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9487,7 +10181,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/krm55wr72a226mh01l/murata-manufacturing?region=europe"
-			(at 1252.73 114.3 0)
+			(at 1195.58 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9496,6 +10190,39 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 199.39 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 199.39 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 199.39 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -9511,11 +10238,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C33")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-24_19-49-47:RC0603FR-0736KL")
-		(at 83.82 138.43 90)
+		(at 156.21 158.75 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9525,7 +10258,7 @@
 		(dnp no)
 		(uuid "1ad52441-a151-4c57-ab8d-388eb0534551")
 		(property "Reference" "R42"
-			(at 80.264 128.524 90)
+			(at 152.654 148.844 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9535,7 +10268,7 @@
 			)
 		)
 		(property "Value" "36k"
-			(at 86.868 135.636 90)
+			(at 159.258 155.956 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9545,7 +10278,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 83.82 138.43 0)
+			(at 156.21 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9557,7 +10290,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0736KL"
-			(at 83.82 138.43 0)
+			(at 156.21 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9569,7 +10302,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 83.82 138.43 0)
+			(at 156.21 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 156.21 158.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 156.21 158.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 156.21 158.75 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9592,11 +10358,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R42")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 142.24 116.84 0)
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 63.5 62.738 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9604,9 +10376,19 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "244603c0-54af-45f9-861f-b1aa908bf064")
-		(property "Reference" "#PWR029"
-			(at 142.24 123.19 0)
+		(uuid "2341c976-c9bf-42d1-8def-b0828a475a31")
+		(property "Reference" "TP4"
+			(at 63.5 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 63.5 62.738 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9616,19 +10398,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 138.938 117.094 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 116.84 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 63.5 62.738 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9639,8 +10410,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 116.84 0)
-			(hide yes)
+			(at 63.5 62.738 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9649,8 +10419,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 142.24 116.84 0)
+		(property "Description" "Test Point"
+			(at 63.5 62.738 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9661,12 +10431,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "2b24f644-4988-4ed1-87da-c357173919a9")
+			(uuid "ec601c6c-c9b4-4b1f-ad87-74e0dbdc059c")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR029")
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -9674,7 +10450,7 @@
 	)
 	(symbol
 		(lib_id "SDM1U100S1F-7:SDM1U100S1F-7")
-		(at 82.55 97.79 270)
+		(at 64.77 111.76 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9683,8 +10459,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2e8a6fb6-e8f4-4c6d-84c6-3faa494583c4")
-		(property "Reference" "Dbst7"
-			(at 78.74 106.934 90)
+		(property "Reference" "D7"
+			(at 60.96 120.904 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9695,7 +10471,7 @@
 			)
 		)
 		(property "Value" "SDM1U100S1F-7"
-			(at 86.868 105.918 0)
+			(at 69.088 119.888 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9707,7 +10483,7 @@
 			)
 		)
 		(property "Footprint" "Components:SODFL3518X115N"
-			(at -12.37 114.3 0)
+			(at -30.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9719,7 +10495,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/SDM1U100S1F.pdf"
-			(at -112.37 114.3 0)
+			(at -130.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9731,7 +10507,7 @@
 			)
 		)
 		(property "Description" "Schottky Rectifier 100V 1A 0.7Vf SOD123F"
-			(at 82.55 97.79 0)
+			(at 64.77 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9742,7 +10518,7 @@
 			)
 		)
 		(property "Height" "1.15"
-			(at -312.37 114.3 0)
+			(at -330.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9754,7 +10530,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at -412.37 114.3 0)
+			(at -430.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9766,7 +10542,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "SDM1U100S1F-7"
-			(at -512.37 114.3 0)
+			(at -530.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9778,7 +10554,7 @@
 			)
 		)
 		(property "Mouser Part Number" "621-SDM1U100S1F-7"
-			(at -612.37 114.3 0)
+			(at -630.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9790,7 +10566,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=621-SDM1U100S1F-7"
-			(at -712.37 114.3 0)
+			(at -730.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9802,7 +10578,7 @@
 			)
 		)
 		(property "Arrow Part Number" "SDM1U100S1F-7"
-			(at -812.37 114.3 0)
+			(at -830.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9814,7 +10590,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/sdm1u100s1f-7/diodes-incorporated"
-			(at -912.37 114.3 0)
+			(at -930.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9823,6 +10599,39 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 64.77 111.76 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 64.77 111.76 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 64.77 111.76 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -9834,7 +10643,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Dbst7")
+					(reference "D7")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -9908,6 +10723,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 39.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 39.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 39.37 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0ebae588-e259-4c28-9aef-c1e8375fafe2")
 		)
@@ -9921,11 +10769,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R5")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 83.82 139.7 0)
+		(at 156.21 160.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9935,7 +10789,7 @@
 		(dnp no)
 		(uuid "37b7485c-f7ba-45a1-88f1-3027627665d5")
 		(property "Reference" "#PWR045"
-			(at 83.82 146.05 0)
+			(at 156.21 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9946,7 +10800,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 87.122 142.494 0)
+			(at 159.512 162.814 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9957,7 +10811,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 139.7 0)
+			(at 156.21 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9968,7 +10822,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 139.7 0)
+			(at 156.21 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9979,7 +10833,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 83.82 139.7 0)
+			(at 156.21 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9999,11 +10853,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 256.54 124.46 0)
+		(at 199.39 156.21 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10014,7 +10874,7 @@
 		(fields_autoplaced yes)
 		(uuid "39763398-e54e-415f-93ed-6602451466fd")
 		(property "Reference" "#PWR047"
-			(at 256.54 130.81 0)
+			(at 199.39 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10025,7 +10885,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 256.54 129.54 0)
+			(at 199.39 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10036,7 +10896,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 124.46 0)
+			(at 199.39 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10047,7 +10907,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 124.46 0)
+			(at 199.39 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10058,7 +10918,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 256.54 124.46 0)
+			(at 199.39 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10074,6 +10934,12 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "#PWR047")
 					(unit 1)
 				)
@@ -10157,6 +11023,12 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10170,7 +11042,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "431fa9ed-4136-4fe3-9246-f1d924da4f67")
-		(property "Reference" "Ql7"
+		(property "Reference" "Q3"
 			(at 148.082 33.274 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10229,6 +11101,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 143.51 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 143.51 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 143.51 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9bac99c1-176d-49c2-9b24-09fa33286bf1")
 		)
@@ -10247,7 +11152,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Ql7")
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -10330,11 +11241,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 233.68 135.89 0)
+		(at 223.52 151.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10344,7 +11261,7 @@
 		(dnp no)
 		(uuid "55133c74-34ec-44c6-8b47-b32ee0ea0a97")
 		(property "Reference" "#PWR042"
-			(at 233.68 142.24 0)
+			(at 223.52 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10355,7 +11272,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 231.648 139.446 0)
+			(at 221.488 154.686 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10366,7 +11283,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 135.89 0)
+			(at 223.52 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10377,7 +11294,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 135.89 0)
+			(at 223.52 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10388,7 +11305,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 233.68 135.89 0)
+			(at 223.52 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10408,11 +11325,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR042")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "SDM1U100S1F-7:SDM1U100S1F-7")
-		(at 184.15 110.49 270)
+		(at 120.65 111.76 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10421,8 +11344,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "560c8acf-c342-43fc-b9d7-e70ac200981b")
-		(property "Reference" "Dbst8"
-			(at 180.086 119.634 90)
+		(property "Reference" "D8"
+			(at 118.11 121.92 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10433,7 +11356,7 @@
 			)
 		)
 		(property "Value" "SDM1U100S1F-7"
-			(at 189.23 111.506 0)
+			(at 125.73 112.776 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10445,7 +11368,7 @@
 			)
 		)
 		(property "Footprint" "Components:SODFL3518X115N"
-			(at 89.23 127 0)
+			(at 25.73 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10457,7 +11380,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/SDM1U100S1F.pdf"
-			(at -10.77 127 0)
+			(at -74.27 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10469,7 +11392,7 @@
 			)
 		)
 		(property "Description" "Schottky Rectifier 100V 1A 0.7Vf SOD123F"
-			(at 184.15 110.49 0)
+			(at 120.65 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10480,7 +11403,7 @@
 			)
 		)
 		(property "Height" "1.15"
-			(at -210.77 127 0)
+			(at -274.27 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10492,7 +11415,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at -310.77 127 0)
+			(at -374.27 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10504,7 +11427,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "SDM1U100S1F-7"
-			(at -410.77 127 0)
+			(at -474.27 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10516,7 +11439,7 @@
 			)
 		)
 		(property "Mouser Part Number" "621-SDM1U100S1F-7"
-			(at -510.77 127 0)
+			(at -574.27 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10528,7 +11451,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=621-SDM1U100S1F-7"
-			(at -610.77 127 0)
+			(at -674.27 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10540,7 +11463,7 @@
 			)
 		)
 		(property "Arrow Part Number" "SDM1U100S1F-7"
-			(at -710.77 127 0)
+			(at -774.27 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10552,7 +11475,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/sdm1u100s1f-7/diodes-incorporated"
-			(at -810.77 127 0)
+			(at -874.27 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10561,6 +11484,39 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 120.65 111.76 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 120.65 111.76 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 120.65 111.76 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -10572,7 +11528,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Dbst8")
+					(reference "D8")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -10580,7 +11542,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-26_01-14-22:RC0603FR-0756K2L")
-		(at 22.86 130.81 0)
+		(at 222.25 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10590,7 +11552,7 @@
 		(dnp no)
 		(uuid "5915fdea-7cc7-4f2e-a05f-7a15fd991177")
 		(property "Reference" "R1"
-			(at 27.686 128.524 0)
+			(at 227.076 89.154 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10600,7 +11562,7 @@
 			)
 		)
 		(property "Value" "56.2k"
-			(at 28.194 133.35 0)
+			(at 227.584 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10610,7 +11572,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 22.86 130.81 0)
+			(at 222.25 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10622,7 +11584,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0756K2L"
-			(at 22.86 130.81 0)
+			(at 222.25 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10634,7 +11596,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 22.86 130.81 0)
+			(at 222.25 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 222.25 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 222.25 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 222.25 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10657,11 +11652,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 266.7 124.46 0)
+		(at 209.55 156.21 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10672,7 +11673,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a7eec9b-b63d-45b1-90eb-78d315443c85")
 		(property "Reference" "#PWR049"
-			(at 266.7 130.81 0)
+			(at 209.55 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10683,7 +11684,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 266.7 129.54 0)
+			(at 209.55 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10694,7 +11695,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 266.7 124.46 0)
+			(at 209.55 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10705,7 +11706,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 266.7 124.46 0)
+			(at 209.55 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10716,7 +11717,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 266.7 124.46 0)
+			(at 209.55 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10736,11 +11737,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR049")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 58.42 100.33 0)
+		(at 40.64 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10751,7 +11758,7 @@
 		(fields_autoplaced yes)
 		(uuid "5c8bc8f3-1fa1-46e1-9be5-b7259414134f")
 		(property "Reference" "#PWR035"
-			(at 58.42 106.68 0)
+			(at 40.64 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10762,7 +11769,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 58.42 105.41 0)
+			(at 40.64 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10773,7 +11780,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 100.33 0)
+			(at 40.64 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10784,7 +11791,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 100.33 0)
+			(at 40.64 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10795,7 +11802,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 58.42 100.33 0)
+			(at 40.64 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10812,6 +11819,95 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
 					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_W")
+		(at 144.018 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5dff6f0b-ccb7-4a31-b845-f33fd09a0f21")
+		(property "Reference" "TP7"
+			(at 142.494 42.926 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Tomachie_TP_W"
+			(at 144.018 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 144.018 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.018 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 144.018 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c66d7acc-d74b-49d7-b474-fc35d9c6edf7")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -10885,6 +11981,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 34.29 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 34.29 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 34.29 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e620832f-40e0-4a61-912e-47d0ed0c9590")
 		)
@@ -10898,11 +12027,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C26")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 162.56 113.03 0)
+		(at 99.06 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10913,7 +12048,7 @@
 		(fields_autoplaced yes)
 		(uuid "6f26e1ac-4f48-4442-8a51-ee3ed1ecef53")
 		(property "Reference" "#PWR036"
-			(at 162.56 119.38 0)
+			(at 99.06 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10924,7 +12059,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 162.56 118.11 0)
+			(at 99.06 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10935,7 +12070,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 113.03 0)
+			(at 99.06 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10946,7 +12081,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 113.03 0)
+			(at 99.06 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10957,7 +12092,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 162.56 113.03 0)
+			(at 99.06 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10973,6 +12108,12 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "#PWR036")
 					(unit 1)
 				)
@@ -11047,6 +12188,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 43.18 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 43.18 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 43.18 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6a7f55cd-789a-4da5-b170-f9824057da2b")
 		)
@@ -11060,11 +12234,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C27")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 245.11 124.46 0)
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 92.71 47.498 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11072,10 +12252,19 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "76da9bf7-0eb5-417a-99e4-8a61a1277fa3")
-		(property "Reference" "#PWR048"
-			(at 245.11 130.81 0)
+		(uuid "758ff25a-2e6a-4d90-bfd3-65b11da29d6a")
+		(property "Reference" "TP1"
+			(at 92.71 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 92.71 47.498 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11085,19 +12274,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 245.11 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 245.11 124.46 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 92.71 47.498 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11108,7 +12286,91 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 245.11 124.46 0)
+			(at 92.71 47.498 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 92.71 47.498 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fe9ccd2e-3db4-47b4-a96e-e35735fda43d")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
+		(at 187.96 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76da9bf7-0eb5-417a-99e4-8a61a1277fa3")
+		(property "Reference" "#PWR048"
+			(at 187.96 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Earth"
+			(at 187.96 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 187.96 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11119,7 +12381,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 245.11 124.46 0)
+			(at 187.96 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11139,11 +12401,100 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_W")
+		(at 114.808 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "78441550-43d4-4719-a110-1040da95feea")
+		(property "Reference" "TP6"
+			(at 113.284 77.216 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Tomachie_TP_W"
+			(at 114.808 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 114.808 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.808 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 114.808 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8db368c3-1b23-4891-a727-f8ac36c82dc3")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "CNC5L1X7R1H106K160AE:CNC5L1X7R1H106K160AE")
-		(at 163.83 110.49 0)
+		(at 100.33 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11152,8 +12503,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7c36769c-a694-40e7-88b5-d5004df1e705")
-		(property "Reference" "Cvcc8"
-			(at 171.196 106.934 0)
+		(property "Reference" "C5"
+			(at 107.696 108.204 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11163,7 +12514,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 169.418 114.3 0)
+			(at 105.918 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11173,7 +12524,7 @@
 			)
 		)
 		(property "Footprint" "Components:CAPC3216X190N"
-			(at 172.72 206.68 0)
+			(at 109.22 207.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11185,7 +12536,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_soft_cnc_en.pdf"
-			(at 172.72 306.68 0)
+			(at 109.22 307.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11197,7 +12548,7 @@
 			)
 		)
 		(property "Description" "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1206 50VDC 10uF 10% 1.6mm X7R AEC-Q200"
-			(at 163.83 110.49 0)
+			(at 100.33 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11208,7 +12559,7 @@
 			)
 		)
 		(property "Height" "1.9"
-			(at 172.72 506.68 0)
+			(at 109.22 507.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11220,7 +12571,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 172.72 606.68 0)
+			(at 109.22 607.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11232,7 +12583,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CNC5L1X7R1H106K160AE"
-			(at 172.72 706.68 0)
+			(at 109.22 707.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11244,7 +12595,7 @@
 			)
 		)
 		(property "Mouser Part Number" "810-CNC5L171H106K160"
-			(at 172.72 806.68 0)
+			(at 109.22 807.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11256,7 +12607,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TDK/CNC5L1X7R1H106K160AE?qs=Y0Uzf4wQF3k%252BLw%252Boiz8FLA%3D%3D"
-			(at 172.72 906.68 0)
+			(at 109.22 907.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11268,7 +12619,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 172.72 1006.68 0)
+			(at 109.22 1007.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11280,7 +12631,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 172.72 1106.68 0)
+			(at 109.22 1107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11289,6 +12640,39 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 100.33 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 100.33 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 100.33 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -11300,7 +12684,96 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Cvcc8")
+					(reference "C5")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 224.282 149.098 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "856fc8be-9a9e-4e16-91d9-e87b23fe6b73")
+		(property "Reference" "TP5"
+			(at 223.266 148.082 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 224.282 149.098 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 224.282 149.098 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.282 149.098 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 224.282 149.098 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f0e8d40e-3e9a-48ba-9a54-96c280f3dd94")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -11317,7 +12790,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8a2aad17-307a-4694-805c-fe4bdcf26700")
-		(property "Reference" "Ql8"
+		(property "Reference" "Q1"
 			(at 117.856 65.532 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11376,6 +12849,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 114.3 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 114.3 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 114.3 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4004e96f-1d90-46c3-a54b-2a2b553cc319")
 		)
@@ -11394,7 +12900,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Ql8")
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -11402,7 +12914,7 @@
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 154.94 152.4 0)
+		(at 142.24 160.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11412,7 +12924,7 @@
 		(dnp no)
 		(uuid "8c64e973-decf-4ecf-9c3f-c9ebcb1a410a")
 		(property "Reference" "#PWR038"
-			(at 154.94 158.75 0)
+			(at 142.24 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11423,7 +12935,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 154.94 156.464 0)
+			(at 142.24 164.084 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11434,7 +12946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 152.4 0)
+			(at 142.24 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11445,7 +12957,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 152.4 0)
+			(at 142.24 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11456,7 +12968,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 154.94 152.4 0)
+			(at 142.24 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11476,6 +12988,12 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11489,7 +13007,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8dc4a578-7c44-43de-9f73-c174f77cb472")
-		(property "Reference" "Qh8"
+		(property "Reference" "Q2"
 			(at 129.032 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11546,6 +13064,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 124.46 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 124.46 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 124.46 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "61b78850-c229-43dd-bdb6-dc32918e3462")
 		)
@@ -11564,7 +13115,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Qh8")
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -11647,11 +13204,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-26_11-27-26:RC0603FR-0710KL")
-		(at 237.49 135.89 0)
+		(at 227.33 151.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11661,7 +13224,7 @@
 		(dnp no)
 		(uuid "93645178-ec49-423b-b931-1b77273afdd5")
 		(property "Reference" "R4"
-			(at 246.126 138.176 0)
+			(at 235.966 153.416 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11672,7 +13235,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 245.872 133.096 0)
+			(at 235.712 148.336 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11683,7 +13246,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 237.49 135.89 0)
+			(at 227.33 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11695,7 +13258,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0710KL"
-			(at 237.49 135.89 0)
+			(at 227.33 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11707,7 +13270,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 237.49 135.89 0)
+			(at 227.33 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 227.33 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 227.33 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 227.33 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11730,11 +13326,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R4")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-21_01-10-03:TLRP3A30CR005FTE")
-		(at 76.2 46.99 0)
+		(at 88.9 26.67 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11744,7 +13346,7 @@
 		(dnp no)
 		(uuid "96becb48-b692-4842-9aeb-57bc1d92f596")
 		(property "Reference" "R40"
-			(at 84.074 44.704 0)
+			(at 96.774 24.384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11754,7 +13356,7 @@
 			)
 		)
 		(property "Value" "5m"
-			(at 83.566 49.276 0)
+			(at 96.266 28.956 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11764,7 +13366,7 @@
 			)
 		)
 		(property "Footprint" "Components:RES_TLRP-3A_TEC"
-			(at 76.2 46.99 0)
+			(at 88.9 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11776,7 +13378,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773449-4&DocType=Data+Sheet&DocLang=English&PartCntxt=1-2176422-9&DocFormat=pdf"
-			(at 76.2 46.99 0)
+			(at 88.9 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11788,7 +13390,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.2 46.99 0)
+			(at 88.9 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 88.9 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 88.9 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 88.9 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11811,84 +13446,9 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "2026-06-23_14-35-42:UCD2A101MNJ1MS")
-		(at 266.7 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9baeb7e1-b44c-4b0f-b0f1-81219f6f90c2")
-		(property "Reference" "C34"
-			(at 263.398 119.126 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "10u"
-			(at 269.748 118.872 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "Components:CAP_UCD2A_NCH"
-			(at 266.7 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "UCD2A101MNJ1MS"
-			(at 266.7 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 266.7 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "55c06e34-a3c5-45cb-931e-9283b4afa8c1")
-		)
-		(pin "1"
-			(uuid "7a0aa960-d62d-4057-9241-638abb8f4a0b")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "C34")
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -11971,6 +13531,12 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12041,6 +13607,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 22.86 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 22.86 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 22.86 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "ced3add0-da9a-4c78-92dc-b950c1dcf61c")
 		)
@@ -12050,6 +13649,12 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "C29")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "C29")
 					(unit 1)
 				)
@@ -12133,11 +13738,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
-		(lib_id "2026-06-22_18-02-40:UCD2A220MNL1GS")
-		(at 245.11 115.57 270)
+		(lib_id "2026-06-23_14-35-42:UCD2A101MNJ1MS")
+		(at 209.55 147.32 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12145,9 +13756,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a3d0edf8-10d8-4916-9867-c09c19b91d00")
-		(property "Reference" "C35"
-			(at 242.062 120.142 0)
+		(uuid "a2358e8b-bceb-4ec3-8c01-67b29430e094")
+		(property "Reference" "C36"
+			(at 212.852 151.384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12156,8 +13767,8 @@
 				)
 			)
 		)
-		(property "Value" "22u"
-			(at 248.158 119.126 0)
+		(property "Value" "10u"
+			(at 206.502 151.638 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12166,8 +13777,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Components:PCAP_8x10-ELECT_NCH"
-			(at 245.11 115.57 0)
+		(property "Footprint" "Components:CAP_UCD2A_NCH"
+			(at 209.55 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12178,8 +13789,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "UCD2A220MNL1GS"
-			(at 245.11 115.57 0)
+		(property "Datasheet" "UCD2A101MNJ1MS"
+			(at 209.55 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12191,7 +13802,160 @@
 			)
 		)
 		(property "Description" ""
-			(at 245.11 115.57 0)
+			(at 209.55 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 209.55 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 209.55 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 209.55 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ef8470cc-1bab-4734-b4ce-36fda2ef2e4d")
+		)
+		(pin "1"
+			(uuid "c3978ad4-c28f-4ea1-8050-463657ab53b2")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-06-22_18-02-40:UCD2A220MNL1GS")
+		(at 187.96 147.32 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a3d0edf8-10d8-4916-9867-c09c19b91d00")
+		(property "Reference" "C35"
+			(at 184.912 151.892 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "22u"
+			(at 191.008 150.876 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "Components:PCAP_8x10-ELECT_NCH"
+			(at 187.96 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "UCD2A220MNL1GS"
+			(at 187.96 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 187.96 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 187.96 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 187.96 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12214,11 +13978,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C35")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 113.03 123.19 0)
+		(at 128.27 160.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12228,7 +13998,7 @@
 		(dnp no)
 		(uuid "a9108f7f-2d31-4311-9a29-1eadee14134f")
 		(property "Reference" "#PWR034"
-			(at 113.03 129.54 0)
+			(at 128.27 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12239,7 +14009,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 112.776 126.746 0)
+			(at 128.016 163.576 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12250,7 +14020,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 123.19 0)
+			(at 128.27 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12261,7 +14031,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 123.19 0)
+			(at 128.27 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12272,7 +14042,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 113.03 123.19 0)
+			(at 128.27 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12292,11 +14062,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-26_00-29-12:C1206C474K5RACTU")
-		(at 154.94 151.13 90)
+		(at 142.24 158.75 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12306,7 +14082,7 @@
 		(dnp no)
 		(uuid "ab387c5c-6560-4a2e-ab0f-751aa6b1da77")
 		(property "Reference" "C1"
-			(at 149.86 145.796 90)
+			(at 137.16 153.416 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12317,7 +14093,7 @@
 			)
 		)
 		(property "Value" "0.47u"
-			(at 155.194 150.368 90)
+			(at 142.494 157.988 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12328,7 +14104,7 @@
 			)
 		)
 		(property "Footprint" "Components:CAPC340180_100N_KEM"
-			(at 154.94 151.13 0)
+			(at 142.24 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12340,7 +14116,7 @@
 			)
 		)
 		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf"
-			(at 154.94 151.13 0)
+			(at 142.24 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12352,7 +14128,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 154.94 151.13 0)
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 142.24 158.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 142.24 158.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 142.24 158.75 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12375,11 +14184,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-24_23-31-22:C1206C224M1REC7210")
-		(at 88.9 97.79 0)
+		(at 71.12 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12388,8 +14203,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "acdacd8f-b3ba-413d-b815-5ec2599535ce")
-		(property "Reference" "Cbst7"
-			(at 92.71 93.726 0)
+		(property "Reference" "C4"
+			(at 74.93 107.696 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12399,7 +14214,7 @@
 			)
 		)
 		(property "Value" "0.22u"
-			(at 92.71 101.346 0)
+			(at 74.93 115.316 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12409,7 +14224,7 @@
 			)
 		)
 		(property "Footprint" "Components:CAP_C1206C-EC_KEM"
-			(at 88.9 97.79 0)
+			(at 71.12 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12421,7 +14236,7 @@
 			)
 		)
 		(property "Datasheet" "C1206C224M1REC7210"
-			(at 88.9 97.79 0)
+			(at 71.12 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12433,7 +14248,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 88.9 97.79 0)
+			(at 71.12 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 71.12 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 71.12 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 71.12 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12452,7 +14300,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Cbst7")
+					(reference "C4")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -12460,7 +14314,7 @@
 	)
 	(symbol
 		(lib_id "CNC5L1X7R1H106K160AE:CNC5L1X7R1H106K160AE")
-		(at 62.23 97.79 0)
+		(at 44.45 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12469,8 +14323,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "af13659a-a1f6-47c1-94eb-c518a48f3ba9")
-		(property "Reference" "Cvcc7"
-			(at 68.326 93.98 0)
+		(property "Reference" "C3"
+			(at 50.546 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12480,7 +14334,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 68.834 101.854 0)
+			(at 51.054 115.824 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12490,7 +14344,7 @@
 			)
 		)
 		(property "Footprint" "Components:CAPC3216X190N"
-			(at 71.12 193.98 0)
+			(at 53.34 207.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12502,7 +14356,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_soft_cnc_en.pdf"
-			(at 71.12 293.98 0)
+			(at 53.34 307.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12514,7 +14368,7 @@
 			)
 		)
 		(property "Description" "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1206 50VDC 10uF 10% 1.6mm X7R AEC-Q200"
-			(at 62.23 97.79 0)
+			(at 44.45 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12525,7 +14379,7 @@
 			)
 		)
 		(property "Height" "1.9"
-			(at 71.12 493.98 0)
+			(at 53.34 507.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12537,7 +14391,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 71.12 593.98 0)
+			(at 53.34 607.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12549,7 +14403,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CNC5L1X7R1H106K160AE"
-			(at 71.12 693.98 0)
+			(at 53.34 707.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12561,7 +14415,7 @@
 			)
 		)
 		(property "Mouser Part Number" "810-CNC5L171H106K160"
-			(at 71.12 793.98 0)
+			(at 53.34 807.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12573,7 +14427,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TDK/CNC5L1X7R1H106K160AE?qs=Y0Uzf4wQF3k%252BLw%252Boiz8FLA%3D%3D"
-			(at 71.12 893.98 0)
+			(at 53.34 907.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12585,7 +14439,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 71.12 993.98 0)
+			(at 53.34 1007.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12597,7 +14451,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 71.12 1093.98 0)
+			(at 53.34 1107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12606,6 +14460,39 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 44.45 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 44.45 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 44.45 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -12617,7 +14504,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Cvcc7")
+					(reference "C3")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -12625,7 +14518,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-21_01-10-03:TLRP3A30CR005FTE")
-		(at 76.2 29.21 0)
+		(at 72.39 49.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12635,7 +14528,7 @@
 		(dnp no)
 		(uuid "b01161f6-beda-4cc5-8d2f-cc6fb23ce32c")
 		(property "Reference" "R39"
-			(at 82.804 26.67 0)
+			(at 78.994 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12645,7 +14538,7 @@
 			)
 		)
 		(property "Value" "5m"
-			(at 82.804 31.242 0)
+			(at 78.994 51.562 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12655,7 +14548,7 @@
 			)
 		)
 		(property "Footprint" "Components:RES_TLRP-3A_TEC"
-			(at 76.2 29.21 0)
+			(at 72.39 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12667,7 +14560,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773449-4&DocType=Data+Sheet&DocLang=English&PartCntxt=1-2176422-9&DocFormat=pdf"
-			(at 76.2 29.21 0)
+			(at 72.39 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12679,7 +14572,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.2 29.21 0)
+			(at 72.39 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 72.39 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 72.39 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 72.39 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12702,11 +14628,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R39")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Inductor_Wurth_WE-HCF:2818B_7443641000B")
-		(at 100.33 46.99 0)
+		(at 113.03 26.67 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12716,7 +14648,7 @@
 		(dnp no)
 		(uuid "bcb9beaa-77c6-4294-899d-416c12cda89a")
 		(property "Reference" "L8"
-			(at 100.33 41.91 0)
+			(at 113.03 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12726,7 +14658,7 @@
 			)
 		)
 		(property "Value" "2818B_7443641000B"
-			(at 100.33 49.53 0)
+			(at 113.03 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12737,7 +14669,7 @@
 			)
 		)
 		(property "Footprint" "Components:L_Wurth_WE-HCF-2818B"
-			(at 100.33 39.37 0)
+			(at 113.03 19.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12748,7 +14680,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.we-online.com/catalog/datasheet/7443641000B.pdf?ki"
-			(at 152.4 29.21 0)
+			(at 165.1 8.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12759,7 +14691,7 @@
 			)
 		)
 		(property "Description" "Shielded High Current Inductor"
-			(at 100.33 46.99 0)
+			(at 113.03 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12770,7 +14702,7 @@
 			)
 		)
 		(property "Manufacturer" "Wurth Elektronik"
-			(at 152.4 31.75 0)
+			(at 165.1 11.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12781,7 +14713,7 @@
 			)
 		)
 		(property "Manufacturer URL" "https://www.we-online.com"
-			(at 152.4 34.29 0)
+			(at 165.1 13.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12792,7 +14724,7 @@
 			)
 		)
 		(property "Published Date" "20250325"
-			(at 152.4 36.83 0)
+			(at 165.1 16.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12803,7 +14735,7 @@
 			)
 		)
 		(property "Match Code" "WE-HCF"
-			(at 152.4 39.37 0)
+			(at 165.1 19.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12814,7 +14746,7 @@
 			)
 		)
 		(property "Part Number" "7443641000B"
-			(at 152.4 41.91 0)
+			(at 165.1 21.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12825,7 +14757,7 @@
 			)
 		)
 		(property "Size" "2818B"
-			(at 152.4 44.45 0)
+			(at 165.1 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12836,7 +14768,7 @@
 			)
 		)
 		(property "Mounting Technology" "SMT"
-			(at 152.4 46.99 0)
+			(at 165.1 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12847,7 +14779,7 @@
 			)
 		)
 		(property "L (µH)" "10.0"
-			(at 152.4 49.53 0)
+			(at 165.1 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12858,7 +14790,7 @@
 			)
 		)
 		(property "IRP,40K (A)" "59.2"
-			(at 152.4 52.07 0)
+			(at 165.1 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12869,7 +14801,7 @@
 			)
 		)
 		(property "ISAT,10% (A)" "22.9"
-			(at 152.4 54.61 0)
+			(at 165.1 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12880,7 +14812,7 @@
 			)
 		)
 		(property "ISAT,30% (A)" "25.1"
-			(at 152.4 57.15 0)
+			(at 165.1 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12891,7 +14823,7 @@
 			)
 		)
 		(property "RDC max. (mΩ)" "0.97"
-			(at 152.4 59.69 0)
+			(at 165.1 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12902,7 +14834,7 @@
 			)
 		)
 		(property "fres (MHz)" "15.0"
-			(at 152.4 62.23 0)
+			(at 165.1 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12913,7 +14845,7 @@
 			)
 		)
 		(property "Wire Type" "Flat"
-			(at 152.4 64.77 0)
+			(at 165.1 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12923,8 +14855,41 @@
 				)
 			)
 		)
-		(property "Critical Parameter" "10.0 µH"
-			(at 100.584 43.942 0)
+		(property "Critical Parameter" "10u"
+			(at 113.284 23.622 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 113.03 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 113.03 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 113.03 26.67 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12942,6 +14907,12 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "L8")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "L8")
 					(unit 1)
 				)
@@ -13015,6 +14986,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 52.07 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 52.07 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 52.07 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "f047b391-eda4-42f9-acc9-c5156db807e6")
 		)
@@ -13028,11 +15032,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Inductor_Wurth_WE-HCF:2818B_7443641000B")
-		(at 105.41 29.21 0)
+		(at 101.6 49.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13043,7 +15053,7 @@
 		(fields_autoplaced yes)
 		(uuid "c6dc7b09-ddbd-4897-845b-79090788d97d")
 		(property "Reference" "L7"
-			(at 105.6323 22.86 0)
+			(at 101.8223 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13053,7 +15063,7 @@
 			)
 		)
 		(property "Value" "2818B_7443641000B"
-			(at 105.41 31.75 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13064,7 +15074,7 @@
 			)
 		)
 		(property "Footprint" "Components:L_Wurth_WE-HCF-2818B"
-			(at 105.41 21.59 0)
+			(at 101.6 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13075,7 +15085,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.we-online.com/catalog/datasheet/7443641000B.pdf?ki"
-			(at 157.48 11.43 0)
+			(at 153.67 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13086,7 +15096,7 @@
 			)
 		)
 		(property "Description" "Shielded High Current Inductor"
-			(at 105.41 29.21 0)
+			(at 101.6 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13097,7 +15107,7 @@
 			)
 		)
 		(property "Manufacturer" "Wurth Elektronik"
-			(at 157.48 13.97 0)
+			(at 153.67 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13108,7 +15118,7 @@
 			)
 		)
 		(property "Manufacturer URL" "https://www.we-online.com"
-			(at 157.48 16.51 0)
+			(at 153.67 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13119,7 +15129,7 @@
 			)
 		)
 		(property "Published Date" "20250325"
-			(at 157.48 19.05 0)
+			(at 153.67 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13130,7 +15140,7 @@
 			)
 		)
 		(property "Match Code" "WE-HCF"
-			(at 157.48 21.59 0)
+			(at 153.67 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13141,7 +15151,7 @@
 			)
 		)
 		(property "Part Number" "7443641000B"
-			(at 157.48 24.13 0)
+			(at 153.67 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13152,7 +15162,7 @@
 			)
 		)
 		(property "Size" "2818B"
-			(at 157.48 26.67 0)
+			(at 153.67 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13163,7 +15173,7 @@
 			)
 		)
 		(property "Mounting Technology" "SMT"
-			(at 157.48 29.21 0)
+			(at 153.67 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13174,7 +15184,7 @@
 			)
 		)
 		(property "L (µH)" "10.0"
-			(at 157.48 31.75 0)
+			(at 153.67 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13185,7 +15195,7 @@
 			)
 		)
 		(property "IRP,40K (A)" "59.2"
-			(at 157.48 34.29 0)
+			(at 153.67 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13196,7 +15206,7 @@
 			)
 		)
 		(property "ISAT,10% (A)" "22.9"
-			(at 157.48 36.83 0)
+			(at 153.67 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13207,7 +15217,7 @@
 			)
 		)
 		(property "ISAT,30% (A)" "25.1"
-			(at 157.48 39.37 0)
+			(at 153.67 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13218,7 +15228,7 @@
 			)
 		)
 		(property "RDC max. (mΩ)" "0.97"
-			(at 157.48 41.91 0)
+			(at 153.67 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13229,7 +15239,7 @@
 			)
 		)
 		(property "fres (MHz)" "15.0"
-			(at 157.48 44.45 0)
+			(at 153.67 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13240,7 +15250,7 @@
 			)
 		)
 		(property "Wire Type" "Flat"
-			(at 157.48 46.99 0)
+			(at 153.67 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13250,8 +15260,41 @@
 				)
 			)
 		)
-		(property "Critical Parameter" "10.0 µH"
-			(at 105.6323 25.4 0)
+		(property "Critical Parameter" "10u"
+			(at 101.8223 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 101.6 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 101.6 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 101.6 49.53 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13273,6 +15316,12 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "L7")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -13286,7 +15335,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cd8e8f1e-afdb-4662-bf78-fd38baf61421")
-		(property "Reference" "MASTER4"
+		(property "Reference" "U2"
 			(at 234.188 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13331,6 +15380,39 @@
 			)
 		)
 		(property "Description" ""
+			(at 199.39 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 199.39 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 199.39 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 199.39 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -13404,7 +15486,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "MASTER4")
+					(reference "U2")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -13421,7 +15509,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d01eb2c2-2953-425d-b4c4-7ad9a044f6c2")
-		(property "Reference" "Qh7"
+		(property "Reference" "Q4"
 			(at 158.242 31.75 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13478,6 +15566,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 153.67 27.94 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 153.67 27.94 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 153.67 27.94 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5445f86b-4948-4965-a97f-ef2a1a4dc6f7")
 		)
@@ -13496,7 +15617,96 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "Qh7")
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_W")
+		(at 97.028 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d727cb39-84f8-4516-aad3-4ddba207d8af")
+		(property "Reference" "TP8"
+			(at 95.504 111.506 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Tomachie_TP_W"
+			(at 97.028 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 97.028 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.028 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 97.028 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc521454-2fdd-4714-b099-51c0db24a8b8")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -13504,7 +15714,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-24_19-49-47:RC0603FR-0736KL")
-		(at 142.24 115.57 90)
+		(at 115.57 158.75 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13514,7 +15724,7 @@
 		(dnp no)
 		(uuid "db96acfe-9252-451d-a252-1f2c51199a35")
 		(property "Reference" "R36"
-			(at 142.494 104.394 90)
+			(at 115.824 147.574 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13525,7 +15735,7 @@
 			)
 		)
 		(property "Value" "36k"
-			(at 142.24 114.3 90)
+			(at 115.57 157.48 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13536,7 +15746,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 142.24 115.57 0)
+			(at 115.57 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13548,7 +15758,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0736KL"
-			(at 142.24 115.57 0)
+			(at 115.57 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13560,7 +15770,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 142.24 115.57 0)
+			(at 115.57 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 115.57 158.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 115.57 158.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 115.57 158.75 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13583,11 +15826,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R36")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-26_11-23-01:RC0603FR-07392KL")
-		(at 262.89 135.89 180)
+		(at 252.73 151.13 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13597,7 +15846,7 @@
 		(dnp no)
 		(uuid "dc510b3b-7eea-4c19-8ae9-007078807102")
 		(property "Reference" "R3"
-			(at 257.81 138.684 0)
+			(at 247.65 153.924 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13608,7 +15857,7 @@
 			)
 		)
 		(property "Value" "392k"
-			(at 259.334 133.096 0)
+			(at 249.174 148.336 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13619,7 +15868,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 262.89 135.89 0)
+			(at 252.73 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13631,7 +15880,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-07392KL"
-			(at 262.89 135.89 0)
+			(at 252.73 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13643,7 +15892,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 262.89 135.89 0)
+			(at 252.73 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 252.73 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 252.73 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 252.73 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13662,6 +15944,12 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "R3")
 					(unit 1)
 				)
@@ -13736,6 +16024,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 25.4 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 25.4 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 25.4 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c11023a6-cebb-444d-b1fc-ff5fb22d01f7")
 		)
@@ -13749,11 +16070,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C25")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-26_01-22-08:CC0603KRX7R9BB223")
-		(at 36.83 130.81 0)
+		(at 236.22 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13763,7 +16090,7 @@
 		(dnp no)
 		(uuid "e12d9338-c9c5-4912-9807-10b723d62d6f")
 		(property "Reference" "C2"
-			(at 42.926 132.588 0)
+			(at 242.316 93.218 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13773,7 +16100,7 @@
 			)
 		)
 		(property "Value" "22n"
-			(at 39.37 133.858 0)
+			(at 238.76 94.488 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13783,7 +16110,7 @@
 			)
 		)
 		(property "Footprint" "Components:YAG_CC0603_YAG"
-			(at 36.83 130.81 0)
+			(at 236.22 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13795,7 +16122,7 @@
 			)
 		)
 		(property "Datasheet" "CC0603KRX7R9BB223"
-			(at 36.83 130.81 0)
+			(at 236.22 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13807,7 +16134,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 36.83 130.81 0)
+			(at 236.22 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 236.22 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 236.22 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 236.22 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13830,6 +16190,12 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -13843,7 +16209,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e614e673-a6a6-42ba-b42e-c79d2d58314f")
-		(property "Reference" "SLAVE4"
+		(property "Reference" "U3"
 			(at 233.68 62.738 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13888,6 +16254,39 @@
 			)
 		)
 		(property "Description" ""
+			(at 199.39 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 199.39 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 199.39 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 199.39 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -13961,7 +16360,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "SLAVE4")
+					(reference "U3")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -14043,6 +16448,12 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -14057,7 +16468,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb40a9b6-cfd5-41f1-95b5-b99d99c85981")
-		(property "Reference" "U1"
+		(property "Reference" "Q5"
 			(at 49.53 165.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14112,6 +16523,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 29.21 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 29.21 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 29.21 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "42057288-6aa3-4a4a-98f5-3a5a9aae11e9")
 		)
@@ -14124,7 +16568,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "U1")
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -14132,7 +16582,7 @@
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 55.88 149.86 0)
+		(at 54.61 148.59 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14143,7 +16593,7 @@
 		(fields_autoplaced yes)
 		(uuid "f32b719b-7e20-4c8e-860c-f1915a683b1d")
 		(property "Reference" "#PWR033"
-			(at 55.88 156.21 0)
+			(at 54.61 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14154,7 +16604,7 @@
 			)
 		)
 		(property "Value" "Earth"
-			(at 55.88 154.94 0)
+			(at 54.61 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14165,7 +16615,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 55.88 149.86 0)
+			(at 54.61 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14176,7 +16626,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 55.88 149.86 0)
+			(at 54.61 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14187,7 +16637,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 55.88 149.86 0)
+			(at 54.61 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14207,11 +16657,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "2026-06-24_19-49-47:RC0603FR-0736KL")
-		(at 113.03 109.22 270)
+		(at 128.27 146.05 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14221,7 +16677,7 @@
 		(dnp no)
 		(uuid "f58a76ec-8996-4449-bdea-7e962c41d051")
 		(property "Reference" "R38"
-			(at 106.68 112.268 90)
+			(at 121.92 149.098 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14232,7 +16688,7 @@
 			)
 		)
 		(property "Value" "36k"
-			(at 113.284 119.888 90)
+			(at 128.524 156.718 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14243,7 +16699,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 113.03 109.22 0)
+			(at 128.27 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14255,7 +16711,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0736KL"
-			(at 113.03 109.22 0)
+			(at 128.27 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14267,7 +16723,40 @@
 			)
 		)
 		(property "Description" ""
-			(at 113.03 109.22 0)
+			(at 128.27 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 128.27 146.05 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 128.27 146.05 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 128.27 146.05 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14290,11 +16779,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R38")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 50.8 149.86 0)
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 40.64 109.728 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14302,10 +16797,19 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fa8f65bc-9ea7-49de-b98c-d7ba0b0f401d")
-		(property "Reference" "#PWR046"
-			(at 50.8 156.21 0)
+		(uuid "f610e498-4dbf-45ed-a695-7057224fceeb")
+		(property "Reference" "TP3"
+			(at 40.64 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 40.64 109.728 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14315,19 +16819,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 50.8 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 50.8 149.86 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 40.64 109.728 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14338,7 +16831,91 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 149.86 0)
+			(at 40.64 109.728 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 40.64 109.728 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8b56480f-9e3e-4b3d-a1d1-d210eacef53e")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
+		(at 49.53 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa8f65bc-9ea7-49de-b98c-d7ba0b0f401d")
+		(property "Reference" "#PWR046"
+			(at 49.53 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Earth"
+			(at 49.53 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14349,7 +16926,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 50.8 149.86 0)
+			(at 49.53 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14369,6 +16946,17 @@
 					(unit 1)
 				)
 			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "#PWR046")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
 		)
 	)
 )

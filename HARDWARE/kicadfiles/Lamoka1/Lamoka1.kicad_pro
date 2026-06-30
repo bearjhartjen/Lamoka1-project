@@ -810,7 +810,7 @@
         "uuid": "50fe8bbc-b3f6-4de5-9677-9b5870b87390"
       }
     ],
-    "used_designators": "U1,#PWR28-29,#PWR33,#PWR43-49,C1-2,C29,C33-35,R1-5,R36,R41-42",
+    "used_designators": "R1-5,R36,R41-42,C1-6,C29,C33-36,#PWR28-29,#PWR33,#PWR43-49,U1-3,Q1-5",
     "variants": []
   },
   "sheets": [
@@ -821,6 +821,10 @@
     [
       "a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0",
       "BOOST-SECTION"
+    ],
+    [
+      "c002146b-8292-48a9-935f-d207bb85f5a4",
+      "Higher-boost"
     ]
   ],
   "text_variables": {},

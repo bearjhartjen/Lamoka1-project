@@ -23,6 +23,9 @@ For the restart pin (RES) on the LM5122 i selected a capacitor with a value of 0
 
 I moved everything to sheets instead of having clunky folders, this way it is much more neat. I removed all of the symbols, footprints, and 3D models, as i was concerned i was breaking the companies no distributing policies for components, since this project is on github.
 
+
+I put in a system for nets in the boost converter instead of very messy lines going all over. The schem for the boost converter looks much cleaner and this will help us get more feedback. 
+
 ## Modes for the unit 
 
 The Lamoka1 will have many modes, there will be combo modes, which are for general controll of the unit, included in the combo modes are Normal mode (where everything operates at the cleanest smoothest most optimized situation) there is Toast mode, which just runs the whole unit with many inefficiencies to make normally unwanted heat, please note that the MCU will prevent fatal issues for the Lamoka1 in Toast mode. There is Cool mode, which simply just blows the cooling fan at max speed. Then, there is main section specific modes (main sections being Inverter and charger) please note that if a section specific mode on any Combo mode cannot be on. For inverter specific modes there is sleep mode (which puts the LM5122 into a diode emmulation mode, the inverter cannot output any power in sleep mode and only the MCU will be powered, and the lights.) There will be Dumb mode, which dumbs down the waveform to reduce switching losses, this mode is ONLY for purely resistive loads, such as heaters, or incandesent light bulbs. There is Normal mode which just runs everything norammly. Then there is Config mode, which is activated when the user codes in their own program and functioning. All of the mode mentioned are included in the stock unit. I havent gotten to the charger stuff yet there will be modes there as well. 

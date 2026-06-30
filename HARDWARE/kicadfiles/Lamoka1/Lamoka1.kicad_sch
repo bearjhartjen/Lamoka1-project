@@ -81,6 +81,52 @@
 			)
 		)
 	)
+	(sheet
+		(at 397.51 22.86)
+		(size 335.28 232.41)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c002146b-8292-48a9-935f-d207bb85f5a4")
+		(property "Sheetname" "Higher-boost"
+			(at 397.51 22.1484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Higherboost.kicad_sch"
+			(at 397.51 255.8546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390"
+					(page "3")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
