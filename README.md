@@ -1,8 +1,12 @@
 ## Top priority
- Put here the photos of Tomachie grading for boost converter, and a photo of boost converter schem 
+ 
+<div align="center">
 
+![Boost converter] (Images/Boostconverter.jpg)
 
+</div>
 
+## General information
 <div align="center">
 
 
