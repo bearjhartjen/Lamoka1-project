@@ -2,7 +2,7 @@
  
 <div align="center">
 
-![Boost converter] (Images/Boostconverter.jpg)
+![Boost converter](Images/Boostconverter.jpg)
 
 </div>
 
