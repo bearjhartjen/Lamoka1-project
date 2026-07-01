@@ -5,32 +5,28 @@ on:
     branches: [ Lamoka1 ]
   pull_request:
     branches: [ Lamoka1 ]
+  workflow_dispatch:
 
 jobs:
   build:
-    # This pulls the official, pre-configured KiBot environment
-    container: ghcr.io/inti-cmnb/kicad_auto:latest
     runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad10_auto:latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: Lamoka1
 
       - name: Run KiBot
-        uses: INTI-CMNB/KiBot@v2
-        with:
-          config: kibot.yaml
-          schema: HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_sch
-          board: HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_pcb
-          install3D: "NO"
+        run: |
+          kibot \
+            -c kibot.yaml \
+            -b HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_pcb \
+            -e HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_sch \
+            -d KiBot_Output
 
-      - name: Upload build artifacts
+      - name: Upload KiBot outputs
         uses: actions/upload-artifact@v4
         with:
-          name: Lamoka1_Build_Outputs
-          path: |
-            Fabrication/
-            Documentation/
+          name: Lamoka1_KiBot_Output
+          path: KiBot_Output/
           retention-days: 30

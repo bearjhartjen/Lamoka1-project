@@ -6,24 +6,27 @@ preflight:
   run_drc: true
 
 outputs:
-  - name: "gerbers"
+  - name: gerbers
     type: gerber
-    options:
-      output_directory: "Fabrication/Gerbers"
-      force_edge_cuts: true
-      use_gerber_x2_extensions: true
+    dir: Fabrication/Gerbers
 
-  - name: "drill_files"
+  - name: drill_files
     type: excellon
-    options:
-      output_directory: "Fabrication/Drills"
+    dir: Fabrication/Drills
 
-  - name: "schematic_pdf"
+  - name: position_files
+    type: position
+    dir: Fabrication/PickAndPlace
+
+  - name: schematic_pdf
     type: pdf_sch_print
+    dir: Documentation
     options:
-      output_name: "Documentation/Lamoka1_Schematic.pdf"
+      output: Lamoka1_Schematic.pdf
 
-  - name: "bom_csv"
+  - name: bom_csv
     type: bom
+    dir: Documentation
     options:
-      output_name: "Documentation/Lamoka1_BOM.csv"
+      output: Lamoka1_BOM.csv
+      format: CSV
