@@ -8,6 +8,8 @@ on:
 
 jobs:
   build:
+    # This ensures the entire environment uses modern KiCad
+    container: kicad/kicad:latest
     runs-on: ubuntu-latest
 
     steps:
@@ -19,12 +21,10 @@ jobs:
       - name: Run KiBot
         uses: INTI-CMNB/KiBot@v2
         with:
-          # This line forces the action to use the latest KiCad 
-          # software (version 8/9+), matching your local setup.
-          image: kicad/kicad:latest
           config: kibot.yaml
           schema: HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_sch
           board: HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_pcb
+          install3D: "NO"
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
