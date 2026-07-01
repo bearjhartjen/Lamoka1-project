@@ -4454,6 +4454,349 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "2026-07-01_14-01-11:RC0805FR-0747KL"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 5.715 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "RC0805FR-0747KL"
+				(at 6.35 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "RC0805N_YAG"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "RC0805FR-0747KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "RC0805FR-0747KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "RC0805N_YAG RC0805N_YAG-M RC0805N_YAG-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RC0805FR-0747KL_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.175 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 1.27) (xy 4.445 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -1.27) (xy 5.715 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 1.27) (xy 6.985 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 -1.27) (xy 8.255 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 1.27) (xy 9.525 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 -1.27) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "RC0805FR-0747KL_1_2"
+				(polyline
+					(pts
+						(xy -1.27 8.255) (xy 1.27 9.525)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.715) (xy 1.27 6.985)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 3.175) (xy 1.27 4.445)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy -1.27 3.175)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 9.525) (xy 0 10.16)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 6.985) (xy -1.27 8.255)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 4.445) (xy -1.27 5.715)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "CNC5L1X7R1H106K160AE:CNC5L1X7R1H106K160AE"
 			(pin_names
 				(hide yes)
@@ -4692,20 +5035,21 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R"
+		(symbol "Device:NetTie_2"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
-			(in_bom yes)
+			(in_bom no)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 2.032 0 90)
+			(property "Reference" "NT"
+				(at 0 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4714,8 +5058,8 @@
 					)
 				)
 			)
-			(property "Value" "R"
-				(at 0 0 90)
+			(property "Value" "NetTie_2"
+				(at 0 -1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4725,7 +5069,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at -1.778 0 90)
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -4746,7 +5090,7 @@
 					)
 				)
 			)
-			(property "Description" "Resistor"
+			(property "Description" "Net tie, 2 pins"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4757,7 +5101,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "R res resistor"
+			(property "ki_keywords" "net tie short"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4768,7 +5112,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "R_*"
+			(property "ki_fp_filters" "Net*Tie*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4779,10 +5123,11 @@
 					)
 				)
 			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
+			(symbol "NetTie_2_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -4792,11 +5137,11 @@
 					)
 				)
 			)
-			(symbol "R_1_1"
+			(symbol "NetTie_2_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4812,9 +5157,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6899,7 +7244,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:Earth"
+		(symbol "power:GNDA"
 			(power global)
 			(pin_numbers
 				(hide yes)
@@ -6924,7 +7269,7 @@
 					)
 				)
 			)
-			(property "Value" "Earth"
+			(property "Value" "GNDA"
 				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -6956,7 +7301,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -6967,7 +7312,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global ground gnd"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -6978,10 +7323,10 @@
 					)
 				)
 			)
-			(symbol "Earth_0_1"
+			(symbol "GNDA_0_1"
 				(polyline
 					(pts
-						(xy -0.635 -1.905) (xy 0.635 -1.905)
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
 					)
 					(stroke
 						(width 0)
@@ -6991,12 +7336,127 @@
 						(type none)
 					)
 				)
+			)
+			(symbol "GNDA_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GNDPWR"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GNDPWR"
+				(at 0 -3.302 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GNDPWR_0_1"
 				(polyline
 					(pts
-						(xy -0.127 -2.54) (xy 0.127 -2.54)
+						(xy -1.016 -1.27) (xy -1.27 -2.032) (xy -1.27 -2.032)
 					)
 					(stroke
-						(width 0)
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -1.27) (xy -0.762 -2.032) (xy -0.762 -2.032)
+					)
+					(stroke
+						(width 0.2032)
 						(type default)
 					)
 					(fill
@@ -7017,10 +7477,46 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.27) (xy -1.27 -1.27)
+						(xy 0 -1.27) (xy -0.254 -2.032) (xy -0.254 -2.032)
 					)
 					(stroke
-						(width 0)
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -1.27) (xy 0.254 -2.032) (xy 0.254 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy -1.016 -1.27) (xy -1.016 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy 0.762 -2.032) (xy 0.762 -2.032) (xy 0.762 -2.032)
+					)
+					(stroke
+						(width 0.2032)
 						(type default)
 					)
 					(fill
@@ -7028,7 +7524,7 @@
 					)
 				)
 			)
-			(symbol "Earth_1_1"
+			(symbol "GNDPWR_1_1"
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
@@ -7053,7 +7549,7 @@
 	)
 	(rectangle
 		(start 96.52 16.51)
-		(end 140.97 50.8)
+		(end 140.97 52.07)
 		(stroke
 			(width 0)
 			(type default)
@@ -7064,7 +7560,7 @@
 		(uuid "1162de30-906d-4151-bf9b-1e153294d03a")
 	)
 	(rectangle
-		(start 17.78 120.65)
+		(start 15.24 120.65)
 		(end 67.31 154.94)
 		(stroke
 			(width 0)
@@ -7088,8 +7584,8 @@
 		(uuid "26b1212a-917d-4082-9852-2ce5e1ea154f")
 	)
 	(rectangle
-		(start 176.53 115.57)
-		(end 223.52 140.97)
+		(start 184.15 115.57)
+		(end 215.9 143.51)
 		(stroke
 			(width 0)
 			(type default)
@@ -7100,8 +7596,8 @@
 		(uuid "3be9d723-7243-40a8-81b9-a1acfd1fb34c")
 	)
 	(rectangle
-		(start 13.97 50.8)
-		(end 44.45 78.74)
+		(start 13.97 49.53)
+		(end 44.45 80.01)
 		(stroke
 			(width 0)
 			(type default)
@@ -7136,7 +7632,7 @@
 		(uuid "544460ce-fbc7-48fc-bfab-96a3784000f5")
 	)
 	(rectangle
-		(start 176.53 101.6)
+		(start 176.53 100.33)
 		(end 208.28 110.49)
 		(stroke
 			(width 0)
@@ -7149,7 +7645,7 @@
 	)
 	(rectangle
 		(start 74.93 15.24)
-		(end 92.71 40.64)
+		(end 92.71 43.18)
 		(stroke
 			(width 0)
 			(type default)
@@ -7185,7 +7681,7 @@
 	)
 	(rectangle
 		(start 96.52 53.34)
-		(end 143.51 90.17)
+		(end 143.51 91.44)
 		(stroke
 			(width 0)
 			(type default)
@@ -7196,7 +7692,7 @@
 		(uuid "ab3d580e-6cbf-44dc-91ab-603db89a2118")
 	)
 	(rectangle
-		(start 13.97 39.37)
+		(start 13.97 38.1)
 		(end 71.12 48.26)
 		(stroke
 			(width 0)
@@ -7220,8 +7716,8 @@
 		(uuid "d92e8fd0-3b81-4842-998c-6885d1e0eb40")
 	)
 	(rectangle
-		(start 148.59 86.36)
-		(end 187.96 99.06)
+		(start 237.49 109.22)
+		(end 276.86 121.92)
 		(stroke
 			(width 0)
 			(type default)
@@ -7232,8 +7728,8 @@
 		(uuid "e669ab12-c967-4ee6-b1b8-0dea94beb13a")
 	)
 	(rectangle
-		(start 17.78 158.75)
-		(end 93.98 191.77)
+		(start 16.51 158.75)
+		(end 101.6 191.77)
 		(stroke
 			(width 0)
 			(type default)
@@ -7277,7 +7773,7 @@
 	)
 	(text "Makes U2 master and U3 slave"
 		(exclude_from_sim no)
-		(at 192.532 103.886 0)
+		(at 192.532 102.108 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7297,7 +7793,7 @@
 	)
 	(text "Loop compensation network"
 		(exclude_from_sim no)
-		(at 168.148 88.392 0)
+		(at 257.048 111.252 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7327,7 +7823,7 @@
 	)
 	(text "takes source and makes it dedicated for boost converter"
 		(exclude_from_sim no)
-		(at 42.418 41.148 0)
+		(at 42.164 40.386 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7365,7 +7861,7 @@
 		)
 		(uuid "65f871fb-44b1-4de7-b396-1033e5a6c52c")
 	)
-	(text "Sets restart time for converter to around 56ms "
+	(text "Sets restart time for converter"
 		(exclude_from_sim no)
 		(at 200.406 117.856 0)
 		(effects
@@ -7577,7 +8073,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 73.66) (xy 274.32 73.66)
+			(xy 252.73 73.66) (xy 256.54 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7607,7 +8103,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 68.58) (xy 199.39 68.58)
+			(xy 177.8 68.58) (xy 181.61 68.58)
 		)
 		(stroke
 			(width 0)
@@ -7627,7 +8123,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 93.98) (xy 154.94 93.98)
+			(xy 242.57 116.84) (xy 243.84 116.84)
 		)
 		(stroke
 			(width 0)
@@ -7637,7 +8133,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 35.56) (xy 273.05 35.56)
+			(xy 252.73 35.56) (xy 255.27 35.56)
 		)
 		(stroke
 			(width 0)
@@ -7667,7 +8163,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 76.2) (xy 274.32 76.2)
+			(xy 252.73 76.2) (xy 256.54 76.2)
 		)
 		(stroke
 			(width 0)
@@ -7687,7 +8183,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 20.32) (xy 199.39 20.32)
+			(xy 177.8 20.32) (xy 181.61 20.32)
 		)
 		(stroke
 			(width 0)
@@ -7697,7 +8193,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 58.42) (xy 274.32 58.42)
+			(xy 252.73 58.42) (xy 256.54 58.42)
 		)
 		(stroke
 			(width 0)
@@ -7714,6 +8210,16 @@
 			(type default)
 		)
 		(uuid "26774f8d-9b3a-437c-bbd8-75e5181a0257")
+	)
+	(wire
+		(pts
+			(xy 158.75 40.64) (xy 181.61 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "275419d4-cbf5-4cc0-bdd7-5a11552d8c52")
 	)
 	(wire
 		(pts
@@ -7767,7 +8273,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 78.74) (xy 199.39 78.74)
+			(xy 177.8 78.74) (xy 181.61 78.74)
 		)
 		(stroke
 			(width 0)
@@ -7787,7 +8293,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 66.04) (xy 199.39 66.04)
+			(xy 177.8 66.04) (xy 181.61 66.04)
 		)
 		(stroke
 			(width 0)
@@ -7807,7 +8313,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 27.94) (xy 273.05 27.94)
+			(xy 252.73 27.94) (xy 255.27 27.94)
 		)
 		(stroke
 			(width 0)
@@ -7837,7 +8343,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 25.4) (xy 273.05 25.4)
+			(xy 252.73 25.4) (xy 255.27 25.4)
 		)
 		(stroke
 			(width 0)
@@ -7867,7 +8373,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 161.29) (xy 124.46 162.56)
+			(xy 151.13 162.56) (xy 151.13 163.83)
 		)
 		(stroke
 			(width 0)
@@ -7897,7 +8403,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 68.58) (xy 274.32 68.58)
+			(xy 252.73 68.58) (xy 273.05 68.58)
 		)
 		(stroke
 			(width 0)
@@ -7907,7 +8413,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 63.5) (xy 274.32 63.5)
+			(xy 252.73 63.5) (xy 256.54 63.5)
 		)
 		(stroke
 			(width 0)
@@ -7947,7 +8453,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 93.98) (xy 181.61 93.98)
+			(xy 265.43 116.84) (xy 270.51 116.84)
 		)
 		(stroke
 			(width 0)
@@ -7987,7 +8493,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 38.1) (xy 199.39 38.1)
+			(xy 177.8 38.1) (xy 181.61 38.1)
 		)
 		(stroke
 			(width 0)
@@ -8027,7 +8533,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 73.66) (xy 199.39 73.66)
+			(xy 177.8 73.66) (xy 181.61 73.66)
 		)
 		(stroke
 			(width 0)
@@ -8047,7 +8553,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 175.26) (xy 72.39 177.8)
+			(xy 72.39 175.26) (xy 72.39 180.34)
 		)
 		(stroke
 			(width 0)
@@ -8067,7 +8573,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 33.02) (xy 199.39 33.02)
+			(xy 177.8 33.02) (xy 181.61 33.02)
 		)
 		(stroke
 			(width 0)
@@ -8077,7 +8583,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 71.12) (xy 199.39 71.12)
+			(xy 177.8 71.12) (xy 181.61 71.12)
 		)
 		(stroke
 			(width 0)
@@ -8087,13 +8593,23 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 27.94) (xy 199.39 27.94)
+			(xy 177.8 27.94) (xy 181.61 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5c785b9f-45db-4819-8086-5bcd14499bcf")
+	)
+	(wire
+		(pts
+			(xy 223.52 91.44) (xy 217.17 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "616fb23f-3b0b-4cde-a70d-45feaae5810a")
 	)
 	(wire
 		(pts
@@ -8107,23 +8623,13 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 171.45) (xy 161.29 175.26)
+			(xy 207.01 91.44) (xy 212.09 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "640ef0f7-e69d-4ae5-ae74-48d9979595b4")
-	)
-	(wire
-		(pts
-			(xy 44.45 45.72) (xy 48.26 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65708f98-cd9c-4c72-b02c-f8d558173b68")
+		(uuid "64af77ad-1104-4366-a665-125a695f3bff")
 	)
 	(wire
 		(pts
@@ -8157,6 +8663,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 124.46) (xy 162.56 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ec735c4-6b79-4863-9d65-201a35691d89")
+	)
+	(wire
+		(pts
 			(xy 20.32 138.43) (xy 24.13 138.43)
 		)
 		(stroke
@@ -8187,16 +8703,6 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 40.64) (xy 199.39 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77347dbc-5c4b-450e-9d09-d1d9c7b66762")
-	)
-	(wire
-		(pts
 			(xy 59.69 29.21) (xy 59.69 30.48)
 		)
 		(stroke
@@ -8204,16 +8710,6 @@
 			(type default)
 		)
 		(uuid "77b7f109-c44e-419a-a771-4ba903d13c7b")
-	)
-	(wire
-		(pts
-			(xy 191.77 109.22) (xy 195.58 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "79cfeb0c-75e7-4139-92a0-8417a2012df0")
 	)
 	(wire
 		(pts
@@ -8227,7 +8723,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 176.53) (xy 124.46 175.26)
+			(xy 151.13 177.8) (xy 151.13 176.53)
 		)
 		(stroke
 			(width 0)
@@ -8247,7 +8743,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 60.96) (xy 274.32 60.96)
+			(xy 252.73 60.96) (xy 256.54 60.96)
 		)
 		(stroke
 			(width 0)
@@ -8267,7 +8763,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 177.8) (xy 72.39 177.8)
+			(xy 74.93 180.34) (xy 72.39 180.34)
 		)
 		(stroke
 			(width 0)
@@ -8277,7 +8773,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 25.4) (xy 199.39 25.4)
+			(xy 177.8 25.4) (xy 181.61 25.4)
 		)
 		(stroke
 			(width 0)
@@ -8287,7 +8783,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 162.56) (xy 105.41 163.83)
+			(xy 132.08 162.56) (xy 132.08 163.83)
 		)
 		(stroke
 			(width 0)
@@ -8327,7 +8823,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 35.56) (xy 199.39 35.56)
+			(xy 177.8 35.56) (xy 181.61 35.56)
 		)
 		(stroke
 			(width 0)
@@ -8337,13 +8833,23 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 30.48) (xy 273.05 30.48)
+			(xy 252.73 30.48) (xy 255.27 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8d9a7b4e-8d9a-4d0b-a421-ef89aa99856f")
+	)
+	(wire
+		(pts
+			(xy 160.02 76.2) (xy 181.61 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8de3fa98-7f5b-425c-9662-bf8d858e218c")
 	)
 	(wire
 		(pts
@@ -8397,7 +8903,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 78.74) (xy 274.32 78.74)
+			(xy 252.73 78.74) (xy 256.54 78.74)
 		)
 		(stroke
 			(width 0)
@@ -8407,7 +8913,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 93.98) (xy 168.91 93.98)
+			(xy 256.54 116.84) (xy 257.81 116.84)
 		)
 		(stroke
 			(width 0)
@@ -8427,7 +8933,17 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 33.02) (xy 273.05 33.02)
+			(xy 243.84 101.6) (xy 248.92 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9edff407-ae06-42ae-a296-ef65b566cd09")
+	)
+	(wire
+		(pts
+			(xy 252.73 33.02) (xy 275.59 33.02)
 		)
 		(stroke
 			(width 0)
@@ -8447,7 +8963,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 58.42) (xy 199.39 58.42)
+			(xy 179.07 58.42) (xy 181.61 58.42)
 		)
 		(stroke
 			(width 0)
@@ -8497,17 +9013,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 76.2) (xy 199.39 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b4627289-4e81-4296-9943-9ff97b7da3e7")
-	)
-	(wire
-		(pts
-			(xy 199.39 60.96) (xy 195.58 60.96)
+			(xy 181.61 60.96) (xy 177.8 60.96)
 		)
 		(stroke
 			(width 0)
@@ -8517,7 +9023,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 22.86) (xy 199.39 22.86)
+			(xy 177.8 22.86) (xy 181.61 22.86)
 		)
 		(stroke
 			(width 0)
@@ -8547,7 +9053,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 55.88) (xy 274.32 55.88)
+			(xy 252.73 55.88) (xy 256.54 55.88)
 		)
 		(stroke
 			(width 0)
@@ -8557,17 +9063,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 124.46) (xy 162.56 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb0de8ad-a39a-4d0b-9839-42261ffec263")
-	)
-	(wire
-		(pts
-			(xy 270.51 66.04) (xy 274.32 66.04)
+			(xy 252.73 66.04) (xy 256.54 66.04)
 		)
 		(stroke
 			(width 0)
@@ -8597,7 +9093,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 177.8) (xy 87.63 177.8)
+			(xy 87.63 180.34) (xy 92.71 180.34)
 		)
 		(stroke
 			(width 0)
@@ -8607,17 +9103,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 162.56) (xy 144.78 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf2692a9-9e24-4aad-96fd-43f1f46144eb")
-	)
-	(wire
-		(pts
-			(xy 270.51 22.86) (xy 273.05 22.86)
+			(xy 252.73 22.86) (xy 255.27 22.86)
 		)
 		(stroke
 			(width 0)
@@ -8627,7 +9113,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 43.18) (xy 199.39 43.18)
+			(xy 177.8 43.18) (xy 181.61 43.18)
 		)
 		(stroke
 			(width 0)
@@ -8647,7 +9133,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 20.32) (xy 273.05 20.32)
+			(xy 252.73 20.32) (xy 255.27 20.32)
 		)
 		(stroke
 			(width 0)
@@ -8687,7 +9173,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 43.18) (xy 273.05 43.18)
+			(xy 252.73 43.18) (xy 255.27 43.18)
 		)
 		(stroke
 			(width 0)
@@ -8727,7 +9213,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 30.48) (xy 199.39 30.48)
+			(xy 177.8 30.48) (xy 181.61 30.48)
 		)
 		(stroke
 			(width 0)
@@ -8744,6 +9230,16 @@
 			(type default)
 		)
 		(uuid "d124ac2d-89e4-41f2-a472-f96d82e85893")
+	)
+	(wire
+		(pts
+			(xy 46.99 46.99) (xy 53.34 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d18757fe-4be5-41fa-a257-9a9cf768474d")
 	)
 	(wire
 		(pts
@@ -8784,6 +9280,16 @@
 			(type default)
 		)
 		(uuid "db6013e9-c3a9-45eb-bc26-15d74d99e0b7")
+	)
+	(wire
+		(pts
+			(xy 152.4 22.86) (xy 152.4 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbdc5537-d7cb-4403-97b3-62d6448dd2f3")
 	)
 	(wire
 		(pts
@@ -8857,7 +9363,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 71.12) (xy 274.32 71.12)
+			(xy 252.73 71.12) (xy 256.54 71.12)
 		)
 		(stroke
 			(width 0)
@@ -8867,7 +9373,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 176.53) (xy 105.41 177.8)
+			(xy 132.08 176.53) (xy 132.08 177.8)
 		)
 		(stroke
 			(width 0)
@@ -8877,7 +9383,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 40.64) (xy 273.05 40.64)
+			(xy 252.73 40.64) (xy 255.27 40.64)
 		)
 		(stroke
 			(width 0)
@@ -8907,7 +9413,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 63.5) (xy 199.39 63.5)
+			(xy 177.8 63.5) (xy 181.61 63.5)
 		)
 		(stroke
 			(width 0)
@@ -8947,17 +9453,27 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 187.96) (xy 142.24 187.96)
+			(xy 233.68 101.6) (xy 238.76 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f7561093-f80a-42fa-b8aa-4e8067ba596a")
+		(uuid "f777fc80-3344-4876-a8e4-a136e165de3e")
 	)
 	(wire
 		(pts
-			(xy 270.51 38.1) (xy 273.05 38.1)
+			(xy 34.29 46.99) (xy 41.91 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe42cce9-abf0-4c7f-85c8-ec384387654c")
+	)
+	(wire
+		(pts
+			(xy 252.73 38.1) (xy 255.27 38.1)
 		)
 		(stroke
 			(width 0)
@@ -8966,7 +9482,7 @@
 		(uuid "ff962048-b0b5-4600-bbeb-c9dfc43a95df")
 	)
 	(label "VCCM"
-		(at 273.05 27.94 0)
+		(at 255.27 27.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8976,7 +9492,7 @@
 		(uuid "00408a36-7eeb-4a47-95c5-21f5981688cf")
 	)
 	(label "VCCS"
-		(at 274.32 63.5 0)
+		(at 256.54 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8984,16 +9500,6 @@
 			(justify left bottom)
 		)
 		(uuid "029b4c62-1acd-4a38-b905-96968c165aa1")
-	)
-	(label "PGNDS"
-		(at 274.32 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "03d4696c-2b9f-413e-822e-ae79010a9d8e")
 	)
 	(label "LOS"
 		(at 100.33 36.83 180)
@@ -9016,7 +9522,7 @@
 		(uuid "05436601-dfb6-4505-98df-91164534886f")
 	)
 	(label "SLOPEM"
-		(at 124.46 161.29 0)
+		(at 151.13 162.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9036,7 +9542,7 @@
 		(uuid "0bbe7ee3-193e-458b-a221-9b66a19215ce")
 	)
 	(label "BSTM"
-		(at 273.05 20.32 0)
+		(at 255.27 20.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9044,16 +9550,6 @@
 			(justify left bottom)
 		)
 		(uuid "0ceb808d-7901-47dd-9ce7-4427ae703765")
-	)
-	(label "AGND"
-		(at 195.58 40.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1215c093-f953-4426-a9bd-5b03b6539f5f")
 	)
 	(label "CSNS"
 		(at 76.2 59.69 180)
@@ -9076,7 +9572,7 @@
 		(uuid "164ac9cc-d4b3-4e98-a98f-9869378d6414")
 	)
 	(label "COMP"
-		(at 273.05 43.18 0)
+		(at 255.27 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9086,7 +9582,7 @@
 		(uuid "17847962-4449-4260-8513-42c9853621a1")
 	)
 	(label "SS"
-		(at 195.58 35.56 180)
+		(at 177.8 35.56 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9106,7 +9602,7 @@
 		(uuid "1b8473df-8b57-453b-828c-ddb4b622db81")
 	)
 	(label "MODE"
-		(at 274.32 73.66 0)
+		(at 256.54 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9116,7 +9612,7 @@
 		(uuid "20368c31-6387-4e67-af39-7a21b8796fd6")
 	)
 	(label "RES"
-		(at 274.32 71.12 0)
+		(at 256.54 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9125,18 +9621,8 @@
 		)
 		(uuid "2448d005-2373-461b-9278-e88f7a76e0f8")
 	)
-	(label "OPT"
-		(at 161.29 171.45 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2504d4d6-a8bd-4fc0-8209-c8b8e0c99ec5")
-	)
 	(label "CSPM"
-		(at 195.58 27.94 180)
+		(at 177.8 27.94 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9146,7 +9632,7 @@
 		(uuid "2697acf9-aff8-4a99-a9e6-28059f5a6458")
 	)
 	(label "RES"
-		(at 273.05 35.56 0)
+		(at 255.27 35.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9196,7 +9682,7 @@
 		(uuid "3dbf824e-e63f-4077-968e-eb5c348e68aa")
 	)
 	(label "MODE"
-		(at 273.05 38.1 0)
+		(at 255.27 38.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9206,7 +9692,7 @@
 		(uuid "3e698825-2311-40d9-91e2-f1760fe13b13")
 	)
 	(label "VIN"
-		(at 48.26 45.72 0)
+		(at 53.34 46.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9214,16 +9700,6 @@
 			(justify left bottom)
 		)
 		(uuid "405da68e-848d-4547-8d4d-27b67ed330bd")
-	)
-	(label "AGND"
-		(at 162.56 132.08 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4e02c041-3318-49bc-bb87-374dd238344a")
 	)
 	(label "SYNCOUT"
 		(at 195.58 109.22 0)
@@ -9245,6 +9721,16 @@
 		)
 		(uuid "4eade83e-a961-47cf-ae66-d20837002619")
 	)
+	(label "FBS"
+		(at 233.68 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4f2e1c9f-910b-45bb-96fa-1dafbe7e872a")
+	)
 	(label "SWS"
 		(at 121.92 138.43 0)
 		(effects
@@ -9256,7 +9742,7 @@
 		(uuid "574c0821-a06b-4b02-a996-38af3b013704")
 	)
 	(label "BSTS"
-		(at 274.32 55.88 0)
+		(at 256.54 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9286,7 +9772,7 @@
 		(uuid "632176ca-192d-4f1d-8b23-d5b5d4f8be29")
 	)
 	(label "SLOPEM"
-		(at 273.05 40.64 0)
+		(at 255.27 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9306,7 +9792,7 @@
 		(uuid "65b8f771-20b8-41b6-b6f4-d1a1c2de1138")
 	)
 	(label "SYNCIN{slash}RTS"
-		(at 195.58 73.66 180)
+		(at 177.8 73.66 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9346,7 +9832,7 @@
 		(uuid "71c1b921-8094-4c7a-ac88-c6b9cae83431")
 	)
 	(label "SLOPES"
-		(at 105.41 162.56 0)
+		(at 132.08 162.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9356,7 +9842,7 @@
 		(uuid "71d41f63-d60b-47e9-88dc-a0a195171e72")
 	)
 	(label "VIN"
-		(at 195.58 66.04 180)
+		(at 177.8 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9366,7 +9852,7 @@
 		(uuid "739307c4-2742-419e-a608-73fc42913f80")
 	)
 	(label "HOS"
-		(at 274.32 58.42 0)
+		(at 256.54 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9386,7 +9872,7 @@
 		(uuid "7882654b-c5fb-495e-9d62-8ef419e6c419")
 	)
 	(label "SWS"
-		(at 274.32 60.96 0)
+		(at 256.54 60.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9416,7 +9902,7 @@
 		(uuid "7e192379-89e7-4b86-9120-9faab4a96e7c")
 	)
 	(label "LOS"
-		(at 274.32 66.04 0)
+		(at 256.54 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9426,7 +9912,7 @@
 		(uuid "873b876d-b6c0-48e7-bad8-057ab9fe4186")
 	)
 	(label "SYNCIN{slash}RTM"
-		(at 195.58 38.1 180)
+		(at 177.8 38.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9436,7 +9922,7 @@
 		(uuid "906c3059-f489-429b-8e92-bd5682632f37")
 	)
 	(label "UVLO"
-		(at 195.58 33.02 180)
+		(at 177.8 33.02 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9456,7 +9942,7 @@
 		(uuid "916da904-0a1d-471e-a4d7-c844570c40cb")
 	)
 	(label "COMP"
-		(at 181.61 93.98 0)
+		(at 270.51 116.84 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9466,7 +9952,7 @@
 		(uuid "92e7f0ff-3acf-4be7-92ce-da794023209c")
 	)
 	(label "SYNCIN{slash}RTS"
-		(at 191.77 109.22 180)
+		(at 190.5 109.22 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9476,7 +9962,7 @@
 		(uuid "9356f70c-483a-454b-ba64-0a4eb0ee6e25")
 	)
 	(label "LOM"
-		(at 273.05 30.48 0)
+		(at 255.27 30.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9486,7 +9972,7 @@
 		(uuid "93e45eab-5194-4d32-a897-7fc249b56c0a")
 	)
 	(label "VIN"
-		(at 195.58 30.48 180)
+		(at 177.8 30.48 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9495,18 +9981,8 @@
 		)
 		(uuid "9476d7e5-5ecf-46f6-a010-21ca03d89ce6")
 	)
-	(label "AGND"
-		(at 195.58 76.2 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a0fb5bf6-f657-4c4c-af7a-824d83ae0ade")
-	)
 	(label "VCCM"
-		(at 87.63 177.8 0)
+		(at 92.71 180.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9516,7 +9992,7 @@
 		(uuid "a16d8b8d-d9f4-488a-a3b9-e36a96b2ca47")
 	)
 	(label "CSNM"
-		(at 195.58 25.4 180)
+		(at 177.8 25.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9536,7 +10012,7 @@
 		(uuid "a21db267-0bbf-4a10-9b82-d3afc367a59b")
 	)
 	(label "SYNCOUT"
-		(at 195.58 20.32 180)
+		(at 177.8 20.32 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9566,7 +10042,7 @@
 		(uuid "a58ae2c7-4f28-43d1-b45e-d8e7b8a966bb")
 	)
 	(label "COMP"
-		(at 274.32 78.74 0)
+		(at 256.54 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9576,7 +10052,7 @@
 		(uuid "a680df1a-a391-4f83-8e83-9e8494b36205")
 	)
 	(label "OPT"
-		(at 196.85 58.42 180)
+		(at 179.07 58.42 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9584,16 +10060,6 @@
 			(justify right bottom)
 		)
 		(uuid "ac2c1d4a-558d-4d5b-9f30-3b5fed3239ad")
-	)
-	(label "AGND"
-		(at 144.78 162.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ad377c0f-92d8-4a2c-83d8-1d93a612a6fe")
 	)
 	(label "HOS"
 		(at 118.11 21.59 0)
@@ -9626,7 +10092,7 @@
 		(uuid "b8aec0ea-90ee-4f2c-8cc8-006528754a92")
 	)
 	(label "CSPS"
-		(at 195.58 63.5 180)
+		(at 177.8 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9636,7 +10102,7 @@
 		(uuid "bb4b441c-a4e0-4ff6-816d-81cdc5635aeb")
 	)
 	(label "SS"
-		(at 195.58 71.12 180)
+		(at 177.8 71.12 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9646,7 +10112,7 @@
 		(uuid "bc241717-2ec0-4a08-a074-ad860b9524f8")
 	)
 	(label "SLOPES"
-		(at 274.32 76.2 0)
+		(at 256.54 76.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9655,18 +10121,8 @@
 		)
 		(uuid "c20bfcaf-dc2a-47e0-901c-aa2301793678")
 	)
-	(label "PGNDM"
-		(at 273.05 33.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c4512775-816e-4fba-8201-b7e32a2bb1f9")
-	)
 	(label "FBM"
-		(at 153.67 93.98 180)
+		(at 242.57 116.84 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9675,28 +10131,8 @@
 		)
 		(uuid "c812f3b9-752f-4653-b405-8ddc243190eb")
 	)
-	(label "FBS"
-		(at 137.16 187.96 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d06e25dd-bd05-41c1-82aa-2880e588b132")
-	)
-	(label "VCCS"
-		(at 142.24 187.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d10d805d-5e4a-4a03-baae-4be960b04119")
-	)
 	(label "OPT"
-		(at 195.58 22.86 180)
+		(at 177.8 22.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9716,7 +10152,7 @@
 		(uuid "d49e90ac-4195-4569-b53c-58c6e60a665e")
 	)
 	(label "FBM"
-		(at 195.58 43.18 180)
+		(at 177.8 43.18 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9735,6 +10171,26 @@
 		)
 		(uuid "d9f2f108-0994-4fab-9398-d006beceb3d9")
 	)
+	(label "VCCS"
+		(at 248.92 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e266f7f8-d0fc-4d7c-9879-4f87c581167e")
+	)
+	(label "OPT"
+		(at 152.4 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e8befd3a-6201-4b94-8453-968b57e2103b")
+	)
 	(label "MODE"
 		(at 87.63 172.72 0)
 		(effects
@@ -9746,7 +10202,7 @@
 		(uuid "e97c2a99-f190-4715-8a58-cc90a05dfd74")
 	)
 	(label "FBS"
-		(at 195.58 78.74 180)
+		(at 177.8 78.74 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9766,7 +10222,7 @@
 		(uuid "f1c4f376-f762-49b8-b623-14561dae5f0f")
 	)
 	(label "SWM"
-		(at 273.05 25.4 0)
+		(at 255.27 25.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9776,7 +10232,7 @@
 		(uuid "f3de9304-6174-45cc-8a7e-c61e3956797d")
 	)
 	(label "CSNS"
-		(at 195.58 60.96 180)
+		(at 177.8 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9786,7 +10242,7 @@
 		(uuid "f4ff70fa-6ef2-424e-b445-e58855fa4fd8")
 	)
 	(label "HOM"
-		(at 273.05 22.86 0)
+		(at 255.27 22.86 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9796,7 +10252,7 @@
 		(uuid "f6de7c77-b72e-4176-afab-e7732da2c711")
 	)
 	(label "UVLO"
-		(at 195.58 68.58 180)
+		(at 177.8 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9851,7 +10307,7 @@
 	)
 	(hierarchical_label "VIN-SOURCE"
 		(shape input)
-		(at 44.45 45.72 180)
+		(at 34.29 46.99 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9976,8 +10432,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 83.82 36.83 0)
+		(lib_id "power:GNDPWR")
+		(at 19.05 74.93 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9985,9 +10441,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0c1e1d6d-696c-4c34-8178-3c76bd2f8df0")
-		(property "Reference" "#PWR028"
-			(at 83.82 43.18 0)
+		(fields_autoplaced yes)
+		(uuid "0870d3b8-4cf1-4c10-8655-6b17b1229d1f")
+		(property "Reference" "#PWR05"
+			(at 19.05 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9997,9 +10454,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 85.09 40.894 0)
-			(hide yes)
+		(property "Value" "GNDPWR"
+			(at 18.923 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10009,7 +10465,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 36.83 0)
+			(at 19.05 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10020,7 +10476,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 36.83 0)
+			(at 19.05 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10030,8 +10486,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 83.82 36.83 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 19.05 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10042,18 +10498,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f469f413-ca6e-41e9-bc25-49d7881521ad")
+			(uuid "c18c40f3-54bd-4eee-bc01-9f019efd4590")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR028")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -10180,8 +10630,88 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 19.05 74.93 0)
+		(lib_id "Device:NetTie_2")
+		(at 44.45 46.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "14eb242a-ab58-4712-98fe-4f96b36696e2")
+		(property "Reference" "NT4"
+			(at 44.45 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 44.45 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 44.45 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Net tie, 2 pins"
+			(at 44.45 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e5686211-d1b9-475c-ac99-34fc51cd1c4c")
+		)
+		(pin "2"
+			(uuid "9b3be771-2ad7-4e4a-aebd-a283aa025dd8")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "NT4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 196.85 137.16 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10190,9 +10720,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "12daaf73-d572-46df-a60c-26141da1d372")
-		(property "Reference" "#PWR022"
-			(at 19.05 81.28 0)
+		(uuid "173c568a-7cab-4159-8c9c-4f0eff3b6698")
+		(property "Reference" "#PWR024"
+			(at 196.85 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10202,9 +10732,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 19.05 80.01 0)
-			(hide yes)
+		(property "Value" "GNDA"
+			(at 196.85 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10214,7 +10743,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 19.05 74.93 0)
+			(at 196.85 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10225,7 +10754,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 19.05 74.93 0)
+			(at 196.85 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10235,8 +10764,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 19.05 74.93 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 196.85 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10247,138 +10776,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "1d2f3ba7-7539-4d22-9571-6c0acdc14f5e")
+			(uuid "894487af-a639-425c-a2af-09c3dec02fb6")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 78.74 177.8 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "17288f8c-d0a6-45e7-b5d8-7ab22ab37981")
-		(property "Reference" "R41"
-			(at 80.518 180.086 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47k"
-			(at 79.756 175.26 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 179.578 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 78.74 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 78.74 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 78.74 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 78.74 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "beb571fa-6419-4251-8d95-dbc205ca5c72")
-		)
-		(pin "1"
-			(uuid "e3b78375-c24f-41f2-a433-785b3ffe2450")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "R41")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "R41")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -10589,8 +10992,86 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDA")
+		(at 132.08 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a213f73-9398-48dd-ab50-baac5ff553cb")
+		(property "Reference" "#PWR017"
+			(at 132.08 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 132.08 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 132.08 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "acb12349-3f45-4b9d-9d15-10cdb8e2d4db")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "2026-06-24_19-49-47:RC0603FR-0736KL")
-		(at 124.46 175.26 90)
+		(at 151.13 176.53 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10600,7 +11081,7 @@
 		(dnp no)
 		(uuid "1ad52441-a151-4c57-ab8d-388eb0534551")
 		(property "Reference" "R42"
-			(at 120.904 165.354 90)
+			(at 147.574 166.624 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10610,7 +11091,7 @@
 			)
 		)
 		(property "Value" "36k"
-			(at 127.508 172.466 90)
+			(at 154.178 173.736 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10620,7 +11101,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 124.46 175.26 0)
+			(at 151.13 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10632,7 +11113,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0736KL"
-			(at 124.46 175.26 0)
+			(at 151.13 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10644,7 +11125,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 124.46 175.26 0)
+			(at 151.13 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10655,7 +11136,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 124.46 175.26 90)
+			(at 151.13 176.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10666,7 +11147,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 124.46 175.26 90)
+			(at 151.13 176.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10677,7 +11158,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 124.46 175.26 90)
+			(at 151.13 176.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10703,6 +11184,84 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "R42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 111.76 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21b90fe3-9db7-478b-b552-152703759863")
+		(property "Reference" "#PWR03"
+			(at 111.76 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 111.633 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 111.76 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "779ff070-8681-4870-acd7-da99e1833be7")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -10785,6 +11344,162 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 69.85 182.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2638c79c-a6d4-487e-ad5b-bfb5a8151640")
+		(property "Reference" "#PWR01"
+			(at 69.85 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 69.85 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 69.85 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "896ab13a-d171-4f53-966f-26b5253359bd")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 162.56 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2d576052-b09b-4ae1-b9a8-c59a38ed96c8")
+		(property "Reference" "#PWR015"
+			(at 162.56 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 162.56 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 162.56 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d5e442bf-27a7-4268-9942-ab38b5b49fd9")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -10998,6 +11713,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 266.7 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "300e748f-6ddb-42cd-b2e6-86ae22dfc2de")
+		(property "Reference" "#PWR025"
+			(at 266.7 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 266.573 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 266.7 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a22c5e5c-9d0e-4fb3-93d0-cd3e724dda80")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "2026-06-26_12-12-49:RN73R1JTTD4992F25")
 		(at 35.56 30.48 180)
 		(unit 1)
@@ -11120,92 +11913,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 124.46 176.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "37b7485c-f7ba-45a1-88f1-3027627665d5")
-		(property "Reference" "#PWR045"
-			(at 124.46 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 127.762 179.324 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 124.46 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 124.46 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3e342506-fb58-4966-a900-bb9aa872ca94")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR045")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR045")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 256.54 157.48 0)
+		(lib_id "power:GNDPWR")
+		(at 81.28 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11214,9 +11923,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "39763398-e54e-415f-93ed-6602451466fd")
-		(property "Reference" "#PWR047"
-			(at 256.54 163.83 0)
+		(uuid "37f7bb7d-01f3-4865-a5c7-e77b52798e11")
+		(property "Reference" "#PWR010"
+			(at 81.28 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11226,9 +11935,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 256.54 162.56 0)
-			(hide yes)
+		(property "Value" "GNDPWR"
+			(at 81.153 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11238,7 +11946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 157.48 0)
+			(at 81.28 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11249,7 +11957,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 157.48 0)
+			(at 81.28 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11259,8 +11967,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 256.54 157.48 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 81.28 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11271,25 +11979,97 @@
 			)
 		)
 		(pin "1"
-			(uuid "19f855f9-13fd-4e0d-af7c-d6c9bb2aae99")
+			(uuid "b9cd7e5b-3fa2-41ed-823e-e7ba2730705f")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR047")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR047")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
+		(lib_id "power:GNDA")
+		(at 83.82 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f9f25c0-38c4-43db-8f50-06fef09d9004")
+		(property "Reference" "#PWR016"
+			(at 83.82 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 83.82 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 83.82 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d7a407d-7132-4493-af88-19564d86ceae")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
 		(at 27.94 74.93 0)
 		(unit 1)
 		(body_style 1)
@@ -11299,19 +12079,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3d06065d-7760-420d-9104-505b1ecfa2e2")
-		(property "Reference" "#PWR023"
-			(at 27.94 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
+		(uuid "3ffed3e3-759b-445c-8f0a-b405774e8415")
+		(property "Reference" "#PWR06"
 			(at 27.94 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -11322,8 +12091,18 @@
 				)
 			)
 		)
+		(property "Value" "GNDPWR"
+			(at 27.813 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" ""
-			(at 27.94 74.93 0)
+			(at 27.94 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11334,7 +12113,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 74.93 0)
+			(at 27.94 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11344,7 +12123,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
 			(at 27.94 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -11356,18 +12135,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "fd008a38-d834-494f-aba4-0ac8617771f3")
+			(uuid "ea7c4263-140c-4051-b7c7-b14f8f4215c6")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR023")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -11501,175 +12274,6 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 36.83 74.93 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4d2638e7-52d5-48a0-8f96-7ce123ad2e40")
-		(property "Reference" "#PWR024"
-			(at 36.83 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 36.83 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 36.83 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 36.83 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 36.83 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "02be176f-fd03-4ee4-9c4f-81eccd151cf2")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR024")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR024")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 179.07 154.94 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "55133c74-34ec-44c6-8b47-b32ee0ea0a97")
-		(property "Reference" "#PWR042"
-			(at 179.07 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 177.038 158.496 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 179.07 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 179.07 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 179.07 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ee027b99-f89e-49ae-bec9-3342c690dc56")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR042")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -11884,7 +12488,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-26_01-14-22:RC0603FR-0756K2L")
-		(at 154.94 93.98 0)
+		(at 243.84 116.84 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11894,7 +12498,7 @@
 		(dnp no)
 		(uuid "5915fdea-7cc7-4f2e-a05f-7a15fd991177")
 		(property "Reference" "R1"
-			(at 159.766 91.694 0)
+			(at 248.666 114.554 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11904,7 +12508,7 @@
 			)
 		)
 		(property "Value" "56.2k"
-			(at 160.274 96.52 0)
+			(at 249.174 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11914,7 +12518,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 154.94 93.98 0)
+			(at 243.84 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11926,7 +12530,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0756K2L"
-			(at 154.94 93.98 0)
+			(at 243.84 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11938,7 +12542,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 154.94 93.98 0)
+			(at 243.84 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11949,7 +12553,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 154.94 93.98 0)
+			(at 243.84 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11960,7 +12564,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 154.94 93.98 0)
+			(at 243.84 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11971,7 +12575,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 154.94 93.98 0)
+			(at 243.84 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11997,176 +12601,6 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 266.7 157.48 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5a7eec9b-b63d-45b1-90eb-78d315443c85")
-		(property "Reference" "#PWR049"
-			(at 266.7 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 266.7 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 266.7 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.7 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 266.7 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "291913d9-ce70-4f0c-8afe-31f5ae442933")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR049")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR049")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 20.32 140.97 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5c8bc8f3-1fa1-46e1-9be5-b7259414134f")
-		(property "Reference" "#PWR035"
-			(at 20.32 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 20.32 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 20.32 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 20.32 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 20.32 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2fd44c0d-cb7c-473a-89df-63405be0cbdd")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR035")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -12250,6 +12684,84 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 273.05 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "614def6d-3e87-44b6-b898-00b4530794b7")
+		(property "Reference" "#PWR02"
+			(at 273.05 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 272.923 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 273.05 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.05 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 273.05 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6995946e-5f8a-41be-b48d-8e3294afc4e2")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -12378,91 +12890,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 81.28 140.97 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6f26e1ac-4f48-4442-8a51-ee3ed1ecef53")
-		(property "Reference" "#PWR036"
-			(at 81.28 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 81.28 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 81.28 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c9437c70-c8fc-4e3d-88e2-0633e38c0a8a")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR036")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR036")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "2026-06-22_18-02-40:UCD2A220MNL1GS")
 		(at 36.83 63.5 270)
 		(unit 1)
@@ -12585,6 +13012,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDA")
+		(at 160.02 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7084469f-3900-43ec-9df0-cf74de3db746")
+		(property "Reference" "#PWR019"
+			(at 160.02 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 160.02 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0207752f-f688-4f71-90ee-3b312a7d5ecf")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Pads:Tomachie_TP_N")
 		(at 71.12 90.678 0)
 		(unit 1)
@@ -12667,8 +13172,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 245.11 157.48 0)
+		(lib_id "power:GNDA")
+		(at 151.13 177.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12677,9 +13182,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "76da9bf7-0eb5-417a-99e4-8a61a1277fa3")
-		(property "Reference" "#PWR048"
-			(at 245.11 163.83 0)
+		(uuid "77fd0385-efa3-4994-aeec-6ee9d5dc740e")
+		(property "Reference" "#PWR018"
+			(at 151.13 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12689,9 +13194,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 245.11 162.56 0)
-			(hide yes)
+		(property "Value" "GNDA"
+			(at 151.13 182.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12701,7 +13205,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 245.11 157.48 0)
+			(at 151.13 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12712,7 +13216,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 245.11 157.48 0)
+			(at 151.13 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12722,8 +13226,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 245.11 157.48 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 151.13 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12734,18 +13238,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "dc9419c2-7c52-45a9-82d8-00d9abd8794e")
+			(uuid "8b5c3dad-5555-4222-9a3f-056049e55d19")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR048")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR048")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -13255,90 +13753,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 196.85 137.16 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8c64e973-decf-4ecf-9c3f-c9ebcb1a410a")
-		(property "Reference" "#PWR038"
-			(at 196.85 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 196.85 141.224 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 196.85 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 196.85 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 196.85 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6bed0ac2-af59-437e-b176-bffa8615f13f")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_FET:CSD19531Q5A")
 		(at 119.38 67.31 270)
 		(unit 1)
@@ -13470,7 +13884,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
+		(lib_id "power:GNDA")
 		(at 60.96 30.48 0)
 		(unit 1)
 		(body_style 1)
@@ -13480,8 +13894,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "92ee0583-30e9-4f1d-a817-ea2412fe0d11")
-		(property "Reference" "#PWR025"
+		(uuid "8f3cfb31-540a-44b6-bd56-cb208d6d39e9")
+		(property "Reference" "#PWR013"
 			(at 60.96 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -13492,9 +13906,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
+		(property "Value" "GNDA"
 			(at 60.96 35.56 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13525,7 +13938,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
 			(at 60.96 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -13537,18 +13950,90 @@
 			)
 		)
 		(pin "1"
-			(uuid "36de822f-a5d1-4cd3-abe0-73a819114c48")
+			(uuid "b4b25559-9b59-4a31-b2dc-382292407866")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR025")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR025")
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 36.83 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9119ab01-bcd8-4152-a116-29b62d5c6ba7")
+		(property "Reference" "#PWR07"
+			(at 36.83 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 36.703 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 36.83 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9e7bb4b7-adca-46ec-8d8e-638e9954f6f9")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -13797,8 +14282,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 111.76 86.36 0)
+		(lib_id "power:GNDA")
+		(at 179.07 154.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13807,9 +14292,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9f10b34f-322b-4276-a82d-06d6e73f7e94")
-		(property "Reference" "#PWR040"
-			(at 111.76 92.71 0)
+		(uuid "97f32742-0423-4f46-b392-b7a2b1775da8")
+		(property "Reference" "#PWR014"
+			(at 179.07 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13819,9 +14304,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 111.76 91.44 0)
-			(hide yes)
+		(property "Value" "GNDA"
+			(at 179.07 160.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13831,7 +14315,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 86.36 0)
+			(at 179.07 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13842,7 +14326,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 86.36 0)
+			(at 179.07 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13852,8 +14336,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 111.76 86.36 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 179.07 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13864,18 +14348,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "322f8ed4-b326-4300-8c70-5866af2cfb83")
+			(uuid "36355754-e5b1-4318-99b6-dcb44c4b225d")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR040")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -13998,91 +14476,6 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "C29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 110.49 46.99 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a0b166cc-df41-42a8-9a92-3162061a360d")
-		(property "Reference" "#PWR039"
-			(at 110.49 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 110.49 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 110.49 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.49 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 110.49 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "541f01d6-46c9-40b2-94d4-e5fc8bfeaefa")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -14329,8 +14722,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 105.41 177.8 0)
+		(lib_id "power:GNDPWR")
+		(at 110.49 46.99 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14338,9 +14731,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a9108f7f-2d31-4311-9a29-1eadee14134f")
-		(property "Reference" "#PWR034"
-			(at 105.41 184.15 0)
+		(fields_autoplaced yes)
+		(uuid "a84838e6-2081-484c-acdb-777dfccec853")
+		(property "Reference" "#PWR04"
+			(at 110.49 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14350,9 +14744,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 105.156 181.356 0)
-			(hide yes)
+		(property "Value" "GNDPWR"
+			(at 110.363 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14362,7 +14755,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 105.41 177.8 0)
+			(at 110.49 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14373,7 +14766,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 177.8 0)
+			(at 110.49 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14383,8 +14776,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 105.41 177.8 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 110.49 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14395,18 +14788,172 @@
 			)
 		)
 		(pin "1"
-			(uuid "697b1e39-cc44-4c95-9822-1da3c01be398")
+			(uuid "2e5edda7-4aa4-4962-b203-7dbaa4c99d73")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR034")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR034")
+		)
+	)
+	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 241.3 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a89c81c7-2492-4f98-a404-58cef12b6899")
+		(property "Reference" "NT2"
+			(at 241.3 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 241.3 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 241.3 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Net tie, 2 pins"
+			(at 241.3 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4b59f966-bf1a-40a7-ab9f-9c833de16285")
+		)
+		(pin "1"
+			(uuid "e03e47f4-74c2-4d11-a82e-6ebf18270e1b")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "NT2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 193.04 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aaa156b7-415b-48cc-aaea-020313b7db8c")
+		(property "Reference" "NT3"
+			(at 193.04 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 193.04 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 193.04 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Net tie, 2 pins"
+			(at 193.04 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4125477f-9ecf-47d7-81fe-7ae7f439e89b")
+		)
+		(pin "2"
+			(uuid "88c389a0-5149-46c5-9672-06f2bdba82d9")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "NT3")
 					(unit 1)
 				)
 			)
@@ -14853,6 +15400,84 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 223.52 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "afafc874-5859-4f19-9a3d-cc5b2e2c02e2")
+		(property "Reference" "#PWR022"
+			(at 223.52 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 223.393 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 223.52 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ce71fd77-fbba-4264-b8a5-78ad0d6ade70")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -15668,7 +16293,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-12_01-18-21:LM5122QMHX_NOPB")
-		(at 199.39 20.32 0)
+		(at 181.61 20.32 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15678,7 +16303,7 @@
 		(dnp no)
 		(uuid "cd8e8f1e-afdb-4662-bf78-fd38baf61421")
 		(property "Reference" "U2"
-			(at 234.188 27.94 0)
+			(at 216.408 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15688,7 +16313,7 @@
 			)
 		)
 		(property "Value" "LM5122QMHE/NOPB"
-			(at 233.68 31.242 0)
+			(at 215.9 31.242 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15698,7 +16323,7 @@
 			)
 		)
 		(property "Footprint" "Components:PWP0020A_M"
-			(at 199.39 20.32 0)
+			(at 181.61 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15710,7 +16335,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/lm5122-q1"
-			(at 199.39 20.32 0)
+			(at 181.61 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15722,7 +16347,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 199.39 20.32 0)
+			(at 181.61 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15733,7 +16358,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 199.39 20.32 0)
+			(at 181.61 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15744,7 +16369,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 199.39 20.32 0)
+			(at 181.61 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15755,7 +16380,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 199.39 20.32 0)
+			(at 181.61 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15835,6 +16460,84 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 256.54 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdb22a35-7d06-48f2-acf3-a11b1ee4a365")
+		(property "Reference" "#PWR09"
+			(at 256.54 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 256.413 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 256.54 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "388cd757-5419-4628-bbfb-74146f8021b5")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -15966,6 +16669,84 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 158.75 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d03fafd3-786a-4b93-8a7a-4f458688808b")
+		(property "Reference" "#PWR020"
+			(at 158.75 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 158.75 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 158.75 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 158.75 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d89c5519-6749-4f6a-948b-75db63998ee0")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -16299,6 +17080,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 20.32 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dd39b7b3-03e3-4ccd-9c2d-e18e6e31f87d")
+		(property "Reference" "#PWR011"
+			(at 20.32 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 20.193 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 20.32 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 20.32 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 20.32 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8a88d19f-0000-4c95-9c2f-ff632ad6dc0e")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "dos input caps:UUX2A470MNL1GS")
 		(at 19.05 63.5 270)
 		(unit 1)
@@ -16421,8 +17280,86 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDA")
+		(at 152.4 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de84d07a-c1fd-47b1-a486-10cf62009352")
+		(property "Reference" "#PWR023"
+			(at 152.4 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 152.4 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 152.4 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dab4c324-fecc-4d4e-a07d-919e8d68599d")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "2026-06-26_01-22-08:CC0603KRX7R9BB223")
-		(at 168.91 93.98 0)
+		(at 257.81 116.84 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16432,7 +17369,7 @@
 		(dnp no)
 		(uuid "e12d9338-c9c5-4912-9807-10b723d62d6f")
 		(property "Reference" "C2"
-			(at 175.006 95.758 0)
+			(at 263.906 118.618 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16442,7 +17379,7 @@
 			)
 		)
 		(property "Value" "22n"
-			(at 171.45 97.028 0)
+			(at 260.35 119.888 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16452,7 +17389,7 @@
 			)
 		)
 		(property "Footprint" "Components:YAG_CC0603_YAG"
-			(at 168.91 93.98 0)
+			(at 257.81 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16464,7 +17401,7 @@
 			)
 		)
 		(property "Datasheet" "CC0603KRX7R9BB223"
-			(at 168.91 93.98 0)
+			(at 257.81 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16476,7 +17413,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 168.91 93.98 0)
+			(at 257.81 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16487,7 +17424,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 168.91 93.98 0)
+			(at 257.81 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16498,7 +17435,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 168.91 93.98 0)
+			(at 257.81 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16509,7 +17446,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 168.91 93.98 0)
+			(at 257.81 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16542,7 +17479,7 @@
 	)
 	(symbol
 		(lib_id "2026-06-12_01-18-21:LM5122QMHX_NOPB")
-		(at 199.39 55.88 0)
+		(at 181.61 55.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16552,7 +17489,7 @@
 		(dnp no)
 		(uuid "e614e673-a6a6-42ba-b42e-c79d2d58314f")
 		(property "Reference" "U3"
-			(at 233.68 62.738 0)
+			(at 215.9 62.738 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16562,7 +17499,7 @@
 			)
 		)
 		(property "Value" "LM5122QMHE/NOPB"
-			(at 233.68 66.802 0)
+			(at 215.9 66.802 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16572,7 +17509,7 @@
 			)
 		)
 		(property "Footprint" "Components:PWP0020A_M"
-			(at 199.39 55.88 0)
+			(at 181.61 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16584,7 +17521,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/lm5122-q1"
-			(at 199.39 55.88 0)
+			(at 181.61 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16596,7 +17533,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 199.39 55.88 0)
+			(at 181.61 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16607,7 +17544,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 199.39 55.88 0)
+			(at 181.61 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16618,7 +17555,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 199.39 55.88 0)
+			(at 181.61 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16629,7 +17566,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 199.39 55.88 0)
+			(at 181.61 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16715,8 +17652,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 69.85 182.88 0)
+		(lib_id "2026-07-01_14-01-11:RC0805FR-0747KL")
+		(at 74.93 180.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16724,9 +17661,53 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e67a2c06-8296-4fb3-9ee1-830786665a1c")
-		(property "Reference" "#PWR037"
-			(at 69.85 189.23 0)
+		(uuid "e97de730-f092-40ed-9954-abd194434dc6")
+		(property "Reference" "R6"
+			(at 82.55 177.546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "47k"
+			(at 78.74 183.134 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "Components:RC0805N_YAG"
+			(at 74.93 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "RC0805FR-0747KL"
+			(at 74.93 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 74.93 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16736,63 +17717,16 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 70.104 186.182 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 69.85 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 69.85 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 69.85 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(pin "2"
+			(uuid "5c330361-a78e-43f6-9659-91720ff8a85a")
 		)
 		(pin "1"
-			(uuid "2ec56497-6c38-44db-83ce-a57d2053b251")
+			(uuid "f22330c2-8f9c-411a-8162-3cde3ee21a17")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR037")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR037")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -16923,93 +17857,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 144.78 166.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f32b719b-7e20-4c8e-860c-f1915a683b1d")
-		(property "Reference" "#PWR033"
-			(at 144.78 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Earth"
-			(at 144.78 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 144.78 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.78 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 144.78 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c8bea89e-bb5c-497c-adcd-7987ef11ac6e")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "2026-06-24_19-49-47:RC0603FR-0736KL")
-		(at 105.41 163.83 270)
+		(at 132.08 163.83 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17019,7 +17868,7 @@
 		(dnp no)
 		(uuid "f58a76ec-8996-4449-bdea-7e962c41d051")
 		(property "Reference" "R38"
-			(at 99.06 166.878 90)
+			(at 125.73 166.878 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17030,7 +17879,7 @@
 			)
 		)
 		(property "Value" "36k"
-			(at 105.664 174.498 90)
+			(at 132.334 174.498 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17041,7 +17890,7 @@
 			)
 		)
 		(property "Footprint" "Components:RC0603N_YAG"
-			(at 105.41 163.83 0)
+			(at 132.08 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17053,7 +17902,7 @@
 			)
 		)
 		(property "Datasheet" "RC0603FR-0736KL"
-			(at 105.41 163.83 0)
+			(at 132.08 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17065,7 +17914,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 105.41 163.83 0)
+			(at 132.08 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17076,7 +17925,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 105.41 163.83 90)
+			(at 132.08 163.83 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17087,7 +17936,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 105.41 163.83 90)
+			(at 132.08 163.83 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17098,7 +17947,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 105.41 163.83 90)
+			(at 132.08 163.83 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17212,20 +18061,19 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 161.29 175.26 0)
+		(lib_id "Device:NetTie_2")
+		(at 214.63 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fa8f65bc-9ea7-49de-b98c-d7ba0b0f401d")
-		(property "Reference" "#PWR046"
-			(at 161.29 181.61 0)
-			(hide yes)
+		(uuid "f97ec144-b978-47bb-8e2c-9d5930bba97b")
+		(property "Reference" "NT1"
+			(at 214.63 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17234,9 +18082,8 @@
 				)
 			)
 		)
-		(property "Value" "Earth"
-			(at 161.29 180.34 0)
-			(hide yes)
+		(property "Value" "NetTie_2"
+			(at 214.63 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17245,8 +18092,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 161.29 175.26 0)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 214.63 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17257,7 +18104,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 175.26 0)
+			(at 214.63 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17267,8 +18114,89 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 161.29 175.26 0)
+		(property "Description" "Net tie, 2 pins"
+			(at 214.63 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "cab3b4df-a51f-4d26-ace4-e6aa8a088469")
+		)
+		(pin "1"
+			(uuid "397bf17d-539d-4cfa-a3ed-5cf98e4b0e24")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "NT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 245.11 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa9820ef-317c-4dec-8fd0-5da2145fef24")
+		(property "Reference" "#PWR08"
+			(at 245.11 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 244.983 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 245.11 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.11 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 245.11 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17279,18 +18207,168 @@
 			)
 		)
 		(pin "1"
-			(uuid "2350ac9c-7ebd-4de6-af6e-cc93558b1e62")
+			(uuid "78ba98a9-a08e-4c13-871d-9eaac8bb42d9")
 		)
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "#PWR046")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "#PWR046")
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 275.59 33.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fcf8a375-fea2-4c38-a435-26502e9cad5b")
+		(property "Reference" "#PWR012"
+			(at 275.59 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 275.463 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 275.59 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 275.59 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 275.59 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e9c8d6c9-d153-4900-a373-ded18f0d510a")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 207.01 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd06b292-9cb6-42a9-895d-d9cc531ec983")
+		(property "Reference" "#PWR021"
+			(at 207.01 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 207.01 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 207.01 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 207.01 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a78379c8-6c03-4cee-88a9-de91b54acac8")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)

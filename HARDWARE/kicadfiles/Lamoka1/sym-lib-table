@@ -8,4 +8,5 @@
 	(lib (name "2026-06-26_12-12-49") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components/2026-06-26_12-12-49.kicad_sym") (options "") (descr ""))
 	(lib (name "RN73R1JTTD1842F25") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components/RN73R1JTTD1842F25.kicad_sym") (options "") (descr ""))
 	(lib (name "2026-06-29_16-51-38") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components/2026-06-29_16-51-38.kicad_sym") (options "") (descr ""))
+	(lib (name "2026-07-01_14-01-11") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components/2026-07-01_14-01-11.kicad_sym") (options "") (descr ""))
 )

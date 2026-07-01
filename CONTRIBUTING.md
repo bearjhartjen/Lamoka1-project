@@ -39,8 +39,6 @@ Lamoka splits licensing by content type:
 | **Firmware / software** | [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html) | Any `*software` folder (e.g. `Lamoka1software`) |
 | **Hardware designs** | [CERN-OHL-W v2.0](https://ohwr.org/cern_ohl_w_v2.txt) | Any `*hardware` folder (e.g. `lamoka1hardware`) |
 
-The applicable license file lives in each relevant folder (`LICENSE-SOFT` / `LICENSE-HARD`). Read the one that covers the area you're touching — the two have different obligations:
-
 > [!NOTE]
 > **GPL 3.0 (firmware):** If you distribute software built on this code, you must make the corresponding source available under GPL 3.0 too.
 >
@@ -49,11 +47,6 @@ The applicable license file lives in each relevant folder (`LICENSE-SOFT` / `LIC
 > [!TIP]
 > This is a plain-language summary, not legal advice. When in doubt, check the full license text.
 
-### Your Copyright
-
-**You keep copyright to your contribution.** Submitting a PR grants Lamoka a perpetual, worldwide, royalty-free license to use, modify, and redistribute it under whichever license governs that area (GPL 3.0 for firmware, CERN-OHL-W for hardware). Standard "inbound = outbound" model — you're not giving anything up, just matching the terms already in place.
-
----
 
 ##  Code of Conduct
 
