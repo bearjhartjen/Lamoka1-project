@@ -1,0 +1,33 @@
+name: KiBot Hardware CI
+
+on:
+  push:
+    branches: [ Lamoka1 ]
+  pull_request:
+    branches: [ Lamoka1 ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: Lamoka1
+
+      - name: Run KiBot
+        uses: INTI-CMNB/KiBot@v2
+        with:
+          config: kibot.yaml
+          schema: HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_sch
+          board: HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_pcb
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lamoka1_Build_Outputs
+          path: |
+            Fabrication/
+            Documentation/
+          retention-days: 30

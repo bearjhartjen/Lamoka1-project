@@ -1,0 +1,22 @@
+kibot:
+  version: 1
+
+preflight:
+  run_erc: true
+  run_drc: true
+
+outputs:
+  - name: "gerbers"
+    type: gerber
+    options:
+      output_directory: "Fabrication/Gerbers"
+  - name: "PDF_Schematic"
+    type: pdf_sch_print
+    options:
+      output_name: "Documentation/Lamoka1_Schematic.pdf"
+
+# Crucial: Pointing KiBot to your specific project structure
+# Update these if your file names are different
+global:
+  schema: HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_sch
+  board: HARDWARE/kicadfiles/Lamoka1/Lamoka1.kicad_pcb
