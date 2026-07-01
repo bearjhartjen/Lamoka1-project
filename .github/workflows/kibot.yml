@@ -8,8 +8,8 @@ on:
 
 jobs:
   build:
-    # This ensures the entire environment uses modern KiCad
-    container: kicad/kicad:latest
+    # This pulls the official, pre-configured KiBot environment
+    container: ghcr.io/inti-cmnb/kicad_auto:latest
     runs-on: ubuntu-latest
 
     steps:
