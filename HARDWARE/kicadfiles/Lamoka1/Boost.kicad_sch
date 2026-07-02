@@ -5035,6 +5035,146 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Conn_01x01_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x01_Pin"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x01, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x01_Pin_1_1"
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:NetTie_2"
 			(pin_numbers
 				(hide yes)
@@ -7976,6 +8116,12 @@
 		(uuid "3a6f7e0d-00cb-40ff-984e-85aa4b256e6c")
 	)
 	(junction
+		(at 262.89 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e17efa1-88e5-490d-beb3-f23f703aa31d")
+	)
+	(junction
 		(at 110.49 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8603,7 +8749,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 91.44) (xy 217.17 91.44)
+			(xy 274.32 90.17) (xy 267.97 90.17)
 		)
 		(stroke
 			(width 0)
@@ -8623,7 +8769,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 91.44) (xy 212.09 91.44)
+			(xy 257.81 90.17) (xy 262.89 90.17)
 		)
 		(stroke
 			(width 0)
@@ -8753,6 +8899,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 107.95) (xy 119.38 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82640a3c-fb86-4e13-bb10-aaaf55c162a8")
+	)
+	(wire
+		(pts
 			(xy 83.82 35.56) (xy 83.82 36.83)
 		)
 		(stroke
@@ -8780,6 +8936,16 @@
 			(type default)
 		)
 		(uuid "84eed9f8-a80c-4397-ba26-9ad830492049")
+	)
+	(wire
+		(pts
+			(xy 262.89 90.17) (xy 262.89 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86f23e7e-3bdc-43ff-a00e-39efcf393d3f")
 	)
 	(wire
 		(pts
@@ -8933,7 +9099,7 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 101.6) (xy 248.92 101.6)
+			(xy 226.06 105.41) (xy 231.14 105.41)
 		)
 		(stroke
 			(width 0)
@@ -9093,6 +9259,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 107.95) (xy 46.99 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bec13f6f-d43e-4b31-bacb-f80968f1510f")
+	)
+	(wire
+		(pts
 			(xy 87.63 180.34) (xy 92.71 180.34)
 		)
 		(stroke
@@ -9160,6 +9336,16 @@
 			(type default)
 		)
 		(uuid "c9673a58-5bfa-4f91-8139-4b7d02dfccba")
+	)
+	(wire
+		(pts
+			(xy 74.93 107.95) (xy 86.36 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c98d3c75-a4c0-4753-b76f-a0fd299ce10a")
 	)
 	(wire
 		(pts
@@ -9453,7 +9639,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 101.6) (xy 238.76 101.6)
+			(xy 215.9 105.41) (xy 220.98 105.41)
 		)
 		(stroke
 			(width 0)
@@ -9580,6 +9766,16 @@
 			(justify left bottom)
 		)
 		(uuid "17847962-4449-4260-8513-42c9853621a1")
+	)
+	(label "GNDIN"
+		(at 262.89 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "19252780-b9b2-4d10-a19c-10eca392cfdb")
 	)
 	(label "SS"
 		(at 177.8 35.56 180)
@@ -9711,6 +9907,16 @@
 		)
 		(uuid "4e322261-6a63-4d48-bedf-e3a9307d66a9")
 	)
+	(label "VIN"
+		(at 86.36 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4e472cb3-dcfc-428a-b84b-67951050f52c")
+	)
 	(label "FBM"
 		(at 195.58 160.02 0)
 		(effects
@@ -9722,7 +9928,7 @@
 		(uuid "4eade83e-a961-47cf-ae66-d20837002619")
 	)
 	(label "FBS"
-		(at 233.68 101.6 180)
+		(at 215.9 105.41 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9981,6 +10187,16 @@
 		)
 		(uuid "9476d7e5-5ecf-46f6-a010-21ca03d89ce6")
 	)
+	(label "GNDIN"
+		(at 119.38 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9d3eaf79-b54e-4170-aa81-f9eb4f57fef7")
+	)
 	(label "VCCM"
 		(at 92.71 180.34 0)
 		(effects
@@ -10172,7 +10388,7 @@
 		(uuid "d9f2f108-0994-4fab-9398-d006beceb3d9")
 	)
 	(label "VCCS"
-		(at 248.92 101.6 0)
+		(at 231.14 105.41 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10282,6 +10498,17 @@
 			(justify left)
 		)
 		(uuid "19599915-229f-434c-8963-79b1c9dff790")
+	)
+	(hierarchical_label "VOUT-BOOST"
+		(shape input)
+		(at 46.99 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "45a899ff-b684-45bf-b813-70cd3e50a642")
 	)
 	(hierarchical_label "VOUT-BOOST"
 		(shape input)
@@ -10504,6 +10731,83 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 104.14 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e807a28-2dad-4131-a901-7e4dbefd0858")
+		(property "Reference" "J3"
+			(at 104.775 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Groundconnection"
+			(at 104.775 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Wire:SolderWire-0.1sqmm_1x01_D0.4mm_OD1mm"
+			(at 104.14 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 104.14 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "24072de8-7981-4187-880e-382c99835663")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -11785,6 +12089,83 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 69.85 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "347da33f-3630-496b-a9fe-344216666abc")
+		(property "Reference" "J2"
+			(at 70.485 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Boostconverterinput"
+			(at 70.485 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Wire:SolderWire-0.1sqmm_1x01_D0.4mm_OD1mm"
+			(at 69.85 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 69.85 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b2eedef7-a2ca-408c-b39a-72c45d120b35")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -14801,7 +15182,7 @@
 	)
 	(symbol
 		(lib_id "Device:NetTie_2")
-		(at 241.3 101.6 0)
+		(at 223.52 105.41 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14812,7 +15193,7 @@
 		(fields_autoplaced yes)
 		(uuid "a89c81c7-2492-4f98-a404-58cef12b6899")
 		(property "Reference" "NT2"
-			(at 241.3 96.52 0)
+			(at 223.52 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14822,7 +15203,7 @@
 			)
 		)
 		(property "Value" "NetTie_2"
-			(at 241.3 99.06 0)
+			(at 223.52 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14832,7 +15213,7 @@
 			)
 		)
 		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
-			(at 241.3 101.6 0)
+			(at 223.52 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14843,7 +15224,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 101.6 0)
+			(at 223.52 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14854,7 +15235,7 @@
 			)
 		)
 		(property "Description" "Net tie, 2 pins"
-			(at 241.3 101.6 0)
+			(at 223.52 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15407,7 +15788,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 223.52 91.44 0)
+		(at 274.32 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15418,7 +15799,7 @@
 		(fields_autoplaced yes)
 		(uuid "afafc874-5859-4f19-9a3d-cc5b2e2c02e2")
 		(property "Reference" "#PWR022"
-			(at 223.52 96.52 0)
+			(at 274.32 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15429,7 +15810,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 223.393 95.25 0)
+			(at 274.193 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15439,7 +15820,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 223.52 92.71 0)
+			(at 274.32 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15450,7 +15831,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 223.52 92.71 0)
+			(at 274.32 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15461,7 +15842,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 223.52 91.44 0)
+			(at 274.32 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16538,6 +16919,83 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 31.75 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cee4c5a0-f514-49ab-82c4-16231ff0f683")
+		(property "Reference" "J1"
+			(at 32.385 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Boostconverteroutput"
+			(at 32.385 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Wire:SolderWire-0.1sqmm_1x01_D0.4mm_OD1mm"
+			(at 31.75 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 31.75 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e526c8ad-59d7-4f84-8f46-2d32c65793d1")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -18062,7 +18520,7 @@
 	)
 	(symbol
 		(lib_id "Device:NetTie_2")
-		(at 214.63 91.44 0)
+		(at 265.43 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18073,7 +18531,7 @@
 		(fields_autoplaced yes)
 		(uuid "f97ec144-b978-47bb-8e2c-9d5930bba97b")
 		(property "Reference" "NT1"
-			(at 214.63 86.36 0)
+			(at 265.43 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18083,7 +18541,7 @@
 			)
 		)
 		(property "Value" "NetTie_2"
-			(at 214.63 88.9 0)
+			(at 265.43 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18093,7 +18551,7 @@
 			)
 		)
 		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
-			(at 214.63 91.44 0)
+			(at 265.43 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18104,7 +18562,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 214.63 91.44 0)
+			(at 265.43 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18115,7 +18573,7 @@
 			)
 		)
 		(property "Description" "Net tie, 2 pins"
-			(at 214.63 91.44 0)
+			(at 265.43 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18298,7 +18756,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDA")
-		(at 207.01 91.44 0)
+		(at 257.81 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18309,7 +18767,7 @@
 		(fields_autoplaced yes)
 		(uuid "fd06b292-9cb6-42a9-895d-d9cc531ec983")
 		(property "Reference" "#PWR021"
-			(at 207.01 97.79 0)
+			(at 257.81 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18320,7 +18778,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 207.01 96.52 0)
+			(at 257.81 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18330,7 +18788,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 207.01 91.44 0)
+			(at 257.81 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18341,7 +18799,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 91.44 0)
+			(at 257.81 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18352,7 +18810,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 207.01 91.44 0)
+			(at 257.81 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
