@@ -1,6 +1,6 @@
 <div align="center">
 
-#  Contributing to Lamoka
+#  Contributing to Lamoka1
 
 **An open-source ecosystem of power conversion hardware and firmware**
 *Managed by Flamingo and Cactus*
@@ -45,12 +45,12 @@ Lamoka splits licensing by content type:
 > **CERN-OHL-W (hardware):** If you distribute a product — or a modified version of the design itself — you must make the modified design files available under CERN-OHL-W. Just *using* a Lamoka-derived product without distributing it doesn't trigger this.
 
 > [!TIP]
-> This is a plain-language summary, not legal advice. When in doubt, check the full license text.
+> This is a simple summary, not legal advice. When in doubt, check the full license text.
 
 
 ##  Code of Conduct
 
-Be respectful. This project should be a welcoming, collaborative project no matter someone's experience level — questions are always welcome in Issues or Discussions.
+Be respectful. This project should be a welcoming, collaborative project no matter someone's experience level — questions are always welcome in Issues or Discussions. The overall goal here is to make the best product given out limitations, meaning it does not at all matter who you are, and in what way you contribute, all is very appreciated.
 
 ---
 
