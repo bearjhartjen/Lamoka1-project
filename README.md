@@ -11,16 +11,6 @@ This is the Lamoka1s boost converter schematic thus far. More information regard
 
 </div>
 
-## GENERAL INFORMATION
-<div align="center">
-
-
-![Status](https://img.shields.io/badge/status-early%20design-yellow.svg)
-![Hardware License](https://img.shields.io/badge/Hardware-CERN--OHL--W%20v2.0-orange.svg)
-![Firmware License](https://img.shields.io/badge/Firmware-GPLv3-blue.svg)
-</div>
-
----
 
 ## Scope of Lamoka1
 
@@ -81,5 +71,15 @@ We want anyone to be able to pick up any Lamoka unit, and use it for what they n
 
 ## Lamoka1 caution 
 
-The Lamoka1 is simply designed to be as cheap as possible while still being the MVP product, this is just so we can get people interested while maintaining funds to keep going. 
+The Lamoka1 is simply designed to be as cheap as possible while still being the MVP product, this is just so we can get people interested while maintaining funds to keep going. When ordering PCBs with design from the Lamoka1, please use your own best judgement for safety. 
+
+---
+<div align="center">
+
+![Status](https://img.shields.io/badge/status-early%20design-yellow.svg)
+![Hardware License](https://img.shields.io/badge/Hardware-CERN--OHL--W%20v2.0-orange.svg)
+![Firmware License](https://img.shields.io/badge/Firmware-GPLv3-blue.svg)
+</div>
+
+---
 
