@@ -5,9 +5,9 @@
 	(uuid "7b1b57e8-b6dc-41ca-abe8-eaf17782d289")
 	(paper "A4")
 	(title_block
-		(title "Boost-section")
+		(title "Boost-section-prototype")
 		(date "2026")
-		(rev "1")
+		(rev "P1")
 		(company "Flamingo-n-Cactus")
 		(comment 1 "Designed in the US of A")
 	)
@@ -6795,7 +6795,7 @@
 		(uuid "1162de30-906d-4151-bf9b-1e153294d03a")
 	)
 	(rectangle
-		(start 13.97 161.29)
+		(start 13.97 165.1)
 		(end 66.04 195.58)
 		(stroke
 			(width 0)
@@ -6963,7 +6963,7 @@
 		(uuid "e669ab12-c967-4ee6-b1b8-0dea94beb13a")
 	)
 	(rectangle
-		(start 69.85 161.29)
+		(start 69.85 165.1)
 		(end 123.19 195.58)
 		(stroke
 			(width 0)
@@ -7036,10 +7036,10 @@
 	)
 	(text "Bootstrap circuit for master"
 		(exclude_from_sim no)
-		(at 38.354 163.576 0)
+		(at 39.624 163.322 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 1.524 1.524)
 			)
 		)
 		(uuid "320004b6-edb7-4c9c-966e-25e235166a57")
@@ -7066,7 +7066,7 @@
 	)
 	(text "current sense and inductor (master)"
 		(exclude_from_sim no)
-		(at 110.998 139.954 0)
+		(at 111.252 140.716 0)
 		(effects
 			(font
 				(size 1.905 1.905)
@@ -7076,7 +7076,7 @@
 	)
 	(text "high and low side switches (slave)"
 		(exclude_from_sim no)
-		(at 45.212 100.838 0)
+		(at 44.45 101.092 0)
 		(effects
 			(font
 				(size 1.524 1.524)
@@ -7096,7 +7096,7 @@
 	)
 	(text "VOUT-BOOST = 48v"
 		(exclude_from_sim no)
-		(at 210.82 169.164 0)
+		(at 206.756 170.942 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7126,7 +7126,7 @@
 	)
 	(text "VIN = 5-40V"
 		(exclude_from_sim no)
-		(at 189.738 168.91 0)
+		(at 185.674 170.688 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7136,10 +7136,10 @@
 	)
 	(text "Bootstrap circuit for slave"
 		(exclude_from_sim no)
-		(at 97.028 163.576 0)
+		(at 96.774 163.576 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 1.524 1.524)
 			)
 		)
 		(uuid "c1960105-8605-4e01-938c-4bc14dc731ad")
@@ -9706,7 +9706,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1558dda1-0922-4dff-8d35-0d8f95adb3da")
 		(property "Reference" "NT4"
 			(at 181.61 91.44 0)
@@ -9719,7 +9718,7 @@
 			)
 		)
 		(property "Value" "NetTie_2"
-			(at 181.61 93.98 0)
+			(at 181.61 93.218 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9728,7 +9727,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NetTie:NetTie-2_SMD_Pad2.0mm"
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
 			(at 181.61 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -13462,7 +13461,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a89c81c7-2492-4f98-a404-58cef12b6899")
 		(property "Reference" "NT2"
 			(at 256.54 92.71 0)
@@ -13475,7 +13473,7 @@
 			)
 		)
 		(property "Value" "NetTie_2"
-			(at 256.54 95.25 0)
+			(at 256.54 94.488 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13484,7 +13482,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NetTie:NetTie-2_SMD_Pad2.0mm"
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
 			(at 256.54 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -13542,7 +13540,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "aaa156b7-415b-48cc-aaea-020313b7db8c")
 		(property "Reference" "NT3"
 			(at 218.44 91.44 0)
@@ -13555,7 +13552,7 @@
 			)
 		)
 		(property "Value" "NetTie_2"
-			(at 218.44 93.98 0)
+			(at 218.44 93.218 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
