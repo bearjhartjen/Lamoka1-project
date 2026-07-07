@@ -14,7 +14,7 @@ This is the Lamoka1s boost converter schematic thus far. More information regard
 
 ## Scope of Lamoka1
 
- The **Lamoka1** is a fully open-source, pure sine wave inverter and charger system, controlled by an RP2350. It's built to be fully transparent, modular, and repeatable, aiming to be the best in its class rather than a closed, disposable black box. Every schematic, every line of firmware, and every design decision is published — nothing is hidden behind proprietary lock-in.
+ The **Lamoka1** is a fully open-source, pure sine wave inverter and charger system, controlled by an RP2354A. It's built to be fully transparent, modular, and repeatable, aiming to be the best in its class rather than a closed, disposable black box. Every schematic, every line of firmware, and every design decision is published — nothing is hidden behind proprietary lock-in.
 
 It's designed for solar enthusiasts, electrical engineers, and everyday users alike, with a simple physical interface hiding a fully configurable system underneath.
 
@@ -38,7 +38,7 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 |:---|:---|
 | **DC Input** | 5–40V |
 | **Inverter Output** | AC 120 Vrms or Configurable |
-| **Control** | RP2350 microcontroller |
+| **Control** | RP2354A microcontroller |
 | **User Interface** | 10× RGB LEDs + 1 push button |
 | **Cooling** | Pulse width modulated fan |
 ---
@@ -46,12 +46,12 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 
 ## Software-Defined Control (INVERTER)
 
-The entire H-bridge is driven directly by the RP2350 — there's no separate analog waveform generator or fixed-function inverter chip in the way. Every waveform is articulated by the microcontroller.
+The entire H-bridge is driven directly by the RP2354A — there's no separate analog waveform generator or fixed-function inverter chip in the way. Every waveform is articulated by the microcontroller.
 
 Out of the box, Lamoka1 comes with **basic stock firmware**: clean sine wave output and a resistive-load "dumb mode". This can be a starting point, not a limit of function.
 
 > [!TIP]
-> Because the RP2350 controls switching directly, the unit can be reprogrammed to do far more than the stock firmware — custom waveforms, different control strategies, alternative protection logic, whatever you can get the math to do safely. This is where the open-source firmware license really matters: if you build something, you can share it back with the community, and anyone else with a Lamoka1 can run it.
+> Because the RP2354A controls switching directly, the unit can be reprogrammed to do far more than the stock firmware — custom waveforms, different control strategies, alternative protection logic, whatever you can get the math to do safely. This is where the open-source firmware license really matters: if you build something, you can share it back with the community, and anyone else with a Lamoka1 can run it.
 
 ---
 

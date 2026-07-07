@@ -1,9 +1,9 @@
 The physical hardware design of the Lamoka1:
 
 
-The Lamoka1 is a charger (takes a wide range of input sources, specifically solar, but any source with the required voltage is good) and a inverter (takes the battery power and turns it into AC, that AC can be turned into 120 Vrms for use with North American products. Or many many waveforms and systems, configurable by programming the RP2350 to do things with the H bridge) 
+The Lamoka1 is a charger (takes a wide range of input sources, specifically solar, but any source with the required voltage is good) and a inverter (takes the battery power and turns it into AC, that AC can be turned into 120 Vrms for use with North American products. Or many many waveforms and systems, configurable by programming the RP2354A to do things with the H bridge) 
 
-The inversion part of the unit is relatively simple, the unit takes anywhere from 5-40v (max input current is 30a) then steps that up to 48v, that 48v gets put into a frequency generator which goes to a transformer and up to high voltage, this pulsed output then gets smoothed out to 180v DC, this DC then goes into an H bridge, articulated by a RP2350. The output of the H bridge goes into the wave reform section which can ingadge the LC filter for making near perfect sine waves, (I didnt want the H bridge to be soley responsible for generating a pure sine wave as the switching frequency would be too high to make accurate sine waves).
+The inversion part of the unit is relatively simple, the unit takes anywhere from 5-40v (max input current is 30a) then steps that up to 48v, that 48v gets put into a frequency generator which goes to a transformer and up to high voltage, this pulsed output then gets smoothed out to 180v DC, this DC then goes into an H bridge, articulated by a RP2354A. The output of the H bridge goes into the wave reform section which can ingadge the LC filter for making near perfect sine waves, (I didnt want the H bridge to be soley responsible for generating a pure sine wave as the switching frequency would be too high to make accurate sine waves).
 
 There will have to be many sensors on this unit for, Temperature, Voltage feedback (waveforms, Vrms calculation) 
 
