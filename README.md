@@ -4,7 +4,7 @@
 
 ![Lamoka1 DEV-Brain](Images/Lamoka1-DEV-Brain.png)
 
-The DEV-Brain is for testing control and UI of the Lamoka1 in a safe, controlled, and cheap medium. More information can be found [here.](Lamoka1-DEV-Brain/Readme.md)
+The DEV-Brain is an experimental board for testing the Lamoka1’s control and user interface concepts in a cheap and simple medium. More information can be found [here.](Lamoka1-DEV-Brain/Readme.md)
 ---
 
 
