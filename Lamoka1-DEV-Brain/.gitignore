@@ -1,0 +1,217 @@
+################################
+# KiCad Project-Local State
+################################
+
+# Project-specific editor state (zoom, visible layers, window position)
+# These change every time anyone opens the file → merge conflicts if tracked
+*.kicad_prl
+
+# Auto-recovery and swap files
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_sch~
+*.kicad_pcb~
+_autosave-*
+
+# Cache and lock files
+fp-info-cache
+sym-lib-cache
+*.kicad_sch.lock
+*.kicad_pcb.lock
+*.Kicad_pro.Ick
+
+################################
+# KiCad Backups
+################################
+
+# KiCad auto-backup zips (git already versions the source)
+*-backups/
+*.bak
+*~
+
+################################
+# Simulation & Analysis Output
+# (Regenerable from schematic & netlists)
+################################
+
+*.cir
+*.out
+*.log
+*.raw
+*.meas
+*.ac
+*.transient
+*.step
+*.sweep
+
+################################
+# RESTRICTED/VENDOR FILES
+# These have license restrictions that forbid redistribution
+# Link to datasheets instead; users can download from vendors
+################################
+
+# Texas Instruments restricted files
+# → Users should download directly from ti.com under their terms
+*.pdf
+*.xlsx
+*.xlsm
+*.docx
+ImportGuide*.html
+ImportGuide*.htm
+
+# Other vendor documentation
+# → Assume any PDFs/Office docs in hardware dirs are vendor-supplied
+**/vendor/**
+**/3rdparty/**
+
+################################
+# Manufacturing Output
+# DO COMMIT THESE—they enable full PCB reproducibility
+# Users can order directly from a fab using Gerber/drill files
+################################
+
+# (Gerber, drill, and other manufacturing files are TRACKED)
+# No exclusions here—everything in /manufacturing/ folders stays
+
+################################
+# IDE/Editor/Machine-Specific
+################################
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+.project
+.classpath
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+.sublime-project
+.sublime-workspace
+*.sublime-session
+
+# vim/neovim
+.vim/
+.netrwhist
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+
+################################
+# OS Files
+################################
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+.CFUserTextEncoding
+.Spotlight-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Network Trash Folder
+Temporary Items
+
+# Windows
+Thumbs.db
+.Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.nfs*
+.fuse_*
+
+################################
+# Temporary/Build Files
+################################
+
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+################################
+# Python (if using KiCad scripting plugins)
+################################
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+################################
+# Node/npm (if using Node-based tools)
+################################
+
+node_modules/
+npm-debug.log
+yarn-error.log
+
+################################
+# Build/Output Directories
+################################
+
+/build/
+/dist/
+/out/
+*.o
+*.so
+*.a
+
+# BEGIN LAMOKA KICAD PRIVATE FILES
+# Local KiCad state, recovery data, and automatic backups
+Kicad files/*.kicad_prl
+Kicad files/*-backups/
+Kicad files/_autosave-*
+Kicad files/*.lck
+Kicad files/*.lock
+Kicad files/*-bak
+Kicad files/*~
+Kicad files/fp-info-cache
+Kicad files/sym-lib-cache
+
+# Private symbol, footprint, and 3D-model source files are intentionally
+# kept local. The .kicad_sch and .kicad_pcb files retain embedded copies
+# of the symbols and board footprints needed to view the design.
+Kicad files/components/
+Kicad files/fp-lib-table
+Kicad files/sym-lib-table
+Kicad files/*.kicad_sym
+Kicad files/*.kicad_mod
+Kicad files/*.pretty/
+Kicad files/**/*.kicad_sym
+Kicad files/**/*.kicad_mod
+Kicad files/**/*.step
+Kicad files/**/*.stp
+Kicad files/**/*.wrl
+Kicad files/**/*.obj
+Kicad files/**/*.stl
+Kicad files/**/*.3mf
+# END LAMOKA KICAD PRIVATE FILES

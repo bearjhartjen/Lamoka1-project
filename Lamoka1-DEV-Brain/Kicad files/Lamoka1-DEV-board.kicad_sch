@@ -4494,6 +4494,502 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Pads:Tomachie_TP_E"
+			(pin_names
+				(offset 1.27)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Tomachie_TP_E"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Pads:TPS127"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "Undefined"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Test Point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Tomachie_TP_E_0_1"
+				(polyline
+					(pts
+						(xy -0.25 0.33) (xy 0.25 0.33)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.33) (xy 0 -0.2)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0.1)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type color)
+						(color 56 161 105 1)
+					)
+				)
+				(pin bidirectional line
+					(at -0.762 0 0)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Pads:Tomachie_TP_N"
+			(pin_names
+				(offset 1.27)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Tomachie_TP_N"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Pads:TPS127"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "Undefined"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Test Point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Tomachie_TP_N_0_1"
+				(polyline
+					(pts
+						(xy -0.25 0.33) (xy 0.25 0.33)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.33) (xy 0 -0.2)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0.1)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type color)
+						(color 56 161 105 1)
+					)
+				)
+				(pin bidirectional line
+					(at 0 -0.762 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Pads:Tomachie_TP_S"
+			(pin_names
+				(offset 1.27)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Tomachie_TP_S"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Pads:TPS127"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "Undefined"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Test Point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Tomachie_TP_S_0_1"
+				(polyline
+					(pts
+						(xy -0.25 0.33) (xy 0.25 0.33)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.33) (xy 0 -0.2)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0.1)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type color)
+						(color 56 161 105 1)
+					)
+				)
+				(pin bidirectional line
+					(at 0 0.762 270)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Pads:Tomachie_TP_W"
+			(pin_names
+				(offset 1.27)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Tomachie_TP_W"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Pads:TPS127"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "Undefined"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Test Point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Tomachie_TP_W_0_1"
+				(polyline
+					(pts
+						(xy -0.25 0.33) (xy 0.25 0.33)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.33) (xy 0 -0.2)
+					)
+					(stroke
+						(width 0.15)
+						(type solid)
+						(color 255 255 255 1)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.762)
+					(stroke
+						(width 0.1)
+						(type solid)
+						(color 0 0 0 1)
+					)
+					(fill
+						(type color)
+						(color 56 161 105 1)
+					)
+				)
+				(pin bidirectional line
+					(at 0.762 0 180)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.0254 0.0254)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -4617,6 +5113,36 @@
 		(uuid "0377d755-865b-4f87-8423-b26c25935700")
 	)
 	(junction
+		(at 239.268 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0692732b-760c-4122-8076-d791e7ce2df9")
+	)
+	(junction
+		(at 144.78 39.878)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0703812d-2b03-48a4-93db-3b7e774ddb5e")
+	)
+	(junction
+		(at 231.14 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "086ec308-e829-4c2c-84ae-d2382d59d7d1")
+	)
+	(junction
+		(at 33.528 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "094cb0ae-8799-4ab5-bc62-fd9d6dd78244")
+	)
+	(junction
+		(at 62.23 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "10a19f65-9499-46bf-a15a-402dace47b6d")
+	)
+	(junction
 		(at 226.06 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4635,10 +5161,34 @@
 		(uuid "20e01d06-065b-4466-8f11-864d7f23a2eb")
 	)
 	(junction
+		(at 217.17 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "23f92221-bdd4-468f-9111-83d8292ea63b")
+	)
+	(junction
 		(at 62.23 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2b50e509-dfcd-4f7e-96a7-8c53bf362a33")
+	)
+	(junction
+		(at 81.788 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f46ddc2-959c-47f6-ac47-b0437f0c70da")
+	)
+	(junction
+		(at 278.13 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34e2a994-7101-46cd-b77a-59f51105eb03")
+	)
+	(junction
+		(at 112.014 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34ebbbc1-226a-4ab9-a003-62b0376bf8df")
 	)
 	(junction
 		(at 129.54 31.75)
@@ -4653,10 +5203,22 @@
 		(uuid "3bbd6706-cc7f-4f01-a489-0ce6249bc783")
 	)
 	(junction
+		(at 250.19 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3bd6487a-fc80-433b-aa53-5d2b01bad00b")
+	)
+	(junction
 		(at 149.86 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "441c93f7-0244-4148-af3d-83aa7cb9e3a7")
+	)
+	(junction
+		(at 261.62 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56154db5-d7f7-434d-84e1-64bba5588385")
 	)
 	(junction
 		(at 110.49 22.86)
@@ -4665,16 +5227,88 @@
 		(uuid "60eb6a08-1533-4f42-bd61-b5a0e0ceb066")
 	)
 	(junction
+		(at 104.14 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6367086d-dead-46a1-8a15-340bb4b7f1a1")
+	)
+	(junction
+		(at 233.68 81.026)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6b1f94b5-addb-4a6c-9478-0fec06b80a04")
+	)
+	(junction
+		(at 76.2 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6bcb6de8-c939-4fcf-bda3-af662b59afdd")
+	)
+	(junction
+		(at 109.728 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7b9dd9f8-1c0b-4222-abf6-6ec83575ab03")
+	)
+	(junction
 		(at 62.23 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "897b5718-0c65-4af8-8434-35c9f1c7cc8f")
 	)
 	(junction
+		(at 111.76 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a60b495-4b7c-4b0e-8fd3-41b4f26c7507")
+	)
+	(junction
+		(at 195.58 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94c2c91f-4ec8-4c36-8451-a568b20c4461")
+	)
+	(junction
+		(at 224.79 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9cde5dd7-4675-4e02-abcd-4c1dec54890e")
+	)
+	(junction
 		(at 214.63 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a3a779ec-ac8a-455f-83ab-164074352d30")
+	)
+	(junction
+		(at 152.4 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "abc265a9-4812-4067-b3e2-bb1e902dcd16")
+	)
+	(junction
+		(at 62.23 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b349727d-455a-4030-ba77-010a76db5fdc")
+	)
+	(junction
+		(at 261.62 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b699f59d-01b7-48c5-84c5-5d3d0da97ba1")
+	)
+	(junction
+		(at 63.246 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c74a9ae7-1b1d-4833-9085-965f5b1c0a00")
+	)
+	(junction
+		(at 78.74 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb8cb481-7637-48c7-95b3-b4626cffd8e5")
 	)
 	(junction
 		(at 129.54 33.02)
@@ -4689,10 +5323,34 @@
 		(uuid "e3630aec-1948-445c-95a9-f7c01d66a8fe")
 	)
 	(junction
+		(at 250.19 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3be6dc6-b59e-41e5-9019-b6f8318bff27")
+	)
+	(junction
+		(at 262.89 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e643b39b-4033-43b2-84c0-4d90fbc30bb9")
+	)
+	(junction
 		(at 123.19 22.86)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ea13ef88-aea4-4559-aef4-feea77071009")
+	)
+	(junction
+		(at 59.182 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f04e4470-9a07-4332-9857-10d52e784ee2")
+	)
+	(junction
+		(at 261.62 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f6386b01-1893-460e-a425-eb0cb75fa124")
 	)
 	(no_connect
 		(at 165.1 82.55)
@@ -4840,6 +5498,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 158.75) (xy 27.94 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02a6389a-7d2c-48b4-9947-4c118faeff0a")
+	)
+	(wire
+		(pts
 			(xy 106.68 26.67) (xy 110.49 26.67)
 		)
 		(stroke
@@ -4930,6 +5598,26 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 29.21) (xy 62.23 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f43287d-3c2d-42c6-a970-eb6d356fa9d9")
+	)
+	(wire
+		(pts
+			(xy 195.58 78.74) (xy 195.58 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fd9b7ac-0d91-4a00-ba56-4fca7e45e840")
+	)
+	(wire
+		(pts
 			(xy 24.13 99.06) (xy 24.13 101.6)
 		)
 		(stroke
@@ -4990,6 +5678,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 116.84) (xy 261.62 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bbc4b59-4330-4db1-93b2-e9982fa84398")
+	)
+	(wire
+		(pts
 			(xy 245.11 83.82) (xy 245.11 88.9)
 		)
 		(stroke
@@ -4997,6 +5695,16 @@
 			(type default)
 		)
 		(uuid "1d97efff-7712-4080-8fb9-a0f91e819420")
+	)
+	(wire
+		(pts
+			(xy 52.07 176.53) (xy 27.94 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e3e6cb7-085c-4be0-acc4-406974c91431")
 	)
 	(wire
 		(pts
@@ -5110,6 +5818,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 194.31) (xy 27.94 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c94a4b8-10b7-4f73-8686-d7abe71a79dd")
+	)
+	(wire
+		(pts
 			(xy 226.06 40.64) (xy 234.95 40.64)
 		)
 		(stroke
@@ -5117,6 +5835,16 @@
 			(type default)
 		)
 		(uuid "2e4f0f70-a7ff-429e-8947-0fc94c324632")
+	)
+	(wire
+		(pts
+			(xy 81.788 66.04) (xy 81.788 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2feb7221-049c-4530-b7af-2ff83fb67b34")
 	)
 	(wire
 		(pts
@@ -5160,6 +5888,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 66.04) (xy 111.76 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "351d43d8-32bb-4842-811c-db619ec0afef")
+	)
+	(wire
+		(pts
 			(xy 152.4 43.18) (xy 149.86 43.18)
 		)
 		(stroke
@@ -5200,6 +5938,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.182 41.91) (xy 59.182 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c05b2b0-6108-4384-a6a7-b165ce1eb79c")
+	)
+	(wire
+		(pts
 			(xy 256.54 303.53) (xy 256.54 316.23)
 		)
 		(stroke
@@ -5207,6 +5955,16 @@
 			(type default)
 		)
 		(uuid "3d4b2a1b-581d-4663-8299-a11a71c49b1d")
+	)
+	(wire
+		(pts
+			(xy 239.268 71.12) (xy 239.268 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d566b3f-221e-4653-8064-f7cd45c307d2")
 	)
 	(wire
 		(pts
@@ -5247,6 +6005,26 @@
 			(type default)
 		)
 		(uuid "40ecd98a-4131-41e7-9966-61365eedc42c")
+	)
+	(wire
+		(pts
+			(xy 232.41 81.026) (xy 233.68 81.026)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43771802-833b-4bdd-af37-fe8d645265ca")
+	)
+	(wire
+		(pts
+			(xy 250.19 105.41) (xy 250.19 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43f55c5b-53b4-4ae2-aa94-f3a3c84c911b")
 	)
 	(wire
 		(pts
@@ -5320,6 +6098,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 191.77) (xy 27.94 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49fc0874-1c3c-462a-b0c2-62d20785adf4")
+	)
+	(wire
+		(pts
 			(xy 127 31.75) (xy 129.54 31.75)
 		)
 		(stroke
@@ -5337,6 +6125,16 @@
 			(type default)
 		)
 		(uuid "4b82d110-fa9b-405e-a8c6-e6d6f7aff1e5")
+	)
+	(wire
+		(pts
+			(xy 132.08 21.59) (xy 132.08 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ef98399-3801-4d1f-a32b-ff3606a71464")
 	)
 	(wire
 		(pts
@@ -5390,6 +6188,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 39.37) (xy 224.79 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56e82fe1-855e-498e-9304-3cdc54eeb3c7")
+	)
+	(wire
+		(pts
 			(xy 284.48 151.13) (xy 284.48 162.56)
 		)
 		(stroke
@@ -5427,6 +6235,16 @@
 			(type default)
 		)
 		(uuid "5a7cf920-7372-4136-bcc5-329780afe9ee")
+	)
+	(wire
+		(pts
+			(xy 52.07 189.23) (xy 27.94 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ab746e4-07af-481f-af86-3944348211a2")
 	)
 	(wire
 		(pts
@@ -5470,6 +6288,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 184.15) (xy 27.94 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62cbc0da-cc87-4c93-abbf-793b109a1ca0")
+	)
+	(wire
+		(pts
 			(xy 144.78 44.45) (xy 144.78 36.83)
 		)
 		(stroke
@@ -5480,6 +6308,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 41.91) (xy 104.14 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65a07a7e-167c-49c9-bd5c-121dc3dc2e6e")
+	)
+	(wire
+		(pts
 			(xy 62.23 49.53) (xy 68.58 49.53)
 		)
 		(stroke
@@ -5487,6 +6325,26 @@
 			(type default)
 		)
 		(uuid "6644b478-9ac8-4507-a8eb-935e9bcf4152")
+	)
+	(wire
+		(pts
+			(xy 33.528 115.57) (xy 33.528 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66fb3b74-00fd-42de-bdc7-357c32558e66")
+	)
+	(wire
+		(pts
+			(xy 112.014 73.66) (xy 112.014 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67a259c3-1ac3-4858-8c61-a13242b9b9a0")
 	)
 	(wire
 		(pts
@@ -5540,6 +6398,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 93.98) (xy 231.14 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72926c94-f2c3-4d07-b2f1-4474004b097b")
+	)
+	(wire
+		(pts
 			(xy 123.19 43.18) (xy 124.46 43.18)
 		)
 		(stroke
@@ -5547,6 +6415,26 @@
 			(type default)
 		)
 		(uuid "72bfb50f-be8f-4147-805e-f9be67d01f3e")
+	)
+	(wire
+		(pts
+			(xy 52.07 181.61) (xy 27.94 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "734dc5af-08a9-46dc-968c-6c699a6cb15a")
+	)
+	(wire
+		(pts
+			(xy 109.728 83.82) (xy 109.728 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73ef1292-6254-4224-9105-32264c34496b")
 	)
 	(wire
 		(pts
@@ -5670,6 +6558,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 138.43) (xy 261.62 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8465d78d-e78a-4231-bf3c-d1b682a12fb3")
+	)
+	(wire
+		(pts
 			(xy 226.06 35.56) (xy 226.06 40.64)
 		)
 		(stroke
@@ -5737,6 +6635,26 @@
 			(type default)
 		)
 		(uuid "8bf9bafb-24a7-4ee6-83c7-61c727ddcd52")
+	)
+	(wire
+		(pts
+			(xy 52.07 179.07) (xy 27.94 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e2e596a-adf5-4c11-9c3a-a62960120cb4")
+	)
+	(wire
+		(pts
+			(xy 62.23 52.07) (xy 62.23 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fb89885-228e-491a-bcee-696240bc6666")
 	)
 	(wire
 		(pts
@@ -5860,6 +6778,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 53.34) (xy 76.2 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a213c619-7a1c-4404-b337-f8efc0084f3e")
+	)
+	(wire
+		(pts
 			(xy 109.22 105.41) (xy 114.3 105.41)
 		)
 		(stroke
@@ -5867,6 +6795,16 @@
 			(type default)
 		)
 		(uuid "a22f2944-fdd5-4be8-9dda-5c44ef21d21f")
+	)
+	(wire
+		(pts
+			(xy 52.07 173.99) (xy 27.94 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2e162be-86b9-410d-8659-bf7c8a9fac86")
 	)
 	(wire
 		(pts
@@ -5950,6 +6888,26 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 34.29) (xy 78.74 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a923a052-0e58-4dc0-972e-d71cf6d9612c")
+	)
+	(wire
+		(pts
+			(xy 52.07 163.83) (xy 27.94 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aacbe970-9bf2-4df4-8d94-4f2e9f92c24c")
+	)
+	(wire
+		(pts
 			(xy 26.67 116.84) (xy 40.64 116.84)
 		)
 		(stroke
@@ -5967,6 +6925,16 @@
 			(type default)
 		)
 		(uuid "acc44c57-5e98-4f1f-bc24-54ca9de5e1f8")
+	)
+	(wire
+		(pts
+			(xy 278.13 83.82) (xy 278.13 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad07e96d-2ba8-4f66-b6b8-f9178febd3bb")
 	)
 	(wire
 		(pts
@@ -6040,6 +7008,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 153.67) (xy 27.94 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bae715bc-1690-4caa-9004-cfa8bdad54e4")
+	)
+	(wire
+		(pts
 			(xy 281.94 194.31) (xy 281.94 205.74)
 		)
 		(stroke
@@ -6090,6 +7068,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 171.45) (xy 27.94 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3911a1f-f361-480e-b51d-d7da6b4f74fb")
+	)
+	(wire
+		(pts
 			(xy 109.22 115.57) (xy 114.3 115.57)
 		)
 		(stroke
@@ -6107,6 +7095,16 @@
 			(type default)
 		)
 		(uuid "c67cb85c-7fa6-4fa0-a015-6fd2711601a3")
+	)
+	(wire
+		(pts
+			(xy 52.07 161.29) (xy 27.94 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c729f272-db11-423c-a852-5576e07de7d3")
 	)
 	(wire
 		(pts
@@ -6190,6 +7188,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.89 105.41) (xy 262.89 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfb9dcb7-09a1-462f-8084-226ce2005064")
+	)
+	(wire
+		(pts
 			(xy 137.16 140.97) (xy 128.27 140.97)
 		)
 		(stroke
@@ -6207,6 +7215,26 @@
 			(type default)
 		)
 		(uuid "d3ea39a2-5ea0-47a4-b8b7-e55157c9c1b3")
+	)
+	(wire
+		(pts
+			(xy 52.07 186.69) (xy 27.94 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4f68c23-a1b6-4c67-88d9-a0118447e460")
+	)
+	(wire
+		(pts
+			(xy 63.246 39.37) (xy 63.246 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d53eed10-bb71-46e2-bc95-60968d4b9dd9")
 	)
 	(wire
 		(pts
@@ -6230,6 +7258,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 168.91) (xy 27.94 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db7457be-ed81-40f2-b052-b82163cd1c81")
+	)
+	(wire
+		(pts
 			(xy 280.67 151.13) (xy 284.48 151.13)
 		)
 		(stroke
@@ -6237,6 +7275,16 @@
 			(type default)
 		)
 		(uuid "dbbac101-ecb6-4719-95a1-3ce955ff446f")
+	)
+	(wire
+		(pts
+			(xy 261.62 161.29) (xy 261.62 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc0bc770-0401-44a2-a3e9-c542837c2699")
 	)
 	(wire
 		(pts
@@ -6340,6 +7388,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 60.96) (xy 217.17 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7f08ad0-26c6-4a5b-b9d9-34af2b40a196")
+	)
+	(wire
+		(pts
 			(xy 129.54 33.02) (xy 129.54 31.75)
 		)
 		(stroke
@@ -6420,6 +7478,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 60.96) (xy 250.19 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f18f2973-7e9f-4b8c-9442-6d8ac78a1a71")
+	)
+	(wire
+		(pts
 			(xy 152.4 44.45) (xy 152.4 43.18)
 		)
 		(stroke
@@ -6447,6 +7515,16 @@
 			(type default)
 		)
 		(uuid "f516e616-fa5f-4ff8-98f0-77ec8964be0a")
+	)
+	(wire
+		(pts
+			(xy 52.07 166.37) (xy 27.94 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5dbe773-ff9f-4535-b3ad-349cf9ba8d7c")
 	)
 	(wire
 		(pts
@@ -6510,6 +7588,36 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 156.21) (xy 27.94 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcee6ca6-2f3f-4972-8fb1-79182d29f200")
+	)
+	(wire
+		(pts
+			(xy 146.05 39.878) (xy 144.78 39.878)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffbc3bd2-7c2f-4fc5-b4f6-f6aae2330583")
+	)
+	(wire
+		(pts
+			(xy 153.67 43.18) (xy 152.4 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffc8aa99-f452-48da-b69e-4abb9ec74924")
+	)
+	(wire
+		(pts
 			(xy 123.19 33.02) (xy 120.65 33.02)
 		)
 		(stroke
@@ -6528,6 +7636,16 @@
 		)
 		(uuid "006b138b-2f3a-47a9-abac-715028b90860")
 	)
+	(label "GPIO9"
+		(at 27.94 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "07a1e4a2-110a-430f-8401-1f690006c440")
+	)
 	(label "BTN"
 		(at 172.72 52.07 0)
 		(effects
@@ -6538,6 +7656,16 @@
 		)
 		(uuid "0a798745-b1d6-411a-9b92-910b860555ca")
 	)
+	(label "Net-(D4-DOUT)"
+		(at 27.94 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0cf366f4-1a15-4300-b0ad-f29ee7a89190")
+	)
 	(label "3V3"
 		(at 186.69 177.8 0)
 		(effects
@@ -6547,6 +7675,16 @@
 			(justify left bottom)
 		)
 		(uuid "0e845b24-a310-4309-9cee-86aff60e3505")
+	)
+	(label "Net-(D5-DOUT)"
+		(at 27.94 166.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "18dcff85-f9eb-4f6a-ae91-f1cf851f42cb")
 	)
 	(label "5V"
 		(at 293.37 241.3 180)
@@ -6568,7 +7706,7 @@
 		)
 		(uuid "1abe41a0-05fb-49a7-8145-7e627f2bdaeb")
 	)
-	(label "GPOI3"
+	(label "GPIO3"
 		(at 186.69 154.94 0)
 		(effects
 			(font
@@ -6638,7 +7776,37 @@
 		)
 		(uuid "29a1ff94-9110-4015-8e91-c59ca8ea1442")
 	)
-	(label "GPOI10"
+	(label "GPIO6"
+		(at 27.94 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a5542c7-8940-4cc2-9dba-46c05b53aab2")
+	)
+	(label "GPIO3"
+		(at 27.94 186.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2fd0db42-215e-487f-b1e2-61f6ff9177dc")
+	)
+	(label "GPIO8"
+		(at 27.94 191.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "343efc54-1bd0-482a-a244-b246c7e27c65")
+	)
+	(label "GPIO10"
 		(at 186.69 172.72 0)
 		(effects
 			(font
@@ -6648,7 +7816,7 @@
 		)
 		(uuid "34b51447-8d9b-40c3-aa7f-d8d2f0a7e959")
 	)
-	(label "GPOI7"
+	(label "GPIO7"
 		(at 165.1 69.85 0)
 		(effects
 			(font
@@ -6698,6 +7866,16 @@
 		)
 		(uuid "3d2fa63c-4ad0-4ff9-abdd-d20fb907a7d3")
 	)
+	(label "GPIO10"
+		(at 27.94 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "40a383cd-b05d-42e8-b627-034f126eeae4")
+	)
 	(label "3V3"
 		(at 104.14 22.86 180)
 		(effects
@@ -6738,7 +7916,7 @@
 		)
 		(uuid "54a65010-c4cd-4db6-9ac5-94d02f2a631d")
 	)
-	(label "GPOI9"
+	(label "GPIO9"
 		(at 165.1 74.93 0)
 		(effects
 			(font
@@ -6788,7 +7966,7 @@
 		)
 		(uuid "5d3e2a70-9633-4e17-b866-b3be059cd05a")
 	)
-	(label "GPOI6"
+	(label "GPIO6"
 		(at 165.1 67.31 0)
 		(effects
 			(font
@@ -6798,7 +7976,7 @@
 		)
 		(uuid "5df3cccb-72e3-4cda-a6cd-a6cbf70134df")
 	)
-	(label "GPOI2"
+	(label "GPIO2"
 		(at 165.1 57.15 0)
 		(effects
 			(font
@@ -6808,7 +7986,7 @@
 		)
 		(uuid "5e13762e-26cb-4ff8-ae2e-8ee22e451d71")
 	)
-	(label "GPOI4"
+	(label "GPIO4"
 		(at 165.1 62.23 0)
 		(effects
 			(font
@@ -6818,7 +7996,7 @@
 		)
 		(uuid "665fac46-ac9d-4c8c-9404-550fbce91d28")
 	)
-	(label "GPOI1"
+	(label "GPIO1"
 		(at 186.69 149.86 0)
 		(effects
 			(font
@@ -6847,6 +8025,26 @@
 			(justify right bottom)
 		)
 		(uuid "741669f6-ac28-4f9a-8315-a64c1a3fd8b8")
+	)
+	(label "GPIO1"
+		(at 27.94 194.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "753209e8-e226-41cb-86bb-4a61644bbdab")
+	)
+	(label "GPIO4"
+		(at 27.94 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7ea59019-2988-49ea-89fd-82cc4d723fe1")
 	)
 	(label "BTN"
 		(at 223.52 40.64 180)
@@ -6878,7 +8076,7 @@
 		)
 		(uuid "8555a70a-5ed7-43d5-b463-79029c582a79")
 	)
-	(label "GPOI4"
+	(label "GPIO4"
 		(at 186.69 157.48 0)
 		(effects
 			(font
@@ -6928,7 +8126,17 @@
 		)
 		(uuid "97924842-f2bf-4274-aca8-c2835f7b8094")
 	)
-	(label "GPOI3"
+	(label "GPIO5"
+		(at 27.94 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9a4de1f2-0343-4414-af03-847ebd1ab657")
+	)
+	(label "GPIO3"
 		(at 165.1 59.69 0)
 		(effects
 			(font
@@ -7008,6 +8216,16 @@
 		)
 		(uuid "a87df2d1-8eb7-412d-991d-523fa421d1a5")
 	)
+	(label "Net-(D10-DIN)"
+		(at 27.94 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ad6a37e6-face-4b6f-8a8d-60850a0f7edb")
+	)
 	(label "5V"
 		(at 293.37 213.36 180)
 		(effects
@@ -7028,7 +8246,7 @@
 		)
 		(uuid "aec14fe9-06a9-46fb-a031-0fbff7a3fe6e")
 	)
-	(label "GPOI1"
+	(label "GPIO1"
 		(at 165.1 54.61 0)
 		(effects
 			(font
@@ -7038,7 +8256,7 @@
 		)
 		(uuid "b0e8534a-6f05-4597-8773-89cc010f7dee")
 	)
-	(label "GPOI5"
+	(label "GPIO5"
 		(at 186.69 160.02 0)
 		(effects
 			(font
@@ -7048,7 +8266,7 @@
 		)
 		(uuid "b6c81da4-9ff0-4798-9b76-dd6773386e3b")
 	)
-	(label "GPOI2"
+	(label "GPIO2"
 		(at 186.69 152.4 0)
 		(effects
 			(font
@@ -7078,7 +8296,7 @@
 		)
 		(uuid "be0a7d5b-ddc4-4a9c-bd12-523c565e59cc")
 	)
-	(label "GPOI7"
+	(label "GPIO7"
 		(at 186.69 165.1 0)
 		(effects
 			(font
@@ -7098,6 +8316,16 @@
 		)
 		(uuid "c35acc83-8fc7-45d7-a32a-396e97879ab9")
 	)
+	(label "GPIO2"
+		(at 27.94 189.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c3e8040c-157e-436c-8556-f79eba35d96e")
+	)
 	(label "5V"
 		(at 273.05 308.61 180)
 		(effects
@@ -7108,7 +8336,7 @@
 		)
 		(uuid "c69b8be6-6497-4d2a-a572-144fb88f54f3")
 	)
-	(label "GPOI9"
+	(label "GPIO9"
 		(at 186.69 170.18 0)
 		(effects
 			(font
@@ -7148,6 +8376,16 @@
 		)
 		(uuid "cf7da6a9-5b3a-4142-b1b4-3293c3c3bf35")
 	)
+	(label "Net-(D8-DOUT)"
+		(at 27.94 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1179aea-8269-477d-a7a0-78f5508e9ce2")
+	)
 	(label "3V3"
 		(at 36.83 125.73 180)
 		(effects
@@ -7168,6 +8406,16 @@
 		)
 		(uuid "d203124c-8412-4507-a666-41104ebff89d")
 	)
+	(label "GPIO7"
+		(at 27.94 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d32fde78-b6c8-4c91-875f-962f1e545b2f")
+	)
 	(label "5V"
 		(at 271.78 236.22 180)
 		(effects
@@ -7177,6 +8425,16 @@
 			(justify right bottom)
 		)
 		(uuid "d4edb9c1-2a20-4998-ba29-4e3e88d1a854")
+	)
+	(label "Net-(D7-DOUT)"
+		(at 27.94 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6999c11-cfc9-4611-8e18-ffab025ce591")
 	)
 	(label "VREG_GND"
 		(at 185.42 44.45 0)
@@ -7188,7 +8446,7 @@
 		)
 		(uuid "d7e9c268-f723-443d-84ea-1f17dd3bf4fc")
 	)
-	(label "GPOI5"
+	(label "GPIO5"
 		(at 165.1 64.77 0)
 		(effects
 			(font
@@ -7248,7 +8506,7 @@
 		)
 		(uuid "ecac1970-8d3b-45e7-8423-ff621da53dc2")
 	)
-	(label "GPOI10"
+	(label "GPIO10"
 		(at 165.1 77.47 0)
 		(effects
 			(font
@@ -7258,7 +8516,7 @@
 		)
 		(uuid "ed1075bd-d6a1-42f6-9bee-32808e4713ee")
 	)
-	(label "GPOI6"
+	(label "GPIO6"
 		(at 186.69 162.56 0)
 		(effects
 			(font
@@ -7267,6 +8525,26 @@
 			(justify left bottom)
 		)
 		(uuid "ed6930d8-2dda-4938-b1a0-ab22219ec66e")
+	)
+	(label "Net-(J3-CC1)"
+		(at 27.94 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f384d763-6475-4680-af5d-d564e5fb4bf3")
+	)
+	(label "Net-(D6-DOUT)"
+		(at 27.94 163.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f66b7f79-cb06-4a26-b0f8-6e1db023cf33")
 	)
 	(label "3V3"
 		(at 82.55 113.03 0)
@@ -7287,6 +8565,82 @@
 			(justify left bottom)
 		)
 		(uuid "fc856938-752f-4b6a-8dca-e48da0f40fa7")
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 109.728 83.058 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "018e4fe1-ec88-4bc8-a004-d442e892a582")
+		(property "Reference" "TP19"
+			(at 109.728 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 109.728 83.058 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 109.728 83.058 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.728 83.058 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 109.728 83.058 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "57e628ce-e9ec-4c9c-b74d-9aa0659f89cf")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP19")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7362,6 +8716,159 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 81.788 65.278 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "04c5add6-2f58-4f4f-ba97-d385762a0e3d")
+		(property "Reference" "TP45"
+			(at 82.804 64.262 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 81.788 65.278 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 81.788 65.278 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.788 65.278 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 81.788 65.278 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "90e9d5fa-2384-409e-b9ec-0bb58c097ba8")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_S")
+		(at 62.23 52.832 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "064881e9-3667-4e1e-8aee-ce9a57d58c22")
+		(property "Reference" "TP12"
+			(at 62.23 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_S"
+			(at 62.23 52.832 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 62.23 52.832 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 52.832 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 62.23 52.832 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cd3344cc-db37-4dcd-ac90-22739b34e706")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -7458,6 +8965,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 271.78 217.17 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7467,7 +8975,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 271.78 217.17 0)
+			(at 283.21 213.2898 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7621,6 +9130,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 271.78 194.31 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7630,7 +9140,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 271.78 194.31 0)
+			(at 283.21 190.4298 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7850,6 +9361,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 62.23 28.448 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0dfbc7e2-4cce-467a-b2a9-a53a00d40d5d")
+		(property "Reference" "TP1"
+			(at 62.23 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 62.23 28.448 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 62.23 28.448 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 28.448 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 62.23 28.448 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eab1c892-a397-4041-bb07-37a7860187e2")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 64.77 35.56 90)
 		(unit 1)
@@ -7937,6 +9524,7 @@
 		)
 		(property "Manufacturer" "YAGEO"
 			(at 64.77 35.56 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7947,6 +9535,7 @@
 		)
 		(property "MPN" "RC0603FR-075K1L"
 			(at 64.77 35.56 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8172,6 +9761,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 271.78 267.97 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8181,7 +9771,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 271.78 267.97 0)
+			(at 283.21 264.0898 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8239,6 +9830,159 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 262.89 104.648 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "158e2b4e-aa5c-4c1d-89d4-f71e6cb8a4a5")
+		(property "Reference" "TP7"
+			(at 262.89 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 262.89 104.648 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 262.89 104.648 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 262.89 104.648 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 262.89 104.648 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a3831739-52a4-4272-9645-f0bbf161e293")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 186.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "17830a5a-4aeb-4a4b-a8b1-dc1687e6d2d3")
+		(property "Reference" "TP27"
+			(at 54.356 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9bc351ef-f8ed-4f46-ba6d-b9203d9a2e87")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP27")
 					(unit 1)
 				)
 			)
@@ -8412,6 +10156,7 @@
 		)
 		(property "MPN" "TYPE-C-31-M-12"
 			(at 41.91 45.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8422,6 +10167,7 @@
 		)
 		(property "Manufacturer" "HRO Electronics"
 			(at 41.91 45.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8596,6 +10342,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 231.14 93.218 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1f21f713-7c2c-4501-8801-bf3576e63657")
+		(property "Reference" "TP2"
+			(at 231.14 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 231.14 93.218 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 231.14 93.218 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 93.218 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 231.14 93.218 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d7a47a1b-70d7-48a5-a608-850b8b3978ff")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 292.1 173.99 0)
 		(unit 1)
@@ -8685,17 +10507,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 292.1 173.99 0)
+			(at 295.91 176.5299 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 292.1 173.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8842,17 +10667,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 293.37 129.54 0)
+			(at 297.18 132.0799 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 293.37 129.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8983,6 +10811,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "24becc5a-b841-42d4-836a-64d8e72d81d1")
+		(property "Reference" "TP39"
+			(at 54.356 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a802769b-dfcc-4231-9a57-812e62dfbffe")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP39")
 					(unit 1)
 				)
 			)
@@ -9157,6 +11062,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 273.05 151.13 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9166,7 +11072,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 273.05 151.13 0)
+			(at 284.48 147.2498 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9318,6 +11225,7 @@
 		)
 		(property "MPN" "GRM31CR61A107MEA8K"
 			(at 271.78 85.09 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9327,7 +11235,8 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 271.78 85.09 90)
+			(at 271.78 80.01 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9531,6 +11440,7 @@
 		)
 		(property "MPN" "PTS636SM43JSMTR LFS"
 			(at 234.95 40.64 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9540,7 +11450,8 @@
 			)
 		)
 		(property "Manufacturer" "C&K"
-			(at 234.95 40.64 0)
+			(at 242.57 36.83 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9788,6 +11699,7 @@
 		)
 		(property "MPN" "CL10A475KP8NNNC"
 			(at 123.19 26.67 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9797,13 +11709,15 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 123.19 26.67 0)
+			(at 127 29.2099 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Notes" ""
@@ -9942,6 +11856,7 @@
 		)
 		(property "MPN" "AOTA-B201610S3R3-101-T"
 			(at 164.084 44.704 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9952,6 +11867,7 @@
 		)
 		(property "Manufacturer" "Abracon"
 			(at 167.132 41.91 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10178,6 +12094,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 273.05 128.27 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10187,7 +12104,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 273.05 128.27 0)
+			(at 284.48 124.3898 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10417,6 +12335,7 @@
 		)
 		(property "Manufacturer" "YAGEO"
 			(at 105.41 67.31 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10427,6 +12346,7 @@
 		)
 		(property "MPN" "RC0603FR-0710KL"
 			(at 105.41 67.31 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10649,7 +12569,8 @@
 			)
 		)
 		(property "MPN" "RC0603FR-07330RL"
-			(at 256.54 106.68 90)
+			(at 256.54 102.87 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10660,6 +12581,7 @@
 		)
 		(property "Manufacturer" "YAGEO"
 			(at 256.54 106.68 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10806,17 +12728,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 294.64 107.95 0)
+			(at 298.45 110.4899 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 294.64 107.95 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10961,6 +12886,7 @@
 		)
 		(property "Manufacturer" "YAGEO"
 			(at 101.6 85.09 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10971,6 +12897,7 @@
 		)
 		(property "MPN" "RC0402FR-071KL"
 			(at 101.6 85.09 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11118,6 +13045,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 273.05 316.23 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11127,7 +13055,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 273.05 316.23 0)
+			(at 284.48 312.3498 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11185,6 +13114,82 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 261.62 116.078 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4c275d2c-7b89-40e0-898b-82779fe9378d")
+		(property "Reference" "TP8"
+			(at 261.62 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 261.62 116.078 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 261.62 116.078 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 116.078 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 261.62 116.078 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "821d4e2b-0063-4fa1-a5ee-3400b110b039")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -11348,6 +13353,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 161.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "56d352a2-394e-408c-9159-560564d97f37")
+		(property "Reference" "TP37"
+			(at 54.356 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "70e386e3-83fe-4b4e-8b4f-2640f1cb8f55")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 226.06 31.75 0)
 		(unit 1)
@@ -11435,6 +13517,7 @@
 		)
 		(property "Manufacturer" "YAGEO"
 			(at 226.06 31.75 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11445,6 +13528,7 @@
 		)
 		(property "MPN" "RC0603FR-0710KL"
 			(at 226.06 31.75 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11496,6 +13580,158 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 278.13 83.058 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "58f86751-e6e9-4c3e-be3f-272185478645")
+		(property "Reference" "TP42"
+			(at 278.13 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 278.13 83.058 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 278.13 83.058 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 278.13 83.058 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 278.13 83.058 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8572e202-1545-44ab-80a8-55b6b0c28530")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 132.08 20.828 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5a23df25-f01e-475a-9421-787f89c05972")
+		(property "Reference" "TP4"
+			(at 132.08 19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 132.08 20.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 132.08 20.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 20.828 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 132.08 20.828 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1ccea469-9fe7-4f0d-a46d-f6a2a8c06d76")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -11591,17 +13827,20 @@
 			)
 		)
 		(property "MPN" "CL10A475KP8NNNC"
-			(at 168.91 34.29 0)
+			(at 172.72 36.8299 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 168.91 34.29 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11653,6 +13892,159 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 194.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5df1c31d-49b2-4118-9204-efa05af976ac")
+		(property "Reference" "TP25"
+			(at 54.356 194.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 194.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b6eff5f8-db34-4e52-86e7-4e1bfbfcfb11")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 250.19 60.198 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62b17a84-1ad2-41e5-a5fd-30ce8a86b041")
+		(property "Reference" "TP43"
+			(at 250.19 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 250.19 60.198 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 250.19 60.198 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 60.198 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 250.19 60.198 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9b2180bb-fc7b-4a98-88bf-25a2b74d13f6")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP43")
 					(unit 1)
 				)
 			)
@@ -11749,6 +14141,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 271.78 172.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11758,7 +14151,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 271.78 172.72 0)
+			(at 283.21 168.8398 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11816,6 +14210,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 146.812 39.878 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "66e55d56-7410-45b9-b832-945b12e98cc4")
+		(property "Reference" "TP18"
+			(at 147.828 38.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 146.812 39.878 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 146.812 39.878 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.812 39.878 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 146.812 39.878 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c0b8177c-6497-4f1f-a015-2d1a50b23c56")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP18")
 					(unit 1)
 				)
 			)
@@ -11894,6 +14365,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6bb15343-ca53-477e-81c5-ec054bd52a6a")
+		(property "Reference" "TP40"
+			(at 54.356 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "28ef3f2f-f189-4628-bd42-c334190d086e")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP40")
 					(unit 1)
 				)
 			)
@@ -11990,6 +14538,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 273.05 106.68 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11999,7 +14548,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 273.05 106.68 0)
+			(at 284.48 102.7998 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12153,6 +14703,7 @@
 		)
 		(property "MPN" "SC1511-A4"
 			(at 139.7 90.17 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12163,6 +14714,7 @@
 		)
 		(property "Manufacturer" "	\nRaspberry Pi"
 			(at 139.7 90.17 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12397,6 +14949,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Pads:Tomachie_TP_W")
+		(at 231.648 81.026 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6f8ac52b-4e5e-4507-a9b6-bc7e48acceeb")
+		(property "Reference" "TP23"
+			(at 230.124 80.772 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Tomachie_TP_W"
+			(at 231.648 81.026 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 231.648 81.026 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.648 81.026 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 231.648 81.026 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07f428c6-cfde-4003-a342-59f926cffa13")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 293.37 245.11 0)
 		(unit 1)
@@ -12486,17 +15115,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 293.37 245.11 0)
+			(at 297.18 247.6499 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 293.37 245.11 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12548,6 +15180,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 176.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "74172f37-f94e-4e76-8469-3d39508335a1")
+		(property "Reference" "TP31"
+			(at 54.356 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b4fdbcb2-fc52-4c65-a05e-48d6c6c6cd09")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP31")
 					(unit 1)
 				)
 			)
@@ -12641,6 +15350,7 @@
 		)
 		(property "Manufacturer" "YAGEO"
 			(at 76.2 38.1 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12651,6 +15361,7 @@
 		)
 		(property "MPN" "RC0603FR-075K1L"
 			(at 76.2 38.1 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12932,17 +15643,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 293.37 151.13 0)
+			(at 297.18 153.6699 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 293.37 151.13 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12994,6 +15708,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "85a1d5f0-d5ef-4d5b-b022-12c76e1835ec")
+		(property "Reference" "TP26"
+			(at 54.356 189.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 189.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "37caabcf-4b26-4867-9d56-c3f820fafa01")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP26")
 					(unit 1)
 				)
 			)
@@ -13087,6 +15878,7 @@
 		)
 		(property "Manufacturer" "YAGEO"
 			(at 72.39 49.53 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13097,6 +15889,7 @@
 		)
 		(property "MPN" "RC0603FR-0727RL"
 			(at 72.39 49.53 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13226,6 +16019,159 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 171.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "886edee5-107e-40b1-9ef9-d185e4d2d5d1")
+		(property "Reference" "TP33"
+			(at 54.356 171.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 171.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a9c21bb-7ad2-4684-a619-6a326a12f431")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 111.76 65.278 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8b9eb3f1-a5f1-4bfc-b888-a4e1f39e41c2")
+		(property "Reference" "TP16"
+			(at 111.76 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 111.76 65.278 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 111.76 65.278 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 65.278 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 111.76 65.278 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "87ec04c5-a20d-4842-abd1-0a39b3418092")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP16")
 					(unit 1)
 				)
 			)
@@ -13401,6 +16347,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 271.78 290.83 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13410,7 +16357,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 271.78 290.83 0)
+			(at 283.21 286.9498 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13541,6 +16489,7 @@
 		)
 		(property "MPN" "0402CG150J500NT"
 			(at 204.216 63.5 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13551,6 +16500,7 @@
 		)
 		(property "Manufacturer" "FH"
 			(at 208.28 66.04 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13624,6 +16574,159 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "950f7edc-a279-44e2-991d-bb86a5076fd9")
+		(property "Reference" "TP28"
+			(at 54.356 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a950c0e-8615-4b59-9514-697b3f5966fb")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 112.014 72.898 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9623e1ff-6b4f-4a93-9b4d-251d9d68004c")
+		(property "Reference" "TP20"
+			(at 112.014 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 112.014 72.898 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 112.014 72.898 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 112.014 72.898 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 112.014 72.898 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "54a9e4b9-3562-4ca9-b52b-c1d924346920")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP20")
 					(unit 1)
 				)
 			)
@@ -13717,7 +16820,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "97f79ce3-9328-47cb-8eef-e9a53086568b")
 		(property "Reference" "C13"
 			(at 74.93 87.6299 0)
@@ -13798,6 +16900,7 @@
 		)
 		(property "MPN" "CL05A106MQ5NUNC"
 			(at 71.12 88.9 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13807,7 +16910,8 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 71.12 88.9 0)
+			(at 69.596 92.964 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13859,6 +16963,390 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 224.79 38.608 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a0ee820-47bb-4f5a-b162-40007f283cb0")
+		(property "Reference" "TP5"
+			(at 223.774 37.592 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 224.79 38.608 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 224.79 38.608 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 38.608 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 224.79 38.608 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "81517f32-8567-4228-b07e-bb8bc1be29c5")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a1254b1-72c4-4c23-8cb4-c665941d85f6")
+		(property "Reference" "TP36"
+			(at 54.356 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "01c3c492-c29e-46ef-b2d7-67e8799e99e9")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 154.432 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9f6fa298-3fc9-4653-96b7-4caa7f09ec00")
+		(property "Reference" "TP3"
+			(at 155.956 42.926 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 154.432 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 154.432 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.432 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 154.432 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50817889-f74d-48a3-a605-bf991e0dcfc8")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_S")
+		(at 76.2 54.102 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a08ad5c4-328b-4601-b732-1e0178880d83")
+		(property "Reference" "TP21"
+			(at 76.2 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_S"
+			(at 76.2 54.102 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 76.2 54.102 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 54.102 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 76.2 54.102 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "591c9997-e242-422b-8e27-b44d3b0c97e4")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_W")
+		(at 102.108 41.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a08f788a-6cdd-4b57-81e2-e6f441af0ac1")
+		(property "Reference" "TP17"
+			(at 100.584 41.656 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Tomachie_TP_W"
+			(at 102.108 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 102.108 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.108 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 102.108 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2d044280-12a0-414c-a580-d49cdbc06ff6")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP17")
 					(unit 1)
 				)
 			)
@@ -14008,6 +17496,7 @@
 		)
 		(property "MPN" "SN74AHCT1G125DBVR"
 			(at 231.14 114.3 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14018,6 +17507,7 @@
 		)
 		(property "Manufacturer" "Texas Instruments"
 			(at 231.14 114.3 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14195,17 +17685,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 293.37 267.97 0)
+			(at 297.18 270.5099 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 293.37 267.97 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14257,6 +17750,160 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 59.182 41.148 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a52b99c2-e74a-4e5d-95c2-bbb0a680c127")
+		(property "Reference" "TP13"
+			(at 58.166 40.132 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 59.182 41.148 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 59.182 41.148 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.182 41.148 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 59.182 41.148 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5542ef7b-c7c9-43a7-b638-b1baa41e0c6b")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 168.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a7463729-df10-4ed5-b023-c82fa55d7b6a")
+		(property "Reference" "TP34"
+			(at 54.356 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "34cd8505-e3d6-4e59-a698-3ffe9f4029ad")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP34")
 					(unit 1)
 				)
 			)
@@ -14353,6 +18000,7 @@
 		)
 		(property "MPN" "TZ-5050S2RGB-5V-I4-H1"
 			(at 271.78 243.84 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14362,7 +18010,8 @@
 			)
 		)
 		(property "Manufacturer" "TUOZHAN"
-			(at 271.78 243.84 0)
+			(at 283.21 239.9598 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14420,6 +18069,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ab233bb5-fd7e-4c66-9afb-af005e93273f")
+		(property "Reference" "TP38"
+			(at 54.356 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "11b29890-0356-4669-8a33-d43b305138e5")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP38")
 					(unit 1)
 				)
 			)
@@ -14498,6 +18224,160 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 191.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b1ea51ea-8cc5-48d9-9036-e0907f24f4b9")
+		(property "Reference" "TP24"
+			(at 54.356 191.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 191.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e2ea2dd-9755-46b0-9151-630af4c4e93b")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 173.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b3f2c589-7b2b-4ef9-9864-7db88fc00a50")
+		(property "Reference" "TP32"
+			(at 54.356 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "09621608-2124-454e-aad3-48626fc15683")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP32")
 					(unit 1)
 				)
 			)
@@ -14590,7 +18470,7 @@
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "b8e44134-1788-4d2e-aa02-51e4e29ba598")
 		(property "Reference" "J1"
 			(at 176.53 144.78 0)
@@ -14669,6 +18549,7 @@
 		)
 		(property "MPN" "TSW-113-07-G-S"
 			(at 169.164 169.164 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14679,6 +18560,7 @@
 		)
 		(property "Manufacturer" "Samtec Inc."
 			(at 172.212 164.338 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15014,17 +18896,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 293.37 217.17 0)
+			(at 297.18 219.7099 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 293.37 217.17 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15249,17 +19134,20 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 233.68 76.2 0)
+			(at 236.22 78.7399 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "MPN" "RC0402FR-071KL"
 			(at 233.68 76.2 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15550,6 +19438,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 195.58 77.978 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bee8a135-4d33-483c-82c5-fc47e9ab6eec")
+		(property "Reference" "TP15"
+			(at 195.58 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 195.58 77.978 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 195.58 77.978 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 77.978 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 195.58 77.978 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eb6205c7-8a37-468f-bedd-c9cceaf84e25")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 245.11 88.9 0)
 		(unit 1)
@@ -15706,6 +19670,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 261.62 137.668 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c0b85b18-e47d-4c0e-98ea-a0297d74ff92")
+		(property "Reference" "TP9"
+			(at 261.62 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 261.62 137.668 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 261.62 137.668 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 137.668 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 261.62 137.668 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "24e4170c-9aa1-4b09-8ecd-d4019c03bb14")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 71.12 44.45 90)
 		(unit 1)
@@ -15793,6 +19833,7 @@
 		)
 		(property "Manufacturer" "YAGEO"
 			(at 71.12 44.45 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15803,6 +19844,7 @@
 		)
 		(property "MPN" "RC0603FR-0727RL"
 			(at 71.12 44.45 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15949,17 +19991,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 185.42 34.29 0)
+			(at 189.23 36.8299 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 185.42 34.29 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16011,6 +20056,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 181.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c916c11e-9cac-4fd0-8bb0-2b1f3ec94a7d")
+		(property "Reference" "TP29"
+			(at 54.356 181.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 181.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "30593471-340e-4430-8f25-85786ec9393b")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP29")
 					(unit 1)
 				)
 			)
@@ -16106,17 +20228,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 292.1 194.31 0)
+			(at 295.91 196.8499 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 292.1 194.31 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16263,6 +20388,7 @@
 		)
 		(property "MPN" "CL05A106MQ5NUNC"
 			(at 24.13 95.25 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16273,6 +20399,7 @@
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 24.13 95.25 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16324,6 +20451,235 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 78.74 33.528 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ccd8d532-9b8d-4c7d-82b9-e350f59456a7")
+		(property "Reference" "TP44"
+			(at 78.74 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 78.74 33.528 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 78.74 33.528 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 33.528 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 78.74 33.528 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1aee56ca-2c17-47b0-8812-28c765789959")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 250.19 104.648 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cf21162b-1353-435c-8929-306e5682eddb")
+		(property "Reference" "TP14"
+			(at 250.19 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 250.19 104.648 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 250.19 104.648 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 104.648 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 250.19 104.648 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "facd0d94-dc09-4e15-930f-be2f91757fc7")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 166.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d0c9f732-49bf-439f-8bbd-7b242f772acc")
+		(property "Reference" "TP35"
+			(at 54.356 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "09fb22a2-af71-430f-8db2-c109bcbf3c84")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP35")
 					(unit 1)
 				)
 			)
@@ -16576,6 +20932,7 @@
 		)
 		(property "MPN" "CL10A475KP8NNNC"
 			(at 104.14 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16585,13 +20942,15 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 104.14 46.99 0)
+			(at 107.95 49.5299 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Notes" ""
@@ -16637,6 +20996,159 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 217.17 60.198 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d54be59f-a9b5-445d-9835-14316f68cfea")
+		(property "Reference" "TP22"
+			(at 218.186 59.182 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 217.17 60.198 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 217.17 60.198 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 60.198 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 217.17 60.198 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d3acfcd-de42-461f-a2c6-4ef57a296d2b")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 239.268 70.358 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dbf41d81-7729-4aa1-be17-81fe0534174b")
+		(property "Reference" "TP6"
+			(at 239.268 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 239.268 70.358 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 239.268 70.358 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 239.268 70.358 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 239.268 70.358 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0a2ec487-0689-4fe1-bab5-b0cc31241cf9")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -16716,6 +21228,82 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 33.528 114.808 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dcd1aab0-8aad-4c45-9cf4-fdceae318d90")
+		(property "Reference" "TP41"
+			(at 33.528 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 33.528 114.808 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 33.528 114.808 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.528 114.808 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 33.528 114.808 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "01fd07e0-0678-4e57-b4db-bf86aa388398")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP41")
 					(unit 1)
 				)
 			)
@@ -16811,17 +21399,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 294.64 290.83 0)
+			(at 298.45 293.3699 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 294.64 290.83 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16947,6 +21538,7 @@
 		)
 		(property "MPN" "AMS1117-3.3"
 			(at 40.64 116.84 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16957,6 +21549,7 @@
 		)
 		(property "Manufacturer" "EVVO"
 			(at 40.64 116.84 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17131,17 +21724,20 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 106.68 36.83 0)
+			(at 109.22 39.3699 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "MPN" "RC0603FR-0733RL"
 			(at 106.68 36.83 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17266,6 +21862,7 @@
 		)
 		(property "MPN" "0402CG150J500NT"
 			(at 251.714 81.788 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17276,6 +21873,7 @@
 		)
 		(property "Manufacturer" "FH"
 			(at 246.888 84.074 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17349,6 +21947,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_S")
+		(at 63.246 40.132 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e26edbb0-3309-449d-973a-f5ad6a3eaf2f")
+		(property "Reference" "TP11"
+			(at 64.262 41.148 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_S"
+			(at 63.246 40.132 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 63.246 40.132 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.246 40.132 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 63.246 40.132 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a516503c-9c29-484a-aceb-393ae4a59c92")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -17444,6 +22119,7 @@
 		)
 		(property "MPN" "CL05B104KO5NNNC"
 			(at 134.62 33.02 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17454,6 +22130,7 @@
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 134.62 33.02 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17578,6 +22255,7 @@
 		)
 		(property "MPN" "ABM8-272-T3"
 			(at 219.71 62.23 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17588,6 +22266,7 @@
 		)
 		(property "Manufacturer" "Abracon LLC"
 			(at 219.71 62.23 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17762,6 +22441,7 @@
 		)
 		(property "MPN" "CL05B104KO5NNNC"
 			(at 124.46 38.1 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17772,6 +22452,7 @@
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 124.46 38.1 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17823,6 +22504,82 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_N")
+		(at 261.62 160.528 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eb9b16ee-2d9d-4c4f-81be-1d534e03a8a6")
+		(property "Reference" "TP10"
+			(at 261.62 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Tomachie_TP_N"
+			(at 261.62 160.528 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 261.62 160.528 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 160.528 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 261.62 160.528 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "040c738d-3512-40af-a74c-d4df6d008713")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -18465,17 +23222,20 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 292.1 316.23 0)
+			(at 295.91 318.7699 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 292.1 316.23 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18527,6 +23287,83 @@
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
 					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Pads:Tomachie_TP_E")
+		(at 52.832 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fbcd7933-ac98-4046-8d37-35288b6ff974")
+		(property "Reference" "TP30"
+			(at 54.356 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Tomachie_TP_E"
+			(at 52.832 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Pads:TPS127"
+			(at 52.832 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.832 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Test Point"
+			(at 52.832 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "19103f83-859c-49ef-b104-728388be4627")
+		)
+		(instances
+			(project "Lamoka1-DEV-board"
+				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
+					(reference "TP30")
 					(unit 1)
 				)
 			)
