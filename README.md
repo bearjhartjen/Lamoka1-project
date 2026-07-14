@@ -2,9 +2,9 @@
  
 <div align="center">
 
-![Boost converter](Images/Boostconverter.jpg)
+![Lamoka1 DEV-Brain](Images/Lamoka1-DEV-Brain.png)
 
-This is the Lamoka1s boost converter schematic thus far. More information regarding the design choices can be found [here.](HARDWARE/DESIGN_NOTES.md)
+The DEV-Brain is for testing control and UI of the Lamoka1 in a safe, easy and cheap medium. More information can be found [here.](Lamoka1-DEV-Brain/Readme.md)
 ---
 
 
