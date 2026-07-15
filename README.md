@@ -83,3 +83,12 @@ The Lamoka1 is simply designed to be as cheap as possible while still being the 
 
 ---
 
+
+
+## Questions or concerns? 
+
+Contact Flamingo & Cactus (managing the Lamoka1) by email at: Flamingoncactusgroup@gmail.com
+
+OR
+
+Create an issue on this Github page
