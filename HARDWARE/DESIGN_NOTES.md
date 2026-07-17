@@ -39,3 +39,7 @@ The Lamoka1 will have many modes, there will be combo modes, which are for gener
 ## future model plans
  
  The lamoka1 is just trying to make a cheap MVP product for a craft fair, the Lamoka project strives to make the best in class systems. For future models, we need the USB-C port to work for fast data transfer, and high power delivery (Im not sure at what voltage the USB-C will be yet). I plan to have that feature in the next Lamoka model. In much futher along models, i hope to put in a AI chip to the model so it can handle complex tasks to optimize everything, a self aware agent to control the system only, some cool LED interface. i prefer to refrain from wireless connecting just for security, it doesnt seem to clear to me why these systems would need wireless, they should just work well themselves, an AI chip would help this "work by itself ideal". On the next model there should be a bracket plate, you screw the plate into the surface, then you put the Lamoka unit on 45 degree tilit, turn the unit right side up, and its locked in, maybe we put some magnents in so its attracted to being upright and tight, but you can easily take it off by twisting it.
+
+## What will the unit look like?
+
+The Lamoka1 will have ten RGB LEDs (Neo-pixels) and one push button. The lights can display all sorts of data, including but certainly not limited to, power usage and power input (inverter out and charger in) battery capacity, temperature, anything that people want. The unit is open for whatever anyone wants it to do and behave.

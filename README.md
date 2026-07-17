@@ -26,13 +26,12 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 -  **Pure sine wave output** — or virtually any waveform you want, up to a 180V peak limit
 -  **Modular & repairable** — built from replaceable, well-documented sections instead of a sealed, disposable unit
 -  **Fully configurable** — every behavior can be customized through user code, not locked behind firmware
--  **Dual operating modes** — standard sine-wave operation, or a stripped-down "dumb mode" for purely resistive loads (see below)
 -  **Adaptive cooling** — per-section temperature sensing drives a PWM-controlled fan, scaling speed precisely instead of crude on/off switching
 -  **Minimal UI** — ten RGB LEDs and a single push button handle the entire physical interface
 
 ---
 
-## Specifications
+## Specifications for Inversion
 
 | Parameter | Value |
 |:---|:---|
@@ -66,7 +65,7 @@ Lamoka1 uses a split license, matching the folder you're in:
 
 ## Lamoka project goals
 
-We want anyone to be able to pick up any Lamoka unit, and use it for what they need, whether that be charging up a 12v battery with AC power, or managing whole solar setups. These units are designed to be reliable and usefull. We are taking the "smart" functions of inverter/chargers and actually allowing the unit to utilize its smarts, there is no reason that a smart inverter charger NEEDs a bluetooth or WIFI connection, the unit should just take care of everything. 
+We want anyone to be able to pick up any Lamoka unit, and use it for what they need. These units are designed to be reliable and usefull. We are giving the power back to the people. It is your power, you should get the freedom to control it how you see fit. 
 
 
 ## Lamoka1 caution 
