@@ -12,4 +12,5 @@
 	(lib (name "2026-07-06_18-22-10") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components/2026-07-06_18-22-10.kicad_sym") (options "") (descr ""))
 	(lib (name "2N7002K-7") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components/2N7002K-7.kicad_sym") (options "") (descr ""))
 	(lib (name "2026-07-06_18-33-39") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components/2026-07-06_18-33-39.kicad_sym") (options "") (descr ""))
+	(lib (name "BQ25756") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/2026-07-17_18-30-11.kicad_sym") (options "") (descr ""))
 )

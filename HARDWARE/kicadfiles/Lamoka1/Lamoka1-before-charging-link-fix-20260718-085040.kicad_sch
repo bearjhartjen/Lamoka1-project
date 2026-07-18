@@ -118,7 +118,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "ChargingSection.kicad_sch"
+		(property "Sheetfile" "untitled.kicad_sch"
 			(at 401.32 259.0296 0)
 			(show_name no)
 			(do_not_autoplace no)
