@@ -64,7 +64,7 @@
 			)
 		)
 		(pin "SIGM" input
-			(at 213.36 256.54 270)
+			(at 214.63 256.54 270)
 			(uuid "82c2a29e-740a-4df8-9dd9-d1ac3b91c3b5")
 			(effects
 				(font
@@ -87,6 +87,52 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 29.21 285.115)
+		(size 249.555 209.55)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "eacfaa29-95bd-4b2f-8343-38bb09a7036c")
+		(property "Sheetname" "Control"
+			(at 29.21 282.4984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 5.08 5.08)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Control.kicad_sch"
+			(at 29.21 495.2496 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390"
+					(page "4")
 				)
 			)
 		)

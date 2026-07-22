@@ -810,7 +810,7 @@
         "uuid": "50fe8bbc-b3f6-4de5-9677-9b5870b87390"
       }
     ],
-    "used_designators": "J1-3,NT1-5,R1-7,R36,R41-42,C1-6,C29,C33-36,#PWR1-26,#PWR28-29,#PWR33,#PWR43-49,U1-3,Q1-6",
+    "used_designators": "L1,J1-3,NT1-5,R1-16,R36,R41-42,D1-2,C1-23,C29,C33-36,#PWR1-39,#PWR43-49,U1-3,Q1-9",
     "variants": []
   },
   "sheets": [
@@ -825,6 +825,10 @@
     [
       "fb4f0aa7-d40c-468b-b4b6-22d46a6e117f",
       "Charging Section"
+    ],
+    [
+      "eacfaa29-95bd-4b2f-8343-38bb09a7036c",
+      "Control"
     ]
   ],
   "text_variables": {},
