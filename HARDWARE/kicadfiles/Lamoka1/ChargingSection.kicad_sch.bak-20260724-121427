@@ -3270,7 +3270,7 @@
 		)
 		(uuid "29b6d89c-5e5b-47db-a68a-c4c469fbb615")
 	)
-	(label "I2C_SCL"
+	(label "I2C SCL"
 		(at 44.45 26.67 0)
 		(effects
 			(font
@@ -3320,7 +3320,7 @@
 		)
 		(uuid "3d2c9444-a136-411f-b814-28ae7b3d873c")
 	)
-	(label "I2C_SDA"
+	(label "I2C SDA"
 		(at 44.45 39.37 0)
 		(effects
 			(font
@@ -3330,7 +3330,7 @@
 		)
 		(uuid "3e039d0f-19f0-46a9-a60b-730d9db8ea3a")
 	)
-	(label "CHG_INT"
+	(label "I2C INT"
 		(at 106.68 33.02 180)
 		(effects
 			(font
@@ -3550,7 +3550,7 @@
 		)
 		(uuid "88c7cf6f-90af-43e6-affc-3eea484344d6")
 	)
-	(label "CHG_INT"
+	(label "I2C INT"
 		(at 44.45 64.77 0)
 		(effects
 			(font
@@ -3560,7 +3560,7 @@
 		)
 		(uuid "88f670c7-4829-4fd4-be8c-f834f32186f0")
 	)
-	(label "CHG_CE"
+	(label "I2C CE"
 		(at 106.68 43.18 180)
 		(effects
 			(font
@@ -3730,7 +3730,7 @@
 		)
 		(uuid "c2aca97d-f50f-4eae-b136-4072d8aa46cb")
 	)
-	(label "CHG_CE"
+	(label "I2C CE"
 		(at 44.45 52.07 0)
 		(effects
 			(font
@@ -3760,7 +3760,7 @@
 		)
 		(uuid "cd18b0cc-11f4-421d-a67c-7510b1e20532")
 	)
-	(label "I2C_SCL"
+	(label "I2C SCL"
 		(at 106.68 27.94 180)
 		(effects
 			(font
@@ -3790,7 +3790,7 @@
 		)
 		(uuid "e0592d24-7cff-4ed2-a8a0-f51ebd945589")
 	)
-	(label "I2C_SDA"
+	(label "I2C SDA"
 		(at 106.68 30.48 180)
 		(effects
 			(font
@@ -3830,7 +3830,7 @@
 		)
 		(uuid "fa762adb-d3c8-421e-8b6d-8deb2d0b3218")
 	)
-	(hierarchical_label "CHG_INT"
+	(hierarchical_label "GPIO #?"
 		(shape input)
 		(at 31.75 64.77 180)
 		(effects
@@ -3852,7 +3852,7 @@
 		)
 		(uuid "1f84d5ef-1150-48a3-9be2-46ca366344be")
 	)
-	(hierarchical_label "I2C_SDA"
+	(hierarchical_label "GPIO #?"
 		(shape input)
 		(at 31.75 39.37 180)
 		(effects
@@ -3885,7 +3885,7 @@
 		)
 		(uuid "64c73097-ad7f-4b93-bf53-f8811b0e2f63")
 	)
-	(hierarchical_label "I2C_SCL"
+	(hierarchical_label "GPIO #?"
 		(shape input)
 		(at 31.75 26.67 180)
 		(effects
@@ -3918,7 +3918,7 @@
 		)
 		(uuid "d74eb007-74dd-4888-b231-bae95c2ba772")
 	)
-	(hierarchical_label "CHG_CE"
+	(hierarchical_label "GPIO #?"
 		(shape input)
 		(at 31.75 52.07 180)
 		(effects
@@ -3951,7 +3951,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SIR680LDP-T1-RE3"
+		(property "Value" "NMOS"
 			(at 131.572 141.478 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3973,7 +3973,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/77478/sir680ldp.pdf"
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
 			(at 127 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -3984,7 +3984,7 @@
 				)
 			)
 		)
-		(property "Description" "80V N-MOSFET; replace generic symbol with verified PowerPAK SO-8 pin mapping"
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
 			(at 127 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4069,7 +4069,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "133k 0.1%"
+		(property "Value" "133k"
 			(at 176.53 38.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4080,7 +4080,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 172.212 36.83 90)
 			(hide yes)
 			(show_name no)
@@ -4102,7 +4102,7 @@
 				)
 			)
 		)
-		(property "Description" "FSW_SYNC resistor for approximately 250kHz"
+		(property "Description" "Resistor"
 			(at 173.99 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -4227,7 +4227,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SIR680LDP-T1-RE3"
+		(property "Value" "NMOS"
 			(at 155.194 153.162 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4249,7 +4249,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/77478/sir680ldp.pdf"
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
 			(at 151.13 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -4260,7 +4260,7 @@
 				)
 			)
 		)
-		(property "Description" "80V N-MOSFET; replace generic symbol with verified PowerPAK SO-8 pin mapping"
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
 			(at 151.13 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -4343,7 +4343,7 @@
 				)
 			)
 		)
-		(property "Value" "470nF 25V X7R"
+		(property "Value" "470n"
 			(at 167.64 149.606 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4353,7 +4353,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 171.45 145.0848 0)
 			(hide yes)
 			(show_name no)
@@ -4375,7 +4375,7 @@
 				)
 			)
 		)
-		(property "Description" "BTST2-SW2 bootstrap capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 167.64 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -4423,7 +4423,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "220uF 63V low-ESR"
+		(property "Value" "220u"
 			(at 50.038 125.222 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4456,7 +4456,7 @@
 				)
 			)
 		)
-		(property "Description" "Input bulk capacitor; select exact manufacturer footprint"
+		(property "Description" "Unpolarized capacitor"
 			(at 48.26 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -4504,7 +4504,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10R"
+		(property "Value" "10"
 			(at 186.436 119.634 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4515,7 +4515,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 183.642 118.11 90)
 			(hide yes)
 			(show_name no)
@@ -4537,7 +4537,7 @@
 				)
 			)
 		)
-		(property "Description" "SRN Kelvin filter resistor"
+		(property "Description" "Resistor"
 			(at 185.42 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -4586,7 +4586,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.23k 0.1%"
+		(property "Value" "5.23k"
 			(at 133.35 90.1699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4597,7 +4597,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 129.032 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -4619,7 +4619,7 @@
 				)
 			)
 		)
-		(property "Description" "TS upper bias resistor for 10k NTC profile"
+		(property "Description" "Resistor"
 			(at 130.81 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4821,7 +4821,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470nF 50V X7R"
+		(property "Value" "470u"
 			(at 77.47 149.606 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4832,7 +4832,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 78.74 145.0848 0)
 			(hide yes)
 			(show_name no)
@@ -4854,7 +4854,7 @@
 				)
 			)
 		)
-		(property "Description" "ACP-ACN differential filter"
+		(property "Description" "Unpolarized capacitor"
 			(at 74.93 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -4903,7 +4903,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.00M 0.1%"
+		(property "Value" "1M"
 			(at 251.46 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4914,7 +4914,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" ""
 			(at 247.142 52.07 90)
 			(hide yes)
 			(show_name no)
@@ -4936,7 +4936,7 @@
 				)
 			)
 		)
-		(property "Description" "ACUV/ACOV divider top"
+		(property "Description" "Resistor"
 			(at 248.92 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4993,7 +4993,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 37.592 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -5015,7 +5015,7 @@
 				)
 			)
 		)
-		(property "Description" "INT open-drain pull-up"
+		(property "Description" "Resistor"
 			(at 39.37 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -5072,7 +5072,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 37.592 35.56 90)
 			(hide yes)
 			(show_name no)
@@ -5094,7 +5094,7 @@
 				)
 			)
 		)
-		(property "Description" "I2C SDA pull-up to 3V3"
+		(property "Description" "Resistor"
 			(at 39.37 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -5142,7 +5142,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF 63V low-ESR"
+		(property "Value" "100u"
 			(at 200.914 137.922 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5175,7 +5175,7 @@
 				)
 			)
 		)
-		(property "Description" "Battery-side bulk capacitor; select exact manufacturer footprint"
+		(property "Description" "Unpolarized capacitor"
 			(at 200.66 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -5224,7 +5224,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "37.4k 0.1%"
+		(property "Value" "37.4k"
 			(at 251.46 68.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5235,7 +5235,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 247.142 67.31 90)
 			(hide yes)
 			(show_name no)
@@ -5257,7 +5257,7 @@
 				)
 			)
 		)
-		(property "Description" "ACUV/ACOV divider bottom"
+		(property "Description" "Resistor"
 			(at 248.92 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -5446,7 +5446,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "425f4737-e84b-4729-bba4-e035122a89e9")
 		(property "Reference" "R23"
@@ -5460,7 +5460,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DNP"
+		(property "Value" "10k"
 			(at 31.75 90.1699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5471,7 +5471,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 27.432 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -5493,7 +5493,7 @@
 				)
 			)
 		)
-		(property "Description" "Unused input series-RC branch"
+		(property "Description" "Resistor"
 			(at 29.21 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -5627,7 +5627,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 37.592 48.26 90)
 			(hide yes)
 			(show_name no)
@@ -5649,7 +5649,7 @@
 				)
 			)
 		)
-		(property "Description" "CE default pull-up"
+		(property "Description" "Resistor"
 			(at 39.37 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -5698,7 +5698,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "287k 0.1%"
+		(property "Value" "287k"
 			(at 251.46 60.9599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5709,7 +5709,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 247.142 59.69 90)
 			(hide yes)
 			(show_name no)
@@ -5731,7 +5731,7 @@
 				)
 			)
 		)
-		(property "Description" "ACUV/ACOV divider middle"
+		(property "Description" "Resistor"
 			(at 248.92 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -5778,7 +5778,7 @@
 				)
 			)
 		)
-		(property "Value" "2mOhm 1% >=3W"
+		(property "Value" "2m"
 			(at 75.438 116.586 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5810,7 +5810,7 @@
 				)
 			)
 		)
-		(property "Description" "Input current shunt; exact footprint must match selected shunt"
+		(property "Description" "Resistor"
 			(at 74.93 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -5858,7 +5858,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SIR680LDP-T1-RE3"
+		(property "Value" "NMOS"
 			(at 155.448 141.732 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5880,7 +5880,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/77478/sir680ldp.pdf"
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
 			(at 151.13 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -5891,7 +5891,7 @@
 				)
 			)
 		)
-		(property "Description" "80V N-MOSFET; replace generic symbol with verified PowerPAK SO-8 pin mapping"
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
 			(at 151.13 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -6053,7 +6053,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "30.1k 0.1%"
+		(property "Value" "30.1k"
 			(at 133.35 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6064,7 +6064,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 129.032 96.52 90)
 			(hide yes)
 			(show_name no)
@@ -6086,7 +6086,7 @@
 				)
 			)
 		)
-		(property "Description" "TS lower bias resistor for 10k NTC profile"
+		(property "Description" "Resistor"
 			(at 130.81 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -6134,7 +6134,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10R"
+		(property "Value" "10"
 			(at 178.816 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6145,7 +6145,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 176.022 118.11 90)
 			(hide yes)
 			(show_name no)
@@ -6167,7 +6167,7 @@
 				)
 			)
 		)
-		(property "Description" "SRP Kelvin filter resistor"
+		(property "Description" "Resistor"
 			(at 177.8 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -6214,7 +6214,7 @@
 				)
 			)
 		)
-		(property "Value" "470nF 50V X7R"
+		(property "Value" "470n"
 			(at 181.61 99.568 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6224,7 +6224,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 185.42 95.5548 0)
 			(hide yes)
 			(show_name no)
@@ -6246,7 +6246,7 @@
 				)
 			)
 		)
-		(property "Description" "SRP-SRN differential filter"
+		(property "Description" "Unpolarized capacitor"
 			(at 181.61 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -6634,7 +6634,7 @@
 				)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "0"
 			(at 195.58 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6644,7 +6644,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 195.58 62.738 90)
 			(hide yes)
 			(show_name no)
@@ -6666,7 +6666,7 @@
 				)
 			)
 		)
-		(property "Description" "REGN to DRV_SUP link"
+		(property "Description" "Resistor"
 			(at 195.58 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -6791,7 +6791,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7uF 25V X7R"
+		(property "Value" "4.7u"
 			(at 184.404 66.802 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6802,7 +6802,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" ""
 			(at 190.1952 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -6824,7 +6824,7 @@
 				)
 			)
 		)
-		(property "Description" "REGN local decoupling"
+		(property "Description" "Unpolarized capacitor"
 			(at 189.23 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -6872,7 +6872,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF 100V X7R"
+		(property "Value" "100n"
 			(at 72.644 141.732 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6883,7 +6883,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 74.93 137.4648 0)
 			(hide yes)
 			(show_name no)
@@ -6905,7 +6905,7 @@
 				)
 			)
 		)
-		(property "Description" "ACP common-mode filter"
+		(property "Description" "Unpolarized capacitor"
 			(at 71.12 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -6953,7 +6953,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7uF 25V X7R"
+		(property "Value" "4.7u"
 			(at 204.978 66.802 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6964,7 +6964,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" ""
 			(at 205.4352 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -6986,7 +6986,7 @@
 				)
 			)
 		)
-		(property "Description" "DRV_SUP local decoupling"
+		(property "Description" "Unpolarized capacitor"
 			(at 204.47 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -7110,7 +7110,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF 100V X7R"
+		(property "Value" "100n"
 			(at 177.8 107.696 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7120,7 +7120,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 181.61 103.1748 0)
 			(hide yes)
 			(show_name no)
@@ -7142,7 +7142,7 @@
 				)
 			)
 		)
-		(property "Description" "SRP common-mode filter"
+		(property "Description" "Unpolarized capacitor"
 			(at 177.8 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -7190,7 +7190,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF 100V X7R"
+		(property "Value" "1u"
 			(at 162.56 132.842 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7201,7 +7201,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+		(property "Footprint" ""
 			(at 166.0652 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -7223,7 +7223,7 @@
 				)
 			)
 		)
-		(property "Description" "Battery bridge high-frequency decoupling"
+		(property "Description" "Unpolarized capacitor"
 			(at 165.1 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -7271,7 +7271,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SIR680LDP-T1-RE3"
+		(property "Value" "NMOS"
 			(at 130.556 154.178 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7293,7 +7293,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/77478/sir680ldp.pdf"
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
 			(at 127 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -7304,7 +7304,7 @@
 				)
 			)
 		)
-		(property "Description" "80V N-MOSFET; replace generic symbol with verified PowerPAK SO-8 pin mapping"
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
 			(at 127 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -7387,7 +7387,7 @@
 				)
 			)
 		)
-		(property "Value" "5mOhm 1% >=3W"
+		(property "Value" "5m"
 			(at 181.61 129.54 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7419,7 +7419,7 @@
 				)
 			)
 		)
-		(property "Description" "Battery current shunt; exact footprint must match selected shunt"
+		(property "Description" "Resistor"
 			(at 181.61 127 0)
 			(hide yes)
 			(show_name no)
@@ -7466,7 +7466,7 @@
 				)
 			)
 		)
-		(property "Value" "10R"
+		(property "Value" "10"
 			(at 85.09 130.302 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7476,7 +7476,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 80.772 128.27 90)
 			(hide yes)
 			(show_name no)
@@ -7498,7 +7498,7 @@
 				)
 			)
 		)
-		(property "Description" "ACN Kelvin filter resistor"
+		(property "Description" "Resistor"
 			(at 82.55 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -7624,7 +7624,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "29.4k 0.1%"
+		(property "Value" "29.4k"
 			(at 60.96 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7635,7 +7635,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 56.642 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -7657,7 +7657,7 @@
 				)
 			)
 		)
-		(property "Description" "Safe-default 4S LiFePO4 feedback divider bottom"
+		(property "Description" "Resistor"
 			(at 58.42 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7935,7 +7935,7 @@
 				)
 			)
 		)
-		(property "Value" "2.21k 0.1%"
+		(property "Value" "2.21k"
 			(at 98.044 54.864 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7945,7 +7945,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 96.52 52.578 90)
 			(hide yes)
 			(show_name no)
@@ -7967,7 +7967,7 @@
 				)
 			)
 		)
-		(property "Description" "ILIM_HIZ hardware ceiling with 2mOhm input shunt"
+		(property "Description" "Resistor"
 			(at 96.52 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -8002,7 +8002,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad92b251-08cc-4283-a82b-12186d78d566")
 		(property "Reference" "C23"
@@ -8016,7 +8016,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DNP"
+		(property "Value" "100n"
 			(at 33.02 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8027,7 +8027,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 30.1752 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -8049,7 +8049,7 @@
 				)
 			)
 		)
-		(property "Description" "Unused input series-RC branch"
+		(property "Description" "Unpolarized capacitor"
 			(at 29.21 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -8098,7 +8098,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF 100V X7R"
+		(property "Value" "1u"
 			(at 266.7 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8109,7 +8109,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+		(property "Footprint" ""
 			(at 263.8552 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -8131,7 +8131,7 @@
 				)
 			)
 		)
-		(property "Description" "VAC local decoupling"
+		(property "Description" "Unpolarized capacitor"
 			(at 262.89 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -8180,7 +8180,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "249k 0.1%"
+		(property "Value" "249k"
 			(at 60.96 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8191,7 +8191,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 56.642 95.25 90)
 			(hide yes)
 			(show_name no)
@@ -8213,7 +8213,7 @@
 				)
 			)
 		)
-		(property "Description" "Battery feedback divider top"
+		(property "Description" "Resistor"
 			(at 58.42 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -8262,7 +8262,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "V1FM10-M3/H"
+		(property "Value" "D"
 			(at 177.8 143.5099 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8273,7 +8273,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" ""
 			(at 175.26 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -8284,7 +8284,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/87557/v1fm10.pdf"
+		(property "Datasheet" ""
 			(at 175.26 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -8295,7 +8295,7 @@
 				)
 			)
 		)
-		(property "Description" "100V 1A Schottky bootstrap diode; anode DRV_SUP, cathode BTST2"
+		(property "Description" "Diode"
 			(at 175.26 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -8366,7 +8366,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "V1FM10-M3/H"
+		(property "Value" "D"
 			(at 105.41 143.5099 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8377,7 +8377,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" ""
 			(at 102.87 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -8388,7 +8388,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/87557/v1fm10.pdf"
+		(property "Datasheet" ""
 			(at 102.87 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -8399,7 +8399,7 @@
 				)
 			)
 		)
-		(property "Description" "100V 1A Schottky bootstrap diode; anode DRV_SUP, cathode BTST1"
+		(property "Description" "Diode"
 			(at 102.87 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -8468,7 +8468,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF 100V X7R"
+		(property "Value" "1u"
 			(at 104.394 125.222 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8478,7 +8478,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+		(property "Footprint" ""
 			(at 101.9048 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -8500,7 +8500,7 @@
 				)
 			)
 		)
-		(property "Description" "Input bridge high-frequency decoupling"
+		(property "Description" "Unpolarized capacitor"
 			(at 102.87 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -8557,7 +8557,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 37.592 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -8579,7 +8579,7 @@
 				)
 			)
 		)
-		(property "Description" "I2C SCL pull-up to 3V3"
+		(property "Description" "Resistor"
 			(at 39.37 22.86 0)
 			(hide yes)
 			(show_name no)
@@ -8626,7 +8626,7 @@
 				)
 			)
 		)
-		(property "Value" "470nF 25V X7R"
+		(property "Value" "470n"
 			(at 111.76 149.606 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8636,7 +8636,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 115.57 145.0848 0)
 			(hide yes)
 			(show_name no)
@@ -8658,7 +8658,7 @@
 				)
 			)
 		)
-		(property "Description" "BTST1-SW1 bootstrap capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 111.76 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -8705,7 +8705,7 @@
 				)
 			)
 		)
-		(property "Value" "2.61k 0.1%"
+		(property "Value" "2.61k"
 			(at 90.17 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8715,7 +8715,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 90.17 50.038 90)
 			(hide yes)
 			(show_name no)
@@ -8737,7 +8737,7 @@
 				)
 			)
 		)
-		(property "Description" "ICHG hardware ceiling; MCU normally commands a lower value over I2C"
+		(property "Description" "Resistor"
 			(at 90.17 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -8938,7 +8938,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF 100V X7R"
+		(property "Value" "100n"
 			(at 185.42 107.696 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8948,7 +8948,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 189.23 103.1748 0)
 			(hide yes)
 			(show_name no)
@@ -8970,7 +8970,7 @@
 				)
 			)
 		)
-		(property "Description" "SRN common-mode filter"
+		(property "Description" "Unpolarized capacitor"
 			(at 185.42 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -9008,7 +9008,7 @@
 		(dnp no)
 		(uuid "d9e02f15-ebb3-4e76-a707-bcf311a3001f")
 		(property "Reference" "J2"
-			(at 29.21 173.482 0)
+			(at 28.575 180.34 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9017,8 +9017,8 @@
 				)
 			)
 		)
-		(property "Value" "BAT TEMP: 10k NTC B3435"
-			(at 30.226 175.768 0)
+		(property "Value" "Conn_01x02_Pin"
+			(at 24.13 182.626 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9049,7 +9049,7 @@
 				)
 			)
 		)
-		(property "Description" "Battery thermistor between BAT-TEMP-TS and BAT-TEMP-GND"
+		(property "Description" "Generic connector, single row, 01x02, script generated"
 			(at 27.94 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -9096,7 +9096,7 @@
 				)
 			)
 		)
-		(property "Value" "10R"
+		(property "Value" "10"
 			(at 69.85 130.302 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9106,7 +9106,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 65.532 128.27 90)
 			(hide yes)
 			(show_name no)
@@ -9128,7 +9128,7 @@
 				)
 			)
 		)
-		(property "Description" "ACP Kelvin filter resistor"
+		(property "Description" "Resistor"
 			(at 67.31 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -9330,7 +9330,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF 63V low-ESR"
+		(property "Value" "100u"
 			(at 187.96 137.922 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9363,7 +9363,7 @@
 				)
 			)
 		)
-		(property "Description" "Battery-side bulk capacitor; select exact manufacturer footprint"
+		(property "Description" "Unpolarized capacitor"
 			(at 193.04 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -9411,7 +9411,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF 100V X7R"
+		(property "Value" "100n"
 			(at 81.534 141.732 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9422,7 +9422,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 82.55 137.4648 0)
 			(hide yes)
 			(show_name no)
@@ -9444,7 +9444,7 @@
 				)
 			)
 		)
-		(property "Description" "ACN common-mode filter"
+		(property "Description" "Unpolarized capacitor"
 			(at 78.74 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -9723,7 +9723,7 @@
 				)
 			)
 		)
-		(property "Value" "SRP1510CA-100M / 10uH"
+		(property "Value" "10u"
 			(at 140.97 143.51 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9744,7 +9744,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.bourns.com/docs/product-datasheets/srp1510ca.pdf"
+		(property "Datasheet" ""
 			(at 140.97 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -9755,7 +9755,7 @@
 				)
 			)
 		)
-		(property "Description" "10uH high-current inductor; import and verify manufacturer land pattern"
+		(property "Description" "Inductor"
 			(at 140.97 146.05 0)
 			(hide yes)
 			(show_name no)
