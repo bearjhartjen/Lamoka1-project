@@ -1,47 +1,59 @@
-# Secret-DEV-Brain — four-color AMS print
+# Secret-DEV-Brain — PCBWAY ACCURATE REV11
 
-Use `Secret-DEV-Brain_Multicolor.3mf` in Bambu Studio. It is an editable
-single assembly with four named parts and contains no pre-sliced G-code.
+This model represents the assembled Lamoka1-DEV-Brain that PCBWay
+is actually delivering. It is a refinement of the original
+realistic multicolor model, not a visual redesign. The original
+USB-C, button, RP2354A and other component bodies, exact KiCad
+flamingo/cactus logo, wordmark, and recessed red/blue NeoPixels
+remain intact.
 
-## AMS mapping
+## Preferred file
+
+Open `Secret-DEV-Brain_PCBWAY_ACCURATE_REV11.3mf` in Bambu Studio.
+It is an editable four-part model and contains no pre-sliced G-code.
+
+The package also includes an editable three-up 3MF, OBJ/MTL,
+four aligned fallback STLs, previews, validation, checksums, and
+reproducible source.
+
+## AMS order
 
 1. A1 — Blue
 2. A2 — Red
 3. A3 — Black
 4. A4 — Silver
 
-The NeoPixels alternate D1 Red, D2 Blue, D3 Red, and so on through D10 Blue.
-The PCB and dark packages are Black. Metal details, the exact repository
-flamingo/cactus logo, the `Secret-DEV-Brain` label, and the NeoPixel
-housings are Silver.
+## PCBWay-delivered J1
 
-## Recommended Bambu Studio setup
+J1 is DNP. PCBWay installs no male header, female header, or other
+connector. The model contains exactly the thirteen bare plated
+through-holes that remain on the manufactured PCB.
 
-- Printer/nozzle: Bambu Lab P1S, 0.4 mm nozzle.
-- Layer height: 0.08 mm is recommended for the cleanest logo and lettering.
-- Wall generator: Arachne.
-- Supports: off.
-- Place the model flat on its PCB back, then confirm it is dropped to the bed.
-- Confirm the four named parts map to the AMS slots above before slicing.
-- Use compatible PLA profiles for all four spools.
+- 2.54 mm pitch.
+- 1.70 mm copper-pad diameter/width.
+- 1.00 mm finished-model bore matching the production drill.
+- Pin 1 has the KiCad square pad; pins 2–13 are round.
+- The bores pass through the full PCB thickness.
+- J1 is absent from the PCBWay BOM and pick-and-place files.
+- The silver top rings use the real KiCad solder-mask openings:
+  2.20 mm square for pin 1 and 2.00 mm round for pins 2–13.
+- The rings stand 0.16 mm above the black surface—two layers at the
+  recommended profile—so the slicer cannot hide the silver.
 
-The 3MF is the preferred file. If it does not import correctly, select all
-four files in `parts/` at the same time and choose **load as a single object
-with multiple parts**. Do not center the STLs separately; they already share
-the same coordinates. The OBJ and MTL are a second aligned fallback.
+## Physical-print cleanup
 
-## Accuracy changes
+The previous print exposed 0.04 mm silver sheets and detached
+sub-nozzle slivers that are smaller than one selected print layer.
+Those non-readable artifacts were removed. Actual component bodies,
+packages, logo, text, USB-C shell, button, and LED housings were not
+restyled or enlarged.
 
-- NeoPixel housings come from the repository's original 1:1 STL and match its
-  WS2812B 5.0 x 5.0 mm package. The separate oversized under-plates from the
-  previous four-color model were removed.
-- Each colored optical insert is 3.28 mm in diameter, 0.16 mm thick, and stays
-  0.215 mm below the top of its housing.
-- The flamingo and cactus use the two exact filled polygons from the KiCad
-  `LOGO` footprint. A 0.16 mm outline strengthening offset protects the
-  smallest features for a 0.4 mm nozzle.
-- `Secret-DEV-Brain` uses a minimum 0.44 mm stroke and a 0.24 mm raised
-  silver layer for legibility.
+## P1S settings
 
-See `MODEL_VALIDATION.json` for measured bounds, mesh counts, source hashes,
-and every D1–D10 center/color assignment.
+- 0.4 mm nozzle.
+- 0.08 mm layer height.
+- Arachne wall generator.
+- Slow small perimeters to about 15–20 mm/s for clean J1 rings.
+- Prime tower on; use calibrated black-to-silver flushing.
+- Support only beneath the USB-C shell as with the successful print.
+- No support is needed at J1 because it is a bare hole row.

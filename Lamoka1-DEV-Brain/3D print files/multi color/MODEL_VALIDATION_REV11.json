@@ -1,0 +1,1770 @@
+{
+  "model": "Secret-DEV-Brain PCBWAY ACCURATE REV11",
+  "generated_utc": "2026-07-24T00:45:07.822110Z",
+  "source_sha256": {
+    "repository_multicolor_obj": "3079e7ba2c0582e75e5941599bbc6521f3d183f6c9e019c6bb1db2e9e4f1ce8e",
+    "repository_multicolor_mtl": "3d7468e25a3c13047f8b9e80f73e1ff92ee8e608d13e01bcfe91cdb7e8148473",
+    "production_kicad_pcb": "5d13b932b99d2ec1f8b4be4a85b6d21881406cbe4b16e7ef5cfc7cb809f230b0",
+    "pcbway_bom_csv": "ba71ac04e0fa30a5e98f86dea9ebde23191a425decb6ce20895a004ccfb36742",
+    "pcbway_pick_and_place_csv": "b3d3653bb6be87f147756d172bb42a2b3d42b6feb2db9919f8ea99846f3642cc",
+    "fabrication_archive": "aac93649d6f084c0675f9bdfc850242cce2748c6654cde089d866ec55333ac3b"
+  },
+  "pcbway_delivery_evidence": {
+    "J1_present_in_BOM": false,
+    "J1_present_in_pick_and_place": false,
+    "kicad_J1_excluded_from_bom_and_position": true,
+    "kicad_J1_has_exact_pad_and_drill_geometry": true,
+    "drill_report_has_13_x_1mm_PTH": true
+  },
+  "dimensions_mm": {
+    "bbox": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        71.245008,
+        29.999994,
+        4.895
+      ]
+    ],
+    "size": [
+      71.245008,
+      29.999994,
+      4.895
+    ]
+  },
+  "ams_order": [
+    "A1 Blue",
+    "A2 Red",
+    "A3 Black",
+    "A4 Silver"
+  ],
+  "accuracy_and_cleanup": {
+    "original_silver_connected_components": 341,
+    "component_dispositions": {
+      "removed_sub_layer_silver_sheet": 207,
+      "replaced_source_J1_with_clean_bare_PTH_geometry": 26,
+      "retained_original_geometry": 104,
+      "removed_sub_nozzle_detached_sliver": 4
+    },
+    "triangle_dispositions": {
+      "removed_sub_layer_silver_sheet": 14808,
+      "replaced_source_J1_with_clean_bare_PTH_geometry": 26552,
+      "retained_original_geometry": 50773,
+      "removed_sub_nozzle_detached_sliver": 336
+    },
+    "retained_original_component_records": [
+      {
+        "bounds_mm": [
+          [
+            8.73531,
+            3.94519,
+            1.56
+          ],
+          [
+            10.3355,
+            7.09479,
+            1.6
+          ]
+        ],
+        "triangles": 12
+      },
+      {
+        "bounds_mm": [
+          [
+            6.25499,
+            18.69,
+            0.01
+          ],
+          [
+            8.355,
+            19.69,
+            1.6
+          ]
+        ],
+        "triangles": 636
+      },
+      {
+        "bounds_mm": [
+          [
+            2.32501,
+            18.69,
+            0.01
+          ],
+          [
+            3.925,
+            19.69,
+            1.6
+          ]
+        ],
+        "triangles": 636
+      },
+      {
+        "bounds_mm": [
+          [
+            6.25499,
+            10.05,
+            0.01
+          ],
+          [
+            8.355,
+            11.04999,
+            1.6
+          ]
+        ],
+        "triangles": 636
+      },
+      {
+        "bounds_mm": [
+          [
+            2.32501,
+            10.05,
+            0.01
+          ],
+          [
+            3.925,
+            11.04999,
+            1.6
+          ]
+        ],
+        "triangles": 636
+      },
+      {
+        "bounds_mm": [
+          [
+            27.545,
+            9.97,
+            1.645
+          ],
+          [
+            28.545,
+            10.47,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            31.515,
+            12.19,
+            1.645
+          ],
+          [
+            32.015,
+            13.19,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            10.22501,
+            16.45,
+            1.645
+          ],
+          [
+            10.52499,
+            17.24999,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            11.52499,
+            16.45,
+            1.645
+          ],
+          [
+            11.825,
+            17.24999,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            11.595,
+            13.31999,
+            1.645
+          ],
+          [
+            11.895,
+            14.12,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            10.295,
+            13.31999,
+            1.645
+          ],
+          [
+            10.595,
+            14.12,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            2.935,
+            21.47,
+            1.645
+          ],
+          [
+            9.035,
+            24.77,
+            3.045
+          ]
+        ],
+        "triangles": 428
+      },
+      {
+        "bounds_mm": [
+          [
+            3.06,
+            21.27,
+            1.745
+          ],
+          [
+            8.91,
+            24.97,
+            3.545
+          ]
+        ],
+        "triangles": 1422
+      },
+      {
+        "bounds_mm": [
+          [
+            1.985,
+            22.81999,
+            1.595
+          ],
+          [
+            2.935,
+            23.42,
+            2.145
+          ]
+        ],
+        "triangles": 60
+      },
+      {
+        "bounds_mm": [
+          [
+            9.035,
+            22.81999,
+            1.595
+          ],
+          [
+            9.985,
+            23.42,
+            2.145
+          ]
+        ],
+        "triangles": 60
+      },
+      {
+        "bounds_mm": [
+          [
+            17.035,
+            21.62,
+            1.645
+          ],
+          [
+            22.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            59.3643,
+            19.77,
+            1.645
+          ],
+          [
+            60.3643,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            11.4057,
+            19.77,
+            1.645
+          ],
+          [
+            12.4057,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            35.385,
+            19.77,
+            1.645
+          ],
+          [
+            36.385,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            15.095,
+            11.05,
+            1.645
+          ],
+          [
+            16.69501,
+            11.85,
+            2.445
+          ]
+        ],
+        "triangles": 236
+      },
+      {
+        "bounds_mm": [
+          [
+            41.3643,
+            19.77,
+            1.645
+          ],
+          [
+            42.3643,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            47.035,
+            21.62,
+            1.645
+          ],
+          [
+            52.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            27.502,
+            11.1523,
+            1.645
+          ],
+          [
+            30.702,
+            13.6523,
+            2.346
+          ]
+        ],
+        "triangles": 2710
+      },
+      {
+        "bounds_mm": [
+          [
+            9.75571,
+            8.06999,
+            1.645
+          ],
+          [
+            10.75571,
+            8.56999,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            9.855,
+            10.59,
+            1.645
+          ],
+          [
+            10.655,
+            10.88999,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            9.855,
+            11.88999,
+            1.645
+          ],
+          [
+            10.655,
+            12.19,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            10.25501,
+            14.92999,
+            1.645
+          ],
+          [
+            10.55501,
+            15.73,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            11.55501,
+            14.92999,
+            1.645
+          ],
+          [
+            11.855,
+            15.73,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            35.035,
+            21.62,
+            1.645
+          ],
+          [
+            40.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            35.125,
+            14.67999,
+            1.645
+          ],
+          [
+            35.425,
+            15.48,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            33.825,
+            14.67999,
+            1.645
+          ],
+          [
+            34.125,
+            15.48,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            23.4057,
+            19.77,
+            1.645
+          ],
+          [
+            24.4057,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            47.3643,
+            19.77,
+            1.645
+          ],
+          [
+            48.3643,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            29.4057,
+            19.77,
+            1.645
+          ],
+          [
+            30.4057,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            0.0,
+            10.4,
+            0.795
+          ],
+          [
+            7.89999,
+            19.34,
+            4.895
+          ]
+        ],
+        "triangles": 10832
+      },
+      {
+        "bounds_mm": [
+          [
+            59.035,
+            21.62,
+            1.645
+          ],
+          [
+            64.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            41.035,
+            21.62,
+            1.645
+          ],
+          [
+            46.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            27.545,
+            18.37,
+            1.645
+          ],
+          [
+            28.145,
+            18.87,
+            2.545
+          ]
+        ],
+        "triangles": 118
+      },
+      {
+        "bounds_mm": [
+          [
+            29.74499,
+            16.47,
+            1.645
+          ],
+          [
+            30.345,
+            16.97,
+            2.545
+          ]
+        ],
+        "triangles": 118
+      },
+      {
+        "bounds_mm": [
+          [
+            27.545,
+            16.47,
+            1.645
+          ],
+          [
+            28.145,
+            16.97,
+            2.545
+          ]
+        ],
+        "triangles": 118
+      },
+      {
+        "bounds_mm": [
+          [
+            29.74499,
+            18.37,
+            1.645
+          ],
+          [
+            30.345,
+            18.87,
+            2.545
+          ]
+        ],
+        "triangles": 118
+      },
+      {
+        "bounds_mm": [
+          [
+            29.74499,
+            17.42,
+            1.645
+          ],
+          [
+            30.345,
+            17.92,
+            2.545
+          ]
+        ],
+        "triangles": 118
+      },
+      {
+        "bounds_mm": [
+          [
+            2.5557,
+            1.06999,
+            1.645
+          ],
+          [
+            3.5557,
+            1.56999,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            15.065,
+            12.67,
+            1.645
+          ],
+          [
+            16.065,
+            13.17,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            17.3643,
+            19.77,
+            1.645
+          ],
+          [
+            18.3643,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            11.035,
+            21.62,
+            1.645
+          ],
+          [
+            16.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            8.00169,
+            2.27,
+            1.645
+          ],
+          [
+            9.8602,
+            8.77,
+            3.345
+          ]
+        ],
+        "triangles": 140
+      },
+      {
+        "bounds_mm": [
+          [
+            2.8602,
+            2.8365,
+            1.645
+          ],
+          [
+            3.6344,
+            3.6032,
+            1.99557
+          ]
+        ],
+        "triangles": 29
+      },
+      {
+        "bounds_mm": [
+          [
+            2.8602,
+            7.4367,
+            1.645
+          ],
+          [
+            3.6344,
+            8.20339,
+            1.99557
+          ]
+        ],
+        "triangles": 29
+      },
+      {
+        "bounds_mm": [
+          [
+            2.8602,
+            5.1366,
+            1.645
+          ],
+          [
+            3.6344,
+            5.9033,
+            1.99557
+          ]
+        ],
+        "triangles": 29
+      },
+      {
+        "bounds_mm": [
+          [
+            40.39999,
+            8.6093,
+            1.645
+          ],
+          [
+            40.89999,
+            9.6093,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            39.135,
+            14.795,
+            1.645
+          ],
+          [
+            40.735,
+            17.995,
+            3.245
+          ]
+        ],
+        "triangles": 284
+      },
+      {
+        "bounds_mm": [
+          [
+            23.035,
+            21.62,
+            1.645
+          ],
+          [
+            28.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            53.035,
+            21.62,
+            1.645
+          ],
+          [
+            58.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            65.3643,
+            19.77,
+            1.645
+          ],
+          [
+            66.3643,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            65.035,
+            21.62,
+            1.645
+          ],
+          [
+            70.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            8.31,
+            26.52,
+            1.645
+          ],
+          [
+            8.61,
+            27.31999,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            9.61,
+            26.52,
+            1.645
+          ],
+          [
+            9.91,
+            27.31999,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            18.345,
+            7.10999,
+            1.645
+          ],
+          [
+            18.645,
+            7.91,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            19.645,
+            7.10999,
+            1.645
+          ],
+          [
+            19.94501,
+            7.91,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            34.4753,
+            8.23,
+            1.645
+          ],
+          [
+            36.0753,
+            9.03,
+            2.445
+          ]
+        ],
+        "triangles": 236
+      },
+      {
+        "bounds_mm": [
+          [
+            32.44,
+            7.0947,
+            1.645
+          ],
+          [
+            33.24,
+            8.6947,
+            2.445
+          ]
+        ],
+        "triangles": 236
+      },
+      {
+        "bounds_mm": [
+          [
+            53.4057,
+            19.77,
+            1.645
+          ],
+          [
+            54.4057,
+            20.27,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            41.8,
+            8.6507,
+            1.645
+          ],
+          [
+            42.3,
+            9.6507,
+            2.145
+          ]
+        ],
+        "triangles": 188
+      },
+      {
+        "bounds_mm": [
+          [
+            29.035,
+            21.62,
+            1.645
+          ],
+          [
+            34.035,
+            27.02,
+            1.795
+          ]
+        ],
+        "triangles": 272
+      },
+      {
+        "bounds_mm": [
+          [
+            38.925,
+            8.23,
+            1.645
+          ],
+          [
+            39.22501,
+            9.03,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            37.625,
+            8.23,
+            1.645
+          ],
+          [
+            37.925,
+            9.03,
+            2.095
+          ]
+        ],
+        "triangles": 116
+      },
+      {
+        "bounds_mm": [
+          [
+            4.63499,
+            22.47,
+            2.645
+          ],
+          [
+            7.33501,
+            23.77,
+            4.145
+          ]
+        ],
+        "triangles": 342
+      },
+      {
+        "bounds_mm": [
+          [
+            19.345,
+            11.33,
+            2.525
+          ],
+          [
+            20.025,
+            12.01,
+            2.725
+          ]
+        ],
+        "triangles": 160
+      },
+      {
+        "bounds_mm": [
+          [
+            11.035,
+            21.62,
+            1.57
+          ],
+          [
+            16.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            17.035,
+            21.62,
+            1.57
+          ],
+          [
+            22.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            23.035,
+            21.62,
+            1.57
+          ],
+          [
+            28.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            29.035,
+            21.62,
+            1.57
+          ],
+          [
+            34.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            35.035,
+            21.62,
+            1.57
+          ],
+          [
+            40.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            41.035,
+            21.62,
+            1.57
+          ],
+          [
+            46.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            47.035,
+            21.62,
+            1.57
+          ],
+          [
+            52.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            53.035,
+            21.62,
+            1.57
+          ],
+          [
+            58.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            59.035,
+            21.62,
+            1.57
+          ],
+          [
+            64.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            65.035,
+            21.62,
+            1.57
+          ],
+          [
+            70.035,
+            27.02,
+            3.17
+          ]
+        ],
+        "triangles": 774
+      },
+      {
+        "bounds_mm": [
+          [
+            57.92648,
+            4.71016,
+            1.61
+          ],
+          [
+            61.2588,
+            12.68972,
+            1.85
+          ]
+        ],
+        "triangles": 2592
+      },
+      {
+        "bounds_mm": [
+          [
+            53.77127,
+            4.71182,
+            1.61
+          ],
+          [
+            58.24836,
+            12.55761,
+            1.85
+          ]
+        ],
+        "triangles": 4926
+      },
+      {
+        "bounds_mm": [
+          [
+            48.33,
+            1.08,
+            1.61
+          ],
+          [
+            49.95,
+            3.29,
+            1.85
+          ]
+        ],
+        "triangles": 972
+      },
+      {
+        "bounds_mm": [
+          [
+            49.81343,
+            1.08,
+            1.61
+          ],
+          [
+            51.26486,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 808
+      },
+      {
+        "bounds_mm": [
+          [
+            51.14851,
+            1.08,
+            1.61
+          ],
+          [
+            52.59994,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 676
+      },
+      {
+        "bounds_mm": [
+          [
+            52.56789,
+            1.08,
+            1.61
+          ],
+          [
+            53.00789,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            52.56789,
+            1.75429,
+            1.61
+          ],
+          [
+            53.68217,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 200
+      },
+      {
+        "bounds_mm": [
+          [
+            53.44783,
+            1.08,
+            1.61
+          ],
+          [
+            54.89926,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 808
+      },
+      {
+        "bounds_mm": [
+          [
+            54.95149,
+            1.08,
+            1.61
+          ],
+          [
+            55.81291,
+            3.29,
+            1.85
+          ]
+        ],
+        "triangles": 208
+      },
+      {
+        "bounds_mm": [
+          [
+            54.69863,
+            2.26,
+            1.61
+          ],
+          [
+            55.72863,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            55.75726,
+            1.83857,
+            1.61
+          ],
+          [
+            57.7144,
+            2.27857,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            57.68571,
+            1.08,
+            1.61
+          ],
+          [
+            59.30571,
+            3.29,
+            1.85
+          ]
+        ],
+        "triangles": 624
+      },
+      {
+        "bounds_mm": [
+          [
+            59.24331,
+            1.08,
+            1.61
+          ],
+          [
+            60.77903,
+            3.29,
+            1.85
+          ]
+        ],
+        "triangles": 156
+      },
+      {
+        "bounds_mm": [
+          [
+            59.24331,
+            2.00714,
+            1.61
+          ],
+          [
+            60.3576,
+            2.44714,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            60.39971,
+            1.08,
+            1.61
+          ],
+          [
+            62.18829,
+            3.29,
+            1.85
+          ]
+        ],
+        "triangles": 104
+      },
+      {
+        "bounds_mm": [
+          [
+            61.98766,
+            1.83857,
+            1.61
+          ],
+          [
+            63.9448,
+            2.27857,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            63.91611,
+            1.08,
+            1.61
+          ],
+          [
+            65.53611,
+            3.29,
+            1.85
+          ]
+        ],
+        "triangles": 936
+      },
+      {
+        "bounds_mm": [
+          [
+            65.47371,
+            1.08,
+            1.61
+          ],
+          [
+            65.91371,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            65.47371,
+            1.75429,
+            1.61
+          ],
+          [
+            66.588,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 208
+      },
+      {
+        "bounds_mm": [
+          [
+            67.36509,
+            1.08,
+            1.61
+          ],
+          [
+            67.80509,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            66.35366,
+            1.08,
+            1.61
+          ],
+          [
+            67.80509,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 676
+      },
+      {
+        "bounds_mm": [
+          [
+            67.76291,
+            2.76571,
+            1.61
+          ],
+          [
+            68.37149,
+            3.37429,
+            1.85
+          ]
+        ],
+        "triangles": 208
+      },
+      {
+        "bounds_mm": [
+          [
+            67.8472,
+            1.08,
+            1.61
+          ],
+          [
+            68.2872,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            68.44057,
+            1.08,
+            1.61
+          ],
+          [
+            68.88057,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 52
+      },
+      {
+        "bounds_mm": [
+          [
+            68.44057,
+            1.08,
+            1.61
+          ],
+          [
+            69.80771,
+            2.7,
+            1.85
+          ]
+        ],
+        "triangles": 312
+      }
+    ],
+    "pcbway_J1_delivery_state": {
+      "assembly_state": "DNP; no connector installed",
+      "bom": "J1 absent",
+      "pick_and_place": "J1 absent",
+      "configuration": "13 bare plated through-holes",
+      "pitch_mm": 2.54,
+      "copper_pad_outer_mm": 1.7,
+      "visible_round_mask_opening_mm": 2.0,
+      "visible_square_pin_1_mask_opening_mm": 2.2,
+      "drill_mm": 1.0,
+      "pin_1_shape": "square",
+      "pins_2_through_13_shape": "round",
+      "top_relief_mm": 0.16,
+      "geometry_concessions": "0.16 mm two-layer top relief makes the silver survive slicing; the visible XY boundary follows the KiCad solder-mask opening",
+      "print_representation": "dedicated non-overlapping silver top rings; no male or female connector"
+    }
+  },
+  "parts": {
+    "A1_Blue_NeoPixels_D2_D4_D6_D8_D10": {
+      "material": "AMS_A1_BLUE",
+      "vertices": 650,
+      "triangles": 1280,
+      "connected_shells": 5,
+      "bounds_mm": [
+        [
+          17.895004,
+          22.680004,
+          2.795
+        ],
+        [
+          69.175004,
+          25.960004,
+          2.955
+        ]
+      ],
+      "edge_stats": {
+        "total_unique_edges": 1920,
+        "boundary_edges": 0,
+        "two_face_edges": 1920,
+        "nonmanifold_edges": 0
+      }
+    },
+    "A2_Red_NeoPixels_D1_D3_D5_D7_D9": {
+      "material": "AMS_A2_RED",
+      "vertices": 650,
+      "triangles": 1280,
+      "connected_shells": 5,
+      "bounds_mm": [
+        [
+          11.895004,
+          22.680004,
+          2.795
+        ],
+        [
+          63.175004,
+          25.960004,
+          2.955
+        ]
+      ],
+      "edge_stats": {
+        "total_unique_edges": 1920,
+        "boundary_edges": 0,
+        "two_face_edges": 1920,
+        "nonmanifold_edges": 0
+      }
+    },
+    "A3_Black_Original_PCB_and_Components": {
+      "material": "AMS_A3_BLACK",
+      "vertices": 17887,
+      "triangles": 35455,
+      "connected_shells": 29,
+      "bounds_mm": [
+        [
+          1.245,
+          0.0,
+          0.0
+        ],
+        [
+          71.245008,
+          29.999994,
+          3.345
+        ]
+      ],
+      "edge_stats": {
+        "total_unique_edges": 53378,
+        "boundary_edges": 399,
+        "two_face_edges": 52975,
+        "nonmanifold_edges": 4
+      }
+    },
+    "A4_Silver_Original_Metal_and_Bare_J1_PTH_Pads": {
+      "material": "AMS_A4_SILVER",
+      "vertices": 28448,
+      "triangles": 57429,
+      "connected_shells": 117,
+      "bounds_mm": [
+        [
+          0.0,
+          1.069993,
+          0.01
+        ],
+        [
+          70.035004,
+          27.319993,
+          4.895
+        ]
+      ],
+      "edge_stats": {
+        "total_unique_edges": 85444,
+        "boundary_edges": 413,
+        "two_face_edges": 84135,
+        "nonmanifold_edges": 896
+      }
+    }
+  },
+  "containers": {
+    "Secret-DEV-Brain_PCBWAY_ACCURATE_REV11.3mf": {
+      "required_entries_present": true,
+      "xml_parse_ok": true,
+      "resource_object_count": 5,
+      "build_item_count": 1,
+      "build_item_count_ok": true,
+      "materials": [
+        "AMS_A1_BLUE",
+        "AMS_A2_RED",
+        "AMS_A3_BLACK",
+        "AMS_A4_SILVER"
+      ]
+    },
+    "Secret-DEV-Brain_3-up_PCBWAY_ACCURATE_REV11.3mf": {
+      "required_entries_present": true,
+      "xml_parse_ok": true,
+      "resource_object_count": 5,
+      "build_item_count": 3,
+      "build_item_count_ok": true,
+      "materials": [
+        "AMS_A1_BLUE",
+        "AMS_A2_RED",
+        "AMS_A3_BLACK",
+        "AMS_A4_SILVER"
+      ]
+    }
+  },
+  "print_limit_disclosures": [
+    "J1 is bare: no male header, female header, or projecting pins.",
+    "J1 keeps the production 1.00 mm bore and uses the KiCad 2.20/2.00 mm solder-mask openings as its visible silver boundary.",
+    "J1 rings rise 0.16 mm above the black PCB so two complete 0.08 mm silver layers remain visible after slicing.",
+    "Silver represents the exposed plated pad within the fixed four-color AMS set.",
+    "No recognizable original component body was stylized or enlarged."
+  ]
+}
