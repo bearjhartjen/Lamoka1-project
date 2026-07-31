@@ -10,6 +10,546 @@
 		(company "Flamingo-and-Cactus")
 	)
 	(lib_symbols
+		(symbol "2026-07-24_20-06-52:SIR680LDP-T1-RE3"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 11.43 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "SIR680LDP-T1-RE3"
+				(at 11.43 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "MOSFET_DP-T1-RE3_VIS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/doc?77478"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "SIR680LDP-T1-RE3"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MOSFET_DP-T1-RE3_VIS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SIR680LDP-T1-RE3_0_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 4.445 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 0) (xy 4.445 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 7.62) (xy 12.7 7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 4.445) (xy 6.985 4.445)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 3.81) (xy 5.08 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 1.905) (xy 5.08 3.175)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0.635) (xy 6.985 0.635)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 5.08 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 10.16 -2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 3.175) (xy 5.08 2.54) (xy 6.35 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 2.54) (xy 6.985 2.54)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.35 2.54)
+					(radius 3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 5.08) (xy 8.255 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 4.445) (xy 6.985 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.985 0.635)
+					(radius 0.0254)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 0) (xy 6.985 2.54)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 0) (xy 8.255 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 7.62) (xy 7.6454 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 7.62 5.08)
+					(radius 0.0254)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 7.62 0)
+					(radius 0.0254)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -2.54) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 3.175) (xy 8.255 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 0) (xy 8.255 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 3.175) (xy 7.62 3.175)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 1.905) (xy 7.62 1.905) (xy 8.255 3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 10.16 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 10.16 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 10.16 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 10.16 10.16 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 12.7 10.16 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "BQ25756:BQ25756RRVR"
 			(pin_names
 				(offset 0.254)
@@ -1348,184 +1888,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:L"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "L"
-				(at -1.27 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "L"
-				(at 1.905 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Inductor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "inductor choke coil reactor magnetic"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "L_0_1"
-				(arc
-					(start 0 2.54)
-					(mid 0.6323 1.905)
-					(end 0 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 1.27)
-					(mid 0.6323 0.635)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 -0.635)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -1.905)
-					(end 0 -2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "L_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1666,53 +2028,39 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Simulation_SPICE:NMOS"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "SRP1510CA-100M:SRP1510CA-100M"
 			(pin_names
-				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+			(property "Reference" "L"
+				(at 16.51 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify left top)
 				)
 			)
-			(property "Value" "NMOS"
-				(at 5.08 -1.27 0)
+			(property "Value" "SRP1510CA-100M"
+				(at 16.51 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify left top)
 				)
 			)
-			(property "Footprint" ""
-				(at 5.08 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-				(at 0 -12.7 0)
+			(property "Footprint" "SRP1510CA100M"
+				(at 16.51 -96.19 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1720,9 +2068,22 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(property "Datasheet" "https://www.bourns.com/docs/product-datasheets/srp1510ca.pdf"
+				(at 16.51 -196.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "Shielded Power Inductor"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1733,8 +2094,8 @@
 					)
 				)
 			)
-			(property "Sim.Device" "NMOS"
-				(at 0 -17.145 0)
+			(property "Height" "10"
+				(at 16.51 -396.19 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1742,10 +2103,11 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Sim.Type" "VDMOS"
-				(at 0 -19.05 0)
+			(property "Manufacturer_Name" "Bourns"
+				(at 16.51 -496.19 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1753,10 +2115,11 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Sim.Pins" "1=D 2=G 3=S"
-				(at 0 -15.24 0)
+			(property "Manufacturer_Part_Number" "SRP1510CA-100M"
+				(at 16.51 -596.19 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1764,10 +2127,11 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET simulation"
-				(at 0 0 0)
+			(property "Mouser Part Number" "652-SRP1510CA-100M"
+				(at 16.51 -696.19 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1775,180 +2139,98 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(symbol "NMOS_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SRP1510CA-100M?qs=CiayqK2gdcIZLv%2FEGoIfDA%3D%3D"
+				(at 16.51 -796.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
+					(justify left top)
 				)
 			)
-			(symbol "NMOS_1_1"
+			(property "Arrow Part Number" ""
+				(at 16.51 -896.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Price/Stock" ""
+				(at 16.51 -996.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "SRP1510CA-100M_1_1"
+				(arc
+					(start 5.08 0)
+					(mid 6.35 1.219)
+					(end 7.62 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.62 0)
+					(mid 8.89 1.219)
+					(end 10.16 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 10.16 0)
+					(mid 11.43 1.219)
+					(end 12.7 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 12.7 0)
+					(mid 13.97 1.219)
+					(end 15.24 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1963,10 +2245,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
+				(pin passive line
+					(at 20.32 0 180)
+					(length 5.08)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1974,24 +2256,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2173,6 +2437,12 @@
 		(uuid "23a4d15d-b2bf-43ea-84ab-f71de2c22d8a")
 	)
 	(junction
+		(at 152.4 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "25f11f8c-c6f5-424e-b24b-1136c377a721")
+	)
+	(junction
 		(at 102.87 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2200,13 +2470,25 @@
 		(at 102.87 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "49231fdb-b2c2-49e5-b830-ccaf427068c0")
+		(uuid "3240f89f-01d9-44ac-b3a5-17372432bf0a")
+	)
+	(junction
+		(at 153.67 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "49e47946-962d-425d-a660-900e5f32b115")
 	)
 	(junction
 		(at 248.92 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4b044fd8-146c-4f6d-8603-3be040f16d64")
+	)
+	(junction
+		(at 153.67 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4f7eb662-23ea-4dd6-9d86-e630bcf25c22")
 	)
 	(junction
 		(at 39.37 52.07)
@@ -2233,10 +2515,22 @@
 		(uuid "603beca2-9a76-4d0d-965b-ce967e2e50fc")
 	)
 	(junction
+		(at 118.11 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "77a6fd8d-03fd-4634-b7af-d2f13f8beff0")
+	)
+	(junction
 		(at 78.74 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7c077961-d0dd-4a23-97ad-ad71011a1508")
+	)
+	(junction
+		(at 130.81 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e9be8b5-9fd4-49d1-939b-a245cf0795cf")
 	)
 	(junction
 		(at 248.92 63.5)
@@ -2251,6 +2545,18 @@
 		(uuid "844ab439-f759-47c1-b53a-c8cd8e8a911c")
 	)
 	(junction
+		(at 129.54 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8827e2ff-62d6-4ea6-b80b-32738350f44a")
+	)
+	(junction
+		(at 132.08 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ab80ac6-98df-4381-b447-8d207521ffa9")
+	)
+	(junction
 		(at 165.1 127)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2263,10 +2569,28 @@
 		(uuid "966553fa-b614-4c86-ad0c-aa52d9260cdf")
 	)
 	(junction
+		(at 119.38 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "96f05282-4fe0-44a9-831c-138d16dd86bf")
+	)
+	(junction
 		(at 173.99 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9e6dacf9-7338-4cc9-a3cf-92038cf3fbed")
+	)
+	(junction
+		(at 116.84 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a45637fc-0bf0-429b-ae60-2c9389545836")
+	)
+	(junction
+		(at 116.84 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aa30ef8e-1bce-4461-8b2c-80f09ef4e2a0")
 	)
 	(junction
 		(at 58.42 99.06)
@@ -2281,16 +2605,40 @@
 		(uuid "c1e5b01b-e18a-426a-a7e8-b160dd222173")
 	)
 	(junction
+		(at 154.94 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c57f519e-92a6-4e95-9ad4-042a01f3ace7")
+	)
+	(junction
 		(at 82.55 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c7404312-e982-435d-adcb-00f23b989217")
 	)
 	(junction
+		(at 153.67 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ca438c61-17b9-49c8-8254-ab74a10507c8")
+	)
+	(junction
 		(at 200.66 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ce8528a3-b42d-4908-ba46-c1c56e326375")
+	)
+	(junction
+		(at 129.54 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d37d6a0b-399e-4d9c-8d8f-a38de8e2d246")
+	)
+	(junction
+		(at 156.21 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d734f6d9-3f4a-4a72-8cac-bbe1edf3d7d0")
 	)
 	(junction
 		(at 82.55 119.38)
@@ -2323,6 +2671,12 @@
 		(uuid "efb07eeb-3a77-4ef0-9445-e686e2e6ba7d")
 	)
 	(junction
+		(at 152.4 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f7182b63-90b1-4cf9-9a28-c9afb6d6a294")
+	)
+	(junction
 		(at 67.31 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2342,13 +2696,13 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 146.05) (xy 137.16 146.05)
+			(xy 151.13 129.54) (xy 153.67 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "01ecaffd-ca7b-43bf-a70d-b88374444f66")
+		(uuid "018d5465-9bb1-426f-929a-db6a6aa96841")
 	)
 	(wire
 		(pts
@@ -2432,6 +2786,36 @@
 	)
 	(wire
 		(pts
+			(xy 127 142.24) (xy 129.54 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ed5a079-1c66-46bd-8327-bf454975ef7c")
+	)
+	(wire
+		(pts
+			(xy 119.38 160.02) (xy 121.92 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20c31a29-96b5-4e93-9112-a2f7b902cee1")
+	)
+	(wire
+		(pts
+			(xy 130.81 127) (xy 132.08 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21204382-0f4b-41c7-8c98-3d7897ce0f86")
+	)
+	(wire
+		(pts
 			(xy 45.72 119.38) (xy 48.26 119.38)
 		)
 		(stroke
@@ -2442,13 +2826,23 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 119.38) (xy 102.87 119.38)
+			(xy 114.3 175.26) (xy 116.84 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "26c780d5-1264-48b9-9305-c9fbe9d90406")
+		(uuid "2b27b426-0dfe-4634-a72d-161fb6b79980")
+	)
+	(wire
+		(pts
+			(xy 118.11 160.02) (xy 119.38 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b37a396-f8fc-443a-93ba-c79a4e0a80e7")
 	)
 	(wire
 		(pts
@@ -2522,6 +2916,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 175.26) (xy 119.38 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f40efa1-e168-44a5-8663-c6d1f28d0d7a")
+	)
+	(wire
+		(pts
 			(xy 39.37 39.37) (xy 44.45 39.37)
 		)
 		(stroke
@@ -2592,13 +2996,23 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 146.05) (xy 153.67 146.05)
+			(xy 129.54 127) (xy 130.81 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4eb7f4e9-57e6-4db4-9614-d69c9247069a")
+		(uuid "4b191559-9ba9-4f06-9366-2fa48d8e09b0")
+	)
+	(wire
+		(pts
+			(xy 151.13 144.78) (xy 153.67 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5297d546-f43e-4ba6-beab-4bcb25baecdb")
 	)
 	(wire
 		(pts
@@ -2649,6 +3063,16 @@
 			(type default)
 		)
 		(uuid "5c22f458-135b-4aaa-a8c2-c153d79108d1")
+	)
+	(wire
+		(pts
+			(xy 129.54 154.94) (xy 118.11 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e70e5f3-0234-401a-a548-54e7e4bb5cfc")
 	)
 	(wire
 		(pts
@@ -2712,6 +3136,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 127) (xy 134.62 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e7dbcc9-b791-49c0-91eb-e63a24c37e62")
+	)
+	(wire
+		(pts
 			(xy 200.66 132.08) (xy 208.28 132.08)
 		)
 		(stroke
@@ -2729,6 +3163,16 @@
 			(type default)
 		)
 		(uuid "6fa09d26-824f-4e2f-80ef-a52a779e0b0e")
+	)
+	(wire
+		(pts
+			(xy 156.21 129.54) (xy 158.75 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72fb2867-7be2-420d-8136-0336751a5074")
 	)
 	(wire
 		(pts
@@ -2752,6 +3196,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 160.02) (xy 116.84 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7621d405-40dd-47b2-af3c-85df6c1164dc")
+	)
+	(wire
+		(pts
 			(xy 182.88 60.96) (xy 189.23 60.96)
 		)
 		(stroke
@@ -2759,6 +3213,16 @@
 			(type default)
 		)
 		(uuid "764fc8cf-7f6f-47b1-97c9-ec6f582bca82")
+	)
+	(wire
+		(pts
+			(xy 116.84 160.02) (xy 118.11 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "772654c9-6565-4d3b-bce0-e55711221660")
 	)
 	(wire
 		(pts
@@ -2779,6 +3243,16 @@
 			(type default)
 		)
 		(uuid "79329457-ae6b-4600-b6d5-88b6ae67236f")
+	)
+	(wire
+		(pts
+			(xy 130.81 146.05) (xy 129.54 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "793d22b3-4541-44a7-898a-f7c777307742")
 	)
 	(wire
 		(pts
@@ -2852,6 +3326,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 149.86) (xy 152.4 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "904d2eb6-bee6-40fe-b14c-3ef1269b67c8")
+	)
+	(wire
+		(pts
 			(xy 248.92 48.26) (xy 262.89 48.26)
 		)
 		(stroke
@@ -2912,6 +3396,36 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 154.94) (xy 118.11 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a535b64f-f74f-4df2-9c47-f2fc8ce3e2db")
+	)
+	(wire
+		(pts
+			(xy 127 127) (xy 129.54 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a610c479-9900-4f47-a626-fdde22bc100a")
+	)
+	(wire
+		(pts
+			(xy 153.67 129.54) (xy 156.21 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa7a7d36-326a-4738-84f2-181f1ec1a018")
+	)
+	(wire
+		(pts
 			(xy 177.8 96.52) (xy 173.99 96.52)
 		)
 		(stroke
@@ -2922,6 +3436,16 @@
 	)
 	(wire
 		(pts
+			(xy 153.67 146.05) (xy 153.67 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aac41fbf-d25f-406f-b322-f96d60bba538")
+	)
+	(wire
+		(pts
 			(xy 204.47 57.15) (xy 204.47 60.96)
 		)
 		(stroke
@@ -2929,6 +3453,16 @@
 			(type default)
 		)
 		(uuid "aeec27c4-bc97-496b-83df-79064f91cd72")
+	)
+	(wire
+		(pts
+			(xy 129.54 142.24) (xy 129.54 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b163e577-bd48-47e6-9fda-331782bf448f")
 	)
 	(wire
 		(pts
@@ -2952,6 +3486,26 @@
 	)
 	(wire
 		(pts
+			(xy 153.67 144.78) (xy 156.21 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8eed28a-f8d0-4c2d-a994-b2569cded448")
+	)
+	(wire
+		(pts
+			(xy 153.67 149.86) (xy 154.94 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc704635-5cca-4e25-8958-c7dbc68584fa")
+	)
+	(wire
+		(pts
 			(xy 71.12 156.21) (xy 71.12 146.05)
 		)
 		(stroke
@@ -2969,6 +3523,36 @@
 			(type default)
 		)
 		(uuid "beacb3ba-234e-4f5c-9a94-258d80866e0d")
+	)
+	(wire
+		(pts
+			(xy 91.44 50.8) (xy 92.71 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0b62cd1-b372-4f59-a166-4b660d12d0a4")
+	)
+	(wire
+		(pts
+			(xy 152.4 149.86) (xy 153.67 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c430abb1-9da1-434c-856c-5bdb30523e5f")
+	)
+	(wire
+		(pts
+			(xy 153.67 129.54) (xy 153.67 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c75b8958-4fb0-4fe0-a659-9babe202a0c1")
 	)
 	(wire
 		(pts
@@ -3002,13 +3586,13 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 135.89) (xy 153.67 127)
+			(xy 130.81 127) (xy 130.81 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cdb3cf41-fe09-457b-a04d-271abb882fb4")
+		(uuid "cdf74109-a105-4e51-8996-17f3205d461a")
 	)
 	(wire
 		(pts
@@ -3072,6 +3656,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 149.86) (xy 157.48 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6c120e1-21f0-43ef-8e35-4dbb95eb60c2")
+	)
+	(wire
+		(pts
 			(xy 175.26 146.05) (xy 180.34 146.05)
 		)
 		(stroke
@@ -3079,6 +3673,26 @@
 			(type default)
 		)
 		(uuid "d6c42b86-a734-4347-9506-aeffd8c8a75c")
+	)
+	(wire
+		(pts
+			(xy 152.4 165.1) (xy 154.94 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6e76105-7376-40a6-b9b1-6475e4f90388")
+	)
+	(wire
+		(pts
+			(xy 149.86 165.1) (xy 152.4 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d798e028-2808-4e46-8322-cbe243d89f45")
 	)
 	(wire
 		(pts
@@ -3142,6 +3756,36 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 146.05) (xy 153.67 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6e661b0-a3fe-45a7-9d7a-160a92a29775")
+	)
+	(wire
+		(pts
+			(xy 129.54 142.24) (xy 132.08 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e814eb02-1df1-47f0-a176-0411f9e7d858")
+	)
+	(wire
+		(pts
+			(xy 129.54 146.05) (xy 129.54 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8740e70-fa40-4d1d-ac40-82f339a45b1c")
+	)
+	(wire
+		(pts
 			(xy 67.31 119.38) (xy 71.12 119.38)
 		)
 		(stroke
@@ -3149,16 +3793,6 @@
 			(type default)
 		)
 		(uuid "e9f0581e-0980-45be-b4f9-e9c6252de81a")
-	)
-	(wire
-		(pts
-			(xy 129.54 119.38) (xy 129.54 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef60f446-e32b-41ac-9c8d-e9b895978ad6")
 	)
 	(wire
 		(pts
@@ -3182,6 +3816,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 48.26) (xy 86.36 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5d4d9d3-b2e4-4cd1-9500-5ef68b907745")
+	)
+	(wire
+		(pts
 			(xy 100.33 50.8) (xy 106.68 50.8)
 		)
 		(stroke
@@ -3189,6 +3833,26 @@
 			(type default)
 		)
 		(uuid "fcab0bf3-dad3-48d8-bada-bfd13d68f374")
+	)
+	(wire
+		(pts
+			(xy 153.67 144.78) (xy 153.67 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fce966b4-f210-4787-8b8a-c98b96e1a442")
+	)
+	(wire
+		(pts
+			(xy 130.81 119.38) (xy 102.87 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd5e7158-e4ec-4edc-bd0c-30b004135f5c")
 	)
 	(wire
 		(pts
@@ -3371,7 +4035,7 @@
 		(uuid "4cd7f99b-ced4-4385-830a-0d8b58be2405")
 	)
 	(label "HIDRV1"
-		(at 121.92 140.97 180)
+		(at 121.92 137.16 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3601,7 +4265,7 @@
 		(uuid "93a40f47-b4a1-4256-9e95-8f66e9ccffcf")
 	)
 	(label "HIDRV2"
-		(at 146.05 140.97 90)
+		(at 146.05 139.7 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3721,7 +4385,7 @@
 		(uuid "bd2fad4d-623a-43ae-b10c-03ac69da0258")
 	)
 	(label "LODRV1"
-		(at 121.92 151.13 180)
+		(at 109.22 170.18 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3781,7 +4445,7 @@
 		(uuid "dc3ef847-35d2-4082-9c30-804a163df026")
 	)
 	(label "LODRV2"
-		(at 146.05 151.13 270)
+		(at 144.78 160.02 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3928,123 +4592,6 @@
 			(justify right)
 		)
 		(uuid "d9394d38-987c-4d1d-97dd-191dc7697bd4")
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 127 140.97 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0690a8d7-ba75-44cd-8b1f-cc4a9a767d91")
-		(property "Reference" "Q6"
-			(at 131.064 139.192 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SIR680LDP-T1-RE3"
-			(at 131.572 141.478 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/77478/sir680ldp.pdf"
-			(at 127 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "80V N-MOSFET; replace generic symbol with verified PowerPAK SO-8 pin mapping"
-			(at 127 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 127 158.115 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 127 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 127 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1ecbb5ce-6b8d-4ae4-a08b-1ad55ef2ec58")
-		)
-		(pin "3"
-			(uuid "65cfc3ef-fa5e-488c-808b-7e0d2a9c6cd1")
-		)
-		(pin "2"
-			(uuid "d4ef194e-583d-42c4-9b8f-a7b7d69edfda")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -4200,123 +4747,6 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
 					(reference "#PWR071")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 151.13 151.13 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "113d5112-248b-4f6f-b8c4-560e0829c735")
-		(property "Reference" "Q9"
-			(at 155.702 150.876 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SIR680LDP-T1-RE3"
-			(at 155.194 153.162 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 156.21 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/77478/sir680ldp.pdf"
-			(at 151.13 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "80V N-MOSFET; replace generic symbol with verified PowerPAK SO-8 pin mapping"
-			(at 151.13 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 151.13 168.275 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 151.13 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 151.13 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7b3c7172-dd80-446e-ab8b-a22922d60d43")
-		)
-		(pin "3"
-			(uuid "61592bb8-8cef-4087-9d75-e34cfb7414ab")
-		)
-		(pin "2"
-			(uuid "532f369a-f745-47ad-833e-7af99803003d")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "Q9")
 					(unit 1)
 				)
 			)
@@ -4647,7 +5077,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 129.54 156.21 0)
+		(at 116.84 175.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4657,7 +5087,7 @@
 		(dnp no)
 		(uuid "1d0a1639-7727-45d7-ada7-74ab57623426")
 		(property "Reference" "#PWR054"
-			(at 129.54 162.56 0)
+			(at 116.84 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4668,7 +5098,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 129.54 159.766 0)
+			(at 116.84 178.816 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4678,7 +5108,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 156.21 0)
+			(at 116.84 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4689,7 +5119,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 156.21 0)
+			(at 116.84 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4700,7 +5130,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 129.54 156.21 0)
+			(at 116.84 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4717,6 +5147,107 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
 					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-07-24_20-06-52:SIR680LDP-T1-RE3")
+		(at 109.22 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "22859a1c-226d-4707-9730-294e2d365154")
+		(property "Reference" "U5"
+			(at 121.666 166.624 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SIR680LDP-T1-RE3"
+			(at 120.65 169.418 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:MOSFET_DP-T1-RE3_VIS"
+			(at 109.22 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?77478"
+			(at 109.22 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "de235606-3716-493c-99fd-83ad84c6c60a")
+		)
+		(pin "1"
+			(uuid "b7d0d8f8-68e9-449d-a4ae-0cbbd92e7e15")
+		)
+		(pin "8"
+			(uuid "5e0dc195-5ccb-471d-a0a7-6f5c94fc02f2")
+		)
+		(pin "6"
+			(uuid "4e2e99ac-e10e-49fc-8aae-90151840dcbb")
+		)
+		(pin "3"
+			(uuid "2970dca6-1410-4f95-8c0e-e6092d0f10e9")
+		)
+		(pin "2"
+			(uuid "80c5a8d1-011f-49ad-a44b-8a89d2b9ed7a")
+		)
+		(pin "4"
+			(uuid "f4504b29-7fe6-4121-a346-8f6d6bd89585")
+		)
+		(pin "7"
+			(uuid "5c920498-3e27-4ec0-b437-5650a25a391c")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -5285,7 +5816,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 153.67 156.21 0)
+		(at 152.4 165.1 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5295,7 +5826,7 @@
 		(dnp no)
 		(uuid "3f2d7ee7-90f1-42de-a0f4-dd90f44f74ed")
 		(property "Reference" "#PWR055"
-			(at 153.67 162.56 0)
+			(at 152.4 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5306,7 +5837,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 153.67 159.766 0)
+			(at 152.4 168.656 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5316,7 +5847,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 153.67 156.21 0)
+			(at 152.4 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5327,7 +5858,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 153.67 156.21 0)
+			(at 152.4 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5338,7 +5869,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 153.67 156.21 0)
+			(at 152.4 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5837,123 +6368,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 151.13 140.97 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4a27a0b5-2b06-4362-bcad-e3990f753e40")
-		(property "Reference" "Q8"
-			(at 155.448 139.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SIR680LDP-T1-RE3"
-			(at 155.448 141.732 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 156.21 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/77478/sir680ldp.pdf"
-			(at 151.13 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "80V N-MOSFET; replace generic symbol with verified PowerPAK SO-8 pin mapping"
-			(at 151.13 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 151.13 158.115 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 151.13 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 151.13 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a522a7e6-41a3-4409-8fcf-a789ec776576")
-		)
-		(pin "3"
-			(uuid "f6b31038-94ce-490a-b789-12aa3e8f867b")
-		)
-		(pin "2"
-			(uuid "009ebf14-2f06-4aae-a26e-8f726e7397a5")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "Q8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 248.92 71.12 0)
 		(unit 1)
@@ -6025,6 +6439,373 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
 					(reference "#PWR066")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SRP1510CA-100M:SRP1510CA-100M")
+		(at 130.81 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "54d2ba66-3988-43af-8aaa-419bc9d101de")
+		(property "Reference" "L2"
+			(at 139.954 150.114 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SRP1510CA-100M"
+			(at 140.97 147.828 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Components:SRP1510CA100M"
+			(at 147.32 242.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://www.bourns.com/docs/product-datasheets/srp1510ca.pdf"
+			(at 147.32 342.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Shielded Power Inductor"
+			(at 130.81 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "10"
+			(at 147.32 542.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Bourns"
+			(at 147.32 642.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SRP1510CA-100M"
+			(at 147.32 742.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "652-SRP1510CA-100M"
+			(at 147.32 842.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SRP1510CA-100M?qs=CiayqK2gdcIZLv%2FEGoIfDA%3D%3D"
+			(at 147.32 942.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 147.32 1042.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 147.32 1142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "2"
+			(uuid "8a580778-bd43-4f34-8f7c-2509b7b7c57c")
+		)
+		(pin "1"
+			(uuid "2791b29f-e251-4471-99ca-a7d5f440bb7f")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
+					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-07-24_20-06-52:SIR680LDP-T1-RE3")
+		(at 146.05 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "55dbd40a-d591-4112-ae28-2be9fe9aae23")
+		(property "Reference" "U8"
+			(at 158.496 136.144 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SIR680LDP-T1-RE3"
+			(at 142.748 139.954 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:MOSFET_DP-T1-RE3_VIS"
+			(at 146.05 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?77478"
+			(at 146.05 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 146.05 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "f70b20e5-e28b-4b35-90d7-78db893c9061")
+		)
+		(pin "1"
+			(uuid "c53a8441-8e19-4cb1-b219-bb50b36e3c34")
+		)
+		(pin "8"
+			(uuid "854e5f2c-c29b-417c-87e8-e65ab5e1ab35")
+		)
+		(pin "6"
+			(uuid "a2863619-6d4d-4d5f-8a64-d0f8ac8d99c5")
+		)
+		(pin "3"
+			(uuid "1fa9da49-3af0-43f4-8e2f-ef7f5f064c9d")
+		)
+		(pin "2"
+			(uuid "5ff65709-ea4b-4430-a6cd-db876159bd61")
+		)
+		(pin "4"
+			(uuid "5a482c33-7c9d-41aa-8010-790ea6df69cb")
+		)
+		(pin "7"
+			(uuid "56f6beec-e062-4d61-9c47-84a5dc4b70ec")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
+					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-07-24_20-06-52:SIR680LDP-T1-RE3")
+		(at 121.92 137.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "594b5f47-3451-4726-9589-06abd00a419c")
+		(property "Reference" "U7"
+			(at 134.366 133.604 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SIR680LDP-T1-RE3"
+			(at 122.682 135.128 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:MOSFET_DP-T1-RE3_VIS"
+			(at 121.92 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?77478"
+			(at 121.92 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 121.92 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "1ac6b69e-7031-4246-8124-434bb1161aba")
+		)
+		(pin "1"
+			(uuid "2f48b9d1-24b1-4dc0-9897-8e1286ae3bb3")
+		)
+		(pin "8"
+			(uuid "25999130-15de-49ae-afe3-1f747ba3edfa")
+		)
+		(pin "6"
+			(uuid "00254905-0d3d-4d8b-8fd2-80ae2a4de7a9")
+		)
+		(pin "3"
+			(uuid "d5ef6f91-5975-4903-8f17-101f70cb4747")
+		)
+		(pin "2"
+			(uuid "29da9080-8748-4fde-89a7-332960bcd647")
+		)
+		(pin "4"
+			(uuid "d6ef0a1d-af29-4d42-af21-ca96e2cb32bc")
+		)
+		(pin "7"
+			(uuid "896e0a30-8353-448e-b3aa-88c833685637")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -6792,7 +7573,7 @@
 			)
 		)
 		(property "Value" "4.7uF 25V X7R"
-			(at 184.404 66.802 0)
+			(at 183.388 66.802 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7250,123 +8031,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 127 151.13 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9ce5f7b3-a2b0-48a5-a45c-252d0575e266")
-		(property "Reference" "Q7"
-			(at 131.318 151.892 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SIR680LDP-T1-RE3"
-			(at 130.556 154.178 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/77478/sir680ldp.pdf"
-			(at 127 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "80V N-MOSFET; replace generic symbol with verified PowerPAK SO-8 pin mapping"
-			(at 127 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 127 168.275 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 127 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 127 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8f827cb6-e6d8-4b9f-8e75-63a0511c19f9")
-		)
-		(pin "3"
-			(uuid "5a314a4d-3acd-45ad-a8cd-a4eba97a077d")
-		)
-		(pin "2"
-			(uuid "eb94d367-3678-48ce-a177-530b187644f2")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "Q7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 181.61 127 90)
 		(unit 1)
@@ -7467,7 +8131,7 @@
 			)
 		)
 		(property "Value" "10R"
-			(at 85.09 130.302 0)
+			(at 85.598 130.302 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7685,7 +8349,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 92.71 50.8 0)
+		(at 91.44 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7695,7 +8359,7 @@
 		(dnp no)
 		(uuid "a65d8d61-5eae-43e8-ae50-7110316cc718")
 		(property "Reference" "#PWR062"
-			(at 92.71 57.15 0)
+			(at 91.44 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7706,7 +8370,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.71 54.356 0)
+			(at 89.662 54.356 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7716,7 +8380,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 50.8 0)
+			(at 91.44 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7727,7 +8391,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 50.8 0)
+			(at 91.44 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7738,7 +8402,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 92.71 50.8 0)
+			(at 91.44 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7909,6 +8573,107 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
 					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-07-24_20-06-52:SIR680LDP-T1-RE3")
+		(at 144.78 160.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "aa000ff2-effb-4519-8291-b839581ad11e")
+		(property "Reference" "U6"
+			(at 157.226 156.464 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SIR680LDP-T1-RE3"
+			(at 156.21 159.258 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:MOSFET_DP-T1-RE3_VIS"
+			(at 144.78 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?77478"
+			(at 144.78 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "e7770ce9-cbab-4088-9280-d9bd6e6baacd")
+		)
+		(pin "1"
+			(uuid "8d7aead0-069a-46e0-81b3-81dc6c1d75fa")
+		)
+		(pin "8"
+			(uuid "d007cafc-a728-4994-837a-955d1225deac")
+		)
+		(pin "6"
+			(uuid "4d15bc6e-768a-46d5-8f17-6b8bbf70a564")
+		)
+		(pin "3"
+			(uuid "5ede90fd-3096-412b-a0bd-fe917a3bef7f")
+		)
+		(pin "2"
+			(uuid "dc0f2159-56db-42c2-95f2-b8e1882a1136")
+		)
+		(pin "4"
+			(uuid "a1c2d0fc-0aad-49b5-b8a2-631713f88393")
+		)
+		(pin "7"
+			(uuid "f3fcf8a3-c9de-4cd2-9b44-d3de974a0731")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -8353,7 +9118,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "bae21002-ee5f-4aaa-af6b-b6582f33b11d")
 		(property "Reference" "D1"
 			(at 105.41 140.9699 90)
@@ -8367,7 +9131,7 @@
 			)
 		)
 		(property "Value" "V1FM10-M3/H"
-			(at 105.41 143.5099 90)
+			(at 100.584 140.462 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8627,7 +9391,7 @@
 			)
 		)
 		(property "Value" "470nF 25V X7R"
-			(at 111.76 149.606 90)
+			(at 108.712 149.86 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9233,7 +9997,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 48.26 0)
+		(at 85.09 48.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9243,7 +10007,7 @@
 		(dnp no)
 		(uuid "dd544b3e-8a26-424a-a177-75c7651396de")
 		(property "Reference" "#PWR072"
-			(at 86.36 54.61 0)
+			(at 85.09 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9254,7 +10018,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 51.816 0)
+			(at 85.09 51.816 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9264,7 +10028,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 48.26 0)
+			(at 85.09 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9275,7 +10039,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 48.26 0)
+			(at 85.09 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9286,7 +10050,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 48.26 0)
+			(at 85.09 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9696,86 +10460,6 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
 					(reference "#PWR061")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L")
-		(at 140.97 146.05 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ee816f56-f29f-4a99-86ab-073f1a27a82d")
-		(property "Reference" "L1"
-			(at 140.97 140.97 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SRP1510CA-100M / 10uH"
-			(at 140.97 143.51 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 140.97 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.bourns.com/docs/product-datasheets/srp1510ca.pdf"
-			(at 140.97 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "10uH high-current inductor; import and verify manufacturer land pattern"
-			(at 140.97 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "aaae3caf-f541-4347-8b66-80a394067c64")
-		)
-		(pin "1"
-			(uuid "c2863a3f-855d-4ab9-96ae-0e3a12c0786e")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "L1")
 					(unit 1)
 				)
 			)

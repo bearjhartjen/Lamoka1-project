@@ -14,7 +14,7 @@ The DEV-Brain is an experimental board for testing the Lamoka1’s control and u
 
 ## Scope of Lamoka1
 
- The **Lamoka1** is a fully open-source, pure sine wave inverter and charger system, controlled by an RP2354A. It's built to be fully transparent, modular, and repeatable, aiming to be the best in its class rather than a closed, disposable black box. Every schematic, every line of firmware, and every design decision is published — nothing is hidden behind proprietary lock-in.
+ The **Lamoka1** is a fully open-source, pure sine wave inverter and charger system, controlled by an RP2354A. It's designed to be fully transparent, modular, and repeatable, aiming to be the best in its class rather than a closed, disposable black box. Every schematic, every line of firmware, and every design decision is published — nothing is hidden behind proprietary lock-in.
 
 It's designed for solar enthusiasts, electrical engineers, and everyday users alike, with a simple physical interface hiding a fully configurable system underneath.
 
@@ -31,6 +31,18 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 
 ---
 
+## Specifications for Charging
+
+| Parameter          | Value                                      |
+|--------------------|--------------------------------------------|
+| **DC Input**       | 5–40 V                                     |
+| **Battery Output** | 4S default, or configurable via MCU I2C |
+| **Control**        | RP2354A microcontroller via I2C  |
+| **User Interface** | 10× RGB LEDs + 1 push button |
+| **Cooling**        | Pulse width modulated fan |
+
+---
+
 ## Specifications for Inversion
 
 | Parameter | Value |
@@ -40,20 +52,19 @@ It's designed for solar enthusiasts, electrical engineers, and everyday users al
 | **Control** | RP2354A microcontroller |
 | **User Interface** | 10× RGB LEDs + 1 push button |
 | **Cooling** | Pulse width modulated fan |
+
 ---
 
+## Software-Defined Control
 
-## Software-Defined Control (INVERTER)
+The entire Lamoka1 can be articulated by the RP2354A, from its charging methods, to its output waveforms on the inverter, your only limit is the hardware, which we are committed to improve on designs and ease of access. 
 
-The entire H-bridge is driven directly by the RP2354A — there's no separate analog waveform generator or fixed-function inverter chip in the way. Every waveform is articulated by the microcontroller.
-
-Out of the box, Lamoka1 comes with **basic stock firmware**: clean sine wave output and a resistive-load "dumb mode". This can be a starting point, not a limit of function.
+Out of the box, Lamoka1 comes with **basic stock firmware** For the inverter section that means: clean sine wave output and a resistive-load "dumb mode". This can be a starting point, not a limit of function. For the charging section that means: MPPT setup for charging 4S LIFEPO4 batteries. 
 
 > [!TIP]
-> Because the RP2354A controls switching directly, the unit can be reprogrammed to do far more than the stock firmware — custom waveforms, different control strategies, alternative protection logic, whatever you can get the math to do safely. This is where the open-source firmware license really matters: if you build something, you can share it back with the community, and anyone else with a Lamoka1 can run it.
+> Because the RP2354A controls operation directly, the unit can be reprogrammed to do far more than the stock firmware — custom waveforms, different control strategies, alternative protection logic, whatever you can get the math to do safely. This is where the open-source firmware license really matters: if you build something, you can share it back with the community, and anyone else with a Lamoka1 can run it.
 
 ---
-
 
 ## License
 

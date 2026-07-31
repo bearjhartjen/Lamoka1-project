@@ -43,3 +43,10 @@ The Lamoka1 will have many modes, there will be combo modes, which are for gener
 ## What will the unit look like?
 
 The Lamoka1 will have ten RGB LEDs (Neo-pixels) and one push button. The lights can display all sorts of data, including but certainly not limited to, power usage and power input (inverter out and charger in) battery capacity, temperature, anything that people want. The unit is open for whatever anyone wants it to do and behave.
+
+
+## Charging section 
+
+At the point of the charging section, we have already ordered the Lamoka1-DEV-Brain so we have learned a few more tricks. We are refering to the first iteration of the charging section of 7-24-2026. The Texas Instruments BQ25756 IC chip is used, and we connected its control up via I2C to the Lamoka1s MCU the RP2354A. 
+
+The charging section needed to have the same freedoms and avalibility of the inverter section, so we figured a I2C interface represented this pretty well. 
