@@ -5163,8 +5163,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "22859a1c-226d-4707-9730-294e2d365154")
-		(property "Reference" "U5"
-			(at 121.666 166.624 0)
+		(property "Reference" "Q6"
+			(at 120.904 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5247,7 +5247,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "U5")
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -6319,7 +6319,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Components:CSSK3637_4Terminal_Kelvin"
 			(at 74.93 121.158 90)
 			(hide yes)
 			(show_name no)
@@ -6620,7 +6620,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "55dbd40a-d591-4112-ae28-2be9fe9aae23")
-		(property "Reference" "U8"
+		(property "Reference" "Q9"
 			(at 158.496 136.144 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6704,7 +6704,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "U8")
+					(reference "Q9")
 					(unit 1)
 				)
 			)
@@ -6721,8 +6721,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "594b5f47-3451-4726-9589-06abd00a419c")
-		(property "Reference" "U7"
-			(at 134.366 133.604 0)
+		(property "Reference" "Q7"
+			(at 133.604 133.858 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6805,7 +6805,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "U7")
+					(reference "Q7")
 					(unit 1)
 				)
 			)
@@ -8061,7 +8061,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Components:CSSK3637_4Terminal_Kelvin"
 			(at 181.61 128.778 90)
 			(hide yes)
 			(show_name no)
@@ -8589,7 +8589,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa000ff2-effb-4519-8291-b839581ad11e")
-		(property "Reference" "U6"
+		(property "Reference" "Q8"
 			(at 157.226 156.464 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8673,7 +8673,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "U6")
+					(reference "Q8")
 					(unit 1)
 				)
 			)
