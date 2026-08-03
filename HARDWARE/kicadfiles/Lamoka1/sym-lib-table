@@ -29,4 +29,8 @@
   (lib (name "RN73R1JTTD1842F25") (type "KiCad") (uri "${KIPRJMOD}/Symbols/RN73R1JTTD1842F25.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
   (lib (name "SDM1U100S1F-7") (type "KiCad") (uri "${KIPRJMOD}/Symbols/SDM1U100S1F-7.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
   (lib (name "SRP1510CA-100M") (type "KiCad") (uri "${KIPRJMOD}/Symbols/SRP1510CA-100M.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
+  (lib (name "2026-08-02_00-00-01") (type "KiCad") (uri "${KIPRJMOD}/Symbols/2026-08-02_00-00-01.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
+  (lib (name "2026-08-02_00-00-02") (type "KiCad") (uri "${KIPRJMOD}/Symbols/2026-08-02_00-00-02.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
+  (lib (name "2026-08-02_00-00-03") (type "KiCad") (uri "${KIPRJMOD}/Symbols/2026-08-02_00-00-03.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
+  (lib (name "2026-08-02_00-00-04") (type "KiCad") (uri "${KIPRJMOD}/Symbols/2026-08-02_00-00-04.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
 )

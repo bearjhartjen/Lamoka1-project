@@ -4864,7 +4864,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Components:PCAP_10x10-ELECT_NCA"
 			(at 49.2252 127 0)
 			(hide yes)
 			(show_name no)
@@ -5684,7 +5684,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Components:PCAP_8x10-ELECT_NCH"
 			(at 201.6252 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -9791,7 +9791,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
 			(at 27.94 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -10105,7 +10105,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Components:PCAP_8x10-ELECT_NCH"
 			(at 194.0052 139.7 0)
 			(hide yes)
 			(show_name no)

@@ -50,3 +50,40 @@ The Lamoka1 will have ten RGB LEDs (Neo-pixels) and one push button. The lights 
 At the point of the charging section, we have already ordered the Lamoka1-DEV-Brain so we have learned a few more tricks. We are refering to the first iteration of the charging section of 7-24-2026. The Texas Instruments BQ25756 IC chip is used, and we connected its control up via I2C to the Lamoka1s MCU the RP2354A. 
 
 The charging section needed to have the same freedoms and avalibility of the inverter section, so we figured a I2C interface represented this pretty well. 
+
+## Boost section - PCB layout prep (2026-08-02)
+
+Changes made to get the schematics ready for PCB layout:
+
+**Gate resistors (Boost.kicad_sch)**
+- R43-R46, 4.7R 0603 (RC0603FR-074R7L), inserted in series between the LM5122 gate-drive pins (LO/HO of U2/U3) and each MOSFET gate (Q1-Q4). The four gate labels were renamed LOM->GLOM1, HOM->GHOM1, LOS->GLOS1, HOS->GHOS1 so the resistors slot into the existing gate nets.
+
+**RC snubbers (Boost.kicad_sch)**
+- R47/R48, 10R 0805 (RC0805FR-0710RL) + C41/C42, 220p 100V C0G 0603 (GRM1885C2A221JA01D), placed switch-node to ground (SWM/SWS to GNDPWR). Chosen for ~63mW dissipation at 250kHz/48V; 1nF was rejected (~288mW).
+
+**HF decoupling caps (Boost.kicad_sch)**
+- C37-C40, 100n 0603 (CL10B104KB8NNNC), across the input rail (VIN/CSPM) to power ground (GNDPWR), placed near the switching FETs. VIN/PGNDM/PGNDS label names tie into the existing input-rail and power-ground nets.
+
+**Symbol libraries**
+- New libs created: `2026-08-02_00-00-01` (4R7), `-02` (10R), `-03` (220p), and `-04` (RC0603FR-0747KL for R7). Registered in sym-lib-table and embedded in Boost.kicad_sch.
+
+**Footprints (ChargingSection.kicad_sch)**
+- C15 = Components:PCAP_10x10-ELECT_NCA
+- C20/C21 = Components:PCAP_8x10-ELECT_NCH
+- J2 = Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical
+
+**BOM (Lamoka1.csv)**
+- Appended rows for R43-R46, R47/R48, C37-C40, C41/C42.
+
+**Grid convention**
+- The schematics are drawn on a strict 1.27mm grid. All new components/wires/labels are on this grid (0 off-grid ERC warnings).
+
+**R7 - MODE pin pull-up (confirmed 47k)**
+- R7 (47k) is the pull-up from the LM5122 MODE pin (U2/U3 pin 13) to VCCM. Q5 (BSS138) pulls MODE low on MCU command, switching the converter between forced-PWM and diode-emulation (sleep) mode.
+- Fixed the part number: the symbol/datasheet string previously said the 47R part (RC0603FR-0747RL); corrected to 47k (RC0603FR-0747KL) in the schematic symbol, symbol library, and BOM.
+
+**ERC status**
+- 214 violations vs 188 baseline. The only new items are expected consequences of the additions:
+  - +4 pin_not_driven errors = the four FET gates now driven through the series gate resistors (known ERC limitation; the gates ARE driven through R43-R46).
+  - +22 pin_to_pin warnings = same class as the 73 pre-existing warnings on the other passives.
+- No new error types; netlist connectivity verified correct for all new parts.
