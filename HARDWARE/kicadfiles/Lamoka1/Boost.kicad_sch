@@ -4252,349 +4252,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "2026-08-02_00-00-04:RC0603FR-0747KL"
-			(body_styles demorgan)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 5.715 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "RC0603FR-0747KL"
-				(at 6.35 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "RC0603N_YAG"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Datasheet" "RC0603FR-0747KL"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "RC0603FR-0747KL"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RC0603FR-0747KL_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.175 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.175 1.27) (xy 4.445 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.445 -1.27) (xy 5.715 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.715 1.27) (xy 6.985 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.985 -1.27) (xy 8.255 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 8.255 1.27) (xy 9.525 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 9.525 -1.27) (xy 10.16 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RC0603FR-0747KL_1_2"
-				(polyline
-					(pts
-						(xy -1.27 8.255) (xy 1.27 9.525)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.715) (xy 1.27 6.985)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 3.175) (xy 1.27 4.445)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy -1.27 3.175)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 9.525) (xy 0 10.16)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 6.985) (xy -1.27 8.255)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 4.445) (xy -1.27 5.715)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 12.7 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "2026-07-06_18-33-39:BSS138"
 			(pin_names
 				(offset 0.254)
@@ -5191,6 +4848,1306 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "2026-08-02_00-00-01:RC0603FR-074R7L"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 5.715 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "RC0603FR-074R7L"
+				(at 6.35 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "RC0603N_YAG"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "RC0603FR-074R7L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "RC0603FR-074R7L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RC0603FR-074R7L_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.175 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 1.27) (xy 4.445 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -1.27) (xy 5.715 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 1.27) (xy 6.985 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 -1.27) (xy 8.255 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 1.27) (xy 9.525 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 -1.27) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "RC0603FR-074R7L_1_2"
+				(polyline
+					(pts
+						(xy -1.27 8.255) (xy 1.27 9.525)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.715) (xy 1.27 6.985)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 3.175) (xy 1.27 4.445)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy -1.27 3.175)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 9.525) (xy 0 10.16)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 6.985) (xy -1.27 8.255)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 4.445) (xy -1.27 5.715)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "2026-08-02_00-00-02:RC0805FR-0710RL"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 5.715 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "RC0805FR-0710RL"
+				(at 6.35 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "RC0805N_YAG"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "RC0805FR-0710RL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "RC0805FR-0710RL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "RC0805N_YAG RC0805N_YAG-M RC0805N_YAG-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RC0805FR-0710RL_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.175 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 1.27) (xy 4.445 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -1.27) (xy 5.715 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 1.27) (xy 6.985 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 -1.27) (xy 8.255 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 1.27) (xy 9.525 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 -1.27) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "RC0805FR-0710RL_1_2"
+				(polyline
+					(pts
+						(xy -1.27 8.255) (xy 1.27 9.525)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.715) (xy 1.27 6.985)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 3.175) (xy 1.27 4.445)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy -1.27 3.175)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 9.525) (xy 0 10.16)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 6.985) (xy -1.27 8.255)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 4.445) (xy -1.27 5.715)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "2026-08-02_00-00-03:GRM1885C2A221JA01D"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 3.81 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "GRM1885C2A221JA01D"
+				(at 3.81 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "CAP_CL10_SAM"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "GRM1885C2A221JA01D"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "GRM1885C2A221JA01D"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GRM1885C2A221JA01D_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.4798 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.4798 -1.905) (xy 3.4798 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "GRM1885C2A221JA01D_1_2"
+				(polyline
+					(pts
+						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.1148) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "2026-08-02_00-00-04:RC0603FR-0747KL"
+			(body_styles demorgan)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 5.715 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "RC0603FR-0747KL"
+				(at 6.35 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "RC0603N_YAG"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "RC0603FR-0747KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "RC0603FR-0747KL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RC0603FR-0747KL_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.175 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 1.27) (xy 4.445 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -1.27) (xy 5.715 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 1.27) (xy 6.985 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 -1.27) (xy 8.255 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 1.27) (xy 9.525 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 -1.27) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "RC0603FR-0747KL_1_2"
+				(polyline
+					(pts
+						(xy -1.27 8.255) (xy 1.27 9.525)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.715) (xy 1.27 6.985)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 3.175) (xy 1.27 4.445)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy -1.27 3.175)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 9.525) (xy 0 10.16)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 6.985) (xy -1.27 8.255)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 4.445) (xy -1.27 5.715)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7718,964 +8675,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "2026-08-02_00-00-01:RC0603FR-074R7L"
-			(body_styles demorgan)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 5.715 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "RC0603FR-074R7L"
-				(at 6.35 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "RC0603N_YAG"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Datasheet" "RC0603FR-074R7L"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "RC0603FR-074R7L"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RC0603FR-074R7L_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.175 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.175 1.27) (xy 4.445 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.445 -1.27) (xy 5.715 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.715 1.27) (xy 6.985 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.985 -1.27) (xy 8.255 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 8.255 1.27) (xy 9.525 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 9.525 -1.27) (xy 10.16 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RC0603FR-074R7L_1_2"
-				(polyline
-					(pts
-						(xy -1.27 8.255) (xy 1.27 9.525)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.715) (xy 1.27 6.985)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 3.175) (xy 1.27 4.445)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy -1.27 3.175)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 9.525) (xy 0 10.16)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 6.985) (xy -1.27 8.255)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 4.445) (xy -1.27 5.715)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 12.7 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "2026-08-02_00-00-02:RC0805FR-0710RL"
-			(body_styles demorgan)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 5.715 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "RC0805FR-0710RL"
-				(at 6.35 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "RC0805N_YAG"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Datasheet" "RC0805FR-0710RL"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "RC0805FR-0710RL"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "RC0805N_YAG RC0805N_YAG-M RC0805N_YAG-L"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RC0805FR-0710RL_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.175 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.175 1.27) (xy 4.445 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.445 -1.27) (xy 5.715 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.715 1.27) (xy 6.985 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.985 -1.27) (xy 8.255 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 8.255 1.27) (xy 9.525 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 9.525 -1.27) (xy 10.16 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RC0805FR-0710RL_1_2"
-				(polyline
-					(pts
-						(xy -1.27 8.255) (xy 1.27 9.525)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.715) (xy 1.27 6.985)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 3.175) (xy 1.27 4.445)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy -1.27 3.175)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 9.525) (xy 0 10.16)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 6.985) (xy -1.27 8.255)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 4.445) (xy -1.27 5.715)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 12.7 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "2026-08-02_00-00-03:GRM1885C2A221JA01D"
-			(body_styles demorgan)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 3.81 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "GRM1885C2A221JA01D"
-				(at 3.81 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "CAP_CL10_SAM"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Datasheet" "GRM1885C2A221JA01D"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "GRM1885C2A221JA01D"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "GRM1885C2A221JA01D_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.4798 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.4798 -1.905) (xy 3.4798 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1148 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1148 -1.905) (xy 4.1148 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "GRM1885C2A221JA01D_1_2"
-				(polyline
-					(pts
-						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -3.4798)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -4.1148) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-
 	)
 	(rectangle
 		(start 193.04 104.14)
@@ -9213,6 +9212,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 215.9) (xy 99.06 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1410478e-db93-4fe6-a14c-ae5bbf12f599")
+	)
+	(wire
+		(pts
 			(xy 77.47 179.07) (xy 78.74 179.07)
 		)
 		(stroke
@@ -9300,6 +9309,16 @@
 			(type default)
 		)
 		(uuid "2609470a-5271-4d87-a029-4ec77a89d86a")
+	)
+	(wire
+		(pts
+			(xy 165.1 241.3) (xy 162.56 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "261dd1c9-cbf5-4fb9-836e-64c0bc0b6ab3")
 	)
 	(wire
 		(pts
@@ -9503,6 +9522,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 241.3) (xy 116.84 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3be9cbd2-ea8c-4bb1-bf11-06e1f1c88615")
+	)
+	(wire
+		(pts
 			(xy 252.73 68.58) (xy 273.05 68.58)
 		)
 		(stroke
@@ -9590,6 +9619,16 @@
 			(type default)
 		)
 		(uuid "4e8f7315-504a-4ffb-90e9-bf7a7dd20325")
+	)
+	(wire
+		(pts
+			(xy 101.6 203.2) (xy 99.06 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50794849-79cd-4bb3-ac21-866b09232166")
 	)
 	(wire
 		(pts
@@ -9693,6 +9732,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 241.3) (xy 238.76 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "690c66b8-98ba-4314-8ecc-e0ea0df6444a")
+	)
+	(wire
+		(pts
 			(xy 26.67 147.32) (xy 25.4 147.32)
 		)
 		(stroke
@@ -9740,6 +9789,16 @@
 			(type default)
 		)
 		(uuid "6ff6d19c-e8be-42ce-bd34-e8789077c73e")
+	)
+	(wire
+		(pts
+			(xy 114.3 203.2) (xy 116.84 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "713467f1-b0be-4031-b7ba-074534bb89c7")
 	)
 	(wire
 		(pts
@@ -9833,6 +9892,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 203.2) (xy 238.76 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85b194ec-1ccc-4294-baf1-556b59089560")
+	)
+	(wire
+		(pts
 			(xy 144.78 175.26) (xy 144.78 185.42)
 		)
 		(stroke
@@ -9880,6 +9949,26 @@
 			(type default)
 		)
 		(uuid "8ab9492a-e258-4550-9678-1c7217e10c25")
+	)
+	(wire
+		(pts
+			(xy 101.6 228.6) (xy 99.06 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b22adbf-7775-439e-8fa4-bcd56a410495")
+	)
+	(wire
+		(pts
+			(xy 236.22 215.9) (xy 238.76 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ce06fb1-b5d8-4d1f-9b44-655392985d85")
 	)
 	(wire
 		(pts
@@ -9963,6 +10052,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 241.3) (xy 175.26 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96150cad-6c66-472d-bcc4-0f03e2ce0975")
+	)
+	(wire
+		(pts
 			(xy 252.73 78.74) (xy 256.54 78.74)
 		)
 		(stroke
@@ -9980,6 +10079,26 @@
 			(type default)
 		)
 		(uuid "9b85b6bb-9ffe-46f9-abf5-9a8690e35b40")
+	)
+	(wire
+		(pts
+			(xy 228.6 215.9) (xy 226.06 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cf6b13a-3bb4-40fd-8de5-9db3281c48e4")
+	)
+	(wire
+		(pts
+			(xy 228.6 228.6) (xy 226.06 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9da83122-29b2-411a-a42a-8ce8dbc4b355")
 	)
 	(wire
 		(pts
@@ -10053,6 +10172,36 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 241.3) (xy 99.06 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a61fb325-871a-411b-9b57-4218a38c84be")
+	)
+	(wire
+		(pts
+			(xy 165.1 215.9) (xy 162.56 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abfd5195-85e1-408e-90d4-5d13522dbd7b")
+	)
+	(wire
+		(pts
+			(xy 236.22 228.6) (xy 238.76 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af0dbbb1-ff28-4269-abd0-3dad496e3352")
+	)
+	(wire
+		(pts
 			(xy 80.01 143.51) (xy 80.01 147.32)
 		)
 		(stroke
@@ -10060,6 +10209,26 @@
 			(type default)
 		)
 		(uuid "af4f424c-50df-41d9-b74b-6d43f13ad5e9")
+	)
+	(wire
+		(pts
+			(xy 177.8 203.2) (xy 180.34 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b192e2b8-736b-40f8-8005-79cf7b01fa3f")
+	)
+	(wire
+		(pts
+			(xy 165.1 228.6) (xy 162.56 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1bfe112-d78d-4db6-8d1f-2131430782bb")
 	)
 	(wire
 		(pts
@@ -10163,6 +10332,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 215.9) (xy 175.26 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0104e18-20bb-4bc0-a536-7ed5bd47c308")
+	)
+	(wire
+		(pts
 			(xy 252.73 22.86) (xy 255.27 22.86)
 		)
 		(stroke
@@ -10200,6 +10379,16 @@
 			(type default)
 		)
 		(uuid "c728c52e-813d-4aca-a546-20244c8f59e5")
+	)
+	(wire
+		(pts
+			(xy 114.3 228.6) (xy 116.84 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c841151f-4712-42ea-83e0-e860b92826b6")
 	)
 	(wire
 		(pts
@@ -10283,6 +10472,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 215.9) (xy 116.84 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d88209b8-164e-4886-98ed-c8c9e2286aee")
+	)
+	(wire
+		(pts
 			(xy 77.47 179.07) (xy 77.47 181.61)
 		)
 		(stroke
@@ -10343,6 +10542,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 203.2) (xy 162.56 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddfaccff-5d79-4c1d-943a-b06fc1f313ae")
+	)
+	(wire
+		(pts
 			(xy 43.18 147.32) (xy 46.99 147.32)
 		)
 		(stroke
@@ -10370,6 +10579,26 @@
 			(type default)
 		)
 		(uuid "e1017b31-968d-4349-864b-1e9495b49d49")
+	)
+	(wire
+		(pts
+			(xy 228.6 203.2) (xy 226.06 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e194984b-7fb1-46a2-89cf-a73dc4c849ff")
+	)
+	(wire
+		(pts
+			(xy 228.6 241.3) (xy 226.06 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e19c3d6d-e610-4e8c-bb39-274c8a517f98")
 	)
 	(wire
 		(pts
@@ -10470,6 +10699,16 @@
 			(type default)
 		)
 		(uuid "f5afef3b-cd81-464c-9714-9211ae1e0f48")
+	)
+	(wire
+		(pts
+			(xy 177.8 228.6) (xy 180.34 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f697b72d-f21a-4a29-af86-bf7cfddb597f")
 	)
 	(wire
 		(pts
@@ -10581,6 +10820,16 @@
 		)
 		(uuid "0ceb808d-7901-47dd-9ce7-4427ae703765")
 	)
+	(label "VIN"
+		(at 226.06 203.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0eab31c4-68a0-4605-8bb4-61cf72ae4109")
+	)
 	(label "CSNS"
 		(at 43.18 143.51 180)
 		(effects
@@ -10620,6 +10869,16 @@
 			(justify right bottom)
 		)
 		(uuid "1b0bed76-1b75-48bc-a3cb-ef37493fe1cb")
+	)
+	(label "GHOS1"
+		(at 99.06 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1b69541d-c9dd-49d7-a067-2e50d91a4ca3")
 	)
 	(label "PGNDS"
 		(at 31.75 124.46 0)
@@ -10671,6 +10930,16 @@
 		)
 		(uuid "2960adeb-dcd2-4db3-b6eb-7448d024e9e2")
 	)
+	(label "GLOM1"
+		(at 99.06 203.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3024ef54-353c-48aa-9f1f-bf85a3ee1ff5")
+	)
 	(label "VCCM"
 		(at 35.56 167.64 180)
 		(effects
@@ -10690,6 +10959,16 @@
 			(justify left bottom)
 		)
 		(uuid "37e33ac4-1fcb-45a5-b848-e090de99a561")
+	)
+	(label "GLOS1"
+		(at 99.06 228.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "389deafa-cb58-4f1e-a22b-2573667b63b6")
 	)
 	(label "VIN"
 		(at 71.12 147.32 180)
@@ -10720,6 +10999,36 @@
 			(justify left bottom)
 		)
 		(uuid "3e698825-2311-40d9-91e2-f1760fe13b13")
+	)
+	(label "VIN"
+		(at 226.06 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3ef3abe3-6de1-4216-aa2b-591efc273178")
+	)
+	(label "PGNDM"
+		(at 175.26 215.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "45c1b19d-2c2f-48fb-9e64-7fe46904a75a")
+	)
+	(label "SNUBM"
+		(at 162.56 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4e107000-bd86-4150-81cd-3bfd241edc52")
 	)
 	(label "SYNCOUT"
 		(at 220.98 96.52 0)
@@ -10761,6 +11070,16 @@
 		)
 		(uuid "574c0821-a06b-4b02-a996-38af3b013704")
 	)
+	(label "PGNDS"
+		(at 238.76 228.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "577d3c0f-f531-4a75-8433-d5403910b0c2")
+	)
 	(label "BSTS"
 		(at 256.54 55.88 0)
 		(effects
@@ -10770,6 +11089,26 @@
 			(justify left bottom)
 		)
 		(uuid "5a08fb8d-f278-4db6-8162-1f952c7d2a71")
+	)
+	(label "PGNDS"
+		(at 175.26 241.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a6105f0-ca23-4b75-b5f9-aee5a2e30db2")
+	)
+	(label "HOS"
+		(at 116.84 241.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ee336fd-3e1d-4d75-8c0c-7a24cc078a75")
 	)
 	(label "BSTS"
 		(at 102.87 167.64 180)
@@ -10800,6 +11139,16 @@
 			(justify left bottom)
 		)
 		(uuid "63607c59-6fe4-4c80-940c-a934284a585c")
+	)
+	(label "PGNDM"
+		(at 238.76 203.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6486fbdc-596c-489a-9e30-c7d4a4f4db2d")
 	)
 	(label "CSPM"
 		(at 80.01 143.51 180)
@@ -10892,6 +11241,16 @@
 		(uuid "7882654b-c5fb-495e-9d62-8ef419e6c419")
 	)
 	(label "SWS"
+		(at 162.56 228.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "79d97a3e-a856-456b-96cb-ec968156d4ed")
+	)
+	(label "SWS"
 		(at 256.54 60.96 0)
 		(effects
 			(font
@@ -10921,6 +11280,16 @@
 		)
 		(uuid "7e192379-89e7-4b86-9120-9faab4a96e7c")
 	)
+	(label "VIN"
+		(at 226.06 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "866e758a-3ab5-49a1-a19f-63c3291da98f")
+	)
 	(label "LOS"
 		(at 256.54 66.04 0)
 		(effects
@@ -10930,6 +11299,16 @@
 			(justify left bottom)
 		)
 		(uuid "873b876d-b6c0-48e7-bad8-057ab9fe4186")
+	)
+	(label "PGNDS"
+		(at 238.76 241.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "878c0cb4-fccf-4cef-8201-0ed3d9b0b019")
 	)
 	(label "SYNCIN{slash}RTM"
 		(at 177.8 38.1 180)
@@ -11001,6 +11380,16 @@
 		)
 		(uuid "9476d7e5-5ecf-46f6-a010-21ca03d89ce6")
 	)
+	(label "SNUBM"
+		(at 180.34 203.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9abee7ed-7851-4fb1-8f29-12e97a4b9e9c")
+	)
 	(label "VIN"
 		(at 83.82 27.94 0)
 		(effects
@@ -11010,6 +11399,16 @@
 			(justify left bottom)
 		)
 		(uuid "9ca00487-4709-4c5a-9fdb-91cd449ecabf")
+	)
+	(label "SWM"
+		(at 162.56 203.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9f23b4f4-ae0b-4b49-a6fa-d672885bf630")
 	)
 	(label "CSNM"
 		(at 177.8 25.4 180)
@@ -11071,6 +11470,36 @@
 		)
 		(uuid "a680df1a-a391-4f83-8e83-9e8494b36205")
 	)
+	(label "VIN"
+		(at 226.06 228.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a7480975-953a-4964-b505-899592cb906f")
+	)
+	(label "LOM"
+		(at 116.84 203.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a9327f31-f759-4dbf-9342-eca3aa981bbb")
+	)
+	(label "SNUBS"
+		(at 162.56 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "aa6f3040-6337-4066-bb29-5e8c566b51ed")
+	)
 	(label "OPT"
 		(at 179.07 58.42 180)
 		(effects
@@ -11080,6 +11509,26 @@
 			(justify right bottom)
 		)
 		(uuid "ac2c1d4a-558d-4d5b-9f30-3b5fed3239ad")
+	)
+	(label "PGNDM"
+		(at 238.76 215.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "adc15129-2ef3-4279-bde0-1130702a9dd0")
+	)
+	(label "HOM"
+		(at 116.84 215.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ae7b346d-87f8-43b4-9932-579407a9e093")
 	)
 	(label "GHOS1"
 		(at 36.83 101.6 0)
@@ -11181,6 +11630,16 @@
 		)
 		(uuid "d843f0cd-63a5-422e-9e48-28ee0b4e9889")
 	)
+	(label "LOS"
+		(at 116.84 228.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d8e3f495-c27f-4cac-a6c1-ef32de98dfc9")
+	)
 	(label "CSNM"
 		(at 96.52 143.51 180)
 		(effects
@@ -11190,6 +11649,16 @@
 			(justify right bottom)
 		)
 		(uuid "d9f2f108-0994-4fab-9398-d006beceb3d9")
+	)
+	(label "GHOM1"
+		(at 99.06 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "de630d8e-995e-4239-b3aa-8e9704ab9cce")
 	)
 	(label "MODE"
 		(at 135.89 115.57 180)
@@ -11280,6 +11749,16 @@
 			(justify right bottom)
 		)
 		(uuid "f9a39ca1-5a8f-40cd-95c6-3abdab6df5bb")
+	)
+	(label "SNUBS"
+		(at 180.34 228.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ffd9ae63-6bbb-4bb6-a7e8-892e6baca3d1")
 	)
 	(hierarchical_label "GNDIN"
 		(shape input)
@@ -11391,487 +11870,6 @@
 		)
 		(uuid "efb6c0b2-6326-4021-99ea-2939663374ca")
 	)
-	(wire
-		(pts
-			(xy 101.6 203.2) (xy 99.06 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50794849-79cd-4bb3-ac21-866b09232166")
-	)
-	(wire
-		(pts
-			(xy 114.3 203.2) (xy 116.84 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "713467f1-b0be-4031-b7ba-074534bb89c7")
-	)
-	(wire
-		(pts
-			(xy 101.6 215.9) (xy 99.06 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1410478e-db93-4fe6-a14c-ae5bbf12f599")
-	)
-	(wire
-		(pts
-			(xy 114.3 215.9) (xy 116.84 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d88209b8-164e-4886-98ed-c8c9e2286aee")
-	)
-	(wire
-		(pts
-			(xy 101.6 228.6) (xy 99.06 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b22adbf-7775-439e-8fa4-bcd56a410495")
-	)
-	(wire
-		(pts
-			(xy 114.3 228.6) (xy 116.84 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c841151f-4712-42ea-83e0-e860b92826b6")
-	)
-	(wire
-		(pts
-			(xy 101.6 241.3) (xy 99.06 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a61fb325-871a-411b-9b57-4218a38c84be")
-	)
-	(wire
-		(pts
-			(xy 114.3 241.3) (xy 116.84 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3be9cbd2-ea8c-4bb1-bf11-06e1f1c88615")
-	)
-	(wire
-		(pts
-			(xy 165.1 203.2) (xy 162.56 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ddfaccff-5d79-4c1d-943a-b06fc1f313ae")
-	)
-	(wire
-		(pts
-			(xy 177.8 203.2) (xy 180.34 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b192e2b8-736b-40f8-8005-79cf7b01fa3f")
-	)
-	(wire
-		(pts
-			(xy 165.1 215.9) (xy 162.56 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abfd5195-85e1-408e-90d4-5d13522dbd7b")
-	)
-	(wire
-		(pts
-			(xy 172.72 215.9) (xy 175.26 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0104e18-20bb-4bc0-a536-7ed5bd47c308")
-	)
-	(wire
-		(pts
-			(xy 165.1 228.6) (xy 162.56 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1bfe112-d78d-4db6-8d1f-2131430782bb")
-	)
-	(wire
-		(pts
-			(xy 177.8 228.6) (xy 180.34 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f697b72d-f21a-4a29-af86-bf7cfddb597f")
-	)
-	(wire
-		(pts
-			(xy 165.1 241.3) (xy 162.56 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "261dd1c9-cbf5-4fb9-836e-64c0bc0b6ab3")
-	)
-	(wire
-		(pts
-			(xy 172.72 241.3) (xy 175.26 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96150cad-6c66-472d-bcc4-0f03e2ce0975")
-	)
-	(wire
-		(pts
-			(xy 228.6 203.2) (xy 226.06 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e194984b-7fb1-46a2-89cf-a73dc4c849ff")
-	)
-	(wire
-		(pts
-			(xy 236.22 203.2) (xy 238.76 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85b194ec-1ccc-4294-baf1-556b59089560")
-	)
-	(wire
-		(pts
-			(xy 228.6 215.9) (xy 226.06 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9cf6b13a-3bb4-40fd-8de5-9db3281c48e4")
-	)
-	(wire
-		(pts
-			(xy 236.22 215.9) (xy 238.76 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ce06fb1-b5d8-4d1f-9b44-655392985d85")
-	)
-	(wire
-		(pts
-			(xy 228.6 228.6) (xy 226.06 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9da83122-29b2-411a-a42a-8ce8dbc4b355")
-	)
-	(wire
-		(pts
-			(xy 236.22 228.6) (xy 238.76 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af0dbbb1-ff28-4269-abd0-3dad496e3352")
-	)
-	(wire
-		(pts
-			(xy 228.6 241.3) (xy 226.06 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e19c3d6d-e610-4e8c-bb39-274c8a517f98")
-	)
-	(wire
-		(pts
-			(xy 236.22 241.3) (xy 238.76 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "690c66b8-98ba-4314-8ecc-e0ea0df6444a")
-	)
-	(label "GLOM1"
-		(at 99.06 203.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3024ef54-353c-48aa-9f1f-bf85a3ee1ff5")
-	)
-	(label "LOM"
-		(at 116.84 203.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a9327f31-f759-4dbf-9342-eca3aa981bbb")
-	)
-	(label "GHOM1"
-		(at 99.06 215.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "de630d8e-995e-4239-b3aa-8e9704ab9cce")
-	)
-	(label "HOM"
-		(at 116.84 215.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ae7b346d-87f8-43b4-9932-579407a9e093")
-	)
-	(label "GLOS1"
-		(at 99.06 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "389deafa-cb58-4f1e-a22b-2573667b63b6")
-	)
-	(label "LOS"
-		(at 116.84 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d8e3f495-c27f-4cac-a6c1-ef32de98dfc9")
-	)
-	(label "GHOS1"
-		(at 99.06 241.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1b69541d-c9dd-49d7-a067-2e50d91a4ca3")
-	)
-	(label "HOS"
-		(at 116.84 241.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5ee336fd-3e1d-4d75-8c0c-7a24cc078a75")
-	)
-	(label "SWM"
-		(at 162.56 203.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9f23b4f4-ae0b-4b49-a6fa-d672885bf630")
-	)
-	(label "SNUBM"
-		(at 180.34 203.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9abee7ed-7851-4fb1-8f29-12e97a4b9e9c")
-	)
-	(label "SNUBM"
-		(at 162.56 215.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4e107000-bd86-4150-81cd-3bfd241edc52")
-	)
-	(label "PGNDM"
-		(at 175.26 215.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "45c1b19d-2c2f-48fb-9e64-7fe46904a75a")
-	)
-	(label "SWS"
-		(at 162.56 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "79d97a3e-a856-456b-96cb-ec968156d4ed")
-	)
-	(label "SNUBS"
-		(at 180.34 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ffd9ae63-6bbb-4bb6-a7e8-892e6baca3d1")
-	)
-	(label "SNUBS"
-		(at 162.56 241.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "aa6f3040-6337-4066-bb29-5e8c566b51ed")
-	)
-	(label "PGNDS"
-		(at 175.26 241.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5a6105f0-ca23-4b75-b5f9-aee5a2e30db2")
-	)
-	(label "VIN"
-		(at 226.06 203.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0eab31c4-68a0-4605-8bb4-61cf72ae4109")
-	)
-	(label "PGNDM"
-		(at 238.76 203.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6486fbdc-596c-489a-9e30-c7d4a4f4db2d")
-	)
-	(label "VIN"
-		(at 226.06 215.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "866e758a-3ab5-49a1-a19f-63c3291da98f")
-	)
-	(label "PGNDM"
-		(at 238.76 215.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "adc15129-2ef3-4279-bde0-1130702a9dd0")
-	)
-	(label "VIN"
-		(at 226.06 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a7480975-953a-4964-b505-899592cb906f")
-	)
-	(label "PGNDS"
-		(at 238.76 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "577d3c0f-f531-4a75-8433-d5403910b0c2")
-	)
-	(label "VIN"
-		(at 226.06 241.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3ef3abe3-6de1-4216-aa2b-591efc273178")
-	)
-	(label "PGNDS"
-		(at 238.76 241.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "878c0cb4-fccf-4cef-8201-0ed3d9b0b019")
-	)
-
 	(symbol
 		(lib_id "power:GNDPWR")
 		(at 19.05 46.99 0)
@@ -12065,6 +12063,128 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-08-02_00-00-02:RC0805FR-0710RL")
+		(at 165.1 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "16355a29-9eee-4f3e-9a3e-7a7ea95e9009")
+		(property "Reference" "R48"
+			(at 167.54 239.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10"
+			(at 167.54 232.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:RC0805N_YAG"
+			(at 165.1 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "RC0805FR-0710RL"
+			(at 165.1 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 165.1 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RC0805FR-0710RL"
+			(at 165.1 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "RC0805N_YAG RC0805N_YAG-M RC0805N_YAG-L"
+			(at 165.1 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ab2b9a5-a6cb-44cb-bfb7-6d86f0432fb2")
+		)
+		(pin "2"
+			(uuid "b07e2d52-4eeb-41e6-89f8-69b2b736004e")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "R48")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -12551,6 +12671,250 @@
 		)
 	)
 	(symbol
+		(lib_id "2026-08-02_00-00-02:RC0805FR-0710RL")
+		(at 165.1 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1b44a35b-4008-4257-bfff-fbae04dfc4cc")
+		(property "Reference" "R47"
+			(at 167.54 203.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10"
+			(at 167.54 196.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:RC0805N_YAG"
+			(at 165.1 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "RC0805FR-0710RL"
+			(at 165.1 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 165.1 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RC0805FR-0710RL"
+			(at 165.1 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "RC0805N_YAG RC0805N_YAG-M RC0805N_YAG-L"
+			(at 165.1 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e736abe-f8db-4d7a-a1bf-b8d7ae7c691b")
+		)
+		(pin "2"
+			(uuid "2a61804d-633c-458e-af1a-e092ed8e3ce8")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "R47")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-06-24_20-27-18:CL10B104KB8NNNC")
+		(at 228.6 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1bd83136-b927-47d4-a042-d5abf38be890")
+		(property "Reference" "C37"
+			(at 232.54 203.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 232.54 196.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:CAP_CL10_SAM"
+			(at 228.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "CL10B104KB8NNNC"
+			(at 228.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 228.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 228.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "CL10B104KB8NNNC"
+			(at 228.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
+			(at 228.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5b9dc162-4a95-4cb6-b0a7-7ae94395c0ed")
+		)
+		(pin "2"
+			(uuid "dfb29b44-bf6c-4779-b43d-c2238d9da2d3")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "C37")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDPWR")
 		(at 80.01 129.54 0)
 		(unit 1)
@@ -12623,6 +12987,128 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-08-02_00-00-01:RC0603FR-074R7L")
+		(at 101.6 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "23e0850c-fefb-4158-9c5e-107c640361ed")
+		(property "Reference" "R43"
+			(at 102.54 203.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7"
+			(at 102.54 196.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:RC0603N_YAG"
+			(at 101.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "RC0603FR-074R7L"
+			(at 101.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 101.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RC0603FR-074R7L"
+			(at 101.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
+			(at 101.6 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "33ac12ec-42b3-49f3-a760-745d254b8b1e")
+		)
+		(pin "2"
+			(uuid "37d29eb4-23cc-4d76-95df-f0a3693b8125")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "R43")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -12986,6 +13472,128 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-08-02_00-00-01:RC0603FR-074R7L")
+		(at 101.6 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "31313586-566f-48d0-8381-adb00d0341c3")
+		(property "Reference" "R44"
+			(at 102.54 221.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7"
+			(at 102.54 214.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:RC0603N_YAG"
+			(at 101.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "RC0603FR-074R7L"
+			(at 101.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 101.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RC0603FR-074R7L"
+			(at 101.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
+			(at 101.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "afef62b5-b332-41a8-97c4-89dffb6c706e")
+		)
+		(pin "2"
+			(uuid "6fd72f70-42c3-4e8a-99bf-0961b0909827")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "R44")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -13937,6 +14545,128 @@
 		)
 	)
 	(symbol
+		(lib_id "2026-06-24_20-27-18:CL10B104KB8NNNC")
+		(at 228.6 241.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "58151875-fc50-4a24-96b9-5e0273302570")
+		(property "Reference" "C40"
+			(at 232.54 257.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 232.54 250.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:CAP_CL10_SAM"
+			(at 228.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "CL10B104KB8NNNC"
+			(at 228.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 228.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 228.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "CL10B104KB8NNNC"
+			(at 228.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
+			(at 228.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "372355f9-4984-4226-8d26-374379335514")
+		)
+		(pin "2"
+			(uuid "2b21114f-5366-43a2-be63-1f60eacd8a9d")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "C40")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "2026-06-26_01-14-22:RC0603FR-0756K2L")
 		(at 97.79 24.13 0)
 		(unit 1)
@@ -14129,6 +14859,128 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-06-24_20-27-18:CL10B104KB8NNNC")
+		(at 228.6 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "66ffb121-e358-4cb5-995a-47e3ec9633ef")
+		(property "Reference" "C38"
+			(at 232.54 221.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 232.54 214.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:CAP_CL10_SAM"
+			(at 228.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "CL10B104KB8NNNC"
+			(at 228.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 228.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 228.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "CL10B104KB8NNNC"
+			(at 228.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
+			(at 228.6 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "31d64d55-be3b-4c87-8710-848bae0b1f61")
+		)
+		(pin "2"
+			(uuid "65b4c377-022c-40ad-a165-c3b4e8fc36d1")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "C38")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C38")
 					(unit 1)
 				)
 			)
@@ -14739,6 +15591,128 @@
 		)
 	)
 	(symbol
+		(lib_id "2026-08-02_00-00-03:GRM1885C2A221JA01D")
+		(at 165.1 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "860821e9-c12c-4ea9-97ec-7602c2f07d98")
+		(property "Reference" "C41"
+			(at 167.54 221.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220p"
+			(at 167.54 214.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:CAP_CL10_SAM"
+			(at 165.1 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "GRM1885C2A221JA01D"
+			(at 165.1 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 165.1 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "GRM1885C2A221JA01D"
+			(at 165.1 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
+			(at 165.1 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "67ba3306-391a-4940-b5f9-bf54bbf7a850")
+		)
+		(pin "2"
+			(uuid "9fe539b3-f27f-41c3-80b1-89a3fbb54025")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "C41")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:CSD19531Q5A")
 		(at 77.47 118.11 0)
 		(unit 1)
@@ -15075,6 +16049,128 @@
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-08-02_00-00-01:RC0603FR-074R7L")
+		(at 101.6 241.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "909f56f3-3159-414c-b50f-b3c4e441e163")
+		(property "Reference" "R46"
+			(at 102.54 257.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7"
+			(at 102.54 250.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:RC0603N_YAG"
+			(at 101.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "RC0603FR-074R7L"
+			(at 101.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 101.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RC0603FR-074R7L"
+			(at 101.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
+			(at 101.6 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f48d43af-75e5-44d5-b814-a7c8cb1d1ceb")
+		)
+		(pin "2"
+			(uuid "a69b3fc1-2148-4305-b175-c48aa8bef56f")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "R46")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -16393,6 +17489,128 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-06-24_20-27-18:CL10B104KB8NNNC")
+		(at 228.6 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ad82f483-2039-45c7-b0f7-087a7e5cff00")
+		(property "Reference" "C39"
+			(at 232.54 239.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 232.54 232.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:CAP_CL10_SAM"
+			(at 228.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "CL10B104KB8NNNC"
+			(at 228.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 228.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 228.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "CL10B104KB8NNNC"
+			(at 228.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
+			(at 228.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bfb7afa2-3da5-45bb-ad7a-f1a60b5d56b3")
+		)
+		(pin "2"
+			(uuid "17434f7c-1e6d-47e3-ae25-83d835e19b0b")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "C39")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -18669,6 +19887,128 @@
 		)
 	)
 	(symbol
+		(lib_id "2026-08-02_00-00-01:RC0603FR-074R7L")
+		(at 101.6 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e39e4e07-0981-45c4-83dc-e1bcf8fca019")
+		(property "Reference" "R45"
+			(at 102.54 239.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7"
+			(at 102.54 232.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:RC0603N_YAG"
+			(at 101.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "RC0603FR-074R7L"
+			(at 101.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 101.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "RC0603FR-074R7L"
+			(at 101.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
+			(at 101.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bb0c8dd9-471b-4e07-a24e-577501ceafc3")
+		)
+		(pin "2"
+			(uuid "6f92c564-09ee-477e-94f4-2322ac3cb947")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "R45")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "R45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "2026-06-12_01-18-21:LM5122QMHX_NOPB")
 		(at 181.61 55.88 0)
 		(unit 1)
@@ -18959,6 +20299,128 @@
 			(project "Boost"
 				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
 					(reference "R38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-08-02_00-00-03:GRM1885C2A221JA01D")
+		(at 165.1 241.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f713cf7c-4502-4652-a927-9a17b4104055")
+		(property "Reference" "C42"
+			(at 167.54 257.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220p"
+			(at 167.54 250.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Components:CAP_CL10_SAM"
+			(at 165.1 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "GRM1885C2A221JA01D"
+			(at 165.1 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 165.1 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "GRM1885C2A221JA01D"
+			(at 165.1 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
+			(at 165.1 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "92ab59d2-7b98-4445-b253-3b4df84b9bbe")
+		)
+		(pin "2"
+			(uuid "5daaa11a-0bbf-434e-9de1-95ca5eb223b6")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
+					(reference "C42")
+					(unit 1)
+				)
+			)
+			(project "Boost"
+				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
+					(reference "C42")
 					(unit 1)
 				)
 			)
@@ -19278,1471 +20740,6 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "2026-08-02_00-00-01:RC0603FR-074R7L")
-		(at 101.6 203.2 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "23e0850c-fefb-4158-9c5e-107c640361ed")
-		(property "Reference" "R43"
-			(at 102.54 203.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4.7"
-			(at 102.54 196.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:RC0603N_YAG"
-			(at 101.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "RC0603FR-074R7L"
-			(at 101.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 101.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "RC0603FR-074R7L"
-			(at 101.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
-			(at 101.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "33ac12ec-42b3-49f3-a760-745d254b8b1e")
-		)
-		(pin "2"
-			(uuid "37d29eb4-23cc-4d76-95df-f0a3693b8125")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "R43")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "R43")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-08-02_00-00-01:RC0603FR-074R7L")
-		(at 101.6 215.9 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "31313586-566f-48d0-8381-adb00d0341c3")
-		(property "Reference" "R44"
-			(at 102.54 221.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4.7"
-			(at 102.54 214.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:RC0603N_YAG"
-			(at 101.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "RC0603FR-074R7L"
-			(at 101.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 101.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "RC0603FR-074R7L"
-			(at 101.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
-			(at 101.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "afef62b5-b332-41a8-97c4-89dffb6c706e")
-		)
-		(pin "2"
-			(uuid "6fd72f70-42c3-4e8a-99bf-0961b0909827")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "R44")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "R44")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-08-02_00-00-01:RC0603FR-074R7L")
-		(at 101.6 228.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e39e4e07-0981-45c4-83dc-e1bcf8fca019")
-		(property "Reference" "R45"
-			(at 102.54 239.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4.7"
-			(at 102.54 232.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:RC0603N_YAG"
-			(at 101.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "RC0603FR-074R7L"
-			(at 101.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 101.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "RC0603FR-074R7L"
-			(at 101.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
-			(at 101.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bb0c8dd9-471b-4e07-a24e-577501ceafc3")
-		)
-		(pin "2"
-			(uuid "6f92c564-09ee-477e-94f4-2322ac3cb947")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "R45")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "R45")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-08-02_00-00-01:RC0603FR-074R7L")
-		(at 101.6 241.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "909f56f3-3159-414c-b50f-b3c4e441e163")
-		(property "Reference" "R46"
-			(at 102.54 257.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4.7"
-			(at 102.54 250.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:RC0603N_YAG"
-			(at 101.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "RC0603FR-074R7L"
-			(at 101.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 101.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "RC0603FR-074R7L"
-			(at 101.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "RC0603N_YAG RC0603N_YAG-M RC0603N_YAG-L"
-			(at 101.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f48d43af-75e5-44d5-b814-a7c8cb1d1ceb")
-		)
-		(pin "2"
-			(uuid "a69b3fc1-2148-4305-b175-c48aa8bef56f")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "R46")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "R46")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-08-02_00-00-02:RC0805FR-0710RL")
-		(at 165.1 203.2 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1b44a35b-4008-4257-bfff-fbae04dfc4cc")
-		(property "Reference" "R47"
-			(at 167.54 203.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10"
-			(at 167.54 196.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:RC0805N_YAG"
-			(at 165.1 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "RC0805FR-0710RL"
-			(at 165.1 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 165.1 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "RC0805FR-0710RL"
-			(at 165.1 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "RC0805N_YAG RC0805N_YAG-M RC0805N_YAG-L"
-			(at 165.1 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3e736abe-f8db-4d7a-a1bf-b8d7ae7c691b")
-		)
-		(pin "2"
-			(uuid "2a61804d-633c-458e-af1a-e092ed8e3ce8")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "R47")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "R47")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-08-02_00-00-03:GRM1885C2A221JA01D")
-		(at 165.1 215.9 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "860821e9-c12c-4ea9-97ec-7602c2f07d98")
-		(property "Reference" "C41"
-			(at 167.54 221.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "220p"
-			(at 167.54 214.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:CAP_CL10_SAM"
-			(at 165.1 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "GRM1885C2A221JA01D"
-			(at 165.1 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 165.1 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "GRM1885C2A221JA01D"
-			(at 165.1 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
-			(at 165.1 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "67ba3306-391a-4940-b5f9-bf54bbf7a850")
-		)
-		(pin "2"
-			(uuid "9fe539b3-f27f-41c3-80b1-89a3fbb54025")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "C41")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "C41")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-08-02_00-00-02:RC0805FR-0710RL")
-		(at 165.1 228.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "16355a29-9eee-4f3e-9a3e-7a7ea95e9009")
-		(property "Reference" "R48"
-			(at 167.54 239.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10"
-			(at 167.54 232.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:RC0805N_YAG"
-			(at 165.1 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "RC0805FR-0710RL"
-			(at 165.1 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 165.1 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "RC0805FR-0710RL"
-			(at 165.1 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "RC0805N_YAG RC0805N_YAG-M RC0805N_YAG-L"
-			(at 165.1 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6ab2b9a5-a6cb-44cb-bfb7-6d86f0432fb2")
-		)
-		(pin "2"
-			(uuid "b07e2d52-4eeb-41e6-89f8-69b2b736004e")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "R48")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "R48")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-08-02_00-00-03:GRM1885C2A221JA01D")
-		(at 165.1 241.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f713cf7c-4502-4652-a927-9a17b4104055")
-		(property "Reference" "C42"
-			(at 167.54 257.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "220p"
-			(at 167.54 250.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:CAP_CL10_SAM"
-			(at 165.1 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "GRM1885C2A221JA01D"
-			(at 165.1 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 165.1 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "GRM1885C2A221JA01D"
-			(at 165.1 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
-			(at 165.1 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "92ab59d2-7b98-4445-b253-3b4df84b9bbe")
-		)
-		(pin "2"
-			(uuid "5daaa11a-0bbf-434e-9de1-95ca5eb223b6")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "C42")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "C42")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-06-24_20-27-18:CL10B104KB8NNNC")
-		(at 228.6 203.2 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1bd83136-b927-47d4-a042-d5abf38be890")
-		(property "Reference" "C37"
-			(at 232.54 203.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 232.54 196.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:CAP_CL10_SAM"
-			(at 228.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "CL10B104KB8NNNC"
-			(at 228.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 228.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 228.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "CL10B104KB8NNNC"
-			(at 228.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
-			(at 228.6 203.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5b9dc162-4a95-4cb6-b0a7-7ae94395c0ed")
-		)
-		(pin "2"
-			(uuid "dfb29b44-bf6c-4779-b43d-c2238d9da2d3")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "C37")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "C37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-06-24_20-27-18:CL10B104KB8NNNC")
-		(at 228.6 215.9 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "66ffb121-e358-4cb5-995a-47e3ec9633ef")
-		(property "Reference" "C38"
-			(at 232.54 221.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 232.54 214.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:CAP_CL10_SAM"
-			(at 228.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "CL10B104KB8NNNC"
-			(at 228.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 228.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 228.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "CL10B104KB8NNNC"
-			(at 228.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
-			(at 228.6 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "31d64d55-be3b-4c87-8710-848bae0b1f61")
-		)
-		(pin "2"
-			(uuid "65b4c377-022c-40ad-a165-c3b4e8fc36d1")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "C38")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "C38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-06-24_20-27-18:CL10B104KB8NNNC")
-		(at 228.6 228.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ad82f483-2039-45c7-b0f7-087a7e5cff00")
-		(property "Reference" "C39"
-			(at 232.54 239.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 232.54 232.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:CAP_CL10_SAM"
-			(at 228.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "CL10B104KB8NNNC"
-			(at 228.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 228.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 228.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "CL10B104KB8NNNC"
-			(at 228.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
-			(at 228.6 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bfb7afa2-3da5-45bb-ad7a-f1a60b5d56b3")
-		)
-		(pin "2"
-			(uuid "17434f7c-1e6d-47e3-ae25-83d835e19b0b")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "C39")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "C39")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-06-24_20-27-18:CL10B104KB8NNNC")
-		(at 228.6 241.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "58151875-fc50-4a24-96b9-5e0273302570")
-		(property "Reference" "C40"
-			(at 232.54 257.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 232.54 250.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Components:CAP_CL10_SAM"
-			(at 228.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "CL10B104KB8NNNC"
-			(at 228.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 228.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_locked" ""
-			(at 228.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "CL10B104KB8NNNC"
-			(at 228.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_fp_filters" "CAP_CL10_SAM CAP_CL10_SAM-M CAP_CL10_SAM-L"
-			(at 228.6 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "372355f9-4984-4226-8d26-374379335514")
-		)
-		(pin "2"
-			(uuid "2b21114f-5366-43a2-be63-1f60eacd8a9d")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0"
-					(reference "C40")
-					(unit 1)
-				)
-			)
-			(project "Boost"
-				(path "/7b1b57e8-b6dc-41ca-abe8-eaf17782d289"
-					(reference "C40")
-					(unit 1)
-				)
-			)
-		)
-	)
-
 	(sheet_instances
 		(path "/"
 			(page "1")
