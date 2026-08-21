@@ -2,7 +2,7 @@
 > This device is purely for testing. Many decisions were made due to cost and time constraints. The component layout does not follow Raspberry Pi’s recommended layout guidance. Utilize these files at your own discretion.
 
 
-Flamingo and Cactus has paid PCBway to manufacture and assemble the DEV Brain, It has arrived, and works much better than expected. It does however make some high frequency audible noise when plugged in. 
+Flamingo and Cactus has paid PCBway to manufacture and assemble the DEV Brain, It has arrived, and works much better than expected. It does however make some high frequency audible noise when plugged in to low quality power sources so it is quite sensitive to low quality sources. 
 
 The DEV-Brain brings the Lamoka1’s MCU, lights, and simplicity into one small board.
 
