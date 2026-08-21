@@ -1,0 +1,620 @@
+ERC report (2026-08-21T09:46:30, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(21.59 mm, 116.84 mm): Symbol Q3 Pin 4 [G, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(36.83 mm, 104.14 mm): Symbol Q4 Pin 4 [G, Input, Line]
+[pin_not_connected]: Hierarchical label 'VOUT-BOOST' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(44.45 mm, 111.76 mm): Hierarchical Label 'VOUT-BOOST'
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(60.96 mm, 68.58 mm): Symbol #PWR013 Pin 1 [Power input, Line]
+[pin_not_connected]: Hierarchical label 'VIN-SOURCE' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(71.12 mm, 27.94 mm): Hierarchical Label 'VIN-SOURCE'
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(72.39 mm, 118.11 mm): Symbol Q1 Pin 4 [G, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(87.63 mm, 105.41 mm): Symbol Q2 Pin 4 [G, Input, Line]
+[pin_not_connected]: Hierarchical label 'VOUT-BOOST' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(96.52 mm, 113.03 mm): Hierarchical Label 'VOUT-BOOST'
+[pin_not_connected]: Hierarchical label 'SIGM' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(144.78 mm, 158.75 mm): Hierarchical Label 'SIGM'
+[pin_not_connected]: Hierarchical label 'GNDIN' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(144.78 mm, 185.42 mm): Hierarchical Label 'GNDIN'
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(181.61 mm, 35.56 mm): Symbol U2 Pin 7 [SS, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(181.61 mm, 38.10 mm): Symbol U2 Pin 8 [SYNCIN/RT, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(181.61 mm, 43.18 mm): Symbol U2 Pin 10 [FB, Input, Line]
+[pin_not_connected]: Hierarchical label 'VOUT-BOOST' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(217.17 mm, 153.67 mm): Hierarchical Label 'VOUT-BOOST'
+[pin_not_connected]: Hierarchical label 'VOUT-BOOST' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(245.11 mm, 116.84 mm): Hierarchical Label 'VOUT-BOOST'
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(252.73 mm, 27.94 mm): Symbol U2 Pin 17 [VCC, Power input, Line]
+[pin_to_pin]: Pins of type Output and Output are connected
+    ; error
+    @(252.73 mm, 35.56 mm): Symbol U2 Pin 14 [RES, Output, Line]
+    @(252.73 mm, 71.12 mm): Symbol U3 Pin 14 [RES, Output, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(252.73 mm, 38.10 mm): Symbol U2 Pin 13 [MODE, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(252.73 mm, 40.64 mm): Symbol U2 Pin 12 [SLOPE, Input, Line]
+[pin_to_pin]: Pins of type Output and Output are connected
+    ; error
+    @(252.73 mm, 43.18 mm): Symbol U2 Pin 11 [COMP, Output, Line]
+    @(252.73 mm, 78.74 mm): Symbol U3 Pin 11 [COMP, Output, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(252.73 mm, 63.50 mm): Symbol U3 Pin 17 [VCC, Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(252.73 mm, 76.20 mm): Symbol U3 Pin 12 [SLOPE, Input, Line]
+[pin_not_connected]: Hierarchical label 'VOUT-BOOST' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(256.54 mm, 113.03 mm): Hierarchical Label 'VOUT-BOOST'
+[pin_not_connected]: Hierarchical label 'VOUT-BOOST' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(265.43 mm, 160.02 mm): Hierarchical Label 'VOUT-BOOST'
+[pin_not_connected]: Hierarchical label 'VOUT-BOOST' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(266.70 mm, 116.84 mm): Hierarchical Label 'VOUT-BOOST'
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(273.05 mm, 68.58 mm): Symbol #PWR02 Pin 1 [Power input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(19.05 mm, 35.56 mm): Symbol C25 [UUX2A470MNL1GS]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'dos input caps'
+    ; warning
+    @(19.05 mm, 35.56 mm): Symbol C25 [UUX2A470MNL1GS]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(19.05 mm, 35.56 mm): Symbol C25 Pin 1 [Unspecified, Line]
+    @(27.94 mm, 36.83 mm): Symbol C26 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(19.05 mm, 43.18 mm): Symbol C25 Pin 2 [Unspecified, Line]
+    @(19.05 mm, 46.99 mm): Symbol #PWR05 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(22.86 mm, 68.58 mm): Symbol R5 Pin 2 [Unspecified, Line]
+    @(80.01 mm, 27.94 mm): Symbol NT5 Pin 2 [2, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(22.86 mm, 179.07 mm): Symbol C3 [CNC5L1X7R1H106K160AE]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'CNC5L1X7R1H106K160AE'
+    ; warning
+    @(22.86 mm, 179.07 mm): Symbol C3 [CNC5L1X7R1H106K160AE]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(26.67 mm, 147.32 mm): Symbol R40 [TLRP3A30CR005FTE]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-21_01-10-03'
+    ; warning
+    @(26.67 mm, 147.32 mm): Symbol R40 [TLRP3A30CR005FTE]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(26.67 mm, 147.32 mm): Symbol R40 Pin 1 [Unspecified, Line]
+    @(80.01 mm, 27.94 mm): Symbol NT5 Pin 2 [2, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(27.94 mm, 36.83 mm): Symbol C26 [UUX2A470MNL1GS]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'dos input caps'
+    ; warning
+    @(27.94 mm, 36.83 mm): Symbol C26 [UUX2A470MNL1GS]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(27.94 mm, 36.83 mm): Symbol C26 Pin 1 [Unspecified, Line]
+    @(36.83 mm, 35.56 mm): Symbol C27 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(27.94 mm, 44.45 mm): Symbol C26 Pin 2 [Unspecified, Line]
+    @(27.94 mm, 46.99 mm): Symbol #PWR06 Pin 1 [Power input, Line]
+[multiple_net_names]: Both GNDPWR and PGNDS are attached to the same items; GNDPWR will be used in the netlist
+    ; warning
+    @(19.05 mm, 46.99 mm): Symbol #PWR05 Pin 1 [Power input, Line]
+    @(31.75 mm, 124.46 mm): Label 'PGNDS'
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(35.56 mm, 68.58 mm): Symbol R5 [RN73R1JTTD4992F25]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-26_12-12-49'
+    ; warning
+    @(35.56 mm, 68.58 mm): Symbol R5 [RN73R1JTTD4992F25]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(35.56 mm, 68.58 mm): Symbol R5 Pin 1 [Unspecified, Line]
+    @(38.10 mm, 68.58 mm): Symbol R2 Pin 2 [Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(36.83 mm, 35.56 mm): Symbol C27 [UCD2A220MNL1GS]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-22_18-02-40'
+    ; warning
+    @(36.83 mm, 35.56 mm): Symbol C27 [UCD2A220MNL1GS]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(36.83 mm, 35.56 mm): Symbol C27 Pin 1 [Unspecified, Line]
+    @(22.86 mm, 68.58 mm): Symbol R5 Pin 2 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(36.83 mm, 43.18 mm): Symbol C27 Pin 2 [Unspecified, Line]
+    @(36.83 mm, 46.99 mm): Symbol #PWR07 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(39.37 mm, 147.32 mm): Symbol R40 Pin 2 [Unspecified, Line]
+    @(46.99 mm, 147.32 mm): Symbol L8 Pin 1 [1, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(43.18 mm, 179.07 mm): Symbol D7 [SDM1U100S1F-7]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'SDM1U100S1F-7'
+    ; warning
+    @(43.18 mm, 179.07 mm): Symbol D7 [SDM1U100S1F-7]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(48.26 mm, 68.58 mm): Symbol R2 [RN73R1JTTD1842F25]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'RN73R1JTTD1842F25'
+    ; warning
+    @(48.26 mm, 68.58 mm): Symbol R2 [RN73R1JTTD1842F25]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(49.53 mm, 179.07 mm): Symbol C4 [C1206C224M1REC7210]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_23-31-22'
+    ; warning
+    @(49.53 mm, 179.07 mm): Symbol C4 [C1206C224M1REC7210]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(49.53 mm, 179.07 mm): Symbol C4 Pin 1 [Unspecified, Line]
+    @(43.18 mm, 179.07 mm): Symbol D7 Pin 1 [K, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(50.80 mm, 147.32 mm): Symbol L8 [2818B_7443641000B]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Inductor_Wurth_WE-HCF'
+    ; warning
+    @(50.80 mm, 147.32 mm): Symbol L8 [2818B_7443641000B]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(57.15 mm, 179.07 mm): Symbol C4 Pin 2 [Unspecified, Line]
+    @(114.30 mm, 147.32 mm): Symbol L7 Pin 2 [2, Passive, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(71.12 mm, 27.94 mm): Hierarchical Label 'VIN-SOURCE'
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(74.93 mm, 43.18 mm): Symbol C29 Pin 2 [Unspecified, Line]
+    @(181.61 mm, 35.56 mm): Symbol U2 Pin 7 [SS, Input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(74.93 mm, 50.80 mm): Symbol C29 [CL10B104KB8NNNC]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_20-27-18'
+    ; warning
+    @(74.93 mm, 50.80 mm): Symbol C29 [CL10B104KB8NNNC]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(74.93 mm, 50.80 mm): Symbol C29 Pin 1 [Unspecified, Line]
+    @(74.93 mm, 52.07 mm): Symbol #PWR016 Pin 1 [Power input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(78.74 mm, 179.07 mm): Symbol C5 [CNC5L1X7R1H106K160AE]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'CNC5L1X7R1H106K160AE'
+    ; warning
+    @(78.74 mm, 179.07 mm): Symbol C5 [CNC5L1X7R1H106K160AE]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(81.28 mm, 147.32 mm): Symbol R39 [TLRP3A30CR005FTE]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-21_01-10-03'
+    ; warning
+    @(81.28 mm, 147.32 mm): Symbol R39 [TLRP3A30CR005FTE]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(81.28 mm, 147.32 mm): Symbol R39 Pin 1 [Unspecified, Line]
+    @(26.67 mm, 147.32 mm): Symbol R40 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(82.55 mm, 73.66 mm): Symbol R36 Pin 1 [Unspecified, Line]
+    @(181.61 mm, 38.10 mm): Symbol U2 Pin 8 [SYNCIN/RT, Input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(82.55 mm, 86.36 mm): Symbol R36 [RC0603FR-0736KL]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_19-49-47'
+    ; warning
+    @(82.55 mm, 86.36 mm): Symbol R36 [RC0603FR-0736KL]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(82.55 mm, 86.36 mm): Symbol R36 Pin 2 [Unspecified, Line]
+    @(82.55 mm, 88.90 mm): Symbol #PWR015 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(93.98 mm, 147.32 mm): Symbol R39 Pin 2 [Unspecified, Line]
+    @(106.68 mm, 147.32 mm): Symbol L7 Pin 1 [1, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(97.79 mm, 24.13 mm): Symbol R1 [RC0603FR-0756K2L]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-26_01-14-22'
+    ; warning
+    @(97.79 mm, 24.13 mm): Symbol R1 [RC0603FR-0756K2L]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(97.79 mm, 24.13 mm): Symbol R1 Pin 2 [Unspecified, Line]
+    @(181.61 mm, 43.18 mm): Symbol U2 Pin 10 [FB, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Output are connected
+    ; warning
+    @(97.79 mm, 44.45 mm): Symbol C1 Pin 2 [Unspecified, Line]
+    @(252.73 mm, 35.56 mm): Symbol U2 Pin 14 [RES, Output, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(97.79 mm, 52.07 mm): Symbol C1 [C1206C474K5RACTU]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-26_00-29-12'
+    ; warning
+    @(97.79 mm, 52.07 mm): Symbol C1 [C1206C474K5RACTU]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(97.79 mm, 52.07 mm): Symbol C1 Pin 1 [Unspecified, Line]
+    @(97.79 mm, 53.34 mm): Symbol #PWR024 Pin 1 [Power input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(99.06 mm, 179.07 mm): Symbol D8 [SDM1U100S1F-7]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'SDM1U100S1F-7'
+    ; warning
+    @(99.06 mm, 179.07 mm): Symbol D8 [SDM1U100S1F-7]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(101.60 mm, 203.20 mm): Symbol R43 [RC0603FR-074R7L]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-01'
+    ; warning
+    @(101.60 mm, 203.20 mm): Symbol R43 [RC0603FR-074R7L]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(101.60 mm, 203.20 mm): Symbol R43 Pin 2 [Unspecified, Line]
+    @(72.39 mm, 118.11 mm): Symbol Q1 Pin 4 [G, Input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(101.60 mm, 215.90 mm): Symbol R44 [RC0603FR-074R7L]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-01'
+    ; warning
+    @(101.60 mm, 215.90 mm): Symbol R44 [RC0603FR-074R7L]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(101.60 mm, 215.90 mm): Symbol R44 Pin 2 [Unspecified, Line]
+    @(87.63 mm, 105.41 mm): Symbol Q2 Pin 4 [G, Input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(101.60 mm, 228.60 mm): Symbol R45 [RC0603FR-074R7L]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-01'
+    ; warning
+    @(101.60 mm, 228.60 mm): Symbol R45 [RC0603FR-074R7L]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(101.60 mm, 228.60 mm): Symbol R45 Pin 2 [Unspecified, Line]
+    @(21.59 mm, 116.84 mm): Symbol Q3 Pin 4 [G, Input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(101.60 mm, 241.30 mm): Symbol R46 [RC0603FR-074R7L]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-01'
+    ; warning
+    @(101.60 mm, 241.30 mm): Symbol R46 [RC0603FR-074R7L]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(101.60 mm, 241.30 mm): Symbol R46 Pin 2 [Unspecified, Line]
+    @(36.83 mm, 104.14 mm): Symbol Q4 Pin 4 [G, Input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(106.68 mm, 179.07 mm): Symbol C6 [C1206C224M1REC7210]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_23-31-22'
+    ; warning
+    @(106.68 mm, 179.07 mm): Symbol C6 [C1206C224M1REC7210]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(106.68 mm, 179.07 mm): Symbol C6 Pin 1 [Unspecified, Line]
+    @(99.06 mm, 179.07 mm): Symbol D8 Pin 1 [K, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(110.49 mm, 147.32 mm): Symbol L7 [2818B_7443641000B]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Inductor_Wurth_WE-HCF'
+    ; warning
+    @(110.49 mm, 147.32 mm): Symbol L7 [2818B_7443641000B]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(111.76 mm, 24.13 mm): Symbol C2 [CC0603KRX7R9BB223]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-26_01-22-08'
+    ; warning
+    @(111.76 mm, 24.13 mm): Symbol C2 [CC0603KRX7R9BB223]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(111.76 mm, 24.13 mm): Symbol C2 Pin 1 [Unspecified, Line]
+    @(110.49 mm, 24.13 mm): Symbol R1 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(114.30 mm, 179.07 mm): Symbol C6 Pin 2 [Unspecified, Line]
+    @(54.61 mm, 147.32 mm): Symbol L8 Pin 2 [2, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Output are connected
+    ; warning
+    @(114.30 mm, 203.20 mm): Symbol R43 Pin 1 [Unspecified, Line]
+    @(252.73 mm, 30.48 mm): Symbol U2 Pin 16 [LO, Output, Line]
+[pin_to_pin]: Pins of type Unspecified and Output are connected
+    ; warning
+    @(114.30 mm, 215.90 mm): Symbol R44 Pin 1 [Unspecified, Line]
+    @(252.73 mm, 22.86 mm): Symbol U2 Pin 19 [HO, Output, Line]
+[pin_to_pin]: Pins of type Unspecified and Output are connected
+    ; warning
+    @(114.30 mm, 228.60 mm): Symbol R45 Pin 1 [Unspecified, Line]
+    @(252.73 mm, 66.04 mm): Symbol U3 Pin 16 [LO, Output, Line]
+[pin_to_pin]: Pins of type Unspecified and Output are connected
+    ; warning
+    @(114.30 mm, 241.30 mm): Symbol R46 Pin 1 [Unspecified, Line]
+    @(252.73 mm, 58.42 mm): Symbol U3 Pin 19 [HO, Output, Line]
+[pin_to_pin]: Pins of type Unspecified and Output are connected
+    ; warning
+    @(119.38 mm, 24.13 mm): Symbol C2 Pin 2 [Unspecified, Line]
+    @(252.73 mm, 43.18 mm): Symbol U2 Pin 11 [COMP, Output, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(139.70 mm, 97.79 mm): Symbol R7 [RC0603FR-0747KL]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-04'
+    ; warning
+    @(139.70 mm, 97.79 mm): Symbol R7 [RC0603FR-0747KL]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(139.70 mm, 97.79 mm): Symbol R7 Pin 2 [Unspecified, Line]
+    @(40.64 mm, 179.07 mm): Symbol D7 Pin 2 [A, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(139.70 mm, 110.49 mm): Symbol R7 Pin 1 [Unspecified, Line]
+    @(252.73 mm, 73.66 mm): Symbol U3 Pin 13 [MODE, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(144.78 mm, 115.57 mm): Symbol Q5 Pin 3 [D, Unspecified, Line]
+    @(139.70 mm, 110.49 mm): Symbol R7 Pin 1 [Unspecified, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(144.78 mm, 156.21 mm): Symbol Q5 [BSS138]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-07-06_18-33-39'
+    ; warning
+    @(144.78 mm, 156.21 mm): Symbol Q5 [BSS138]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(144.78 mm, 158.75 mm): Hierarchical Label 'SIGM'
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(147.32 mm, 115.57 mm): Symbol Q5 Pin 2 [S, Unspecified, Line]
+    @(166.37 mm, 115.57 mm): Symbol #PWR026 Pin 1 [Power input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(165.10 mm, 203.20 mm): Symbol R47 [RC0805FR-0710RL]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-02'
+    ; warning
+    @(165.10 mm, 203.20 mm): Symbol R47 [RC0805FR-0710RL]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(165.10 mm, 203.20 mm): Symbol R47 Pin 2 [Unspecified, Line]
+    @(114.30 mm, 147.32 mm): Symbol L7 Pin 2 [2, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(165.10 mm, 215.90 mm): Symbol C41 [GRM1885C2A221JA01D]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-03'
+    ; warning
+    @(165.10 mm, 215.90 mm): Symbol C41 [GRM1885C2A221JA01D]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(165.10 mm, 215.90 mm): Symbol C41 Pin 1 [Unspecified, Line]
+    @(177.80 mm, 203.20 mm): Symbol R47 Pin 1 [Unspecified, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(165.10 mm, 228.60 mm): Symbol R48 [RC0805FR-0710RL]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-02'
+    ; warning
+    @(165.10 mm, 228.60 mm): Symbol R48 [RC0805FR-0710RL]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(165.10 mm, 228.60 mm): Symbol R48 Pin 2 [Unspecified, Line]
+    @(54.61 mm, 147.32 mm): Symbol L8 Pin 2 [2, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(165.10 mm, 241.30 mm): Symbol C42 [GRM1885C2A221JA01D]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-08-02_00-00-03'
+    ; warning
+    @(165.10 mm, 241.30 mm): Symbol C42 [GRM1885C2A221JA01D]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(165.10 mm, 241.30 mm): Symbol C42 Pin 1 [Unspecified, Line]
+    @(177.80 mm, 228.60 mm): Symbol R48 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(172.72 mm, 215.90 mm): Symbol C41 Pin 2 [Unspecified, Line]
+    @(172.72 mm, 241.30 mm): Symbol C42 Pin 2 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(172.72 mm, 241.30 mm): Symbol C42 Pin 2 [Unspecified, Line]
+    @(156.21 mm, 175.26 mm): Symbol #PWR022 Pin 1 [Power input, Line]
+[multiple_net_names]: Both GNDA and OPT are attached to the same items; GNDA will be used in the netlist
+    ; warning
+    @(97.79 mm, 53.34 mm): Symbol #PWR024 Pin 1 [Power input, Line]
+    @(179.07 mm, 58.42 mm): Label 'OPT'
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(181.61 mm, 20.32 mm): Symbol U2 [LM5122QMHX_NOPB]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-12_01-18-21'
+    ; warning
+    @(181.61 mm, 20.32 mm): Symbol U2 [LM5122QMHX_NOPB]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(181.61 mm, 55.88 mm): Symbol U3 [LM5122QMHX_NOPB]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-12_01-18-21'
+    ; warning
+    @(181.61 mm, 55.88 mm): Symbol U3 [LM5122QMHX_NOPB]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(189.23 mm, 153.67 mm): Symbol R4 [RC0603FR-0710KL]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-26_11-27-26'
+    ; warning
+    @(189.23 mm, 153.67 mm): Symbol R4 [RC0603FR-0710KL]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(189.23 mm, 153.67 mm): Symbol R4 Pin 1 [Unspecified, Line]
+    @(185.42 mm, 153.67 mm): Symbol #PWR014 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(199.39 mm, 107.95 mm): Symbol R42 Pin 1 [Unspecified, Line]
+    @(252.73 mm, 40.64 mm): Symbol U2 Pin 12 [SLOPE, Input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(199.39 mm, 120.65 mm): Symbol R42 [RC0603FR-0736KL]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_19-49-47'
+    ; warning
+    @(199.39 mm, 120.65 mm): Symbol R42 [RC0603FR-0736KL]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(199.39 mm, 120.65 mm): Symbol R42 Pin 2 [Unspecified, Line]
+    @(199.39 mm, 121.92 mm): Symbol #PWR018 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(201.93 mm, 153.67 mm): Symbol R3 Pin 1 [Unspecified, Line]
+    @(201.93 mm, 153.67 mm): Symbol R4 Pin 2 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(201.93 mm, 153.67 mm): Symbol R4 Pin 2 [Unspecified, Line]
+    @(181.61 mm, 43.18 mm): Symbol U2 Pin 10 [FB, Input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(214.63 mm, 153.67 mm): Symbol R3 [RC0603FR-07392KL]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-26_11-23-01'
+    ; warning
+    @(214.63 mm, 153.67 mm): Symbol R3 [RC0603FR-07392KL]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(214.63 mm, 153.67 mm): Symbol R3 Pin 2 [Unspecified, Line]
+    @(255.27 mm, 160.02 mm): Symbol J1 Pin 1 [Pin_1, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(215.90 mm, 107.95 mm): Symbol R38 [RC0603FR-0736KL]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_19-49-47'
+    ; warning
+    @(215.90 mm, 107.95 mm): Symbol R38 [RC0603FR-0736KL]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(215.90 mm, 107.95 mm): Symbol R38 Pin 2 [Unspecified, Line]
+    @(252.73 mm, 76.20 mm): Symbol U3 Pin 12 [SLOPE, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(215.90 mm, 120.65 mm): Symbol R38 Pin 1 [Unspecified, Line]
+    @(215.90 mm, 121.92 mm): Symbol #PWR017 Pin 1 [Power input, Line]
+[multiple_net_names]: Both CSPM and VIN are attached to the same items; CSPM will be used in the netlist
+    ; warning
+    @(177.80 mm, 27.94 mm): Label 'CSPM'
+    @(226.06 mm, 203.20 mm): Label 'VIN'
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(228.60 mm, 203.20 mm): Symbol C37 [CL10B104KB8NNNC]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_20-27-18'
+    ; warning
+    @(228.60 mm, 203.20 mm): Symbol C37 [CL10B104KB8NNNC]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(228.60 mm, 203.20 mm): Symbol C37 Pin 1 [Unspecified, Line]
+    @(228.60 mm, 215.90 mm): Symbol C38 Pin 1 [Unspecified, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(228.60 mm, 215.90 mm): Symbol C38 [CL10B104KB8NNNC]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_20-27-18'
+    ; warning
+    @(228.60 mm, 215.90 mm): Symbol C38 [CL10B104KB8NNNC]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(228.60 mm, 215.90 mm): Symbol C38 Pin 1 [Unspecified, Line]
+    @(228.60 mm, 228.60 mm): Symbol C39 Pin 1 [Unspecified, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(228.60 mm, 228.60 mm): Symbol C39 [CL10B104KB8NNNC]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_20-27-18'
+    ; warning
+    @(228.60 mm, 228.60 mm): Symbol C39 [CL10B104KB8NNNC]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(228.60 mm, 228.60 mm): Symbol C39 Pin 1 [Unspecified, Line]
+    @(228.60 mm, 241.30 mm): Symbol C40 Pin 1 [Unspecified, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(228.60 mm, 241.30 mm): Symbol C40 [CL10B104KB8NNNC]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-24_20-27-18'
+    ; warning
+    @(228.60 mm, 241.30 mm): Symbol C40 [CL10B104KB8NNNC]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(228.60 mm, 241.30 mm): Symbol C40 Pin 1 [Unspecified, Line]
+    @(81.28 mm, 147.32 mm): Symbol R39 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(236.22 mm, 203.20 mm): Symbol C37 Pin 2 [Unspecified, Line]
+    @(236.22 mm, 215.90 mm): Symbol C38 Pin 2 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(236.22 mm, 215.90 mm): Symbol C38 Pin 2 [Unspecified, Line]
+    @(236.22 mm, 228.60 mm): Symbol C39 Pin 2 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(236.22 mm, 228.60 mm): Symbol C39 Pin 2 [Unspecified, Line]
+    @(236.22 mm, 241.30 mm): Symbol C40 Pin 2 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(236.22 mm, 241.30 mm): Symbol C40 Pin 2 [Unspecified, Line]
+    @(172.72 mm, 241.30 mm): Symbol C42 Pin 2 [Unspecified, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(245.11 mm, 127.00 mm): Symbol C35 [UCD2A220MNL1GS]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-22_18-02-40'
+    ; warning
+    @(245.11 mm, 127.00 mm): Symbol C35 [UCD2A220MNL1GS]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(245.11 mm, 127.00 mm): Symbol C35 Pin 1 [Unspecified, Line]
+    @(256.54 mm, 121.92 mm): Symbol C33 Pin 2 [2, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(245.11 mm, 134.62 mm): Symbol C35 Pin 2 [Unspecified, Line]
+    @(245.11 mm, 135.89 mm): Symbol #PWR08 Pin 1 [Power input, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(256.54 mm, 134.62 mm): Symbol C33 [KRM55WR72A226MH01L]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'KRM55WR72A226MH01L'
+    ; warning
+    @(256.54 mm, 134.62 mm): Symbol C33 [KRM55WR72A226MH01L]
+[footprint_link_issues]: The current configuration does not include the footprint library 'Components'
+    ; warning
+    @(266.70 mm, 127.00 mm): Symbol C36 [UCD2A101MNJ1MS]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-06-23_14-35-42'
+    ; warning
+    @(266.70 mm, 127.00 mm): Symbol C36 [UCD2A101MNJ1MS]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(266.70 mm, 127.00 mm): Symbol C36 Pin 1 [Unspecified, Line]
+    @(256.54 mm, 121.92 mm): Symbol C33 Pin 2 [2, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(266.70 mm, 134.62 mm): Symbol C36 Pin 2 [Unspecified, Line]
+    @(266.70 mm, 135.89 mm): Symbol #PWR025 Pin 1 [Power input, Line]
+
+ ** ERC messages: 180  Errors 26  Warnings 154
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

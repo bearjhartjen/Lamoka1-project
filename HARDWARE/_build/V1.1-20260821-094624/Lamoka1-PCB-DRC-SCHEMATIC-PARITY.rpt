@@ -1,0 +1,233 @@
+** Drc report for Lamoka1.kicad_pcb **
+** Created on 2026-08-21T09:46:37 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 1 DRC violations **
+[invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
+    Local override; error
+    @(0.0000 mm, 0.0000 mm): PCB
+
+** Found 0 unconnected pads **
+
+** Found 106 Footprint errors **
+[missing_footprint]: Missing footprint C1 (0.47u)
+    Local override; warning
+[missing_footprint]: Missing footprint C2 (22n)
+    Local override; warning
+[missing_footprint]: Missing footprint C3 (10u)
+    Local override; warning
+[missing_footprint]: Missing footprint C4 (0.22u)
+    Local override; warning
+[missing_footprint]: Missing footprint C5 (10u)
+    Local override; warning
+[missing_footprint]: Missing footprint C6 (0.22u)
+    Local override; warning
+[missing_footprint]: Missing footprint C25 (47u)
+    Local override; warning
+[missing_footprint]: Missing footprint C26 (47u)
+    Local override; warning
+[missing_footprint]: Missing footprint C27 (22u)
+    Local override; warning
+[missing_footprint]: Missing footprint C29 (100n)
+    Local override; warning
+[missing_footprint]: Missing footprint C33 (22u)
+    Local override; warning
+[missing_footprint]: Missing footprint C35 (22u)
+    Local override; warning
+[missing_footprint]: Missing footprint C36 (10u)
+    Local override; warning
+[missing_footprint]: Missing footprint C37 (100n)
+    Local override; warning
+[missing_footprint]: Missing footprint C38 (100n)
+    Local override; warning
+[missing_footprint]: Missing footprint C39 (100n)
+    Local override; warning
+[missing_footprint]: Missing footprint C40 (100n)
+    Local override; warning
+[missing_footprint]: Missing footprint C41 (220p 100V C0G)
+    Local override; warning
+[missing_footprint]: Missing footprint C42 (220p 100V C0G)
+    Local override; warning
+[missing_footprint]: Missing footprint D7 (SDM1U100S1F-7)
+    Local override; warning
+[missing_footprint]: Missing footprint D8 (SDM1U100S1F-7)
+    Local override; warning
+[missing_footprint]: Missing footprint J1 (Boostconverteroutput)
+    Local override; warning
+[missing_footprint]: Missing footprint L7 (7443641000B)
+    Local override; warning
+[missing_footprint]: Missing footprint L8 (7443641000B)
+    Local override; warning
+[missing_footprint]: Missing footprint NT1 (NetTie_2)
+    Local override; warning
+[missing_footprint]: Missing footprint NT2 (NetTie_2)
+    Local override; warning
+[missing_footprint]: Missing footprint NT3 (NetTie_2)
+    Local override; warning
+[missing_footprint]: Missing footprint NT5 (NetTie_2)
+    Local override; warning
+[missing_footprint]: Missing footprint Q1 (CSD19531Q5A)
+    Local override; warning
+[missing_footprint]: Missing footprint Q2 (CSD19531Q5A)
+    Local override; warning
+[missing_footprint]: Missing footprint Q3 (CSD19531Q5A)
+    Local override; warning
+[missing_footprint]: Missing footprint Q4 (CSD19531Q5A)
+    Local override; warning
+[missing_footprint]: Missing footprint Q5 (BSS138)
+    Local override; warning
+[missing_footprint]: Missing footprint R1 (56.2k)
+    Local override; warning
+[missing_footprint]: Missing footprint R2 (18.4k)
+    Local override; warning
+[missing_footprint]: Missing footprint R3 (392k)
+    Local override; warning
+[missing_footprint]: Missing footprint R4 (10k)
+    Local override; warning
+[missing_footprint]: Missing footprint R5 (49.9k)
+    Local override; warning
+[missing_footprint]: Missing footprint R7 (47k)
+    Local override; warning
+[missing_footprint]: Missing footprint R36 (36k)
+    Local override; warning
+[missing_footprint]: Missing footprint R38 (36k)
+    Local override; warning
+[missing_footprint]: Missing footprint R39 (5m)
+    Local override; warning
+[missing_footprint]: Missing footprint R40 (5m)
+    Local override; warning
+[missing_footprint]: Missing footprint R42 (36k)
+    Local override; warning
+[missing_footprint]: Missing footprint R43 (4.7R)
+    Local override; warning
+[missing_footprint]: Missing footprint R44 (4.7R)
+    Local override; warning
+[missing_footprint]: Missing footprint R45 (4.7R)
+    Local override; warning
+[missing_footprint]: Missing footprint R46 (4.7R)
+    Local override; warning
+[missing_footprint]: Missing footprint R47 (10R)
+    Local override; warning
+[missing_footprint]: Missing footprint R48 (10R)
+    Local override; warning
+[missing_footprint]: Missing footprint U2 (LM5122QMHE/NOPB)
+    Local override; warning
+[missing_footprint]: Missing footprint U3 (LM5122QMHE/NOPB)
+    Local override; warning
+[missing_footprint]: Missing footprint C7 (470nF 25V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C8 (470nF 25V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C9 (470nF 50V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C10 (100nF 100V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C11 (100nF 100V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C12 (1uF 100V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C13 (4.7uF 25V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C14 (4.7uF 25V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C15 (220uF 63V low-ESR)
+    Local override; warning
+[missing_footprint]: Missing footprint C16 (1uF 100V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C17 (100nF 100V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C18 (100nF 100V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C19 (470nF 50V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C20 (100uF 63V low-ESR)
+    Local override; warning
+[missing_footprint]: Missing footprint C21 (100uF 63V low-ESR)
+    Local override; warning
+[missing_footprint]: Missing footprint C22 (1uF 100V X7R)
+    Local override; warning
+[missing_footprint]: Missing footprint C23 (DNP)
+    Local override; warning
+[missing_footprint]: Missing footprint D1 (V1FM10-M3/H)
+    Local override; warning
+[missing_footprint]: Missing footprint D2 (V1FM10-M3/H)
+    Local override; warning
+[missing_footprint]: Missing footprint J2 (BAT TEMP: 10k NTC B3435)
+    Local override; warning
+[missing_footprint]: Missing footprint L2 (SRP1510CA-100M)
+    Local override; warning
+[missing_footprint]: Missing footprint Q6 (SIR680LDP-T1-RE3)
+    Local override; warning
+[missing_footprint]: Missing footprint Q7 (SIR680LDP-T1-RE3)
+    Local override; warning
+[missing_footprint]: Missing footprint Q8 (SIR680LDP-T1-RE3)
+    Local override; warning
+[missing_footprint]: Missing footprint Q9 (SIR680LDP-T1-RE3)
+    Local override; warning
+[missing_footprint]: Missing footprint R6 (4.7k)
+    Local override; warning
+[missing_footprint]: Missing footprint R8 (4.7k)
+    Local override; warning
+[missing_footprint]: Missing footprint R9 (10k)
+    Local override; warning
+[missing_footprint]: Missing footprint R10 (10R)
+    Local override; warning
+[missing_footprint]: Missing footprint R11 (10R)
+    Local override; warning
+[missing_footprint]: Missing footprint R12 (2mOhm 1% >=3W)
+    Local override; warning
+[missing_footprint]: Missing footprint R13 (0R)
+    Local override; warning
+[missing_footprint]: Missing footprint R14 (5mOhm 1% >=3W)
+    Local override; warning
+[missing_footprint]: Missing footprint R15 (10R)
+    Local override; warning
+[missing_footprint]: Missing footprint R16 (10R)
+    Local override; warning
+[missing_footprint]: Missing footprint R17 (5.23k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R18 (30.1k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R19 (133k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R20 (1.00M 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R21 (287k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R22 (37.4k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R23 (DNP)
+    Local override; warning
+[missing_footprint]: Missing footprint R24 (249k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R25 (29.4k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R26 (10k)
+    Local override; warning
+[missing_footprint]: Missing footprint R30 (2.61k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint R31 (2.21k 0.1%)
+    Local override; warning
+[missing_footprint]: Missing footprint U1 (BQ25756RRVR)
+    Local override; warning
+[missing_footprint]: Missing footprint P1 (USB_C_Plug_USB2.0)
+    Local override; warning
+[missing_footprint]: Missing footprint R27 (1K)
+    Local override; warning
+[missing_footprint]: Missing footprint R28 (10K)
+    Local override; warning
+[missing_footprint]: Missing footprint R29 (10K)
+    Local override; warning
+[missing_footprint]: Missing footprint SW1 (SW_Push)
+    Local override; warning
+[missing_footprint]: Missing footprint U4 (RP2354A)
+    Local override; warning
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

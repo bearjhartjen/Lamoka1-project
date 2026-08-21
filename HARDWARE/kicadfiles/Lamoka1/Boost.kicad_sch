@@ -12090,7 +12090,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "10R"
 			(at 167.54 232.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12692,7 +12692,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "10R"
 			(at 167.54 196.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13014,7 +13014,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7"
+		(property "Value" "4.7R"
 			(at 102.54 196.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13499,7 +13499,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7"
+		(property "Value" "4.7R"
 			(at 102.54 214.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15612,7 +15612,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "220p"
+		(property "Value" "220p 100V C0G"
 			(at 167.54 214.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16076,7 +16076,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7"
+		(property "Value" "4.7R"
 			(at 102.54 250.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18039,7 +18039,7 @@
 				)
 			)
 		)
-		(property "Value" "2818B_7443641000B"
+		(property "Value" "7443641000B"
 			(at 50.8 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -18444,7 +18444,7 @@
 				)
 			)
 		)
-		(property "Value" "2818B_7443641000B"
+		(property "Value" "7443641000B"
 			(at 110.49 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -19908,7 +19908,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7"
+		(property "Value" "4.7R"
 			(at 102.54 232.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20326,7 +20326,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "220p"
+		(property "Value" "220p 100V C0G"
 			(at 167.54 250.19 0)
 			(show_name no)
 			(do_not_autoplace no)

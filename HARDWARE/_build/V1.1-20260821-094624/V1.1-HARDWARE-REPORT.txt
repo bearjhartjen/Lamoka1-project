@@ -1,0 +1,65 @@
+LAMOKA1 V1.1 HARDWARE DEVELOPMENT REPORT
+========================================================================
+Date: 2026-08-21 09:46:37.387354
+Repository: /home/bearjoshuahartjen/Documents/Lamoka1-project
+Backup: /home/bearjoshuahartjen/Lamoka1-HARDWARE-V1.1-backup-20260821-094624
+Build: /home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624
+
+TARGETED ENGINEERING NORMALIZATION
+------------------------------------------------------------------------
+Boost: R7=47k, R43-R46=4.7R, R47-R48=10R, C37-C40=100n, C41-C42=220p, Q5=BSS138, L7/L8=7443641000B.
+Charging: BQ25756 U1, Q6-Q9 SIR680LDP-T1-RE3, L2 SRP1510CA-100M, R12/R14 Kelvin shunts, C15/C20/C21 bulk capacitors, 4S feedback divider, hardware current ceilings.
+
+CHANGES MADE
+------------------------------------------------------------------------
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: C42 Value -> 220p 100V C0G
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: R45 Value -> 4.7R
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: L7 Value -> 7443641000B
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: L8 Value -> 7443641000B
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: R46 Value -> 4.7R
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: C41 Value -> 220p 100V C0G
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: R44 Value -> 4.7R
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: R43 Value -> 4.7R
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: R47 Value -> 10R
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/kicadfiles/Lamoka1/Boost.kicad_sch: R48 Value -> 10R
+Lamoka1.csv: added 52 schematic BOM group(s)
+
+ERC
+------------------------------------------------------------------------
+Lamoka1.kicad_sch: exit=0  report=/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1-ERC.rpt
+Boost.kicad_sch: exit=0  report=/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Boost-ERC.rpt
+ChargingSection.kicad_sch: exit=0  report=/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/ChargingSection-ERC.rpt
+Control.kicad_sch: exit=0  report=/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Control-ERC.rpt
+
+PCB DRC / SCHEMATIC PARITY
+------------------------------------------------------------------------
+Exit code: 0
+Report: /home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1-PCB-DRC-SCHEMATIC-PARITY.rpt
+
+WARNINGS / NON-DESTRUCTIVE ITEMS
+------------------------------------------------------------------------
+Missing required custom footprints:
+  CAP_CL10_SAM
+  CSSK3637_4Terminal_Kelvin
+  L_Wurth_WE-HCF-2818B
+  MOSFET_DP-T1-RE3_VIS
+  PCAP_10x10-ELECT_NCA
+  PCAP_8x10-ELECT_NCH
+  RC0603N_YAG
+  RC0805N_YAG
+  SOT-23_3L_ONS
+  SRP1510CA100M
+  VQFN36_RRV_TEX
+
+FILES GENERATED
+------------------------------------------------------------------------
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Boost-ERC.rpt
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/ChargingSection-ERC.rpt
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Control-ERC.rpt
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1-ERC.rpt
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1-KiCad-BOM.csv
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1-MERGED-BOM.csv
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1-PCB-DRC-SCHEMATIC-PARITY.rpt
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1-PCB-statistics.rpt
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1-netlist.net
+/home/bearjoshuahartjen/Documents/Lamoka1-project/HARDWARE/_build/V1.1-20260821-094624/Lamoka1.csv.before-V1.1.csv
