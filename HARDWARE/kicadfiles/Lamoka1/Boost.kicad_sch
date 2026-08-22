@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "10.0")
 	(uuid "7b1b57e8-b6dc-41ca-abe8-eaf17782d289")
-	(paper "A4")
+	(paper "A2")
 	(title_block
 		(title "Boost-section-prototype")
 		(date "2026")
