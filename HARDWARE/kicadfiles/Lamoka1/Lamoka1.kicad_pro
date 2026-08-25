@@ -761,66 +761,6 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Supplier Part Number",
-          "name": "Supplier Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Test_Access",
-          "name": "Test_Access",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MPN",
-          "name": "MPN",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "KLC_S4.2_DVDD",
-          "name": "KLC_S4.2_DVDD",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "ki_fp_filters",
-          "name": "ki_fp_filters",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "ki_keywords",
-          "name": "ki_keywords",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "ki_locked",
-          "name": "ki_locked",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Notes",
-          "name": "Notes",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "KLC_S4.2_VREG_LX",
-          "name": "KLC_S4.2_VREG_LX",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Supplier",
-          "name": "Supplier",
-          "show": false
         }
       ],
       "filter_string": "",

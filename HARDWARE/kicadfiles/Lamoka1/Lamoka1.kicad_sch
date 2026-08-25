@@ -5,136 +5,6 @@
 	(uuid "50fe8bbc-b3f6-4de5-9677-9b5870b87390")
 	(paper "User" 762 762)
 	(lib_symbols)
-	(wire
-		(pts
-			(xy 396.24 167.64) (xy 396.24 332.486)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1eb4df3b-931b-4767-ba3b-eafd4c102e92")
-	)
-	(wire
-		(pts
-			(xy 398.78 212.09) (xy 401.32 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2904d299-5a25-40e2-9582-3ff92b132fd8")
-	)
-	(wire
-		(pts
-			(xy 394.97 309.626) (xy 394.97 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c4492e0-29b5-4c2b-8d98-b10caa31468f")
-	)
-	(wire
-		(pts
-			(xy 396.24 332.486) (xy 279.146 332.486)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51dc2fba-f9f5-49ab-9107-1970916a9005")
-	)
-	(wire
-		(pts
-			(xy 397.51 182.88) (xy 401.32 182.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5242f8a5-9b17-4578-9af8-76a2212b81e7")
-	)
-	(wire
-		(pts
-			(xy 279.146 342.646) (xy 397.51 342.646)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "614009e3-c390-4c93-ae79-7f39b4af67ad")
-	)
-	(wire
-		(pts
-			(xy 279.146 322.326) (xy 398.78 322.326)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "84d55d77-e22e-423c-9aae-bce6abd2f3d0")
-	)
-	(wire
-		(pts
-			(xy 394.97 151.13) (xy 401.32 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa8877b1-8890-43c5-81c3-005f67d7c6c2")
-	)
-	(wire
-		(pts
-			(xy 401.32 167.64) (xy 396.24 167.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab7d3e9f-1758-470b-82af-7d87e1eb0b85")
-	)
-	(wire
-		(pts
-			(xy 397.51 182.88) (xy 397.51 342.646)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9561cb3-2ad2-40f6-aa87-2d958e1e1772")
-	)
-	(wire
-		(pts
-			(xy 398.78 322.326) (xy 398.78 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb325faa-dcfa-4729-91d9-81fedd5cf8d5")
-	)
-	(wire
-		(pts
-			(xy 214.63 256.54) (xy 214.63 275.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e021d21e-e578-4b60-b1ef-6d33dd91f80c")
-	)
-	(wire
-		(pts
-			(xy 279.146 309.626) (xy 394.97 309.626)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e588b546-bfd3-4103-9c98-85b0b86aeda8")
-	)
 	(sheet
 		(at 26.67 24.13)
 		(size 354.33 232.41)
@@ -222,8 +92,8 @@
 		)
 	)
 	(sheet
-		(at 29.845 275.59)
-		(size 249.301 211.201)
+		(at 29.21 285.115)
+		(size 249.555 209.55)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -238,7 +108,7 @@
 		)
 		(uuid "eacfaa29-95bd-4b2f-8343-38bb09a7036c")
 		(property "Sheetname" "Control"
-			(at 29.845 272.9734 0)
+			(at 29.21 282.4984 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -249,7 +119,7 @@
 			)
 		)
 		(property "Sheetfile" "Control.kicad_sch"
-			(at 29.845 487.3756 0)
+			(at 29.21 495.2496 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -257,56 +127,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "CHG_CE" input
-			(at 279.146 309.626 0)
-			(uuid "ef815264-cadc-4da4-91d3-f909f7ece69f")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify right)
-			)
-		)
-		(pin "I2C_SDA" input
-			(at 279.146 322.326 0)
-			(uuid "ab1636ad-f040-4be6-876c-6ceaa86b7123")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify right)
-			)
-		)
-		(pin "CHG_INT" input
-			(at 279.146 332.486 0)
-			(uuid "7078478a-6e2e-4a2a-955c-33618d884d13")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify right)
-			)
-		)
-		(pin "I2C_SCL" input
-			(at 279.146 342.646 0)
-			(uuid "503da4ef-2716-485e-99aa-d6b8eaaeb9ff")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify right)
-			)
-		)
-		(pin "SIGM" input
-			(at 214.63 275.59 90)
-			(uuid "f9e599d5-5004-4d48-9f96-406574d971b4")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify right)
 			)
 		)
 		(instances
@@ -353,66 +173,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "I2C_SDA" input
-			(at 401.32 212.09 180)
-			(uuid "eebf2081-77f4-4527-9fc3-6e7891864c63")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify left)
-			)
-		)
-		(pin "VIN-SOURCE" input
-			(at 401.32 123.19 180)
-			(uuid "91ac2e7d-a108-4578-b5ba-a7bf8623e6a3")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify left)
-			)
-		)
-		(pin "I2C_SCL" input
-			(at 401.32 182.88 180)
-			(uuid "a6d5b400-1aaf-48fd-b9ad-0b7065fdc7a2")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify left)
-			)
-		)
-		(pin "CHG_INT" input
-			(at 401.32 167.64 180)
-			(uuid "d8f91f1b-1995-4cf5-a95d-cda6cdb763ca")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify left)
-			)
-		)
-		(pin "CHG_CE" input
-			(at 401.32 151.13 180)
-			(uuid "f609f362-d7b2-4a8c-9b61-3ca3df3ec455")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify left)
-			)
-		)
-		(pin "3v3" input
-			(at 401.32 133.35 180)
-			(uuid "5456e5bb-2945-4bff-8c55-39445fea08cd")
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-				(justify left)
 			)
 		)
 		(instances
