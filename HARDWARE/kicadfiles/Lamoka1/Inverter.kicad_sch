@@ -1,0 +1,203 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "c5a3b2f1-8d4e-4a2b-9f3c-1e6d5c4a8b9e")
+	(paper "A3")
+	(title_block
+		(title "Lamoka1 Inverter Section")
+		(date "2026")
+		(rev "P1")
+		(company "Flamingo-n-Cactus")
+		(comment 1 "Single-phase H-bridge inverter for 120Vrms output")
+	)
+	(lib_symbols
+		(symbol "Device:CP"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "C"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Device:L"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "L"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Device:R"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Device:LED"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "D"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Device:Diode"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "D"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Device:Q_NMOS"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "Q"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Device:Q_PMOS"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "Q"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Device: MOSFET_FDS4375"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "Q"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Device: IRF730"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "Q"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Connector:Conn_01x04"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Connector:Conn_01x02"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Connector:Audio_Jack_3.5mm"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" " jack"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Supply _:VIN"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "VIN"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Supply _:VOUT"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "VOUT"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "Power:GND"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "GND"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+		(symbol "RSF:RSF"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(property "Reference" "RSF"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)))
+			)
+		)
+	)
+	(sheet
+		(at 50.8 50.8)
+		(size 200 300)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(property "Sheetname" "Inverter Power Stage"
+		(at 50.8 50.8 0)
+		(effects (font (size 5.08 5.08)))
+	)
+	(property "Sheetfile" "Inverter.kicad_sch"
+		(at 50.8 55.88 0)
+		(effects (font (size 1.27 1.27)))
+	)
+		(pins
+			(pin "DCIN" input (at 0 0 0) (number 1))
+			(pin "DOUT" output (at 0 0 0) (number 2))
+			(pin "HBRIDGE_IN1" input (at 0 0 0) (number 3))
+			(pin "HBRIDGE_IN2" input (at 0 0 0) (number 4))
+			(pin "GATE1H" output (at 0 0 0) (number 5))
+			(pin "GATE1L" output (at 0 0 0) (number 6))
+			(pin "GATE2H" output (at 0 0 0) (number 7))
+			(pin "GATE2L" output (at 0 0 0) (number 8))
+			(pin "DRIVE_VCC" input (at 0 0 0) (number 9))
+		)
+	)
+)
