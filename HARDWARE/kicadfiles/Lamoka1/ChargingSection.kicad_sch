@@ -4763,7 +4763,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "12e9ed8e-42c1-4e85-a1aa-b614e12674d1")
-		(property "Reference" "C8"
+		(property "Reference" "C48"
 			(at 167.64 142.24 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4825,7 +4825,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C8")
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -4842,7 +4842,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1856d23f-2a34-4f40-8ada-010cb93f2c9b")
-		(property "Reference" "C15"
+		(property "Reference" "C51"
 			(at 50.546 121.666 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4906,7 +4906,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C15")
+					(reference "C51")
 					(unit 1)
 				)
 			)
@@ -4923,7 +4923,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1aa8ad5b-0c4b-44b9-b75b-a29632083356")
-		(property "Reference" "R16"
+		(property "Reference" "R53"
 			(at 186.436 116.332 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4987,7 +4987,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R16")
+					(reference "R53")
 					(unit 1)
 				)
 			)
@@ -5005,7 +5005,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c8b3e00-b8a8-4c27-9be4-0402f820facd")
-		(property "Reference" "R17"
+		(property "Reference" "R54"
 			(at 133.35 87.6299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5069,7 +5069,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R17")
+					(reference "R54")
 					(unit 1)
 				)
 			)
@@ -5341,7 +5341,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2f94f03a-d925-459a-9f7c-efeaef24ef35")
-		(property "Reference" "C9"
+		(property "Reference" "C30"
 			(at 73.914 145.034 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5405,7 +5405,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C9")
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -5583,7 +5583,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3c43f3c0-587d-49ae-b3a2-3c92bd6cc269")
-		(property "Reference" "R8"
+		(property "Reference" "R56"
 			(at 37.338 35.56 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5645,7 +5645,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R8")
+					(reference "R56")
 					(unit 1)
 				)
 			)
@@ -5662,7 +5662,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3e965cb6-b146-458e-99aa-8c7a6f913686")
-		(property "Reference" "C21"
+		(property "Reference" "C57"
 			(at 201.676 133.858 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5726,7 +5726,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C21")
+					(reference "C57")
 					(unit 1)
 				)
 			)
@@ -6138,7 +6138,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4565040a-30ea-42a5-8dcd-8cd0ece34d40")
-		(property "Reference" "R9"
+		(property "Reference" "R57"
 			(at 37.338 48.26 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6200,7 +6200,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R9")
+					(reference "R57")
 					(unit 1)
 				)
 			)
@@ -6299,7 +6299,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "49554602-99b5-490d-b092-e66515f595b7")
-		(property "Reference" "R12"
+		(property "Reference" "R49"
 			(at 73.406 116.332 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6361,7 +6361,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R12")
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -6904,7 +6904,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "67e6a9ac-2ebc-4118-8575-9c597a6b086c")
-		(property "Reference" "R15"
+		(property "Reference" "R52"
 			(at 178.816 116.332 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6968,7 +6968,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R15")
+					(reference "R52")
 					(unit 1)
 				)
 			)
@@ -6985,7 +6985,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6a49a712-5942-44bf-808a-621beabe47d6")
-		(property "Reference" "C19"
+		(property "Reference" "C55"
 			(at 181.61 92.964 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7047,7 +7047,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C19")
+					(reference "C55")
 					(unit 1)
 				)
 			)
@@ -7142,7 +7142,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7392d588-ee22-4ca4-b0f6-2abc7eb740bd")
-		(property "Reference" "U1"
+		(property "Reference" "U6"
 			(at 134.62 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7311,7 +7311,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "U1")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -7405,7 +7405,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "75bd94cc-7ee2-4749-800c-9cbb9d29e3bb")
-		(property "Reference" "R13"
+		(property "Reference" "R50"
 			(at 195.58 62.992 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7467,7 +7467,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R13")
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -7561,7 +7561,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7ec7d11b-5579-4302-afe1-e51c519154b2")
-		(property "Reference" "C14"
+		(property "Reference" "C50"
 			(at 185.166 62.992 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7625,7 +7625,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C14")
+					(reference "C50")
 					(unit 1)
 				)
 			)
@@ -7642,7 +7642,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "80043ed5-4561-4481-b8e2-56c74823bea1")
-		(property "Reference" "C10"
+		(property "Reference" "C31"
 			(at 71.374 135.128 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7706,7 +7706,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C10")
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -7723,7 +7723,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88c7e0fe-5b65-44d1-9b24-9ac8c7a604b6")
-		(property "Reference" "C13"
+		(property "Reference" "C34"
 			(at 204.724 62.992 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7787,7 +7787,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C13")
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -7881,7 +7881,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d3d4e7e-3be4-437a-b47f-de57e55ba0b2")
-		(property "Reference" "C17"
+		(property "Reference" "C53"
 			(at 176.784 100.838 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7943,7 +7943,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C17")
+					(reference "C53")
 					(unit 1)
 				)
 			)
@@ -7960,7 +7960,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "92d6ba2b-bb6f-4697-80ac-074feaee42f7")
-		(property "Reference" "C16"
+		(property "Reference" "C52"
 			(at 166.37 128.778 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8024,7 +8024,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C16")
+					(reference "C52")
 					(unit 1)
 				)
 			)
@@ -8041,7 +8041,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9fb294bf-32b2-4ff3-8355-a324d6b0e5c7")
-		(property "Reference" "R14"
+		(property "Reference" "R51"
 			(at 181.61 124.714 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8103,7 +8103,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R14")
+					(reference "R51")
 					(unit 1)
 				)
 			)
@@ -8120,7 +8120,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a1f3834f-9148-4cda-95a1-fa639440a0a3")
-		(property "Reference" "R11"
+		(property "Reference" "R58"
 			(at 80.518 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8182,7 +8182,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R11")
+					(reference "R58")
 					(unit 1)
 				)
 			)
@@ -8770,7 +8770,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ad92b251-08cc-4283-a82b-12186d78d566")
-		(property "Reference" "C23"
+		(property "Reference" "C44"
 			(at 33.02 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8834,7 +8834,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C23")
+					(reference "C44")
 					(unit 1)
 				)
 			)
@@ -8852,7 +8852,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b00ebab1-5271-4964-bd59-b772a08741af")
-		(property "Reference" "C22"
+		(property "Reference" "C43"
 			(at 266.7 50.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8916,7 +8916,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C22")
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -9016,7 +9016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b9bfe184-6bfa-46af-a332-4fb357aa3425")
-		(property "Reference" "D2"
+		(property "Reference" "D12"
 			(at 177.8 140.9699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9102,7 +9102,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "D2")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -9119,7 +9119,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bae21002-ee5f-4aaa-af6b-b6582f33b11d")
-		(property "Reference" "D1"
+		(property "Reference" "D11"
 			(at 105.41 140.9699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9205,7 +9205,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "D1")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -9222,7 +9222,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c0785b78-1268-409b-bd07-74ad4429cd08")
-		(property "Reference" "C12"
+		(property "Reference" "C49"
 			(at 100.584 121.158 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9284,7 +9284,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C12")
+					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -9301,7 +9301,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c6a31943-9625-496d-a516-50c0abe13221")
-		(property "Reference" "R6"
+		(property "Reference" "R55"
 			(at 37.338 22.86 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9363,7 +9363,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "R6")
+					(reference "R55")
 					(unit 1)
 				)
 			)
@@ -9380,7 +9380,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c9925123-9ce5-4bba-ad5e-b17074697533")
-		(property "Reference" "C7"
+		(property "Reference" "C28"
 			(at 111.76 142.494 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9442,7 +9442,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C7")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -9692,7 +9692,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cf38d21e-bb9a-434d-b1ff-6e0c6d091696")
-		(property "Reference" "C18"
+		(property "Reference" "C54"
 			(at 186.182 100.838 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9754,7 +9754,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C18")
+					(reference "C54")
 					(unit 1)
 				)
 			)
@@ -9771,7 +9771,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d9e02f15-ebb3-4e76-a707-bcf311a3001f")
-		(property "Reference" "J2"
+		(property "Reference" "J4"
 			(at 29.21 173.482 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9833,7 +9833,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "J2")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -10083,7 +10083,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e435ffa7-d761-4cbb-9036-429a0dacfb28")
-		(property "Reference" "C20"
+		(property "Reference" "C56"
 			(at 194.056 133.858 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10147,7 +10147,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C20")
+					(reference "C56")
 					(unit 1)
 				)
 			)
@@ -10164,7 +10164,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e4f58e96-f5ce-4767-bfea-afffc05b3d53")
-		(property "Reference" "C11"
+		(property "Reference" "C32"
 			(at 79.502 135.128 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10228,7 +10228,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/fb4f0aa7-d40c-468b-b4b6-22d46a6e117f"
-					(reference "C11")
+					(reference "C32")
 					(unit 1)
 				)
 			)

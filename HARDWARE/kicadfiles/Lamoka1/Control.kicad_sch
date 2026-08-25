@@ -7304,6 +7304,61 @@
 		)
 		(uuid "faf13dfa-c3c9-40f7-9a2b-a034562e568d")
 	)
+	(hierarchical_label "CHG_CE"
+		(shape input)
+		(at 165.1 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "319cd279-569a-4bc5-923f-ce737c9422f8")
+	)
+	(hierarchical_label "I2C_SCL"
+		(shape input)
+		(at 165.1 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7b982b95-9195-47ac-83fb-15c9a00148c2")
+	)
+	(hierarchical_label "SIGM"
+		(shape input)
+		(at 165.1 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a6982bb3-5de8-4cf3-88f4-4acb2ddaca9f")
+	)
+	(hierarchical_label "I2C_SDA"
+		(shape input)
+		(at 165.1 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ece7e95d-a4f0-4301-b123-6932134c560c")
+	)
+	(hierarchical_label "CHG_INT"
+		(shape input)
+		(at 165.1 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fe3522aa-cf45-4a73-b84a-55e3e690499b")
+	)
 	(symbol
 		(lib_id "Pads:Tomachie_TP_E")
 		(at 320.762 244 0)
@@ -7506,7 +7561,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02b9a7f5-523f-4cb6-b77e-daa60c3cd66e")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR84"
 			(at 273.05 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -7567,13 +7622,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR020")
+					(reference "#PWR84")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR020")
+					(reference "#PWR84")
 					(unit 1)
 				)
 			)
@@ -8123,7 +8178,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0967032e-4acf-43ae-86c3-5599644fa49c")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR76"
 			(at 208.28 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -8183,13 +8238,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR013")
+					(reference "#PWR76")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR013")
+					(reference "#PWR76")
 					(unit 1)
 				)
 			)
@@ -8207,7 +8262,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0b7c18bf-8c71-4d4a-8126-aef646e52938")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR93"
 			(at 71.12 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -8267,13 +8322,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR05")
+					(reference "#PWR93")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR05")
+					(reference "#PWR93")
 					(unit 1)
 				)
 			)
@@ -8453,7 +8508,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "10f386f3-950a-4ec8-b014-151b7f027371")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR95"
 			(at 139.7 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -8513,13 +8568,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR07")
+					(reference "#PWR95")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR07")
+					(reference "#PWR95")
 					(unit 1)
 				)
 			)
@@ -9506,7 +9561,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20e2c466-4d8c-4aed-bd97-97ce311bebc3")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR89"
 			(at 271.78 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -9567,13 +9622,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR025")
+					(reference "#PWR89")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR025")
+					(reference "#PWR89")
 					(unit 1)
 				)
 			)
@@ -9591,7 +9646,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2587b65b-be58-4b7e-9851-7281eaa69dfa")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR94"
 			(at 26.67 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -9651,13 +9706,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR06")
+					(reference "#PWR94")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR06")
+					(reference "#PWR94")
 					(unit 1)
 				)
 			)
@@ -10955,7 +11010,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3059e5d4-5580-40f7-93ae-975ae0602b4c")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR88"
 			(at 271.78 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -11016,13 +11071,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR024")
+					(reference "#PWR88")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR024")
+					(reference "#PWR88")
 					(unit 1)
 				)
 			)
@@ -11211,7 +11266,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "329eb87f-d1fb-4fff-8d3f-7e7a1790fead")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR85"
 			(at 273.05 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -11272,13 +11327,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR021")
+					(reference "#PWR85")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR021")
+					(reference "#PWR85")
 					(unit 1)
 				)
 			)
@@ -12234,7 +12289,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "47b4a0eb-6e47-47f3-8af1-508e24ed7827")
-		(property "Reference" "D10"
+		(property "Reference" "D13"
 			(at 284.48 309.8098 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12381,13 +12436,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "D10")
+					(reference "D13")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "D10")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -13358,7 +13413,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68672050-71fb-41fe-8d56-addeafc23909")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR92"
 			(at 24.13 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -13418,13 +13473,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR04")
+					(reference "#PWR92")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR04")
+					(reference "#PWR92")
 					(unit 1)
 				)
 			)
@@ -15322,7 +15377,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "87bcd083-f115-4c31-9dd7-334ab13bfa01")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR91"
 			(at 82.55 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -15382,13 +15437,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR03")
+					(reference "#PWR91")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR03")
+					(reference "#PWR91")
 					(unit 1)
 				)
 			)
@@ -15691,7 +15746,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8d9cf126-ad30-4c31-8ed5-7327d137c275")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR86"
 			(at 271.78 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -15752,13 +15807,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR022")
+					(reference "#PWR86")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR022")
+					(reference "#PWR86")
 					(unit 1)
 				)
 			)
@@ -15776,7 +15831,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8e8e1356-f1ba-4899-a749-a4137868c3c5")
-		(property "Reference" "D9"
+		(property "Reference" "D14"
 			(at 283.21 284.4098 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15923,13 +15978,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "D9")
+					(reference "D14")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "D9")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -16396,7 +16451,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97b5dbe6-370d-4f1f-babb-e792c8d5a937")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR77"
 			(at 219.71 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -16456,13 +16511,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR014")
+					(reference "#PWR77")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR014")
+					(reference "#PWR77")
 					(unit 1)
 				)
 			)
@@ -17024,7 +17079,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1be3aab-42f0-4323-b45a-c67225b24391")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR83"
 			(at 88.9 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -17084,13 +17139,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR02")
+					(reference "#PWR83")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR02")
+					(reference "#PWR83")
 					(unit 1)
 				)
 			)
@@ -17711,7 +17766,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b1423ec3-6987-4b81-ac97-38ca73cc0130")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR81"
 			(at 280.67 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -17771,13 +17826,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR018")
+					(reference "#PWR81")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR018")
+					(reference "#PWR81")
 					(unit 1)
 				)
 			)
@@ -17890,7 +17945,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b815b1ad-494e-41bb-b274-48601d7d3290")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR79"
 			(at 234.95 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -17950,13 +18005,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR016")
+					(reference "#PWR79")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR016")
+					(reference "#PWR79")
 					(unit 1)
 				)
 			)
@@ -17974,7 +18029,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b9da41bd-9bc0-47f9-ba48-d1419a9d1d52")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR87"
 			(at 271.78 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -18035,13 +18090,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR023")
+					(reference "#PWR87")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR023")
+					(reference "#PWR87")
 					(unit 1)
 				)
 			)
@@ -18058,7 +18113,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bafc75b9-b90e-4860-bf71-6911eec5c639")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR73"
 			(at 139.7 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -18118,13 +18173,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR010")
+					(reference "#PWR73")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR010")
+					(reference "#PWR73")
 					(unit 1)
 				)
 			)
@@ -18642,7 +18697,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bdd7eed2-a18d-4299-8e4f-d9503fe7b072")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR96"
 			(at 82.55 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -18702,13 +18757,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR08")
+					(reference "#PWR96")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR08")
+					(reference "#PWR96")
 					(unit 1)
 				)
 			)
@@ -18725,7 +18780,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "be4c1de7-1d9a-47f3-aa37-ad1488c9182b")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR97"
 			(at 118.11 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -18785,13 +18840,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR09")
+					(reference "#PWR97")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR09")
+					(reference "#PWR97")
 					(unit 1)
 				)
 			)
@@ -18809,7 +18864,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bfd984a9-519f-46f5-952d-39b1dfa91f81")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR75"
 			(at 245.11 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -18869,13 +18924,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR012")
+					(reference "#PWR75")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR012")
+					(reference "#PWR75")
 					(unit 1)
 				)
 			)
@@ -19826,7 +19881,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d1660970-cd3f-4cc6-a156-fe4c8187f774")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR78"
 			(at 255.27 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -19886,13 +19941,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR015")
+					(reference "#PWR78")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR015")
+					(reference "#PWR78")
 					(unit 1)
 				)
 			)
@@ -20255,7 +20310,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dc7ef7f5-bb53-4fb8-b36e-5b8b276389c2")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR90"
 			(at 271.78 281.94 0)
 			(hide yes)
 			(show_name no)
@@ -20316,13 +20371,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR026")
+					(reference "#PWR90")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR026")
+					(reference "#PWR90")
 					(unit 1)
 				)
 			)
@@ -21790,7 +21845,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee392363-26fd-4429-8671-d156da8c0f61")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR82"
 			(at 273.05 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -21851,13 +21906,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR019")
+					(reference "#PWR82")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR019")
+					(reference "#PWR82")
 					(unit 1)
 				)
 			)
@@ -21875,7 +21930,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ef2afdd8-e003-46c5-9c80-c48ff7e07d26")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR74"
 			(at 254 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -21935,13 +21990,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR011")
+					(reference "#PWR74")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR011")
+					(reference "#PWR74")
 					(unit 1)
 				)
 			)
@@ -22043,7 +22098,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0788237-403d-4477-97a3-dbf36b2e27a8")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR80"
 			(at 226.06 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -22103,13 +22158,13 @@
 		(instances
 			(project "Lamoka1"
 				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390/eacfaa29-95bd-4b2f-8343-38bb09a7036c"
-					(reference "#PWR017")
+					(reference "#PWR80")
 					(unit 1)
 				)
 			)
 			(project "Lamoka1-DEV-board"
 				(path "/55d50423-0c9f-4738-972b-2a94300541f0"
-					(reference "#PWR017")
+					(reference "#PWR80")
 					(unit 1)
 				)
 			)
