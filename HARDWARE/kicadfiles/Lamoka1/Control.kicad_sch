@@ -7304,6 +7304,61 @@
 		)
 		(uuid "faf13dfa-c3c9-40f7-9a2b-a034562e568d")
 	)
+	(hierarchical_label "I2C_SDA"
+		(shape input)
+		(at 165.1 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0922d2ce-1040-46c3-8b15-6449b765647f")
+	)
+	(hierarchical_label "I2C_SCL"
+		(shape input)
+		(at 165.1 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0cfd9252-09b1-4a46-b72b-a63f1bd87a0e")
+	)
+	(hierarchical_label "CHG_INT"
+		(shape input)
+		(at 165.1 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8a2c2f62-8508-4113-a51e-f17d24dd8edf")
+	)
+	(hierarchical_label "SIGM"
+		(shape input)
+		(at 165.1 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c7a67e46-3a92-45de-99ab-a9b5d44641e4")
+	)
+	(hierarchical_label "CHG_CE"
+		(shape input)
+		(at 165.1 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "eca0330b-77e9-43e2-8a0f-f7adcc8b456d")
+	)
 	(symbol
 		(lib_id "Pads:Tomachie_TP_E")
 		(at 320.762 244 0)
