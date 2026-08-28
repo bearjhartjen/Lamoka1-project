@@ -413,9 +413,115 @@
 			)
 		)
 	)
+	(sheet
+		(at 401.32 23.495)
+		(size 321.31 234.95)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fb4f0aa7-d40c-468b-b4b6-22d46a6e1180")
+		(property "Sheetname" "Charging Section"
+			(at 401.32 20.8784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 5.08 5.08)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ChargingSection.kicad_sch"
+			(at 401.32 259.0296 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3v3" input
+			(at 401.32 191.77 180)
+			(uuid "cad90344-045e-4a31-8395-3c77bd6140fe")
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(pin "CHG_CE" input
+			(at 401.32 152.4 180)
+			(uuid "a1aa2e93-0b0f-4557-a8c8-5ecb76356931")
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(pin "CHG_INT" input
+			(at 401.32 146.05 180)
+			(uuid "516454ba-c946-47d4-a9aa-e8337a7ac2fe")
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SCL" input
+			(at 401.32 132.08 180)
+			(uuid "a5448c0c-fa80-49d4-43d7-b525d17c2886")
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SDA" input
+			(at 401.32 139.7 180)
+			(uuid "d66ba18b-e677-41cd-4218-e3167d28f117")
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(pin "VIN-SOURCE" input
+			(at 401.32 198.12 180)
+			(uuid "0dedb0c1-50cd-499b-b375-0281c75a3a4e")
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/50fe8bbc-b3f6-4de5-9677-9b5870b87390"
+					(page "1")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
-			(page "1")
+			(page "6")
 		)
 	)
 	(embedded_fonts no)

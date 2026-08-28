@@ -33,4 +33,5 @@
   (lib (name "2026-08-02_00-00-02") (type "KiCad") (uri "${KIPRJMOD}/Symbols/2026-08-02_00-00-02.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
   (lib (name "2026-08-02_00-00-03") (type "KiCad") (uri "${KIPRJMOD}/Symbols/2026-08-02_00-00-03.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
   (lib (name "2026-08-02_00-00-04") (type "KiCad") (uri "${KIPRJMOD}/Symbols/2026-08-02_00-00-04.kicad_sym") (options "") (descr "Lamoka1 project-specific symbols"))
+  (lib (name "Inverter-HBridge") (type "KiCad") (uri "${KIPRJMOD}/Symbols/Inverter-HBridge.kicad_sym") (options "") (descr "Inverter H-Bridge symbols"))
 )
