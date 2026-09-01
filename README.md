@@ -1,4 +1,9 @@
-## Top priority
+## NOTICE 
+ We are sorry to announce that this project is going to be on the back burner for a while we establish our motivation into another project for now. Any questions, comments, or concerns can be brought right up to us at Flamingoncactus@Gmail.com we will still respond to this project, though our focus will be elsewhere.
+
+
+
+## Real stuff 
  
 <div align="center">
 
