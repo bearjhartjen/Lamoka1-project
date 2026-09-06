@@ -1,1 +1,0 @@
-These files were made specifically for the Bambu lab P1S with a 0.4mm nozzle. If you would like to print out a model on your own different computer, of course feel free to take the files from this project.
