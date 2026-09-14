@@ -2631,7 +2631,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NMOS"
+		(property "Value" "CSD19536KCS"
 			(at 256.54 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3006,7 +3006,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:NMOS")
-		(at 284.48 63.5 180)
+		(at 293.37 63.5 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3017,7 +3017,7 @@
 		(fields_autoplaced yes)
 		(uuid "16b7d1ee-3a45-473c-9dbd-3ff3cc4229b7")
 		(property "Reference" "Q4"
-			(at 278.13 62.2299 0)
+			(at 287.02 62.2299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3027,8 +3027,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NMOS"
-			(at 278.13 64.7699 0)
+		(property "Value" "CSD19536KCS"
+			(at 287.02 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3039,7 +3039,7 @@
 			)
 		)
 		(property "Footprint" "Components for Lamoka1 general:TO254P1036X470X1965-3"
-			(at 279.4 66.04 0)
+			(at 288.29 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3050,7 +3050,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 284.48 50.8 0)
+			(at 293.37 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3061,7 +3061,7 @@
 			)
 		)
 		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 284.48 63.5 0)
+			(at 293.37 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3072,7 +3072,7 @@
 			)
 		)
 		(property "Sim.Device" "NMOS"
-			(at 284.48 46.355 0)
+			(at 293.37 46.355 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3083,7 +3083,7 @@
 			)
 		)
 		(property "Sim.Type" "VDMOS"
-			(at 284.48 44.45 0)
+			(at 293.37 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3094,7 +3094,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 284.48 48.26 0)
+			(at 293.37 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3543,7 +3543,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NMOS"
+		(property "Value" "CSD19536KCS"
 			(at 256.54 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5275,7 +5275,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:NMOS")
-		(at 284.48 81.28 180)
+		(at 293.37 81.28 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5286,7 +5286,7 @@
 		(fields_autoplaced yes)
 		(uuid "b1f23829-c2b4-420b-83c9-55d0c70e276e")
 		(property "Reference" "Q6"
-			(at 278.13 80.0099 0)
+			(at 287.02 80.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5296,8 +5296,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NMOS"
-			(at 278.13 82.5499 0)
+		(property "Value" "CSD19536KCS"
+			(at 287.02 82.5499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5308,7 +5308,7 @@
 			)
 		)
 		(property "Footprint" "Components for Lamoka1 general:TO254P1036X470X1965-3"
-			(at 279.4 83.82 0)
+			(at 288.29 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5319,7 +5319,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 284.48 68.58 0)
+			(at 293.37 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5330,7 +5330,7 @@
 			)
 		)
 		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 284.48 81.28 0)
+			(at 293.37 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5341,7 +5341,7 @@
 			)
 		)
 		(property "Sim.Device" "NMOS"
-			(at 284.48 64.135 0)
+			(at 293.37 64.135 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5352,7 +5352,7 @@
 			)
 		)
 		(property "Sim.Type" "VDMOS"
-			(at 284.48 62.23 0)
+			(at 293.37 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5363,7 +5363,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 284.48 66.04 0)
+			(at 293.37 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
