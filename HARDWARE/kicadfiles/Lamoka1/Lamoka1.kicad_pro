@@ -41,7 +41,7 @@
         "pads": {
           "drill": 0.8,
           "height": 1.27,
-          "width": 2.54
+          "width": 1.27
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -590,6 +590,18 @@
         },
         {
           "group_by": true,
+          "label": "Exclude from Simulation",
+          "name": "${EXCLUDE_FROM_SIM}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Position Files",
+          "name": "${EXCLUDE_FROM_POS_FILES}",
+          "show": true
+        },
+        {
+          "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -599,176 +611,14 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Arrow Price/Stock",
-          "name": "Arrow Price/Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Critical Parameter",
-          "name": "Critical Parameter",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "fres (MHz)",
-          "name": "fres (MHz)",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Height",
-          "name": "Height",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "IRP,40K (A)",
-          "name": "IRP,40K (A)",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "ISAT,10% (A)",
-          "name": "ISAT,10% (A)",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "ISAT,30% (A)",
-          "name": "ISAT,30% (A)",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "L (µH)",
-          "name": "L (µH)",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer",
-          "name": "Manufacturer",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer URL",
-          "name": "Manufacturer URL",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Name",
-          "name": "Manufacturer_Name",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Part_Number",
-          "name": "Manufacturer_Part_Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Match Code",
-          "name": "Match Code",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mounting Technology",
-          "name": "Mounting Technology",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Part Number",
-          "name": "Mouser Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Price/Stock",
-          "name": "Mouser Price/Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Part Number",
-          "name": "Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Published Date",
-          "name": "Published Date",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "RDC max. (mΩ)",
-          "name": "RDC max. (mΩ)",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Device",
-          "name": "Sim.Device",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Pins",
-          "name": "Sim.Pins",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Type",
-          "name": "Sim.Type",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Size",
-          "name": "Size",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Wire Type",
-          "name": "Wire Type",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Arrow Part Number",
-          "name": "Arrow Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Description",
-          "name": "Description",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "",
-      "sort_asc": false,
-      "sort_field": "${EXCLUDE_FROM_BOARD}"
+      "name": "Default Editing",
+      "sort_asc": true,
+      "sort_field": "Reference"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -808,24 +658,24 @@
       {
         "filename": "Lamoka1.kicad_sch",
         "name": "Root",
-        "uuid": "50fe8bbc-b3f6-4de5-9677-9b5870b87390"
+        "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "P1,L1-2,J1-3,SW1,NT1-5,R1-25,R27-33,R36,R41-42,D1-2,C1-23,C29,C33-36,#PWR1-72,U1-8,Q1-9",
+    "used_designators": "#PWR1-54,Coutx1,C1-33,D1-11,J1,J3,Cbst1,Rvin1,Dbst1,Cout1-3,Rfbt1,SW1,Ruvt1,Ruvb1,Rcomp1,Q1-6,U1-4,X1,Rfbb1,Cin1,TP1-41,Cres1,Cvin1,Rt1,Css1,Ccomp1,Cvcc1,NT1-2,Rsense1,R1-19,L1-2,Rslope1",
     "variants": []
   },
   "sheets": [
     [
-      "a95c5aae-5b4a-4cf6-bc17-13cf3a196ad0",
-      "BOOST-SECTION"
-    ],
-    [
-      "eacfaa29-95bd-4b2f-8343-38bb09a7036c",
-      "Control"
-    ],
-    [
-      "50fe8bbc-b3f6-4de5-9677-9b5870b87390",
+      "c7bb62b6-932f-49c1-a356-0286e905fc0a",
       "Root"
+    ],
+    [
+      "45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe",
+      "Control-section"
+    ],
+    [
+      "33a0e173-cd9f-43d8-aaa7-b518880f6e90",
+      "Inversion-section"
     ]
   ],
   "text_variables": {},

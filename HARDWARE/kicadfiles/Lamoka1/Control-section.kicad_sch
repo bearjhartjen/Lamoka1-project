@@ -10084,7 +10084,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Raspberry Pi"
+		(property "Manufacturer" "	\nRaspberry Pi"
 			(at 196.85 100.33 0)
 			(hide yes)
 			(show_name no)

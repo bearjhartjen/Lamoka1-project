@@ -1,0 +1,116 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "c7bb62b6-932f-49c1-a356-0286e905fc0a")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 108.966 22.86)
+		(size 81.534 52.07)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "33a0e173-cd9f-43d8-aaa7-b518880f6e90")
+		(property "Sheetname" "Inversion-section"
+			(at 108.966 22.1484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Inversion-section.kicad_sch"
+			(at 108.966 75.5146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "11-14v input" input
+			(at 108.966 34.29 180)
+			(uuid "9db58887-9c78-4c67-a146-ba2ab6fd973b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 24.13 23.114)
+		(size 74.93 52.07)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe")
+		(property "Sheetname" "Control-section"
+			(at 24.13 22.4024 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Control-section.kicad_sch"
+			(at 24.13 75.7686 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
