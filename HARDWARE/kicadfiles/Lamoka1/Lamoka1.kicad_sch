@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "10.0")
 	(uuid "c7bb62b6-932f-49c1-a356-0286e905fc0a")
-	(paper "A4")
+	(paper "A5")
 	(title_block
 		(company "Flamingo & Cactus")
 	)
@@ -360,7 +360,7 @@
 	)
 	(symbol
 		(lib_id "Flamingo&Cactus-logo:LOGO")
-		(at 181.61 173.99 0)
+		(at 95.25 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -371,7 +371,7 @@
 		(fields_autoplaced yes)
 		(uuid "6c902d78-0c23-4c5a-bd8c-c231e6cb8880")
 		(property "Reference" "#G1"
-			(at 181.61 169.6241 0)
+			(at 95.25 107.3941 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -382,7 +382,7 @@
 			)
 		)
 		(property "Value" "LOGO"
-			(at 181.61 178.3559 0)
+			(at 95.25 116.1259 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -393,7 +393,7 @@
 			)
 		)
 		(property "Footprint" "Package_LCC:PLCC-84_29.3x29.3mm_P1.27mm"
-			(at 181.61 173.99 0)
+			(at 95.25 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -404,7 +404,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 173.99 0)
+			(at 95.25 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -415,7 +415,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 173.99 0)
+			(at 95.25 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -450,7 +450,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "33a0e173-cd9f-43d8-aaa7-b518880f6e90")
-		(property "Sheetname" "Inversion-section"
+		(property "Sheetname" "Inversion-Section"
 			(at 109.22 22.1484 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -546,7 +546,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe")
-		(property "Sheetname" "Control-section"
+		(property "Sheetname" "Control-Section"
 			(at 24.13 22.4024 0)
 			(show_name no)
 			(do_not_autoplace no)
