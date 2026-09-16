@@ -318,6 +318,46 @@
 			(embedded_fonts no)
 		)
 	)
+	(wire
+		(pts
+			(xy 99.06 45.72) (xy 109.22 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03605546-498e-4190-ae91-74e70d976cb5")
+	)
+	(wire
+		(pts
+			(xy 99.06 53.34) (xy 109.22 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cdffd30-ba9d-42eb-baac-47e26396b43c")
+	)
+	(wire
+		(pts
+			(xy 99.06 41.91) (xy 109.22 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bca8e788-aa0d-4bec-9a22-92c7ec333440")
+	)
+	(wire
+		(pts
+			(xy 99.06 49.53) (xy 109.22 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c31f22c6-0ed2-48de-a0ce-8b008aa30e73")
+	)
 	(symbol
 		(lib_id "Flamingo&Cactus-logo:LOGO")
 		(at 181.61 173.99 0)
@@ -395,7 +435,7 @@
 		)
 	)
 	(sheet
-		(at 108.966 22.86)
+		(at 109.22 22.86)
 		(size 81.534 52.07)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -411,7 +451,7 @@
 		)
 		(uuid "33a0e173-cd9f-43d8-aaa7-b518880f6e90")
 		(property "Sheetname" "Inversion-section"
-			(at 108.966 22.1484 0)
+			(at 109.22 22.1484 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -422,7 +462,7 @@
 			)
 		)
 		(property "Sheetfile" "Inversion-section.kicad_sch"
-			(at 108.966 75.5146 0)
+			(at 109.22 75.5146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -433,8 +473,48 @@
 			)
 		)
 		(pin "11-14v input" input
-			(at 108.966 34.29 180)
+			(at 109.22 34.29 180)
 			(uuid "9db58887-9c78-4c67-a146-ba2ab6fd973b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GPIO4" input
+			(at 109.22 41.91 180)
+			(uuid "db1df975-5460-4844-b34c-940aabea6338")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GPIO3" input
+			(at 109.22 45.72 180)
+			(uuid "c799e4b3-c2bf-4787-a759-783ed80b281e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GPIO2" input
+			(at 109.22 49.53 180)
+			(uuid "44981396-5728-4ecc-932b-cbc6cf7c4deb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GPIO1" input
+			(at 109.22 53.34 180)
+			(uuid "e89a60bc-c3b6-40bd-879c-9a618f389398")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -486,6 +566,46 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "GPIO4" input
+			(at 99.06 41.91 0)
+			(uuid "ce412326-8754-4c27-8963-dcc9214c8146")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO3" input
+			(at 99.06 45.72 0)
+			(uuid "785016de-2d6b-417a-ab8e-009413ee6a68")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO2" input
+			(at 99.06 49.53 0)
+			(uuid "cd6c2562-17e6-441d-897d-9a25c6c8aba0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO1" input
+			(at 99.06 53.34 0)
+			(uuid "2591e10b-5a74-4d9e-a777-cbe6675f8cc2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
