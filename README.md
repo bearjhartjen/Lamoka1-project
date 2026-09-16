@@ -18,7 +18,4 @@
 
 ---
 
-<div align="center">
-  <img src="Images/FlamingonCactus.png" width="120" style="border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" alt="Flamingo and Cactus Logo">
-</div>
 
