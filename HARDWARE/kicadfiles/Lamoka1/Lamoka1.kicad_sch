@@ -358,6 +358,16 @@
 		)
 		(uuid "c31f22c6-0ed2-48de-a0ce-8b008aa30e73")
 	)
+	(wire
+		(pts
+			(xy 99.06 34.29) (xy 109.22 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee17fe7a-bc7f-4bf0-b14e-06715d60fd49")
+	)
 	(symbol
 		(lib_id "Flamingo&Cactus-logo:LOGO")
 		(at 95.25 111.76 0)
@@ -601,6 +611,16 @@
 		(pin "GPIO1" input
 			(at 99.06 53.34 0)
 			(uuid "2591e10b-5a74-4d9e-a777-cbe6675f8cc2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "11-14v input" input
+			(at 99.06 34.29 0)
+			(uuid "c3495c3d-c8af-4660-b7e3-d69893c1cf32")
 			(effects
 				(font
 					(size 1.27 1.27)

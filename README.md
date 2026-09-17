@@ -24,5 +24,9 @@
 
  At Flamingo and Cactus we just want to provide the best product/services/experience to as many people as we possibly can. as a small team we can only do so much, but we have very large dreams, so AI can act as a bridge. 
 
+---
+
+
+
 
 
