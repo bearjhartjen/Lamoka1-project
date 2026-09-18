@@ -14,11 +14,11 @@
 
  GPIO6: PWM signal to NF-A4x20 5V PWM
 
- GPIO7: Output of TMP235A2DBZR temp sensor located in the Control-Section
-
- GPIO8: Output of TMP235A2DBZR temp sensor located in the Inverter-Section 
-
  GPIO11: Goes to a level shifter to get up to 5v then to a 330 ohm resistor then connects to string of ten WS2812B lights arranged next to each other from left to right with D1 starting and D10 finishing, the press button is to the left of D1
+
+ GPIO26: Output of TMP235A2DBZR temp sensor located in the Control-Section
+
+ GPIO27: Output of TMP235A2DBZR temp sensor located in the Inverter-Section 
 
 ---
 

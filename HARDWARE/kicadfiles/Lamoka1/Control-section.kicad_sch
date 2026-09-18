@@ -8080,6 +8080,10 @@
 		(uuid "080376ba-f290-461d-81e0-177d549081db")
 	)
 	(no_connect
+		(at 222.25 80.01)
+		(uuid "0c95a8ec-db88-418b-90f9-adcee7cbc924")
+	)
+	(no_connect
 		(at 222.25 100.33)
 		(uuid "10225586-7cfe-4fb3-9c51-be25e8896333")
 	)
@@ -8112,16 +8116,16 @@
 		(uuid "44676b36-9d64-4af1-be47-e9dc23dad3d2")
 	)
 	(no_connect
-		(at 222.25 133.35)
-		(uuid "552acd16-16ac-4014-81f6-6ca4328c3c1b")
-	)
-	(no_connect
 		(at 171.45 133.35)
 		(uuid "564c328c-6146-410a-83a2-68abd8acadc1")
 	)
 	(no_connect
 		(at 171.45 102.87)
 		(uuid "59ebbd6b-9b77-44b7-8b40-1b0cb57d74cb")
+	)
+	(no_connect
+		(at 222.25 82.55)
+		(uuid "692d4f26-8c9a-4f5e-861b-013e769aeb8d")
 	)
 	(no_connect
 		(at 222.25 125.73)
@@ -8174,10 +8178,6 @@
 	(no_connect
 		(at 222.25 97.79)
 		(uuid "e75159b7-a66c-456d-90ab-6ff6ecf9a100")
-	)
-	(no_connect
-		(at 222.25 130.81)
-		(uuid "e94662fd-3eb6-46e5-9e2c-3f1efbbf94c8")
 	)
 	(no_connect
 		(at 222.25 118.11)
@@ -9823,16 +9823,6 @@
 		)
 		(uuid "1a0e6112-12ae-4b57-bebe-62a991e4adbb")
 	)
-	(label "TEMP_CTRL"
-		(at 222.25 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "203d0ea4-fcaa-47f7-9616-a461580a4b79")
-	)
 	(label "GPIO5"
 		(at 229.87 74.93 0)
 		(effects
@@ -9852,6 +9842,16 @@
 			(justify left bottom)
 		)
 		(uuid "30ab5f0e-ddb1-4e11-88a4-0c536ec7100e")
+	)
+	(label "TEMP_CTRL"
+		(at 222.25 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "316d16a8-97a4-4579-8cdf-e34237e5ec10")
 	)
 	(label "1V1"
 		(at 214.63 46.99 0)
@@ -10493,17 +10493,6 @@
 		)
 		(uuid "f1f8c429-677c-431f-9a72-3896042a464d")
 	)
-	(hierarchical_label "TEMP_INV"
-		(shape input)
-		(at 222.25 82.55 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1ca76c86-86a0-4e23-8326-e2afa2dadc77")
-	)
 	(hierarchical_label "3v3"
 		(shape input)
 		(at 274.32 82.55 0)
@@ -10569,6 +10558,17 @@
 			(justify left)
 		)
 		(uuid "a9bf5d30-a45c-4d04-80fd-c14aab961582")
+	)
+	(hierarchical_label "TEMP_INV"
+		(shape input)
+		(at 222.25 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c180f24a-3f5d-4120-8a0e-e90111dc2d2c")
 	)
 	(hierarchical_label "GPIO2"
 		(shape input)

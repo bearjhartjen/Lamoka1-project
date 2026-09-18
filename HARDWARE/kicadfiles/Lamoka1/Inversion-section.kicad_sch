@@ -6345,7 +6345,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "0ac2e056-3335-44eb-9b12-afeb70bd0ffa")
 		(property "Reference" "Q2"
 			(at 116.84 48.2599 0)
@@ -6358,8 +6357,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NMOS"
-			(at 116.84 50.7999 0)
+		(property "Value" "CSD17304Q3"
+			(at 115.062 51.054 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9374,7 +9373,7 @@
 				)
 			)
 		)
-		(property "Value" "NMOS"
+		(property "Value" "CSD16323Q3"
 			(at 119.38 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
