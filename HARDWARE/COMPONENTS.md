@@ -35,3 +35,11 @@
  Diode for 5v source to eliminate buck output and USB 5v interactions: SS14-E3/61T made by Vishay x2
 
  Temp sensor for unit: TMP235A2DBZR made by TI x2
+
+ Connector for transformers connection to the PCB: 2606-1108/010-000 made by Wago
+
+ Connector for 11-14v DC source: 2606-1352 made by Wago
+
+ Outlet for inverter (120v AC North American): SKU Q227-115 made by Delkin technologies
+
+ Connector for hooking outlet to PCB: 2604-1103 made by Wago

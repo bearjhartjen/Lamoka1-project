@@ -1,6 +1,6 @@
 (fp_lib_table
 	(version 7)
-	(lib (name "Wago-connector") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_2606-1352/KiCADv6/footprints.pretty") (options "") (descr ""))
+	(lib (name "2606-1352") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_2606-1352/KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "TPS62160DSGR") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_TPS62160DSGR/KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "TMK212BBJ106KG") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_TMK212BBJ106KG/KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "GRM31CR71A226KE15L") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_GRM31CR71A226KE15L/KiCADv6/footprints.pretty") (options "") (descr ""))
@@ -11,4 +11,6 @@
 	(lib (name "470531000") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_470531000/KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "SS14-E3/61T") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_SS14-E3-61T/KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "TMP235A2DBZR") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/TMP235A2DBZR/KiCADv6/footprints.pretty") (options "") (descr ""))
+	(lib (name "2606-1108/010-000") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_2606-1108-010-000/KiCADv6/footprints.pretty") (options "") (descr ""))
+	(lib (name "2604-1103") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_2604-1103/KiCADv6/footprints.pretty") (options "") (descr ""))
 )
