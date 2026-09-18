@@ -33,3 +33,5 @@
  Power good pull up resistor for buck converter: CRCW0402100KFKED made by vishay dale
 
  Diode for 5v source to eliminate buck output and USB 5v interactions: SS14-E3/61T made by Vishay x2
+
+ Temp sensor for unit: TMP235A2DBZR made by TI x2

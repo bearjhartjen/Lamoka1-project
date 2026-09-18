@@ -340,6 +340,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 57.15) (xy 109.22 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b51e95cd-ef0d-4dfe-b187-419cca6e4a46")
+	)
+	(wire
+		(pts
 			(xy 99.06 41.91) (xy 109.22 41.91)
 		)
 		(stroke
@@ -357,6 +367,16 @@
 			(type default)
 		)
 		(uuid "c31f22c6-0ed2-48de-a0ce-8b008aa30e73")
+	)
+	(wire
+		(pts
+			(xy 99.06 38.1) (xy 109.22 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c63c51ce-9f08-4177-8e54-663067ee2feb")
 	)
 	(wire
 		(pts
@@ -532,6 +552,26 @@
 				(justify left)
 			)
 		)
+		(pin "3v3" input
+			(at 109.22 38.1 180)
+			(uuid "7afbbbc4-c5d6-495e-8a8e-abe9a5c75e15")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "TEMP_INV" input
+			(at 109.22 57.15 180)
+			(uuid "4e154480-9fb5-463b-ae3c-bbc92ff3f5d8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
@@ -621,6 +661,26 @@
 		(pin "11-14v input" input
 			(at 99.06 34.29 0)
 			(uuid "c3495c3d-c8af-4660-b7e3-d69893c1cf32")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "3v3" input
+			(at 99.06 38.1 0)
+			(uuid "f6854695-4b39-4c25-a87f-e5c208e75488")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TEMP_INV" input
+			(at 99.06 57.15 0)
+			(uuid "3cdec5c0-2716-4259-95b0-42d3feafe1d1")
 			(effects
 				(font
 					(size 1.27 1.27)

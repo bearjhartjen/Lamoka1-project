@@ -7111,6 +7111,208 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "TMP235A2DBZR:TMP235A2DBZR"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "TMP235A2DBZR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "DBZ0003A-IPC_A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/gpn/tmp235"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "TMP235A2DBZR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "DBZ0003A-IPC_A DBZ0003A-IPC_B DBZ0003A-IPC_C DBZ0003A-MFG"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TMP235A2DBZR_0_1"
+				(polyline
+					(pts
+						(xy 5.08 5.08) (xy 5.08 -7.62)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -7.62) (xy 22.86 -7.62)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 22.86 5.08) (xy 5.08 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 22.86 -7.62) (xy 22.86 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 0 0)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 27.94 0 180)
+					(length 5.08)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 27.94 -5.08 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "TPS62160DSGR:TPS62160DSGR"
 			(pin_names
 				(offset 0.254)
@@ -7550,6 +7752,18 @@
 		(uuid "133ab0dd-32a3-4890-9a1d-fd05cda066ba")
 	)
 	(rectangle
+		(start 21.59 128.27)
+		(end 44.958 133.858)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "325ef973-d7e0-4b8b-ab0b-431afd4f0c55")
+	)
+	(rectangle
 		(start 28.194 58.928)
 		(end 49.53 61.976)
 		(stroke
@@ -7560,6 +7774,18 @@
 			(type none)
 		)
 		(uuid "32c0284c-4879-48c6-9a4c-559ce85cbc97")
+	)
+	(rectangle
+		(start 19.558 107.442)
+		(end 76.962 135.89)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "42daaa16-60f7-4115-a205-31f4161908fd")
 	)
 	(rectangle
 		(start 21.336 34.036)
@@ -7645,6 +7871,18 @@
 		)
 		(uuid "a961225c-7226-4316-90f7-37d2fb0b74c0")
 	)
+	(rectangle
+		(start 22.606 129.286)
+		(end 43.942 132.842)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "f8e1f20e-1fc3-4f63-864a-98e3e800ed24")
+	)
 	(text "11-14v to 5v"
 		(exclude_from_sim no)
 		(at 290.576 176.53 0)
@@ -7664,6 +7902,16 @@
 			)
 		)
 		(uuid "8b69c5bf-30e2-4a09-a1d0-9c368ff524ac")
+	)
+	(text "Temperature-Sensor"
+		(exclude_from_sim no)
+		(at 33.02 131.064 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c1739592-df60-4853-9876-eaf4131a2735")
 	)
 	(text "Diode-Power OR-ing "
 		(exclude_from_sim no)
@@ -7892,10 +8140,6 @@
 		(uuid "9b02307e-4de8-4e27-9c86-79ecb1983035")
 	)
 	(no_connect
-		(at 222.25 80.01)
-		(uuid "9c420167-eb3a-4ff1-befd-f0203d8f324d")
-	)
-	(no_connect
 		(at 222.25 105.41)
 		(uuid "9d7cc802-4982-4a47-bb19-87db3efe2038")
 	)
@@ -7914,10 +8158,6 @@
 	(no_connect
 		(at 222.25 135.89)
 		(uuid "c78cc461-e071-421a-9fba-d1ff4cfd56c1")
-	)
-	(no_connect
-		(at 222.25 82.55)
-		(uuid "cdcd0545-8cce-4b0b-9c63-28dd3ab686fd")
 	)
 	(no_connect
 		(at 222.25 110.49)
@@ -7942,6 +8182,16 @@
 	(no_connect
 		(at 222.25 118.11)
 		(uuid "ea2d575b-28f8-4abe-ae81-0642c0213525")
+	)
+	(wire
+		(pts
+			(xy 231.14 256.54) (xy 231.14 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0552e49c-a252-41a8-9cf0-bd417cd91c03")
 	)
 	(wire
 		(pts
@@ -8002,6 +8252,16 @@
 			(type default)
 		)
 		(uuid "0c7d3b15-6bd4-43c2-8fa3-4e33457ae653")
+	)
+	(wire
+		(pts
+			(xy 231.14 269.24) (xy 231.14 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d5f861b-f96d-413b-a328-d69c5a1f17c5")
 	)
 	(wire
 		(pts
@@ -8175,16 +8435,6 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 181.61) (xy 50.8 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2bb6cb6e-83b8-4637-a5ce-1b6c9104c1c0")
-	)
-	(wire
-		(pts
 			(xy 163.83 54.61) (xy 163.83 52.07)
 		)
 		(stroke
@@ -8245,7 +8495,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 185.42) (xy 52.07 181.61)
+			(xy 52.07 179.07) (xy 52.07 185.42)
 		)
 		(stroke
 			(width 0)
@@ -8465,6 +8715,26 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 127) (xy 67.31 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "547c3e8a-9786-41fd-a27c-6ae7670b8875")
+	)
+	(wire
+		(pts
+			(xy 265.43 82.55) (xy 274.32 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "580f98cb-9e5d-4726-9ea1-815fa4287d5d")
+	)
+	(wire
+		(pts
 			(xy 322.58 86.36) (xy 328.93 86.36)
 		)
 		(stroke
@@ -8562,6 +8832,16 @@
 			(type default)
 		)
 		(uuid "628a6157-3bdd-4fbc-848e-c414ccf5670f")
+	)
+	(wire
+		(pts
+			(xy 26.67 119.38) (xy 30.48 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6346fa0f-20cb-4dfe-93f9-f05928a69a92")
 	)
 	(wire
 		(pts
@@ -9015,6 +9295,16 @@
 	)
 	(wire
 		(pts
+			(xy 233.68 256.54) (xy 231.14 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae9fbd8b-4454-4767-8f82-204771606163")
+	)
+	(wire
+		(pts
 			(xy 180.34 43.18) (xy 184.15 43.18)
 		)
 		(stroke
@@ -9125,6 +9415,26 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 124.46) (xy 58.42 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c734224d-352a-4757-a4f6-7c723490576d")
+	)
+	(wire
+		(pts
+			(xy 231.14 274.32) (xy 226.06 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7ed6295-a0dd-4372-af61-3a30654c8340")
+	)
+	(wire
+		(pts
 			(xy 185.42 43.18) (xy 186.69 43.18)
 		)
 		(stroke
@@ -9182,6 +9492,16 @@
 			(type default)
 		)
 		(uuid "d165271a-0e6d-4429-984b-2352fdc01f58")
+	)
+	(wire
+		(pts
+			(xy 58.42 119.38) (xy 62.23 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5751e03-773a-4440-8df0-cbd4ab0e547b")
 	)
 	(wire
 		(pts
@@ -9503,6 +9823,16 @@
 		)
 		(uuid "1a0e6112-12ae-4b57-bebe-62a991e4adbb")
 	)
+	(label "TEMP_CTRL"
+		(at 222.25 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "203d0ea4-fcaa-47f7-9616-a461580a4b79")
+	)
 	(label "GPIO5"
 		(at 229.87 74.93 0)
 		(effects
@@ -9673,6 +10003,26 @@
 		)
 		(uuid "6a883c67-3123-4690-93b6-9beacb75cf3f")
 	)
+	(label "3V3"
+		(at 233.68 256.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6b9afd27-9b1f-4a1b-96cd-b1f4ba280ee7")
+	)
+	(label "GPIO5"
+		(at 226.06 274.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6d26f1e8-d483-405e-942b-c37ac574cdb6")
+	)
 	(label "5V"
 		(at 124.46 146.05 0)
 		(effects
@@ -9682,6 +10032,16 @@
 			(justify left bottom)
 		)
 		(uuid "6f5f6f36-fa67-449f-9630-196b422ac835")
+	)
+	(label "TEMP_CTRL"
+		(at 62.23 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "73367996-c2a2-4498-9fae-6a3407d60953")
 	)
 	(label "VREG_GND"
 		(at 242.57 50.8 0)
@@ -9983,6 +10343,16 @@
 		)
 		(uuid "c2037735-4f0c-4982-8d62-1b3204578559")
 	)
+	(label "3V3"
+		(at 265.43 82.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c2410ab6-3d06-4b5a-9e2a-0cbd67bd3b54")
+	)
 	(label "VREG_GND"
 		(at 176.53 43.18 180)
 		(effects
@@ -10094,7 +10464,7 @@
 		(uuid "ef4ddcc6-d848-4854-9bcc-a59c4ae629cc")
 	)
 	(label "GPIO11"
-		(at 53.34 176.53 90)
+		(at 52.07 179.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10122,6 +10492,28 @@
 			(justify right bottom)
 		)
 		(uuid "f1f8c429-677c-431f-9a72-3896042a464d")
+	)
+	(hierarchical_label "TEMP_INV"
+		(shape input)
+		(at 222.25 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1ca76c86-86a0-4e23-8326-e2afa2dadc77")
+	)
+	(hierarchical_label "3v3"
+		(shape input)
+		(at 274.32 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1d5e24d6-aeeb-4edc-9cb9-8a2eb16c104b")
 	)
 	(hierarchical_label "GPIO1"
 		(shape input)
@@ -10155,6 +10547,17 @@
 			(justify left)
 		)
 		(uuid "86f727a9-6f56-4474-86cd-8701dfc9cfb2")
+	)
+	(hierarchical_label "3v3"
+		(shape input)
+		(at 26.67 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "979ad648-03c0-4d06-b306-a62d7e900b2a")
 	)
 	(hierarchical_label "GPIO4"
 		(shape input)
@@ -11445,6 +11848,88 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 231.14 265.43 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "12892a54-4a40-4408-bf06-95515fae52a2")
+		(property "Reference" "R22"
+			(at 233.68 264.1599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 233.68 266.6999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "DBZ0003A-IPC_A"
+			(at 229.362 265.43 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 231.14 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "86b49559-b710-4409-b906-52bea6c51dfb")
+		)
+		(pin "1"
+			(uuid "c47a1f29-e33a-42bf-8e95-426467358c41")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -13068,6 +13553,84 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 67.31 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "424210b8-bd6e-438c-8150-c15fc0439e3d")
+		(property "Reference" "#PWR062"
+			(at 67.31 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 67.31 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 67.31 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c6d9dd93-856d-419c-a742-b565f73ad4cd")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -17802,6 +18365,91 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TMP235A2DBZR:TMP235A2DBZR")
+		(at 30.48 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9439cb61-02cc-4986-ae0e-31de32883e30")
+		(property "Reference" "U8"
+			(at 44.45 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "TMP235A2DBZR"
+			(at 44.45 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DBZ0003A-IPC_A"
+			(at 30.48 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/tmp235"
+			(at 30.48 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0a8e44ac-c057-4916-835b-4bb73f45a5ca")
+		)
+		(pin "3"
+			(uuid "b7ae182d-71d4-476d-9273-19e1e46c6f88")
+		)
+		(pin "1"
+			(uuid "d24f984e-6e76-4875-8fa6-48a843e170f7")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "U8")
 					(unit 1)
 				)
 			)

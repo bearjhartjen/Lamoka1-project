@@ -11,4 +11,5 @@
 	(lib (name "CRCW0402100KFKED") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_CRCW0402100KFKED/KiCADv6/2026-09-17_21-22-45.kicad_sym") (options "") (descr ""))
 	(lib (name "470531000") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_470531000/KiCADv6/2026-09-17_20-12-28.kicad_sym") (options "") (descr ""))
 	(lib (name "SS14-E3/61T") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_SS14-E3-61T/KiCADv6/2026-09-17_21-45-02.kicad_sym") (options "") (descr ""))
+	(lib (name "TMP235A2DBZR") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/TMP235A2DBZR/KiCADv6/2026-09-18_00-42-34.kicad_sym") (options "") (descr ""))
 )
