@@ -24,9 +24,9 @@
 
 ## H-bridge (Inversion-Section)
 
-| H-bridge leg | High-side MOSFET | Low-side MOSFET | RP2354A control |
-|--------------|------------------|-----------------|-----------------|
-| **Leg A**    | Q3               | Q4              | GPIO1 / GPIO3   |
-| **Leg B**    | Q5               | Q6              | GPIO2 / GPIO4   |
+| H-bridge leg | High-side MOSFET | Low-side MOSFET | Gate driver | RP2354A control |
+|---|---|---|---|---|
+| Leg A | Q3 | Q5 | U5 | GPIO1 / GPIO2 |
+| Leg B | Q4 | Q6 | U6 | GPIO3 / GPIO4 |
 
-> **H-bridge switching:** Q3/Q4 and Q5/Q6 are complementary MOSFET pairs. Dead time must be implemented between the high-side and low-side devices of each leg to prevent shoot-through.
+> **H-bridge switching:** Q3/Q5 and Q4/Q6 are the complementary MOSFET pairs for Leg A and Leg B respectively. Dead time must be implemented between the high-side and low-side devices of each leg to prevent shoot-through.
