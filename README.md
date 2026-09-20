@@ -7,7 +7,7 @@
 ---
 
 <p align="center">
-  <img src="images/Lamoka1-DEV-Brain-image.webp" alt="Lamoka1-DEV-Brain" width="700">
+  <img src="Images/Lamoka1-DEV-Brain-image.webp" alt="Lamoka1 DEV Brain" width="700">
 </p>
 
  Lamoka1-DEV-Brain image, This board can now be ordered [here](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html). PIE versions v1.8 and below will function on this board, for more information on PIE go [here](SOFTWARE/README.md).
