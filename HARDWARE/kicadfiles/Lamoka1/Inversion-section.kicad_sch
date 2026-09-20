@@ -7,6 +7,9 @@
 	(title_block
 		(title "Inversion-Section ")
 		(company "Flamingo & Cactus")
+		(comment 1 "Please do not consider this as a finished schematic, change is constant.")
+		(comment 2 "License: CERN-OHL-W-2.0")
+		(comment 3 "https://github.com/bearjhartjen/Lamoka1-project")
 	)
 	(lib_symbols
 		(symbol "2026-09-13_21-28-35:LM5122MH_NOPB"
@@ -4679,16 +4682,6 @@
 		)
 		(uuid "d4426c38-4b42-43b8-be7d-7ca909943bed")
 	)
-	(label "17v"
-		(at 189.23 38.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d7abe6ea-9463-426a-9fc1-b821182dbe8f")
-	)
 	(label "Q6S"
 		(at 227.33 59.69 180)
 		(effects
@@ -4738,16 +4731,6 @@
 			(justify left bottom)
 		)
 		(uuid "f6fc17f1-0700-4474-ad8e-a9a5359f5221")
-	)
-	(label "17v"
-		(at 269.24 50.8 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f9de0f60-4a70-4d9a-911d-34cd6eb0d25b")
 	)
 	(label "CSN"
 		(at 38.1 106.68 180)
@@ -4956,6 +4939,17 @@
 		)
 		(uuid "8a3986c6-bc70-4373-a360-ef3e343f9636")
 	)
+	(hierarchical_label "17v"
+		(shape input)
+		(at 189.23 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "955eef2c-98e2-453e-8002-a866741a8750")
+	)
 	(hierarchical_label "AC_OUT-GND"
 		(shape input)
 		(at 223.52 157.48 180)
@@ -4966,6 +4960,17 @@
 			(justify right)
 		)
 		(uuid "a23eb8b2-912c-4542-a69e-944d2e01a293")
+	)
+	(hierarchical_label "17v"
+		(shape input)
+		(at 269.24 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a4b61200-78cd-4ad0-83ad-0e35d2bb0dc0")
 	)
 	(hierarchical_label "TEMP_INV"
 		(shape input)
@@ -5089,6 +5094,39 @@
 				)
 			)
 		)
+		(property "MPN" "UCC27735DR"
+			(at 265.43 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 265.43 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 265.43 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5f6914fa-09bb-482d-9af9-b3a804d54bb3")
 		)
@@ -5162,7 +5200,7 @@
 				)
 			)
 		)
-		(property "Value" "CSD19536KCS"
+		(property "Value" "100V 150A N-Ch"
 			(at 213.36 48.26 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5205,8 +5243,8 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 196.215 39.37 0)
+		(property "MPN" "CSD19536KCS"
+			(at 213.36 39.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5216,8 +5254,8 @@
 				)
 			)
 		)
-		(property "Sim.Type" "VDMOS"
-			(at 194.31 39.37 0)
+		(property "KLC_S4.2_DVDD" ""
+			(at 213.36 39.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5227,8 +5265,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 198.12 39.37 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 213.36 39.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5321,6 +5359,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 215.9 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 215.9 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9691d71f-7f02-431c-84d6-820a9016ae17")
 		)
@@ -5348,7 +5408,7 @@
 		(dnp no)
 		(uuid "0ac2e056-3335-44eb-9b12-afeb70bd0ffa")
 		(property "Reference" "Q2"
-			(at 116.84 48.2599 0)
+			(at 114.554 46.736 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5358,8 +5418,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CSD17304Q3"
-			(at 115.062 51.054 0)
+		(property "Value" "30V 56A N-Ch"
+			(at 94.742 51.308 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5402,8 +5462,8 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 110.49 66.675 0)
+		(property "MPN" "CSD17304Q3"
+			(at 110.49 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5413,8 +5473,8 @@
 				)
 			)
 		)
-		(property "Sim.Type" "VDMOS"
-			(at 110.49 68.58 0)
+		(property "KLC_S4.2_DVDD" ""
+			(at 110.49 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5424,8 +5484,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 110.49 64.77 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 110.49 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5598,6 +5658,39 @@
 				)
 			)
 		)
+		(property "MPN" "TMK212BJ474KD-T"
+			(at 86.36 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 86.36 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 86.36 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "725df9ad-615d-48f4-a20a-1bf792e3a944")
 		)
@@ -5679,6 +5772,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 240.03 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 240.03 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b931c3b0-a4bc-42fd-bb12-d40d2a6e8c3b")
 		)
@@ -5716,7 +5831,7 @@
 				)
 			)
 		)
-		(property "Value" "CSD19536KCS"
+		(property "Value" "100V 150A N-Ch"
 			(at 233.68 48.26 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5759,8 +5874,8 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 216.535 39.37 0)
+		(property "MPN" "CSD19536KCS"
+			(at 233.68 39.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5770,8 +5885,8 @@
 				)
 			)
 		)
-		(property "Sim.Type" "VDMOS"
-			(at 214.63 39.37 0)
+		(property "KLC_S4.2_DVDD" ""
+			(at 233.68 39.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5781,8 +5896,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 218.44 39.37 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 233.68 39.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5867,6 +5982,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 226.06 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 226.06 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 226.06 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -6037,6 +6174,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 208.28 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 208.28 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2698ba4d-177a-43d2-b35c-3605f2866c99")
 		)
@@ -6195,6 +6354,39 @@
 				)
 			)
 		)
+		(property "MPN" "GRM1555C1H131GA01D"
+			(at 146.05 69.85 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 146.05 69.85 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 146.05 69.85 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a8f67749-759f-4ad9-a5bc-5a9688b1ff82")
 		)
@@ -6266,6 +6458,28 @@
 		)
 		(property "Description" "Resistor"
 			(at 215.9 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 215.9 99.06 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 215.9 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6400,7 +6614,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DBZ0003A-IPC_A"
+		(property "Footprint" "TMP235A2DBZR:DBZ0003A-IPC_A"
 			(at 33.02 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -6425,6 +6639,39 @@
 			)
 		)
 		(property "Description" ""
+			(at 33.02 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TMP235A2DBZR"
+			(at 33.02 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 33.02 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 33.02 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -6596,6 +6843,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 317.5 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 317.5 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "839b26b4-1c21-47ee-a4b0-642ea74617a3")
 		)
@@ -6667,6 +6936,39 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 120.65 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "08053C104KAT2A"
+			(at 120.65 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 120.65 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 120.65 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6758,6 +7060,39 @@
 				)
 			)
 		)
+		(property "MPN" "CRCW04027K15FKED"
+			(at 64.77 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 64.77 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 64.77 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7157f30c-ae38-48fa-8c21-37aca2158e47")
 		)
@@ -6795,7 +7130,7 @@
 				)
 			)
 		)
-		(property "Value" "CSD19536KCS"
+		(property "Value" "100V 150A N-Ch"
 			(at 213.36 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6838,8 +7173,8 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 196.215 58.42 0)
+		(property "MPN" "CSD19536KCS"
+			(at 213.36 58.42 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6849,8 +7184,8 @@
 				)
 			)
 		)
-		(property "Sim.Type" "VDMOS"
-			(at 194.31 58.42 0)
+		(property "KLC_S4.2_DVDD" ""
+			(at 213.36 58.42 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6860,8 +7195,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 198.12 58.42 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 213.36 58.42 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6956,6 +7291,39 @@
 				)
 			)
 		)
+		(property "MPN" "20SVPF56MX"
+			(at 53.34 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 53.34 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 53.34 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b18f54fd-4dcf-4734-9299-5d7bdd990a53")
 		)
@@ -7028,6 +7396,39 @@
 			)
 		)
 		(property "Description" ""
+			(at 55.88 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LM5122MH/NOPB"
+			(at 55.88 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 55.88 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 55.88 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -7253,6 +7654,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 215.9 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 215.9 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c73df9e9-a90f-4cf2-b7e1-868c11f955d4")
 		)
@@ -7324,6 +7747,39 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 149.86 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CGA4C2C0G1H392J060AA"
+			(at 149.86 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 149.86 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 149.86 81.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7413,6 +7869,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 318.77 109.22 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 318.77 109.22 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7eb0a44b-662e-4432-9325-0fb554a66f57")
 		)
@@ -7430,7 +7908,7 @@
 	)
 	(symbol
 		(lib_id "Flamingo&Cactus-logo:LOGO")
-		(at 304.8 261.62 0)
+		(at 402.59 262.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7441,7 +7919,7 @@
 		(fields_autoplaced yes)
 		(uuid "5803281e-e930-45d4-90d2-7622ffa1ce61")
 		(property "Reference" "#G3"
-			(at 304.8 257.2541 0)
+			(at 402.59 258.5241 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7452,7 +7930,7 @@
 			)
 		)
 		(property "Value" "LOGO"
-			(at 304.8 265.9859 0)
+			(at 402.59 267.2559 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7463,7 +7941,7 @@
 			)
 		)
 		(property "Footprint" "Package_LCC:PLCC-84_29.3x29.3mm_P1.27mm"
-			(at 304.8 261.62 0)
+			(at 402.59 262.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7474,7 +7952,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 304.8 261.62 0)
+			(at 402.59 262.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7485,7 +7963,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 304.8 261.62 0)
+			(at 402.59 262.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7649,6 +8127,39 @@
 				)
 			)
 		)
+		(property "MPN" "C3216X5R1E476M160AC"
+			(at 171.45 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 171.45 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 171.45 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "343ccb78-0a95-432e-984d-f38e1e3b287a")
 		)
@@ -7720,6 +8231,28 @@
 		)
 		(property "Description" "Resistor"
 			(at 215.9 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 215.9 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 215.9 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7811,8 +8344,8 @@
 				)
 			)
 		)
-		(property "Sim.Device" "D"
-			(at 226.06 116.84 0)
+		(property "KLC_S4.2_DVDD" ""
+			(at 226.06 116.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7822,8 +8355,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 226.06 116.84 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 226.06 116.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7905,6 +8438,39 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 129.54 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MPN00CenterCenter00"
+			(at 129.54 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 129.54 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 129.54 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -7997,6 +8563,39 @@
 				)
 			)
 		)
+		(property "MPN" "C1005X5R1V474K050BC"
+			(at 78.74 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 78.74 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 78.74 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ba086e6b-ed6a-4621-88b8-faa22501537e")
 		)
@@ -8069,6 +8668,39 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 135.89 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "25SVPF180M"
+			(at 135.89 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 135.89 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 135.89 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -8159,7 +8791,7 @@
 				)
 			)
 		)
-		(property "Sim.Device" "D"
+		(property "MPN" "SK215ATR"
 			(at 113.03 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -8170,7 +8802,18 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=K 2=A"
+		(property "KLC_S4.2_DVDD" ""
+			(at 113.03 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 113.03 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -8362,10 +9005,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "7c04b679-4bbe-4b7a-88d2-926f0680e8ee")
 		(property "Reference" "Q1"
-			(at 119.38 41.91 90)
+			(at 116.078 40.64 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8374,8 +9016,8 @@
 				)
 			)
 		)
-		(property "Value" "CSD16323Q3"
-			(at 119.38 44.45 90)
+		(property "Value" "25V 60A N-Ch"
+			(at 128.524 34.036 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8417,8 +9059,8 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 102.235 35.56 0)
+		(property "MPN" "CSD16323Q3"
+			(at 119.38 35.56 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8428,8 +9070,8 @@
 				)
 			)
 		)
-		(property "Sim.Type" "VDMOS"
-			(at 100.33 35.56 0)
+		(property "KLC_S4.2_DVDD" ""
+			(at 119.38 35.56 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8439,8 +9081,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 104.14 35.56 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 119.38 35.56 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8611,6 +9253,39 @@
 				)
 			)
 		)
+		(property "MPN" "MSAST21GAB5475MTNAO1"
+			(at 105.41 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 105.41 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 105.41 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b4a49071-4dad-468e-b83a-46f1b5b890f0")
 		)
@@ -8683,6 +9358,39 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 71.12 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A333KA01D"
+			(at 71.12 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 71.12 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 71.12 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -8852,6 +9560,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 240.03 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 240.03 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3be25db3-98b9-4a3b-aac3-52e95c314d21")
 		)
@@ -8924,6 +9654,39 @@
 			)
 		)
 		(property "Description" ""
+			(at 265.43 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "UCC27735DR"
+			(at 265.43 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 265.43 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 265.43 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -9041,6 +9804,39 @@
 		)
 		(property "Description" "Resistor"
 			(at 142.24 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0201FR-0728K7L"
+			(at 142.24 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 142.24 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 142.24 81.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9321,7 +10117,7 @@
 				)
 			)
 		)
-		(property "Value" "CSD19536KCS"
+		(property "Value" "100V 150A N-Ch"
 			(at 233.68 66.04 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9364,8 +10160,8 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 216.535 57.15 0)
+		(property "MPN" "CSD19536KCS"
+			(at 233.68 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9375,8 +10171,8 @@
 				)
 			)
 		)
-		(property "Sim.Type" "VDMOS"
-			(at 214.63 57.15 0)
+		(property "KLC_S4.2_DVDD" ""
+			(at 233.68 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9386,8 +10182,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 218.44 57.15 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 233.68 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9472,6 +10268,39 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 36.83 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW040218K2FKED"
+			(at 36.83 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 36.83 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 36.83 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -9631,6 +10460,39 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 64.77 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW040249K9FKED"
+			(at 64.77 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 64.77 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 64.77 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9801,6 +10663,39 @@
 				)
 			)
 		)
+		(property "MPN" "CRCW04023R01FKED"
+			(at 78.74 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 78.74 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 78.74 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c7d3e724-f821-4212-be01-22a47ca2e9c0")
 		)
@@ -9872,6 +10767,39 @@
 		)
 		(property "Description" "Resistor"
 			(at 92.71 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CSNL1206FT2L00"
+			(at 92.71 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 92.71 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 92.71 38.1 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9953,6 +10881,39 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 158.75 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "25SVPF180M"
+			(at 158.75 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 158.75 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 158.75 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -10112,6 +11073,39 @@
 		)
 		(property "Description" "Inductor"
 			(at 107.95 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "XAL1580-182MEB"
+			(at 107.95 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 107.95 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 107.95 38.1 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10281,6 +11275,39 @@
 				)
 			)
 		)
+		(property "MPN" "RC0201FR-07105KL"
+			(at 54.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 54.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 54.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "97e6d83c-759c-4fbe-b85d-038c6ddd5141")
 		)
@@ -10353,6 +11380,39 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 147.32 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "25SVPF180M"
+			(at 147.32 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 147.32 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 147.32 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -10445,8 +11505,8 @@
 				)
 			)
 		)
-		(property "Sim.Device" "D"
-			(at 208.28 116.84 0)
+		(property "KLC_S4.2_DVDD" ""
+			(at 208.28 116.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10456,8 +11516,8 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 208.28 116.84 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 208.28 116.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10539,6 +11599,39 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 129.54 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW040249K9FKED"
+			(at 129.54 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 129.54 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 129.54 50.8 0)
 			(hide yes)
 			(show_name no)

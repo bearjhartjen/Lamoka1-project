@@ -1,4 +1,4 @@
-## Exact part numbers
+## Exact manufacturer part numbers used in schematic explained in plain english (component alternatives might be used) 
 
  NMOS for H bridge (Inversion-section): CSD19536KCS made by TI  x4
 
@@ -43,3 +43,5 @@
  Outlet for inverter (120v AC North American): SKU Q227-115 made by Delkin technologies
 
  Connector for hooking outlet to PCB: 2604-1103 made by Wago
+
+ Multiplexer for voltage and current monitoring: ADS7128IRTER made by TI

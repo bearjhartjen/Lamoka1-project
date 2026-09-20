@@ -6,6 +6,14 @@
 
 ---
 
+<p align="center">
+  <img src="images/Lamoka1-DEV-Brain-image.webp" alt="Lamoka1-DEV-Brain" width="700">
+</p>
+
+ Lamoka1-DEV-Brain image, This board can now be ordered [here](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html). PIE versions v1.8 and below will function on this board, for more information on PIE go [here](SOFTWARE/README.md).
+
+---
+
 ## Owego Rotary craft fair version
 
  For the Owego Rotary craft fair, taking place at the Elks lodge in Owego, NY, on November 14th from 9am to 3pm, the main project being presented by Flamingo and Cactus will be the Lamoka1/2 which is simply the Lamoka1 without its charging section, all else is the same. We are doing this due to time constraints, we over estimated how quickly we could finish a inverter/charger system to our quality standards. 
