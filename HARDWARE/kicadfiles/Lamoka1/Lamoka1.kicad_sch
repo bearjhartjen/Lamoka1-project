@@ -4678,7 +4678,7 @@
 	)
 	(rectangle
 		(start 233.426 86.36)
-		(end 279.4 112.522)
+		(end 281.94 118.364)
 		(stroke
 			(width 0)
 			(type default)
@@ -4699,6 +4699,16 @@
 			(type none)
 		)
 		(uuid "e5228b1d-ad3c-4eca-b314-ab831752bf1e")
+	)
+	(text "This is the output of the transformer, "
+		(exclude_from_sim no)
+		(at 253.238 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0ff73dab-92f8-4441-a3fd-d0e56a8734c7")
 	)
 	(text "Wago-connector 2606-1108/010-000"
 		(exclude_from_sim no)
@@ -4739,6 +4749,16 @@
 			)
 		)
 		(uuid "917bad16-1085-46f3-9bba-a2b5580a9b0a")
+	)
+	(text "we will be hooking it up to a NEMA 5-15 plug."
+		(exclude_from_sim no)
+		(at 257.81 116.332 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "aaf95d1c-3728-4ce5-a935-c5c12d894f44")
 	)
 	(text "Fan-connection"
 		(exclude_from_sim no)
@@ -6280,6 +6300,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 228.6 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 228.6 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "7"
 			(uuid "6264861e-cb33-4725-a16d-da0a40eb858d")
 		)
@@ -6455,28 +6497,6 @@
 			)
 		)
 		(property "MPN" "TYPE-C-31-M-12"
-			(at 29.21 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "HRO Electronics"
-			(at 29.21 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 29.21 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -6740,6 +6760,28 @@
 			)
 		)
 		(property "MPN" "CSNL2512FT2L00"
+			(at 142.24 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 142.24 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 142.24 68.58 0)
 			(hide yes)
 			(show_name no)

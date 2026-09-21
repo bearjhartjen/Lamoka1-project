@@ -583,28 +583,16 @@
           "show": true
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer",
-          "name": "Manufacturer",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Notes",
-          "name": "Notes",
-          "show": false
         },
         {
           "group_by": false,
@@ -616,7 +604,7 @@
           "group_by": false,
           "label": "Description",
           "name": "Description",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -628,54 +616,6 @@
           "group_by": false,
           "label": "KLC_S4.2_VREG_LX",
           "name": "KLC_S4.2_VREG_LX",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Arrow Part Number",
-          "name": "Arrow Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Arrow Price/Stock",
-          "name": "Arrow Price/Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Name",
-          "name": "Manufacturer_Name",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Part_Number",
-          "name": "Manufacturer_Part_Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Part Number",
-          "name": "Mouser Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Price/Stock",
-          "name": "Mouser Price/Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Height",
-          "name": "Height",
           "show": false
         }
       ],
@@ -727,7 +667,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "R1-33,Rslope1,L1-3,X1,U1-10,Rfbt1,Cout1-3,Dbst1,SW1,Cres1,TP1-41,Rt1,Cvin1,C1-33,#G1-3,J1-5,Rvin1,IC1,Ruvb1,Rcomp1,Q1-6,Cbst1,#PWR1-70,Coutx1,Rfbb1,Cin1,Css1,NT1-2,Rsense1,CR1-2,D1-12,Cvcc1,Ccomp1,Ruvt1",
+    "used_designators": "X1,U1-10,Rsense1,NT1-2,Css1,J1-5,#G1-3,C1-33,Dbst1,Rfbt1,Cout1-3,D1-12,CR1-2,SW1,Ruvt1,Cvcc1,Ccomp1,Cres1,TP1-41,Rt1,Cvin1,L1-3,Rslope1,R1-33,Rvin1,IC1,Ruvb1,Rcomp1,Q1-6,Cbst1,#PWR1-70,Coutx1,Rfbb1,Cin1",
     "variants": []
   },
   "sheets": [

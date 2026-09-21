@@ -7475,7 +7475,7 @@
 		(uuid "fccbf2b5-f75d-44fa-a2cb-632ecb7b2217")
 	)
 	(junction
-		(at 252.73 143.51)
+		(at 254 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0d58b448-02f4-4b8f-a022-3825a7329cda")
@@ -8786,7 +8786,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 143.51) (xy 252.73 143.51)
+			(xy 252.73 143.51) (xy 256.54 143.51)
 		)
 		(stroke
 			(width 0)
@@ -9546,7 +9546,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 152.4) (xy 252.73 151.13)
+			(xy 254 152.4) (xy 254 151.13)
 		)
 		(stroke
 			(width 0)
@@ -11229,28 +11229,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 176.53 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 165.1 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 165.1 196.85 0)
 			(hide yes)
@@ -11440,28 +11418,6 @@
 		)
 		(property "MPN" "0402CG150J500NT"
 			(at 366.014 105.918 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FH"
-			(at 361.188 108.204 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 359.41 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11664,28 +11620,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 359.41 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 347.98 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 347.98 196.85 0)
 			(hide yes)
@@ -11867,7 +11801,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 111.4552 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -11910,28 +11844,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 110.49 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 110.49 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -12113,29 +12025,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 119.38 45.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "MPN" "RC0603FR-075K1L"
-			(at 119.38 45.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 119.38 45.72 90)
 			(hide yes)
 			(show_name no)
@@ -12403,29 +12293,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 129.54 60.96 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "MPN" "RC0603FR-0727RL"
-			(at 129.54 60.96 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 129.54 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -12758,29 +12626,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 165.1 59.6899 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Notes" ""
-			(at 161.29 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 161.29 57.15 0)
 			(hide yes)
@@ -12886,28 +12731,6 @@
 			)
 		)
 		(property "MPN" "WS2812B"
-			(at 302.26 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 313.69 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 302.26 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -13117,28 +12940,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 199.39 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 187.96 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 187.96 196.85 0)
 			(hide yes)
@@ -13324,6 +13125,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 166.37 271.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 166.37 271.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "352bc7c4-7c2c-4ea0-9771-b14b33ecaa0a")
 		)
@@ -13403,29 +13226,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 162.56 77.47 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "MPN" "RC0603FR-0710KL"
-			(at 162.56 77.47 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 162.56 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -13730,29 +13531,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 158.75 95.25 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "MPN" "RC0402FR-071KL"
-			(at 158.75 95.25 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 158.75 95.25 90)
 			(hide yes)
 			(show_name no)
@@ -14159,28 +13938,6 @@
 			)
 		)
 		(property "MPN" "CL05A106MQ5NUNC"
-			(at 134.62 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 133.096 151.384 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 134.62 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -15018,28 +14775,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 25.4 223.52 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 25.4 228.6 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 25.4 228.6 90)
 			(hide yes)
@@ -15309,28 +15044,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "FH"
-			(at 322.58 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 322.58 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 322.58 90.17 0)
 			(hide yes)
@@ -15402,7 +15115,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 31.4452 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -15445,28 +15158,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 30.48 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 30.48 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -15581,28 +15272,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Abracon"
-			(at 224.282 52.07 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 205.74 46.99 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 205.74 46.99 90)
 			(hide yes)
@@ -15707,28 +15376,6 @@
 		)
 		(property "MPN" "RC0603FR-07330RL"
 			(at 125.73 193.04 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 125.73 196.85 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 125.73 196.85 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16174,7 +15821,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 65.7352 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -16217,28 +15864,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 64.77 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 64.77 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -16369,28 +15994,6 @@
 			)
 		)
 		(property "MPN" "RP2354A"
-			(at 196.85 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "	\nRaspberry Pi"
-			(at 196.85 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 196.85 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -16827,28 +16430,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Abracon LLC"
-			(at 334.01 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 334.01 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 334.01 86.36 0)
 			(hide yes)
@@ -17029,7 +16610,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 181.3052 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17063,28 +16644,6 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 180.34 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 180.34 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 180.34 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -17523,28 +17082,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "EVVO"
-			(at 81.28 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" "Exact EVVO AMS1117-3.3 stability requirement must be verified against the fitted manufacturer datasheet; do not substitute a generic AMS1117 capacitor requirement without checking the actual device."
-			(at 81.28 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 81.28 143.51 0)
 			(hide yes)
@@ -17668,7 +17205,7 @@
 	)
 	(symbol
 		(lib_id "TMK212BBJ106KG:TMK212BBJ106KG")
-		(at 252.73 143.51 270)
+		(at 254 143.51 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17678,7 +17215,7 @@
 		(dnp no)
 		(uuid "6eed3ab5-a0cf-40dd-8358-bd9027016555")
 		(property "Reference" "C24"
-			(at 253.746 149.352 90)
+			(at 255.27 149.098 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17688,8 +17225,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TMK212BBJ106KG"
-			(at 249.174 142.748 0)
+		(property "Value" "10uF"
+			(at 246.126 149.098 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17699,8 +17236,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TMK212BBJ106KG:CAP_TMK212_TAY"
-			(at 252.73 143.51 0)
+		(property "Footprint" "TMK212BBJ106KG-T:CAPC2114X145N"
+			(at 254 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17711,8 +17248,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "TMK212BBJ106KG"
-			(at 252.73 143.51 0)
+		(property "Datasheet" ""
+			(at 254 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17724,7 +17261,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 252.73 143.51 0)
+			(at 254 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17734,8 +17271,8 @@
 				)
 			)
 		)
-		(property "MPN" "TMK212BBJ106KG"
-			(at 252.73 143.51 90)
+		(property "MPN" "TMK212BBJ106KG-T"
+			(at 254 143.51 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17746,7 +17283,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 252.73 143.51 90)
+			(at 254 143.51 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17757,7 +17294,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 252.73 143.51 90)
+			(at 254 143.51 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17882,7 +17419,7 @@
 				)
 			)
 		)
-		(property "Value" "PA4332.222NLT"
+		(property "Value" "2.2uH, 4.3A"
 			(at 328.93 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17892,7 +17429,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PA4332.222NLT:IND_PA4332.222NLT_PUL"
+		(property "Footprint" ""
 			(at 321.31 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -17904,7 +17441,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "PA4332.222NLT"
+		(property "Datasheet" ""
 			(at 321.31 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -18009,7 +17546,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 20.0152 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -18052,28 +17589,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 19.05 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 19.05 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -18349,28 +17864,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 222.25 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 210.82 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 210.82 196.85 0)
 			(hide yes)
@@ -18556,29 +18049,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 128.27 48.26 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "MPN" "RC0603FR-075K1L"
-			(at 128.27 48.26 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 128.27 48.26 90)
 			(hide yes)
 			(show_name no)
@@ -18681,17 +18152,6 @@
 			)
 		)
 		(property "Description" "Net tie, 2 pins"
-			(at 127 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 127 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -18955,7 +18415,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 195.58 42.2148 0)
 			(hide yes)
 			(show_name no)
@@ -18989,28 +18449,6 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
-			(at 191.77 43.18 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 191.77 43.18 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 191.77 43.18 90)
 			(hide yes)
 			(show_name no)
@@ -19115,6 +18553,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 170.18 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 170.18 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 170.18 267.97 0)
 			(hide yes)
 			(show_name no)
@@ -19284,29 +18744,6 @@
 			)
 		)
 		(property "MPN" "CL10A475KP8NNNC"
-			(at 177.8 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 181.61 39.3699 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Notes" ""
 			(at 177.8 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -19497,28 +18934,6 @@
 			)
 		)
 		(property "MPN" "SN74AHCT1G125DBVR"
-			(at 102.87 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 102.87 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 102.87 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -19942,30 +19357,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 166.37 49.5299 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(property "MPN" "RC0603FR-0733RL"
-			(at 163.83 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 163.83 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -20047,7 +19439,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 243.5352 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -20092,28 +19484,6 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "0"
-			(at 242.57 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 242.57 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 242.57 44.45 0)
 			(hide yes)
@@ -20153,7 +19523,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 252.73 152.4 0)
+		(at 254 152.4 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20164,7 +19534,7 @@
 		(fields_autoplaced yes)
 		(uuid "9a1ad858-d6ba-4bc8-b683-21175edf63ac")
 		(property "Reference" "#PWR057"
-			(at 252.73 158.75 0)
+			(at 254 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20175,7 +19545,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 252.73 157.48 0)
+			(at 254 157.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20185,7 +19555,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 252.73 152.4 0)
+			(at 254 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20196,7 +19566,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 252.73 152.4 0)
+			(at 254 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20207,7 +19577,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 252.73 152.4 0)
+			(at 254 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20297,28 +19667,6 @@
 			)
 		)
 		(property "MPN" "WS2812B"
-			(at 279.4 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 290.83 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 279.4 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -20685,28 +20033,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 267.97 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 256.54 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 256.54 196.85 0)
 			(hide yes)
@@ -20773,7 +20099,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "CRCW0402953KFKED"
+		(property "Value" "953k"
 			(at 339.09 144.7799 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20784,7 +20110,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "CRCW0402953KFKED:RC0402N_VIS"
+		(property "Footprint" ""
 			(at 336.55 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -20888,7 +20214,7 @@
 				)
 			)
 		)
-		(property "Value" "CRCW0402100KFKED"
+		(property "Value" "100k"
 			(at 361.188 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20898,7 +20224,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CRCW0402100KFKED:RES_CRCW_0402_VIS"
+		(property "Footprint" ""
 			(at 346.71 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -21223,29 +20549,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 128.27 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "MPN" "RC0603FR-0727RL"
-			(at 128.27 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 128.27 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -21371,28 +20675,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 245.11 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 233.68 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 233.68 196.85 0)
 			(hide yes)
@@ -21504,28 +20786,6 @@
 			)
 		)
 		(property "MPN" "WS2812B"
-			(at 325.12 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 336.55 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 325.12 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -21680,7 +20940,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "GRM31CR71A226KE15L"
+		(property "Value" "22uF"
 			(at 369.57 152.3999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21691,7 +20951,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "GRM31CR71A226KE15L:G-31_MUR"
+		(property "Footprint" ""
 			(at 365.76 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -21703,7 +20963,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "GRM31CR71A226KE15L"
+		(property "Datasheet" ""
 			(at 365.76 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -21875,7 +21135,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "RC0603FR-07180KL"
+		(property "Value" "180k"
 			(at 339.09 157.4799 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21886,7 +21146,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "RC0603FR-07180KL:RC0603N_YAG"
+		(property "Footprint" ""
 			(at 336.55 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -21898,7 +21158,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "RC0603FR-07180KL"
+		(property "Datasheet" ""
 			(at 336.55 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -22186,7 +21446,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 77.1652 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -22229,28 +21489,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 76.2 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 76.2 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -22357,91 +21595,29 @@
 				)
 			)
 		)
-		(property "Height" "1.75"
-			(at 165.1 650.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 165.1 750.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "INA240A2DR"
-			(at 165.1 850.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "595-INA240A2DR"
-			(at 165.1 950.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/INA240A2DR?qs=AQlKX63v8RtFUWHuhLNCsw%3D%3D"
-			(at 165.1 1050.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Arrow Part Number" "INA240A2DR"
-			(at 165.1 1150.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/ina240a2dr/texas-instruments.html?utm_currency=USD&region=nac"
-			(at 165.1 1250.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
 		(property "MPN" "INA240A2DR"
+			(at 140.97 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 140.97 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 140.97 255.27 0)
 			(hide yes)
 			(show_name no)
@@ -22553,28 +21729,6 @@
 			)
 		)
 		(property "MPN" "WS2812B"
-			(at 142.24 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TUOZHAN"
-			(at 153.67 192.9698 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 142.24 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -22927,29 +22081,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 316.23 31.75 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "MPN" "RC0603FR-0710KL"
-			(at 316.23 31.75 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 316.23 31.75 90)
 			(hide yes)
 			(show_name no)
@@ -23627,7 +22759,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 122.8852 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -23670,28 +22802,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 121.92 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 121.92 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -23888,28 +22998,6 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 226.06 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 226.06 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 226.06 44.45 0)
 			(hide yes)
@@ -24014,6 +23102,17 @@
 				)
 			)
 		)
+		(property "MPN" "ADS7128IRTER"
+			(at 289.56 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 289.56 220.98 0)
 			(hide yes)
@@ -24026,17 +23125,6 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 289.56 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "ADS7128IRTER"
 			(at 289.56 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -24141,7 +23229,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 42.8752 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -24184,28 +23272,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 41.91 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 41.91 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -24494,30 +23560,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
-			(at 350.52 105.4099 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(property "MPN" "RC0402FR-071KL"
-			(at 347.98 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 347.98 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -24599,7 +23642,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 54.3052 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -24642,28 +23685,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 53.34 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 53.34 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -24780,28 +23801,6 @@
 				)
 			)
 		)
-		(property "Manufacturer" "C&K"
-			(at 332.74 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 325.12 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 325.12 40.64 0)
 			(hide yes)
@@ -24873,7 +23872,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 88.5952 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -24916,28 +23915,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 87.63 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 87.63 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -25044,28 +24021,6 @@
 			)
 		)
 		(property "MPN" "CL05A106MQ5NUNC"
-			(at 81.28 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 81.28 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
 			(at 81.28 127 0)
 			(hide yes)
 			(show_name no)
@@ -25329,7 +24284,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0"
+		(property "Footprint" ""
 			(at 100.0252 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -25372,28 +24327,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Manufacturer" "0"
-			(at 99.06 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 99.06 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""

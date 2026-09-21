@@ -5059,7 +5059,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOIC_14L_TEX"
+		(property "Footprint" ""
 			(at 265.43 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -5739,7 +5739,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOIC_14L_TEX"
+		(property "Footprint" ""
 			(at 240.03 97.028 90)
 			(hide yes)
 			(show_name no)
@@ -9527,7 +9527,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOIC_14L_TEX"
+		(property "Footprint" ""
 			(at 240.03 108.458 90)
 			(hide yes)
 			(show_name no)
@@ -9629,7 +9629,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOIC_14L_TEX"
+		(property "Footprint" ""
 			(at 265.43 71.12 0)
 			(hide yes)
 			(show_name no)
