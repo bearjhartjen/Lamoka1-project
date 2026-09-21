@@ -6072,6 +6072,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 152.4 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 152.4 43.18 0)
 			(hide yes)
@@ -6173,6 +6184,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 261.62 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 261.62 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -6290,6 +6312,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 228.6 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 228.6 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -6507,6 +6540,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 29.21 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 29.21 107.95 0)
 			(hide yes)
@@ -6650,6 +6694,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 86.36 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 86.36 64.77 0)
 			(hide yes)
@@ -6760,6 +6815,17 @@
 			)
 		)
 		(property "MPN" "CSNL2512FT2L00"
+			(at 142.24 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 142.24 68.58 0)
 			(hide yes)
 			(show_name no)

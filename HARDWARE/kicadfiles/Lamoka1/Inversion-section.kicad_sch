@@ -5105,6 +5105,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 265.43 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 265.43 104.14 0)
 			(hide yes)
@@ -5254,6 +5265,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 213.36 39.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 213.36 39.37 90)
 			(hide yes)
@@ -5350,6 +5372,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 215.9 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 215.9 81.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5463,6 +5496,17 @@
 			)
 		)
 		(property "MPN" "CSD17304Q3"
+			(at 110.49 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 110.49 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -5669,6 +5713,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 86.36 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 86.36 71.12 0)
 			(hide yes)
@@ -5763,6 +5818,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 240.03 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 240.03 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5885,6 +5951,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 233.68 39.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 233.68 39.37 90)
 			(hide yes)
@@ -5982,6 +6059,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 226.06 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 226.06 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -6164,6 +6252,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 208.28 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 208.28 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -6365,6 +6464,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 146.05 69.85 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 146.05 69.85 90)
 			(hide yes)
@@ -6458,6 +6568,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 215.9 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 215.9 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6660,6 +6781,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 33.02 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 33.02 163.83 0)
 			(hide yes)
@@ -6843,6 +6975,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 317.5 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 317.5 76.2 90)
 			(hide yes)
@@ -6946,6 +7089,17 @@
 			)
 		)
 		(property "MPN" "08053C104KAT2A"
+			(at 120.65 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 120.65 85.09 90)
 			(hide yes)
 			(show_name no)
@@ -7071,6 +7225,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 64.77 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 64.77 49.53 0)
 			(hide yes)
@@ -7174,6 +7339,17 @@
 			)
 		)
 		(property "MPN" "CSD19536KCS"
+			(at 213.36 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 213.36 58.42 90)
 			(hide yes)
 			(show_name no)
@@ -7302,6 +7478,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 53.34 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 53.34 45.72 0)
 			(hide yes)
@@ -7407,6 +7594,17 @@
 			)
 		)
 		(property "MPN" "LM5122MH/NOPB"
+			(at 55.88 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 55.88 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -7654,6 +7852,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 215.9 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 215.9 90.17 90)
 			(hide yes)
@@ -7767,6 +7976,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 149.86 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 149.86 81.28 90)
 			(hide yes)
@@ -7860,6 +8080,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 318.77 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 318.77 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8138,6 +8369,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 171.45 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 171.45 41.91 0)
 			(hide yes)
@@ -8231,6 +8473,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 215.9 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 215.9 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8335,6 +8588,17 @@
 		)
 		(property "Description" "Diode"
 			(at 226.06 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 226.06 116.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8449,6 +8713,17 @@
 			)
 		)
 		(property "MPN" "MPN00CenterCenter00"
+			(at 129.54 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 129.54 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8574,6 +8849,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 78.74 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 78.74 49.53 0)
 			(hide yes)
@@ -8689,6 +8975,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 135.89 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 135.89 41.91 0)
 			(hide yes)
@@ -8792,6 +9089,17 @@
 			)
 		)
 		(property "MPN" "SK215ATR"
+			(at 113.03 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 113.03 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9070,6 +9378,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 119.38 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 119.38 35.56 90)
 			(hide yes)
@@ -9264,6 +9583,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 105.41 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 105.41 85.09 90)
 			(hide yes)
@@ -9369,6 +9699,17 @@
 			)
 		)
 		(property "MPN" "GRM155R71A333KA01D"
+			(at 71.12 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 71.12 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -9560,6 +9901,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 240.03 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 240.03 106.68 90)
 			(hide yes)
@@ -9665,6 +10017,17 @@
 			)
 		)
 		(property "MPN" "UCC27735DR"
+			(at 265.43 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 265.43 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -9814,6 +10177,17 @@
 			)
 		)
 		(property "MPN" "RC0201FR-0728K7L"
+			(at 142.24 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 142.24 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -10171,6 +10545,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 233.68 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 233.68 57.15 90)
 			(hide yes)
@@ -10279,6 +10664,17 @@
 			)
 		)
 		(property "MPN" "CRCW040218K2FKED"
+			(at 36.83 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 36.83 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -10471,6 +10867,17 @@
 			)
 		)
 		(property "MPN" "CRCW040249K9FKED"
+			(at 64.77 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 64.77 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -10674,6 +11081,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 78.74 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 78.74 41.91 0)
 			(hide yes)
@@ -10777,6 +11195,17 @@
 			)
 		)
 		(property "MPN" "CSNL1206FT2L00"
+			(at 92.71 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 92.71 38.1 90)
 			(hide yes)
 			(show_name no)
@@ -10892,6 +11321,17 @@
 			)
 		)
 		(property "MPN" "25SVPF180M"
+			(at 158.75 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 158.75 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -11083,6 +11523,17 @@
 			)
 		)
 		(property "MPN" "XAL1580-182MEB"
+			(at 107.95 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 107.95 38.1 90)
 			(hide yes)
 			(show_name no)
@@ -11286,6 +11737,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 54.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 54.61 72.39 0)
 			(hide yes)
@@ -11401,6 +11863,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 147.32 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 147.32 41.91 0)
 			(hide yes)
@@ -11496,6 +11969,17 @@
 		)
 		(property "Description" "Diode"
 			(at 208.28 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 208.28 116.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11610,6 +12094,17 @@
 			)
 		)
 		(property "MPN" "CRCW040249K9FKED"
+			(at 129.54 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 129.54 50.8 0)
 			(hide yes)
 			(show_name no)

@@ -45,3 +45,5 @@
  Connector for hooking outlet to PCB: 2604-1103 made by Wago
 
  Multiplexer for voltage and current monitoring: ADS7128IRTER made by TI
+
+ Tactile button for RP2354A control: B3F-4055 made by Aratas (Formerly Omron Components)

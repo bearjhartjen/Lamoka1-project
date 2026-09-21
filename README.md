@@ -12,6 +12,10 @@
   <a href="https://www.repo-grade.com/report/bearjhartjen/lamoka1-project">
     <img src="https://www.repo-grade.com/api/badge/bearjhartjen/lamoka1-project" alt="RepoGrade">
   </a>
+  &nbsp;&nbsp;
+  <a href="https://www.bestpractices.dev/projects/14750">
+    <img src="https://www.bestpractices.dev/projects/14750/badge" alt="OpenSSF Best Practices">
+  </a>
 </div>
 
 ---

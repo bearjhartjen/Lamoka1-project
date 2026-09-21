@@ -608,6 +608,12 @@
         },
         {
           "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
           "label": "KLC_S4.2_DVDD",
           "name": "KLC_S4.2_DVDD",
           "show": false
@@ -667,7 +673,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "X1,U1-10,Rsense1,NT1-2,Css1,J1-5,#G1-3,C1-33,Dbst1,Rfbt1,Cout1-3,D1-12,CR1-2,SW1,Ruvt1,Cvcc1,Ccomp1,Cres1,TP1-41,Rt1,Cvin1,L1-3,Rslope1,R1-33,Rvin1,IC1,Ruvb1,Rcomp1,Q1-6,Cbst1,#PWR1-70,Coutx1,Rfbb1,Cin1",
+    "used_designators": "SW1-2,Ruvt1,J1-5,#G1-3,C1-33,D1-12,CR1-2,Rfbt1,Dbst1,Cout1-3,Ccomp1,Cvcc1,Cbst1,U1-10,X1,TP1-41,Cres1,Cvin1,Rt1,Rvin1,Rsense1,NT1-2,IC1,Ruvb1,Rcomp1,Q1-6,Rslope1,L1-3,R1-33,#PWR1-71,Coutx1,Rfbb1,Cin1,Css1",
     "variants": []
   },
   "sheets": [

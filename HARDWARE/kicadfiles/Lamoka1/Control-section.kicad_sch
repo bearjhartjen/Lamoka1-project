@@ -232,200 +232,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "2026-07-07_01-19-01:PTS636_SM43J_SMTR_LFS"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW"
-				(at 7.62 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "PTS636 SM43J SMTR LFS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "SW_PTS636_CNK"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Datasheet" "PTS636 SM43J SMTR LFS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "PTS636 SM43J SMTR LFS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SW_PTS636_CNK"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PTS636_SM43J_SMTR_LFS_0_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.81 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.445 0) (xy 11.43 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 4.445 0)
-					(radius 0.635)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 10.795 0)
-					(radius 0.635)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 0) (xy 11.43 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 15.24 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "2026-07-07_19-38-11:ABM8-272-T3"
 			(pin_names
 				(offset 0.254)
@@ -1543,6 +1349,404 @@
 						)
 					)
 					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "B3F-4055:B3F-4055"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 20.32 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "B3F-4055"
+				(at 20.32 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "SW_B3F-4050_OMR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "B3F-4055"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "B3F-4055"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SW_B3F-4050_OMR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "B3F-4055_0_1"
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 -7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 11.43 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -2.54) (xy 11.43 -2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -7.62) (xy 33.02 -7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 0) (xy 11.43 3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 -2.54) (xy 11.43 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 -6.35) (xy 29.21 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 20.32 3.81) (xy 20.32 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 20.32 3.81)
+					(radius 0.254)
+					(stroke
+						(width 0.381)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 20.32 0) (xy 19.05 -2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 20.32 -2.54) (xy 20.32 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 20.32 -6.35)
+					(radius 0.254)
+					(stroke
+						(width 0.381)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 29.21 3.81) (xy 11.43 3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 29.21 0) (xy 29.21 3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 29.21 -2.54) (xy 33.02 -2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 29.21 -6.35) (xy 29.21 -2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 5.08) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 0) (xy 29.21 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 -7.62) (xy 33.02 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 7.62)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 40.64 0 180)
+					(length 7.62)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -2.54 0)
+					(length 7.62)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 40.64 -2.54 180)
+					(length 7.62)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7487,7 +7691,7 @@
 		(uuid "0de9abaf-694a-43a3-9f66-9a7babeda5af")
 	)
 	(junction
-		(at 316.23 40.64)
+		(at 284.48 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0f4c04fd-600a-46e4-9e52-ae18962d9095")
@@ -7856,6 +8060,16 @@
 	)
 	(wire
 		(pts
+			(xy 334.01 49.53) (xy 336.55 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b574b91-b633-4ec6-8a74-45c3f00ab664")
+	)
+	(wire
+		(pts
 			(xy 161.29 60.96) (xy 161.29 66.04)
 		)
 		(stroke
@@ -8186,7 +8400,7 @@
 	)
 	(wire
 		(pts
-			(xy 316.23 40.64) (xy 325.12 40.64)
+			(xy 284.48 49.53) (xy 293.37 49.53)
 		)
 		(stroke
 			(width 0)
@@ -8236,7 +8450,7 @@
 	)
 	(wire
 		(pts
-			(xy 316.23 21.59) (xy 316.23 27.94)
+			(xy 284.48 30.48) (xy 284.48 36.83)
 		)
 		(stroke
 			(width 0)
@@ -8266,7 +8480,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 40.64) (xy 344.17 40.64)
+			(xy 334.01 52.07) (xy 337.82 52.07)
 		)
 		(stroke
 			(width 0)
@@ -8346,7 +8560,7 @@
 	)
 	(wire
 		(pts
-			(xy 316.23 35.56) (xy 316.23 40.64)
+			(xy 284.48 44.45) (xy 284.48 49.53)
 		)
 		(stroke
 			(width 0)
@@ -8716,7 +8930,7 @@
 	)
 	(wire
 		(pts
-			(xy 313.69 40.64) (xy 316.23 40.64)
+			(xy 281.94 49.53) (xy 284.48 49.53)
 		)
 		(stroke
 			(width 0)
@@ -9143,6 +9357,16 @@
 			(type default)
 		)
 		(uuid "923f956e-34cc-4439-ac71-82a4cb541dfe")
+	)
+	(wire
+		(pts
+			(xy 336.55 45.72) (xy 336.55 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "928726f6-6283-4906-a81f-532a127985f6")
 	)
 	(wire
 		(pts
@@ -9916,6 +10140,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 52.07) (xy 293.37 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff8312d0-896e-4f7c-a9d6-1d7bf3ccf14a")
+	)
+	(wire
+		(pts
 			(xy 60.96 261.62) (xy 68.58 261.62)
 		)
 		(stroke
@@ -10374,6 +10608,16 @@
 		)
 		(uuid "82c9ccbe-22d0-4e59-8f59-dcc13cdd326c")
 	)
+	(label "BTN"
+		(at 336.55 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "859f7c5c-140f-4893-81b6-2755883d4c66")
+	)
 	(label "5V"
 		(at 30.48 204.47 180)
 		(effects
@@ -10655,7 +10899,7 @@
 		(uuid "da2bd399-2899-432b-9228-f7f1e44a539b")
 	)
 	(label "BTN"
-		(at 313.69 40.64 180)
+		(at 281.94 49.53 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11131,7 +11375,7 @@
 	)
 	(hierarchical_label "3v3"
 		(shape input)
-		(at 316.23 21.59 180)
+		(at 284.48 30.48 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11219,6 +11463,17 @@
 			)
 		)
 		(property "MPN" "WS2812B"
+			(at 165.1 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 165.1 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -11427,6 +11682,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 359.41 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 359.41 104.14 0)
 			(hide yes)
@@ -11620,6 +11886,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 347.98 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 347.98 196.85 0)
 			(hide yes)
@@ -11730,6 +12007,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 389.89 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 389.89 236.22 0)
 			(hide yes)
@@ -11801,7 +12089,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 111.4552 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -11844,6 +12132,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 110.49 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -12026,6 +12325,17 @@
 			)
 		)
 		(property "MPN" "RC0603FR-075K1L"
+			(at 119.38 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 119.38 45.72 90)
 			(hide yes)
 			(show_name no)
@@ -12304,6 +12614,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 129.54 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 129.54 60.96 90)
 			(hide yes)
@@ -12408,6 +12729,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 88.9 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 88.9 257.81 0)
 			(hide yes)
@@ -12502,6 +12834,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 57.15 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 57.15 228.6 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12626,6 +12969,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 161.29 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 161.29 57.15 0)
 			(hide yes)
@@ -12731,6 +13085,17 @@
 			)
 		)
 		(property "MPN" "WS2812B"
+			(at 302.26 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 302.26 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -12940,6 +13305,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 187.96 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 187.96 196.85 0)
 			(hide yes)
@@ -13125,6 +13501,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 166.37 271.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 166.37 271.78 90)
 			(hide yes)
@@ -13227,6 +13614,17 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0710KL"
+			(at 162.56 77.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 162.56 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -13342,6 +13740,17 @@
 			)
 		)
 		(property "MPN" "SS14-E3/61T"
+			(at 40.64 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 40.64 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13542,6 +13951,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 158.75 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 158.75 95.25 90)
 			(hide yes)
@@ -13725,6 +14145,17 @@
 			)
 		)
 		(property "MPN" "TPS62160DSGR"
+			(at 265.43 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 265.43 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -13948,6 +14379,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 134.62 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 134.62 147.32 0)
 			(hide yes)
@@ -14042,6 +14484,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 77.47 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 77.47 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -14224,6 +14677,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 60.96 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 60.96 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -14662,6 +15126,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 40.64 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 40.64 53.34 0)
 			(hide yes)
@@ -14765,6 +15240,17 @@
 			)
 		)
 		(property "MPN" "GRM31CR61A107MEA8K"
+			(at 25.4 228.6 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 25.4 228.6 90)
 			(hide yes)
 			(show_name no)
@@ -15044,6 +15530,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 322.58 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 322.58 90.17 0)
 			(hide yes)
@@ -15115,7 +15612,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 31.4452 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -15158,6 +15655,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 30.48 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -15272,6 +15780,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 205.74 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 205.74 46.99 90)
 			(hide yes)
@@ -15376,6 +15895,17 @@
 		)
 		(property "MPN" "RC0603FR-07330RL"
 			(at 125.73 193.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 125.73 196.85 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15568,6 +16098,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 60.96 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 60.96 256.54 0)
 			(hide yes)
@@ -15662,6 +16203,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 116.84 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 116.84 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -15821,7 +16373,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 65.7352 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -15864,6 +16416,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 64.77 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -15994,6 +16557,17 @@
 			)
 		)
 		(property "MPN" "RP2354A"
+			(at 196.85 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 196.85 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -16430,6 +17004,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 334.01 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 334.01 86.36 0)
 			(hide yes)
@@ -16530,6 +17115,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 88.9 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 88.9 267.97 0)
 			(hide yes)
 			(show_name no)
@@ -16644,6 +17240,17 @@
 			)
 		)
 		(property "MPN" "CL05B104KO5NNNC"
+			(at 180.34 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 180.34 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -16771,7 +17378,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 344.17 40.64 0)
+		(at 337.82 52.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16782,7 +17389,7 @@
 		(fields_autoplaced yes)
 		(uuid "69fd2bf3-c85e-4506-8473-abb7aac66d93")
 		(property "Reference" "#PWR011"
-			(at 344.17 46.99 0)
+			(at 337.82 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16793,7 +17400,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 344.17 45.72 0)
+			(at 337.82 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16803,7 +17410,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 344.17 40.64 0)
+			(at 337.82 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16814,7 +17421,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 344.17 40.64 0)
+			(at 337.82 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16825,7 +17432,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 344.17 40.64 0)
+			(at 337.82 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17082,6 +17689,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 81.28 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 81.28 143.51 0)
 			(hide yes)
@@ -17272,6 +17890,17 @@
 			)
 		)
 		(property "MPN" "TMK212BBJ106KG-T"
+			(at 254 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 254 143.51 90)
 			(hide yes)
 			(show_name no)
@@ -17475,6 +18104,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 321.31 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 321.31 134.62 0)
 			(hide yes)
@@ -17546,7 +18186,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 20.0152 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -17589,6 +18229,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 19.05 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -17864,6 +18515,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 210.82 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 210.82 196.85 0)
 			(hide yes)
@@ -18060,6 +18722,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 128.27 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 128.27 48.26 90)
 			(hide yes)
@@ -18152,6 +18825,17 @@
 			)
 		)
 		(property "Description" "Net tie, 2 pins"
+			(at 127 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 127 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -18256,6 +18940,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 49.53 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 49.53 265.43 0)
 			(hide yes)
 			(show_name no)
@@ -18459,6 +19154,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 191.77 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 191.77 43.18 90)
 			(hide yes)
@@ -18553,6 +19259,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 170.18 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 170.18 267.97 0)
 			(hide yes)
 			(show_name no)
@@ -18754,6 +19471,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 177.8 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 177.8 36.83 0)
 			(hide yes)
@@ -18870,6 +19598,138 @@
 		)
 	)
 	(symbol
+		(lib_id "B3F-4055:B3F-4055")
+		(at 293.37 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "884b8d05-0d89-46e6-a19d-a6ebb82f9042")
+		(property "Reference" "SW1"
+			(at 313.69 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "B3F-4055"
+			(at 313.69 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "B3F-4055:SW_B3F-4050_OMR"
+			(at 293.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "B3F-4055"
+			(at 293.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 293.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "B3F-4055"
+			(at 293.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Aratas (Formerly Omron Components)"
+			(at 293.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 293.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 293.37 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "232444dd-9185-4af5-af6e-ced6e36cd96d")
+		)
+		(pin "3"
+			(uuid "3da411b9-4c92-4647-a521-367ed69f41a9")
+		)
+		(pin "2"
+			(uuid "c8eb6878-3387-41ee-a397-275c622d0f91")
+		)
+		(pin "1"
+			(uuid "c29cd32b-c933-42a0-99b9-e13775f784ec")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xGxx:74AHCT1G125")
 		(at 102.87 184.15 270)
 		(unit 1)
@@ -18935,6 +19795,17 @@
 		)
 		(property "MPN" "SN74AHCT1G125DBVR"
 			(at 102.87 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 102.87 184.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19135,6 +20006,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 33.02 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 33.02 256.54 0)
 			(hide yes)
@@ -19167,6 +20049,84 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 289.56 52.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92fb68d5-9830-4eae-88c9-20bacd2ec01e")
+		(property "Reference" "#PWR071"
+			(at 289.56 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 289.56 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 289.56 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 289.56 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 289.56 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8bf9e9a5-3ddc-4387-825c-8ee0a4ac96e3")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -19240,6 +20200,17 @@
 			)
 		)
 		(property "MPN" "TMP235A2DBZR"
+			(at 29.21 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 29.21 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -19368,6 +20339,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 163.83 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 163.83 46.99 0)
 			(hide yes)
@@ -19482,6 +20464,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 242.57 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -19667,6 +20660,17 @@
 			)
 		)
 		(property "MPN" "WS2812B"
+			(at 279.4 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 279.4 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -20033,6 +21037,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 256.54 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 256.54 196.85 0)
 			(hide yes)
@@ -20146,6 +21161,17 @@
 			)
 		)
 		(property "MPN" "CRCW0402953KFKED"
+			(at 336.55 149.86 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 336.55 149.86 90)
 			(hide yes)
 			(show_name no)
@@ -20270,6 +21296,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 346.71 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 346.71 134.62 0)
 			(hide yes)
@@ -20363,6 +21400,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 281.94 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 281.94 238.76 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20560,6 +21608,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 128.27 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 128.27 55.88 90)
 			(hide yes)
@@ -20665,6 +21724,17 @@
 			)
 		)
 		(property "MPN" "WS2812B"
+			(at 233.68 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 233.68 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -20786,6 +21856,17 @@
 			)
 		)
 		(property "MPN" "WS2812B"
+			(at 325.12 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 325.12 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -20997,6 +22078,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 365.76 154.94 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 365.76 154.94 90)
 			(hide yes)
@@ -21192,6 +22284,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 336.55 162.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 336.55 162.56 90)
 			(hide yes)
@@ -21286,6 +22389,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 116.84 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 116.84 267.97 0)
 			(hide yes)
 			(show_name no)
@@ -21446,7 +22560,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 77.1652 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -21489,6 +22603,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 76.2 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -21596,6 +22721,17 @@
 			)
 		)
 		(property "MPN" "INA240A2DR"
+			(at 140.97 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 140.97 255.27 0)
 			(hide yes)
 			(show_name no)
@@ -21729,6 +22865,17 @@
 			)
 		)
 		(property "MPN" "WS2812B"
+			(at 142.24 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 142.24 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -22019,7 +23166,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 316.23 31.75 0)
+		(at 284.48 40.64 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22029,7 +23176,7 @@
 		(dnp no)
 		(uuid "d98ed2dc-871c-45af-9db8-89b7b55b3e2c")
 		(property "Reference" "R9"
-			(at 318.516 31.496 90)
+			(at 286.766 40.386 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22039,7 +23186,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 313.944 31.496 90)
+			(at 282.194 40.386 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22049,7 +23196,7 @@
 			)
 		)
 		(property "Footprint" "components:RES_CRCW_0603"
-			(at 314.452 31.75 90)
+			(at 282.702 40.64 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22060,7 +23207,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 316.23 31.75 0)
+			(at 284.48 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22071,7 +23218,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 316.23 31.75 0)
+			(at 284.48 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22082,7 +23229,18 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0710KL"
-			(at 316.23 31.75 90)
+			(at 284.48 40.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 284.48 40.64 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22093,7 +23251,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 316.23 31.75 90)
+			(at 284.48 40.64 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22104,7 +23262,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 316.23 31.75 90)
+			(at 284.48 40.64 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22263,6 +23421,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 105.41 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 105.41 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -22688,6 +23857,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 21.59 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 21.59 265.43 0)
 			(hide yes)
@@ -22759,7 +23939,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 122.8852 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -22802,6 +23982,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 121.92 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -22998,6 +24189,17 @@
 				(justify left)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 226.06 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 226.06 44.45 0)
 			(hide yes)
@@ -23103,6 +24305,17 @@
 			)
 		)
 		(property "MPN" "ADS7128IRTER"
+			(at 289.56 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 289.56 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -23229,7 +24442,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 42.8752 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -23272,6 +24485,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 41.91 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -23368,6 +24592,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 33.02 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 33.02 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -23571,6 +24806,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 347.98 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 347.98 102.87 0)
 			(hide yes)
@@ -23642,7 +24888,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 54.3052 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -23687,6 +24933,17 @@
 				(justify left)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 53.34 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 53.34 208.28 0)
 			(hide yes)
@@ -23719,120 +24976,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "2026-07-07_01-19-01:PTS636_SM43J_SMTR_LFS")
-		(at 325.12 40.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f1180c8f-d1bd-48e5-9b10-617c6272fe68")
-		(property "Reference" "SW1"
-			(at 332.74 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "PTS636 SM43J SMTR LFS"
-			(at 332.74 37.084 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "components:SW_PTS636_CNK"
-			(at 325.12 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "PTS636 SM43J SMTR LFS"
-			(at 325.12 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 325.12 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "PTS636SM43JSMTR LFS"
-			(at 325.12 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 325.12 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 325.12 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "2cd521fd-9197-4667-abd6-36bfe4bb7c73")
-		)
-		(pin "1"
-			(uuid "80f3c0b5-2ad4-4bdf-9997-666140f152d2")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -23872,7 +25015,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 88.5952 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -23915,6 +25058,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 87.63 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
@@ -24031,6 +25185,17 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 81.28 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "KLC_S4.2_DVDD" ""
 			(at 81.28 127 0)
 			(hide yes)
@@ -24125,6 +25290,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 373.38 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
 			(at 373.38 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -24284,7 +25460,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 100.0252 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -24327,6 +25503,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 99.06 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
