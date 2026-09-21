@@ -37,6 +37,8 @@
 
  AIN3: SW_B (Leg B of H bridge) voltage sensing, top resistor 45.3k, bottom resistor 10k, 47nF cap to ground on AIN pin 
 
+ AIN4: Current sensing for source rail, 11-14v goes through 2m shunt, shunt is connected to INA240A2DR IC, the OUT pin of that IC goes to a 22 ohm resistor to AIN pin, the AIN pin has a 100nF cap to ground.
+
 
 ---
 

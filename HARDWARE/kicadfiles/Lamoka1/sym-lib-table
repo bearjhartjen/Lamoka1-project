@@ -15,4 +15,5 @@
 	(lib (name "2606-1108/010-000") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_2606-1108-010-000/KiCADv6/2026-09-18_21-54-03.kicad_sym") (options "") (descr ""))
 	(lib (name "2604-1103") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_2604-1103/KiCADv6/2026-09-18_22-19-16.kicad_sym") (options "") (descr ""))
 	(lib (name "ADS7128IRTER") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ADS7128IRTER/KiCADv6/2026-09-19_22-31-21.kicad_sym") (options "") (descr ""))
+	(lib (name "INA240A2DR") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/INA240A2DR/KiCad/INA240A2DR.kicad_sym") (options "") (descr ""))
 )

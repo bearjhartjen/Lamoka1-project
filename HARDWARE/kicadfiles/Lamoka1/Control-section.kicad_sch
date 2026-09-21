@@ -3434,6 +3434,312 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "INA240A2DR:INA240A2DR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "IC"
+				(at 24.13 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "INA240A2DR"
+				(at 24.13 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "SOIC127P600X175-8N"
+				(at 24.13 -94.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/gpn/ina240"
+				(at 24.13 -194.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "80V, Low-/High-Side, Bi-Directional, Zero-Drift, Current Sense Amp w/Enhanced PWM Rejection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "1.75"
+				(at 24.13 -394.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "Texas Instruments"
+				(at 24.13 -494.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Part_Number" "INA240A2DR"
+				(at 24.13 -594.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" "595-INA240A2DR"
+				(at 24.13 -694.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/INA240A2DR?qs=AQlKX63v8RtFUWHuhLNCsw%3D%3D"
+				(at 24.13 -794.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Part Number" "INA240A2DR"
+				(at 24.13 -894.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/ina240a2dr/texas-instruments.html?utm_currency=USD&region=nac"
+				(at 24.13 -994.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "INA240A2DR_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 22.86 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "IN-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "REF2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 0 -7.62 0)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 27.94 -7.62 180)
+					(length 5.08)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 27.94 -5.08 180)
+					(length 5.08)
+					(name "VS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 27.94 -2.54 180)
+					(length 5.08)
+					(name "REF1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 27.94 0 180)
+					(length 5.08)
+					(name "IN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "LED:WS2812B"
 			(pin_names
 				(offset 0.254)
@@ -6923,6 +7229,18 @@
 		(uuid "133ab0dd-32a3-4890-9a1d-fd05cda066ba")
 	)
 	(rectangle
+		(start 131.064 245.872)
+		(end 181.356 279.4)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "2f9c5109-ddbe-4dc1-8b52-230774a69388")
+	)
+	(rectangle
 		(start 20.32 88.9)
 		(end 43.688 94.488)
 		(stroke
@@ -7075,6 +7393,16 @@
 			)
 		)
 		(uuid "036c4d36-6392-4b12-b099-5a7136c7c8e7")
+	)
+	(text "Source-Current-Sensing"
+		(exclude_from_sim no)
+		(at 155.194 244.348 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "29501cbe-665f-406c-9cde-5d8a418291b6")
 	)
 	(text "Input-rail-voltage"
 		(exclude_from_sim no)
@@ -7231,6 +7559,12 @@
 		(uuid "75964df9-243f-480d-b3ea-7d7b670ef542")
 	)
 	(junction
+		(at 170.18 271.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9bef266a-dd54-424b-9a07-52d0c379a034")
+	)
+	(junction
 		(at 336.55 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7319,6 +7653,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "db67f10b-6832-4d74-bdb0-b423d57b633d")
+	)
+	(junction
+		(at 139.7 257.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dbaea5eb-2d07-4cfd-8912-909f9db4d64d")
 	)
 	(junction
 		(at 177.8 33.02)
@@ -7676,6 +8016,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 271.78) (xy 176.53 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "194aac99-c0d2-4755-aa1b-2b7aee499353")
+	)
+	(wire
+		(pts
 			(xy 30.48 41.91) (xy 40.64 41.91)
 		)
 		(stroke
@@ -7723,6 +8073,16 @@
 			(type default)
 		)
 		(uuid "1e47ff4c-53ca-46fd-9684-28b1476c02fe")
+	)
+	(wire
+		(pts
+			(xy 140.97 260.35) (xy 139.7 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e73c327-4b67-4cfc-86b3-fc9406a3daf9")
 	)
 	(wire
 		(pts
@@ -8256,6 +8616,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 273.05) (xy 158.75 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "606f71e3-c1aa-4b16-a40c-dc1b486748f7")
+	)
+	(wire
+		(pts
 			(xy 152.4 95.25) (xy 154.94 95.25)
 		)
 		(stroke
@@ -8596,6 +8966,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 264.16) (xy 170.18 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b99e688-eb70-4f61-a73b-6699e0165857")
+	)
+	(wire
+		(pts
 			(xy 88.9 250.19) (xy 86.36 250.19)
 		)
 		(stroke
@@ -8743,6 +9123,16 @@
 			(type default)
 		)
 		(uuid "8d50bd2c-a630-48e2-b2ba-fc1fdde2c745")
+	)
+	(wire
+		(pts
+			(xy 135.89 257.81) (xy 140.97 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9001900e-244c-43d3-971b-a877490f66ca")
 	)
 	(wire
 		(pts
@@ -8936,6 +9326,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 271.78) (xy 162.56 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a84bcb1e-1727-4b29-8095-8c10a2944e20")
+	)
+	(wire
+		(pts
 			(xy 60.96 270.51) (xy 60.96 273.05)
 		)
 		(stroke
@@ -9116,6 +9516,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 257.81) (xy 176.53 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfa67c4a-b077-4d55-a604-cb74bafafd1f")
+	)
+	(wire
+		(pts
 			(xy 334.01 88.9) (xy 334.01 91.44)
 		)
 		(stroke
@@ -9223,6 +9633,16 @@
 			(type default)
 		)
 		(uuid "da1f6cef-d20e-4a03-91da-60832d9ac1f1")
+	)
+	(wire
+		(pts
+			(xy 170.18 262.89) (xy 168.91 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbc32662-64dc-4725-adca-e7cf1999d3e7")
 	)
 	(wire
 		(pts
@@ -9373,6 +9793,16 @@
 			(type default)
 		)
 		(uuid "eb18471a-c856-4fdf-9aa5-c39eccc29a3f")
+	)
+	(wire
+		(pts
+			(xy 139.7 260.35) (xy 139.7 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebe892ea-edff-40c8-b89d-91ccba4c8c0a")
 	)
 	(wire
 		(pts
@@ -9693,6 +10123,16 @@
 			(justify right bottom)
 		)
 		(uuid "4fa3101c-08c4-453e-bade-cf122e838608")
+	)
+	(label "AIN4"
+		(at 289.56 226.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5423866b-5ca7-4041-addc-982e09833ad7")
 	)
 	(label "GPIO9"
 		(at 222.25 85.09 0)
@@ -10294,6 +10734,16 @@
 		)
 		(uuid "f2ce6fcc-001a-4e71-8f69-c1f122175083")
 	)
+	(label "AIN4"
+		(at 176.53 271.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ff9c804c-67cc-4eaa-85ef-fdbfc6186e81")
+	)
 	(hierarchical_label "11-14v input"
 		(shape input)
 		(at 31.75 250.19 180)
@@ -10458,6 +10908,17 @@
 			(justify right)
 		)
 		(uuid "7c753e7f-fec2-4fad-9673-bcba7451a163")
+	)
+	(hierarchical_label "RCS1-L"
+		(shape input)
+		(at 140.97 255.27 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8089fcbc-2b6a-4da5-9735-9d9760285cfb")
 	)
 	(hierarchical_label "3v3"
 		(shape input)
@@ -10624,6 +11085,17 @@
 		)
 		(uuid "d61c3957-6233-4723-9da2-51f20feaf88a")
 	)
+	(hierarchical_label "RCS1-S"
+		(shape input)
+		(at 168.91 255.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d775eb4d-ecb0-4d1e-b245-d9eadc85b727")
+	)
 	(hierarchical_label "VBUS"
 		(shape input)
 		(at 106.68 40.64 180)
@@ -10645,6 +11117,17 @@
 			(justify left)
 		)
 		(uuid "ece12fad-8328-4cd6-82d7-c870d38b9661")
+	)
+	(hierarchical_label "3v3"
+		(shape input)
+		(at 168.91 260.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f4af3ba3-6d7b-4bc6-b736-1453a5b47864")
 	)
 	(hierarchical_label "3v3"
 		(shape input)
@@ -11702,6 +12185,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 158.75 273.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "05384f2a-768b-4bc1-ae93-ca1e84029ece")
+		(property "Reference" "#PWR070"
+			(at 158.75 279.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 158.75 278.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 158.75 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 158.75 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e64d2fb2-71a2-4310-bfc9-a8caf8e36ee6")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 87.63 212.09 0)
 		(unit 1)
 		(body_style 1)
@@ -12616,6 +13177,163 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 257.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1f837366-7f11-4df3-b566-7c5ea474d261")
+		(property "Reference" "#PWR068"
+			(at 135.89 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 135.89 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 135.89 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "26ad84a5-91d3-4d3e-bd6c-edf6db5f8188")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#PWR068")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 166.37 271.78 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "20d5a98f-2f22-48d7-89e6-5c57aca24647")
+		(property "Reference" "C31"
+			(at 164.846 268.478 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 164.846 275.082 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 272.7452 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 166.37 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "352bc7c4-7c2c-4ea0-9771-b14b33ecaa0a")
+		)
+		(pin "2"
+			(uuid "c2cdab1f-c298-4d52-a9db-42b6ea2616e6")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -15877,6 +16595,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 176.53 257.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60c2503f-185a-477b-b001-8d3b73b034b9")
+		(property "Reference" "#PWR069"
+			(at 176.53 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 176.53 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 176.53 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49996417-2e45-40c9-8f1a-636f7d49a723")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 233.68 204.47 0)
 		(unit 1)
 		(body_style 1)
@@ -18257,6 +19053,88 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 170.18 267.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8218d5d2-bcec-4a72-a01e-42465d82d0d4")
+		(property "Reference" "R33"
+			(at 172.72 266.6999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22"
+			(at 172.72 269.2399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.402 267.97 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 170.18 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "25b519db-d274-4854-846f-d008171b9c88")
+		)
+		(pin "2"
+			(uuid "c2d32a03-9e65-406a-abb1-8457abe63cb7")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -21413,6 +22291,201 @@
 		)
 	)
 	(symbol
+		(lib_id "INA240A2DR:INA240A2DR")
+		(at 140.97 255.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf9ceb97-dc51-40c6-a6a7-06507bb18e69")
+		(property "Reference" "IC1"
+			(at 154.94 247.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INA240A2DR"
+			(at 154.94 250.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "INA240A2DR:SOIC127P600X175-8N"
+			(at 165.1 350.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/ina240"
+			(at 165.1 450.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "80V, Low-/High-Side, Bi-Directional, Zero-Drift, Current Sense Amp w/Enhanced PWM Rejection"
+			(at 140.97 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1.75"
+			(at 165.1 650.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 165.1 750.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "INA240A2DR"
+			(at 165.1 850.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "595-INA240A2DR"
+			(at 165.1 950.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/INA240A2DR?qs=AQlKX63v8RtFUWHuhLNCsw%3D%3D"
+			(at 165.1 1050.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" "INA240A2DR"
+			(at 165.1 1150.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/ina240a2dr/texas-instruments.html?utm_currency=USD&region=nac"
+			(at 165.1 1250.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "MPN" "INA240A2DR"
+			(at 140.97 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "279055ae-9dc0-4621-afef-1e79076396af")
+		)
+		(pin "5"
+			(uuid "fc13407f-5cd8-4830-97d0-1c8f7d17c32e")
+		)
+		(pin "4"
+			(uuid "fdf6d7f1-335a-4d05-8e9a-dd838ea8c33c")
+		)
+		(pin "3"
+			(uuid "d74d9f3b-a80b-409d-b25d-d83612feef07")
+		)
+		(pin "1"
+			(uuid "ea821fd3-f102-4b89-9061-af3a83dbd3ef")
+		)
+		(pin "2"
+			(uuid "d226a0e5-e093-430e-a5a6-4e0d78ff8eb6")
+		)
+		(pin "8"
+			(uuid "ee55cdee-0f2a-4a3d-825d-125adb7cf3fc")
+		)
+		(pin "7"
+			(uuid "1339e6d4-47ec-40dc-9587-ddd847589bfc")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "IC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "LED:WS2812B")
 		(at 142.24 196.85 0)
 		(unit 1)
@@ -22953,6 +24026,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 289.56 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ADS7128IRTER"
 			(at 289.56 220.98 0)
 			(hide yes)
 			(show_name no)

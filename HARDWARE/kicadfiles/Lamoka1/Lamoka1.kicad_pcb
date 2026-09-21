@@ -1920,6 +1920,177 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "Resistor_SMD:R_2512_6332Metric"
+		(layer "F.Cu")
+		(uuid "1b6b1b47-d4ac-4695-bb8d-70f3de751c79")
+		(at 211.325 111.955)
+		(descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+		(tags "resistor")
+		(property "Reference" "RCS1"
+			(at 0 -2.63 0)
+			(layer "F.SilkS")
+			(uuid "c7d73044-b3e1-4274-ab90-1fae2205a7ec")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "2m"
+			(at 0 2.63 0)
+			(layer "F.Fab")
+			(uuid "14de4c7e-8145-4450-a7d6-cd817693edce")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e88da8fe-e861-4256-a6a6-886b9a17425d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d91c422d-9d52-48b4-be20-2ab72d869c31")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b5034db3-a671-45a2-bfc4-0099e74c4802")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CSNL2512FT2L00"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fd1eed78-baeb-4741-bbbd-af4a3697799f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "R_*")
+		(path "/b40041d6-c0da-4230-b73b-aed7ac9f9dbe")
+		(sheetname "/")
+		(sheetfile "Lamoka1.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.177064 -1.71)
+			(end 2.177064 -1.71)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9f780d70-7ee4-4f2f-a872-9a1a7fc1b085")
+		)
+		(fp_line
+			(start -2.177064 1.71)
+			(end 2.177064 1.71)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "8242dca3-5762-4997-8d1f-cd5dad222b1c")
+		)
+		(fp_rect
+			(start -3.83 -1.93)
+			(end 3.83 1.93)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "cc628dd8-6986-48c4-93b6-0cb78945f4be")
+		)
+		(fp_rect
+			(start -3.15 -1.6)
+			(end 3.15 1.6)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "296389bc-f07b-4c56-9bc5-b8459fd17003")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "3c5deb8f-c4b1-4006-83a8-6bf77d7bc923")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.9625 0)
+			(size 1.225 3.35)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.204082)
+			(net "/11-14V input")
+			(pintype "passive")
+			(uuid "d0cced41-f3d0-40c1-a0ed-45c24a1277d0")
+		)
+		(pad "2" smd roundrect
+			(at 2.9625 0)
+			(size 1.225 3.35)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.204082)
+			(net "/Inversion-Section/CSP")
+			(pintype "passive")
+			(uuid "0a2fdcd7-30f4-48d7-b6d9-9d29b50131fc")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_2512_6332Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "TMP235A2DBZR:DBZ0003A-IPC_A"
 		(layer "F.Cu")
 		(uuid "1e1eef03-702f-4722-9875-746c0ab98875")
@@ -2705,6 +2876,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7a3fb237-6237-4800-9108-584293c8e377")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "ADS7128IRTER"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a86cf446-cf9d-4126-ad8a-8fd9e93f0083")
 			(effects
 				(font
 					(size 1 1)
@@ -3828,7 +4012,7 @@
 			(at -1.4732 0.25 90)
 			(size 0.254 0.8128)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "unconnected-(U10-AIN4{slash}GPIO4-Pad3)")
+			(net "/Control-Section/AIN4")
 			(pinfunction "AIN4/GPIO4_3")
 			(pintype "bidirectional")
 			(uuid "331303bd-69f4-4939-a997-6c611e2a5187")
@@ -5307,7 +5491,7 @@
 			(at -0.8509 0)
 			(size 1.1176 1.3462)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "/11-14V input")
+			(net "/Inversion-Section/CSP")
 			(pintype "unspecified")
 			(uuid "de8fe7d1-e62f-4f5b-b5f7-012ec6d63b2e")
 		)
@@ -6164,7 +6348,7 @@
 			(at -0.950001 -0.25)
 			(size 0.5 0.28)
 			(layers "F.Cu" "F.Mask")
-			(net "/11-14V input")
+			(net "/Inversion-Section/CSP")
 			(pinfunction "VIN_2")
 			(pintype "input")
 			(uuid "232305f1-4e32-4a60-8834-a9c07e0b6fd3")
@@ -6173,7 +6357,7 @@
 			(at -0.950001 0.25)
 			(size 0.5 0.28)
 			(layers "F.Cu" "F.Mask")
-			(net "/11-14V input")
+			(net "/Inversion-Section/CSP")
 			(pinfunction "EN_3")
 			(pintype "input")
 			(uuid "21c05dc8-66bb-43d9-bf73-262f3f637b74")
@@ -14580,6 +14764,408 @@
 		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "INA240A2DR:SOIC127P600X175-8N"
+		(layer "F.Cu")
+		(uuid "d6136dbe-cf67-45da-8485-d2d3f9b6b8b2")
+		(at 211.22 119.685)
+		(descr "D0008A-1111")
+		(tags "Integrated Circuit")
+		(property "Reference" "IC1"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(uuid "b4aaa4d4-a9de-4e41-982a-5fac6d3228e1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Value" "INA240A2DR"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "25412cf7-a9e8-47d7-8bce-c26f3b2984b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/ina240"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "44ba96e5-7f12-42f6-8fb8-161276c1573e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "80V, Low-/High-Side, Bi-Directional, Zero-Drift, Current Sense Amp w/Enhanced PWM Rejection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9ef445c2-2df0-4b30-bf53-d9319df373c1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1.75"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1c31fc22-a195-4384-8e08-fc643988ba49")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ac2d8ad1-a064-4162-b405-0ee65c7aea01")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "INA240A2DR"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cc480f29-7b80-4b70-ba82-e5ba42bd0f20")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser Part Number" "595-INA240A2DR"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ec56519f-c656-4cc2-953f-ab0f2fe4d509")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/INA240A2DR?qs=AQlKX63v8RtFUWHuhLNCsw%3D%3D"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f68787d7-4b58-4f74-8128-5daf1e1d7441")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Arrow Part Number" "INA240A2DR"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0c542e98-f570-48e9-890e-070c3ede3c86")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/ina240a2dr/texas-instruments.html?utm_currency=USD&region=nac"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4cc1b200-ab79-4076-8b78-8ea66afbf2b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "INA240A2DR"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d0278a43-fe49-4279-83cd-154ae2dd5b40")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe/cf9ceb97-dc51-40c6-a6a7-06507bb18e69")
+		(sheetname "/Control-Section/")
+		(sheetfile "Control-section.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "8" "7" "6" "5")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -3.475 -2.58)
+			(end -1.948 -2.58)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d1adcfa3-8591-41fd-8a0a-2d245da3493d")
+		)
+		(fp_line
+			(start -1.598 -2.452)
+			(end 1.598 -2.452)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b648b398-a804-4ed6-a075-b78dff0c3184")
+		)
+		(fp_line
+			(start -1.598 2.452)
+			(end -1.598 -2.452)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a961a49f-d13d-4560-9f1d-d9a13fa8fd16")
+		)
+		(fp_line
+			(start 1.598 -2.452)
+			(end 1.598 2.452)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "882ae0af-6069-44eb-9c45-09f76cd7f0ce")
+		)
+		(fp_line
+			(start 1.598 2.452)
+			(end -1.598 2.452)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "003f85c1-8594-4b53-bcc1-92bf4bfd5634")
+		)
+		(fp_line
+			(start -3.725 -2.75)
+			(end 3.725 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "a3174592-9f88-4b94-a886-0e96afc9150d")
+		)
+		(fp_line
+			(start -3.725 2.75)
+			(end -3.725 -2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "1e967d05-b841-4904-924c-ce7d64b3a0df")
+		)
+		(fp_line
+			(start 3.725 -2.75)
+			(end 3.725 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "afb4d108-e2a8-4d23-bd8d-af6ab2e36442")
+		)
+		(fp_line
+			(start 3.725 2.75)
+			(end -3.725 2.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "59fe675c-c01c-4592-9c65-4fb7ae15c123")
+		)
+		(fp_line
+			(start -1.948 -2.452)
+			(end 1.948 -2.452)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "48602151-707a-43ba-966f-dd72427a9f86")
+		)
+		(fp_line
+			(start -1.948 -1.182)
+			(end -0.678 -2.452)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "557b5860-1b16-4d9e-bb0d-8ef964706053")
+		)
+		(fp_line
+			(start -1.948 2.452)
+			(end -1.948 -2.452)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "67a222cd-4a55-402d-b9a9-4958e5b63e6f")
+		)
+		(fp_line
+			(start 1.948 -2.452)
+			(end 1.948 2.452)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "ad8779bb-fd7d-45b8-8e5b-5e84e10cc492")
+		)
+		(fp_line
+			(start 1.948 2.452)
+			(end -1.948 2.452)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "43e9def0-ac1d-4e2a-afd4-d5b608493ab0")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "ed40e220-c095-4d43-8e48-d64f47c278b5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pad "1" smd rect
+			(at -2.711 -1.905 90)
+			(size 0.65 1.528)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/Inversion-Section/CSP")
+			(pinfunction "IN-_1")
+			(pintype "passive")
+			(uuid "edec84f2-f15e-4f59-ad3b-45529eec6d63")
+		)
+		(pad "2" smd rect
+			(at -2.711 -0.635 90)
+			(size 0.65 1.528)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "GND")
+			(pinfunction "GND_2")
+			(pintype "passive")
+			(uuid "68b599df-48b2-4c14-b7b8-ec5f3f52541a")
+		)
+		(pad "3" smd rect
+			(at -2.711 0.635 90)
+			(size 0.65 1.528)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "GND")
+			(pinfunction "REF2_3")
+			(pintype "passive")
+			(uuid "e5dfbe62-e97a-44c0-b79a-80cdb2302071")
+		)
+		(pad "4" smd rect
+			(at -2.711 1.905 90)
+			(size 0.65 1.528)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "unconnected-(IC1-NC-Pad4)")
+			(pinfunction "NC_4")
+			(pintype "no_connect")
+			(uuid "84611c6b-2f28-4c62-90f3-ef4add30c49c")
+		)
+		(pad "5" smd rect
+			(at 2.711 1.905 90)
+			(size 0.65 1.528)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "Net-(IC1-OUT)")
+			(pinfunction "OUT_5")
+			(pintype "passive")
+			(uuid "a5ceaf2b-f1bb-4617-97b1-dcb41bf9278c")
+		)
+		(pad "6" smd rect
+			(at 2.711 0.635 90)
+			(size 0.65 1.528)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/Control-Section/3v3")
+			(pinfunction "VS_6")
+			(pintype "passive")
+			(uuid "fe65a01b-eba1-4bbf-9a13-d544c001611e")
+		)
+		(pad "7" smd rect
+			(at 2.711 -0.635 90)
+			(size 0.65 1.528)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "GND")
+			(pinfunction "REF1_7")
+			(pintype "passive")
+			(uuid "fcb7466d-01c6-46d5-817f-7998b2b65730")
+		)
+		(pad "8" smd rect
+			(at 2.711 -1.905 90)
+			(size 0.65 1.528)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net "/11-14V input")
+			(pinfunction "IN+_8")
+			(pintype "passive")
+			(uuid "ca2ac5a4-fd64-43db-b8f6-e8063a328694")
+		)
+		(embedded_fonts no)
+		(model "INA240A2DR.stp"
 			(offset
 				(xyz 0 0 0)
 			)

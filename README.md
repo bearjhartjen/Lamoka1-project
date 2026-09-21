@@ -1,16 +1,18 @@
-<div align="center">
-  <a href="https://www.repo-grade.com/report/bearjhartjen/lamoka1-project">
-    <img src="https://www.repo-grade.com/api/badge/bearjhartjen/lamoka1-project" alt="RepoGrade">
-  </a>
-</div>
 
----
 
 <p align="center">
   <img src="Images/Lamoka1-DEV-Brain-image.webp" alt="Lamoka1 DEV Brain" width="700">
 </p>
 
  Lamoka1-DEV-Brain image, This board can now be ordered [here](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html). PIE versions v1.8 and below will function on this board, for more information on PIE go [here](SOFTWARE/README.md).
+
+---
+
+<div align="center">
+  <a href="https://www.repo-grade.com/report/bearjhartjen/lamoka1-project">
+    <img src="https://www.repo-grade.com/api/badge/bearjhartjen/lamoka1-project" alt="RepoGrade">
+  </a>
+</div>
 
 ---
 
