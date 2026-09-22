@@ -61,23 +61,17 @@
 
 ## Current sensing and energy flow chart 
 
-<div align="center">
-
-```mermaid
 graph TD
-    SolarPanels["SOLAR PANELS"]
-    ChargeController["CHARGE CONTROLLER"]
-    DCBus["DC BUS"]
-    Inverter["INVERTER"]
-    ACOutput["AC OUTPUT"]
-
-    SolarPanels --> ChargeController
-    ChargeController --> DCBus
-    DCBus --> Inverter
-    Inverter --> ACOutput
+    SolarPanels["SOLAR PANELS"] --> CS1["Current sense"]
+    CS1 --> ChargeController["CHARGE CONTROLLER"]
+    ChargeController --> CS2["Current sense"]
+    CS2 --> DCBus["DC BUS"]
+    DCBus --> CS3["Current sense"]
+    CS3 --> Inverter["INVERTER"]
+    Inverter --> CS4["Current sense"]
+    CS4 --> ACOutput["AC OUTPUT"]
 
     Battery["BATTERY"]
-
     DCBus -->|CHARGE| Battery
     Battery -->|DISCHARGE| DCBus
 
@@ -87,6 +81,7 @@ graph TD
     classDef power stroke:#f87171,fill:#fef2f2
     classDef output stroke:#4ade80,fill:#f0fdf4
     classDef storage stroke:#a78bfa,fill:#f5f3ff
+    classDef sensor stroke:#6b7280,fill:#f3f4f6
 
     class SolarPanels solar
     class ChargeController control
@@ -94,10 +89,7 @@ graph TD
     class Inverter power
     class ACOutput output
     class Battery storage
-
-    %% Invisible positioning links force the battery branch to the right of the DC bus.
-    ChargeController ~~~ Battery
-    Battery ~~~ Inverter
+    class CS1,CS2,CS3,CS4 sensor
 
 ## User interface board
 
