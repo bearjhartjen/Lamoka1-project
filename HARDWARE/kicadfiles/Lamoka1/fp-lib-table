@@ -17,4 +17,5 @@
 	(lib (name "INA240A2DR") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/INA240A2DR/KiCad") (options "") (descr ""))
 	(lib (name "TMK212BBJ106KG-T") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/TMK212BBJ106KG-T/KiCad") (options "") (descr ""))
 	(lib (name "B3F-4055") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/B3F-4055/footprints.pretty") (options "") (descr ""))
+	(lib (name "LM5122QMHX-NOPB") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_LM5122QMHX-NOPB/KiCADv6/footprints.pretty") (options "") (descr ""))
 )

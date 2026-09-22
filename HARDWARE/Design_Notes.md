@@ -58,3 +58,48 @@
  We are refraining from putting in a 5v USB output for the Lamoka1, this is because our 11-14v to 5v buck converter is designed for usage up to one amp. In future Lamoka models if a USB output (preferably USB-C) is established the buck converter would have to be beefed up, however it would be even better if we had a USB-C PD circuit in so the user could get a better experience around a wider range of usage. 
 
  The transformer applied to the Lamoka1 is five pounds and around $80, we understand this may be a strong downside to some people, however we found this was the best widely available option, plus it adds efficiency prospects. 
+
+## Current sensing and energy flow chart 
+
+<div align="center">
+
+```mermaid
+graph TD
+    SolarPanels["SOLAR PANELS"]
+    ChargeController["CHARGE CONTROLLER"]
+    DCBus["DC BUS"]
+    Inverter["INVERTER"]
+    ACOutput["AC OUTPUT"]
+
+    SolarPanels --> ChargeController
+    ChargeController --> DCBus
+    DCBus --> Inverter
+    Inverter --> ACOutput
+
+    Battery["BATTERY"]
+
+    DCBus -->|CHARGE| Battery
+    Battery -->|DISCHARGE| DCBus
+
+    classDef solar stroke:#fb923c,fill:#fff7ed
+    classDef control stroke:#818cf8,fill:#eef2ff
+    classDef bus stroke:#2dd4bf,fill:#f0fdfa
+    classDef power stroke:#f87171,fill:#fef2f2
+    classDef output stroke:#4ade80,fill:#f0fdf4
+    classDef storage stroke:#a78bfa,fill:#f5f3ff
+
+    class SolarPanels solar
+    class ChargeController control
+    class DCBus bus
+    class Inverter power
+    class ACOutput output
+    class Battery storage
+
+    %% Invisible positioning links force the battery branch to the right of the DC bus.
+    ChargeController ~~~ Battery
+    Battery ~~~ Inverter
+
+## User interface board
+
+ Unfortunately, we had to create a whole separate board for the user interface due to how large the transformer is. Both boards will be attached with mouse bites so that they can be easily fabricated and assembled together, then you can simply break them apart when you receive them. The two boards will be attached by a five-pin wired connector allowing us to route in a heatsink and other airflow-aware design choices, instead of operating around ten RGBs and a button.
+

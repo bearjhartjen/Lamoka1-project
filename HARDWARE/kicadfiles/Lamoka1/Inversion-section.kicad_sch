@@ -7558,7 +7558,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:PWP0020A_N"
+		(property "Footprint" "LM5122QMHX-NOPB:PWP20_3P0X4P2"
 			(at 55.88 114.3 0)
 			(hide yes)
 			(show_name no)

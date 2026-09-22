@@ -716,195 +716,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "74xGxx:74AHCT1G125"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -2.54 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "74AHCT1G125"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Single Buffer Gate Tri-State, Low-Voltage CMOS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Single Gate Buff Tri-State LVC CMOS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SOT* SG-*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "74AHCT1G125_0_1"
-				(polyline
-					(pts
-						(xy -7.62 6.35) (xy -7.62 -6.35) (xy 5.08 0) (xy -7.62 6.35)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "74AHCT1G125_1_1"
-				(pin input inverted
-					(at 0 10.16 270)
-					(length 7.62)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 0 0)
-					(length 7.62)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 -10.16 90)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 12.7 0 180)
-					(length 7.62)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 10.16 270)
-					(length 5.08)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "ADS7128IRTER:ADS7128IRTER"
 			(pin_names
 				(offset 0.254)
@@ -1349,404 +1160,6 @@
 						)
 					)
 					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "B3F-4055:B3F-4055"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW"
-				(at 20.32 10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "B3F-4055"
-				(at 20.32 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "SW_B3F-4050_OMR"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Datasheet" "B3F-4055"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "B3F-4055"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SW_B3F-4050_OMR"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "B3F-4055_0_1"
-				(polyline
-					(pts
-						(xy 7.62 5.08) (xy 7.62 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 11.43 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -2.54) (xy 11.43 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -7.62) (xy 33.02 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 11.43 0) (xy 11.43 3.81)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 11.43 -2.54) (xy 11.43 -6.35)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 11.43 -6.35) (xy 29.21 -6.35)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 20.32 3.81) (xy 20.32 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 20.32 3.81)
-					(radius 0.254)
-					(stroke
-						(width 0.381)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 20.32 0) (xy 19.05 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 20.32 -2.54) (xy 20.32 -6.35)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 20.32 -6.35)
-					(radius 0.254)
-					(stroke
-						(width 0.381)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 29.21 3.81) (xy 11.43 3.81)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 29.21 0) (xy 29.21 3.81)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 29.21 -2.54) (xy 33.02 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 29.21 -6.35) (xy 29.21 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 33.02 5.08) (xy 7.62 5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 33.02 0) (xy 29.21 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 33.02 -7.62) (xy 33.02 5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 7.62)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 40.64 0 180)
-					(length 7.62)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -2.54 0)
-					(length 7.62)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 40.64 -2.54 180)
-					(length 7.62)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3934,277 +3347,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "LED:WS2812B"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 5.08 5.715 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right bottom)
-				)
-			)
-			(property "Value" "WS2812B"
-				(at 1.27 -5.715 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-				(at 1.27 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-				(at 2.54 -9.525 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Description" "RGB LED with integrated controller"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "RGB LED NeoPixel addressable"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "WS2812B_0_0"
-				(text "RGB"
-					(at 2.286 -4.191 0)
-					(effects
-						(font
-							(size 0.762 0.762)
-						)
-					)
-				)
-			)
-			(symbol "WS2812B_0_1"
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 1.778 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -3.556) (xy 1.778 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -1.524) (xy 1.27 -2.54) (xy 1.27 -2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -2.54) (xy 1.27 -3.556) (xy 1.27 -3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.683 -1.016) (xy 3.683 -3.556) (xy 3.683 -4.064)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.699 -1.524) (xy 2.667 -1.524) (xy 3.683 -3.556) (xy 4.699 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.699 -3.556) (xy 2.667 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 5.08 5.08)
-					(end -5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "WS2812B_1_1"
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "DOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "DIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7433,8 +6575,8 @@
 		(uuid "133ab0dd-32a3-4890-9a1d-fd05cda066ba")
 	)
 	(rectangle
-		(start 131.064 245.872)
-		(end 181.356 279.4)
+		(start 129.794 186.182)
+		(end 180.086 219.71)
 		(stroke
 			(width 0)
 			(type default)
@@ -7482,7 +6624,7 @@
 	)
 	(rectangle
 		(start 21.336 34.036)
-		(end 65.532 65.024)
+		(end 68.58 65.024)
 		(stroke
 			(width 0)
 			(type default)
@@ -7493,8 +6635,8 @@
 		(uuid "4e609c09-4c54-4ed2-ae51-ce7072d17e77")
 	)
 	(rectangle
-		(start 74.422 244.856)
-		(end 101.6 281.686)
+		(start 73.152 185.166)
+		(end 100.33 221.996)
 		(stroke
 			(width 0)
 			(type default)
@@ -7529,8 +6671,8 @@
 		(uuid "735f5d24-1fdd-44da-bba0-6928a7eb79d2")
 	)
 	(rectangle
-		(start 46.482 244.856)
-		(end 73.66 281.686)
+		(start 45.212 185.166)
+		(end 72.39 221.996)
 		(stroke
 			(width 0)
 			(type default)
@@ -7541,8 +6683,8 @@
 		(uuid "9c590314-7184-429b-a0b6-b4ed4f03202b")
 	)
 	(rectangle
-		(start 16.256 244.856)
-		(end 45.72 281.686)
+		(start 14.986 185.166)
+		(end 44.45 221.996)
 		(stroke
 			(width 0)
 			(type default)
@@ -7565,8 +6707,8 @@
 		(uuid "a961225c-7226-4316-90f7-37d2fb0b74c0")
 	)
 	(rectangle
-		(start 102.362 245.11)
-		(end 129.54 281.94)
+		(start 101.092 185.42)
+		(end 128.27 222.25)
 		(stroke
 			(width 0)
 			(type default)
@@ -7575,6 +6717,18 @@
 			(type none)
 		)
 		(uuid "ae1af45d-f0c5-489f-9f62-519902b009d3")
+	)
+	(rectangle
+		(start 27.686 247.904)
+		(end 57.15 261.112)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "c7f0d717-e5ff-48d1-b4ef-8bfde4ddacf5")
 	)
 	(rectangle
 		(start 21.336 89.916)
@@ -7590,7 +6744,7 @@
 	)
 	(text "Left-Leg-H-Bridge\n"
 		(exclude_from_sim no)
-		(at 87.63 243.078 0)
+		(at 86.36 183.388 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7600,7 +6754,7 @@
 	)
 	(text "Source-Current-Sensing"
 		(exclude_from_sim no)
-		(at 155.194 244.348 0)
+		(at 153.924 184.658 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7610,7 +6764,7 @@
 	)
 	(text "Input-rail-voltage"
 		(exclude_from_sim no)
-		(at 30.734 243.332 0)
+		(at 29.464 183.642 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7630,7 +6784,7 @@
 	)
 	(text "Right-Leg-H-Bridge"
 		(exclude_from_sim no)
-		(at 115.824 243.078 0)
+		(at 114.554 183.388 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7640,13 +6794,23 @@
 	)
 	(text "Output-of-17v-boost\n"
 		(exclude_from_sim no)
-		(at 59.944 242.824 0)
+		(at 58.674 183.134 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "705c7de0-f0cb-40ea-9951-f05ad7051050")
+	)
+	(text "Pull-up for Fan tach"
+		(exclude_from_sim no)
+		(at 42.164 249.936 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "bfb733dd-c6bd-4ad8-a398-e4d9ac35f529")
 	)
 	(text "Temperature-Sensor"
 		(exclude_from_sim no)
@@ -7691,19 +6855,13 @@
 		(uuid "0de9abaf-694a-43a3-9f66-9a7babeda5af")
 	)
 	(junction
-		(at 284.48 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0f4c04fd-600a-46e4-9e52-ae18962d9095")
-	)
-	(junction
-		(at 365.76 241.3)
+		(at 261.62 266.7)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1f88982c-7fc0-495e-aefc-4387eaea97e3")
 	)
 	(junction
-		(at 88.9 274.32)
+		(at 87.63 214.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "222120a0-fddb-4159-ac94-795b9b3d674b")
@@ -7739,13 +6897,13 @@
 		(uuid "610ee781-0007-4b94-bb2e-7f704fc077f3")
 	)
 	(junction
-		(at 33.02 261.62)
+		(at 31.75 201.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "615cd3dd-10a3-499d-8d1a-fddfbfc833ad")
 	)
 	(junction
-		(at 88.9 262.89)
+		(at 87.63 203.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6d9d1cdb-ab9d-4451-9ed5-14924a105fb5")
@@ -7763,7 +6921,7 @@
 		(uuid "75964df9-243f-480d-b3ea-7d7b670ef542")
 	)
 	(junction
-		(at 170.18 271.78)
+		(at 168.91 212.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9bef266a-dd54-424b-9a07-52d0c379a034")
@@ -7775,19 +6933,19 @@
 		(uuid "9c41dd63-bdbb-4403-a540-b75cf238da6e")
 	)
 	(junction
-		(at 60.96 273.05)
+		(at 59.69 213.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a2319ca3-d15a-4e06-85c8-3d8540eaa498")
 	)
 	(junction
-		(at 60.96 261.62)
+		(at 59.69 201.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a231b9a7-9699-42f4-9777-075d6ed3a80f")
 	)
 	(junction
-		(at 116.84 274.32)
+		(at 115.57 214.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a947ca2a-49bd-4ca2-8690-62b98ed764e6")
@@ -7799,7 +6957,7 @@
 		(uuid "ab9a836b-cab0-4d06-97d3-2a3129641f67")
 	)
 	(junction
-		(at 33.02 273.05)
+		(at 31.75 213.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af47b09c-b508-44e8-91cc-7f93a5a08432")
@@ -7811,7 +6969,7 @@
 		(uuid "afef413e-305b-4c42-bac3-d454f53cfc0b")
 	)
 	(junction
-		(at 116.84 262.89)
+		(at 115.57 203.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b114fa57-c24e-4ddb-bcd8-6515336fcd0a")
@@ -7859,7 +7017,7 @@
 		(uuid "db67f10b-6832-4d74-bdb0-b423d57b633d")
 	)
 	(junction
-		(at 139.7 257.81)
+		(at 138.43 198.12)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dbaea5eb-2d07-4cfd-8912-909f9db4d64d")
@@ -7909,7 +7067,7 @@
 		(uuid "3719e258-0ce1-45d8-9a4f-e681d280d721")
 	)
 	(no_connect
-		(at 355.6 233.68)
+		(at 251.46 259.08)
 		(uuid "3b75d86c-ed79-4057-9080-a58f7b003415")
 	)
 	(no_connect
@@ -7941,7 +7099,7 @@
 		(uuid "7a7b6b2c-4a12-4d2c-8c81-1e07ad0ee030")
 	)
 	(no_connect
-		(at 355.6 236.22)
+		(at 251.46 261.62)
 		(uuid "87a698f4-443d-41ba-a43c-40307c3f3a91")
 	)
 	(no_connect
@@ -7951,10 +7109,6 @@
 	(no_connect
 		(at 222.25 105.41)
 		(uuid "9d7cc802-4982-4a47-bb19-87db3efe2038")
-	)
-	(no_connect
-		(at 355.6 196.85)
-		(uuid "a8d21e98-acaa-47c6-a917-a763177de01b")
 	)
 	(no_connect
 		(at 171.45 100.33)
@@ -7990,7 +7144,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 228.6) (xy 53.34 228.6)
+			(xy 33.02 259.08) (xy 38.1 259.08)
 		)
 		(stroke
 			(width 0)
@@ -8000,7 +7154,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 270.51) (xy 33.02 273.05)
+			(xy 31.75 210.82) (xy 31.75 213.36)
 		)
 		(stroke
 			(width 0)
@@ -8020,7 +7174,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 262.89) (xy 96.52 262.89)
+			(xy 87.63 203.2) (xy 95.25 203.2)
 		)
 		(stroke
 			(width 0)
@@ -8060,16 +7214,6 @@
 	)
 	(wire
 		(pts
-			(xy 334.01 49.53) (xy 336.55 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0b574b91-b633-4ec6-8a74-45c3f00ab664")
-	)
-	(wire
-		(pts
 			(xy 161.29 60.96) (xy 161.29 66.04)
 		)
 		(stroke
@@ -8080,7 +7224,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 228.6) (xy 66.04 228.6)
+			(xy 45.72 259.08) (xy 50.8 259.08)
 		)
 		(stroke
 			(width 0)
@@ -8110,7 +7254,7 @@
 	)
 	(wire
 		(pts
-			(xy 275.59 238.76) (xy 278.13 238.76)
+			(xy 171.45 264.16) (xy 173.99 264.16)
 		)
 		(stroke
 			(width 0)
@@ -8120,7 +7264,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 273.05) (xy 21.59 273.05)
+			(xy 31.75 213.36) (xy 20.32 213.36)
 		)
 		(stroke
 			(width 0)
@@ -8130,7 +7274,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 262.89) (xy 60.96 261.62)
+			(xy 59.69 203.2) (xy 59.69 201.93)
 		)
 		(stroke
 			(width 0)
@@ -8150,7 +7294,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 273.05) (xy 49.53 273.05)
+			(xy 59.69 213.36) (xy 48.26 213.36)
 		)
 		(stroke
 			(width 0)
@@ -8180,7 +7324,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 260.35) (xy 60.96 261.62)
+			(xy 59.69 200.66) (xy 59.69 201.93)
 		)
 		(stroke
 			(width 0)
@@ -8190,7 +7334,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 260.35) (xy 33.02 261.62)
+			(xy 31.75 200.66) (xy 31.75 201.93)
 		)
 		(stroke
 			(width 0)
@@ -8230,7 +7374,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 271.78) (xy 176.53 271.78)
+			(xy 168.91 212.09) (xy 175.26 212.09)
 		)
 		(stroke
 			(width 0)
@@ -8260,7 +7404,7 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 220.98) (xy 365.76 220.98)
+			(xy 251.46 246.38) (xy 261.62 246.38)
 		)
 		(stroke
 			(width 0)
@@ -8270,7 +7414,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 254) (xy 88.9 250.19)
+			(xy 87.63 194.31) (xy 87.63 190.5)
 		)
 		(stroke
 			(width 0)
@@ -8280,7 +7424,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 261.62) (xy 40.64 261.62)
+			(xy 31.75 201.93) (xy 39.37 201.93)
 		)
 		(stroke
 			(width 0)
@@ -8290,7 +7434,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 260.35) (xy 139.7 260.35)
+			(xy 139.7 200.66) (xy 138.43 200.66)
 		)
 		(stroke
 			(width 0)
@@ -8330,16 +7474,6 @@
 	)
 	(wire
 		(pts
-			(xy 309.88 196.85) (xy 317.5 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "250be395-056f-41f4-a91c-ead0b5e18382")
-	)
-	(wire
-		(pts
 			(xy 81.28 130.81) (xy 81.28 133.35)
 		)
 		(stroke
@@ -8360,7 +7494,7 @@
 	)
 	(wire
 		(pts
-			(xy 389.89 240.03) (xy 389.89 247.65)
+			(xy 285.75 265.43) (xy 285.75 273.05)
 		)
 		(stroke
 			(width 0)
@@ -8370,7 +7504,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 252.73) (xy 33.02 250.19)
+			(xy 31.75 193.04) (xy 31.75 190.5)
 		)
 		(stroke
 			(width 0)
@@ -8380,7 +7514,7 @@
 	)
 	(wire
 		(pts
-			(xy 275.59 241.3) (xy 275.59 238.76)
+			(xy 171.45 266.7) (xy 171.45 264.16)
 		)
 		(stroke
 			(width 0)
@@ -8397,16 +7531,6 @@
 			(type default)
 		)
 		(uuid "2b003ac4-c6ed-47ec-a74d-1fae3831bf74")
-	)
-	(wire
-		(pts
-			(xy 284.48 49.53) (xy 293.37 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2baca6fa-f7ed-4dd5-86cb-984563f93e36")
 	)
 	(wire
 		(pts
@@ -8430,17 +7554,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 196.85) (xy 271.78 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ded2a91-fe1e-40ac-87a6-2fcb73d2365f")
-	)
-	(wire
-		(pts
-			(xy 105.41 262.89) (xy 116.84 262.89)
+			(xy 104.14 203.2) (xy 115.57 203.2)
 		)
 		(stroke
 			(width 0)
@@ -8450,17 +7564,7 @@
 	)
 	(wire
 		(pts
-			(xy 284.48 30.48) (xy 284.48 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ed578c3-c31c-4992-a01c-0ca2aa7961cd")
-	)
-	(wire
-		(pts
-			(xy 31.75 250.19) (xy 33.02 250.19)
+			(xy 30.48 190.5) (xy 31.75 190.5)
 		)
 		(stroke
 			(width 0)
@@ -8480,43 +7584,13 @@
 	)
 	(wire
 		(pts
-			(xy 334.01 52.07) (xy 337.82 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3090a63c-e85f-4843-8081-9da1ffd4092f")
-	)
-	(wire
-		(pts
-			(xy 88.9 274.32) (xy 77.47 274.32)
+			(xy 87.63 214.63) (xy 76.2 214.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "312c6fd3-2c46-4a7c-9ad7-7623124b2e16")
-	)
-	(wire
-		(pts
-			(xy 102.87 162.56) (xy 102.87 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32da3516-0fc2-4aa6-bf9b-44bb8b3ad57b")
-	)
-	(wire
-		(pts
-			(xy 149.86 196.85) (xy 157.48 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33167347-46b7-4998-bb37-f2b818c2fd3a")
 	)
 	(wire
 		(pts
@@ -8530,23 +7604,13 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 274.32) (xy 77.47 270.51)
+			(xy 76.2 214.63) (xy 76.2 210.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "361836af-b475-4869-be4a-343c787549f7")
-	)
-	(wire
-		(pts
-			(xy 102.87 196.85) (xy 121.92 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38c5da8d-7af7-45ff-a404-7615e5468fe8")
 	)
 	(wire
 		(pts
@@ -8557,16 +7621,6 @@
 			(type default)
 		)
 		(uuid "38c6bd17-36b8-4728-b7f1-f9f5d952c08a")
-	)
-	(wire
-		(pts
-			(xy 284.48 44.45) (xy 284.48 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b9faf92-d861-4bb3-ab08-925319aac948")
 	)
 	(wire
 		(pts
@@ -8590,7 +7644,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 261.62) (xy 88.9 262.89)
+			(xy 87.63 201.93) (xy 87.63 203.2)
 		)
 		(stroke
 			(width 0)
@@ -8610,7 +7664,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 250.19) (xy 116.84 254)
+			(xy 115.57 190.5) (xy 115.57 194.31)
 		)
 		(stroke
 			(width 0)
@@ -8670,7 +7724,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 274.32) (xy 116.84 275.59)
+			(xy 115.57 214.63) (xy 115.57 215.9)
 		)
 		(stroke
 			(width 0)
@@ -8680,7 +7734,7 @@
 	)
 	(wire
 		(pts
-			(xy 377.19 227.33) (xy 373.38 227.33)
+			(xy 273.05 252.73) (xy 269.24 252.73)
 		)
 		(stroke
 			(width 0)
@@ -8690,17 +7744,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 196.85) (xy 129.54 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d9866b8-359d-407a-a668-87e74e3cac86")
-	)
-	(wire
-		(pts
-			(xy 21.59 261.62) (xy 33.02 261.62)
+			(xy 20.32 201.93) (xy 31.75 201.93)
 		)
 		(stroke
 			(width 0)
@@ -8720,7 +7764,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 273.05) (xy 33.02 274.32)
+			(xy 31.75 213.36) (xy 31.75 214.63)
 		)
 		(stroke
 			(width 0)
@@ -8830,7 +7874,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 273.05) (xy 158.75 271.78)
+			(xy 157.48 213.36) (xy 157.48 212.09)
 		)
 		(stroke
 			(width 0)
@@ -8850,7 +7894,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 220.98) (xy 365.76 241.3)
+			(xy 261.62 246.38) (xy 261.62 266.7)
 		)
 		(stroke
 			(width 0)
@@ -8890,7 +7934,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 271.78) (xy 88.9 274.32)
+			(xy 87.63 212.09) (xy 87.63 214.63)
 		)
 		(stroke
 			(width 0)
@@ -8910,7 +7954,7 @@
 	)
 	(wire
 		(pts
-			(xy 373.38 227.33) (xy 373.38 232.41)
+			(xy 269.24 252.73) (xy 269.24 257.81)
 		)
 		(stroke
 			(width 0)
@@ -8927,16 +7971,6 @@
 			(type default)
 		)
 		(uuid "643a34ad-6e21-4852-93ad-5df6324d7198")
-	)
-	(wire
-		(pts
-			(xy 281.94 49.53) (xy 284.48 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "667cd8cb-9e60-4bea-af76-974c70dd3150")
 	)
 	(wire
 		(pts
@@ -8970,23 +8004,13 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 261.62) (xy 60.96 261.62)
+			(xy 48.26 201.93) (xy 59.69 201.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "68b817e4-5da6-46e5-8269-3c90fbbf2d88")
-	)
-	(wire
-		(pts
-			(xy 218.44 196.85) (xy 226.06 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6930b227-e278-4a73-a515-c5d33bda3137")
 	)
 	(wire
 		(pts
@@ -9007,16 +8031,6 @@
 			(type default)
 		)
 		(uuid "6b7dd73a-5dfe-47cb-89c8-1b153822723e")
-	)
-	(wire
-		(pts
-			(xy 134.62 140.97) (xy 134.62 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b814400-3b93-4830-bc5b-28f88d47ed9d")
 	)
 	(wire
 		(pts
@@ -9050,6 +8064,16 @@
 	)
 	(wire
 		(pts
+			(xy 134.62 137.16) (xy 134.62 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ce8ba71-a4b2-45bf-a1de-0afd62edddb0")
+	)
+	(wire
+		(pts
 			(xy 123.19 147.32) (xy 123.19 146.05)
 		)
 		(stroke
@@ -9060,7 +8084,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 264.16) (xy 116.84 262.89)
+			(xy 115.57 204.47) (xy 115.57 203.2)
 		)
 		(stroke
 			(width 0)
@@ -9070,7 +8094,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 262.89) (xy 33.02 261.62)
+			(xy 31.75 203.2) (xy 31.75 201.93)
 		)
 		(stroke
 			(width 0)
@@ -9090,7 +8114,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 264.16) (xy 88.9 262.89)
+			(xy 87.63 204.47) (xy 87.63 203.2)
 		)
 		(stroke
 			(width 0)
@@ -9120,7 +8144,7 @@
 	)
 	(wire
 		(pts
-			(xy 389.89 227.33) (xy 389.89 232.41)
+			(xy 285.75 252.73) (xy 285.75 257.81)
 		)
 		(stroke
 			(width 0)
@@ -9140,7 +8164,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 274.32) (xy 105.41 274.32)
+			(xy 115.57 214.63) (xy 104.14 214.63)
 		)
 		(stroke
 			(width 0)
@@ -9150,7 +8174,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 250.19) (xy 116.84 250.19)
+			(xy 113.03 190.5) (xy 115.57 190.5)
 		)
 		(stroke
 			(width 0)
@@ -9160,17 +8184,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 228.6) (xy 34.29 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7a108c06-9a0e-4061-9838-67570a9a0833")
-	)
-	(wire
-		(pts
-			(xy 77.47 262.89) (xy 88.9 262.89)
+			(xy 76.2 203.2) (xy 87.63 203.2)
 		)
 		(stroke
 			(width 0)
@@ -9180,7 +8194,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 264.16) (xy 170.18 262.89)
+			(xy 168.91 204.47) (xy 168.91 203.2)
 		)
 		(stroke
 			(width 0)
@@ -9190,7 +8204,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 250.19) (xy 86.36 250.19)
+			(xy 87.63 190.5) (xy 85.09 190.5)
 		)
 		(stroke
 			(width 0)
@@ -9220,23 +8234,13 @@
 	)
 	(wire
 		(pts
-			(xy 373.38 240.03) (xy 373.38 247.65)
+			(xy 269.24 265.43) (xy 269.24 273.05)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "82d94fa3-d4dc-473d-9ffe-c9b9bccf4311")
-	)
-	(wire
-		(pts
-			(xy 332.74 196.85) (xy 340.36 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82dc3f55-9a93-48cb-9897-dc2fc5ae843e")
 	)
 	(wire
 		(pts
@@ -9257,16 +8261,6 @@
 			(type default)
 		)
 		(uuid "8436d9d8-36dd-482a-b26c-7f93022a84d0")
-	)
-	(wire
-		(pts
-			(xy 113.03 184.15) (xy 116.84 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "863f30f0-7515-475e-a0ad-6c736c30eff7")
 	)
 	(wire
 		(pts
@@ -9300,7 +8294,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 274.32) (xy 88.9 275.59)
+			(xy 87.63 214.63) (xy 87.63 215.9)
 		)
 		(stroke
 			(width 0)
@@ -9340,33 +8334,13 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 257.81) (xy 140.97 257.81)
+			(xy 134.62 198.12) (xy 139.7 198.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9001900e-244c-43d3-971b-a877490f66ca")
-	)
-	(wire
-		(pts
-			(xy 172.72 196.85) (xy 180.34 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "923f956e-34cc-4439-ac71-82a4cb541dfe")
-	)
-	(wire
-		(pts
-			(xy 336.55 45.72) (xy 336.55 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "928726f6-6283-4906-a81f-532a127985f6")
 	)
 	(wire
 		(pts
@@ -9377,16 +8351,6 @@
 			(type default)
 		)
 		(uuid "929cb8f7-a7ed-4daa-91c3-55754b6fd481")
-	)
-	(wire
-		(pts
-			(xy 17.78 228.6) (xy 21.59 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9431c201-2d60-4720-b7b6-209182a5b530")
 	)
 	(wire
 		(pts
@@ -9440,7 +8404,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 262.89) (xy 124.46 262.89)
+			(xy 115.57 203.2) (xy 123.19 203.2)
 		)
 		(stroke
 			(width 0)
@@ -9450,7 +8414,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 241.3) (xy 365.76 245.11)
+			(xy 261.62 266.7) (xy 261.62 270.51)
 		)
 		(stroke
 			(width 0)
@@ -9500,7 +8464,7 @@
 	)
 	(wire
 		(pts
-			(xy 285.75 238.76) (xy 289.56 238.76)
+			(xy 181.61 264.16) (xy 185.42 264.16)
 		)
 		(stroke
 			(width 0)
@@ -9520,7 +8484,7 @@
 	)
 	(wire
 		(pts
-			(xy 393.7 227.33) (xy 389.89 227.33)
+			(xy 289.56 252.73) (xy 285.75 252.73)
 		)
 		(stroke
 			(width 0)
@@ -9550,7 +8514,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 271.78) (xy 162.56 271.78)
+			(xy 157.48 212.09) (xy 161.29 212.09)
 		)
 		(stroke
 			(width 0)
@@ -9560,7 +8524,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 270.51) (xy 60.96 273.05)
+			(xy 59.69 210.82) (xy 59.69 213.36)
 		)
 		(stroke
 			(width 0)
@@ -9580,7 +8544,7 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 273.05) (xy 21.59 269.24)
+			(xy 20.32 213.36) (xy 20.32 209.55)
 		)
 		(stroke
 			(width 0)
@@ -9600,23 +8564,13 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 261.62) (xy 116.84 262.89)
+			(xy 115.57 201.93) (xy 115.57 203.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b5ea8783-2f2b-4431-a191-ac5b8c49c386")
-	)
-	(wire
-		(pts
-			(xy 287.02 196.85) (xy 294.64 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b656d1f6-60ea-4455-a1c9-27218dfc29c8")
 	)
 	(wire
 		(pts
@@ -9720,7 +8674,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 274.32) (xy 105.41 270.51)
+			(xy 104.14 214.63) (xy 104.14 210.82)
 		)
 		(stroke
 			(width 0)
@@ -9740,7 +8694,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 257.81) (xy 176.53 257.81)
+			(xy 167.64 198.12) (xy 175.26 198.12)
 		)
 		(stroke
 			(width 0)
@@ -9760,7 +8714,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 273.05) (xy 49.53 269.24)
+			(xy 48.26 213.36) (xy 48.26 209.55)
 		)
 		(stroke
 			(width 0)
@@ -9810,16 +8764,6 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 196.85) (xy 203.2 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d90bcd94-ab0a-457b-a9b8-232103ca15d2")
-	)
-	(wire
-		(pts
 			(xy 27.94 118.11) (xy 33.02 118.11)
 		)
 		(stroke
@@ -9840,7 +8784,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 273.05) (xy 60.96 274.32)
+			(xy 59.69 213.36) (xy 59.69 214.63)
 		)
 		(stroke
 			(width 0)
@@ -9860,7 +8804,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 262.89) (xy 168.91 262.89)
+			(xy 168.91 203.2) (xy 167.64 203.2)
 		)
 		(stroke
 			(width 0)
@@ -9890,7 +8834,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 271.78) (xy 116.84 274.32)
+			(xy 115.57 212.09) (xy 115.57 214.63)
 		)
 		(stroke
 			(width 0)
@@ -9920,7 +8864,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 252.73) (xy 60.96 250.19)
+			(xy 59.69 193.04) (xy 59.69 190.5)
 		)
 		(stroke
 			(width 0)
@@ -9937,16 +8881,6 @@
 			(type default)
 		)
 		(uuid "e592c558-00cf-49dc-8704-2445a287368c")
-	)
-	(wire
-		(pts
-			(xy 91.44 179.07) (xy 92.71 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5c0820f-f32c-4948-b2d5-93376bbc135e")
 	)
 	(wire
 		(pts
@@ -10000,16 +8934,6 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 196.85) (xy 248.92 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea96826b-b102-4c2c-9c5a-f61a5a88d0b2")
-	)
-	(wire
-		(pts
 			(xy 123.19 143.51) (xy 121.92 143.51)
 		)
 		(stroke
@@ -10020,7 +8944,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 260.35) (xy 139.7 257.81)
+			(xy 138.43 200.66) (xy 138.43 198.12)
 		)
 		(stroke
 			(width 0)
@@ -10037,16 +8961,6 @@
 			(type default)
 		)
 		(uuid "f0f42239-83c1-4b11-8648-298d5d82bcef")
-	)
-	(wire
-		(pts
-			(xy 116.84 186.69) (xy 116.84 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f165b708-e866-4491-b098-3631276313ec")
 	)
 	(wire
 		(pts
@@ -10090,23 +9004,13 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 250.19) (xy 60.96 250.19)
+			(xy 57.15 190.5) (xy 59.69 190.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f524bbd1-494e-4078-9627-6072dee134d2")
-	)
-	(wire
-		(pts
-			(xy 91.44 182.88) (xy 91.44 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f56c91e7-f7a3-4cc3-b160-f701ea540b3f")
 	)
 	(wire
 		(pts
@@ -10120,7 +9024,7 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 241.3) (xy 365.76 241.3)
+			(xy 251.46 266.7) (xy 261.62 266.7)
 		)
 		(stroke
 			(width 0)
@@ -10140,33 +9044,13 @@
 	)
 	(wire
 		(pts
-			(xy 289.56 52.07) (xy 293.37 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff8312d0-896e-4f7c-a9d6-1d7bf3ccf14a")
-	)
-	(wire
-		(pts
-			(xy 60.96 261.62) (xy 68.58 261.62)
+			(xy 59.69 201.93) (xy 67.31 201.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ff867fa6-0e6f-47ea-9292-6cfcf1324e06")
-	)
-	(label "5V"
-		(at 302.26 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "05a4e2c0-a68f-4b75-b3c8-fc1ae8daf7aa")
 	)
 	(label "USB-5v"
 		(at 124.46 40.64 0)
@@ -10178,18 +9062,8 @@
 		)
 		(uuid "05cfa55e-2c0e-45d7-beef-f5cacc8771ab")
 	)
-	(label "5V"
-		(at 210.82 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0bb852fa-c180-4261-b0c2-d109d8c8539e")
-	)
 	(label "AIN0"
-		(at 40.64 261.62 0)
+		(at 39.37 201.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10199,7 +9073,7 @@
 		(uuid "0d8c95c1-222f-4adb-840e-b272c2251872")
 	)
 	(label "AIN1"
-		(at 68.58 261.62 0)
+		(at 67.31 201.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10249,7 +9123,7 @@
 		(uuid "1a0e6112-12ae-4b57-bebe-62a991e4adbb")
 	)
 	(label "GPIO9"
-		(at 355.6 231.14 0)
+		(at 251.46 256.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10269,7 +9143,7 @@
 		(uuid "298730ed-9f50-4831-9962-0feb2bd862ee")
 	)
 	(label "GPIO9"
-		(at 389.89 247.65 0)
+		(at 285.75 273.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10277,16 +9151,6 @@
 			(justify left bottom)
 		)
 		(uuid "2bb60438-b99e-400a-8015-1cea6c210394")
-	)
-	(label "5V"
-		(at 62.23 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "30ab5f0e-ddb1-4e11-88a4-0c536ec7100e")
 	)
 	(label "TEMP_CTRL"
 		(at 222.25 130.81 0)
@@ -10318,48 +9182,8 @@
 		)
 		(uuid "3527182b-e26a-492a-81bc-2ac418e8647e")
 	)
-	(label "5V"
-		(at 233.68 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "398cf14f-2409-4a15-b6e5-62b025b27e80")
-	)
-	(label "5V"
-		(at 64.77 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3dcead86-58d1-4fda-8b08-cfc48831eaa1")
-	)
-	(label "BTN"
-		(at 229.87 62.23 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4aa3236e-bec1-40c2-b9b3-0ff05dfe0b20")
-	)
-	(label "5V"
-		(at 41.91 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4fa3101c-08c4-453e-bade-cf122e838608")
-	)
 	(label "AIN4"
-		(at 289.56 226.06 180)
+		(at 185.42 251.46 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10378,18 +9202,8 @@
 		)
 		(uuid "5964fe7e-167c-4d41-b90b-7d7b7b093302")
 	)
-	(label "5V"
-		(at 110.49 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "59a5a6c3-ca28-4ca2-9356-5365da08d565")
-	)
 	(label "AIN3"
-		(at 289.56 223.52 180)
+		(at 185.42 248.92 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10397,16 +9211,6 @@
 			(justify right bottom)
 		)
 		(uuid "5a3b0291-b58f-46f3-bc29-6a26ee91351d")
-	)
-	(label "5V"
-		(at 347.98 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5acfdc15-d88b-48f6-898e-778c5651728e")
 	)
 	(label "BTN"
 		(at 152.4 95.25 180)
@@ -10417,16 +9221,6 @@
 			(justify right bottom)
 		)
 		(uuid "5e9cc1a7-9196-414b-8eff-1d2ee98c7b04")
-	)
-	(label "5V"
-		(at 325.12 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5eaa6390-bbcd-459d-9a1d-9eef74219727")
 	)
 	(label "XOUT"
 		(at 347.98 109.22 180)
@@ -10458,18 +9252,8 @@
 		)
 		(uuid "6817296f-12cb-47cc-83d5-7d4bf2cf2416")
 	)
-	(label "5V"
-		(at 279.4 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6a883c67-3123-4690-93b6-9beacb75cf3f")
-	)
 	(label "GPIO5"
-		(at 66.04 228.6 0)
+		(at 50.8 259.08 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10477,16 +9261,6 @@
 			(justify left bottom)
 		)
 		(uuid "6d26f1e8-d483-405e-942b-c37ac574cdb6")
-	)
-	(label "5V"
-		(at 124.46 147.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6f5f6f36-fa67-449f-9630-196b422ac835")
 	)
 	(label "TEMP_CTRL"
 		(at 60.96 80.01 0)
@@ -10507,36 +9281,6 @@
 			(justify left bottom)
 		)
 		(uuid "754c0017-7b92-4e4e-a235-61936de6a815")
-	)
-	(label "5V"
-		(at 256.54 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "760efeed-6e36-45d1-890c-4b1ac5b1fb02")
-	)
-	(label "5V"
-		(at 113.03 179.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7627469d-b8bf-4b53-8912-502202f0adac")
-	)
-	(label "5V"
-		(at 187.96 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "76484604-83ee-4172-93b7-ae26b47357a9")
 	)
 	(label "PG"
 		(at 316.23 142.24 0)
@@ -10608,28 +9352,8 @@
 		)
 		(uuid "82c9ccbe-22d0-4e59-8f59-dcc13cdd326c")
 	)
-	(label "BTN"
-		(at 336.55 45.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "859f7c5c-140f-4893-81b6-2755883d4c66")
-	)
-	(label "5V"
-		(at 30.48 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "88f894e8-929f-45df-b047-714c19768cc0")
-	)
 	(label "AIN2"
-		(at 289.56 220.98 180)
+		(at 185.42 246.38 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10648,28 +9372,8 @@
 		)
 		(uuid "8d1df23e-b6e0-4380-9f60-200962d02349")
 	)
-	(label "5V"
-		(at 76.2 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8e613439-e3e8-470b-b8e4-71dd42c15435")
-	)
-	(label "5V"
-		(at 87.63 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "901d30a3-fc68-40b8-98a1-b5c7959e2e8b")
-	)
 	(label "GPIO8"
-		(at 355.6 228.6 0)
+		(at 251.46 254 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10677,16 +9381,6 @@
 			(justify left bottom)
 		)
 		(uuid "919bc40f-7df5-4e6b-b3a2-c4d41dcf9338")
-	)
-	(label "GPIO11"
-		(at 222.25 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "97587345-9ccb-4346-a459-6a04aac86652")
 	)
 	(label "XIN"
 		(at 328.93 76.2 180)
@@ -10697,16 +9391,6 @@
 			(justify right bottom)
 		)
 		(uuid "a2f11d9f-e444-4c4d-91ee-5b8439cd1447")
-	)
-	(label "5V"
-		(at 17.78 228.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a3082da1-26fa-404e-8e7b-5f5e5561b709")
 	)
 	(label "GPIO6"
 		(at 229.87 77.47 0)
@@ -10729,7 +9413,7 @@
 		(uuid "acfd5e85-4c45-4dcc-b454-1eaa545f2d7c")
 	)
 	(label "GPIO8"
-		(at 373.38 247.65 0)
+		(at 269.24 273.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10779,7 +9463,7 @@
 		(uuid "b6aff3cd-f70c-4f44-9e89-a9e26f5b5642")
 	)
 	(label "AIN2"
-		(at 96.52 262.89 0)
+		(at 95.25 203.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10799,7 +9483,7 @@
 		(uuid "b7f3237d-8dc9-4e13-9027-3d1c73661ec2")
 	)
 	(label "AIN1"
-		(at 355.6 223.52 0)
+		(at 251.46 248.92 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10827,16 +9511,6 @@
 			(justify right bottom)
 		)
 		(uuid "bdffbc42-5bcc-40ab-86ad-1a3e596a6864")
-	)
-	(label "5V"
-		(at 81.28 119.38 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c12da9e8-e31b-446b-9c05-d68bc3be709d")
 	)
 	(label "USB_DP"
 		(at 163.83 87.63 180)
@@ -10868,58 +9542,8 @@
 		)
 		(uuid "d1fbd5bd-6f2d-4afc-be8f-6b0e5e000c87")
 	)
-	(label "5V"
-		(at 165.1 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d801a4c6-5bee-449e-8a29-adb1bec53fce")
-	)
-	(label "5V"
-		(at 99.06 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d934e50a-0dd7-41c4-8b1c-3e5c8fc50bf1")
-	)
-	(label "5V"
-		(at 121.92 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "da2bd399-2899-432b-9228-f7f1e44a539b")
-	)
-	(label "BTN"
-		(at 281.94 49.53 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e2128bc1-06ea-41b9-8010-80f6d82715ff")
-	)
-	(label "5V"
-		(at 19.05 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e44a00df-3bed-45e2-ae2a-ecc4d8ca62cb")
-	)
 	(label "AIN0"
-		(at 355.6 226.06 0)
+		(at 251.46 251.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10927,36 +9551,6 @@
 			(justify left bottom)
 		)
 		(uuid "e847b12d-00cd-4c78-a0e4-4dd01cca60f8")
-	)
-	(label "5V"
-		(at 142.24 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ef4ddcc6-d848-4854-9bcc-a59c4ae629cc")
-	)
-	(label "GPIO11"
-		(at 102.87 162.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ef5a7894-e2f9-4228-9f7a-be54ee66528a")
-	)
-	(label "5V"
-		(at 53.34 204.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f12c420e-c29f-444f-8b53-94a9a2a0ad7c")
 	)
 	(label "XOUT"
 		(at 166.37 125.73 180)
@@ -10969,7 +9563,7 @@
 		(uuid "f1f8c429-677c-431f-9a72-3896042a464d")
 	)
 	(label "AIN3"
-		(at 124.46 262.89 0)
+		(at 123.19 203.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10979,7 +9573,7 @@
 		(uuid "f2ce6fcc-001a-4e71-8f69-c1f122175083")
 	)
 	(label "AIN4"
-		(at 176.53 271.78 0)
+		(at 175.26 212.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10988,9 +9582,20 @@
 		)
 		(uuid "ff9c804c-67cc-4eaa-85ef-fdbfc6186e81")
 	)
+	(hierarchical_label "GNDE"
+		(shape input)
+		(at 134.62 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "03b9f52b-b8a0-42d2-a2a2-7b7ee7ebff5a")
+	)
 	(hierarchical_label "11-14v input"
 		(shape input)
-		(at 31.75 250.19 180)
+		(at 30.48 190.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11012,7 +9617,7 @@
 	)
 	(hierarchical_label "SW_B"
 		(shape input)
-		(at 114.3 250.19 180)
+		(at 113.03 190.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11023,7 +9628,7 @@
 	)
 	(hierarchical_label "SW_A"
 		(shape input)
-		(at 86.36 250.19 180)
+		(at 85.09 190.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11056,7 +9661,7 @@
 	)
 	(hierarchical_label "3v3"
 		(shape input)
-		(at 48.26 228.6 180)
+		(at 33.02 259.08 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11065,9 +9670,20 @@
 		)
 		(uuid "271cdbb5-e0c9-40b2-a267-36ad9d2bffde")
 	)
+	(hierarchical_label "5V"
+		(shape input)
+		(at 62.23 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "32d9b24e-2397-4c50-8af9-a58bafdafedd")
+	)
 	(hierarchical_label "3v3"
 		(shape input)
-		(at 289.56 236.22 180)
+		(at 185.42 261.62 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11100,7 +9716,7 @@
 	)
 	(hierarchical_label "3v3"
 		(shape input)
-		(at 355.6 238.76 0)
+		(at 251.46 264.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11120,6 +9736,17 @@
 		)
 		(uuid "4ef7ecba-c986-4b9f-81d5-d5479722dc1c")
 	)
+	(hierarchical_label "BTN"
+		(shape input)
+		(at 229.87 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5a32b456-b9b3-4ad4-8f77-ba9fcfca803f")
+	)
 	(hierarchical_label "3v3"
 		(shape input)
 		(at 77.47 146.05 180)
@@ -11130,6 +9757,17 @@
 			(justify right)
 		)
 		(uuid "5f53b9a0-cc0f-4663-8f2d-e49b3c7d2434")
+	)
+	(hierarchical_label "3v3E"
+		(shape input)
+		(at 134.62 137.16 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6a46b2a7-f940-4fe4-89bc-b767198ba301")
 	)
 	(hierarchical_label "3v3"
 		(shape input)
@@ -11155,7 +9793,7 @@
 	)
 	(hierarchical_label "RCS1-L"
 		(shape input)
-		(at 140.97 255.27 180)
+		(at 139.7 195.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11188,7 +9826,7 @@
 	)
 	(hierarchical_label "3v3"
 		(shape input)
-		(at 377.19 227.33 0)
+		(at 273.05 252.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11196,6 +9834,17 @@
 			(justify left)
 		)
 		(uuid "8a66478e-a5c6-4180-894f-5ece06971735")
+	)
+	(hierarchical_label "GPIO11"
+		(shape input)
+		(at 222.25 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "907e74cd-6ecb-4806-80c7-d6ec205f8119")
 	)
 	(hierarchical_label "3v3"
 		(shape input)
@@ -11276,7 +9925,7 @@
 	)
 	(hierarchical_label "3v3"
 		(shape input)
-		(at 393.7 227.33 0)
+		(at 289.56 252.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11284,6 +9933,28 @@
 			(justify left)
 		)
 		(uuid "baad1609-53d5-46c1-9757-a3d807122da7")
+	)
+	(hierarchical_label "5V"
+		(shape input)
+		(at 81.28 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "baca2785-730e-4fd8-9e26-81333d60c0b7")
+	)
+	(hierarchical_label "5V"
+		(shape input)
+		(at 124.46 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bd5a1018-9d79-4a26-958c-6d5617e27337")
 	)
 	(hierarchical_label "TEMP_INV"
 		(shape input)
@@ -11298,7 +9969,7 @@
 	)
 	(hierarchical_label "17v"
 		(shape input)
-		(at 58.42 250.19 180)
+		(at 57.15 190.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11331,7 +10002,7 @@
 	)
 	(hierarchical_label "RCS1-S"
 		(shape input)
-		(at 168.91 255.27 0)
+		(at 167.64 195.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11364,7 +10035,7 @@
 	)
 	(hierarchical_label "3v3"
 		(shape input)
-		(at 168.91 260.35 0)
+		(at 167.64 200.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11372,17 +10043,6 @@
 			(justify left)
 		)
 		(uuid "f4af3ba3-6d7b-4bc6-b736-1453a5b47864")
-	)
-	(hierarchical_label "3v3"
-		(shape input)
-		(at 284.48 30.48 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f503a46a-135a-4fe5-9c2e-7a9f8e3c49c0")
 	)
 	(hierarchical_label "3v3"
 		(shape input)
@@ -11394,138 +10054,6 @@
 			(justify right)
 		)
 		(uuid "f9ab8d2d-cdbe-43f2-8cce-b6e15382ed81")
-	)
-	(symbol
-		(lib_id "LED:WS2812B")
-		(at 165.1 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "009bda65-6a28-4c49-89a1-2b755d56dd41")
-		(property "Reference" "D2"
-			(at 176.53 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 176.53 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 166.37 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 167.64 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 165.1 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 165.1 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 165.1 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 165.1 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 165.1 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c66d8190-732f-4f88-9497-b1252dccade4")
-		)
-		(pin "3"
-			(uuid "a1e8da8f-844c-415d-aa35-771fe4b223ae")
-		)
-		(pin "2"
-			(uuid "dd85db92-2fe9-42ae-a7a7-55c34f40f090")
-		)
-		(pin "4"
-			(uuid "622852ee-c6ca-433b-8137-1d1aac90d8de")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11731,218 +10259,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 30.48 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "00dfc271-d2b2-43ee-b769-f8e999d15202")
-		(property "Reference" "#PWR029"
-			(at 30.48 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 30.48 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 30.48 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 30.48 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4bdb0184-b843-4496-86e7-e5dbc9979666")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR029")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LED:WS2812B")
-		(at 347.98 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "00f52f0f-421e-4224-bb6f-a9761e8f43c8")
-		(property "Reference" "D10"
-			(at 359.41 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 359.41 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 349.25 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 350.52 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 347.98 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 347.98 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 347.98 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 347.98 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 347.98 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "472e42f3-68d3-4aab-96df-6dac5381e213")
-		)
-		(pin "3"
-			(uuid "1a6150ca-de07-4798-8f2f-67a24d0511fd")
-		)
-		(pin "2"
-			(uuid "adbe93ae-f501-4975-b427-21c3ca13dfbd")
-		)
-		(pin "4"
-			(uuid "90c3109f-bded-4abe-896b-0be0af975110")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 389.89 236.22 0)
+		(at 285.75 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11953,7 +10271,7 @@
 		(fields_autoplaced yes)
 		(uuid "011ea3da-bb5e-4da9-8258-e8263ab74987")
 		(property "Reference" "R24"
-			(at 392.43 234.9499 0)
+			(at 288.29 260.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11964,7 +10282,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 392.43 237.4899 0)
+			(at 288.29 262.8899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11975,7 +10293,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 388.112 236.22 90)
+			(at 283.972 261.62 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11986,7 +10304,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 389.89 236.22 0)
+			(at 285.75 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11997,7 +10315,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 389.89 236.22 0)
+			(at 285.75 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12008,7 +10326,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 389.89 236.22 0)
+			(at 285.75 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12019,7 +10337,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 389.89 236.22 0)
+			(at 285.75 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12030,7 +10348,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 389.89 236.22 0)
+			(at 285.75 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12050,211 +10368,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 110.49 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "01695492-27bc-4291-bf82-c23b76f643d5")
-		(property "Reference" "C9"
-			(at 114.3 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 114.3 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 111.4552 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.49 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 110.49 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 114.3 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 110.49 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 110.49 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 110.49 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0cddc235-5b39-469c-8173-7c86d8d4ad72")
-		)
-		(pin "2"
-			(uuid "1e59498b-1097-4ffd-8883-05eb58911221")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 76.2 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "027eb80d-5a8f-40cd-83f9-cc248f588d07")
-		(property "Reference" "#PWR034"
-			(at 76.2 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 76.2 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 76.2 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b8984052-8574-4744-82fe-151247f0b67b")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -12291,7 +10404,7 @@
 				)
 			)
 		)
-		(property "Footprint" "components:RC0603N_YAG"
+		(property "Footprint" "RC0603FR-07180KL:RC0603N_YAG"
 			(at 119.38 47.498 90)
 			(hide yes)
 			(show_name no)
@@ -12385,7 +10498,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 158.75 273.05 0)
+		(at 157.48 213.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12396,7 +10509,7 @@
 		(fields_autoplaced yes)
 		(uuid "05384f2a-768b-4bc1-ae93-ca1e84029ece")
 		(property "Reference" "#PWR070"
-			(at 158.75 279.4 0)
+			(at 157.48 219.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12407,7 +10520,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.75 278.13 0)
+			(at 157.48 218.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12417,7 +10530,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 273.05 0)
+			(at 157.48 213.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12428,7 +10541,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 273.05 0)
+			(at 157.48 213.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12439,7 +10552,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 158.75 273.05 0)
+			(at 157.48 213.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12456,84 +10569,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR070")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 87.63 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "06a6f807-4c28-494e-ada2-8b84a4821dd0")
-		(property "Reference" "#PWR035"
-			(at 87.63 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 87.63 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 87.63 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 87.63 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a0d68e73-804d-4a9b-87fa-c37aed5ecd38")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -12664,7 +10699,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 88.9 257.81 0)
+		(at 87.63 198.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12675,7 +10710,7 @@
 		(fields_autoplaced yes)
 		(uuid "0da6b81f-1597-40dc-99c7-1d892ad57eae")
 		(property "Reference" "R29"
-			(at 91.44 256.5399 0)
+			(at 90.17 196.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12686,7 +10721,7 @@
 			)
 		)
 		(property "Value" "45.3k"
-			(at 91.44 259.0799 0)
+			(at 90.17 199.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12697,7 +10732,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.122 257.81 90)
+			(at 85.852 198.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12708,7 +10743,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 257.81 0)
+			(at 87.63 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12719,7 +10754,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 88.9 257.81 0)
+			(at 87.63 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12730,7 +10765,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 88.9 257.81 0)
+			(at 87.63 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12741,7 +10776,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 88.9 257.81 0)
+			(at 87.63 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12752,7 +10787,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 88.9 257.81 0)
+			(at 87.63 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12779,7 +10814,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 57.15 228.6 90)
+		(at 41.91 259.08 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12789,7 +10824,7 @@
 		(dnp no)
 		(uuid "12892a54-4a40-4408-bf06-95515fae52a2")
 		(property "Reference" "R22"
-			(at 59.182 223.266 90)
+			(at 43.942 253.746 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12800,7 +10835,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 58.928 225.552 90)
+			(at 43.688 256.032 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12810,8 +10845,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TMP235A2DBZR:DBZ0003A-IPC_A"
-			(at 57.15 230.378 90)
+		(property "Footprint" ""
+			(at 41.91 260.858 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12822,7 +10857,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 57.15 228.6 0)
+			(at 41.91 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12833,7 +10868,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 57.15 228.6 0)
+			(at 41.91 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12844,7 +10879,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 57.15 228.6 90)
+			(at 41.91 259.08 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12855,7 +10890,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 57.15 228.6 90)
+			(at 41.91 259.08 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12866,7 +10901,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 57.15 228.6 90)
+			(at 41.91 259.08 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13018,138 +11053,6 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
-		(at 302.26 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1cadf1af-006a-4c62-a545-cfffdb9c6a4c")
-		(property "Reference" "D8"
-			(at 313.69 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 313.69 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 303.53 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 304.8 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 302.26 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 302.26 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 302.26 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 302.26 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 302.26 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "02837636-2108-44d6-8691-6989f5245790")
-		)
-		(pin "3"
-			(uuid "30b7228d-2283-4137-852c-9431af777589")
-		)
-		(pin "2"
-			(uuid "332eca56-fe23-4f29-967f-6f6edbe32a03")
-		)
-		(pin "4"
-			(uuid "dbe9f37b-4ecc-465b-8f03-401ebfa695fc")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 358.14 167.64 0)
 		(unit 1)
@@ -13228,140 +11131,8 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
-		(at 187.96 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1eaa6b82-3cfc-438f-a84a-60c5096b4af5")
-		(property "Reference" "D3"
-			(at 199.39 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 199.39 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 189.23 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 190.5 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 187.96 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 187.96 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 187.96 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 187.96 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 187.96 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4c90164c-d5ce-48b2-87af-44d376c0613f")
-		)
-		(pin "3"
-			(uuid "7cebaaa9-4a57-455a-b7c1-32539b43d11f")
-		)
-		(pin "2"
-			(uuid "6d3f959c-98f1-4243-a184-8a7bc6688642")
-		)
-		(pin "4"
-			(uuid "531cd789-e395-48a9-9190-f202eb90f34d")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 135.89 257.81 0)
+		(at 134.62 198.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13372,7 +11143,7 @@
 		(fields_autoplaced yes)
 		(uuid "1f837366-7f11-4df3-b566-7c5ea474d261")
 		(property "Reference" "#PWR068"
-			(at 135.89 264.16 0)
+			(at 134.62 204.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13383,7 +11154,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 135.89 262.89 0)
+			(at 134.62 203.2 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13393,7 +11164,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 257.81 0)
+			(at 134.62 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13404,7 +11175,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 257.81 0)
+			(at 134.62 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13415,7 +11186,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 135.89 257.81 0)
+			(at 134.62 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13439,7 +11210,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 166.37 271.78 270)
+		(at 165.1 212.09 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13449,7 +11220,7 @@
 		(dnp no)
 		(uuid "20d5a98f-2f22-48d7-89e6-5c57aca24647")
 		(property "Reference" "C31"
-			(at 164.846 268.478 90)
+			(at 163.576 208.788 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13459,7 +11230,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 164.846 275.082 90)
+			(at 163.576 215.392 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13468,8 +11239,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 162.56 272.7452 0)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 161.29 213.0552 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13480,7 +11251,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 271.78 0)
+			(at 165.1 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13491,7 +11262,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 166.37 271.78 0)
+			(at 165.1 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13502,7 +11273,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 166.37 271.78 90)
+			(at 165.1 212.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13513,7 +11284,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 166.37 271.78 90)
+			(at 165.1 212.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13524,7 +11295,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 166.37 271.78 90)
+			(at 165.1 212.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14000,84 +11771,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 53.34 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2b24dc4d-346d-4ddc-ba3d-3d0a1f136695")
-		(property "Reference" "#PWR032"
-			(at 53.34 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 53.34 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 53.34 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f5dade92-25fd-44d4-b50e-51fabdb10101")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "TPS62160DSGR:TPS62160DSGR")
 		(at 265.43 139.7 0)
 		(unit 1)
@@ -14335,7 +12028,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "components:CAP_CL_05_SAM"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 135.5852 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -14429,7 +12122,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 77.47 266.7 0)
+		(at 76.2 207.01 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14440,7 +12133,7 @@
 		(fields_autoplaced yes)
 		(uuid "3b4fbe90-5168-4090-9ae8-c139b3d5772c")
 		(property "Reference" "C29"
-			(at 81.28 265.4299 0)
+			(at 80.01 205.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14451,7 +12144,7 @@
 			)
 		)
 		(property "Value" "47nF"
-			(at 81.28 267.9699 0)
+			(at 80.01 208.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14462,7 +12155,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.4352 270.51 0)
+			(at 77.1652 210.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14473,7 +12166,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 266.7 0)
+			(at 76.2 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14484,7 +12177,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 77.47 266.7 0)
+			(at 76.2 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14495,7 +12188,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 77.47 266.7 0)
+			(at 76.2 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14506,7 +12199,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 77.47 266.7 0)
+			(at 76.2 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14517,7 +12210,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 77.47 266.7 0)
+			(at 76.2 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14544,7 +12237,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 60.96 274.32 0)
+		(at 59.69 214.63 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14555,7 +12248,7 @@
 		(fields_autoplaced yes)
 		(uuid "3b999053-a65f-46a7-ae01-975fda526ae5")
 		(property "Reference" "#PWR065"
-			(at 60.96 280.67 0)
+			(at 59.69 220.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14566,7 +12259,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 60.96 279.4 0)
+			(at 59.69 219.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14576,7 +12269,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 60.96 274.32 0)
+			(at 59.69 214.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14587,7 +12280,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 274.32 0)
+			(at 59.69 214.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14598,7 +12291,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 60.96 274.32 0)
+			(at 59.69 214.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14622,7 +12315,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 60.96 266.7 0)
+		(at 59.69 207.01 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14633,7 +12326,7 @@
 		(fields_autoplaced yes)
 		(uuid "3d9dc327-e2c9-423e-8ace-8073ffbec774")
 		(property "Reference" "R28"
-			(at 63.5 265.4299 0)
+			(at 62.23 205.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14644,7 +12337,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 63.5 267.9699 0)
+			(at 62.23 208.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14655,7 +12348,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.182 266.7 90)
+			(at 57.912 207.01 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14666,7 +12359,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 266.7 0)
+			(at 59.69 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14677,7 +12370,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 60.96 266.7 0)
+			(at 59.69 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14688,7 +12381,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 60.96 266.7 0)
+			(at 59.69 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14699,7 +12392,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 60.96 266.7 0)
+			(at 59.69 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14710,7 +12403,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 60.96 266.7 0)
+			(at 59.69 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14730,84 +12423,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R28")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 91.44 182.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3f709ed4-c092-47cd-ae12-fc31a54bdb0f")
-		(property "Reference" "#PWR017"
-			(at 91.44 189.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 91.44 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 91.44 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 91.44 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a4418e58-25f0-4a4f-88b2-19077c79868e")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -14970,85 +12585,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 256.54 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "49d4f9bf-4a3f-4ec2-b125-44d62404ffaa")
-		(property "Reference" "#PWR024"
-			(at 256.54 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 256.54 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 256.54 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 256.54 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 256.54 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "49bad254-136d-44a8-948e-499c77c9b007")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR024")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "SS14-E3/61T:SS14-E3_61T")
 		(at 40.64 53.34 0)
 		(unit 1)
@@ -15175,130 +12711,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 25.4 228.6 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4f8af923-8a46-45f4-b3a7-86e269fbc289")
-		(property "Reference" "C11"
-			(at 25.4 220.98 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100u"
-			(at 25.4 223.52 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 29.21 227.6348 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 25.4 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 25.4 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "GRM31CR61A107MEA8K"
-			(at 25.4 228.6 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 25.4 228.6 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 25.4 228.6 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 25.4 228.6 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7c73b810-ad6f-4e7e-b136-ab80aefabda3")
-		)
-		(pin "2"
-			(uuid "0ff0f8d4-6e54-4b6c-b3d3-bdb4a4ecb564")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 135.89 48.26 0)
 		(unit 1)
@@ -15370,84 +12782,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 110.49 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "50db76df-e27d-42fc-9289-3c73bc19654d")
-		(property "Reference" "#PWR037"
-			(at 110.49 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 110.49 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 110.49 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.49 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 110.49 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3fa3a2eb-5e38-4f76-aee6-3032072452f9")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -15579,133 +12913,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 30.48 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "51cdcf0f-1971-4986-bd51-07c562087a15")
-		(property "Reference" "C2"
-			(at 34.29 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 34.29 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 31.4452 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 30.48 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 34.29 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 30.48 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 30.48 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 30.48 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0446ad27-95e3-4add-bc57-f3eb9f8be3f9")
-		)
-		(pin "2"
-			(uuid "1afbf057-d58f-4d90-9581-82f8b6579df0")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:L")
 		(at 205.74 46.99 90)
 		(unit 1)
@@ -15830,210 +13037,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 125.73 196.85 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "554a2994-848c-4317-a961-f7b8d5070d10")
-		(property "Reference" "R1"
-			(at 125.73 190.5 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "330"
-			(at 125.73 193.04 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 125.73 195.072 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 125.73 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 125.73 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-07330RL"
-			(at 125.73 193.04 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 125.73 196.85 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 125.73 196.85 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 125.73 196.85 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "9918b7bb-431b-4520-9ee1-1d8895303565")
-		)
-		(pin "1"
-			(uuid "7b963cd4-3a5c-4ce7-a0e8-01713b042919")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 347.98 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "563e149c-71cb-4321-a455-a76009876ed0")
-		(property "Reference" "#PWR028"
-			(at 347.98 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 347.98 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 347.98 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 347.98 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 347.98 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4ff8a4e1-32b8-4f81-922b-144ce14851d6")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 60.96 256.54 0)
+		(at 59.69 196.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16044,7 +13048,7 @@
 		(fields_autoplaced yes)
 		(uuid "569563c6-6250-4415-b754-3765a48b3cf9")
 		(property "Reference" "R27"
-			(at 63.5 255.2699 0)
+			(at 62.23 195.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16055,7 +13059,7 @@
 			)
 		)
 		(property "Value" "43.2k"
-			(at 63.5 257.8099 0)
+			(at 62.23 198.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16066,7 +13070,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.182 256.54 90)
+			(at 57.912 196.85 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16077,7 +13081,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 256.54 0)
+			(at 59.69 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16088,7 +13092,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 60.96 256.54 0)
+			(at 59.69 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16099,7 +13103,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 60.96 256.54 0)
+			(at 59.69 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16110,7 +13114,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 60.96 256.54 0)
+			(at 59.69 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16121,7 +13125,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 60.96 256.54 0)
+			(at 59.69 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16148,7 +13152,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 116.84 257.81 0)
+		(at 115.57 198.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16159,7 +13163,7 @@
 		(fields_autoplaced yes)
 		(uuid "588324cc-50f5-49ac-98ac-632b7c785eae")
 		(property "Reference" "R31"
-			(at 119.38 256.5399 0)
+			(at 118.11 196.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16170,7 +13174,7 @@
 			)
 		)
 		(property "Value" "45.3k"
-			(at 119.38 259.0799 0)
+			(at 118.11 199.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16181,7 +13185,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 115.062 257.81 90)
+			(at 113.792 198.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16192,7 +13196,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 116.84 257.81 0)
+			(at 115.57 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16203,7 +13207,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 116.84 257.81 0)
+			(at 115.57 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16214,7 +13218,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 116.84 257.81 0)
+			(at 115.57 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16225,7 +13229,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 116.84 257.81 0)
+			(at 115.57 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16236,7 +13240,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 116.84 257.81 0)
+			(at 115.57 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16256,211 +13260,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R31")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 99.06 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "58fe8926-13f6-4722-ab94-36ac5aa89322")
-		(property "Reference" "#PWR036"
-			(at 99.06 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 99.06 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 99.06 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 99.06 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 99.06 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "344bd18d-ab83-4039-bc01-7a2b1879024f")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR036")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 64.77 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5f2195e6-cb9d-416a-ac87-bf001f31e714")
-		(property "Reference" "C5"
-			(at 68.58 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 68.58 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 65.7352 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 64.77 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 68.58 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 64.77 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 64.77 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 64.77 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e9d50edc-08aa-4b13-a488-4b2909672b5c")
-		)
-		(pin "2"
-			(uuid "e1817449-217e-49d9-8bac-eec2e1f238c1")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -16772,7 +13571,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 176.53 257.81 0)
+		(at 175.26 198.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16783,7 +13582,7 @@
 		(fields_autoplaced yes)
 		(uuid "60c2503f-185a-477b-b001-8d3b73b034b9")
 		(property "Reference" "#PWR069"
-			(at 176.53 264.16 0)
+			(at 175.26 204.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16794,7 +13593,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 176.53 262.89 0)
+			(at 175.26 203.2 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16804,7 +13603,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 176.53 257.81 0)
+			(at 175.26 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16815,7 +13614,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 176.53 257.81 0)
+			(at 175.26 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16826,7 +13625,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 176.53 257.81 0)
+			(at 175.26 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16843,85 +13642,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR069")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 233.68 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "64cd4f3d-384f-45c6-982c-0174bd1951bd")
-		(property "Reference" "#PWR023"
-			(at 233.68 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 233.68 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 233.68 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 233.68 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a46bb827-baf6-4e72-8e2b-85c408662eaa")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -17060,7 +13780,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 88.9 267.97 0)
+		(at 87.63 208.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17071,7 +13791,7 @@
 		(fields_autoplaced yes)
 		(uuid "6745c625-47f6-4098-91c1-e32fc6f1f667")
 		(property "Reference" "R30"
-			(at 91.44 266.6999 0)
+			(at 90.17 207.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17082,7 +13802,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 91.44 269.2399 0)
+			(at 90.17 209.5499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17093,7 +13813,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.122 267.97 90)
+			(at 85.852 208.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17104,7 +13824,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 267.97 0)
+			(at 87.63 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17115,7 +13835,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 88.9 267.97 0)
+			(at 87.63 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17126,7 +13846,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 88.9 267.97 0)
+			(at 87.63 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17137,7 +13857,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 88.9 267.97 0)
+			(at 87.63 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17148,7 +13868,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 88.9 267.97 0)
+			(at 87.63 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17300,7 +14020,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 88.9 275.59 0)
+		(at 87.63 215.9 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17311,7 +14031,7 @@
 		(fields_autoplaced yes)
 		(uuid "69e2e6f4-504d-46fc-b803-51231de40d0c")
 		(property "Reference" "#PWR066"
-			(at 88.9 281.94 0)
+			(at 87.63 222.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17322,7 +14042,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 88.9 280.67 0)
+			(at 87.63 220.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17332,7 +14052,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 88.9 275.59 0)
+			(at 87.63 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17343,7 +14063,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 275.59 0)
+			(at 87.63 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17354,7 +14074,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 88.9 275.59 0)
+			(at 87.63 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17378,85 +14098,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 337.82 52.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "69fd2bf3-c85e-4506-8473-abb7aac66d93")
-		(property "Reference" "#PWR011"
-			(at 337.82 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 337.82 57.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 337.82 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 337.82 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 337.82 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2e43a98c-cce1-4b79-9592-78c2d3c0d6a1")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 116.84 275.59 0)
+		(at 115.57 215.9 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17467,7 +14109,7 @@
 		(fields_autoplaced yes)
 		(uuid "6a00deca-a4cc-4407-a01f-12af73dc6489")
 		(property "Reference" "#PWR067"
-			(at 116.84 281.94 0)
+			(at 115.57 222.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17478,7 +14120,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 116.84 280.67 0)
+			(at 115.57 220.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17488,7 +14130,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 116.84 275.59 0)
+			(at 115.57 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17499,7 +14141,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 116.84 275.59 0)
+			(at 115.57 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17510,7 +14152,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 116.84 275.59 0)
+			(at 115.57 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17527,85 +14169,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR067")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 302.26 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6b058eb8-441f-4417-8599-ea99b447ddab")
-		(property "Reference" "#PWR026"
-			(at 302.26 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 302.26 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 302.26 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 302.26 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 302.26 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a655c324-b082-4980-8231-09278e9185bc")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -17643,7 +14206,7 @@
 				)
 			)
 		)
-		(property "Footprint" "components:SOT-223_UMW"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
 			(at 81.28 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -17950,7 +14513,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 275.59 241.3 0)
+		(at 171.45 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17961,7 +14524,7 @@
 		(fields_autoplaced yes)
 		(uuid "6ef0446a-3247-42da-ac1e-2dc0ceb75397")
 		(property "Reference" "#PWR063"
-			(at 275.59 247.65 0)
+			(at 171.45 273.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17972,7 +14535,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 275.59 246.38 0)
+			(at 171.45 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17982,7 +14545,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 275.59 241.3 0)
+			(at 171.45 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17993,7 +14556,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 275.59 241.3 0)
+			(at 171.45 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18004,7 +14567,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 275.59 241.3 0)
+			(at 171.45 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18153,423 +14716,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 19.05 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "711b5a4c-1b12-4cfa-8574-df56e670abd5")
-		(property "Reference" "C1"
-			(at 22.86 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 22.86 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 20.0152 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 19.05 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 19.05 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 22.86 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 19.05 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 19.05 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 19.05 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "42c78d89-231a-4a43-bece-551d83947767")
-		)
-		(pin "2"
-			(uuid "46df0a35-fd77-48dc-969c-e9f3b7c4dd0b")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 142.24 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "72f0a381-e775-46d8-b39f-bd0e0b6b5595")
-		(property "Reference" "#PWR019"
-			(at 142.24 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 142.24 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 142.24 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d97efcad-0cba-4601-87fa-4cb3ca8c59ae")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 210.82 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "75c193cc-f8a2-4839-99d1-082a1a68605f")
-		(property "Reference" "#PWR022"
-			(at 210.82 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 210.82 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 210.82 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 210.82 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 210.82 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ffe88d41-6530-4520-858d-652b5da481e9")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LED:WS2812B")
-		(at 210.82 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "77fd0841-36b5-4e74-8df9-ef6c7226830d")
-		(property "Reference" "D4"
-			(at 222.25 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 222.25 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 212.09 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 213.36 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 210.82 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 210.82 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 210.82 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 210.82 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 210.82 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "37c338d7-c2f7-4279-9cd4-6e24c72ddfb1")
-		)
-		(pin "3"
-			(uuid "97b84270-cfb1-4eab-87b3-6326bc934566")
-		)
-		(pin "2"
-			(uuid "c373cd8d-3b83-4854-b7b7-5d2491493a55")
-		)
-		(pin "4"
-			(uuid "90d5e02c-940c-45f9-8c5d-76f1e3912c79")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 359.41 110.49 0)
 		(unit 1)
@@ -18678,7 +14824,7 @@
 				)
 			)
 		)
-		(property "Footprint" "components:RC0603N_YAG"
+		(property "Footprint" "RC0603FR-07180KL:RC0603N_YAG"
 			(at 128.27 50.038 90)
 			(hide yes)
 			(show_name no)
@@ -18885,7 +15031,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 49.53 265.43 0)
+		(at 48.26 205.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18896,7 +15042,7 @@
 		(fields_autoplaced yes)
 		(uuid "7e1b0961-fe1b-4c90-855d-d8e06e1a5f7e")
 		(property "Reference" "C28"
-			(at 53.34 264.1599 0)
+			(at 52.07 204.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18907,7 +15053,7 @@
 			)
 		)
 		(property "Value" "47nF"
-			(at 53.34 266.6999 0)
+			(at 52.07 207.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18918,7 +15064,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.4952 269.24 0)
+			(at 49.2252 209.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18929,7 +15075,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 265.43 0)
+			(at 48.26 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18940,7 +15086,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 49.53 265.43 0)
+			(at 48.26 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18951,7 +15097,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 49.53 265.43 0)
+			(at 48.26 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18962,7 +15108,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 49.53 265.43 0)
+			(at 48.26 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18973,7 +15119,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 49.53 265.43 0)
+			(at 48.26 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18993,85 +15139,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C28")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 165.1 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "80e1a9aa-9e08-4fa6-abd9-19ed9af2f2a8")
-		(property "Reference" "#PWR020"
-			(at 165.1 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d113ccb6-784d-499a-af8e-e479767ba911")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -19204,7 +15271,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 170.18 267.97 0)
+		(at 168.91 208.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19215,7 +15282,7 @@
 		(fields_autoplaced yes)
 		(uuid "8218d5d2-bcec-4a72-a01e-42465d82d0d4")
 		(property "Reference" "R33"
-			(at 172.72 266.6999 0)
+			(at 171.45 207.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19226,7 +15293,7 @@
 			)
 		)
 		(property "Value" "22"
-			(at 172.72 269.2399 0)
+			(at 171.45 209.5499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19236,8 +15303,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 168.402 267.97 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 167.132 208.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19248,7 +15315,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.18 267.97 0)
+			(at 168.91 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19259,7 +15326,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 170.18 267.97 0)
+			(at 168.91 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19270,7 +15337,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 170.18 267.97 0)
+			(at 168.91 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19281,7 +15348,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 170.18 267.97 0)
+			(at 168.91 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19292,7 +15359,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 170.18 267.97 0)
+			(at 168.91 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19520,428 +15587,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 19.05 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "866866dc-853e-432c-ba21-224c3dadd2d6")
-		(property "Reference" "#PWR030"
-			(at 19.05 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 19.05 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 19.05 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 19.05 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 19.05 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "041f7f15-4bb1-4e6b-ae0f-0d80321a3751")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "B3F-4055:B3F-4055")
-		(at 293.37 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "884b8d05-0d89-46e6-a19d-a6ebb82f9042")
-		(property "Reference" "SW1"
-			(at 313.69 39.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "B3F-4055"
-			(at 313.69 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "B3F-4055:SW_B3F-4050_OMR"
-			(at 293.37 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "B3F-4055"
-			(at 293.37 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 293.37 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "B3F-4055"
-			(at 293.37 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Aratas (Formerly Omron Components)"
-			(at 293.37 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 293.37 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 293.37 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "232444dd-9185-4af5-af6e-ced6e36cd96d")
-		)
-		(pin "3"
-			(uuid "3da411b9-4c92-4647-a521-367ed69f41a9")
-		)
-		(pin "2"
-			(uuid "c8eb6878-3387-41ee-a397-275c622d0f91")
-		)
-		(pin "1"
-			(uuid "c29cd32b-c933-42a0-99b9-e13775f784ec")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "74xGxx:74AHCT1G125")
-		(at 102.87 184.15 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "894db003-c9c3-4e5a-bcdc-62d088829fae")
-		(property "Reference" "U3"
-			(at 105.41 173.228 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "74AHCT1G125"
-			(at 110.49 171.196 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 102.87 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
-			(at 102.87 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Buffer Gate Tri-State, Low-Voltage CMOS"
-			(at 102.87 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "SN74AHCT1G125DBVR"
-			(at 102.87 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 102.87 184.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 102.87 184.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 102.87 184.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "e481873a-e789-4f8e-abe3-4a311e7e779c")
-		)
-		(pin "4"
-			(uuid "4e37e685-8012-40af-bd32-b14851dddd65")
-		)
-		(pin "5"
-			(uuid "6d0d717f-1e75-4ac2-9f73-3fdd2b6afeaf")
-		)
-		(pin "1"
-			(uuid "d73120de-5bef-4f22-98b0-1af521696d58")
-		)
-		(pin "2"
-			(uuid "eed6cbb0-fe75-48a9-807a-ba49e2c4dfc1")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 116.84 186.69 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8c267a74-c55a-48fe-ade1-cc3b26d1b706")
-		(property "Reference" "#PWR016"
-			(at 116.84 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 116.84 191.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 116.84 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 116.84 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "198e8038-c1bb-494e-88eb-66519a70c458")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 33.02 256.54 0)
+		(at 31.75 196.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19952,7 +15599,7 @@
 		(fields_autoplaced yes)
 		(uuid "8d6e98d4-01da-427f-bec6-6336ef26dcf8")
 		(property "Reference" "R25"
-			(at 35.56 255.2699 0)
+			(at 34.29 195.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19963,7 +15610,7 @@
 			)
 		)
 		(property "Value" "36.5k"
-			(at 35.56 257.8099 0)
+			(at 34.29 198.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19974,7 +15621,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.242 256.54 90)
+			(at 29.972 196.85 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19985,7 +15632,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 256.54 0)
+			(at 31.75 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19996,7 +15643,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 33.02 256.54 0)
+			(at 31.75 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20007,7 +15654,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 33.02 256.54 0)
+			(at 31.75 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20018,7 +15665,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 33.02 256.54 0)
+			(at 31.75 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20029,7 +15676,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 33.02 256.54 0)
+			(at 31.75 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20049,84 +15696,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 289.56 52.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "92fb68d5-9830-4eae-88c9-20bacd2ec01e")
-		(property "Reference" "#PWR071"
-			(at 289.56 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 289.56 57.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 289.56 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 289.56 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 289.56 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8bf9e9a5-3ddc-4387-825c-8ee0a4ac96e3")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -20593,218 +16162,8 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
-		(at 279.4 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a3d9e18-5d01-435d-96e3-d505698b0184")
-		(property "Reference" "D7"
-			(at 290.83 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 290.83 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 280.67 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 281.94 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 279.4 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 279.4 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 279.4 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 279.4 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 279.4 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fb17bafa-6971-4b71-92f8-3d850fee21ee")
-		)
-		(pin "3"
-			(uuid "6ccc429c-4fed-48b9-9416-cbfa062e3fe6")
-		)
-		(pin "2"
-			(uuid "fb8151d7-a883-4c6a-b6a9-5ef00d44c054")
-		)
-		(pin "4"
-			(uuid "949fba63-d5e1-4b3a-9c34-154177b2dfd2")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 34.29 228.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a4528cfb-1d67-4d17-82a2-ae7b5c80775a")
-		(property "Reference" "#PWR018"
-			(at 34.29 234.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 34.29 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 34.29 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "13ea468c-2d89-462f-af0f-c985350668cf")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 33.02 274.32 0)
+		(at 31.75 214.63 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20815,7 +16174,7 @@
 		(fields_autoplaced yes)
 		(uuid "a4b39665-ddbf-4665-935c-28fd4d37003c")
 		(property "Reference" "#PWR064"
-			(at 33.02 280.67 0)
+			(at 31.75 220.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20826,7 +16185,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 33.02 279.4 0)
+			(at 31.75 219.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20836,7 +16195,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 274.32 0)
+			(at 31.75 214.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20847,7 +16206,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 274.32 0)
+			(at 31.75 214.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20858,7 +16217,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 33.02 274.32 0)
+			(at 31.75 214.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20875,217 +16234,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR064")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 325.12 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a95ae2d5-f876-4f1a-97c8-96a8f2c1eff7")
-		(property "Reference" "#PWR027"
-			(at 325.12 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 325.12 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 325.12 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 325.12 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 325.12 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bd346392-630d-4340-b35c-a4a698ef4b6c")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR027")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LED:WS2812B")
-		(at 256.54 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ad307b91-cb92-45fc-acb9-41a864fb4d66")
-		(property "Reference" "D6"
-			(at 267.97 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 267.97 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 257.81 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 259.08 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 256.54 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 256.54 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 256.54 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 256.54 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 256.54 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "aff7be6b-8137-4389-b704-72f80f6d8aac")
-		)
-		(pin "3"
-			(uuid "fd2d9801-58b9-4375-9423-3dd13a5093bf")
-		)
-		(pin "2"
-			(uuid "3828da96-68c2-43ea-a08b-a69e2738b65b")
-		)
-		(pin "4"
-			(uuid "495e525b-9d66-4256-bf2f-ce10151506f1")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -21346,7 +16494,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 281.94 238.76 270)
+		(at 177.8 264.16 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21357,7 +16505,7 @@
 		(fields_autoplaced yes)
 		(uuid "afd22e65-9d58-4faa-b5c2-f2b1b8981637")
 		(property "Reference" "C26"
-			(at 281.94 231.14 90)
+			(at 177.8 256.54 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21367,7 +16515,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 281.94 233.68 90)
+			(at 177.8 259.08 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21377,7 +16525,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 278.13 239.7252 0)
+			(at 173.99 265.1252 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21388,7 +16536,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 281.94 238.76 0)
+			(at 177.8 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21399,7 +16547,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 281.94 238.76 0)
+			(at 177.8 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21410,7 +16558,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 281.94 238.76 90)
+			(at 177.8 264.16 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21421,7 +16569,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 281.94 238.76 90)
+			(at 177.8 264.16 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21432,7 +16580,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 281.94 238.76 90)
+			(at 177.8 264.16 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21657,270 +16805,6 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
-		(at 233.68 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "baa09894-fbbd-4f7d-82a9-43ac1a9f5f35")
-		(property "Reference" "D5"
-			(at 245.11 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 245.11 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 234.95 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 236.22 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 233.68 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 233.68 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 233.68 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 233.68 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 233.68 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "49508dad-4486-418a-9a3e-ece533df2c4a")
-		)
-		(pin "3"
-			(uuid "79ead2b7-8185-4dc1-9f22-c6c2a69c2d8c")
-		)
-		(pin "2"
-			(uuid "0595e9b4-4ea9-4426-8d5b-466db023e9b9")
-		)
-		(pin "4"
-			(uuid "94f90ce4-c305-4e4a-a65f-f1c588a1a304")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LED:WS2812B")
-		(at 325.12 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bac6e354-0967-4852-8e5a-9da7702c6c8d")
-		(property "Reference" "D9"
-			(at 336.55 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 336.55 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 326.39 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 327.66 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 325.12 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 325.12 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 325.12 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 325.12 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 325.12 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ba7cfc8a-91d1-466b-999f-0bc420141361")
-		)
-		(pin "3"
-			(uuid "7054f5f0-a313-4f10-9b1c-28cdcf3ab907")
-		)
-		(pin "2"
-			(uuid "7865a743-8d4a-46e6-8873-0c0026ebc267")
-		)
-		(pin "4"
-			(uuid "cbd4bc12-d4af-4da2-b883-4da0c4380656")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 133.35 99.06 0)
 		(unit 1)
@@ -22127,84 +17011,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 64.77 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bf28fd92-8ea7-4d86-911d-fb24e53f19aa")
-		(property "Reference" "#PWR033"
-			(at 64.77 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 64.77 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 64.77 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4b688c1d-acfe-44bd-b46f-cdf51aff4704")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "RC0603FR-07180KL:RC0603FR-07180KL")
 		(at 336.55 162.56 90)
 		(unit 1)
@@ -22334,7 +17140,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 116.84 267.97 0)
+		(at 115.57 208.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22345,7 +17151,7 @@
 		(fields_autoplaced yes)
 		(uuid "cbb98bfb-fc75-406a-b230-ac8681afadf7")
 		(property "Reference" "R32"
-			(at 119.38 266.6999 0)
+			(at 118.11 207.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22356,7 +17162,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 119.38 269.2399 0)
+			(at 118.11 209.5499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22367,7 +17173,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 115.062 267.97 90)
+			(at 113.792 208.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22378,7 +17184,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 116.84 267.97 0)
+			(at 115.57 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22389,7 +17195,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 116.84 267.97 0)
+			(at 115.57 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22400,7 +17206,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 116.84 267.97 0)
+			(at 115.57 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22411,7 +17217,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 116.84 267.97 0)
+			(at 115.57 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22422,7 +17228,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 116.84 267.97 0)
+			(at 115.57 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22448,214 +17254,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 187.96 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf11f012-8c63-410a-b7b5-c75d3872afcd")
-		(property "Reference" "#PWR021"
-			(at 187.96 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 187.96 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 187.96 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0cb1c405-f42d-4e38-acc8-5a5d37f2c227")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 76.2 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf6e702c-41d0-4811-9800-0ed81de59e56")
-		(property "Reference" "C6"
-			(at 80.01 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 80.01 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 77.1652 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 76.2 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 80.01 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 76.2 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 76.2 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 76.2 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3076e4e6-df81-48e5-b5c1-5bdac729ad8f")
-		)
-		(pin "2"
-			(uuid "89111bdb-4572-478a-b71f-cc4447af8245")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "INA240A2DR:INA240A2DR")
-		(at 140.97 255.27 0)
+		(at 139.7 195.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22666,7 +17266,7 @@
 		(fields_autoplaced yes)
 		(uuid "cf9ceb97-dc51-40c6-a6a7-06507bb18e69")
 		(property "Reference" "IC1"
-			(at 154.94 247.65 0)
+			(at 153.67 187.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22676,7 +17276,7 @@
 			)
 		)
 		(property "Value" "INA240A2DR"
-			(at 154.94 250.19 0)
+			(at 153.67 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22686,7 +17286,7 @@
 			)
 		)
 		(property "Footprint" "INA240A2DR:SOIC127P600X175-8N"
-			(at 165.1 350.19 0)
+			(at 163.83 290.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22698,7 +17298,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/ina240"
-			(at 165.1 450.19 0)
+			(at 163.83 390.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22710,7 +17310,7 @@
 			)
 		)
 		(property "Description" "80V, Low-/High-Side, Bi-Directional, Zero-Drift, Current Sense Amp w/Enhanced PWM Rejection"
-			(at 140.97 255.27 0)
+			(at 139.7 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22721,7 +17321,7 @@
 			)
 		)
 		(property "MPN" "INA240A2DR"
-			(at 140.97 255.27 0)
+			(at 139.7 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22732,7 +17332,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 140.97 255.27 0)
+			(at 139.7 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22743,7 +17343,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 140.97 255.27 0)
+			(at 139.7 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22754,7 +17354,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 140.97 255.27 0)
+			(at 139.7 195.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22798,219 +17398,8 @@
 		)
 	)
 	(symbol
-		(lib_id "LED:WS2812B")
-		(at 142.24 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d1f8acd3-1791-469c-9a89-be737b602d95")
-		(property "Reference" "D1"
-			(at 153.67 190.4298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B"
-			(at 153.67 192.9698 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 143.51 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 144.78 206.375 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 142.24 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WS2812B"
-			(at 142.24 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 142.24 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 142.24 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 142.24 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9aaeafde-0867-4bb4-a45e-3e656b81354f")
-		)
-		(pin "3"
-			(uuid "ea1c46a5-f70d-4e81-993a-dc549f20b732")
-		)
-		(pin "2"
-			(uuid "1101cd30-eb03-40dd-a560-cac89e8407fd")
-		)
-		(pin "4"
-			(uuid "aafafa02-e172-478f-9d91-149274f147bd")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 279.4 204.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d4aee857-3269-4721-91f1-d4d6c0ab7bb4")
-		(property "Reference" "#PWR025"
-			(at 279.4 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 279.4 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 279.4 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 279.4 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 279.4 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "384f7192-0741-4a59-aa92-5e139935f94a")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR025")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 365.76 245.11 0)
+		(at 261.62 270.51 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23021,7 +17410,7 @@
 		(fields_autoplaced yes)
 		(uuid "d69dc524-c114-48f0-b118-abca910d9898")
 		(property "Reference" "#PWR060"
-			(at 365.76 251.46 0)
+			(at 261.62 276.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23032,7 +17421,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 365.76 250.19 0)
+			(at 261.62 275.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23042,7 +17431,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 365.76 245.11 0)
+			(at 261.62 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23053,7 +17442,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 365.76 245.11 0)
+			(at 261.62 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23064,7 +17453,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 365.76 245.11 0)
+			(at 261.62 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23165,129 +17554,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 284.48 40.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d98ed2dc-871c-45af-9db8-89b7b55b3e2c")
-		(property "Reference" "R9"
-			(at 286.766 40.386 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 282.194 40.386 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "components:RES_CRCW_0603"
-			(at 282.702 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 284.48 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 284.48 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-0710KL"
-			(at 284.48 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 284.48 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 284.48 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 284.48 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "65e87c61-80a2-41b6-8525-e1a67edb96a1")
-		)
-		(pin "1"
-			(uuid "15daaa65-44ec-4deb-af7a-fc0b7277465c")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 196.85 44.45 0)
 		(unit 1)
@@ -23366,7 +17632,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 105.41 266.7 0)
+		(at 104.14 207.01 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23377,7 +17643,7 @@
 		(fields_autoplaced yes)
 		(uuid "dc382cf7-25bb-4585-890f-0d0f1feb5269")
 		(property "Reference" "C30"
-			(at 109.22 265.4299 0)
+			(at 107.95 205.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23388,7 +17654,7 @@
 			)
 		)
 		(property "Value" "47nF"
-			(at 109.22 267.9699 0)
+			(at 107.95 208.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23399,7 +17665,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 106.3752 270.51 0)
+			(at 105.1052 210.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23410,7 +17676,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 266.7 0)
+			(at 104.14 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23421,7 +17687,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 105.41 266.7 0)
+			(at 104.14 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23432,7 +17698,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 105.41 266.7 0)
+			(at 104.14 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23443,7 +17709,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 105.41 266.7 0)
+			(at 104.14 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23454,7 +17720,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 105.41 266.7 0)
+			(at 104.14 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23552,84 +17818,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 41.91 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e4462a80-60a0-4fc8-a4db-f6bfd6ebfc6e")
-		(property "Reference" "#PWR031"
-			(at 41.91 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 41.91 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 41.91 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 41.91 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 41.91 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6a5e47db-ba4c-4e4a-8fe7-4ae7744ee227")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -23792,7 +17980,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 21.59 265.43 0)
+		(at 20.32 205.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23803,7 +17991,7 @@
 		(fields_autoplaced yes)
 		(uuid "e91a45ef-b064-451e-aa22-ac381b7e3ced")
 		(property "Reference" "C27"
-			(at 25.4 264.1599 0)
+			(at 24.13 204.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23814,7 +18002,7 @@
 			)
 		)
 		(property "Value" "47nF"
-			(at 25.4 266.6999 0)
+			(at 24.13 207.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23825,7 +18013,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.5552 269.24 0)
+			(at 21.2852 209.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23836,7 +18024,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 21.59 265.43 0)
+			(at 20.32 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23847,7 +18035,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 21.59 265.43 0)
+			(at 20.32 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23858,7 +18046,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 21.59 265.43 0)
+			(at 20.32 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23869,7 +18057,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 21.59 265.43 0)
+			(at 20.32 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23880,7 +18068,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 21.59 265.43 0)
+			(at 20.32 205.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23900,133 +18088,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 121.92 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ea4d2635-5a49-4b23-88f8-393855bf8c54")
-		(property "Reference" "C10"
-			(at 125.73 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 125.73 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 122.8852 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 121.92 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 125.73 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 121.92 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 121.92 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 121.92 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ddbe87ee-ea7d-4154-932a-8da5c952e6a0")
-		)
-		(pin "2"
-			(uuid "c46eda08-87b4-4957-83dc-2f138f2f2cf0")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -24239,7 +18300,7 @@
 	)
 	(symbol
 		(lib_id "ADS7128IRTER:ADS7128IRTER")
-		(at 289.56 220.98 0)
+		(at 185.42 246.38 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24250,7 +18311,7 @@
 		(fields_autoplaced yes)
 		(uuid "ec895b06-2785-4157-ba0f-27f8938b8168")
 		(property "Reference" "U10"
-			(at 322.58 210.82 0)
+			(at 218.44 236.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24260,7 +18321,7 @@
 			)
 		)
 		(property "Value" "ADS7128IRTER"
-			(at 322.58 213.36 0)
+			(at 218.44 238.76 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24270,7 +18331,7 @@
 			)
 		)
 		(property "Footprint" "ADS7128IRTER:WQFN16_RTE_TEX"
-			(at 289.56 220.98 0)
+			(at 185.42 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24282,7 +18343,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/ads7128"
-			(at 289.56 220.98 0)
+			(at 185.42 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24294,7 +18355,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 289.56 220.98 0)
+			(at 185.42 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24305,7 +18366,7 @@
 			)
 		)
 		(property "MPN" "ADS7128IRTER"
-			(at 289.56 220.98 0)
+			(at 185.42 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24316,7 +18377,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 289.56 220.98 0)
+			(at 185.42 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24327,7 +18388,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 289.56 220.98 0)
+			(at 185.42 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24338,7 +18399,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 289.56 220.98 0)
+			(at 185.42 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24409,135 +18470,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 41.91 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ed96082f-59eb-4896-94be-b80dfff8c3ec")
-		(property "Reference" "C3"
-			(at 45.72 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 45.72 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 42.8752 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 41.91 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 41.91 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 45.72 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 41.91 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 41.91 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 41.91 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ea932b67-a830-400c-9922-701992b7ad93")
-		)
-		(pin "2"
-			(uuid "917097c9-9774-444c-8f13-417100db0b4a")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 33.02 266.7 0)
+		(at 31.75 207.01 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24548,7 +18482,7 @@
 		(fields_autoplaced yes)
 		(uuid "edc31bd7-201d-457c-9faa-2900004ddc54")
 		(property "Reference" "R26"
-			(at 35.56 265.4299 0)
+			(at 34.29 205.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24559,7 +18493,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 35.56 267.9699 0)
+			(at 34.29 208.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24570,7 +18504,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.242 266.7 90)
+			(at 29.972 207.01 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24581,7 +18515,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 266.7 0)
+			(at 31.75 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24592,7 +18526,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 33.02 266.7 0)
+			(at 31.75 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24603,7 +18537,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 33.02 266.7 0)
+			(at 31.75 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24614,7 +18548,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 33.02 266.7 0)
+			(at 31.75 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24625,7 +18559,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 33.02 266.7 0)
+			(at 31.75 207.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24645,84 +18579,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 121.92 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "edd90de7-5ad5-47a5-93e2-5cb2a9dceb92")
-		(property "Reference" "#PWR038"
-			(at 121.92 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 121.92 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 121.92 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a9a73133-0d0f-42eb-a1d3-62c6f960ce82")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -24856,260 +18712,6 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 53.34 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0db5e9f-080d-456f-ad4d-15fa0c9dac87")
-		(property "Reference" "C4"
-			(at 57.15 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 57.15 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 54.3052 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 53.34 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 57.15 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 53.34 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 53.34 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 53.34 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "59f04f13-854c-44f9-b7a1-9d32a6c9f4d2")
-		)
-		(pin "2"
-			(uuid "7024a911-1ce4-4207-b2dc-8019a25eea35")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 87.63 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f25f72d8-7b9d-455c-8bce-7425254d4b00")
-		(property "Reference" "C7"
-			(at 91.44 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 91.44 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 88.5952 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 87.63 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 91.44 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 87.63 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 87.63 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 87.63 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e202f71f-9d09-4fe9-bab5-abf8bd2b4de8")
-		)
-		(pin "2"
-			(uuid "c55cd0b5-cb7a-4fd7-a2e3-edc10675f9ba")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
 		(at 81.28 127 180)
 		(unit 1)
 		(body_style 1)
@@ -25141,7 +18743,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "components:CAP_CL_05_SAM"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 80.3148 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -25235,7 +18837,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 373.38 236.22 0)
+		(at 269.24 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25246,7 +18848,7 @@
 		(fields_autoplaced yes)
 		(uuid "f48c6293-35f1-4d25-9098-5f68c5571dbd")
 		(property "Reference" "R23"
-			(at 375.92 234.9499 0)
+			(at 271.78 260.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25257,7 +18859,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 375.92 237.4899 0)
+			(at 271.78 262.8899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25268,7 +18870,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 371.602 236.22 90)
+			(at 267.462 261.62 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25279,7 +18881,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 373.38 236.22 0)
+			(at 269.24 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25290,7 +18892,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 373.38 236.22 0)
+			(at 269.24 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25301,7 +18903,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 373.38 236.22 0)
+			(at 269.24 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25312,7 +18914,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 373.38 236.22 0)
+			(at 269.24 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25323,7 +18925,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 373.38 236.22 0)
+			(at 269.24 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25421,133 +19023,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR058")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 99.06 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fc9d831f-05dd-446d-9a09-f427b946fbac")
-		(property "Reference" "C8"
-			(at 102.87 207.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 102.87 209.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 100.0252 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 99.06 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 99.06 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL05B104KO5NNNC"
-			(at 102.87 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 99.06 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 99.06 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 99.06 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a3c803be-5d43-444b-99e9-4f0b3203ae87")
-		)
-		(pin "2"
-			(uuid "9118c7c4-0a22-46f8-8ff5-ca11cbe7cc74")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "C8")
 					(unit 1)
 				)
 			)

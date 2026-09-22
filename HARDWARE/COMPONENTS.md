@@ -1,5 +1,8 @@
 ## Exact manufacturer part numbers used in schematic explained in plain english (component alternatives might be used) 
 
+> [!Warning]
+> This is not verified to be the full BOM for the Lamoka1, for all components please refer to the official BOM. This is purely for reference and learning not to be used as a BOM
+
  NMOS for H bridge (Inversion-section): CSD19536KCS made by TI  x4
 
  Transformer (Inversion-section): VPT24-10420 made by Triad magnetics
@@ -47,3 +50,12 @@
  Multiplexer for voltage and current monitoring: ADS7128IRTER made by TI
 
  Tactile button for RP2354A control: B3F-4055 made by Aratas (Formerly Omron Components)
+
+ IC for 11-14v to 17v boost converter: LM5122QMHX-NOPB made by TI
+
+ Converter to go from 5v to 3v3 for control: AMS1117-3.3 made by Advanced Monolithic Systems
+
+ Five pin header for connecting main and UI boards: PBC05SAAN made by Sullins Connector Solutions x2
+
+ Five pin female to female cable for connecting main and UI boards: 10375 made by SparkFun electronis
+
