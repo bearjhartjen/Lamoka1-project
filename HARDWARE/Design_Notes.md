@@ -61,6 +61,7 @@
 
 ## Current sensing and energy flow chart 
 
+```mermaid
 graph TD
     SolarPanels["SOLAR PANELS"] --> CS1["Current sense"]
     CS1 --> ChargeController["CHARGE CONTROLLER"]
@@ -90,7 +91,6 @@ graph TD
     class ACOutput output
     class Battery storage
     class CS1,CS2,CS3,CS4 sensor
-
 ## User interface board
 
  Unfortunately, we had to create a whole separate board for the user interface due to how large the transformer is. Both boards will be attached with mouse bites so that they can be easily fabricated and assembled together, then you can simply break them apart when you receive them. The two boards will be attached by a five-pin wired connector allowing us to route in a heatsink and other airflow-aware design choices, instead of operating around ten RGBs and a button.
