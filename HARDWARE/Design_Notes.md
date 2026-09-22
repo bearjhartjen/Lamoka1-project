@@ -76,13 +76,13 @@ graph TD
     DCBus -->|CHARGE| Battery
     Battery -->|DISCHARGE| DCBus
 
-    classDef solar stroke:#fb923c,fill:#fff7ed
-    classDef control stroke:#818cf8,fill:#eef2ff
-    classDef bus stroke:#2dd4bf,fill:#f0fdfa
-    classDef power stroke:#f87171,fill:#fef2f2
-    classDef output stroke:#4ade80,fill:#f0fdf4
-    classDef storage stroke:#a78bfa,fill:#f5f3ff
-    classDef sensor stroke:#6b7280,fill:#f3f4f6
+    classDef solar stroke:#fb923c,fill:#fff7ed,color:#000
+    classDef control stroke:#818cf8,fill:#eef2ff,color:#000
+    classDef bus stroke:#2dd4bf,fill:#f0fdfa,color:#000
+    classDef power stroke:#f87171,fill:#fef2f2,color:#000
+    classDef output stroke:#4ade80,fill:#f0fdf4,color:#000
+    classDef storage stroke:#a78bfa,fill:#f5f3ff,color:#000
+    classDef sensor stroke:#6b7280,fill:#f3f4f6,color:#000
 
     class SolarPanels solar
     class ChargeController control
