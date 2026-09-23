@@ -5462,7 +5462,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CSD17304Q3:DQG0008A"
 			(at 115.57 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -5669,7 +5669,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAPC2012X95N"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 87.3252 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -6420,7 +6420,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAPC1005X55N"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 149.86 68.8848 0)
 			(hide yes)
 			(show_name no)
@@ -7055,7 +7055,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAPC2012X94N"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 124.46 84.1248 0)
 			(hide yes)
 			(show_name no)
@@ -7181,7 +7181,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 62.992 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -7434,7 +7434,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAP_20SVPF56MX"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.9"
 			(at 54.3052 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -7932,7 +7932,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAPC2012X75N"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 153.67 80.3148 0)
 			(hide yes)
 			(show_name no)
@@ -8325,7 +8325,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAPC3216X180N"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 172.4152 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -8679,7 +8679,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 127.762 58.42 90)
 			(hide yes)
 			(show_name no)
@@ -8712,7 +8712,7 @@
 				)
 			)
 		)
-		(property "MPN" "MPN00CenterCenter00"
+		(property "MPN" "CRCW04023K79FKED"
 			(at 129.54 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8805,7 +8805,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAPC1005X55N"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 79.7052 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -8931,7 +8931,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAP_25SVPF100M"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x11.9"
 			(at 136.8552 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -9055,7 +9055,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 113.03 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9334,7 +9334,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CSD16323Q3:DQG0008A"
 			(at 121.92 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9539,7 +9539,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAPC2012X140N"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 109.22 84.1248 0)
 			(hide yes)
 			(show_name no)
@@ -9665,7 +9665,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAPC1005X55N"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 72.0852 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10143,7 +10143,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 142.24 83.058 90)
 			(hide yes)
 			(show_name no)
@@ -10630,7 +10630,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 35.052 72.39 90)
 			(hide yes)
 			(show_name no)
@@ -10833,7 +10833,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 62.992 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -11037,7 +11037,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 76.962 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -11161,7 +11161,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 92.71 39.878 90)
 			(hide yes)
 			(show_name no)
@@ -11287,7 +11287,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAP_25SVPF100M"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x11.9"
 			(at 159.7152 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -11489,7 +11489,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:IND_XAL1580-182MEB"
+		(property "Footprint" "Inductor_SMD:L_Coilcraft_XAL1580-182"
 			(at 107.95 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11693,7 +11693,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 52.832 72.39 90)
 			(hide yes)
 			(show_name no)
@@ -11819,7 +11819,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:CAP_25SVPF100M"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x11.9"
 			(at 148.2852 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -12060,7 +12060,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 127.762 50.8 90)
 			(hide yes)
 			(show_name no)
