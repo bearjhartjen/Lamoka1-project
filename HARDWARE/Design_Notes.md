@@ -59,40 +59,71 @@
 
  The transformer applied to the Lamoka1 is five pounds and around $80, we understand this may be a strong downside to some people, however we found this was the best widely available option, plus it adds efficiency prospects. 
 
-## Current sensing and energy flow chart 
-
-```mermaid
-graph TD
-    SolarPanels["SOLAR PANELS"] --> CS1["Current sense"]
-    CS1 --> ChargeController["CHARGE CONTROLLER"]
-    ChargeController --> CS2["Current sense"]
-    CS2 --> DCBus["DC BUS"]
-    DCBus --> CS3["Current sense"]
-    CS3 --> Inverter["INVERTER"]
-    Inverter --> CS4["Current sense"]
-    CS4 --> ACOutput["AC OUTPUT"]
-
-    Battery["BATTERY"]
-    DCBus -->|CHARGE| Battery
-    Battery -->|DISCHARGE| DCBus
-
-    classDef solar stroke:#fb923c,fill:#fff7ed,color:#000
-    classDef control stroke:#818cf8,fill:#eef2ff,color:#000
-    classDef bus stroke:#2dd4bf,fill:#f0fdfa,color:#000
-    classDef power stroke:#f87171,fill:#fef2f2,color:#000
-    classDef output stroke:#4ade80,fill:#f0fdf4,color:#000
-    classDef storage stroke:#a78bfa,fill:#f5f3ff,color:#000
-    classDef sensor stroke:#6b7280,fill:#f3f4f6,color:#000
-
-    class SolarPanels solar
-    class ChargeController control
-    class DCBus bus
-    class Inverter power
-    class ACOutput output
-    class Battery storage
-    class CS1,CS2,CS3,CS4 sensor
-```
 
 ## User interface board
 
 Unfortunately, we had to create a whole separate board for the user interface due to how large the transformer is. Both boards will be attached with mouse bites so that they can be easily fabricated and assembled together, then you can simply break them apart when you receive them. The two boards will be attached by a five-pin wired connector allowing us to route in a heatsink and other airflow-aware design choices, instead of operating around ten RGBs and a button.
+
+## Energy flow and current/voltage sensing
+
+## System Architecture
+
+The Lamoka1 is divided into an **Inversion-Section** and a **Charging-Section**. Both sections share the same battery and 17V inverter bus, allowing the system to operate as an inverter alone or as an inverter/charger when an external source is connected.
+
+```mermaid
+graph TB
+    subgraph Inversion["Inversion-Section"]
+        source1["11-14V Source / Battery"]
+        sense1["Voltage / Current Sense"]
+        converter1["11-14V to 17V Converter"]
+        or1["17V Power OR<br/>Ideal-Diode / MOSFET ORing"]
+        bus17["17V Bus"]
+        sense2["Volt Sense"]
+        hbridge["H Bridge"]
+        sense3["Volt Sense"]
+        transformer["Transformer"]
+        sense4["Volt / Current Sense"]
+        outlet["Outlet"]
+
+        source1 --> sense1
+        sense1 --> converter1
+        converter1 --> or1
+        or1 --> bus17
+        bus17 --> sense2
+        sense2 --> hbridge
+        hbridge --> sense3
+        sense3 --> transformer
+        transformer --> sense4
+        sense4 --> outlet
+    end
+
+    subgraph Charging["Charging-Section"]
+        source2["10-30V Source"]
+        sense5["Voltage / Current Sense"]
+        split["Power Split"]
+        converter2["10-30V to 17V Converter"]
+        charger["Charger"]
+        sense6["Charge Voltage / Current Sense"]
+
+        source2 --> sense5
+        sense5 --> split
+
+        split --> converter2
+        converter2 --> or1
+
+        split --> charger
+        charger --> sense6
+        sense6 --> source1
+    end
+
+    classDef inversionNode stroke:#818cf8,fill:#eef2ff
+    classDef chargingNode stroke:#2dd4bf,fill:#f0fdfa
+    classDef sourceNode stroke:#4ade80,fill:#f0fdf4
+    classDef sinkNode stroke:#fb7185,fill:#fff1f2
+    classDef powerNode stroke:#f59e0b,fill:#fffbeb
+
+    class sense1,converter1,sense2,hbridge,sense3,transformer,sense4 inversionNode
+    class sense5,split,converter2,charger,sense6 chargingNode
+    class source1,source2 sourceNode
+    class outlet sinkNode
+    class or1,bus17 powerNode

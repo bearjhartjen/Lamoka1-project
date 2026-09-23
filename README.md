@@ -20,10 +20,9 @@
 
 ---
 
-## Owego Rotary craft fair version
+## Owego Rotary craft fair 
 
- For the Owego Rotary craft fair, taking place at the Elks lodge in Owego, NY, on November 14th from 9am to 3pm, the main project being presented by Flamingo and Cactus will be the Lamoka1/2 which is simply the Lamoka1 without its charging section, all else is the same. We are doing this due to time constraints, we over estimated how quickly we could finish a inverter/charger system to our quality standards. 
-
+ For the Owego Rotary craft fair, taking place at the Elks lodge in Owego, NY, on November 14th from 9am to 3pm, the main project being presented by Flamingo and Cactus will be the Lamoka1. More details will be presented after the event. 
 
 
 ## What is the Lamoka1?

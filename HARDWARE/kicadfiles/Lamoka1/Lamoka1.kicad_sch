@@ -4993,8 +4993,8 @@
 		(uuid "5b06dede-95bc-4506-a59f-0ab7d6681baf")
 	)
 	(rectangle
-		(start 131.826 37.338)
-		(end 174.498 59.436)
+		(start 129.286 37.338)
+		(end 171.958 59.436)
 		(stroke
 			(width 0)
 			(type default)
@@ -6348,8 +6348,8 @@
 		)
 		(uuid "903d9949-55c4-48e4-8a99-a782fa4a75fd")
 	)
-	(label "11-14V input"
-		(at 149.86 44.45 180)
+	(label "Battery-Connection "
+		(at 151.13 44.45 180)
 		(effects
 			(font
 				(size 1.27 1.27)
