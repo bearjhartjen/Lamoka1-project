@@ -10242,7 +10242,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 283.972 261.62 90)
 			(hide yes)
 			(show_name no)
@@ -10298,6 +10298,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 285.75 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-074K7L"
 			(at 285.75 261.62 0)
 			(hide yes)
 			(show_name no)
@@ -10681,7 +10692,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 85.852 198.12 90)
 			(hide yes)
 			(show_name no)
@@ -10747,6 +10758,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC0603FR-0745K3L"
+			(at 87.63 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e54617a0-791f-4edd-9ff5-a1b5aff74b62")
 		)
@@ -10795,7 +10817,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 41.91 260.858 90)
 			(hide yes)
 			(show_name no)
@@ -10861,6 +10883,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC0603FR-0710KL"
+			(at 41.91 259.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "86b49559-b710-4409-b906-52bea6c51dfb")
 		)
@@ -10910,7 +10943,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "components:CAP_0603_CL10A_1P6XP8_SAM"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 162.2552 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -11301,7 +11334,7 @@
 				)
 			)
 		)
-		(property "Footprint" "components:RES_CRCW_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 162.56 79.248 90)
 			(hide yes)
 			(show_name no)
@@ -11628,7 +11661,7 @@
 				)
 			)
 		)
-		(property "Footprint" "components:RC0402N_PAN"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 158.75 97.028 90)
 			(hide yes)
 			(show_name no)
@@ -12104,7 +12137,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 77.1652 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -12160,6 +12193,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 76.2 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B473KB8NNNC"
 			(at 76.2 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -12297,7 +12341,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 57.912 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -12353,6 +12397,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 59.69 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0710KL"
 			(at 59.69 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -12893,7 +12948,7 @@
 				)
 			)
 		)
-		(property "Footprint" "components:AOTAB201610S3R3101T"
+		(property "Footprint" "AOTA-B201610S3R3-101-T:AOTAB201610S3R3101T"
 			(at 205.74 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -13019,7 +13074,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 57.912 196.85 90)
 			(hide yes)
 			(show_name no)
@@ -13085,6 +13140,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC0603FR-0743K2L"
+			(at 59.69 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7633723a-a8a8-4ee4-bd1f-229286e59af1")
 		)
@@ -13134,7 +13200,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 113.792 198.12 90)
 			(hide yes)
 			(show_name no)
@@ -13190,6 +13256,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 115.57 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0745K3L"
 			(at 115.57 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -13628,7 +13705,7 @@
 				)
 			)
 		)
-		(property "Footprint" "components:ABM8-272-T3_ABR"
+		(property "Footprint" "ABM8-272-T3:ABM8272T3"
 			(at 284.48 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -13762,7 +13839,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 85.852 208.28 90)
 			(hide yes)
 			(show_name no)
@@ -13828,6 +13905,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC0603FR-0710KL"
+			(at 87.63 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3142fe88-a853-435e-aa31-96ebdba0c49f")
 		)
@@ -13876,7 +13964,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 181.3052 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -15013,7 +15101,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 49.2252 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -15079,6 +15167,17 @@
 				)
 			)
 		)
+		(property "MPN" "CL10B473KB8NNNC"
+			(at 48.26 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "053fdcb5-33e1-42af-ad67-6d827e6b4cac")
 		)
@@ -15127,7 +15226,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 195.58 42.2148 0)
 			(hide yes)
 			(show_name no)
@@ -15444,7 +15543,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "components:CAP_0603_CL10A_1P6XP8_SAM"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 178.7652 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -15570,7 +15669,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 29.972 196.85 90)
 			(hide yes)
 			(show_name no)
@@ -15626,6 +15725,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 31.75 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0736K5L"
 			(at 31.75 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -15940,7 +16050,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 243.5352 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -16474,7 +16584,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 173.99 265.1252 0)
 			(hide yes)
 			(show_name no)
@@ -16530,6 +16640,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 177.8 264.16 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A105KA8NNNC"
 			(at 177.8 264.16 90)
 			(hide yes)
 			(show_name no)
@@ -17122,7 +17243,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 113.792 208.28 90)
 			(hide yes)
 			(show_name no)
@@ -17178,6 +17299,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 115.57 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0710KL"
 			(at 115.57 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -17614,7 +17746,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 105.1052 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -17670,6 +17802,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 104.14 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B473KB8NNNC"
 			(at 104.14 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -17962,7 +18105,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 21.2852 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -18018,6 +18161,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 20.32 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B473KB8NNNC"
 			(at 20.32 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -18155,7 +18309,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "components:CAP_0603_CL10A_1P6XP8_SAM"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 227.0252 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -18453,7 +18607,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 29.972 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -18519,6 +18673,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC0603FR-0710KL"
+			(at 31.75 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6241989b-ff23-4f4d-943b-b72523c684a8")
 		)
@@ -18568,7 +18733,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "components:RC0402N_PAN"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 296.672 86.36 90)
 			(hide yes)
 			(show_name no)
@@ -18819,7 +18984,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 267.462 261.62 90)
 			(hide yes)
 			(show_name no)
@@ -18875,6 +19040,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 269.24 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-074K7L"
 			(at 269.24 261.62 0)
 			(hide yes)
 			(show_name no)

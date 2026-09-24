@@ -52,7 +52,6 @@ sym-lib-cache
 
 # Texas Instruments restricted files
 # → Users should download directly from ti.com under their terms
-*.pdf
 *.xlsx
 *.xlsm
 *.docx

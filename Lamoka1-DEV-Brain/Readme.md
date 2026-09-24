@@ -1,3 +1,12 @@
+
+<p align="center">
+  <img src="Images/Lamoka1-DEV-Brain-image.webp" alt="Lamoka1 DEV Brain" width="700">
+</p>
+
+ Lamoka1-DEV-Brain image, This board can now be ordered [here](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html). PIE versions v1.8 and below will function on this board, for more information on PIE go [here](SOFTWARE/README.md). Interactive BOM can be reached [here](Lamoka1-DEV-Brain/Kicad files/BOM/Lamoka1-DEV-Brain.html).
+
+---
+
 > [!CAUTION]
 > This device is purely for testing. Many decisions were made due to cost and time constraints. The component layout does not follow Raspberry Pi’s recommended layout guidance. Utilize these files at your own discretion.
 
@@ -20,5 +29,8 @@ We need a easy platform to better understand how and where to work on the Lamoka
 
  We have published the board to PCBway's share projects platform [here](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html). There you will be able to order the Lamoka1-DEV-Brain exactly as we did. 
 
+## Tests
+
+We were able to run the Lamoka1-DEV-Brain for 72 hours running the idle blue dot bouncing animation seen in PIE v1.8. The enviroment was an average of 70 degrees farinheight, and an average humidity of 70 percent. We stopped the test early (there were no signs of issues) because we needed to use the Lamoka1-DEV-Brain to test html file creation concept for getting diagnostic data on the Lamoka1. 
 
 
