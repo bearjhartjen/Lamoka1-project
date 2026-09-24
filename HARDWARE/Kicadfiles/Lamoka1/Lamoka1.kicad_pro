@@ -631,7 +631,7 @@
           "show": false
         }
       ],
-      "filter_string": "q2",
+      "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
@@ -687,7 +687,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "Ruvt1,X1,U1-10,SW1-2,Cout1-3,Dbst1,Rfbt1,TP1-41,Cres1,Cvin1,Rt1,Rvin1,Ruvb1,IC1,Rfbb1,Cin1,Rcomp1,Q1-6,Cbst1,Css1,C1-33,#G1-4,J1-7,D1-12,CR1-2,L1-3,Rslope1,R1-33,#PWR1-72,Coutx1,NT1-2,Rsense1,Cvcc1,Ccomp1",
+    "used_designators": "Rslope1,L1-3,R1-33,CR1-2,D1-12,Rfbt1,Dbst1,Cout1-3,Cres1,TP1-41,Rt1,Cvin1,Rsense1,NT1-2,Ccomp1,Cvcc1,SW1-2,U1-10,X1,Ruvt1,IC1,Ruvb1,Rfbb1,Cin1,Rcomp1,Q1-6,#PWR1-72,Coutx1,Rvin1,H1-8,Cbst1,Css1,C1-33,J1-7,#G1-4",
     "variants": []
   },
   "sheets": [

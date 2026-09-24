@@ -2819,7 +2819,7 @@
 		(uuid "794927eb-43b7-4fd8-88d1-474d96426eed")
 	)
 	(junction
-		(at 226.06 120.65)
+		(at 227.33 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cfdf7ab-39fd-42ad-a26e-06cf9b655d7e")
@@ -2849,7 +2849,7 @@
 		(uuid "a32aad7c-821e-4ba4-85f1-4965d3195af0")
 	)
 	(junction
-		(at 208.28 120.65)
+		(at 209.55 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a6240385-b311-4494-86d6-0bc89734977d")
@@ -2914,7 +2914,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 111.76) (xy 208.28 113.03)
+			(xy 209.55 78.74) (xy 209.55 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3044,23 +3044,13 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 111.76) (xy 226.06 113.03)
+			(xy 227.33 78.74) (xy 227.33 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "10eaefad-85c0-4684-8180-25566860a830")
-	)
-	(wire
-		(pts
-			(xy 209.55 81.28) (xy 212.09 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12cbbd8d-516e-45dd-8fa1-f8c8e8d26666")
 	)
 	(wire
 		(pts
@@ -3074,7 +3064,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 120.65) (xy 208.28 120.65)
+			(xy 208.28 87.63) (xy 209.55 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3204,16 +3194,6 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 99.06) (xy 219.71 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27b9f914-f977-4f6a-bec9-b3199bfb2eb2")
-	)
-	(wire
-		(pts
 			(xy 64.77 38.1) (xy 78.74 38.1)
 		)
 		(stroke
@@ -3234,23 +3214,13 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 129.54) (xy 208.28 128.27)
+			(xy 209.55 96.52) (xy 209.55 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2aacd4ce-655d-446c-8052-687a68239874")
-	)
-	(wire
-		(pts
-			(xy 209.55 99.06) (xy 212.09 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c128ff6-0487-4885-b3fe-1b84c19eff8d")
 	)
 	(wire
 		(pts
@@ -3301,16 +3271,6 @@
 			(type default)
 		)
 		(uuid "3b69ee39-8b9c-4356-9c45-73de6d1b865b")
-	)
-	(wire
-		(pts
-			(xy 209.55 90.17) (xy 212.09 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d723b38-bb95-4a51-a0fe-31e4ebb4ee96")
 	)
 	(wire
 		(pts
@@ -3604,7 +3564,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 129.54) (xy 226.06 128.27)
+			(xy 227.33 96.52) (xy 227.33 95.25)
 		)
 		(stroke
 			(width 0)
@@ -3621,16 +3581,6 @@
 			(type default)
 		)
 		(uuid "8a96fa7c-d29e-4df4-9f23-f0d6f44d90ab")
-	)
-	(wire
-		(pts
-			(xy 220.98 107.95) (xy 219.71 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b86796c-321c-48cc-90b9-31c52b2e66c1")
 	)
 	(wire
 		(pts
@@ -3804,7 +3754,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 120.65) (xy 226.06 120.65)
+			(xy 226.06 87.63) (xy 227.33 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3844,16 +3794,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 107.95) (xy 212.09 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d082eb17-ea3a-4837-8412-92213acefa7e")
-	)
-	(wire
-		(pts
 			(xy 213.36 33.02) (xy 213.36 34.29)
 		)
 		(stroke
@@ -3871,16 +3811,6 @@
 			(type default)
 		)
 		(uuid "d9aa58da-7bb5-4c70-874f-1509dbecfc1d")
-	)
-	(wire
-		(pts
-			(xy 220.98 90.17) (xy 219.71 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dccff702-0657-44a1-9eef-0290a6342a81")
 	)
 	(wire
 		(pts
@@ -3984,16 +3914,6 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 81.28) (xy 219.71 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2f60945-ced7-4b61-b72a-3d83a7a97e25")
-	)
-	(wire
-		(pts
 			(xy 262.89 71.12) (xy 265.43 71.12)
 		)
 		(stroke
@@ -4083,16 +4003,6 @@
 		(uuid "1d8b0fc5-469f-4dca-9fdb-16e349842cd8")
 	)
 	(label "Q5S"
-		(at 209.55 99.06 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "29306a8c-19d8-41d8-9450-3d0ec93e9407")
-	)
-	(label "Q5S"
 		(at 250.19 54.61 180)
 		(effects
 			(font
@@ -4111,16 +4021,6 @@
 			(justify left bottom)
 		)
 		(uuid "324578e9-fb3d-45ae-89d7-a6ceb1a36f28")
-	)
-	(label "G4S"
-		(at 209.55 90.17 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "388e07bf-9145-4009-9f78-224444b8cc01")
 	)
 	(label "VCC"
 		(at 38.1 101.6 180)
@@ -4152,18 +4052,8 @@
 		)
 		(uuid "4078f8c8-38c9-4532-ae69-8e81b4406502")
 	)
-	(label "Q6G"
-		(at 220.98 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4127b6b1-316e-4c99-bfcc-e8dfb7e4d081")
-	)
 	(label "HB1"
-		(at 207.01 120.65 180)
+		(at 208.28 87.63 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4403,7 +4293,7 @@
 		(uuid "91eff866-4aa4-4f97-8df8-b62259d0b6c2")
 	)
 	(label "LO1"
-		(at 243.84 95.25 0)
+		(at 224.79 106.68 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4452,16 +4342,6 @@
 		)
 		(uuid "9c7a11b2-48ac-496c-ae54-598e1ee18446")
 	)
-	(label "Q4G"
-		(at 220.98 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9d12b380-9d27-4dbb-9a63-45ab98a59619")
-	)
 	(label "G4S"
 		(at 228.6 41.91 180)
 		(effects
@@ -4473,7 +4353,7 @@
 		(uuid "a0fa16ac-3b64-4e41-aaba-7e15192a5a43")
 	)
 	(label "HB2"
-		(at 224.79 120.65 180)
+		(at 226.06 87.63 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4521,16 +4401,6 @@
 			(justify right bottom)
 		)
 		(uuid "a7fcef01-8e49-41af-821e-732c701fa2b7")
-	)
-	(label "Q3S"
-		(at 209.55 81.28 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a9cca43d-9738-46a9-91b2-2840adaedff2")
 	)
 	(label "SYNCIN_RT"
 		(at 36.83 68.58 180)
@@ -4583,7 +4453,7 @@
 		(uuid "be53f91a-f6e6-4327-b0a7-ecb24b656b15")
 	)
 	(label "LO2"
-		(at 243.84 106.68 0)
+		(at 224.79 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4592,18 +4462,8 @@
 		)
 		(uuid "be91d86d-b79d-4be4-a2bf-62b23ddd6914")
 	)
-	(label "Q3G"
-		(at 220.98 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c224710b-8a74-46ae-80b9-99c8579a9034")
-	)
 	(label "Q5G"
-		(at 236.22 95.25 180)
+		(at 217.17 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4643,7 +4503,7 @@
 		(uuid "cc30b10d-3321-4d1b-bc16-afcff19531f7")
 	)
 	(label "Q6G"
-		(at 236.22 106.68 180)
+		(at 217.17 118.11 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4672,16 +4532,6 @@
 		)
 		(uuid "d2ba885c-e289-4109-b852-86da3f1769e6")
 	)
-	(label "Q5G"
-		(at 220.98 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d4426c38-4b42-43b8-be7d-7ca909943bed")
-	)
 	(label "Q6S"
 		(at 227.33 59.69 180)
 		(effects
@@ -4691,16 +4541,6 @@
 			(justify right bottom)
 		)
 		(uuid "da1be40d-01b6-4c97-ba5a-2f7e1d6ede9a")
-	)
-	(label "Q6S"
-		(at 209.55 107.95 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "dd2e3b65-6727-4434-9ff2-2461ea2c333e")
 	)
 	(label "CSP"
 		(at 86.36 38.1 90)
@@ -4831,7 +4671,7 @@
 	)
 	(hierarchical_label "SW_A"
 		(shape input)
-		(at 208.28 129.54 180)
+		(at 209.55 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4842,7 +4682,7 @@
 	)
 	(hierarchical_label "11-14v input"
 		(shape input)
-		(at 226.06 111.76 0)
+		(at 227.33 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4853,7 +4693,7 @@
 	)
 	(hierarchical_label "11-14v input"
 		(shape input)
-		(at 208.28 111.76 0)
+		(at 209.55 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4930,7 +4770,7 @@
 	)
 	(hierarchical_label "SW_B"
 		(shape input)
-		(at 226.06 129.54 180)
+		(at 227.33 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5059,7 +4899,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "UCC27735DR:SOIC_14L_TEX"
 			(at 265.43 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -5221,7 +5061,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:TO254P1036X470X1965-3"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 215.9 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5311,119 +5151,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 215.9 81.28 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "09be59df-01ca-45ba-9402-9aa24cca956c")
-		(property "Reference" "R13"
-			(at 215.9 74.93 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 215.9 77.47 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 83.058 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 215.9 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 215.9 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 215.9 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 215.9 81.28 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "9691d71f-7f02-431c-84d6-820a9016ae17")
-		)
-		(pin "1"
-			(uuid "ff190951-55ff-4624-816c-5d3dfc523ef4")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -5763,7 +5490,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 240.03 95.25 90)
+		(at 220.98 106.68 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5773,7 +5500,7 @@
 		(dnp no)
 		(uuid "124f89e7-aa61-4c9f-8731-c43a2bfa242d")
 		(property "Reference" "R10"
-			(at 242.189 92.837 90)
+			(at 223.139 104.267 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5783,8 +5510,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 240.919 90.805 90)
+		(property "Value" "10"
+			(at 221.869 102.235 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5794,8 +5521,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 240.03 97.028 90)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 220.98 108.458 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5806,7 +5533,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 95.25 0)
+			(at 220.98 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5817,7 +5544,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 240.03 95.25 0)
+			(at 220.98 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5828,7 +5555,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 240.03 95.25 90)
+			(at 220.98 106.68 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5839,7 +5566,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 240.03 95.25 90)
+			(at 220.98 106.68 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5850,7 +5577,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 240.03 95.25 90)
+			(at 220.98 106.68 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5907,7 +5634,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:TO254P1036X470X1965-3"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 236.22 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -6004,7 +5731,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 226.06 124.46 0)
+		(at 227.33 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6015,7 +5742,7 @@
 		(fields_autoplaced yes)
 		(uuid "1a0aee57-3ea5-4159-ab0c-54b8f64ec08e")
 		(property "Reference" "C23"
-			(at 229.87 123.1899 0)
+			(at 231.14 90.1699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6025,8 +5752,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 229.87 125.7299 0)
+		(property "Value" "1uF"
+			(at 231.14 92.7099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6036,8 +5763,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 227.0252 128.27 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 228.2952 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6048,7 +5775,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 124.46 0)
+			(at 227.33 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6059,7 +5786,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 226.06 124.46 0)
+			(at 227.33 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6070,7 +5797,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 226.06 124.46 0)
+			(at 227.33 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6081,7 +5808,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 226.06 124.46 0)
+			(at 227.33 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6092,7 +5819,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 226.06 124.46 0)
+			(at 227.33 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6197,7 +5924,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 208.28 124.46 0)
+		(at 209.55 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6208,7 +5935,7 @@
 		(fields_autoplaced yes)
 		(uuid "23c66dca-091f-407d-acb9-c6c4a26da9f9")
 		(property "Reference" "C22"
-			(at 212.09 123.1899 0)
+			(at 213.36 90.1699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6218,8 +5945,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 212.09 125.7299 0)
+		(property "Value" "1uF"
+			(at 213.36 92.7099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6229,8 +5956,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 209.2452 128.27 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 210.5152 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6241,7 +5968,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 124.46 0)
+			(at 209.55 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6252,7 +5979,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 208.28 124.46 0)
+			(at 209.55 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6263,7 +5990,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 208.28 124.46 0)
+			(at 209.55 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6274,7 +6001,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 208.28 124.46 0)
+			(at 209.55 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6285,7 +6012,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 208.28 124.46 0)
+			(at 209.55 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6507,119 +6234,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Ccomp2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 215.9 99.06 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2717aa17-cb08-43d4-8e39-f5d044c8f98e")
-		(property "Reference" "R15"
-			(at 215.9 92.71 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 215.9 95.25 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 100.838 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 215.9 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 215.9 99.06 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 215.9 99.06 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 215.9 99.06 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "82a27faa-d72a-47bc-93a5-7f67d8f3408e")
-		)
-		(pin "1"
-			(uuid "38153881-cb2b-4dc2-870b-2bd4b94eee3a")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -6932,7 +6546,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "10"
 			(at 317.5 72.39 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6942,7 +6556,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 317.5 77.978 90)
 			(hide yes)
 			(show_name no)
@@ -7305,7 +6919,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:TO254P1036X470X1965-3"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 215.9 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -7788,119 +7402,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 215.9 90.17 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "50551633-8b5a-4a89-9dde-4112ddc132fa")
-		(property "Reference" "R14"
-			(at 215.9 83.82 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 215.9 86.36 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 91.948 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 215.9 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 215.9 90.17 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 215.9 90.17 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 215.9 90.17 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c73df9e9-a90f-4cf2-b7e1-868c11f955d4")
-		)
-		(pin "1"
-			(uuid "1dc30aad-ef08-43b2-a555-81262ec69d5e")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "R14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 149.86 81.28 90)
 		(unit 1)
@@ -8046,7 +7547,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "10"
 			(at 318.77 105.41 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8056,7 +7557,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 318.77 110.998 90)
 			(hide yes)
 			(show_name no)
@@ -8418,121 +7919,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 215.9 107.95 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "62e3b1ed-73be-49b5-941f-04880ec90e3e")
-		(property "Reference" "R16"
-			(at 215.9 101.6 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 215.9 104.14 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 109.728 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 215.9 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 215.9 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 215.9 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 215.9 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "14a92245-f62a-4080-8ac1-8701066e2be0")
-		)
-		(pin "1"
-			(uuid "d970e704-a94e-483e-9c9c-8cdfa3eb3cf0")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D")
-		(at 226.06 116.84 90)
+		(at 227.33 83.82 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8543,7 +7931,7 @@
 		(fields_autoplaced yes)
 		(uuid "65aa6e57-6aec-4a62-9635-8386ce1dbbc0")
 		(property "Reference" "D12"
-			(at 228.6 115.5699 90)
+			(at 229.87 82.5499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8554,7 +7942,7 @@
 			)
 		)
 		(property "Value" "D"
-			(at 228.6 118.1099 90)
+			(at 229.87 85.0899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8564,8 +7952,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 226.06 116.84 0)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 227.33 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8576,7 +7964,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 116.84 0)
+			(at 227.33 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8587,7 +7975,7 @@
 			)
 		)
 		(property "Description" "Diode"
-			(at 226.06 116.84 0)
+			(at 227.33 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8598,7 +7986,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 226.06 116.84 90)
+			(at 227.33 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8609,7 +7997,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 226.06 116.84 90)
+			(at 227.33 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8620,7 +8008,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 226.06 116.84 90)
+			(at 227.33 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9837,7 +9225,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 240.03 106.68 90)
+		(at 220.98 118.11 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9847,7 +9235,7 @@
 		(dnp no)
 		(uuid "93a03bd0-7b77-4527-aa13-aa96eb2d7496")
 		(property "Reference" "R12"
-			(at 242.189 104.267 90)
+			(at 223.139 115.697 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9857,8 +9245,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 240.919 102.235 90)
+		(property "Value" "10"
+			(at 221.869 113.665 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9868,8 +9256,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 240.03 108.458 90)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 220.98 119.888 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9880,7 +9268,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 106.68 0)
+			(at 220.98 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9891,7 +9279,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 240.03 106.68 0)
+			(at 220.98 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9902,7 +9290,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 240.03 106.68 90)
+			(at 220.98 118.11 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9913,7 +9301,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 240.03 106.68 90)
+			(at 220.98 118.11 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9924,7 +9312,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 240.03 106.68 90)
+			(at 220.98 118.11 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9981,7 +9369,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "UCC27735DR:SOIC_14L_TEX"
 			(at 265.43 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -10501,7 +9889,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Components for Lamoka1 general:TO254P1036X470X1965-3"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 236.22 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -11913,7 +11301,7 @@
 	)
 	(symbol
 		(lib_id "Device:D")
-		(at 208.28 116.84 90)
+		(at 209.55 83.82 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11924,7 +11312,7 @@
 		(fields_autoplaced yes)
 		(uuid "fb8cdd87-1887-469c-8624-677e3695d766")
 		(property "Reference" "D11"
-			(at 210.82 115.5699 90)
+			(at 212.09 82.5499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11935,7 +11323,7 @@
 			)
 		)
 		(property "Value" "D"
-			(at 210.82 118.1099 90)
+			(at 212.09 85.0899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11945,8 +11333,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 208.28 116.84 0)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 209.55 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11957,7 +11345,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 116.84 0)
+			(at 209.55 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11968,7 +11356,7 @@
 			)
 		)
 		(property "Description" "Diode"
-			(at 208.28 116.84 0)
+			(at 209.55 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11979,7 +11367,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 208.28 116.84 90)
+			(at 209.55 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11990,7 +11378,7 @@
 			)
 		)
 		(property "KLC_S4.2_DVDD" ""
-			(at 208.28 116.84 90)
+			(at 209.55 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12001,7 +11389,7 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
-			(at 208.28 116.84 90)
+			(at 209.55 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

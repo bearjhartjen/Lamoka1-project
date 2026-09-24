@@ -20,4 +20,5 @@
 	(lib (name "LM5122QMHX-NOPB") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_LM5122QMHX-NOPB/KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "CSD16323Q3") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_CSD16323Q3/KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "CSD17304Q3") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_CSD17304Q3/KiCADv6/footprints.pretty") (options "") (descr ""))
+	(lib (name "UCC27735DR") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_UCC27735DR/KiCADv6/footprints.pretty/") (options "") (descr ""))
 )
