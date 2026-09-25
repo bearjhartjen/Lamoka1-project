@@ -1,9 +1,30 @@
-
 <p align="center">
-  <img src="Images/Lamoka1-DEV-Brain-image.webp" alt="Lamoka1 DEV Brain" width="700">
+  <img
+    src="https://raw.githubusercontent.com/bearjhartjen/Lamoka1-project/Lamoka1/Images/Lamoka1-DEV-Brain-image.webp"
+    alt="Lamoka1 DEV Brain"
+    width="700"
+  >
 </p>
 
- Lamoka1-DEV-Brain image, This board can now be ordered [here](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html). PIE versions v1.8 and below will function on this board, for more information on PIE go [here](SOFTWARE/README.md). Interactive BOM can be reached [here](Lamoka1-DEV-Brain/Kicad files/BOM/Lamoka1-DEV-Brain.html).
+<p align="center">
+  <strong>Lamoka1-DEV-Brain</strong>
+</p>
+
+<p align="center">
+  This board can now be ordered
+  <a href="https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html">here</a>.
+</p>
+
+<p align="center">
+  PIE versions v1.8 and below will function on this board.
+  For more information on PIE, go <a href="SOFTWARE/README.md">here</a>.
+</p>
+
+<p align="center">
+  <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/bearjhartjen/Lamoka1-project/Lamoka1/Lamoka1-DEV-Brain/Kicad%20files/BOM/Lamoka1-DEV-Brain.html">
+    <strong>View Interactive BOM</strong>
+  </a>
+</p>
 
 ---
 
