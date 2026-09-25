@@ -17,7 +17,8 @@
 
 <p align="center">
   PIE versions v1.8 and below will function on this board.
-  For more information on PIE, go <a href="SOFTWARE/README.md">here</a>.
+  For more information on PIE, go
+  <a href="../SOFTWARE/README.md">here</a>.
 </p>
 
 <p align="center">
@@ -25,6 +26,7 @@
     <strong>View Interactive BOM</strong>
   </a>
 </p>
+
 
 ---
 
