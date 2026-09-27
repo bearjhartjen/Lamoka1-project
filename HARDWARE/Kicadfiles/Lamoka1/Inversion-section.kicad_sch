@@ -2710,11 +2710,21 @@
 		)
 		(uuid "5822e9d7-ae97-40b9-9a38-a805a8836b02")
 	)
+	(text "rp2354a gpio"
+		(exclude_from_sim no)
+		(at 87.63 109.982 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a7604e24-92bd-4f09-a593-a79bb0cf7016")
+	)
 	(junction
-		(at 82.55 129.54)
+		(at 82.55 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "02ebe44c-d7eb-4af1-9f96-881b1174ec3d")
+		(uuid "011ed885-bc16-48f7-a7a0-c906dc7f0a49")
 	)
 	(junction
 		(at 171.45 38.1)
@@ -2829,6 +2839,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "95fae3cb-0365-421a-b65d-20c33d8ed442")
+	)
+	(junction
+		(at 76.2 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9bbaeb37-93c7-40ef-82da-6910c93ca1b7")
 	)
 	(junction
 		(at 153.67 81.28)
@@ -3024,7 +3040,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 127) (xy 76.2 132.08)
+			(xy 76.2 127) (xy 76.2 129.54)
 		)
 		(stroke
 			(width 0)
@@ -3254,7 +3270,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 129.54) (xy 82.55 121.92)
+			(xy 82.55 121.92) (xy 82.55 124.46)
 		)
 		(stroke
 			(width 0)
@@ -3414,16 +3430,6 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 129.54) (xy 82.55 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67992279-4471-49da-bb80-451c2e54686f")
-	)
-	(wire
-		(pts
 			(xy 233.68 157.48) (xy 223.52 157.48)
 		)
 		(stroke
@@ -3461,16 +3467,6 @@
 			(type default)
 		)
 		(uuid "6e61c947-af7b-45a2-9acc-db9e94c88c7f")
-	)
-	(wire
-		(pts
-			(xy 82.55 129.54) (xy 82.55 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "71535883-85d5-47e8-a408-81a0c9b758be")
 	)
 	(wire
 		(pts
@@ -3531,6 +3527,16 @@
 			(type default)
 		)
 		(uuid "7fa072b7-10a6-405a-a124-e39a7c29d7a3")
+	)
+	(wire
+		(pts
+			(xy 76.2 129.54) (xy 76.2 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81a4883a-dee3-4ca8-a67b-121c04c64ad3")
 	)
 	(wire
 		(pts
@@ -3631,6 +3637,16 @@
 			(type default)
 		)
 		(uuid "9712b169-9b8a-4ad8-bdb3-ec0bb65e1988")
+	)
+	(wire
+		(pts
+			(xy 73.66 129.54) (xy 76.2 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f6fb1a3-5204-4c23-ab4b-cfd9cb836ac3")
 	)
 	(wire
 		(pts
@@ -3791,6 +3807,16 @@
 			(type default)
 		)
 		(uuid "cba475b0-70b4-496a-bdf7-21a4e44be917")
+	)
+	(wire
+		(pts
+			(xy 82.55 124.46) (xy 82.55 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce8a96b4-bc12-4f91-b84b-6bffd13ed60e")
 	)
 	(wire
 		(pts
@@ -4679,6 +4705,17 @@
 			(justify right)
 		)
 		(uuid "4921f42a-ef79-4e8b-864d-59b082558c58")
+	)
+	(hierarchical_label "3v3"
+		(shape input)
+		(at 92.71 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4b2b6dd0-8eec-496a-ab13-84e76667c551")
 	)
 	(hierarchical_label "11-14v input"
 		(shape input)
@@ -8034,6 +8071,122 @@
 		)
 	)
 	(symbol
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 87.63 121.92 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6ad37932-f987-4034-99b8-3ec07aaf3d62")
+		(property "Reference" "Q7"
+			(at 87.63 128.27 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NMOS"
+			(at 87.63 130.81 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Nordic_AQFN-94-1EP_7x7mm_P0.4mm"
+			(at 90.17 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+			(at 74.93 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 87.63 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 70.485 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 68.58 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 72.39 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "32201e74-f34f-4d7a-bd6d-0fe9586fe80e")
+		)
+		(pin "2"
+			(uuid "8bcce1cc-1d4b-4792-a8ab-f6b8c0cd4735")
+		)
+		(pin "1"
+			(uuid "6f2e9896-495b-4b77-8d7b-86892d614b54")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 129.54 58.42 0)
 		(unit 1)
@@ -10105,6 +10258,88 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rt1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 92.71 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9c7eb8a-fc9f-4e16-9862-8eff2c9a72ff")
+		(property "Reference" "R13"
+			(at 95.25 119.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 95.25 121.9199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.932 120.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 92.71 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0bfba0b7-4c44-438a-82ae-4278d7ef8860")
+		)
+		(pin "1"
+			(uuid "ad5d4709-35f8-4f65-aa14-34e0f247947f")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "R13")
 					(unit 1)
 				)
 			)

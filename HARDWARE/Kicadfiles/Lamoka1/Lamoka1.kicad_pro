@@ -69,7 +69,13 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -140,22 +146,22 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.15,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.4,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.25,
+        "min_hole_clearance": 0.2,
+        "min_hole_to_hole": 0.4,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
-        "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_resolved_spokes": 1,
+        "min_silk_clearance": 0.15,
+        "min_text_height": 0.9,
+        "min_text_thickness": 0.12,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
-        "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_track_width": 0.15,
+        "min_via_annular_width": 0.15,
+        "min_via_diameter": 0.6,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -203,7 +209,9 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +238,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -687,7 +700,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "Ruvt1,X1,U1-10,SW1-2,Cvcc1,Ccomp1,Cbst1,TP1-41,Cres1,Cvin1,Rt1,Cout1-3,Dbst1,Rfbt1,Rfbb1,Cin1,Rcomp1,Q1-6,#PWR1-72,Coutx1,Css1,C1-33,#G1-4,J1-7,D1-12,CR1-2,L1-3,Rslope1,R1-33,Rsense1,NT1-2,IC1,Ruvb1,Rvin1,H1-8",
+    "used_designators": "X1,U1-10,H1-8,Rvin1,NT1-2,Rsense1,Rfbt1,Dbst1,Cout1-3,Cin1,Rfbb1,Coutx1,#PWR1-72,SW1-2,Cvcc1,Ccomp1,IC1,Ruvb1,Ruvt1,Rcomp1,Q1-7,C1-33,#G1-4,J1-7,D1-12,CR1-2,Css1,Cbst1,L1-3,Rslope1,R1-33,Cvin1,Rt1,TP1-41,Cres1",
     "variants": []
   },
   "sheets": [
