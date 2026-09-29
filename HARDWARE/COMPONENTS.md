@@ -1,4 +1,4 @@
-## Exact manufacturer part numbers used in schematic explained in plain english (component alternatives might be used) 
+## Exact manufacturer part numbers used in schematic explained in plain english (component alternatives may be used) 
 
 > [!Warning]
 > This is not verified to be the full BOM for the Lamoka1, for all components please refer to the official BOM. This is purely for reference and learning not to be used as a BOM

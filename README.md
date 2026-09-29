@@ -1,13 +1,17 @@
-
-
 <div align="center">
-  <a href="https://www.repo-grade.com/report/bearjhartjen/lamoka1-project">
-    <img src="https://www.repo-grade.com/api/badge/bearjhartjen/lamoka1-project" alt="RepoGrade">
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.bestpractices.dev/projects/14750">
-    <img src="https://www.bestpractices.dev/projects/14750/badge" alt="OpenSSF Best Practices">
-  </a>
+
+<img src="Images/Lamoka1-half.png" alt="Lamoka1/2 main PCB" width="820">
+
+<br>
+
+<a href="https://www.bestpractices.dev/projects/14750">
+  <img src="https://www.bestpractices.dev/projects/14750/badge" alt="OpenSSF Best Practices" height="22">
+</a>
+&nbsp;&nbsp;
+<a href="https://www.repo-grade.com/report/bearjhartjen/lamoka1-project">
+  <img src="https://www.repo-grade.com/api/badge/bearjhartjen/lamoka1-project" alt="RepoGrade" height="22">
+</a>
+
 </div>
 
 ---

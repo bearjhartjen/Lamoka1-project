@@ -1,0 +1,8 @@
+(version 1)
+
+# Mouse-bite panel tabs MTB1-3: NPTH breakaway holes sit on the board edge
+# and intentionally violate the board-wide 0.2mm hole-to-copper rule.
+# Copper pullback around bites is ~0.125mm, fine for tab-route breakout.
+(rule "mousebite hole clearance"
+  (condition "A.Reference == 'MTB*' || B.Reference == 'MTB*'")
+  (constraint hole_clearance (min 0.1mm)))

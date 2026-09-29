@@ -1,0 +1,109 @@
+ERC report (2026-09-29T19:10:18, Encoding UTF8)
+Report includes: Errors
+
+***** Sheet /
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(5650 mils, 1000 mils): Symbol #PWR046 Pin 1 [Power input, Line]
+
+***** Sheet /Control-Section/
+[pin_to_pin]: Pins of type Output and Output are connected
+    ; error
+    @(3200 mils, 5750 mils): Symbol U2 Pin 2 [VOUT, Output, Line]
+    @(4800 mils, 5650 mils): Symbol U2 Pin 4 [VOUT, Output, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(4800 mils, 5750 mils): Symbol U2 Pin 3 [VIN, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(7050 mils, 2150 mils): Symbol U1 Pin 46 [VREG_AVDD, Power input, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(7300 mils, 10000 mils): Symbol U10 Pin 4 [AIN5/GPIO5, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(7300 mils, 10100 mils): Symbol U10 Pin 5 [AIN6/GPIO6, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(7300 mils, 10200 mils): Symbol U10 Pin 6 [AIN7/GPIO7, Bidirectional, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(7300 mils, 10400 mils): Symbol U10 Pin 8 [DECAP, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(7650 mils, 2150 mils): Symbol U1 Pin 1 [IOVDD, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(7650 mils, 5750 mils): Symbol U1 Pin 47 [VREG_PGND, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(8250 mils, 2150 mils): Symbol U1 Pin 6 [DVDD, Power input, Line]
+[pin_to_pin]: Pins of type Power output and Power output are connected
+    ; error
+    @(9900 mils, 9700 mils): Symbol U10 Pin 17 [GND, Power output, Line]
+    @(3200 mils, 5650 mils): Symbol U2 Pin 1 [GND, Power output, Line]
+[pin_to_pin]: Pins of type Power output and Power output are connected
+    ; error
+    @(9900 mils, 10500 mils): Symbol U10 Pin 9 [GND, Power output, Line]
+    @(9900 mils, 9700 mils): Symbol U10 Pin 17 [GND, Power output, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(12450 mils, 5600 mils): Symbol U7 Pin 8 [PG, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(12450 mils, 5800 mils): Symbol U7 Pin 6 [VOS, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(12450 mils, 5900 mils): Symbol U7 Pin 5 [FB, Input, Line]
+
+***** Sheet /Inversion-Section/
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(1500 mils, 3800 mils): Symbol U4 Pin 20 [BST, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(1500 mils, 4000 mils): Symbol U4 Pin 17 [VCC, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(1500 mils, 4500 mils): Symbol U4 Pin 5 [VIN, Power input, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(1500 mils, 5100 mils): Symbol U4 Pin 1 [SYNCOUT, Output, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(2900 mils, 4000 mils): Symbol U4 Pin 16 [LO, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(2900 mils, 4100 mils): Symbol U4 Pin 19 [HO, Power input, Line]
+[pin_to_pin]: Pins of type Power output and Power output are connected
+    ; error
+    @(10450 mils, 3000 mils): Symbol U5 Pin 3 [VSS, Power output, Line]
+    @(3200 mils, 5650 mils): Symbol U2 Pin 1 [GND, Power output, Line]
+[pin_to_pin]: Pins of type Output and Power output are connected
+    ; error
+    @(10450 mils, 3200 mils): Symbol U5 Pin 5 [COM, Output, Line]
+    @(10450 mils, 3000 mils): Symbol U5 Pin 3 [VSS, Power output, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(10450 mils, 3400 mils): Symbol U5 Pin 7 [VDD, Power input, Line]
+[pin_to_pin]: Pins of type Power output and Power output are connected
+    ; error
+    @(10450 mils, 4300 mils): Symbol U6 Pin 3 [VSS, Power output, Line]
+    @(10450 mils, 3000 mils): Symbol U5 Pin 3 [VSS, Power output, Line]
+[pin_to_pin]: Pins of type Output and Power output are connected
+    ; error
+    @(10450 mils, 4500 mils): Symbol U6 Pin 5 [COM, Output, Line]
+    @(10450 mils, 4300 mils): Symbol U6 Pin 3 [VSS, Power output, Line]
+
+***** Sheet /User-Interface-Section/
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(3200 mils, 4400 mils): Symbol D1 Pin 1 [VDD, Power input, Line]
+
+ ** ERC messages: 28  Errors 28  Warnings 0
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters
