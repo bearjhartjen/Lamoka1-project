@@ -508,7 +508,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.18,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -700,7 +700,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "U1-10,X1,D1-12,CR1-2,Cin1,Rfbb1,Rfbt1,Cout1-3,Dbst1,SW1-2,Rsense1,NT1-2,TP1-41,Cres1,Cvin1,Rt1,Rvin1,H1-8,Cvcc1,Ccomp1,IC1,Ruvb1,Ruvt1,Rcomp1,Q1-7,C1-33,#PWR1-72,Coutx1,#G1-4,J1-7,Css1,Cbst1,L1-3,Rslope1,R1-33",
+    "used_designators": "X1,U1-10,R1-33,Rslope1,L1-3,Cbst1,Css1,Rfbt1,Dbst1,Cout1-3,Cin1,Rfbb1,TP1-41,Cres1,Cvin1,Rt1,Cvcc1,Ccomp1,Rvin1,H1-8,Rcomp1,Q1-7,IC1,Ruvb1,Ruvt1,C1-33,#G1-4,J1-7,#PWR1-72,Coutx1,SW1-2,NT1-2,Rsense1,CR1-2,D1-12",
     "variants": []
   },
   "sheets": [

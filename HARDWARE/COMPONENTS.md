@@ -43,7 +43,7 @@
 
  Connector for 11-14v DC source: 2606-1352 made by Wago
 
- Outlet for inverter (120v AC North American): SKU Q227-115 made by Delkin technologies
+ Outlet for inverter (120v AC North American): 3-119-054 made by SCHURTER Inc.
 
  Connector for hooking outlet to PCB: 2604-1103 made by Wago
 

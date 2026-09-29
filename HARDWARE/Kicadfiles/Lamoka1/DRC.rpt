@@ -1,0 +1,22 @@
+** Drc report for Lamoka1.kicad_pcb **
+** Created on 2026-09-29T05:55:04 **
+** Report includes: Errors, Exclusions **
+
+** Found 0 DRC violations **
+
+** Found 1 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error (excluded)
+    @(206.3050 mm, 29.6154 mm): Zone 'GND_1' [GND] on F.Cu and B.Cu, priority 0
+    @(178.4899 mm, 29.6450 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
