@@ -1,6 +1,6 @@
 ## Lamoka1 DEV-Brain — PIE Version V1.8
 
-The **Lamoka1 DEV-Brain V1.8** is the Raspberry Pi RP2354A firmware that operates the Lamoka1-DEV-Brain's user interface, ten WS2812B RGB LEDs, and single control button. V1.8 is built around a simple one-button interface, with the button's different press durations and combinations used to navigate menus, select modes, change settings, play the Fireball game, and return to the default idle state.
+The **Lamoka1 DEV-Brain V1.8** is the Raspberry Pi RP2354A firmware that operates the Lamoka1-DEV-Brain's user interface, ten WS2812B RGB LEDs, and a single control button. V1.8 is built around a simple one-button interface, with the button's different press durations and combinations used to navigate menus, select modes, change settings, play the Fireball game, and return to the default idle state.
 
 The firmware is written using Arduino functionality together with the **FastLED** library for LED control and the Raspberry Pi Pico boot ROM interface for USB BOOTSEL mode.
 

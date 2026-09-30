@@ -1,21 +1,21 @@
-## Exact manufacturer part numbers used in schematic explained in plain english (component alternatives may be used) 
+## Exact manufacturer part numbers used in the schematic explained in plain English (component alternatives may be used) 
 
 > [!Warning]
-> This is not verified to be the full BOM for the Lamoka1, for all components please refer to the official BOM. This is purely for reference and learning not to be used as a BOM
+> This is not verified to be the full BOM for the Lamoka1. For all components, please refer to the official BOM. This is purely for reference and learning, not to be used as a BOM.
 
- NMOS for H bridge (Inversion-section): CSD19536KCS made by TI  x4
+ NMOS for H-bridge (Inversion-section): CSD19536KCS made by TI  x4
 
- Transformer (Inversion-section): VPT24-10420 made by Triad magnetics
+ Transformer (Inversion-section): VPT24-10420 made by Triad Magnetics
 
- Main micro controller for full system: RP2354A made by Raspberry pi 
+ Main microcontroller for full system: RP2354A made by Raspberry Pi
 
  Addressable RGB LEDs: WS2812B made by WorldSemi
 
- Low side NMOS for boost converter (Inversion-section): CSD17304Q3 made by TI
+ Low-side NMOS for boost converter (Inversion-section): CSD17304Q3 made by TI
 
- High side NMOS for boost converter (Inversion-section): CSD16323Q3 made by TI
+ High-side NMOS for boost converter (Inversion-section): CSD16323Q3 made by TI
 
- Gate driver for H bridge NMOSs: UCC27735DR made by TI x2
+ Gate driver for H-bridge NMOSs: UCC27735DR made by TI x2
 
  IC for 11-14v to 5v buck converter: TPS62160DSGR made by TI
 
@@ -31,15 +31,15 @@
 
  Bottom resistor for buck converter FB: RC0603FR-07180KL made by Yageo
 
- Top resistor for buck converter FB: CRCW0402953KFKED made by vishay dale
+ Top resistor for buck converter FB: CRCW0402953KFKED made by Vishay Dale
 
- Power good pull up resistor for buck converter: CRCW0402100KFKED made by vishay dale
+ Power-good pull-up resistor for buck converter: CRCW0402100KFKED made by Vishay Dale
 
  Diode for 5v source to eliminate buck output and USB 5v interactions: SS14-E3/61T made by Vishay x2
 
  Temp sensor for unit: TMP235A2DBZR made by TI x2
 
- Connector for transformers connection to the PCB: 2606-1108/010-000 made by Wago
+ Connector for transformer's connection to the PCB: 2606-1108/010-000 made by Wago
 
  Connector for 11-14v DC source: 2606-1352 made by Wago
 
@@ -55,7 +55,7 @@
 
  Converter to go from 5v to 3v3 for control: AMS1117-3.3 made by Advanced Monolithic Systems
 
- Five pin header for connecting main and UI boards: PBC05SAAN made by Sullins Connector Solutions x2
+ Five-pin header for connecting main and UI boards: PBC05SAAN made by Sullins Connector Solutions x2
 
- Five pin female to female cable for connecting main and UI boards: 10375 made by SparkFun electronis
+ Five-pin female-to-female cable for connecting main and UI boards: 10375 made by SparkFun Electronics
 

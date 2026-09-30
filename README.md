@@ -18,12 +18,12 @@
 
 ## Owego Rotary craft fair 
 
- For the Owego Rotary craft fair, taking place at the Elks lodge in Owego, NY, on November 14th from 9am to 3pm, the main project being presented by Flamingo and Cactus will be the Lamoka1/2, a inverter only version of the Lamoka1. More details will be presented after the event. 
+ For the Owego Rotary craft fair, taking place at the Elks Lodge in Owego, NY, on November 14th from 9am to 3pm, the main project being presented by Flamingo and Cactus will be the Lamoka1/2, an inverter-only version of the Lamoka1. More details will be presented after the event. 
 
 
 ## What is the Lamoka1?
 
- The Lamoka 1 is an open-source inverter/charger system designed for complete transparency and control. Unlike market alternatives that are locked-down black boxes, the Lamoka 1 gives you full access to your power conversion. If you don't have technical experience, that's completely fine—our Portal Interface Engine (Lamoka's operating system) provides a solid stock setup. But if you want to get technical, feel free to customize and modify the unit however you like.
+ The Lamoka1 is an open-source inverter/charger system designed for complete transparency and control. Unlike market alternatives that are locked-down black boxes, the Lamoka1 gives you full access to your power conversion. If you don't have technical experience, that's completely fine—our Portal Interface Engine (Lamoka's operating system) provides a solid stock setup. But if you want to get technical, feel free to customize and modify the unit however you like.
 
 ---
 
@@ -31,14 +31,14 @@
 
  The Lamoka1 inverter section takes an 11V–14V input, steps it up to a 17V rail, and feeds it into an H-bridge controlled by an RP2354A microcontroller—giving you total flexibility to program whatever waveform or output you need. From there, it passes into a transformer to step up the voltage.
 
- We are using a high quality Noctua PWM controlled fan, that will derive its speed proportionally from the temperature sensors built onto the unit. The highest temperature will have the highest lien on the fan speed.
+ We are using a high-quality, PWM-controlled Noctua fan that will derive its speed proportionally from the temperature sensors built onto the unit. The highest temperature will have the greatest influence on the fan speed.
 
 ---
 
 ## Usage of AI in this repository 
 
 
-This repository is checked, maintained, and updated by humans. The Lamoka series is not “vibe coded” and blindly applied. Thought, testing, engineering judgment, and practical experience go into every decision made throughout the project.
+This repository is checked, maintained, and updated by humans. The Lamoka series is neither “vibe coded” nor blindly applied. Thought, testing, engineering judgment, and practical experience go into every decision made throughout the project.
 
 AI is used as a tool to help us bridge the gap between our current resources and the scale of what we want to accomplish. It may assist with research, development, documentation, and other aspects of the project, but its output is not treated as inherently correct. Human review, testing, and engineering judgment remain essential to the development process.
 
