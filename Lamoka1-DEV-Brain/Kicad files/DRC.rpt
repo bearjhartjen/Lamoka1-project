@@ -1,0 +1,41 @@
+** Drc report for Lamoka1-DEV-board.kicad_pcb **
+** Created on 2026-09-29T21:09:02 **
+** Report includes: Errors, Exclusions **
+
+** Found 7 DRC violations **
+[malformed_courtyard]: Footprint has malformed courtyard (self-intersecting)
+    Local override; error
+    @(164.3670 mm, 96.7177 mm): Footprint X1
+[malformed_courtyard]: Footprint has malformed courtyard (not a closed shape)
+    Local override; error
+    @(164.3670 mm, 96.7177 mm): Footprint X1
+[malformed_courtyard]: Footprint has malformed courtyard (not a closed shape)
+    Local override; error
+    @(164.3670 mm, 96.7177 mm): Footprint X1
+[malformed_courtyard]: Footprint has malformed courtyard (self-intersecting)
+    Local override; error
+    @(164.3670 mm, 96.7177 mm): Footprint X1
+[malformed_courtyard]: Footprint has malformed courtyard (self-intersecting)
+    Local override; error
+    @(164.3670 mm, 96.7177 mm): Footprint X1
+[clearance]: Clearance violation ( clearance 0.1400 mm; actual 0.1349 mm)
+    Local override; error
+    @(158.9494 mm, 103.2605 mm): Track (arc) [/GPIO6] on F.Cu, length 0.6436 mm
+    @(158.8899 mm, 103.3701 mm): Track (arc) [/GPIO7] on F.Cu, length 0.2827 mm
+[clearance]: Clearance violation ( clearance 0.1400 mm; actual 0.1385 mm)
+    Local override; error
+    @(161.4000 mm, 90.7414 mm): Track [/3V3] on F.Cu, length 0.7530 mm
+    @(160.9368 mm, 90.7787 mm): Track (arc) [/5V] on F.Cu, length 0.6897 mm
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

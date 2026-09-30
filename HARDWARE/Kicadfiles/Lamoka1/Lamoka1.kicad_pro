@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 1.27
+          "drill": 0.0,
+          "height": 2.55,
+          "width": 2.5
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -63,7 +63,7 @@
           "min_clearance": 0.5,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -700,7 +700,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "Ruvb1,IC1,Coutx1,#PWR1-72,J1-7,#G1-4,Dbst1,Rfbt1,Cout1-3,D1-12,CR1-2,Css1,SW1-2,Ccomp1,Cvcc1,L1-3,Rslope1,R1-33,U1-10,X1,TP1-41,Cres1,Cvin1,Rt1,Rfbb1,Cin1,Rsense1,NT1-2,Rvin1,H1-8,Rcomp1,Q1-7,Cbst1,Ruvt1,C1-33",
+    "used_designators": "Rsense1,NT1-2,Cin1,Rfbb1,Rt1,Cvin1,#PWR1-72,Coutx1,Dbst1,Cout1-3,Rfbt1,SW1-2,Rcomp1,Q1-7,Css1,Cbst1,Ruvt1,CR1-2,D1-12,C1-33,#G1-4,J1-7,H1-8,Rvin1,IC1,Ruvb1,Ccomp1,Cvcc1,Rslope1,L1-3,R1-33,U1-10,X1,TP1-41,Cres1",
     "variants": []
   },
   "sheets": [

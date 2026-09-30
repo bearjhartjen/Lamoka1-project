@@ -175,7 +175,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin power_out line
 					(at 0 -2.54 0)
 					(length 7.62)
 					(name "VOUT"
@@ -211,7 +211,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin passive line
 					(at 40.64 0 180)
 					(length 7.62)
 					(name "VOUT"
@@ -1005,7 +1005,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 66.04 -20.32 180)
 					(length 7.62)
 					(name "GND"
@@ -1149,7 +1149,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 66.04 0 180)
 					(length 7.62)
 					(name "GND"
@@ -6407,7 +6407,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin open_collector line
 					(at 50.8 -2.54 180)
 					(length 7.62)
 					(name "PG"
@@ -6556,6 +6556,121 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -7055,6 +7170,10 @@
 		(uuid "1a0f1136-cd04-47d9-a37a-263718547ea9")
 	)
 	(no_connect
+		(at 185.42 256.54)
+		(uuid "1f4bbe49-4eb2-460d-87cb-77c5e14f7e6b")
+	)
+	(no_connect
 		(at 222.25 87.63)
 		(uuid "32f32212-b685-42d7-b817-0ad99d8dd8f9")
 	)
@@ -7081,6 +7200,10 @@
 	(no_connect
 		(at 222.25 138.43)
 		(uuid "44676b36-9d64-4af1-be47-e9dc23dad3d2")
+	)
+	(no_connect
+		(at 185.42 259.08)
+		(uuid "4c023600-cdb4-403f-bd8c-600330609ff5")
 	)
 	(no_connect
 		(at 171.45 133.35)
@@ -7121,6 +7244,10 @@
 	(no_connect
 		(at 222.25 135.89)
 		(uuid "c78cc461-e071-421a-9fba-d1ff4cfd56c1")
+	)
+	(no_connect
+		(at 185.42 254)
+		(uuid "d50dbb59-5059-4e87-9291-c02fe238e767")
 	)
 	(no_connect
 		(at 222.25 110.49)
@@ -10686,6 +10813,85 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 209.55 54.61 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0b3f7434-0d35-4aab-9d4a-a2c137869fb1")
+		(property "Reference" "#FLG05"
+			(at 209.55 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 209.55 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 209.55 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 209.55 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 209.55 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7276f5ca-d6df-48ca-b716-bbea475c6aa2")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#FLG05")
 					(unit 1)
 				)
 			)
@@ -14952,6 +15158,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 181.61 264.16 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7096f77d-8b4a-4285-baaf-776a57f4721d")
+		(property "Reference" "#FLG06"
+			(at 181.61 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 181.61 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 181.61 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8cb8b3f1-ef5d-41bf-987d-ddee60d97b19")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#FLG06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 309.88 93.98 0)
 		(unit 1)
@@ -15878,6 +16163,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 185.42 151.13 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c64d7d5-66e7-4a5a-b895-b1083d12b56f")
+		(property "Reference" "#FLG04"
+			(at 185.42 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 185.42 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 185.42 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "761e7423-52e8-4fac-b522-607e9b6cd1cc")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 31.75 196.85 0)
 		(unit 1)
@@ -16497,6 +16861,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 163.83 52.07 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a9e07bb-de3a-495d-a840-1d07ccdc5a04")
+		(property "Reference" "#FLG03"
+			(at 163.83 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 163.83 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 163.83 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ad31e5b-d83c-40b2-bac5-5d9a9a0a4438")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 31.75 214.63 0)
 		(unit 1)
@@ -16822,6 +17265,85 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 121.92 146.05 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af560982-5a8e-4fdd-9899-f5a175e0ae8c")
+		(property "Reference" "#FLG07"
+			(at 121.92 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 121.92 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 121.92 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "68727ca2-324d-49ee-b3ef-28b792ed16d0")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
+					(reference "#FLG07")
 					(unit 1)
 				)
 			)
