@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 2.55,
-          "width": 2.5
+          "height": 0.64,
+          "width": 0.54
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -155,9 +155,9 @@
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 1,
-        "min_silk_clearance": 0.15,
-        "min_text_height": 0.9,
-        "min_text_thickness": 0.12,
+        "min_silk_clearance": 0.0,
+        "min_text_height": 0.4,
+        "min_text_thickness": 0.1,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.15,
         "min_via_annular_width": 0.15,
@@ -642,6 +642,54 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "KiLib_Generator",
+          "name": "KiLib_Generator",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Price/Stock",
+          "name": "Arrow Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Part Number",
+          "name": "Arrow Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -700,7 +748,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "Rsense1,NT1-2,Cin1,Rfbb1,Rt1,Cvin1,#PWR1-72,Coutx1,Dbst1,Cout1-3,Rfbt1,SW1-2,Rcomp1,Q1-7,Css1,Cbst1,Ruvt1,CR1-2,D1-12,C1-33,#G1-4,J1-7,H1-8,Rvin1,IC1,Ruvb1,Ccomp1,Cvcc1,Rslope1,L1-3,R1-33,U1-10,X1,TP1-41,Cres1",
+    "used_designators": "Rt1,Cvin1,Q1-7,Rcomp1,Rfbb1,Cin1,#PWR1-72,Coutx1,Rfbt1,Dbst1,Cout1-3,Css1,Cbst1,TP1-41,Cres1,C1-33,#G1-4,J1-7,SW1-2,NT1-2,Rsense1,CR1-2,D1-12,U1-10,X1,L1-3,Rslope1,R1-33,Cvcc1,Ccomp1,Ruvt1,Rvin1,H1-8,IC1,Ruvb1",
     "variants": []
   },
   "sheets": [

@@ -17,4 +17,6 @@
 	(lib (name "ADS7128IRTER") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ADS7128IRTER/KiCADv6/2026-09-19_22-31-21.kicad_sym") (options "") (descr ""))
 	(lib (name "INA240A2DR") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/INA240A2DR/KiCad/INA240A2DR.kicad_sym") (options "") (descr ""))
 	(lib (name "B3F-4055") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/B3F-4055/2026-09-21_22-16-50.kicad_sym") (options "") (descr ""))
+	(lib (name "Lamoka1_Q1Q2_8pin") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/Lamoka1_Q1Q2_8pin.kicad_sym") (options "") (descr ""))
+	(lib (name "Lamoka1_MOSFET") (type "KiCad") (uri "${KIPRJMOD}/Lamoka1_MOSFET.kicad_sym") (options "") (descr "Local CSD19536KCS with TO-220 G-D-S pinout"))
 )

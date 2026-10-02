@@ -1,7 +1,118 @@
-ERC report (2026-09-30T00:20:18, Encoding UTF8)
-Report includes: Errors
+ERC report (2026-10-02T01:12:58, Encoding UTF8)
+Report includes: Errors, Warnings
 
 ***** Sheet /
+[pin_to_pin]: Pins of type Unspecified and Bidirectional are connected
+    ; warning
+    @(3350 mils, 1500 mils): Symbol J4 Pin 4 [4, Unspecified, Line]
+    @(8750 mils, 3050 mils): Symbol U1 Pin 9 [GPIO6, Bidirectional, Line]
+[pin_to_pin]: Pins of type Unspecified and Bidirectional are connected
+    ; warning
+    @(3350 mils, 1600 mils): Symbol J4 Pin 3 [3, Unspecified, Line]
+    @(8750 mils, 2950 mils): Symbol U1 Pin 8 [GPIO5, Bidirectional, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(3350 mils, 1700 mils): Symbol J4 Pin 2 [2, Unspecified, Line]
+    @(12450 mils, 5800 mils): Symbol U7 Pin 6 [VOS, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(3350 mils, 1800 mils): Symbol J4 Pin 1 [1, Unspecified, Line]
+    @(4150 mils, 4650 mils): Symbol J7 Pin 3 [Pin_3, Passive, Line]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Wago-connector'
+    ; warning
+    @(5950 mils, 950 mils): Symbol J2 [2606-1352]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(5950 mils, 950 mils): Symbol J2 Pin 1 [1_1, Unspecified, Line]
+    @(5950 mils, 1050 mils): Symbol J2 Pin 2 [1_2, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(5950 mils, 1050 mils): Symbol J2 Pin 2 [1_2, Unspecified, Line]
+    @(5650 mils, 1000 mils): Symbol #PWR046 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(5950 mils, 1150 mils): Symbol J2 Pin 3 [2_1, Unspecified, Line]
+    @(5950 mils, 1250 mils): Symbol J2 Pin 4 [2_2, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(5950 mils, 1250 mils): Symbol J2 Pin 4 [2_2, Unspecified, Line]
+    @(3350 mils, 1800 mils): Symbol J4 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(8950 mils, 1400 mils): Symbol J1 Pin 1 [1, Unspecified, Line]
+    @(8950 mils, 1500 mils): Symbol J1 Pin 2 [2, Unspecified, Line]
+[multiple_net_names]: Both BLUE and VIOLET are attached to the same items; BLUE will be used in the netlist
+    ; warning
+    @(8950 mils, 1400 mils): Label 'BLUE'
+    @(8950 mils, 1500 mils): Label 'VIOLET'
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(8950 mils, 1500 mils): Symbol J1 Pin 2 [2, Unspecified, Line]
+    @(12050 mils, 3100 mils): Symbol U5 Pin 11 [HS, Input, Line]
+[multiple_net_names]: Both BROWN and GRAY are attached to the same items; BROWN will be used in the netlist
+    ; warning
+    @(8950 mils, 1700 mils): Label 'BROWN'
+    @(8950 mils, 1600 mils): Label 'GRAY'
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(8950 mils, 1600 mils): Symbol J1 Pin 3 [3, Unspecified, Line]
+    @(8950 mils, 1700 mils): Symbol J1 Pin 4 [4, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(8950 mils, 1700 mils): Symbol J1 Pin 4 [4, Unspecified, Line]
+    @(12050 mils, 4400 mils): Symbol U6 Pin 11 [HS, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(8950 mils, 1800 mils): Symbol J1 Pin 5 [5, Unspecified, Line]
+    @(8950 mils, 1900 mils): Symbol J1 Pin 6 [6, Unspecified, Line]
+[multiple_net_names]: Both BLACK and ORANGE are attached to the same items; BLACK will be used in the netlist
+    ; warning
+    @(8950 mils, 1800 mils): Label 'BLACK'
+    @(8950 mils, 1900 mils): Label 'ORANGE'
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(8950 mils, 1900 mils): Symbol J1 Pin 6 [6, Unspecified, Line]
+    @(10250 mils, 2850 mils): Symbol J5 Pin 1 [1_1, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(8950 mils, 2000 mils): Symbol J1 Pin 7 [7, Unspecified, Line]
+    @(8950 mils, 2100 mils): Symbol J1 Pin 8 [8, Unspecified, Line]
+[multiple_net_names]: Both RED and YELLOW are attached to the same items; RED will be used in the netlist
+    ; warning
+    @(8950 mils, 2000 mils): Label 'RED'
+    @(8950 mils, 2100 mils): Label 'YELLOW'
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(8950 mils, 2100 mils): Symbol J1 Pin 8 [8, Unspecified, Line]
+    @(10250 mils, 3250 mils): Symbol J5 Pin 5 [3_1, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(10250 mils, 2850 mils): Symbol J5 Pin 1 [1_1, Unspecified, Line]
+    @(10250 mils, 2950 mils): Symbol J5 Pin 2 [1_2, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(10250 mils, 3050 mils): Symbol J5 Pin 3 [2_1, Unspecified, Line]
+    @(10250 mils, 3150 mils): Symbol J5 Pin 4 [2_2, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(10250 mils, 3150 mils): Symbol J5 Pin 4 [2_2, Unspecified, Line]
+    @(4150 mils, 4650 mils): Symbol J7 Pin 3 [Pin_3, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(10250 mils, 3250 mils): Symbol J5 Pin 5 [3_1, Unspecified, Line]
+    @(10250 mils, 3350 mils): Symbol J5 Pin 6 [3_2, Unspecified, Line]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-07-07_01-04-34'
+    ; warning
+    @(3200 mils, 5650 mils): Symbol U2 [AMS1117-3.3]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-07-07_19-38-11'
+    ; warning
+    @(11200 mils, 2750 mils): Symbol X1 [ABM8-272-T3]
+[lib_symbol_issues]: The current configuration does not include the symbol library '2026-09-13_21-28-35'
+    ; warning
+    @(2200 mils, 4500 mils): Symbol U4 [LM5122MH_NOPB]
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(5100 mils, 1500 mils): Vertical Wire, length 350 mils
 
 ***** Sheet /Control-Section/
 [pin_not_driven]: Input pin not driven by any Output pins
@@ -10,12 +121,156 @@ Report includes: Errors
 [pin_not_driven]: Input pin not driven by any Output pins
     ; error
     @(12450 mils, 5900 mils): Symbol U7 Pin 5 [FB, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(1600 mils, 1650 mils): Symbol CR1 Pin 2 [Unspecified, Line]
+    @(1700 mils, 2900 mils): Symbol J3 Hidden pin B9 [VBUS, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(1600 mils, 2100 mils): Symbol CR2 Pin 2 [Unspecified, Line]
+    @(12450 mils, 5800 mils): Symbol U7 Pin 6 [VOS, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(2000 mils, 1650 mils): Symbol CR1 Pin 1 [Unspecified, Line]
+    @(2000 mils, 2100 mils): Symbol CR2 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(2000 mils, 2100 mils): Symbol CR2 Pin 1 [Unspecified, Line]
+    @(3200 mils, 4850 mils): Symbol C12 Pin 2 [Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Bidirectional are connected
+    ; warning
+    @(2250 mils, 3150 mils): Symbol U8 Pin 2 [VOUT, Unspecified, Line]
+    @(8750 mils, 5150 mils): Symbol U1 Pin 40 [GPIO26/ADC0, Bidirectional, Line]
+[multiple_net_names]: Both USB-5v and VBUS are attached to the same items; USB-5v will be used in the netlist
+    ; warning
+    @(4900 mils, 1600 mils): Label 'USB-5v'
+    @(4200 mils, 1600 mils): Hierarchical Label 'VBUS'
+[multiple_net_names]: Both 3v3 and 3v3E are attached to the same items; 3v3 will be used in the netlist
+    ; warning
+    @(6350 mils, 1300 mils): Hierarchical Label '3v3'
+    @(5300 mils, 5400 mils): Hierarchical Label '3v3E'
+[multiple_net_names]: Both GND and GNDE are attached to the same items; GND will be used in the netlist
+    ; warning
+    @(6750 mils, 10500 mils): Symbol #PWR063 Pin 1 [Power input, Line]
+    @(5300 mils, 6000 mils): Hierarchical Label 'GNDE'
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(10000 mils, 5650 mils): Symbol C24 Pin 1 [Unspecified, Line]
+    @(10450 mils, 5600 mils): Symbol U7 Pin 2 [VIN, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(10000 mils, 5950 mils): Symbol C24 Pin 2 [Unspecified, Line]
+    @(10000 mils, 6000 mils): Symbol #PWR057 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(11200 mils, 2750 mils): Symbol X1 Pin 1 [1, Unspecified, Line]
+    @(10750 mils, 2750 mils): Symbol C21 Pin 1 [Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(11200 mils, 2850 mils): Symbol X1 Pin 2 [2, Unspecified, Line]
+    @(11200 mils, 2950 mils): Symbol #PWR014 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(12200 mils, 2750 mils): Symbol X1 Pin 4 [4, Unspecified, Line]
+    @(12600 mils, 2750 mils): Symbol #PWR015 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(12200 mils, 2850 mils): Symbol X1 Pin 3 [3, Unspecified, Line]
+    @(12200 mils, 3300 mils): Symbol C20 Pin 1 [Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Output are connected
+    ; warning
+    @(12650 mils, 5300 mils): Symbol L3 Pin 2 [2, Unspecified, Line]
+    @(12450 mils, 5700 mils): Symbol U7 Pin 7 [SW, Output, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(13250 mils, 5300 mils): Symbol L3 Pin 1 [1, Unspecified, Line]
+    @(13250 mils, 5400 mils): Symbol R20 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(13250 mils, 5400 mils): Symbol R20 Pin 1 [Unspecified, Line]
+    @(12450 mils, 5800 mils): Symbol U7 Pin 6 [VOS, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(13250 mils, 5900 mils): Symbol R19 Pin 1 [Unspecified, Line]
+    @(13250 mils, 5900 mils): Symbol R20 Pin 2 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(13250 mils, 5900 mils): Symbol R20 Pin 2 [Unspecified, Line]
+    @(12450 mils, 5900 mils): Symbol U7 Pin 5 [FB, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(13250 mils, 6400 mils): Symbol R19 Pin 2 [Unspecified, Line]
+    @(14100 mils, 6600 mils): Symbol #PWR059 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Open collector are connected
+    ; warning
+    @(13650 mils, 5300 mils): Symbol R21 Pin 2 [Unspecified, Line]
+    @(12450 mils, 5600 mils): Symbol U7 Pin 8 [PG, Open collector, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(14150 mils, 5300 mils): Symbol R21 Pin 1 [Unspecified, Line]
+    @(12450 mils, 5800 mils): Symbol U7 Pin 6 [VOS, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(14400 mils, 5800 mils): Symbol C25 Pin 2 [Unspecified, Line]
+    @(14150 mils, 5300 mils): Symbol R21 Pin 1 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(14400 mils, 6100 mils): Symbol C25 Pin 1 [Unspecified, Line]
+    @(14100 mils, 6600 mils): Symbol #PWR059 Pin 1 [Power input, Line]
 
 ***** Sheet /Inversion-Section/
+[pin_to_pin]: Pins of type Unspecified and Bidirectional are connected
+    ; warning
+    @(2400 mils, 6450 mils): Symbol U9 Pin 2 [VOUT, Unspecified, Line]
+    @(8750 mils, 5250 mils): Symbol U1 Pin 41 [GPIO27/ADC1, Bidirectional, Line]
+[multiple_net_names]: Both AC_OUT_A and SEC_A are attached to the same items; AC_OUT_A will be used in the netlist
+    ; warning
+    @(8800 mils, 5800 mils): Hierarchical Label 'AC_OUT_A'
+    @(9200 mils, 5800 mils): Hierarchical Label 'SEC_A'
+[multiple_net_names]: Both AC_OUT_B and SEC-B are attached to the same items; AC_OUT_B will be used in the netlist
+    ; warning
+    @(8800 mils, 6000 mils): Hierarchical Label 'AC_OUT_B'
+    @(9200 mils, 6000 mils): Hierarchical Label 'SEC-B'
+[multiple_net_names]: Both G4S and Q6D are attached to the same items; G4S will be used in the netlist
+    ; warning
+    @(9850 mils, 1750 mils): Label 'G4S'
+    @(9450 mils, 2350 mils): Label 'Q6D'
+[multiple_net_names]: Both GND and Q5S are attached to the same items; GND will be used in the netlist
+    ; warning
+    @(4000 mils, 3450 mils): Symbol #PWR050 Pin 1 [Power input, Line]
+    @(9850 mils, 2150 mils): Label 'Q5S'
+[multiple_net_names]: Both CSP and 11-14v input are attached to the same items; CSP will be used in the netlist
+    ; warning
+    @(1500 mils, 4300 mils): Label 'CSP'
+    @(10150 mils, 3350 mils): Hierarchical Label '11-14v input'
+[multiple_net_names]: Both G4D and 17v are attached to the same items; G4D will be used in the netlist
+    ; warning
+    @(9450 mils, 1650 mils): Label 'G4D'
+    @(10600 mils, 2000 mils): Hierarchical Label '17v'
+[multiple_net_names]: Both Q3S and Q5D are attached to the same items; Q3S will be used in the netlist
+    ; warning
+    @(10500 mils, 2200 mils): Label 'Q3S'
+    @(10700 mils, 2200 mils): Label 'Q5D'
 
 ***** Sheet /User-Interface-Section/
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(2300 mils, 2300 mils): Symbol SW1 Pin 1 [1, Unspecified, Line]
+    @(2100 mils, 2100 mils): Symbol R9 Pin 2 [Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(2300 mils, 2400 mils): Symbol SW1 Pin 3 [3, Unspecified, Line]
+    @(2150 mils, 2400 mils): Symbol #PWR071 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(3900 mils, 2300 mils): Symbol SW1 Pin 2 [2, Unspecified, Line]
+    @(2100 mils, 2100 mils): Symbol R9 Pin 2 [Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(3900 mils, 2400 mils): Symbol SW1 Pin 4 [4, Unspecified, Line]
+    @(4050 mils, 2400 mils): Symbol #PWR011 Pin 1 [Power input, Line]
 
- ** ERC messages: 2  Errors 2  Warnings 0
+ ** ERC messages: 67  Errors 2  Warnings 65
 
  ** Ignored checks:
     - Global label only appears once in the schematic

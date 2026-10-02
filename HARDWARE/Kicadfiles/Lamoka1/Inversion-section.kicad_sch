@@ -1508,6 +1508,883 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Lamoka1_MOSFET:CSD19536KCS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "CSD19536KCS"
+				(at 5.08 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+				(at 5.08 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd19536kcs.pdf"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "N-channel NexFET power MOSFET, 100V 150A, TO-220 (1=G 2=D 3=S)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "NMOS"
+				(at 0 -17.145 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "VDMOS"
+				(at 0 -19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=G 2=D 3=S"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "transistor NMOS N-MOSFET NexFET TO-220"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-220-3_Vertical"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CSD19536KCS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "CSD19536KCS_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Lamoka1_Q1Q2_8pin:CSD16323Q3_8PIN"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CSD16323Q3"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "CSD16323Q3:DQG0008A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/gpn/CSD16323Q3"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CSD16323Q3"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "DQG0008A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CSD16323Q3_8PIN_0_1"
+				(rectangle
+					(start -2.54 7.62)
+					(end 2.54 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "CSD16323Q3_8PIN_1_1"
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Lamoka1_Q1Q2_8pin:CSD17304Q3_8PIN"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CSD17304Q3"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "CSD17304Q3:DQG0008A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/gpn/CSD17304Q3"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CSD17304Q3"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "DQG0008A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CSD17304Q3_8PIN_0_1"
+				(rectangle
+					(start -2.54 7.62)
+					(end 2.54 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "CSD17304Q3_8PIN_1_1"
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Simulation_SPICE:NMOS"
 			(pin_numbers
 				(hide yes)
@@ -2856,10 +3733,22 @@
 		(uuid "24fbe43b-47db-43e4-b505-056fbe012f4c")
 	)
 	(junction
+		(at 124.46 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2c1e1eea-0f72-440a-a3b9-29ad589bd662")
+	)
+	(junction
 		(at 252.73 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3891faba-8fba-4471-80d1-b267575aea82")
+	)
+	(junction
+		(at 124.46 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "38ca2e9e-a7b0-425e-91a0-90e135fc5179")
 	)
 	(junction
 		(at 153.67 45.72)
@@ -2878,6 +3767,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "50f34647-047c-4689-9e0a-a914e61505d0")
+	)
+	(junction
+		(at 115.57 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "555e81a2-b27c-424a-a308-c1a1479cc7cd")
 	)
 	(junction
 		(at 260.35 85.09)
@@ -2904,16 +3799,16 @@
 		(uuid "6902b76b-3be3-4d6b-b569-c3d2dbcd38e1")
 	)
 	(junction
-		(at 129.54 38.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6b7c43fc-05fb-423f-bbb6-1ffe81aa3f16")
-	)
-	(junction
 		(at 78.74 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6f8405bb-9612-4307-9c67-64d80aee2e9f")
+	)
+	(junction
+		(at 110.49 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "744cce54-2c03-4391-8330-514621a64de0")
 	)
 	(junction
 		(at 116.84 85.09)
@@ -2932,6 +3827,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cfdf7ab-39fd-42ad-a26e-06cf9b655d7e")
+	)
+	(junction
+		(at 124.46 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e8a2915-4624-49c7-ba6b-601ac76a08e9")
+	)
+	(junction
+		(at 110.49 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "87e78529-1ec7-481c-a197-1944610581e6")
 	)
 	(junction
 		(at 76.2 127)
@@ -3000,6 +3907,12 @@
 		(uuid "c6cf11bc-bdee-48e1-9a5f-8597e4575236")
 	)
 	(junction
+		(at 114.3 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c7846343-4dd9-40ff-954d-6b8feaac2c2e")
+	)
+	(junction
 		(at 135.89 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3022,6 +3935,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f8a0b9ad-398a-4d19-8f3b-dad6d97df1d0")
+	)
+	(junction
+		(at 113.03 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f9c7f95b-6beb-4e6f-8511-877f38894c51")
 	)
 	(no_connect
 		(at 38.1 129.54)
@@ -3129,6 +4048,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 45.72) (xy 124.46 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bb45ac6-2d44-462f-aa53-c52a4ec53419")
+	)
+	(wire
+		(pts
 			(xy 223.52 147.32) (xy 233.68 147.32)
 		)
 		(stroke
@@ -3146,6 +4075,16 @@
 			(type default)
 		)
 		(uuid "0da034f1-3525-471e-bde1-0e160f848f4b")
+	)
+	(wire
+		(pts
+			(xy 124.46 35.56) (xy 124.46 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f6b10ab-c5b7-4c72-8032-772639b4b323")
 	)
 	(wire
 		(pts
@@ -3369,6 +4308,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 40.64) (xy 124.46 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31bd9785-2b49-44a1-a607-e91518d7c556")
+	)
+	(wire
+		(pts
 			(xy 135.89 81.28) (xy 138.43 81.28)
 		)
 		(stroke
@@ -3446,6 +4395,16 @@
 			(type default)
 		)
 		(uuid "54b65d45-518e-42e7-9a81-9d928de4fe56")
+	)
+	(wire
+		(pts
+			(xy 124.46 43.18) (xy 124.46 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55580482-eb0e-41a5-8b51-eb68a6aa3852")
 	)
 	(wire
 		(pts
@@ -3559,6 +4518,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 50.8) (xy 118.11 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d3c5ad6-fff6-4834-b391-238e892e32d1")
+	)
+	(wire
+		(pts
 			(xy 114.3 38.1) (xy 113.03 38.1)
 		)
 		(stroke
@@ -3606,6 +4575,16 @@
 			(type default)
 		)
 		(uuid "79096834-1bed-4eb1-a83e-751ccaa974b2")
+	)
+	(wire
+		(pts
+			(xy 113.03 50.8) (xy 115.57 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7aa4b10b-f586-42b2-a354-408a247608d9")
 	)
 	(wire
 		(pts
@@ -3699,6 +4678,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 60.96) (xy 110.49 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c1a598b-c6a2-4997-83b9-f6ecd42e958b")
+	)
+	(wire
+		(pts
 			(xy 266.7 55.88) (xy 269.24 55.88)
 		)
 		(stroke
@@ -3789,6 +4778,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 50.8) (xy 110.49 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4bcca5a-3e1e-4f30-8236-58b8065702f6")
+	)
+	(wire
+		(pts
 			(xy 262.89 73.66) (xy 265.43 73.66)
 		)
 		(stroke
@@ -3849,7 +4848,27 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 38.1) (xy 113.03 44.45)
+			(xy 114.3 40.64) (xy 114.3 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdfa0ab9-afc3-438e-9cb5-0f4728d69a78")
+	)
+	(wire
+		(pts
+			(xy 110.49 50.8) (xy 113.03 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf1b8af2-9695-49a1-b5ec-d6a66c60e893")
+	)
+	(wire
+		(pts
+			(xy 113.03 38.1) (xy 113.03 50.8)
 		)
 		(stroke
 			(width 0)
@@ -3919,6 +4938,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 60.96) (xy 113.03 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb45efff-a52a-416d-ac8e-dd43573ab9df")
+	)
+	(wire
+		(pts
 			(xy 257.81 118.11) (xy 260.35 118.11)
 		)
 		(stroke
@@ -3926,6 +4955,16 @@
 			(type default)
 		)
 		(uuid "cba475b0-70b4-496a-bdf7-21a4e44be917")
+	)
+	(wire
+		(pts
+			(xy 107.95 60.96) (xy 110.49 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d175ed8f-26f8-4516-9adc-1f3745efd8b3")
 	)
 	(wire
 		(pts
@@ -3946,6 +4985,16 @@
 			(type default)
 		)
 		(uuid "d9aa58da-7bb5-4c70-874f-1509dbecfc1d")
+	)
+	(wire
+		(pts
+			(xy 115.57 63.5) (xy 115.57 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dde58d82-e458-428e-8207-59ffc1949c1a")
 	)
 	(wire
 		(pts
@@ -4019,7 +5068,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 35.56) (xy 113.03 38.1)
+			(xy 113.03 34.29) (xy 113.03 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4046,6 +5095,16 @@
 			(type default)
 		)
 		(uuid "f311c194-9263-4b14-a355-9f408c64b002")
+	)
+	(wire
+		(pts
+			(xy 114.3 35.56) (xy 114.3 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f38f24ae-1195-4e50-a97a-f230e8ad071d")
 	)
 	(wire
 		(pts
@@ -4127,6 +5186,16 @@
 		)
 		(uuid "1d8b0fc5-469f-4dca-9fdb-16e349842cd8")
 	)
+	(label "G4D"
+		(at 129.54 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "23a8cde8-0a8d-4012-8432-adc630ec18ae")
+	)
 	(label "Q5S"
 		(at 250.19 54.61 180)
 		(effects
@@ -4138,12 +5207,12 @@
 		(uuid "3230f881-bf4f-4813-9e5f-352e0ba9be93")
 	)
 	(label "HO"
-		(at 119.38 30.48 0)
+		(at 114.3 43.18 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "324578e9-fb3d-45ae-89d7-a6ceb1a36f28")
 	)
@@ -4208,12 +5277,12 @@
 		(uuid "4a19f65a-1c3d-4ca0-b945-a1b1273028e9")
 	)
 	(label "LO"
-		(at 105.41 49.53 180)
+		(at 115.57 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "4b7c1f25-f931-49a6-8ac0-9d4ff29d903c")
 	)
@@ -4238,12 +5307,12 @@
 		(uuid "55b7421f-546a-4c11-a1a1-a2079e65ab3b")
 	)
 	(label "SW"
-		(at 113.03 35.56 90)
+		(at 113.03 34.29 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "569d2a64-a0f4-4033-a5e3-7c7119300191")
 	)
@@ -4568,12 +5637,12 @@
 		(uuid "b7f65440-3d1f-4957-b0e0-d9cbd037e069")
 	)
 	(label "CSN"
-		(at 100.33 38.1 90)
+		(at 100.33 38.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "be53f91a-f6e6-4327-b0a7-ecb24b656b15")
 	)
@@ -4668,12 +5737,12 @@
 		(uuid "da1be40d-01b6-4c97-ba5a-2f7e1d6ede9a")
 	)
 	(label "CSP"
-		(at 86.36 38.1 90)
+		(at 86.36 38.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "e11ff404-7db3-4f49-ae8d-1fb02895fda3")
 	)
@@ -5234,7 +6303,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Lamoka1_MOSFET:CSD19536KCS")
 		(at 213.36 39.37 270)
 		(unit 1)
 		(body_style 1)
@@ -5276,7 +6345,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd19536kcs.pdf"
 			(at 200.66 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -5287,7 +6356,7 @@
 				)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-channel NexFET power MOSFET, 100V 150A, TO-220 (1=G 2=D 3=S)"
 			(at 213.36 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -5366,134 +6435,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 110.49 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0ac2e056-3335-44eb-9b12-afeb70bd0ffa")
-		(property "Reference" "Q2"
-			(at 114.554 46.736 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "30V 56A N-Ch"
-			(at 94.742 51.308 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "CSD17304Q3:DQG0008A"
-			(at 115.57 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 110.49 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 110.49 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CSD17304Q3"
-			(at 110.49 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 110.49 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 110.49 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 110.49 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "b392fa0b-4861-46f6-8a68-1f57487c81b0")
-		)
-		(pin "2"
-			(uuid "72a6324e-1041-407f-a678-7ce5ab5c3a07")
-		)
-		(pin "1"
-			(uuid "ef2fc2af-62b6-4876-be14-5aa28f8f647e")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -5840,7 +6781,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Lamoka1_MOSFET:CSD19536KCS")
 		(at 233.68 39.37 270)
 		(unit 1)
 		(body_style 1)
@@ -5882,7 +6823,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd19536kcs.pdf"
 			(at 220.98 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -5893,7 +6834,7 @@
 				)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-channel NexFET power MOSFET, 100V 150A, TO-220 (1=G 2=D 3=S)"
 			(at 233.68 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -7202,7 +8143,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Lamoka1_MOSFET:CSD19536KCS")
 		(at 213.36 58.42 270)
 		(unit 1)
 		(body_style 1)
@@ -7244,7 +8185,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd19536kcs.pdf"
 			(at 200.66 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -7255,7 +8196,7 @@
 				)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-channel NexFET power MOSFET, 100V 150A, TO-220 (1=G 2=D 3=S)"
 			(at 213.36 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -9017,6 +9958,119 @@
 		)
 	)
 	(symbol
+		(lib_id "Lamoka1_Q1Q2_8pin:CSD17304Q3_8PIN")
+		(at 113.03 55.88 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "76d52a43-3baf-4bbb-ad0c-3cd223c42430")
+		(property "Reference" "Q2"
+			(at 102.87 53.34 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "30V 56A N-Ch"
+			(at 103.378 49.53 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CSD17304Q3:DQG0008A"
+			(at 113.03 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/CSD17304Q3"
+			(at 113.03 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CSD17304Q3"
+			(at 113.03 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "da3b4e6d-291e-49a2-897f-c46773d95191")
+		)
+		(pin "6"
+			(uuid "e0e6c90e-d49e-4326-a766-925944f085ec")
+		)
+		(pin "7"
+			(uuid "3dd221cb-9ed1-4162-8cd6-939e3e1b0e77")
+		)
+		(pin "2"
+			(uuid "b7fa7030-907c-411a-ac76-337b94246fd0")
+		)
+		(pin "1"
+			(uuid "a83c578f-3c55-4635-b8f8-2ff32df64a06")
+		)
+		(pin "3"
+			(uuid "65d69b72-d263-45b0-ac3a-3f166268d2c6")
+		)
+		(pin "4"
+			(uuid "2469ca44-88bc-48cb-af41-ddd38bb13162")
+		)
+		(pin "8"
+			(uuid "cd9183af-638c-418d-b11c-c20f003bbbaa")
+		)
+		(pin "9"
+			(uuid "d0b60694-9db5-43e1-81aa-3970256e156d")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 250.19 76.2 0)
 		(unit 1)
@@ -9089,132 +10143,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR053")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 119.38 35.56 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7c04b679-4bbe-4b7a-88d2-926f0680e8ee")
-		(property "Reference" "Q1"
-			(at 116.078 40.64 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "25V 60A N-Ch"
-			(at 128.524 34.036 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CSD16323Q3:DQG0008A"
-			(at 121.92 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 106.68 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 119.38 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CSD16323Q3"
-			(at 119.38 35.56 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 119.38 35.56 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 119.38 35.56 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 119.38 35.56 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "d5f0f3bb-699c-4cbb-ba24-5762c1c39acc")
-		)
-		(pin "2"
-			(uuid "06586251-0847-4d1a-a8a1-38247ade5374")
-		)
-		(pin "1"
-			(uuid "b689ab9c-a97c-49fe-b4d6-2d34c6185ea9")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -10307,7 +11235,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 113.03 54.61 0)
+		(at 110.49 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10318,7 +11246,7 @@
 		(fields_autoplaced yes)
 		(uuid "ad332675-e153-4458-adf4-90d12b8eea43")
 		(property "Reference" "#PWR043"
-			(at 113.03 60.96 0)
+			(at 110.49 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10329,7 +11257,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 113.03 59.69 0)
+			(at 110.49 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10339,7 +11267,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 54.61 0)
+			(at 110.49 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10350,7 +11278,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 54.61 0)
+			(at 110.49 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10361,7 +11289,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 113.03 54.61 0)
+			(at 110.49 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10384,7 +11312,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
+		(lib_id "Lamoka1_MOSFET:CSD19536KCS")
 		(at 233.68 57.15 270)
 		(unit 1)
 		(body_style 1)
@@ -10426,7 +11354,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd19536kcs.pdf"
 			(at 220.98 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -10437,7 +11365,7 @@
 				)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
+		(property "Description" "N-channel NexFET power MOSFET, 100V 150A, TO-220 (1=G 2=D 3=S)"
 			(at 233.68 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -10653,6 +11581,119 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rt1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Lamoka1_Q1Q2_8pin:CSD16323Q3_8PIN")
+		(at 119.38 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c0053d8d-5b06-447d-8738-aaa84e5418ca")
+		(property "Reference" "Q1"
+			(at 121.158 29.464 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "25V 60A N-Ch"
+			(at 123.444 31.496 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CSD16323Q3:DQG0008A"
+			(at 119.38 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/CSD16323Q3"
+			(at 119.38 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CSD16323Q3"
+			(at 119.38 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "990d2b58-e983-4a77-929d-9d7d4ebb6002")
+		)
+		(pin "7"
+			(uuid "d6279844-2280-47e6-b429-fa43bc6559a0")
+		)
+		(pin "9"
+			(uuid "846b73d0-9b5a-40fe-ab37-5cb9930071cb")
+		)
+		(pin "6"
+			(uuid "838dfc64-01f7-4ab9-a9b7-dbd2e7607d92")
+		)
+		(pin "5"
+			(uuid "8196035e-22ec-4b67-955d-d9d1082f87a2")
+		)
+		(pin "4"
+			(uuid "50afce49-9c35-481e-afc6-d5e650e089df")
+		)
+		(pin "3"
+			(uuid "d06d1c7f-3f88-412c-84d2-ee3b157cf9ef")
+		)
+		(pin "1"
+			(uuid "d0681dfa-3231-4f5a-88ec-5791c698c6e8")
+		)
+		(pin "2"
+			(uuid "342282d0-ff5a-404a-9f99-c72b15e755bb")
+		)
+		(instances
+			(project "Lamoka1"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
