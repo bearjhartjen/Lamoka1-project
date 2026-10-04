@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 0.64,
-          "width": 0.54
+          "drill": 1.1,
+          "height": 2.0,
+          "width": 1.905
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -531,6 +531,13 @@
         "priority": 0,
         "schematic_color": "rgb(0, 0, 0)",
         "tuning_profile": ""
+      },
+      {
+        "name": "USB_90OHM",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgb(0, 0, 0)",
+        "tuning_profile": ""
       }
     ],
     "meta": {
@@ -542,6 +549,22 @@
       {
         "netclass": "GND",
         "pattern": "GND"
+      },
+      {
+        "netclass": "USB_90OHM",
+        "pattern": "D+"
+      },
+      {
+        "netclass": "USB_90OHM",
+        "pattern": "D-"
+      },
+      {
+        "netclass": "USB_90OHM",
+        "pattern": "USB_DP"
+      },
+      {
+        "netclass": "USB_90OHM",
+        "pattern": "USB_DM"
       }
     ]
   },
@@ -690,6 +713,12 @@
           "label": "Mouser Price/Stock",
           "name": "Mouser Price/Stock",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Current",
+          "name": "Current",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -748,7 +777,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "Rt1,Cvin1,Q1-7,Rcomp1,Rfbb1,Cin1,#PWR1-72,Coutx1,Rfbt1,Dbst1,Cout1-3,Css1,Cbst1,TP1-41,Cres1,C1-33,#G1-4,J1-7,SW1-2,NT1-2,Rsense1,CR1-2,D1-12,U1-10,X1,L1-3,Rslope1,R1-33,Cvcc1,Ccomp1,Ruvt1,Rvin1,H1-8,IC1,Ruvb1",
+    "used_designators": "D1-12,CR1-2,Cout1-3,Rfbt1,Cvin1,Rt1,TP1-41,Cres1,#PWR1-72,Coutx1,Rcomp1,Q1-7,U1-10,X1,L1-3,R1-33,Rslope1,Css1,Ccomp1,Rsense1,NT1-2,Rvin1,H1-8,Ruvt1,C1-33,Rfbb1,Cin1,#G1-4,J1-7,SW1-2,IC1,Ruvb1",
     "variants": []
   },
   "sheets": [

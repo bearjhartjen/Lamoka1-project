@@ -11527,6 +11527,17 @@
 				)
 			)
 		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 165.1 212.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" ""
 			(at 165.1 212.09 90)
 			(hide yes)
@@ -15053,7 +15064,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2uH, 4.3A"
+		(property "Value" "2.2uH"
 			(at 328.93 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15089,6 +15100,17 @@
 		)
 		(property "Description" ""
 			(at 321.31 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Current" "4.3A"
+			(at 328.93 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15880,6 +15902,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 168.91 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0722RL"
 			(at 168.91 208.28 0)
 			(hide yes)
 			(show_name no)

@@ -6721,6 +6721,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC1206FR-0710RL"
+			(at 220.98 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" ""
 			(at 220.98 106.68 90)
 			(hide yes)
@@ -6985,6 +6996,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM21BR71H105KA12L"
+			(at 227.33 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" ""
 			(at 227.33 91.44 0)
 			(hide yes)
@@ -7179,6 +7201,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 209.55 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM21BR71H105KA12L"
 			(at 209.55 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -7811,6 +7844,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC1206FR-0710RL"
+			(at 317.5 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" ""
 			(at 317.5 76.2 90)
 			(hide yes)
@@ -7882,7 +7926,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49c7fcee-e57d-44f6-a1b3-edf777ce3fa4")
-		(property "Reference" "Cbst1"
+		(property "Reference" "C32"
 			(at 120.65 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7999,7 +8043,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "Cbst1")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -8800,6 +8844,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC1206FR-0710RL"
+			(at 318.77 109.22 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Manufacturer" ""
 			(at 318.77 109.22 90)
 			(hide yes)
@@ -9208,6 +9263,17 @@
 		)
 		(property "Description" "Diode"
 			(at 227.33 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SS14-E3/61T"
+			(at 227.33 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9688,7 +9754,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7048b208-f54a-4346-b754-292f066d8643")
-		(property "Reference" "Dbst1"
+		(property "Reference" "D6"
 			(at 113.03 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9794,7 +9860,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "Dbst1")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -10238,7 +10304,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7fc5ef45-4850-42c8-b06a-783b01277979")
-		(property "Reference" "Cvcc1"
+		(property "Reference" "C33"
 			(at 105.41 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10355,7 +10421,7 @@
 		(instances
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
-					(reference "Cvcc1")
+					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -10633,6 +10699,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 220.98 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC1206FR-0710RL"
+			(at 220.98 118.11 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13260,6 +13337,17 @@
 		)
 		(property "Description" "Diode"
 			(at 209.55 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SS14-E3/61T"
+			(at 209.55 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
