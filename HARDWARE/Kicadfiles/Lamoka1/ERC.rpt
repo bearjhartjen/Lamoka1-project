@@ -1,4 +1,4 @@
-ERC report (2026-10-04T13:01:27, Encoding UTF8)
+ERC report (2026-10-05T23:07:31, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -227,14 +227,6 @@ Report includes: Errors, Warnings
     ; warning
     @(2400 mils, 6450 mils): Symbol U9 Pin 2 [VOUT, Unspecified, Line]
     @(8750 mils, 5250 mils): Symbol U1 Pin 41 [GPIO27/ADC1, Bidirectional, Line]
-[multiple_net_names]: Both G4D and 17v are attached to the same items; G4D will be used in the netlist
-    ; warning
-    @(9450 mils, 1650 mils): Label 'G4D'
-    @(7450 mils, 1500 mils): Hierarchical Label '17v'
-[multiple_net_names]: Both GND and AC_OUT-GND are attached to the same items; GND will be used in the netlist
-    ; warning
-    @(9900 mils, 4300 mils): Symbol #PWR055 Pin 1 [Power input, Line]
-    @(8800 mils, 6200 mils): Hierarchical Label 'AC_OUT-GND'
 [multiple_net_names]: Both AC_OUT_A and SEC_A are attached to the same items; AC_OUT_A will be used in the netlist
     ; warning
     @(8800 mils, 5800 mils): Hierarchical Label 'AC_OUT_A'
@@ -246,15 +238,23 @@ Report includes: Errors, Warnings
 [multiple_net_names]: Both G4S and Q6D are attached to the same items; G4S will be used in the netlist
     ; warning
     @(9000 mils, 1650 mils): Label 'G4S'
-    @(10050 mils, 1750 mils): Label 'Q6D'
+    @(9450 mils, 2350 mils): Label 'Q6D'
+[multiple_net_names]: Both GND and Q6S are attached to the same items; GND will be used in the netlist
+    ; warning
+    @(4000 mils, 3450 mils): Symbol #PWR050 Pin 1 [Power input, Line]
+    @(10050 mils, 2150 mils): Label 'Q6S'
 [multiple_net_names]: Both CSP and 11-14v input are attached to the same items; CSP will be used in the netlist
     ; warning
-    @(3400 mils, 1500 mils): Label 'CSP'
+    @(1500 mils, 4300 mils): Label 'CSP'
     @(10150 mils, 3350 mils): Hierarchical Label '11-14v input'
-[multiple_net_names]: Both Q3S and Q5D are attached to the same items; Q3S will be used in the netlist
+[multiple_net_names]: Both G4D and Q3D are attached to the same items; G4D will be used in the netlist
     ; warning
-    @(8150 mils, 1650 mils): Label 'Q3S'
-    @(10700 mils, 2200 mils): Label 'Q5D'
+    @(9450 mils, 1650 mils): Label 'G4D'
+    @(10500 mils, 1850 mils): Label 'Q3D'
+[multiple_net_names]: Both Q3S and SW_A are attached to the same items; Q3S will be used in the netlist
+    ; warning
+    @(10500 mils, 2200 mils): Label 'Q3S'
+    @(10600 mils, 2300 mils): Hierarchical Label 'SW_A'
 
 ***** Sheet /User-Interface-Section/
 [pin_to_pin]: Pins of type Unspecified and Passive are connected
