@@ -6,10 +6,10 @@ The firmware is written using Arduino functionality together with the **FastLED*
 
 ### Hardware Interface
 
-V1.8 directly defines the following hardware connections:
+V1.8 directly defines the following hardware connections (per HARDWARE/COMPONENTS.md, MCU is RP2354A made by Raspberry Pi):
 
-* **GPIO 11** — WS2812B LED data
-* **GPIO 0** — User button
+* **GPIO 11** — WS2812B LED data (WS2812B made by WorldSemi)
+* **GPIO 0** — User button (B3F-4055 made by Aratas)
 * **GPIO 5** — Additional digital entropy input
 * **GPIO 26 / ADC0**
 * **GPIO 27 / ADC1**

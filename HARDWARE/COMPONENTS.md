@@ -5,7 +5,7 @@
 
  NMOS for H-bridge (Inversion-section): CSD19536KCS made by TI  x4
 
- Transformer (Inversion-section): VPT24-10420 made by Triad Magnetics
+ Transformer (Inversion-section): VPT24-4170 made by Triad Magnetics
 
  Main microcontroller for full system: RP2354A made by Raspberry Pi
 
@@ -21,7 +21,7 @@
 
  Input capacitor for buck converter: TMK212BBJ106KG made by Taiyo Yuden
 
- Cooling fan for unit: NF-A4x20 5V PWM made by Noctua
+ Cooling fan for unit: FAD1-04010BHLW11 made by Qualtek
 
  Pin header to connect fan to PCB: 0470531000 made by Molex
 
@@ -55,7 +55,4 @@
 
  Converter to go from 5v to 3v3 for control: AMS1117-3.3 made by Advanced Monolithic Systems
 
- Five-pin header for connecting main and UI boards: PBC05SAAN made by Sullins Connector Solutions x2
-
- Five-pin female-to-female cable for connecting main and UI boards: 10375 made by SparkFun Electronics
 

@@ -29,9 +29,9 @@
 
 ## Specifications 
 
- The Lamoka1 inverter section takes an 11V–14V input, steps it up to a 17V rail, and feeds it into an H-bridge controlled by an RP2354A microcontroller—giving you total flexibility to program whatever waveform or output you need. From there, it passes into a transformer to step up the voltage.
+ The Lamoka1 inverter section takes an 11V–14V input, steps it up to a 17V rail via the LM5122QMHX-NOPB boost converter, and feeds it into an H-bridge (four CSD19536KCS NMOSs driven by two UCC27735DR gate drivers) controlled by an RP2354A microcontroller—giving you total flexibility to program whatever waveform or output you need. From there, it passes into a VPT24-4170 transformer to step up the voltage.
 
- We are using a high-quality, PWM-controlled Noctua fan that will derive its speed proportionally from the temperature sensors built onto the unit. The highest temperature will have the greatest influence on the fan speed.
+ We use a Qualtek FAD1-04010BHLW11 fan powered from the 5V buck rail for cooling. GPIO5 and GPIO6 are unused, so the MCU provides no PWM speed control or tach feedback for the fan. The two TMP235A2DBZR temperature sensors are monitored by the system. Voltage and current monitoring is handled by the ADS7128IRTER multiplexer, the 5V rail by the TPS62160DSGR buck converter, and the user interface by ten WS2812B LEDs with a B3F-4055 button.
 
 ---
 

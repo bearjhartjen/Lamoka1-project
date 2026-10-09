@@ -1,43 +1,49 @@
-# GitHub Linguist classifies every KiCad extension as `type: data`, which the
-# language bar excludes by default, so none of the design source would be
-# counted without these lines.
+# GitHub Linguist has no single "KiCad" language, only two (verified against
+# linguist lib/linguist/languages.yml; both are `type: data` and share the
+# colour #2f4aab):
+#   .kicad_pcb / .kicad_mod / .kicad_wks (+ fp-lib-table) -> "KiCad Layout"
+#   .kicad_sch / .kicad_sym                            -> "KiCad Schematic"
 #
-# Linguist has no single KiCad language. It splits the design across two names
-# (verified against linguist lib/linguist/languages.yml):
-#   .kicad_pcb / .kicad_mod / .kicad_wks -> "KiCad Layout"     (type: data)
-#   .kicad_sch / .kicad_sym               -> "KiCad Schematic"  (type: data)
-# That split is byte-weighted, and `.kicad_pcb` is pathologically large because
-# KiCad stores every track segment, via and *filled zone polygon* in the file. So
-# one finished 2.42 MB control board outweighed all 7 schematics 2.6:1 and the
-# bar reported the repo as ~70% "Layout" - which is backwards here: the main
-# inverter board is the *less* complete of the two, its power stage still
-# unrouted. Forcing one language keeps the bar's only claim true, namely that
-# this is a KiCad project. The real layout/schematic breakdown belongs in the
-# README, not in a byte ratio that misstates it.
-# `linguist-color` is Linguist's own colour for KiCad; a custom language name
-# has no colour of its own.
+# A previous revision of this file set `linguist-language=KiCad` to merge
+# them into one bar entry. That name is not in languages.yml, and Linguist
+# resolves an unknown override to NO language at all (see
+# linguist/lib/linguist/lazy_blob.rb: `Language.find_by_alias` returns nil),
+# so every design file fell out of the language stats. The only countable
+# source left was the 9 Arduino sketches under
+# SOFTWARE/Portal Interface Engine/ (*.ino -> C++, ~300 KB), hence the bar
+# read 100% C++. `linguist-language` can only name an already-existing
+# language, so a merged "KiCad" entry is impossible - and `linguist-color`
+# is not a real attribute (ignored).
+#
+# Fix: mark the two real KiCad languages detectable instead. Data/prose
+# languages are excluded from the bar by default; `linguist-detectable` opts
+# them back in (linguist docs/overrides.md). Expected bar from tracked bytes
+# (~3.9 MB Layout, ~1.3 MB Schematic, ~0.3 MB C++): ~70% KiCad Layout,
+# ~23% KiCad Schematic, ~6% C++ - one same-coloured KiCad block plus the
+# firmware slice. The Layout/Schematic split is byte-true: the finished
+# 2.4 MB control-board .kicad_pcb dominates because KiCad inlines every
+# track segment and filled-zone polygon.
+#
+# NOTE: GitHub only honours .gitattributes once it is committed and pushed;
+# the language bar recomputes on push (can take a few minutes).
 
-*.kicad_pcb linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
-*.kicad_sch linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
-*.kicad_sym linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
-*.kicad_mod linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
-*.kicad_wks linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
+*.kicad_pcb linguist-detectable=true
+*.kicad_sch linguist-detectable=true
+*.kicad_sym linguist-detectable=true
+*.kicad_mod linguist-detectable=true
+*.kicad_wks linguist-detectable=true
 
-# KiCad project files with no Linguist extension mapping. These are hand-
-# maintained design data, not JSON/Text source: .kicad_pro holds netclasses, DRC
-# severities and ERC exclusions; .kicad_dru holds custom DRC rules. Labelling
-# them "JSON" and "Text" put 37 KB of project config and one 370-byte rules file
-# into the bar as two separate languages, so they count as KiCad instead.
-*.kicad_pro linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
-*.kicad_dru linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
+# .kicad_pro (netclasses, DRC severities, ERC exclusions) and .kicad_dru
+# (custom DRC rules) have no Linguist mapping at all, and sym-lib-table has
+# none either (fp-lib-table IS listed under "KiCad Layout" filenames, so it
+# counts as Layout). With no language attached these stay out of the bar
+# (~20 KB total - immaterial); the detectable flag is kept so they count
+# automatically if upstream ever maps them.
+*.kicad_pro linguist-detectable=true
+*.kicad_dru linguist-detectable=true
 
-# Library tables, matched by name rather than extension. Linguist does know
-# fp-lib-table (it is listed under "KiCad Layout" filenames), but that language is
-# `type: data`, so it was being dropped from the bar by accident rather than by
-# decision; sym-lib-table has no mapping at all. Both are authored KiCad project
-# configuration, same class as .kicad_pro, so both count as KiCad.
-fp-lib-table linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
-sym-lib-table linguist-language=KiCad linguist-detectable=true linguist-color=#2f4aab
+fp-lib-table linguist-detectable=true
+sym-lib-table linguist-detectable=true
 
 # Per-user editor state (visible layers, cursor position, zoom). Already
 # gitignored under HARDWARE/ and Lamoka1-DEV-Brain/, excluded here as well so a

@@ -6834,18 +6834,6 @@
 		(uuid "ae1af45d-f0c5-489f-9f62-519902b009d3")
 	)
 	(rectangle
-		(start 27.686 247.904)
-		(end 57.15 261.112)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "c7f0d717-e5ff-48d1-b4ef-8bfde4ddacf5")
-	)
-	(rectangle
 		(start 21.336 89.916)
 		(end 42.672 93.472)
 		(stroke
@@ -6916,16 +6904,6 @@
 			)
 		)
 		(uuid "705c7de0-f0cb-40ea-9951-f05ad7051050")
-	)
-	(text "Pull-up for Fan tach"
-		(exclude_from_sim no)
-		(at 42.164 249.936 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "bfb733dd-c6bd-4ad8-a398-e4d9ac35f529")
 	)
 	(text "Temperature-Sensor"
 		(exclude_from_sim no)
@@ -7238,6 +7216,10 @@
 		(uuid "ac27b313-6a8f-423c-ab84-a717e1787f1b")
 	)
 	(no_connect
+		(at 222.25 77.47)
+		(uuid "ae932368-0129-49f5-8508-043395a6e8d0")
+	)
+	(no_connect
 		(at 222.25 95.25)
 		(uuid "c319fb5d-2958-419a-9013-9a2f45385a9e")
 	)
@@ -7269,15 +7251,9 @@
 		(at 222.25 118.11)
 		(uuid "ea2d575b-28f8-4abe-ae81-0642c0213525")
 	)
-	(wire
-		(pts
-			(xy 33.02 259.08) (xy 38.1 259.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0552e49c-a252-41a8-9cf0-bd417cd91c03")
+	(no_connect
+		(at 222.25 74.93)
+		(uuid "f0c1e0bf-8bf1-4c99-905f-9a49f0bc9751")
 	)
 	(wire
 		(pts
@@ -7348,16 +7324,6 @@
 			(type default)
 		)
 		(uuid "0c7d3b15-6bd4-43c2-8fa3-4e33457ae653")
-	)
-	(wire
-		(pts
-			(xy 45.72 259.08) (xy 50.8 259.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d5f861b-f96d-413b-a328-d69c5a1f17c5")
 	)
 	(wire
 		(pts
@@ -7578,16 +7544,6 @@
 			(type default)
 		)
 		(uuid "1f068f24-9e58-478e-be83-9bb52d099162")
-	)
-	(wire
-		(pts
-			(xy 27.94 123.19) (xy 33.02 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21b5ea86-201a-44a3-a3f4-e238dba76b96")
 	)
 	(wire
 		(pts
@@ -8671,16 +8627,6 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 74.93) (xy 222.25 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9659685-c858-49e8-8577-f08c4a2d400e")
-	)
-	(wire
-		(pts
 			(xy 252.73 142.24) (xy 252.73 143.51)
 		)
 		(stroke
@@ -8851,16 +8797,6 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 118.11) (xy 33.02 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d911baf1-b557-4d17-9c8c-9c6f8b399dd2")
-	)
-	(wire
-		(pts
 			(xy 106.68 60.96) (xy 125.73 60.96)
 		)
 		(stroke
@@ -8998,16 +8934,6 @@
 			(type default)
 		)
 		(uuid "e9dc2a9a-ebc7-4626-ac15-d75a87fc5cbb")
-	)
-	(wire
-		(pts
-			(xy 229.87 77.47) (xy 222.25 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea55e3ab-1a78-43cd-9c43-59d7d6505f64")
 	)
 	(wire
 		(pts
@@ -9209,16 +9135,6 @@
 		)
 		(uuid "295c7651-f893-4527-936e-202f5641f024")
 	)
-	(label "GPIO5"
-		(at 229.87 74.93 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "298730ed-9f50-4831-9962-0feb2bd862ee")
-	)
 	(label "GPIO9"
 		(at 285.75 273.05 0)
 		(effects
@@ -9329,16 +9245,6 @@
 		)
 		(uuid "6817296f-12cb-47cc-83d5-7d4bf2cf2416")
 	)
-	(label "GPIO5"
-		(at 50.8 259.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6d26f1e8-d483-405e-942b-c37ac574cdb6")
-	)
 	(label "TEMP_CTRL"
 		(at 60.96 80.01 0)
 		(effects
@@ -9409,16 +9315,6 @@
 		)
 		(uuid "7d985b6b-9f4d-4c5c-9273-5f410e1335d9")
 	)
-	(label "GPIO5"
-		(at 27.94 123.19 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "7da4ce52-9f2b-4eb8-81fc-4a36419060bc")
-	)
 	(label "1V1"
 		(at 245.11 40.64 0)
 		(effects
@@ -9469,16 +9365,6 @@
 		)
 		(uuid "a2f11d9f-e444-4c4d-91ee-5b8439cd1447")
 	)
-	(label "GPIO6"
-		(at 229.87 77.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ac693811-9593-4c66-8e17-b7ac2f15acd3")
-	)
 	(label "USB_DP"
 		(at 134.62 60.96 0)
 		(effects
@@ -9498,16 +9384,6 @@
 			(justify left bottom)
 		)
 		(uuid "b04c4afd-93d3-4f41-b70e-b26dbfa636fd")
-	)
-	(label "GPIO6"
-		(at 27.94 118.11 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b18352d7-bc72-41c0-a666-1577357e11fb")
 	)
 	(label "GND"
 		(at 316.23 139.7 0)
@@ -9735,17 +9611,6 @@
 			(justify right)
 		)
 		(uuid "1e67b52e-55b0-4d77-94dd-79a8eb2e2cbc")
-	)
-	(hierarchical_label "3v3"
-		(shape input)
-		(at 33.02 259.08 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "271cdbb5-e0c9-40b2-a267-36ad9d2bffde")
 	)
 	(hierarchical_label "5V"
 		(shape input)
@@ -9977,28 +9842,6 @@
 			(justify right)
 		)
 		(uuid "ad724639-1bbe-495b-920a-7d043f91e8d9")
-	)
-	(hierarchical_label "GPIO5"
-		(shape input)
-		(at 33.02 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ae64e358-bb80-44a4-b563-49200a3ee229")
-	)
-	(hierarchical_label "GPIO6"
-		(shape input)
-		(at 33.02 118.11 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b2c4a73d-c65f-42a0-9f10-7d4d1cf2fa5c")
 	)
 	(hierarchical_label "3v3"
 		(shape input)
@@ -11029,142 +10872,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 41.91 259.08 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "12892a54-4a40-4408-bf06-95515fae52a2")
-		(property "Reference" "R22"
-			(at 43.942 253.746 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 43.688 256.032 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 41.91 260.858 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 41.91 259.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 41.91 259.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 41.91 259.08 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 41.91 259.08 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 41.91 259.08 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-0710KL"
-			(at 41.91 259.08 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 41.91 259.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "86b49559-b710-4409-b906-52bea6c51dfb")
-		)
-		(pin "1"
-			(uuid "c47a1f29-e33a-42bf-8e95-426467358c41")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
-					(reference "R22")
 					(unit 1)
 				)
 			)
