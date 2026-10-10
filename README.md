@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Images/Lamoka1-half.png" alt="Lamoka1/2 main PCB" width="820">
+<img src="Images/lamoka1-2-routing-top-fresh.png" alt="Lamoka1/2 main PCB" width="820">
 
 <br>
 

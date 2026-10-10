@@ -1,209 +1,11 @@
 ** Drc report for Lamoka1.kicad_pcb **
-** Created on 2026-10-08T22:01:42 **
+** Created on 2026-10-10T11:39:36 **
 ** Report includes: Errors, Warnings, Exclusions **
 
-** Found 91 DRC violations **
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(192.2500 mm, 168.0400 mm): Via [/Control-Section/AIN4] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(216.9676 mm, 143.7476 mm): Via [/Control-Section/AIN1] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(218.9776 mm, 143.7476 mm): Via [/Control-Section/AIN1] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(252.3176 mm, 173.0376 mm): Via [/Control-Section/AIN1] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(223.1476 mm, 141.1776 mm): Via [/Control-Section/AIN3] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(215.8276 mm, 142.7176 mm): Via [/Control-Section/AIN3] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(220.8876 mm, 130.2876 mm): Via [/Control-Section/AIN3] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(188.9376 mm, 183.1976 mm): Via [/Inversion-Section/CSP] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(197.0676 mm, 177.7676 mm): Via [/Inversion-Section/CSP] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(197.7776 mm, 178.2676 mm): Via [/Inversion-Section/CSN] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(191.2276 mm, 184.9976 mm): Via [/Control-Section/AIN0] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(215.5676 mm, 142.0476 mm): Via [/Control-Section/AIN2] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(248.3876 mm, 132.0876 mm): Via [/Control-Section/AIN2] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(218.9176 mm, 142.0376 mm): Via [/Control-Section/AIN2] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(242.4876 mm, 149.0076 mm): Via [Net-(U6-HO)] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(240.6876 mm, 171.4176 mm): Via [/Inversion-Section/LO1] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(203.8376 mm, 189.5376 mm): Via [/Inversion-Section/VIN] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(207.3376 mm, 189.9376 mm): Via [/Inversion-Section/UVLO] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(245.1376 mm, 161.4576 mm): Via [Net-(U5-HO)] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(246.4076 mm, 139.0176 mm): Via [/Inversion-Section/LO2] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(212.9876 mm, 177.2276 mm): Via [/Inversion-Section/SW] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(222.8376 mm, 174.0076 mm): Via [/Inversion-Section/SW] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(213.9276 mm, 175.3176 mm): Via [/Inversion-Section/SW] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(219.1276 mm, 176.7476 mm): Via [/Inversion-Section/LO] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(224.8476 mm, 178.1076 mm): Via [/Inversion-Section/HO] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(214.7076 mm, 178.9676 mm): Via [/Inversion-Section/BST] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(215.5976 mm, 174.6476 mm): Via [/Inversion-Section/BST] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(211.4576 mm, 176.8076 mm): Via [/Inversion-Section/VCC] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(211.8776 mm, 175.0776 mm): Via [/Inversion-Section/VCC] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(218.0476 mm, 137.0076 mm): Via [/Control-Section/GPIO8] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(217.5276 mm, 135.4276 mm): Via [/Control-Section/GPIO8] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(167.3076 mm, 175.2676 mm): Via [/Control-Section/PG] on F.Cu - B.Cu
-[via_diameter]: Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5000 mm)
-    Rule: netclass 'Default'; error
-    @(166.2376 mm, 168.5676 mm): Via [/Control-Section/PG] on F.Cu - B.Cu
+** Found 25 DRC violations **
 [items_not_allowed]: Items not allowed (keepout area 'GND RP2354A')
     Rule: keepout area 'GND RP2354A'; error
     @(195.3976 mm, 139.7576 mm): Pad 61 [GND] of U1 on B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(192.2500 mm, 168.0400 mm): Via [/Control-Section/AIN4] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(216.9676 mm, 143.7476 mm): Via [/Control-Section/AIN1] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(218.9776 mm, 143.7476 mm): Via [/Control-Section/AIN1] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(252.3176 mm, 173.0376 mm): Via [/Control-Section/AIN1] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(223.1476 mm, 141.1776 mm): Via [/Control-Section/AIN3] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(215.8276 mm, 142.7176 mm): Via [/Control-Section/AIN3] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(220.8876 mm, 130.2876 mm): Via [/Control-Section/AIN3] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(188.9376 mm, 183.1976 mm): Via [/Inversion-Section/CSP] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(197.0676 mm, 177.7676 mm): Via [/Inversion-Section/CSP] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(197.7776 mm, 178.2676 mm): Via [/Inversion-Section/CSN] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(191.2276 mm, 184.9976 mm): Via [/Control-Section/AIN0] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(215.5676 mm, 142.0476 mm): Via [/Control-Section/AIN2] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(248.3876 mm, 132.0876 mm): Via [/Control-Section/AIN2] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(218.9176 mm, 142.0376 mm): Via [/Control-Section/AIN2] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(242.4876 mm, 149.0076 mm): Via [Net-(U6-HO)] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(240.6876 mm, 171.4176 mm): Via [/Inversion-Section/LO1] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(203.8376 mm, 189.5376 mm): Via [/Inversion-Section/VIN] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(207.3376 mm, 189.9376 mm): Via [/Inversion-Section/UVLO] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(245.1376 mm, 161.4576 mm): Via [Net-(U5-HO)] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(246.4076 mm, 139.0176 mm): Via [/Inversion-Section/LO2] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(212.9876 mm, 177.2276 mm): Via [/Inversion-Section/SW] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(222.8376 mm, 174.0076 mm): Via [/Inversion-Section/SW] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(213.9276 mm, 175.3176 mm): Via [/Inversion-Section/SW] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(219.1276 mm, 176.7476 mm): Via [/Inversion-Section/LO] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(224.8476 mm, 178.1076 mm): Via [/Inversion-Section/HO] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(214.7076 mm, 178.9676 mm): Via [/Inversion-Section/BST] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(215.5976 mm, 174.6476 mm): Via [/Inversion-Section/BST] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(211.4576 mm, 176.8076 mm): Via [/Inversion-Section/VCC] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(211.8776 mm, 175.0776 mm): Via [/Inversion-Section/VCC] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(218.0476 mm, 137.0076 mm): Via [/Control-Section/GPIO8] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(217.5276 mm, 135.4276 mm): Via [/Control-Section/GPIO8] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(167.3076 mm, 175.2676 mm): Via [/Control-Section/PG] on F.Cu - B.Cu
-[annular_width]: Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1000 mm)
-    Rule: board setup constraints; error
-    @(166.2376 mm, 168.5676 mm): Via [/Control-Section/PG] on F.Cu - B.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(204.8176 mm, 187.6076 mm): Reference field of Rvin1
@@ -292,7 +94,7 @@ High Voltage
     Local override; warning
     @(201.8776 mm, 156.0076 mm): Track [/Control-Section/5V] on F.Cu, length 0.9400 mm
 
-** Found 50 unconnected pads **
+** Found 48 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
     @(165.4976 mm, 172.8076 mm): Pad 4 [GND] of U7 on B.Cu
@@ -303,12 +105,12 @@ High Voltage
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(199.1876 mm, 173.5576 mm): Pad 9 [GND] of U4 on B.Cu
+    @(199.1876 mm, 178.1076 mm): Pad 2 [GND] of U4 on B.Cu
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(199.1876 mm, 178.1076 mm): Pad 2 [GND] of U4 on B.Cu
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
+    @(199.1876 mm, 173.5576 mm): Pad 9 [GND] of U4 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
@@ -327,12 +129,16 @@ High Voltage
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
     @(213.1708 mm, 136.5644 mm): Pad 9 [GND] of U10 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(181.2100 mm, 161.6300 mm): Track [/Control-Section/5V] on B.Cu, length 1.1900 mm
-    @(185.5106 mm, 160.0626 mm): Pad 1 [/Control-Section/5V] of C11 on F.Cu
+    @(181.0000 mm, 161.4200 mm): Track [/Control-Section/5V] on B.Cu, length 0.2970 mm
+    @(185.5106 mm, 160.0626 mm): Track [/Control-Section/5V] on F.Cu, length 1.3833 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(194.2176 mm, 154.4376 mm): Track [/Control-Section/5V] on F.Cu, length 1.4600 mm
@@ -343,24 +149,20 @@ High Voltage
     @(201.4476 mm, 155.9276 mm): Track [/Control-Section/5V] on F.Cu, length 1.7500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(201.8976 mm, 154.3476 mm): Track [/Control-Section/5V] on F.Cu, length 1.6800 mm
+    @(201.5876 mm, 154.0376 mm): Track [/Control-Section/5V] on F.Cu, length 0.4384 mm
     @(208.6976 mm, 154.3076 mm): Track [/Control-Section/5V] on F.Cu, length 1.6000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(215.9276 mm, 154.4376 mm): Track [/Control-Section/5V] on F.Cu, length 1.4600 mm
-    @(208.7176 mm, 155.9276 mm): Track [/Control-Section/5V] on F.Cu, length 0.4300 mm
+    @(209.1476 mm, 155.9276 mm): Track [/Control-Section/5V] on F.Cu, length 1.5200 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(216.3776 mm, 155.9876 mm): Track [/Control-Section/5V] on F.Cu, length 1.5700 mm
     @(223.1776 mm, 154.1276 mm): Track [/Control-Section/5V] on F.Cu, length 1.8200 mm
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(226.6350 mm, 175.0900 mm): Track [/Inversion-Section/G4D] on B.Cu, length 0.5091 mm
     @(198.8268 mm, 170.3776 mm): Pad 1 [/Inversion-Section/G4D] of Rfbt1 on B.Cu
-    @(226.3326 mm, 175.4726 mm): Track [/Inversion-Section/G4D] on F.Cu, length 0.4200 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(227.0426 mm, 176.3626 mm): Track [/Inversion-Section/G4D] on F.Cu, length 1.7678 mm
-    @(233.5900 mm, 158.3500 mm): Track [/Inversion-Section/G4D] on F.Cu, length 3.7100 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(179.5625 mm, 145.4876 mm): Track [/Control-Section/BTN] on F.Cu, length 12.5000 mm
@@ -371,20 +173,12 @@ High Voltage
     @(240.1076 mm, 169.2752 mm): Pad 7 [/Inversion-Section/CSP] of U5 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(243.9276 mm, 167.6576 mm): Track [/Inversion-Section/CSP] on B.Cu, length 0.5374 mm
-    @(244.2976 mm, 143.6976 mm): Track [/Inversion-Section/CSP] on B.Cu, length 3.0300 mm
+    @(243.5476 mm, 167.2776 mm): Track [/Inversion-Section/CSP] on B.Cu, length 3.0300 mm
+    @(243.9176 mm, 143.3176 mm): Track [/Inversion-Section/CSP] on B.Cu, length 0.5374 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(241.3776 mm, 146.6803 mm): Track [/Inversion-Section/HB2] on B.Cu, length 3.1273 mm
     @(232.4576 mm, 147.4576 mm): Pad 1 [/Inversion-Section/HB2] of C23 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(222.2576 mm, 128.9576 mm): Pad 1 [/BROWN] of R31 on F.Cu
-    @(233.8076 mm, 116.7876 mm): Track [/BROWN] on F.Cu, length 10.6066 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(222.2576 mm, 128.9576 mm): Pad 1 [/BROWN] of R31 on F.Cu
-    @(229.7200 mm, 135.4800 mm): Track [/BROWN] on B.Cu, length 2.7400 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(190.6776 mm, 140.9576 mm): Track [/Control-Section/1V1] on B.Cu, length 1.2700 mm
@@ -407,8 +201,8 @@ High Voltage
     @(227.0500 mm, 154.9600 mm): Track [/BLUE] on F.Cu, length 2.6900 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(183.0400 mm, 160.0800 mm): Track [/Control-Section/3v3] on B.Cu, length 0.9192 mm
-    @(196.2276 mm, 148.0776 mm): Track [/Control-Section/3v3] on B.Cu, length 2.0800 mm
+    @(183.0400 mm, 165.6300 mm): Track [/Control-Section/3v3] on B.Cu, length 5.5500 mm
+    @(196.8676 mm, 148.7176 mm): Track [/Control-Section/3v3] on B.Cu, length 0.9051 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(186.7200 mm, 166.1400 mm): Track [/Control-Section/3v3] on B.Cu, length 5.5300 mm
@@ -416,7 +210,11 @@ High Voltage
 [unconnected_items]: Missing connection between items
     Local override; error
     @(191.9476 mm, 139.3576 mm): Pad 54 [/Control-Section/3v3] of U1 on B.Cu
+    @(192.5976 mm, 136.3076 mm): Pad 1 [/Control-Section/3v3] of U1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(191.9476 mm, 139.7576 mm): Pad 53 [/Control-Section/3v3] of U1 on B.Cu
+    @(191.9476 mm, 139.3576 mm): Pad 54 [/Control-Section/3v3] of U1 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(190.6426 mm, 141.3576 mm): Track [/Control-Section/3v3] on B.Cu, length 1.3050 mm
@@ -424,47 +222,43 @@ High Voltage
 [unconnected_items]: Missing connection between items
     Local override; error
     @(192.5976 mm, 136.3076 mm): Pad 1 [/Control-Section/3v3] of U1 on B.Cu
-    @(191.9476 mm, 139.3576 mm): Pad 54 [/Control-Section/3v3] of U1 on B.Cu
+    @(196.5976 mm, 136.3076 mm): Pad 11 [/Control-Section/3v3] of U1 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(192.5976 mm, 143.2076 mm): Pad 45 [/Control-Section/3v3] of U1 on B.Cu
     @(190.6426 mm, 141.3576 mm): Track [/Control-Section/3v3] on B.Cu, length 1.3050 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(192.9976 mm, 143.2076 mm): Pad 44 [/Control-Section/3v3] of U1 on B.Cu
+    @(192.9976 mm, 143.2076 mm): Track [/Control-Section/3v3] on B.Cu, length 1.4343 mm
     @(192.5976 mm, 143.2076 mm): Pad 45 [/Control-Section/3v3] of U1 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(195.4410 mm, 145.2349 mm): Track [/Control-Section/3v3] on B.Cu, length 0.8100 mm
     @(195.3976 mm, 143.2076 mm): Pad 38 [/Control-Section/3v3] of U1 on B.Cu
+    @(196.2037 mm, 145.9976 mm): Track [/Control-Section/3v3] on B.Cu, length 1.0786 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(195.3976 mm, 143.2076 mm): Pad 38 [/Control-Section/3v3] of U1 on B.Cu
+    @(198.8476 mm, 142.5576 mm): Track [/Control-Section/3v3] on B.Cu, length 0.6150 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(198.8476 mm, 138.5576 mm): Pad 20 [/Control-Section/3v3] of U1 on B.Cu
     @(196.5976 mm, 136.3076 mm): Pad 11 [/Control-Section/3v3] of U1 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(198.8476 mm, 138.5576 mm): Pad 20 [/Control-Section/3v3] of U1 on B.Cu
-    @(198.8476 mm, 142.5576 mm): Track [/Control-Section/3v3] on B.Cu, length 0.6150 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(198.8476 mm, 142.5576 mm): Track [/Control-Section/3v3] on B.Cu, length 0.6150 mm
-    @(195.3976 mm, 143.2076 mm): Pad 38 [/Control-Section/3v3] of U1 on B.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
+    @(200.4076 mm, 143.5026 mm): Pad 1 [/Control-Section/3v3] of R8 on B.Cu
     @(212.4476 mm, 137.7876 mm): Pad 7 [/Control-Section/3v3] of U10 on B.Cu
-    @(199.4626 mm, 142.5576 mm): Track [/Control-Section/3v3] on B.Cu, length 1.3364 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(213.6708 mm, 136.5644 mm): Pad 10 [/Control-Section/3v3] of U10 on B.Cu
     @(212.4476 mm, 137.7876 mm): Pad 7 [/Control-Section/3v3] of U10 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(213.6708 mm, 136.5644 mm): Pad 10 [/Control-Section/3v3] of U10 on B.Cu
     @(221.2758 mm, 136.1876 mm): Pad 1 [/Control-Section/3v3] of R24 on B.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(221.2758 mm, 137.7676 mm): Pad 1 [/Control-Section/3v3] of R23 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(221.2758 mm, 136.1876 mm): Pad 1 [/Control-Section/3v3] of R24 on B.Cu
+    @(213.6708 mm, 136.5644 mm): Pad 10 [/Control-Section/3v3] of U10 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(251.3246 mm, 134.6800 mm): Pad 1 [/Control-Section/3v3] of U9 on F.Cu
@@ -476,7 +270,7 @@ High Voltage
 [unconnected_items]: Missing connection between items
     Local override; error
     @(232.4276 mm, 165.7176 mm): Pad 1 [/Inversion-Section/HB1] of C22 on F.Cu
-    @(246.4576 mm, 164.3476 mm): Track [/Inversion-Section/HB1] on B.Cu, length 1.3700 mm
+    @(246.4576 mm, 164.3476 mm): Pad 13 [/Inversion-Section/HB1] of U5 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(193.3976 mm, 136.3076 mm): Pad 3 [/Control-Section/GPIO1] of U1 on B.Cu

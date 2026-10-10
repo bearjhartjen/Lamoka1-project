@@ -160,8 +160,8 @@
         "min_text_thickness": 0.1,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.15,
-        "min_via_annular_width": 0.15,
-        "min_via_diameter": 0.6,
+        "min_via_annular_width": 0.1,
+        "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -777,7 +777,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "Q1-7,Rcomp1,Css1,#PWR1-72,Coutx1,Cin1,Rfbb1,Cvin1,Rt1,TP1-41,Cres1,Rfbt1,Cout1-3,Ccomp1,NT1-2,Rsense1,IC1,Ruvb1,Ruvt1,SW1-2,C1-33,#G1-4,J1-7,Rvin1,H1-8,L1-3,Rslope1,R1-33,CR1-2,D1-12,U1-10,X1",
+    "used_designators": "Ruvb1,IC1,Cres1,TP1-41,Rt1,Cvin1,Rfbb1,Cin1,#PWR1-72,Coutx1,Css1,Rfbt1,Cout1-3,NT1-2,Rsense1,Ruvt1,SW1-2,C1-33,#G1-4,J1-7,D1-12,CR1-2,L1-3,Rslope1,R1-33,U1-10,X1,Rcomp1,Q1-7,Ccomp1,Rvin1,H1-8",
     "variants": []
   },
   "sheets": [
