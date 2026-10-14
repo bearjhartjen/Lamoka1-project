@@ -641,7 +641,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 7.62)
 					(name "1"
@@ -659,7 +659,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -2.54 0)
 					(length 7.62)
 					(name "2"
@@ -677,7 +677,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 25.4 -2.54 180)
 					(length 7.62)
 					(name "3"
@@ -695,7 +695,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 25.4 0 180)
 					(length 7.62)
 					(name "4"
@@ -1352,7 +1352,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 12.7 0 180)
 					(length 2.54)
 					(name ""
@@ -1370,7 +1370,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
 					(name ""
@@ -1474,7 +1474,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 12.7 270)
 					(length 2.54)
 					(name ""
@@ -1492,7 +1492,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 90)
 					(length 2.54)
 					(name ""
@@ -1695,7 +1695,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 12.7 0 180)
 					(length 2.54)
 					(name ""
@@ -1713,7 +1713,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
 					(name ""
@@ -1817,7 +1817,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 12.7 270)
 					(length 2.54)
 					(name ""
@@ -1835,7 +1835,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 90)
 					(length 2.54)
 					(name ""
@@ -2926,7 +2926,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
 					(name ""
@@ -2944,7 +2944,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 7.62 0 180)
 					(length 2.54)
 					(name ""
@@ -3012,7 +3012,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 270)
 					(length 2.54)
 					(name ""
@@ -3030,7 +3030,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -7.62 90)
 					(length 2.54)
 					(name ""
@@ -4792,7 +4792,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 15.24 0 180)
 					(length 2.54)
 					(name "1"
@@ -4810,7 +4810,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
 					(name "2"
@@ -4938,7 +4938,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 15.24 270)
 					(length 2.54)
 					(name "1"
@@ -4956,7 +4956,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 90)
 					(length 2.54)
 					(name "2"
@@ -5159,7 +5159,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 12.7 0 180)
 					(length 2.54)
 					(name ""
@@ -5177,7 +5177,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
 					(name ""
@@ -5281,7 +5281,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 12.7 270)
 					(length 2.54)
 					(name ""
@@ -5299,7 +5299,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 90)
 					(length 2.54)
 					(name ""
@@ -5502,7 +5502,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 10.16 0 180)
 					(length 2.54)
 					(name ""
@@ -5520,7 +5520,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
 					(name ""
@@ -5624,7 +5624,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 10.16 270)
 					(length 2.54)
 					(name ""
@@ -5642,7 +5642,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 90)
 					(length 2.54)
 					(name ""
@@ -5809,7 +5809,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
 					(name ""
@@ -5827,7 +5827,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 7.62 0 180)
 					(length 2.54)
 					(name ""
@@ -5895,7 +5895,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 270)
 					(length 2.54)
 					(name ""
@@ -5913,7 +5913,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -7.62 90)
 					(length 2.54)
 					(name ""
@@ -6097,7 +6097,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin output line
 					(at 27.94 0 180)
 					(length 5.08)
 					(name "VOUT"
@@ -6353,7 +6353,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at 50.8 -10.16 180)
 					(length 7.62)
 					(name "FB"
@@ -9535,7 +9535,7 @@
 		)
 		(uuid "ff9c804c-67cc-4eaa-85ef-fdbfc6186e81")
 	)
-	(hierarchical_label "GNDE"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 134.62 152.4 0)
 		(effects
@@ -9546,7 +9546,7 @@
 		)
 		(uuid "03b9f52b-b8a0-42d2-a2a2-7b7ee7ebff5a")
 	)
-	(hierarchical_label "11-14v input"
+	(hierarchical_label "CSP"
 		(shape input)
 		(at 30.48 190.5 180)
 		(effects
@@ -9568,7 +9568,7 @@
 		)
 		(uuid "1340795b-f849-4120-a838-5bafc2d7b3ab")
 	)
-	(hierarchical_label "SW_B"
+	(hierarchical_label "G4S"
 		(shape input)
 		(at 113.03 190.5 180)
 		(effects
@@ -9579,7 +9579,7 @@
 		)
 		(uuid "13c83228-c9d8-4c17-a6d9-2dc1cdd4e4e0")
 	)
-	(hierarchical_label "SW_A"
+	(hierarchical_label "Q3S"
 		(shape input)
 		(at 85.09 190.5 180)
 		(effects
@@ -9601,7 +9601,7 @@
 		)
 		(uuid "1cd18547-232a-4f09-a561-eca241956363")
 	)
-	(hierarchical_label "FAN-GND"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 29.21 132.08 180)
 		(effects
@@ -9645,7 +9645,7 @@
 		)
 		(uuid "39869856-e799-4f10-b8d8-51ed9ce666bd")
 	)
-	(hierarchical_label "11-14v input"
+	(hierarchical_label "CSP"
 		(shape input)
 		(at 252.73 142.24 90)
 		(effects
@@ -9700,7 +9700,7 @@
 		)
 		(uuid "5f53b9a0-cc0f-4663-8f2d-e49b3c7d2434")
 	)
-	(hierarchical_label "3v3E"
+	(hierarchical_label "3v3"
 		(shape input)
 		(at 134.62 137.16 90)
 		(effects
@@ -9887,7 +9887,7 @@
 		)
 		(uuid "c180f24a-3f5d-4120-8a0e-e90111dc2d2c")
 	)
-	(hierarchical_label "17v"
+	(hierarchical_label "G4D"
 		(shape input)
 		(at 57.15 190.5 180)
 		(effects
@@ -9909,7 +9909,7 @@
 		)
 		(uuid "cad49ac1-35d1-4ae7-940e-2ae778eeeb61")
 	)
-	(hierarchical_label "SHIELD"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 106.68 68.58 180)
 		(effects
@@ -9931,7 +9931,7 @@
 		)
 		(uuid "d775eb4d-ecb0-4d1e-b245-d9eadc85b727")
 	)
-	(hierarchical_label "VBUS"
+	(hierarchical_label "USB-5v"
 		(shape input)
 		(at 106.68 40.64 180)
 		(effects

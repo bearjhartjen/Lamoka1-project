@@ -523,7 +523,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 7.62)
 					(name "1"
@@ -541,7 +541,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 40.64 0 180)
 					(length 7.62)
 					(name "2"
@@ -559,7 +559,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -2.54 0)
 					(length 7.62)
 					(name "3"
@@ -577,7 +577,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 40.64 -2.54 180)
 					(length 7.62)
 					(name "4"
@@ -2455,85 +2455,6 @@
 			(project "Lamoka1"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/e6907476-b7b0-4897-94b6-ac3817b6fb94"
 					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 81.28 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "23a5ba83-3fa9-4ec2-bde4-5a63f1df8be2")
-		(property "Reference" "#FLG14"
-			(at 81.28 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 81.28 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 81.28 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f11aa243-800b-46fa-89ea-6ac1dbdcd0a3")
-		)
-		(instances
-			(project "Lamoka1"
-				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/e6907476-b7b0-4897-94b6-ac3817b6fb94"
-					(reference "#FLG14")
 					(unit 1)
 				)
 			)

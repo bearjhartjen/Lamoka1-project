@@ -2884,7 +2884,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin output line
 					(at 27.94 0 180)
 					(length 5.08)
 					(name "VOUT"
@@ -4118,16 +4118,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 38.1) (xy 129.54 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1456872d-2682-4486-aba1-8ba62ec9f59f")
-	)
-	(wire
-		(pts
 			(xy 208.28 87.63) (xy 209.55 87.63)
 		)
 		(stroke
@@ -5196,7 +5186,7 @@
 		)
 		(uuid "23a8cde8-0a8d-4012-8432-adc630ec18ae")
 	)
-	(label "Q5S"
+	(label "GND"
 		(at 250.19 54.61 180)
 		(effects
 			(font
@@ -5236,7 +5226,7 @@
 		)
 		(uuid "3d6dd311-8902-4316-a970-f1fbf765952b")
 	)
-	(label "Q5S"
+	(label "GND"
 		(at 207.01 60.96 180)
 		(effects
 			(font
@@ -5256,7 +5246,7 @@
 		)
 		(uuid "4369bf84-84e1-4b1d-83cb-8292dcf34b34")
 	)
-	(label "Q5D"
+	(label "Q3S"
 		(at 219.71 60.96 0)
 		(effects
 			(font
@@ -5356,7 +5346,7 @@
 		)
 		(uuid "5d72a800-835c-4d0e-a914-1f52f332a638")
 	)
-	(label "Q6S"
+	(label "GND"
 		(at 255.27 54.61 0)
 		(effects
 			(font
@@ -5396,7 +5386,7 @@
 		)
 		(uuid "6a741f4d-0278-4908-a39b-657caa3f7148")
 	)
-	(label "Q6D"
+	(label "G4S"
 		(at 255.27 44.45 0)
 		(effects
 			(font
@@ -5446,7 +5436,7 @@
 		)
 		(uuid "7bc8c690-100b-4123-9af4-a6b6ab24ac62")
 	)
-	(label "Q3D"
+	(label "G4D"
 		(at 266.7 46.99 180)
 		(effects
 			(font
@@ -5606,7 +5596,7 @@
 		)
 		(uuid "af2a7419-ea29-4b68-81c4-a275be51b42b")
 	)
-	(label "Q5D"
+	(label "Q3S"
 		(at 271.78 55.88 0)
 		(effects
 			(font
@@ -5686,7 +5676,7 @@
 		)
 		(uuid "ca4749bb-4bdd-43d2-aed7-53b797845aa7")
 	)
-	(label "Q3D"
+	(label "G4D"
 		(at 219.71 41.91 0)
 		(effects
 			(font
@@ -5726,7 +5716,7 @@
 		)
 		(uuid "d2ba885c-e289-4109-b852-86da3f1769e6")
 	)
-	(label "Q6S"
+	(label "GND"
 		(at 227.33 59.69 180)
 		(effects
 			(font
@@ -5746,7 +5736,7 @@
 		)
 		(uuid "e11ff404-7db3-4f49-ae8d-1fb02895fda3")
 	)
-	(label "Q6D"
+	(label "G4S"
 		(at 240.03 59.69 0)
 		(effects
 			(font
@@ -5786,7 +5776,7 @@
 		)
 		(uuid "fece44dd-e9bf-4111-bb1a-948cbe1e8c46")
 	)
-	(hierarchical_label "SEC-B"
+	(hierarchical_label "AC_OUT_B"
 		(shape input)
 		(at 233.68 152.4 0)
 		(effects
@@ -5797,7 +5787,7 @@
 		)
 		(uuid "046933d7-90ab-42df-8e64-299fac29f58b")
 	)
-	(hierarchical_label "11-14v input"
+	(hierarchical_label "CSP"
 		(shape input)
 		(at 257.81 85.09 180)
 		(effects
@@ -5819,7 +5809,7 @@
 		)
 		(uuid "184178cb-b863-42ec-838e-f0847ae182e8")
 	)
-	(hierarchical_label "Input-GND"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 53.34 50.8 180)
 		(effects
@@ -5852,7 +5842,7 @@
 		)
 		(uuid "3fe1a508-a782-4a26-b389-dbc21a8c793c")
 	)
-	(hierarchical_label "SW_B"
+	(hierarchical_label "G4S"
 		(shape input)
 		(at 308.61 111.76 0)
 		(effects
@@ -5863,7 +5853,7 @@
 		)
 		(uuid "4544ff30-fbc0-4c85-9c2f-4cfc770eda2b")
 	)
-	(hierarchical_label "SW_A"
+	(hierarchical_label "Q3S"
 		(shape input)
 		(at 209.55 96.52 180)
 		(effects
@@ -5874,7 +5864,7 @@
 		)
 		(uuid "4921f42a-ef79-4e8b-864d-59b082558c58")
 	)
-	(hierarchical_label "11-14v input"
+	(hierarchical_label "CSP"
 		(shape input)
 		(at 227.33 78.74 0)
 		(effects
@@ -5885,7 +5875,7 @@
 		)
 		(uuid "50d5787d-892f-49f6-998e-5d4de4e0f9f3")
 	)
-	(hierarchical_label "11-14v input"
+	(hierarchical_label "CSP"
 		(shape input)
 		(at 209.55 78.74 0)
 		(effects
@@ -5929,7 +5919,7 @@
 		)
 		(uuid "60e62728-9827-4179-8f7a-0ec37c48e1d2")
 	)
-	(hierarchical_label "SW_A"
+	(hierarchical_label "Q3S"
 		(shape input)
 		(at 269.24 58.42 180)
 		(effects
@@ -5940,7 +5930,7 @@
 		)
 		(uuid "61252181-c8c3-4515-9f98-100309e2a916")
 	)
-	(hierarchical_label "11-14v input"
+	(hierarchical_label "CSP"
 		(shape input)
 		(at 257.81 118.11 180)
 		(effects
@@ -5951,7 +5941,7 @@
 		)
 		(uuid "71f546e1-16b2-4d15-91f1-07fa89a83524")
 	)
-	(hierarchical_label "11-14v input"
+	(hierarchical_label "CSP"
 		(shape input)
 		(at 48.26 38.1 180)
 		(effects
@@ -5962,7 +5952,7 @@
 		)
 		(uuid "7b85fd9a-4103-4601-a778-ce1d674c3f0f")
 	)
-	(hierarchical_label "SW_B"
+	(hierarchical_label "G4S"
 		(shape input)
 		(at 227.33 96.52 180)
 		(effects
@@ -5973,7 +5963,7 @@
 		)
 		(uuid "8a3986c6-bc70-4373-a360-ef3e343f9636")
 	)
-	(hierarchical_label "17v"
+	(hierarchical_label "G4D"
 		(shape input)
 		(at 189.23 38.1 0)
 		(effects
@@ -5984,7 +5974,7 @@
 		)
 		(uuid "955eef2c-98e2-453e-8002-a866741a8750")
 	)
-	(hierarchical_label "AC_OUT-GND"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 223.52 157.48 180)
 		(effects
@@ -5995,7 +5985,7 @@
 		)
 		(uuid "a23eb8b2-912c-4542-a69e-944d2e01a293")
 	)
-	(hierarchical_label "17v"
+	(hierarchical_label "G4D"
 		(shape input)
 		(at 269.24 50.8 180)
 		(effects
@@ -6028,7 +6018,7 @@
 		)
 		(uuid "e267a52b-3608-4a55-9723-4b9003f2168c")
 	)
-	(hierarchical_label "SEC_A"
+	(hierarchical_label "AC_OUT_A"
 		(shape input)
 		(at 233.68 147.32 0)
 		(effects
@@ -6039,7 +6029,7 @@
 		)
 		(uuid "ef7481dd-a544-4794-b23e-30804fb47c56")
 	)
-	(hierarchical_label "SW_B"
+	(hierarchical_label "G4S"
 		(shape input)
 		(at 252.73 46.99 180)
 		(effects
@@ -6050,7 +6040,7 @@
 		)
 		(uuid "fd2d1a26-a7ad-47fc-8a07-49a4978cba13")
 	)
-	(hierarchical_label "SW_A"
+	(hierarchical_label "Q3S"
 		(shape input)
 		(at 308.61 78.74 0)
 		(effects

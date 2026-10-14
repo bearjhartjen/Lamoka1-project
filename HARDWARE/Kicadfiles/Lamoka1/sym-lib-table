@@ -19,4 +19,8 @@
 	(lib (name "B3F-4055") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/B3F-4055/2026-09-21_22-16-50.kicad_sym") (options "") (descr ""))
 	(lib (name "Lamoka1_Q1Q2_8pin") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/Lamoka1_Q1Q2_8pin.kicad_sym") (options "") (descr ""))
 	(lib (name "Lamoka1_MOSFET") (type "KiCad") (uri "${KIPRJMOD}/Lamoka1_MOSFET.kicad_sym") (options "") (descr "Local CSD19536KCS with TO-220 G-D-S pinout"))
+	(lib (name "Wago-connector") (type "KiCad") (uri "${KIPRJMOD}/Lamoka1_Parts.kicad_sym") (options "") (descr ""))
+	(lib (name "2026-07-07_01-04-34") (type "KiCad") (uri "${KIPRJMOD}/Lamoka1_Parts.kicad_sym") (options "") (descr ""))
+	(lib (name "2026-07-07_19-38-11") (type "KiCad") (uri "${KIPRJMOD}/Lamoka1_Parts.kicad_sym") (options "") (descr ""))
+	(lib (name "2026-09-13_21-28-35") (type "KiCad") (uri "${KIPRJMOD}/Lamoka1_Parts.kicad_sym") (options "") (descr ""))
 )
