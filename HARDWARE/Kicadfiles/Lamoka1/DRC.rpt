@@ -1,19 +1,8 @@
 ** Drc report for Lamoka1.kicad_pcb **
-** Created on 2026-10-14T05:30:06 **
+** Created on 2026-10-14T22:55:30 **
 ** Report includes: Errors, Warnings, Exclusions **
 
-** Found 33 DRC violations **
-[clearance]: Clearance violation ( clearance 0.1800 mm; actual 0.1639 mm)
-    Local override; error
-    @(191.9476 mm, 142.1576 mm): Pad 47 [/Control-Section/VREG_GND] of U1 on B.Cu
-    @(192.7100 mm, 142.4200 mm): Via [/Control-Section/3v3] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.1800 mm; actual 0.1778 mm)
-    Local override; error
-    @(224.8676 mm, 175.4476 mm): Pad 1 [/Inversion-Section/SW] of Q1 on F.Cu
-    @(224.7900 mm, 174.1700 mm): Track [/Inversion-Section/G4D] on F.Cu, length 3.1857 mm
-[items_not_allowed]: Items not allowed (keepout area 'GND RP2354A')
-    Rule: keepout area 'GND RP2354A'; error
-    @(195.3976 mm, 139.7576 mm): Pad 61 [GND] of U1 on B.Cu
+** Found 27 DRC violations **
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(204.8176 mm, 187.6076 mm): Reference field of Rvin1
@@ -85,14 +74,6 @@ High Voltage
 [silk_edge_clearance]: Silkscreen clipped by board edge
     Rule: board setup constraints silk; warning
     @(161.8344 mm, 100.8730 mm): Rectangle on Edge.Cuts
-    @(256.2126 mm, 111.7876 mm): Circle of J1 on F.Silkscreen
-[silk_edge_clearance]: Silkscreen clipped by board edge
-    Rule: board setup constraints silk; warning
-    @(161.8344 mm, 100.8730 mm): Rectangle on Edge.Cuts
-    @(256.2126 mm, 111.7876 mm): Circle of J1 on B.Silkscreen
-[silk_edge_clearance]: Silkscreen clipped by board edge
-    Rule: board setup constraints silk; warning
-    @(161.8344 mm, 100.8730 mm): Rectangle on Edge.Cuts
     @(162.7044 mm, 136.7030 mm): Segment of J3 on B.Silkscreen
 [silk_edge_clearance]: Silkscreen clipped by board edge
     Rule: board setup constraints silk; warning
@@ -112,23 +93,12 @@ High Voltage
     @(194.3200 mm, 138.7300 mm): Via [GND] on F.Cu - B.Cu
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(201.8776 mm, 156.0076 mm): Track [/Control-Section/5V] on F.Cu, length 0.9400 mm
-[track_dangling]: Track has unconnected end
-    Local override; warning
     @(237.0100 mm, 139.7900 mm): Track [/BLUE] on F.Cu, length 1.2300 mm
 [isolated_copper]: Isolated copper fill
     Local override; warning
     @(193.1700 mm, 137.5200 mm): Zone '1v1_1' [/Control-Section/1V1] on F.Cu and B.Cu, priority 2
 
-** Found 9 unconnected pads **
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-    @(165.4976 mm, 174.3076 mm): Pad 1 [GND] of U7 on B.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(165.4976 mm, 172.8076 mm): Pad 4 [GND] of U7 on B.Cu
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
+** Found 7 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
@@ -139,16 +109,16 @@ High Voltage
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
     @(204.8876 mm, 175.5076 mm): Pad 15 [GND] of U4 on B.Cu
+    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
     @(213.1708 mm, 136.5644 mm): Pad 9 [GND] of U10 on B.Cu
+    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
     @(213.1708 mm, 136.5644 mm): Pad 9 [GND] of U10 on B.Cu
+    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
     @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
