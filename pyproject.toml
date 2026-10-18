@@ -1,0 +1,38 @@
+# Python development environment for the Lamoka1 repository.
+#
+# The repository checks (tests/) and the ruff linter run on Python 3. This file
+# and uv.lock pin that environment so contributors and CI get the same pytest
+# and ruff versions. Nothing here is shipped to a board: the environment is
+# synced without building or installing the project itself.
+
+[project]
+name = "lamoka1-repo-tooling"
+version = "0.0.0"
+description = "Repository checks and development tooling for the Lamoka1 open-source inverter/charger project"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Bear Joshua Hartjen (Flamingo and Cactus)", email = "flamingoncactusgroup@gmail.com" },
+]
+license = "GPL-3.0-only"
+urls = { Homepage = "https://github.com/bearjhartjen/Lamoka1-project", Issues = "https://github.com/bearjhartjen/Lamoka1-project/issues" }
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.9",
+]
+
+[tool.uv]
+# No package is built or installed; only the dev dependencies above.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP", "W"]

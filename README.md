@@ -45,19 +45,22 @@ git clone https://github.com/bearjhartjen/Lamoka1-project.git
 cd Lamoka1-project
 
 # 2. Open the main board (inverter-only Lamoka1/2) in KiCad 10
-#    (or open HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pro from the KiCad GUI)
-kicad "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pro"
+#    (or open HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pro from the KiCad GUI)
+kicad "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pro"
 
 # 3. Export a fabrication package for your own build
 mkdir -p ~/lamoka-fab
-kicad-cli pcb export gerbers --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pcb"
-kicad-cli pcb export drill   --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pcb"
+kicad-cli pcb export gerbers --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb"
+kicad-cli pcb export drill   --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb"
 ```
 
 The repository also ships a [`Makefile`](Makefile) that wraps the common tasks
 (`make help` lists them): `make firmware` builds the current PIE sketch for the
 DEV-Brain, `make test` runs the repository checks, `make check` adds the KiCad
-ERC and DRC reports, and `make static` runs cppcheck over the firmware.
+ERC and DRC reports, `make static` runs cppcheck over the firmware, and
+`make lint` runs ruff over the Python tooling. The checks and the linter use
+the pinned environment in [`pyproject.toml`](pyproject.toml) / `uv.lock`:
+install [uv](https://docs.astral.sh/uv/) and run `uv sync` once.
 
 The Portal Interface Engine (PIE) firmware drives the ten WS2812B LEDs and the single button on the Lamoka1-DEV-Brain. Every revision is a separate sketch file, and V1.8 is the current head:
 
@@ -83,7 +86,7 @@ One button drives the whole interface: tap to move, double-tap to go back, hold 
 
 | Board | What it is | State | Design files |
 | --- | --- | --- | --- |
-| **Lamoka1/2** (main) | Inverter board: 11–14V input, 17V boost, H-bridge, RP2354A, output transformer wired off-board | Laid out; power stage never energized | [`HARDWARE/Kicadfiles/Lamoka1/`](HARDWARE/Kicadfiles/Lamoka1) |
+| **Lamoka1/2** (main) | Inverter board: 11–14V input, 17V boost, H-bridge, RP2354A, output transformer wired off-board | Laid out; power stage never energized | [`HARDWARE/Kicadfiles/Lamoka1-half/`](HARDWARE/Kicadfiles/Lamoka1-half) |
 | **Lamoka1-DEV-Brain** | Control-only board (MCU, LEDs, button) used to develop the firmware | Built and assembled; 72-hour burn-in passed | [`Lamoka1-DEV-Brain/`](Lamoka1-DEV-Brain) |
 
 <p align="center">
@@ -114,22 +117,22 @@ Design documentation lives alongside the sources:
 
 ### 1. Order the PCB
 
-Export the fabrication package straight from the KiCad project. The board is **2 layers, 1.6 mm FR-4, 95.0 × 95.0 mm**, with 0.15 mm minimum tracks, 0.18 mm minimum clearance, and 0.2032 mm minimum drills — any fab that quotes 6 mil features can build it (JLCPCB, PCBWay, OSH Park, …).
+The prepared package for this revision is committed under [`HARDWARE/Lamoka1-half fab files/`](HARDWARE/Lamoka1-half%20fab%20files/README.md); the notes below describe how it is produced and what to check when ordering. The board is **2 layers, 1.6 mm FR-4, 95.2 × 95.2 mm**, with 0.15 mm (5.9 mil) minimum tracks, 0.18 mm minimum clearance, 0.2032 mm minimum drills and 0.10 mm via annular rings. Check a fab against those four numbers rather than against a generic "6 mil" pitch: PCBWay's standard process covers all of them (the 4 mil rings fall in its "medium difficulty" class), while a house whose standard process stops at 0.3 mm drills would not.
 
 ```bash
 # Gerbers, drill files and (optionally) a pick-and-place file
 mkdir -p ~/lamoka-fab
-kicad-cli pcb export gerbers --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pcb"
-kicad-cli pcb export drill   --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pcb"
+kicad-cli pcb export gerbers --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb"
+kicad-cli pcb export drill   --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb"
 kicad-cli pcb export pos --format csv --units mm \
-  --output ~/lamoka-fab/Lamoka1-pos.csv "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pcb"
+  --output ~/lamoka-fab/Lamoka1-pos.csv "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb"
 ```
 
-In the KiCad GUI the same output is under **File → Fabrication Outputs → Gerbers / Drill Files**. Zip `~/lamoka-fab/` and upload it to your fab of choice. The DEV-Brain was manufactured and assembled by [PCBWay](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html); its fab files (including the exact package we ordered) are committed under `Lamoka1-DEV-Brain/Lamoka1-DEV-Brain fab files/` as a worked example.
+In the KiCad GUI the same output is under **File → Fabrication Outputs → Gerbers / Drill Files**. Zip `~/lamoka-fab/` and upload it to your fab of choice. The DEV-Brain was manufactured and assembled by [PCBWay](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html); its fab files (including the exact package we ordered) are committed under `Lamoka1-DEV-Brain/Lamoka1-DEV-Brain fab files/` as a worked example, and the main board's equivalent is in [`HARDWARE/Lamoka1-half fab files/`](HARDWARE/Lamoka1-half%20fab%20files/README.md).
 
 ### 2. Order the parts
 
-The bill of materials generated from the schematic is committed as [`HARDWARE/Kicadfiles/Lamoka1/Lamoka1.csv`](HARDWARE/Kicadfiles/Lamoka1/Lamoka1.csv). It carries Reference, Quantity, Value, Footprint, MPN and Description columns; the schematic remains authoritative, and the BOM export leaves the Manufacturer column blank on most lines, so add manufacturer or distributor order codes before you order. The large items (transformer, fan, outlet, Wago connectors) are listed in [COMPONENTS.md](HARDWARE/COMPONENTS.md); we sourced them from DigiKey.
+The bill of materials generated from the schematic is committed as [`HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.csv`](HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.csv). It carries Reference, Qty, Value, Footprint, MPN and Description columns — the Reference column is a grouped list, so one row can cover several parts — and it has no manufacturer column at all. The schematic remains authoritative. The orderable version, in PCBWay's 9-column format with manufacturer and description filled in for all 70 lines, is [`HARDWARE/Lamoka1-half fab files/Lamoka1-half BOM.csv`](HARDWARE/Lamoka1-half%20fab%20files/Lamoka1-half%20BOM.csv), built by [`tools/make_fab_bom.py`](tools/make_fab_bom.py) — rerun it after design changes. The large items (transformer, fan, outlet, Wago connectors) are listed in [COMPONENTS.md](HARDWARE/COMPONENTS.md); we sourced them from DigiKey.
 
 Regenerate the BOM after design changes from the KiCad GUI (**Tools → Generate BOM**) or the command line:
 
@@ -138,8 +141,8 @@ kicad-cli sch export bom \
   --fields "Reference,QUANTITY,Value,Footprint,MPN,Description" \
   --labels "Reference,Qty,Value,Footprint,MPN,Description" \
   --group-by "Value,Footprint,MPN" \
-  --output "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.csv" \
-  "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_sch"
+  --output "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.csv" \
+  "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_sch"
 ```
 
 ### 3. Assemble the board
@@ -148,18 +151,18 @@ SMD parts are fitted on both sides, so plan a two-pass reflow or use a stencil a
 
 1. Stencil solder paste onto both sides (a thin 4 mil stencil works for the 0402/0603 parts).
 2. Place the SMDs and reflow. Populate the front side first, then the back.
-3. Hand-solder the through-hole parts: the Wago connectors, the fan header, the electrolytic capacitors, and the TO-220 H-bridge MOSFETs (Q3–Q6), which stand vertically along the board edge and can carry a heatsink.
+3. Hand-solder the through-hole parts: the Wago terminals (J1, J2, J5), the button (SW1), the USB-C shield tabs (J3), and the TO-220 H-bridge MOSFETs (Q3–Q6), which stand vertically along the board edge and can carry a heatsink. The four polymer capacitors (Cin1, Cout1–Cout3) are reflow parts that also tolerate a fine-tip iron, and the fan solders to two wire pads, J4 (GND) and J6 (5V), rather than to a header.
 4. Check for solder bridges and shorts with a multimeter before applying power — especially on the 11–14V input and the 17V boost rail.
 
 ### 4. Bring-up
 
-The transformer, DC input, and the AC outlet wire into the Wago connectors on the board edge (see [Design_Notes.md](HARDWARE/Design_Notes.md)). Bring-up is done in stages, and low-voltage checks come before anything touches the transformer:
+The transformer, DC input, and the AC outlet wire into the Wago connectors on the board edge (see [Design_Notes.md](HARDWARE/Design_Notes.md) and, for the transformer leads, [Transformer-wiring.md](HARDWARE/Transformer-wiring.md)). Bring-up is done in stages, and low-voltage checks come before anything touches the transformer:
 
 1. **Visual + continuity check** — no short between the input rails and ground.
-2. **USB-C only (5V)** — confirm the 5V buck and 3.3V rails come up.
+2. **USB-C only (5V)** — confirm the 3.3V and 1.1V rails come up. The buck runs from the 11–14V input, so on USB alone the 5V rail is fed from USB through the OR-ing diodes (CR1/CR2) and the buck stays off.
 3. **11–14V from a current-limited bench supply** (start around half an amp) — confirm the 17V boost rail and check for abnormal current draw.
 4. **Gate-drive check** — verify the UCC27735 outputs at the MOSFET gates before the transformer is connected.
-5. **Transformer and output last** — connect the transformer and the outlet only after the low-voltage side checks out, and treat the output as live AC from that point on.
+5. **Transformer and output last** — connect the transformer and the outlet only after the low-voltage side checks out, and treat the output as live AC from that point on. The lead-to-terminal map is [`HARDWARE/Transformer-wiring.md`](HARDWARE/Transformer-wiring.md); read it first, because the `J1` net names are lead colours and this transformer's BLUE/BROWN leads are its 115 V winding, so the leads must not be fitted colour-for-colour.
 
 > [!NOTE]
 > Power-stage control firmware has not been written yet: PIE V1.8 is DEV-Brain firmware for the LEDs and button, not inverter control. Don't expect the board to produce output in its current state.
@@ -175,7 +178,8 @@ With the Arduino IDE:
 3. Open [`SOFTWARE/Portal Interface Engine/V1.8.ino`](SOFTWARE/Portal%20Interface%20Engine/V1.8.ino), select your RP2350-family board (e.g. *Generic RP2350* for a bare RP2354A) and the board's USB port, and click **Upload**.
 
 With `arduino-cli` — or `make upload PORT=/dev/ttyACM0`, which stages the
-sketch and does both steps for you:
+sketch and does both steps for you (copy [`.env.example`](.env.example) to
+`.env` to keep the port, sketch, or board options locally):
 
 ```bash
 arduino-cli core install rp2040:rp2040 \
@@ -191,16 +195,25 @@ revisions deliberately share one folder — `make firmware` copies the chosen
 revision into its own folder under `build/` before compiling, so nothing has to
 be renamed or moved by hand.
 
-If the port does not appear, put the board into USB bootloader mode: select **Settings → BOOTSEL** in the UI (a very long hold also works), or hold the button down while plugging in USB.
+If the port does not appear, put the board into USB bootloader mode from the UI: **Settings → BOOTSEL**, which restarts the RP2354A into its boot ROM. There is no BOOTSEL button on the DEV-Brain, so this is the practical way in — otherwise you would have to hold the RP2354A's BOOTSEL pin low through a reset.
 
-### 6. Mechanical model
+### 6. Mechanical models
 
-The KiCad layout exports to a STEP model at [`HARDWARE/Mechanical/Lamoka1.step`](HARDWARE/Mechanical/Lamoka1.step) (board outline, holes, and component bodies) for enclosure design and fit checks. Regenerate it after layout changes with:
+Both KiCad layouts export to STEP models under [`HARDWARE/Mechanical/`](HARDWARE/Mechanical) — board outline, holes, and component bodies — for enclosure design and fit checks:
+
+- [`Lamoka1-half.step`](HARDWARE/Mechanical/Lamoka1-half.step) — the Lamoka1/2 main board.
+- [`Lamoka1-DEV-Brain.step`](HARDWARE/Mechanical/Lamoka1-DEV-Brain.step) — the DEV-Brain control board.
+
+Regenerate them after layout changes with `make step`, or one at a time:
 
 ```bash
 kicad-cli pcb export step \
-  --output "HARDWARE/Mechanical/Lamoka1.step" "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pcb"
+  --output "HARDWARE/Mechanical/Lamoka1-half.step" "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb"
+kicad-cli pcb export step \
+  --output "HARDWARE/Mechanical/Lamoka1-DEV-Brain.step" "Lamoka1-DEV-Brain/Kicad files/Lamoka1-DEV-board.kicad_pcb"
 ```
+
+Component bodies come from the vendor 3D models that the layouts reference; those files are not redistributed (see [License](#license)), so a fresh clone exports the bare board unless you supply your own copies.
 
 ---
 

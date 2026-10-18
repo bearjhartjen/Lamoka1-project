@@ -56,6 +56,13 @@ We need an easy platform to better understand how and where to work on the Lamok
 
 - **KiCad source** — the full KiCad 10 project lives in the `Kicad files` folder. Open [Lamoka1-DEV-board.kicad_sch](<Kicad files/Lamoka1-DEV-board.kicad_sch>) for the schematic, [Lamoka1-DEV-board.kicad_pcb](<Kicad files/Lamoka1-DEV-board.kicad_pcb>) for the board layout, and [Lamoka1-DEV-board.kicad_pro](<Kicad files/Lamoka1-DEV-board.kicad_pro>) for the project settings. Symbols and footprints are embedded in the `.kicad_sch` and `.kicad_pcb` files, so the schematic and layout open without extra libraries. 3D models are NOT included: the layout only stores file-path references (`${KIPRJMOD}/components/3dmodels/*.step`), and that folder is excluded from the repo by `.gitignore`. Expect missing 3D bodies in the 3D viewer until you supply your own `.step`/`.wrl` files.
 - **Fab files** — everything needed to have the board manufactured yourself is in the `Lamoka1-DEV-Brain fab files` folder: the [bill of materials](<Lamoka1-DEV-Brain fab files/Lamoka1-DEV-board BOM.csv>), the [pick and place file](<Lamoka1-DEV-Brain fab files/Lamoka1-DEV-board Pick and Place.csv>), the [Gerber and drill package](<Lamoka1-DEV-Brain fab files/Lamoka1-DEV-board>), and the [PCBway assembly file](<Lamoka1-DEV-Brain fab files/PCBway files/T-1N4W1065266A-1units-Lamoka1-DEV-board+BOM(2026-07-15).xls>) we sent when we ordered our own boards.
+- **3D model** — [Lamoka1-DEV-Brain.step](../HARDWARE/Mechanical/Lamoka1-DEV-Brain.step) is the board exported from the layout (outline, holes, and component bodies) for enclosure and fit checks.
+
+<p align="center">
+  <img src="../Images/lamoka1-dev-brain-render-iso.png" alt="Lamoka1-DEV-Brain isometric render" width="420">
+  <img src="../Images/lamoka1-dev-brain-render-top.png" alt="Lamoka1-DEV-Brain top view" width="420">
+  <br><em>3D renders of the laid-out board — exported with <code>kicad-cli pcb render</code>.</em>
+</p>
 
 ## Tests
 

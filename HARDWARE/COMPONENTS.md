@@ -1,13 +1,13 @@
 ## Exact manufacturer part numbers used in the schematic explained in plain English (component alternatives may be used) 
 
 > [!Warning]
-> This is not verified to be the full BOM for the Lamoka1. For all components, please refer to the official BOM. This is purely for reference and learning, not to be used as a BOM.
+> This is not verified to be the full BOM for the Lamoka1/2. For all components, please refer to the official BOM. This is purely for reference and learning, not to be used as a BOM.
 
 > Reference designators in parentheses match the schematic. Where the schematic carries no manufacturer field, the manufacturer given here is taken from the part number.
 
  NMOS for H-bridge (Inversion-section): CSD19536KCS made by TI  x4 (Q3, Q4, Q5, Q6)
 
- Transformer (Inversion-section): VPT24-4170 made by Triad Magnetics, 100 VA. Mounted off-board and wired to the PCB at J1.
+ Transformer (Inversion-section): VPT24-4170 made by Triad Magnetics, 100 VA. Mounted off-board and wired to the PCB at J1; `HARDWARE/Transformer-wiring.md` records which lead goes on which terminal. Its 12 V winding is the one the H-bridge drives and the 115 V winding feeds the outlet, so the lead colours must not be matched to the J1 net names.
 
  Main microcontroller for full system: RP2354A made by Raspberry Pi (U1)
 
@@ -31,7 +31,7 @@
 
  Gate driver for H-bridge NMOSs: UCC27735DR made by TI x2 (U5, U6)
 
- IC for 11-14v to 17v boost converter: LM5122QMHX-NOPB made by TI (U4)
+ IC for 11-14v to 17v boost converter: LM5122MHX/NOPB made by TI (U4)
 
  IC for 11-14v to 5v buck converter: TPS62160DSGR made by TI (U7)
 
@@ -39,7 +39,7 @@
 
  Cooling fan for unit: FAD1-04010BHLW11 made by Qualtek
 
- Pin header to connect fan to PCB: 0470531000 made by Molex
+ Fan connection: two solder wire pads on the PCB (J4 = FAN GND, J6 = FAN 5V); no header is fitted, the fan leads solder straight to the board
 
  Output capacitor for buck converter: GRM31CR71A226KE15L made by Murata (C25)
 
@@ -51,7 +51,9 @@
 
  Power-good pull-up resistor for buck converter: CRCW0402100KFKED made by Vishay Dale (R21)
 
- Diode for 5v source to eliminate buck output and USB 5v interactions: SS14-E3/61T made by Vishay x2 (D11, D12)
+ Diode for 5v source to eliminate buck output and USB 5v interactions: SS14-E3/61T made by Vishay x2 (CR1, CR2)
+
+Bootstrap diode for the H-bridge gate drivers: SS14-E3/61T made by Vishay x2 (D11, D12)
 
  Temp sensor for unit: TMP235A2DBZR made by TI x2 (U8, U9)
 

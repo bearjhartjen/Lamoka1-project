@@ -1,0 +1,25 @@
+(version 1)
+
+# Transformer-secondary isolation barrier.
+#
+# /BLACK and /RED are the 120 V transformer secondary, brought out on J1.
+# IPC-2221B table 6-1 column B2 (external conductors, uncoated, sea level to
+# 3050 m) asks for 1.25 mm at 151-300 V working; 1.5 mm covers that and is the
+# usual target for a 120 V mains-referenced circuit. The 11-14 V input, the
+# 17 V boost rail and the 3v3/1V1 logic rails are all far below 151 V, so the
+# 0.18 mm default netclass clearance is correct everywhere else.
+#
+# This rule is what pulls the GND pour back from the secondary. Refill the
+# zones after editing copper, or the plotted pour will not obey it.
+(rule "secondary isolation 1.5mm"
+  (constraint clearance (min 1.5mm))
+  (condition "A.NetName == '/BLACK' || A.NetName == '/RED' || B.NetName == '/BLACK' || B.NetName == '/RED'"))
+
+# Mouse-bite panel tabs MTB1-3: NPTH breakaway holes sit on the board edge
+# and intentionally violate the board-wide 0.2mm hole-to-copper rule.
+# Copper pullback around bites is ~0.125mm, fine for tab-route breakout.
+# No MTB footprints are placed on the board as submitted; the rule is kept
+# for panelisation.
+(rule "mousebite hole clearance"
+  (condition "A.Reference == 'MTB*' || B.Reference == 'MTB*'")
+  (constraint hole_clearance (min 0.1mm)))

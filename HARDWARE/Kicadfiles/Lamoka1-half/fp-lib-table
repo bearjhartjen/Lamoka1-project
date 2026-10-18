@@ -24,4 +24,5 @@
 	(lib (name "AOTA-B201610S3R3-101-T") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/LIB_AOTA-B201610S3R3-101-T/AOTA-B201610S3R3-101-T/KiCad") (options "") (descr ""))
 	(lib (name "ABM8-272-T3") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/LIB_ABM8-272-T3/ABM8-272-T3/KiCad") (options "") (descr ""))
 	(lib (name "lm5122") (type "KiCad") (uri "/home/bearjoshuahartjen/Documents/Lamoka1-NOTDISTRIBUTE/Components for Lamoka1 general/ul_LM5122MH-NOPB/KiCADv6/footprints.pretty") (options "") (descr ""))
+	(lib (name "Lamoka1-half") (type "KiCad") (uri "${KIPRJMOD}/Lamoka1-half.pretty") (options "") (descr ""))
 )

@@ -1,0 +1,23 @@
+version: 2
+
+updates:
+  # Keep the GitHub Actions used by the CI workflow current.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
+  # Keep the pinned Python development environment (uv.lock) current.
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      python-packages:
+        dependency-type: "development"
+        patterns:
+          - "*"

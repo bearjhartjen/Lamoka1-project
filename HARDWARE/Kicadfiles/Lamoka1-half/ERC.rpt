@@ -1,0 +1,18 @@
+ERC report (2026-10-18T13:37:49, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+
+***** Sheet /Control-Section/
+
+***** Sheet /Inversion-Section/
+
+***** Sheet /User-Interface-Section/
+
+ ** ERC messages: 0  Errors 0  Warnings 0
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

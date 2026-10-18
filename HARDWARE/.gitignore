@@ -68,6 +68,18 @@ ImportGuide*.htm
 **/3rdparty/**
 
 ################################
+# PRIVATE KICAD LIBRARY SOURCES
+# Symbols, footprints, and 3D models are kept local, not committed or
+# redistributed: the .kicad_sch and .kicad_pcb files carry embedded copies of
+# everything the design needs (see AGENTS.md, "Repository practice").
+################################
+
+*.kicad_sym
+*.kicad_mod
+*.pretty
+components
+
+################################
 # Manufacturing Output
 # DO COMMIT THESE—they enable full PCB reproducibility
 # Users can order directly from a fab using Gerber/drill files
@@ -192,4 +204,4 @@ yarn-error.log
 # Backup folder
 ################################
 
-Lamoka1-backups/
+Lamoka1-half-backups/

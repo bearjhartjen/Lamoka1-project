@@ -1,0 +1,25 @@
+# Editor defaults for the repository. Python style is enforced by ruff (see
+# pyproject.toml); this file keeps the rest of the tree consistent.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{yml,yaml,json}]
+indent_style = space
+indent_size = 2
+
+# Markdown uses two trailing spaces for hard line breaks.
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab

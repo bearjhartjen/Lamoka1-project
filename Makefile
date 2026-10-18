@@ -1,10 +1,15 @@
 # Lamoka1 project — common development tasks.
 #
-# Run `make` or `make help` for the target list. Only `make test` has no extra
-# requirements (Python 3); the other targets check for their tool and stop with
-# an explanatory message if it is missing.
+# Run `make` or `make help` for the target list. `make test` and `make lint`
+# use the Python environment pinned in pyproject.toml (`uv sync` once to create
+# .venv/); the other targets check for their tool and stop with an explanatory
+# message if it is missing.
 
 SHELL := /bin/bash
+
+# Optional local overrides: copy .env.example to .env to set PORT, SKETCH,
+# FQBN, or BUILD_DIR without typing them on every command.
+-include .env
 
 # --- Configuration -----------------------------------------------------------
 
@@ -28,24 +33,32 @@ BUILD_DIR ?= build
 # Tool commands; override to point at a specific installation.
 ARDUINO_CLI ?= arduino-cli
 KICAD_CLI ?= kicad-cli
+MAGICK ?= magick
 CPPCHECK ?= cppcheck
+PYTHON ?= python3
+PYTEST ?= $(PYTHON) -m pytest
+RUFF ?= ruff
 
-BOARD_DIR := HARDWARE/Kicadfiles/Lamoka1
+BOARD_DIR := HARDWARE/Kicadfiles/Lamoka1-half
+DEV_BRAIN_DIR := Lamoka1-DEV-Brain/Kicad files
+MECHANICS_DIR := HARDWARE/Mechanical
 SKETCH_DIR := $(BUILD_DIR)/$(SKETCH_NAME)
 
-.PHONY: help firmware upload test check erc drc static step clean
+.PHONY: help firmware upload test lint check erc drc static step images clean
 
 help:
 	@echo "Lamoka1 development tasks"
 	@echo ""
 	@echo "  make firmware   Compile the current PIE sketch (SKETCH=... to pick a revision)"
 	@echo "  make upload     Compile and flash to a connected DEV-Brain (PORT=... to pick a port)"
-	@echo "  make test       Run the repository checks (Python 3 only)"
+	@echo "  make test       Run the repository checks (pytest; 'uv sync' first)"
+	@echo "  make lint       Run ruff check and format check over the Python tooling"
 	@echo "  make check      Run 'test' plus the KiCad ERC and DRC reports"
 	@echo "  make static     Run cppcheck over the current PIE sketch"
 	@echo "  make erc        Regenerate the schematic ERC report"
 	@echo "  make drc        Regenerate the PCB DRC report (with schematic parity)"
-	@echo "  make step       Regenerate HARDWARE/Mechanical/Lamoka1.step"
+	@echo "  make step       Regenerate the board STEP models in HARDWARE/Mechanical/"
+	@echo "  make images     Regenerate the board images in Images/ (3D renders + routing plot)"
 	@echo "  make clean      Remove build/ (staged sketches and exported binaries)"
 
 # --- Firmware ----------------------------------------------------------------
@@ -70,19 +83,25 @@ upload: firmware
 # --- Checks ------------------------------------------------------------------
 
 test:
-	python3 -m unittest discover -s tests -v
+	@$(PYTEST) --version >/dev/null 2>&1 || { echo "make test: pytest is not installed — run 'uv sync' first (see CONTRIBUTING.md), or install pytest with pip."; exit 1; }
+	$(PYTEST) -v
+
+lint:
+	@$(RUFF) --version >/dev/null 2>&1 || { echo "make lint: ruff is not installed — run 'uv sync' first (see CONTRIBUTING.md), or install ruff with pip."; exit 1; }
+	$(RUFF) check .
+	$(RUFF) format --check .
 
 check: test erc drc
 
 erc:
 	@command -v $(KICAD_CLI) >/dev/null 2>&1 || { echo "make erc: kicad-cli not found — install KiCad 10, or run 'make test' alone."; exit 1; }
-	$(KICAD_CLI) sch erc --output "$(BOARD_DIR)/ERC.rpt" "$(BOARD_DIR)/Lamoka1.kicad_sch"
+	$(KICAD_CLI) sch erc --output "$(BOARD_DIR)/ERC.rpt" "$(BOARD_DIR)/Lamoka1-half.kicad_sch"
 	@echo "Wrote $(BOARD_DIR)/ERC.rpt"
 
 drc:
 	@command -v $(KICAD_CLI) >/dev/null 2>&1 || { echo "make drc: kicad-cli not found — install KiCad 10, or run 'make test' alone."; exit 1; }
 	$(KICAD_CLI) pcb drc --schematic-parity \
-	  --output "$(BOARD_DIR)/DRC.rpt" "$(BOARD_DIR)/Lamoka1.kicad_pcb"
+	  --output "$(BOARD_DIR)/DRC.rpt" "$(BOARD_DIR)/Lamoka1-half.kicad_pcb"
 	@echo "Wrote $(BOARD_DIR)/DRC.rpt"
 
 static:
@@ -103,8 +122,18 @@ static:
 step:
 	@command -v $(KICAD_CLI) >/dev/null 2>&1 || { echo "make step: kicad-cli not found — install KiCad 10."; exit 1; }
 	$(KICAD_CLI) pcb export step --force \
-	  --output "HARDWARE/Mechanical/Lamoka1.step" "$(BOARD_DIR)/Lamoka1.kicad_pcb"
-	@echo "Wrote HARDWARE/Mechanical/Lamoka1.step"
+	  --output "$(MECHANICS_DIR)/Lamoka1-half.step" "$(BOARD_DIR)/Lamoka1-half.kicad_pcb"
+	$(KICAD_CLI) pcb export step --force \
+	  --output "$(MECHANICS_DIR)/Lamoka1-DEV-Brain.step" "$(DEV_BRAIN_DIR)/Lamoka1-DEV-board.kicad_pcb"
+	@echo "Wrote $(MECHANICS_DIR)/Lamoka1-half.step and Lamoka1-DEV-Brain.step"
+
+# The board pictures in Images/ (README renders and the routing plot). KiCad
+# renders them; ImageMagick trims the transparent border and rasterises the
+# routing plot. The DEV-Brain renders need that board's local 3D models and are
+# skipped with a message when those are absent. See CONTRIBUTING.md, "Board
+# images".
+images:
+	KICAD_CLI="$(KICAD_CLI)" MAGICK="$(MAGICK)" tools/make_images.sh
 
 clean:
 	rm -rf "$(BUILD_DIR)"

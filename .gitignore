@@ -5,3 +5,11 @@ build/
 # Python bytecode cache from the check suite (tests/).
 __pycache__/
 *.pyc
+
+# Python development environment (uv) and tool caches from pytest and ruff.
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Local Makefile overrides (copy .env.example to .env).
+.env

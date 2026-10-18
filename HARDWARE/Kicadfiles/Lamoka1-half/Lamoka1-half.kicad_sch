@@ -5957,7 +5957,7 @@
 			)
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "H1")
 					(unit 1)
@@ -5998,7 +5998,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "2606-1352:CONN2_2606-1352_WAG"
+		(property "Footprint" "Lamoka1-half:CONN2_2606-1352_WAG"
 			(at 151.13 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -6019,6 +6019,17 @@
 				(font
 					(size 1.27 1.27)
 					(italic yes)
+				)
+			)
+		)
+		(property "MPN" "2606-1352"
+			(at 151.13 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -6079,7 +6090,7 @@
 			(uuid "fcd3a970-ad0c-4a3a-926a-7990138a093f")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "J2")
 					(unit 1)
@@ -6120,7 +6131,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "2604-1103:CONN3_2604-1103_WAG"
+		(property "Footprint" "Lamoka1-half:CONN3_2604-1103_WAG"
 			(at 260.35 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -6141,6 +6152,17 @@
 				(font
 					(size 1.27 1.27)
 					(italic yes)
+				)
+			)
+		)
+		(property "MPN" "2604-1103"
+			(at 260.35 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -6207,7 +6229,7 @@
 			(uuid "95e320a8-3be1-4743-96cf-289db98940be")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "J5")
 					(unit 1)
@@ -6248,7 +6270,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "2606-1108/010-000:CONN8_2606-1108&slash_010-000_WAG"
+		(property "Footprint" "Lamoka1-half:CONN8_2606-1108&slash_010-000_WAG"
 			(at 227.33 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -6269,6 +6291,17 @@
 				(font
 					(size 1.27 1.27)
 					(italic yes)
+				)
+			)
+		)
+		(property "MPN" "2606-1108/010-000"
+			(at 227.33 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -6341,7 +6374,7 @@
 			(uuid "1729cc05-20f6-4726-aca7-7b131acccf0c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "J1")
 					(unit 1)
@@ -6417,7 +6450,7 @@
 			)
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "#G1")
 					(unit 1)
@@ -6504,7 +6537,7 @@
 			)
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "H2")
 					(unit 1)
@@ -6518,7 +6551,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6582,7 +6615,7 @@
 			(uuid "11cafa9d-1128-4fa3-98be-13ee03005bf4")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "J4")
 					(unit 1)
@@ -6745,7 +6778,7 @@
 			(uuid "863e96e9-22c6-4be0-bc4e-98f0af2a826d")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "J3")
 					(unit 1)
@@ -6881,7 +6914,7 @@
 			(uuid "a6af4060-6013-42db-b716-1fe4053c5acc")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "RCS1")
 					(unit 1)
@@ -6959,7 +6992,7 @@
 			(uuid "d35789f0-5cd5-49bc-acf2-a6afe2abbd6e")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "#PWR046")
 					(unit 1)
@@ -6973,7 +7006,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -7038,7 +7071,7 @@
 			(uuid "297be003-8284-4dd8-8bec-7aef6177ba73")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "J6")
 					(unit 1)
@@ -7117,7 +7150,7 @@
 			(uuid "faaee8c6-9992-4f26-a550-4e41034e572a")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(reference "#FLG01")
 					(unit 1)
@@ -7323,7 +7356,7 @@
 			)
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(page "3")
 				)
@@ -7628,7 +7661,7 @@
 			)
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(page "2")
 				)
@@ -7723,7 +7756,7 @@
 			)
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a"
 					(page "4")
 				)

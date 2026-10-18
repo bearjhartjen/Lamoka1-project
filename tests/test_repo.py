@@ -1,11 +1,11 @@
 """Repository checks for the Lamoka1 project.
 
-Run from the repository root with `make test`, or directly:
+Run from the repository root with `make test`, or directly with pytest:
 
-    python3 -m unittest discover -s tests -v
+    uv run pytest -v        # or: python3 -m pytest -v
 
-The checks need only Python 3 and the repository itself: they verify that the
-documentation, generated reports, BOM, and firmware sources stay consistent
+The checks need Python 3, pytest, and the repository itself: they verify that
+the documentation, generated reports, BOM, and firmware sources stay consistent
 with each other. Design-rule checking (KiCad) and static analysis (cppcheck)
 are separate targets: `make check` and `make static`.
 """
@@ -19,7 +19,7 @@ import urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PIE_DIR = os.path.join(ROOT, "SOFTWARE", "Portal Interface Engine")
-BOARD_DIR = os.path.join(ROOT, "HARDWARE", "Kicadfiles", "Lamoka1")
+BOARD_DIR = os.path.join(ROOT, "HARDWARE", "Kicadfiles", "Lamoka1-half")
 
 
 def repo_path(*parts):
@@ -69,24 +69,30 @@ class DocumentationTests(unittest.TestCase):
         "docs/README.md",
         ".github/PULL_REQUEST_TEMPLATE.md",
         ".github/workflows/checks.yml",
+        ".github/dependabot.yml",
+        ".editorconfig",
+        ".env.example",
+        ".python-version",
+        "pyproject.toml",
+        "uv.lock",
         "LICENSE-HARD",
         "LICENSE-SOFT",
         "LICENSES/CERN-OHL-W-2.0.txt",
         "LICENSES/GPL-3.0-only.txt",
-        "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_sch",
-        "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pcb",
-        "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.csv",
-        "HARDWARE/Kicadfiles/Lamoka1/ERC.rpt",
-        "HARDWARE/Kicadfiles/Lamoka1/DRC.rpt",
-        "HARDWARE/Mechanical/Lamoka1.step",
+        "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_sch",
+        "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb",
+        "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.csv",
+        "HARDWARE/Kicadfiles/Lamoka1-half/ERC.rpt",
+        "HARDWARE/Kicadfiles/Lamoka1-half/DRC.rpt",
+        "HARDWARE/Mechanical/Lamoka1-half.step",
+        "HARDWARE/Mechanical/Lamoka1-DEV-Brain.step",
+        "HARDWARE/Mechanical/README.md",
         "SOFTWARE/Portal Interface Engine/PIE-v1.8-information.md",
     ]
 
     def test_required_files_exist(self):
         missing = [
-            path
-            for path in self.REQUIRED
-            if not os.path.isfile(repo_path(*path.split("/")))
+            path for path in self.REQUIRED if not os.path.isfile(repo_path(*path.split("/")))
         ]
         self.assertEqual([], missing, f"missing required files: {missing}")
 
@@ -165,7 +171,7 @@ class HardwareReportTests(unittest.TestCase):
 
     def test_bom_parses_and_covers_parts(self):
         with open(
-            repo_path("HARDWARE", "Kicadfiles", "Lamoka1", "Lamoka1.csv"),
+            repo_path("HARDWARE", "Kicadfiles", "Lamoka1-half", "Lamoka1-half.csv"),
             encoding="utf-8",
         ) as handle:
             rows = list(csv.DictReader(handle))
@@ -182,22 +188,25 @@ class HardwareReportTests(unittest.TestCase):
         )
 
     def test_erc_report_has_no_errors(self):
-        text = read_text(repo_path("HARDWARE", "Kicadfiles", "Lamoka1", "ERC.rpt"))
+        text = read_text(repo_path("HARDWARE", "Kicadfiles", "Lamoka1-half", "ERC.rpt"))
         match = re.search(r"Errors\s+(\d+)", text)
         self.assertIsNotNone(match, "ERC report has no error summary; regenerate it")
         self.assertEqual(0, int(match.group(1)), "the ERC report contains errors")
 
     def test_drc_report_has_no_unconnected_pads(self):
-        text = read_text(repo_path("HARDWARE", "Kicadfiles", "Lamoka1", "DRC.rpt"))
+        text = read_text(repo_path("HARDWARE", "Kicadfiles", "Lamoka1-half", "DRC.rpt"))
         match = re.search(r"Found\s+(\d+)\s+unconnected (?:pads|items)", text)
-        self.assertIsNotNone(
-            match, "DRC report has no unconnected-pads summary; regenerate it"
-        )
+        self.assertIsNotNone(match, "DRC report has no unconnected-pads summary; regenerate it")
         self.assertEqual(0, int(match.group(1)), "the PCB has unconnected pads")
 
-    def test_step_model_is_present(self):
-        path = repo_path("HARDWARE", "Mechanical", "Lamoka1.step")
-        self.assertGreater(os.path.getsize(path), 100_000, "STEP model looks truncated")
+    def test_step_models_are_present(self):
+        for name in (
+            "Lamoka1-half.step",
+            "Lamoka1-DEV-Brain.step",
+        ):
+            with self.subTest(model=name):
+                path = repo_path("HARDWARE", "Mechanical", name)
+                self.assertGreater(os.path.getsize(path), 100_000, f"{name} looks truncated")
 
 
 class FirmwareTests(unittest.TestCase):
@@ -207,9 +216,7 @@ class FirmwareTests(unittest.TestCase):
         names = ["V1.ino"] + [f"V1.{n}.ino" for n in range(1, 9)]
         for name in names:
             with self.subTest(sketch=name):
-                self.assertTrue(
-                    os.path.isfile(os.path.join(PIE_DIR, name)), f"{name} is missing"
-                )
+                self.assertTrue(os.path.isfile(os.path.join(PIE_DIR, name)), f"{name} is missing")
 
     def test_pin_contract_of_current_head(self):
         # Keep in sync with PIE-v1.8-information.md and AGENTS.md: GPIO 11 is

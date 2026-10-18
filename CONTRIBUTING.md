@@ -11,7 +11,7 @@ how to test your changes, and how to get a change merged.
 
 - [Ways to contribute](#ways-to-contribute)
 - [Before you start](#before-you-start)
-- [Development setup](#development-setup)
+- [Setup](#setup)
 - [Code style](#code-style)
 - [Testing](#testing)
 - [Submitting changes](#submitting-changes)
@@ -23,7 +23,7 @@ how to test your changes, and how to get a change merged.
 
 - **Hardware** — review the schematic and layout, reproduce the design,
   suggest component or layout improvements, or verify calculations against
-  datasheets. The main board lives in `HARDWARE/Kicadfiles/Lamoka1/`.
+  datasheets. The main board lives in `HARDWARE/Kicadfiles/Lamoka1-half/`.
 - **Firmware** — the Portal Interface Engine (PIE) is in
   `SOFTWARE/Portal Interface Engine/`. Anything that makes the UI better, or
   that helps bring up the power stage, is valuable.
@@ -52,7 +52,24 @@ how to test your changes, and how to get a change merged.
   in the [README](README.md#build-and-fabrication), and never work on live
   mains wiring alone.
 
-## Development setup
+## Setup
+
+### Repository tooling (Python checks)
+
+The repository checks and the ruff linter run on Python 3 through a pinned
+[uv](https://docs.astral.sh/uv/) environment defined by `pyproject.toml` and
+`uv.lock`:
+
+```bash
+git clone https://github.com/bearjhartjen/Lamoka1-project.git
+cd Lamoka1-project
+uv sync                 # create .venv/ from the lockfile (one time)
+make test               # repository checks (pytest)
+make lint               # ruff check and format check
+```
+
+If you would rather not use uv, `python3 -m pip install pytest ruff` gives the
+same tools; `make test` and `make lint` work either way.
 
 ### Hardware (KiCad)
 
@@ -61,7 +78,7 @@ the `.kicad_sch` and `.kicad_pcb` files, so you do **not** need external
 libraries to open them — just install KiCad and open the project:
 
 ```bash
-kicad "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pro"          # main board
+kicad "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pro"          # main board
 kicad "Lamoka1-DEV-Brain/Kicad files/Lamoka1-DEV-board.kicad_pro"  # DEV-Brain
 ```
 
@@ -99,6 +116,10 @@ make upload PORT=/dev/ttyACM0     # compile and flash
 make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.7.ino"   # another revision
 ```
 
+Copy [`.env.example`](.env.example) to `.env` to keep local values such as
+`PORT`, `SKETCH`, or `FQBN` without typing them on every command; `.env` is
+gitignored.
+
 Arduino compiles every `.ino` in a sketch folder together and requires the
 folder and main file to share a name, so the PIE revisions cannot be compiled
 straight out of `SOFTWARE/Portal Interface Engine/`. `make firmware` copies the
@@ -108,10 +129,27 @@ by hand.
 
 ### Documentation and tooling
 
-The docs are plain Markdown. KiCad's `kicad-cli` covers fabrication exports and
-checks; a Python install is only needed if you write scripts around KiCad's
-Python API (`pcbnew`). Render replacement images with `kicad-cli pcb render`
-(see the commands used for the README images in the repository history).
+The docs are plain Markdown. The Python checks environment (above) provides
+pytest and ruff; KiCad's `kicad-cli` covers fabrication exports and checks, and
+a Python install with KiCad's `pcbnew` module is only needed if you script the
+KiCad Python API.
+
+### Board images
+
+The board pictures in `Images/` are generated, not hand-drawn, so a layout
+change that shows up in a picture does not leave the READMEs showing a board
+that no longer exists. `make images` (`tools/make_images.sh`) regenerates all of
+them: the three Lamoka1/2 views and both DEV-Brain views come from
+`kicad-cli pcb render`, and the routing view is a 2D plot of the F.Cu and B.Cu
+layers. KiCad 10 and ImageMagick are both required — ImageMagick trims the
+transparent border off each render and rasterises the routing plot.
+
+The two DEV-Brain views additionally need that board's 3D models, which are not
+committed; link the local model folder at
+`Lamoka1-DEV-Brain/Kicad files/components` to include them. Without it the
+script still regenerates the Lamoka1/2 images and skips the DEV-Brain pair with
+a message. Commit the regenerated images together with the change that altered
+them.
 
 ## Code style
 
@@ -120,8 +158,9 @@ Python API (`pcbnew`). Render replacement images with `kicad-cli pcb render`
 - Use KiCad 10 and save in the current file format; don't downgrade file
   versions.
 - Keep symbols and footprints embedded in the schematic/board files. If you add
-  a project-local part, put it in `Lamoka1_Parts.kicad_sym` or the appropriate
-  project library.
+  a project-local part, put it in `Lamoka1-half_Parts.kicad_sym` or the appropriate
+  project library on your machine: library sources are kept local and are not
+  committed (see `AGENTS.md`, "Repository practice").
 - Fill in the `MPN` field on every component, and `Manufacturer` where known —
   the BOM export depends on them.
 - **Do not rename nets casually.** Net names are part of the schematic's
@@ -133,6 +172,9 @@ Python API (`pcbnew`). Render replacement images with `kicad-cli pcb render`
 - Fabrication output (Gerbers, drill files, position files) is committed for
   released revisions so boards can be reproduced. Keep it out of commits for
   work-in-progress changes.
+- The board pictures in `Images/` are generated; regenerate them with
+  `make images` when a layout change alters what a render shows, and commit them
+  with the change (see "Board images").
 - `.gitattributes` and the per-directory `.gitignore` files carry deliberate
   intent (including GitHub language statistics). Read the comments before
   changing them.
@@ -153,6 +195,12 @@ Python API (`pcbnew`). Render replacement images with `kicad-cli pcb render`
 - There is no power-stage firmware yet. PIE V1.8 is DEV-Brain firmware (LEDs and
   button); the main board's power stage has no control code.
 
+### Python tooling
+
+- The check suite under `tests/` follows the ruff configuration in
+  `pyproject.toml`: 100-column lines, double quotes, four-space indents.
+  Run `make lint` to check, or `ruff format` to apply formatting.
+
 ### Documentation
 
 - Write in plain language and keep it accurate: when documentation and the
@@ -166,16 +214,21 @@ Python API (`pcbnew`). Render replacement images with `kicad-cli pcb render`
 Run the repository checks before you open a pull request:
 
 ```bash
-make test      # repository checks (Python 3 only)
-make check     # the above plus KiCad ERC and DRC (needs kicad-cli)
+uv sync        # one-time: create .venv/ from uv.lock
+make test      # repository checks (pytest)
+make lint      # ruff check and format check
+make check     # 'test' plus the KiCad ERC and DRC reports (needs kicad-cli)
 make static    # cppcheck over the current firmware
 make firmware  # compile the current firmware with warnings enabled
 ```
 
 The same checks run in CI on every push and pull request
-([`.github/workflows/checks.yml`](.github/workflows/checks.yml)); a red CI run
-blocks a merge. `tests/` holds the check suite: markdown links, BOM contents,
-the ERC and DRC reports, the firmware pin contract, and a credentials scan.
+([`.github/workflows/checks.yml`](.github/workflows/checks.yml)), together with
+ruff and cppcheck; a red CI run blocks a merge. The repository checks run on
+Python 3.11 and 3.14, and the firmware build pins the Arduino toolchain
+versions noted at the top of the workflow. `tests/` holds the check suite:
+markdown links, BOM contents, the ERC and DRC reports, the firmware pin
+contract, and a credentials scan.
 
 **Policy:** major new functionality must come with tests, or with an update to
 the existing checks, in the same change. A test that only re-states the
@@ -188,12 +241,12 @@ violations (or use `make check`, which runs both):
 
 ```bash
 # Electrical rules check (schematic)
-kicad-cli sch erc --output "HARDWARE/Kicadfiles/Lamoka1/ERC.rpt" \
-  "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_sch"
+kicad-cli sch erc --output "HARDWARE/Kicadfiles/Lamoka1-half/ERC.rpt" \
+  "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_sch"
 
 # Design rules check (PCB), including schematic parity
-kicad-cli pcb drc --schematic-parity --output "HARDWARE/Kicadfiles/Lamoka1/DRC.rpt" \
-  "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_pcb"
+kicad-cli pcb drc --schematic-parity --output "HARDWARE/Kicadfiles/Lamoka1-half/DRC.rpt" \
+  "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb"
 ```
 
 **Verify connectivity by netlist, not by eye.** A change that preserves the
@@ -202,10 +255,10 @@ your change and diff them:
 
 ```bash
 kicad-cli sch export netlist --format kicadsexpr --output /tmp/before.net \
-  "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_sch"
+  "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_sch"
 # ... make your change ...
 kicad-cli sch export netlist --format kicadsexpr --output /tmp/after.net \
-  "HARDWARE/Kicadfiles/Lamoka1/Lamoka1.kicad_sch"
+  "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_sch"
 diff /tmp/before.net /tmp/after.net
 ```
 

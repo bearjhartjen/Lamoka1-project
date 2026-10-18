@@ -10045,7 +10045,7 @@
 			(uuid "8b07a0f6-9319-4166-ba09-ae7fc2b27871")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR015")
 					(unit 1)
@@ -10181,7 +10181,7 @@
 			(uuid "2351b88a-5111-4494-b6d6-4c12ca8b9681")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C20")
 					(unit 1)
@@ -10223,7 +10223,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Lamoka1-half:R_0603_1608Metric"
 			(at 283.972 261.62 90)
 			(hide yes)
 			(show_name no)
@@ -10318,7 +10318,7 @@
 			(uuid "345641a5-a27f-4b5b-af97-7bf400f697b8")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R24")
 					(unit 1)
@@ -10441,7 +10441,7 @@
 			(uuid "149d9106-a7c8-4e02-b58b-1fd8b6dca610")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R2")
 					(unit 1)
@@ -10519,7 +10519,7 @@
 			(uuid "e64d2fb2-71a2-4310-bfc9-a8caf8e36ee6")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR070")
 					(unit 1)
@@ -10653,7 +10653,7 @@
 			(uuid "7e8222fd-9119-4cd1-bdd5-a7a7af6f471e")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R6")
 					(unit 1)
@@ -10732,7 +10732,7 @@
 			(uuid "7276f5ca-d6df-48ca-b716-bbea475c6aa2")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#FLG05")
 					(unit 1)
@@ -10869,7 +10869,7 @@
 			(uuid "09fc6185-857a-4f5f-ae8f-1ad480a5d8bd")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R29")
 					(unit 1)
@@ -11006,7 +11006,7 @@
 			(uuid "3bc546b1-41b6-4b71-b418-9dc4f69643d5")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C16")
 					(unit 1)
@@ -11084,7 +11084,7 @@
 			(uuid "2f6d980a-f07c-4cb6-bae7-9a4b8c6a3062")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR059")
 					(unit 1)
@@ -11162,7 +11162,7 @@
 			(uuid "26ad84a5-91d3-4d3e-bd6c-edf6db5f8188")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR068")
 					(unit 1)
@@ -11296,7 +11296,7 @@
 			(uuid "c2cdab1f-c298-4d52-a9db-42b6ea2616e6")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C31")
 					(unit 1)
@@ -11430,7 +11430,7 @@
 			(uuid "c4f08acb-bb2b-49c1-ad07-1e2f75e6707a")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R8")
 					(unit 1)
@@ -11460,7 +11460,7 @@
 				)
 			)
 		)
-		(property "Value" "40V 1A Schottky"
+		(property "Value" "SS14-E3/61T"
 			(at 45.72 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11470,7 +11470,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SS14-E3/61T:DO-214AC_VIS"
+		(property "Footprint" "Lamoka1-half:DO-214AC_VIS"
 			(at 40.64 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -11556,7 +11556,7 @@
 			(uuid "f0171fa3-9584-429f-bc41-ddc96aedf517")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "CR1")
 					(unit 1)
@@ -11634,7 +11634,7 @@
 			(uuid "9258c407-9e3e-4a4d-bf31-1c36413783ab")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR01")
 					(unit 1)
@@ -11768,7 +11768,7 @@
 			(uuid "b174b81d-b63d-4e5f-b0a7-afaae1d7a4e5")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R7")
 					(unit 1)
@@ -11808,7 +11808,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TPS62160DSGR:DSG8_1P6X0P9"
+		(property "Footprint" "Lamoka1-half:DSG8_1P6X0P9"
 			(at 265.43 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -11915,7 +11915,7 @@
 			(uuid "8ace5876-fd60-4a8c-bcb1-147dfbaed52f")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "U7")
 					(unit 1)
@@ -11993,7 +11993,7 @@
 			(uuid "f325dae1-c3b0-444e-aaf8-301c0947b2dd")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR04")
 					(unit 1)
@@ -12129,7 +12129,7 @@
 			(uuid "f1398a05-8a2e-421e-b4ca-69012d4ba265")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C13")
 					(unit 1)
@@ -12266,7 +12266,7 @@
 			(uuid "95c80e94-9543-45a5-a3fd-a307c4478381")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C29")
 					(unit 1)
@@ -12344,7 +12344,7 @@
 			(uuid "e923547a-bffd-4ff4-94d7-4bcb972723d4")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR065")
 					(unit 1)
@@ -12481,7 +12481,7 @@
 			(uuid "0c630683-63dd-4691-b372-c00960e2faa4")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R28")
 					(unit 1)
@@ -12559,7 +12559,7 @@
 			(uuid "c6d9dd93-856d-419c-a742-b565f73ad4cd")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR062")
 					(unit 1)
@@ -12637,7 +12637,7 @@
 			(uuid "c901d34d-e944-4fd3-a970-63771cabe7e2")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR07")
 					(unit 1)
@@ -12667,7 +12667,7 @@
 				)
 			)
 		)
-		(property "Value" "40V 1A Schottky"
+		(property "Value" "SS14-E3/61T"
 			(at 45.72 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12677,7 +12677,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SS14-E3/61T:DO-214AC_VIS"
+		(property "Footprint" "Lamoka1-half:DO-214AC_VIS"
 			(at 40.64 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -12763,7 +12763,7 @@
 			(uuid "3630fd54-f9b2-4003-adfb-2c9067b29a2c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "CR2")
 					(unit 1)
@@ -12840,7 +12840,7 @@
 			(uuid "083a1a0c-b65e-4b96-80e9-f2b6ae474d4a")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR03")
 					(unit 1)
@@ -12976,7 +12976,7 @@
 			(uuid "d3fb548e-4b19-4710-b365-3a735ab6f125")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C21")
 					(unit 1)
@@ -13099,7 +13099,7 @@
 			(uuid "16d0d842-135f-4b4b-bc02-a1cea8059398")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "L1")
 					(unit 1)
@@ -13236,7 +13236,7 @@
 			(uuid "8380388f-43fa-434d-a90d-1f7f89739ed4")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R27")
 					(unit 1)
@@ -13373,7 +13373,7 @@
 			(uuid "bdff4592-7cdd-4bee-b25b-3ba3c3c6fc7c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R31")
 					(unit 1)
@@ -13688,7 +13688,7 @@
 			(uuid "ce25b1b7-547f-49c5-af36-21dc3bf352cf")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "U1")
 					(unit 1)
@@ -13766,7 +13766,7 @@
 			(uuid "49996417-2e45-40c9-8f1a-636f7d49a723")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR069")
 					(unit 1)
@@ -13897,7 +13897,7 @@
 			(uuid "359497dd-3d36-47ee-abcc-9e145f8bc37e")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "X1")
 					(unit 1)
@@ -14034,7 +14034,7 @@
 			(uuid "8f7b9afc-d651-4140-b0a5-8722bbb78380")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R30")
 					(unit 1)
@@ -14170,7 +14170,7 @@
 			(uuid "19156d5c-a7ba-4e40-9433-8c9a7f6f2de4")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C17")
 					(unit 1)
@@ -14248,7 +14248,7 @@
 			(uuid "c2cfb444-5a88-4813-81f5-6e22a7188bbc")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR066")
 					(unit 1)
@@ -14326,7 +14326,7 @@
 			(uuid "090e88f6-777d-487b-b66a-b11dd2f98da1")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR067")
 					(unit 1)
@@ -14366,7 +14366,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+		(property "Footprint" "Lamoka1-half:SOT-223-3_TabPin2"
 			(at 81.28 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -14458,7 +14458,7 @@
 			(uuid "95746a66-7fc3-4e8f-ba93-d901bcace375")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "U2")
 					(unit 1)
@@ -14536,7 +14536,7 @@
 			(uuid "a57eb91d-cbf3-45c5-b501-6f2fa5da2cf9")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR06")
 					(unit 1)
@@ -14663,7 +14663,7 @@
 			(uuid "97afccb6-ec46-4050-b4fe-74a7ee3320b5")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C24")
 					(unit 1)
@@ -14741,7 +14741,7 @@
 			(uuid "e89bb64f-f6ca-4cad-9d76-e90ad4feaf8b")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR063")
 					(unit 1)
@@ -14781,7 +14781,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PA4332.222NLT:IND_PA4332.222NLT_PUL"
+		(property "Footprint" "Lamoka1-half:IND_PA4332.222NLT_PUL"
 			(at 321.31 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -14878,7 +14878,7 @@
 			(uuid "03168468-3325-43c5-8b5c-7cae20875cf7")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "L3")
 					(unit 1)
@@ -14957,7 +14957,7 @@
 			(uuid "8cb8b3f1-ef5d-41bf-987d-ddee60d97b19")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#FLG06")
 					(unit 1)
@@ -15035,7 +15035,7 @@
 			(uuid "f68a0a00-7ab9-4301-a108-00d51b31235f")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR012")
 					(unit 1)
@@ -15158,7 +15158,7 @@
 			(uuid "a228d9b1-3ce2-4082-8121-0348165c31a3")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R3")
 					(unit 1)
@@ -15271,7 +15271,7 @@
 			(uuid "77d24e73-e02d-45b9-a9a8-7bc895c8bb79")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "NT1")
 					(unit 1)
@@ -15408,7 +15408,7 @@
 			(uuid "c8b923de-72e3-42d5-8f4a-2e2748da43f5")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C28")
 					(unit 1)
@@ -15544,7 +15544,7 @@
 			(uuid "7b16a6d7-bec2-4b06-b60d-ad513dcf95c3")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C18")
 					(unit 1)
@@ -15681,7 +15681,7 @@
 			(uuid "c2d32a03-9e65-406a-abb1-8457abe63cb7")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R33")
 					(unit 1)
@@ -15758,7 +15758,7 @@
 			(uuid "e4aeb9b4-9f07-4a43-964b-940eb4d31fbf")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR09")
 					(unit 1)
@@ -15894,7 +15894,7 @@
 			(uuid "0197b528-4d48-42f2-a7db-1ec64926eae1")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C14")
 					(unit 1)
@@ -15973,7 +15973,7 @@
 			(uuid "761e7423-52e8-4fac-b522-607e9b6cd1cc")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#FLG04")
 					(unit 1)
@@ -16110,7 +16110,7 @@
 			(uuid "249ffdd1-0647-49f3-a35d-d71312040452")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R25")
 					(unit 1)
@@ -16239,7 +16239,7 @@
 			(uuid "d24f984e-6e76-4875-8fa6-48a843e170f7")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "U8")
 					(unit 1)
@@ -16376,7 +16376,7 @@
 			(uuid "3a572db6-269c-454c-b148-593293bd829d")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R4")
 					(unit 1)
@@ -16514,7 +16514,7 @@
 			(uuid "4b236470-e10d-4162-a22c-d15a274b2bf1")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C19")
 					(unit 1)
@@ -16592,7 +16592,7 @@
 			(uuid "c03c3a7b-4a9e-4178-98f6-6274091b2762")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR057")
 					(unit 1)
@@ -16671,7 +16671,7 @@
 			(uuid "6ad31e5b-d83c-40b2-bac5-5d9a9a0a4438")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#FLG03")
 					(unit 1)
@@ -16749,7 +16749,7 @@
 			(uuid "2462fa75-7fba-4aa2-9efa-ec8c4de11544")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR064")
 					(unit 1)
@@ -16877,7 +16877,7 @@
 			(uuid "c521ee6e-c38c-4f95-9d54-ae6aa25c0013")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R20")
 					(unit 1)
@@ -17002,7 +17002,7 @@
 			(uuid "6a8c23a2-b89e-4263-a4b4-13842173569c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R21")
 					(unit 1)
@@ -17081,7 +17081,7 @@
 			(uuid "68727ca2-324d-49ee-b3ef-28b792ed16d0")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#FLG07")
 					(unit 1)
@@ -17216,7 +17216,7 @@
 			(uuid "07a2691d-b3e4-4674-9a09-6d3ec543f0d7")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C26")
 					(unit 1)
@@ -17292,7 +17292,7 @@
 			)
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#G2")
 					(unit 1)
@@ -17426,7 +17426,7 @@
 			(uuid "5864f974-3005-48f1-9161-d3feef9a8cb2")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R5")
 					(unit 1)
@@ -17504,7 +17504,7 @@
 			(uuid "dc79d909-85c0-48c3-86ce-6d95838b8532")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR08")
 					(unit 1)
@@ -17632,7 +17632,7 @@
 			(uuid "80087233-baa0-471c-8713-e241160e0e7c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C25")
 					(unit 1)
@@ -17760,7 +17760,7 @@
 			(uuid "be8eb95f-396a-4dc3-b55a-42add68a5267")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R19")
 					(unit 1)
@@ -17897,7 +17897,7 @@
 			(uuid "9438074b-a0f6-4a99-947e-157df3ea769c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R32")
 					(unit 1)
@@ -18118,7 +18118,7 @@
 			(uuid "1339e6d4-47ec-40dc-9587-ddd847589bfc")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "IC1")
 					(unit 1)
@@ -18196,7 +18196,7 @@
 			(uuid "ae6b3d4c-16c1-488a-bb39-13bf04aa5721")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR060")
 					(unit 1)
@@ -18274,7 +18274,7 @@
 			(uuid "76f45cd3-7f92-4733-927e-0eae459fc815")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR05")
 					(unit 1)
@@ -18351,7 +18351,7 @@
 			(uuid "1cb4c9aa-b8c2-4317-8890-02200d49a71c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR010")
 					(unit 1)
@@ -18488,7 +18488,7 @@
 			(uuid "77a0740c-5abd-46a7-9814-a4264fdff603")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C30")
 					(unit 1)
@@ -18566,7 +18566,7 @@
 			(uuid "beed9463-f42b-43e3-9cf6-319c5c6a8c9d")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR014")
 					(unit 1)
@@ -18644,7 +18644,7 @@
 			(uuid "3a1d0601-8427-4c9a-8392-ac573d31c041")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR040")
 					(unit 1)
@@ -18721,7 +18721,7 @@
 			(uuid "49d36935-3c42-4bab-9e7e-ad4c9e828351")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR02")
 					(unit 1)
@@ -18858,7 +18858,7 @@
 			(uuid "44a5b8c0-9c1b-4fa1-bd8a-b9250262767f")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C27")
 					(unit 1)
@@ -18936,7 +18936,7 @@
 			(uuid "5164d8fc-7b41-41cc-81fd-9285867a0805")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR013")
 					(unit 1)
@@ -19074,7 +19074,7 @@
 			(uuid "aa064cca-ff2b-4d69-bb34-b57cd1e8dc92")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C15")
 					(unit 1)
@@ -19245,7 +19245,7 @@
 			(uuid "b9a6d1c5-7c5a-4425-b737-b76bb108fd3a")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "U10")
 					(unit 1)
@@ -19382,7 +19382,7 @@
 			(uuid "fccf946a-36bc-4580-9a08-cd3bc6d24f6c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R26")
 					(unit 1)
@@ -19519,7 +19519,7 @@
 			(uuid "d9e63577-b7ce-4a23-ae6d-3a98dc10df01")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R11")
 					(unit 1)
@@ -19655,7 +19655,7 @@
 			(uuid "54cce602-77a4-42cf-988c-a943d8324dc5")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "C12")
 					(unit 1)
@@ -19792,7 +19792,7 @@
 			(uuid "717a1ff0-386e-474a-a945-7263055e7aa3")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "R23")
 					(unit 1)
@@ -19870,7 +19870,7 @@
 			(uuid "8fb7cfcc-6d2d-4545-be48-8f7ee20ab456")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/45a5c8c0-02e9-46fb-a8b6-99cafb24dbbe"
 					(reference "#PWR058")
 					(unit 1)

@@ -1,30 +1,61 @@
 name: checks
 
-# Runs the repository checks, static analysis, and a firmware build on every
-# push and pull request. See CONTRIBUTING.md for the local equivalents
-# (`make test`, `make static`, `make firmware`).
+# Runs the repository checks, linting, static analysis, and a firmware build on
+# every push and pull request. See CONTRIBUTING.md for the local equivalents
+# (`make test`, `make lint`, `make static`, `make firmware`).
+#
+# Toolchain versions are pinned here deliberately: bump them together with the
+# versions the repository was verified against (see CONTRIBUTING.md, "Setup").
 
 on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   repo-checks:
-    name: Repository checks
+    name: Repository checks (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.14"]
+    env:
+      UV_PYTHON: ${{ matrix.python }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.0
+        with:
+          enable-cache: true
+      - name: Install the Python dev environment
+        run: uv sync --frozen
+      - name: Run repository checks
+        run: uv run --frozen make test
+
+  lint:
+    name: Lint (ruff)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.0
         with:
-          python-version: "3.x"
-      - name: Run repository checks
-        run: make test
+          enable-cache: true
+      - name: Install the Python dev environment
+        run: uv sync --frozen
+      - name: Lint (ruff)
+        run: uv run --frozen make lint
 
   static-analysis:
     name: Static analysis (cppcheck)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install cppcheck
         run: sudo apt-get update -qq && sudo apt-get install -y -qq cppcheck
       - name: Run cppcheck
@@ -34,9 +65,9 @@ jobs:
     name: Firmware build (arduino-pico)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Cache Arduino tooling
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: |
             ~/.arduino15
@@ -48,15 +79,15 @@ jobs:
       - name: Install arduino-cli
         run: |
           mkdir -p "$HOME/.local/bin"
-          curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR="$HOME/.local/bin" sh
+          curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR="$HOME/.local/bin" sh -s 1.5.1
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Install the arduino-pico core
         run: |
           arduino-cli config init --overwrite
           arduino-cli config add board_manager.additional_urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
           arduino-cli core update-index
-          arduino-cli core install rp2040:rp2040
+          arduino-cli core install rp2040:rp2040@6.1.1
       - name: Install FastLED
-        run: arduino-cli lib install FastLED
+        run: arduino-cli lib install FastLED@3.10.5
       - name: Build the current firmware head
         run: make firmware

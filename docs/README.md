@@ -28,11 +28,13 @@ links to them.
 - [Design notes](../HARDWARE/Design_Notes.md) — design intent and rationale.
 - [Component reference](../HARDWARE/COMPONENTS.md) — plain-English component
   list (not the BOM; the schematic is authoritative).
-- KiCad sources: [`HARDWARE/Kicadfiles/Lamoka1/`](../HARDWARE/Kicadfiles/Lamoka1)
+- KiCad sources: [`HARDWARE/Kicadfiles/Lamoka1-half/`](../HARDWARE/Kicadfiles/Lamoka1-half)
   for the main board and [`Lamoka1-DEV-Brain/`](../Lamoka1-DEV-Brain) for the
   control board.
-- 3D assembly model:
-  [`HARDWARE/Mechanical/Lamoka1.step`](../HARDWARE/Mechanical/Lamoka1.step)
+- 3D models: [`HARDWARE/Mechanical/`](../HARDWARE/Mechanical) — STEP exports of
+  both boards (main board and DEV-Brain) with component bodies.
+- Board pictures: [`Images/`](../Images) — ray-traced views of both boards and
+  the Lamoka1/2 routing plot; `make images` regenerates them from the layouts.
 
 ## Security and safety
 
@@ -50,7 +52,8 @@ links to them.
 - [Contributing guide](../CONTRIBUTING.md) — development setup, conventions,
   testing, and the pull-request checklist.
 - [`Makefile`](../Makefile) — `make help` lists the common tasks: firmware
-  build and upload, repository checks, ERC/DRC reports, static analysis, and
-  STEP export. The same checks run in CI on every push.
+  build and upload, repository checks, linting, ERC/DRC reports, static
+  analysis, STEP export, and regenerating the board pictures. The same checks
+  run in CI on every push.
 - [Code of Conduct](../CODE_OF_CONDUCT.md)
 - [Changelog](../CHANGELOG.md)

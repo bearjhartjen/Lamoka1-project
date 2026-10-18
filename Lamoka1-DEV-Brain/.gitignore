@@ -199,7 +199,7 @@ Kicad files/sym-lib-cache
 # Private symbol, footprint, and 3D-model source files are intentionally
 # kept local. The .kicad_sch and .kicad_pcb files retain embedded copies
 # of the symbols and board footprints needed to view the design.
-Kicad files/components/
+Kicad files/components
 Kicad files/fp-lib-table
 Kicad files/sym-lib-table
 Kicad files/*.kicad_sym

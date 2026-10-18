@@ -1508,7 +1508,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Lamoka1_MOSFET:CSD19536KCS"
+		(symbol "Lamoka1-half_MOSFET:CSD19536KCS"
 			(pin_numbers
 				(hide yes)
 			)
@@ -6122,7 +6122,7 @@
 			(uuid "e048b0a0-4b7e-456b-aef5-4f5c76a0abcf")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#FLG13")
 					(unit 1)
@@ -6284,7 +6284,7 @@
 			(uuid "5329f57c-4671-45c9-a3ed-8e54d1b44cfa")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "U6")
 					(unit 1)
@@ -6293,7 +6293,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Lamoka1_MOSFET:CSD19536KCS")
+		(lib_id "Lamoka1-half_MOSFET:CSD19536KCS")
 		(at 213.36 39.37 270)
 		(unit 1)
 		(body_style 1)
@@ -6422,7 +6422,7 @@
 			(uuid "20404e16-dd20-4105-99db-4e3aa4919678")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q3")
 					(unit 1)
@@ -6500,7 +6500,7 @@
 			(uuid "81a2260e-7082-418b-8fab-9f20f05e7d2e")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR050")
 					(unit 1)
@@ -6637,7 +6637,7 @@
 			(uuid "f65dc8c9-7f79-41f1-9144-60c74bcf6fce")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Cres1")
 					(unit 1)
@@ -6773,7 +6773,7 @@
 			(uuid "c69dfaed-a1ce-49f8-862c-00e40e4a773a")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "R10")
 					(unit 1)
@@ -6782,7 +6782,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Lamoka1_MOSFET:CSD19536KCS")
+		(lib_id "Lamoka1-half_MOSFET:CSD19536KCS")
 		(at 233.68 39.37 270)
 		(unit 1)
 		(body_style 1)
@@ -6911,7 +6911,7 @@
 			(uuid "6e3ab4d7-7652-4e7c-9883-bcadf7fd7dbc")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q4")
 					(unit 1)
@@ -7048,7 +7048,7 @@
 			(uuid "7cfd7b1c-3107-4cbc-872a-88432f10ddfd")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "C23")
 					(unit 1)
@@ -7126,7 +7126,7 @@
 			(uuid "83de264a-8c27-4a2e-994b-5b8e72030b4b")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR048")
 					(unit 1)
@@ -7263,7 +7263,7 @@
 			(uuid "4ef53fc5-9c6e-48d6-a8aa-b2499c290380")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "C22")
 					(unit 1)
@@ -7341,7 +7341,7 @@
 			(uuid "68398225-bb58-4852-9f8a-f1f960ec85db")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR047")
 					(unit 1)
@@ -7476,7 +7476,7 @@
 			(uuid "f4e6f325-8ee2-4168-b280-d28bb2c2910b")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Ccomp2")
 					(unit 1)
@@ -7554,7 +7554,7 @@
 			(uuid "933e8a1c-3deb-449d-8e6e-d0ab107300bd")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR061")
 					(unit 1)
@@ -7683,7 +7683,7 @@
 			(uuid "5d1ea45d-672d-452a-95ee-cfcb4804d4a4")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "U9")
 					(unit 1)
@@ -7761,7 +7761,7 @@
 			(uuid "0a6b50aa-0857-4b83-accc-5571ee7d386e")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR056")
 					(unit 1)
@@ -7896,7 +7896,7 @@
 			(uuid "b373559f-7946-4ddd-bc7b-85f9685b0332")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "R17")
 					(unit 1)
@@ -8031,7 +8031,7 @@
 			(uuid "c733347b-10af-4033-9d65-2899c016a144")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "C32")
 					(unit 1)
@@ -8168,7 +8168,7 @@
 			(uuid "e95530ba-b8a0-4690-874e-f28cbebe19e5")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Ruvb1")
 					(unit 1)
@@ -8177,7 +8177,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Lamoka1_MOSFET:CSD19536KCS")
+		(lib_id "Lamoka1-half_MOSFET:CSD19536KCS")
 		(at 213.36 58.42 270)
 		(unit 1)
 		(body_style 1)
@@ -8306,7 +8306,7 @@
 			(uuid "8e106d84-dfb6-4e52-b781-dd45fbee7393")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q5")
 					(unit 1)
@@ -8443,7 +8443,7 @@
 			(uuid "d916b15b-a441-48af-b10e-725a310753cd")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Cin1")
 					(unit 1)
@@ -8473,7 +8473,7 @@
 				)
 			)
 		)
-		(property "Value" "LM5122MH/NOPB"
+		(property "Value" "LM5122MHX/NOPB"
 			(at 55.88 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8483,7 +8483,7 @@
 				)
 			)
 		)
-		(property "Footprint" "lm5122:PWP0020A_N"
+		(property "Footprint" "Lamoka1-half:PWP0020A_N"
 			(at 55.88 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8518,7 +8518,7 @@
 				)
 			)
 		)
-		(property "MPN" "LM5122MH/NOPB"
+		(property "MPN" "LM5122MHX/NOPB"
 			(at 55.88 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8626,7 +8626,7 @@
 			(uuid "7e3925b9-f4ac-4e0d-9f83-01b112a0f3cd")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "U4")
 					(unit 1)
@@ -8761,7 +8761,7 @@
 			(uuid "857e6f68-abda-442e-a67e-e21e3c0bd825")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Ccomp1")
 					(unit 1)
@@ -8896,7 +8896,7 @@
 			(uuid "5a86b4ee-ffcc-40d7-9e4e-6b97815ddff1")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "R18")
 					(unit 1)
@@ -8972,7 +8972,7 @@
 			)
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#G3")
 					(unit 1)
@@ -9050,7 +9050,7 @@
 			(uuid "b83959df-aa0f-4f8f-b799-c7adffb39714")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR039")
 					(unit 1)
@@ -9187,7 +9187,7 @@
 			(uuid "c369873a-8b97-4f70-8f80-37b009d1e102")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Coutx1")
 					(unit 1)
@@ -9218,7 +9218,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "SS14-E3/61T"
 			(at 229.87 85.0899 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9313,7 +9313,7 @@
 			(uuid "aa3981d1-3b76-4c16-ad92-88434c5f3df2")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "D12")
 					(unit 1)
@@ -9450,7 +9450,7 @@
 			(uuid "66098dc3-cfd4-49ea-bea8-81e4647169be")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rfbb1")
 					(unit 1)
@@ -9587,7 +9587,7 @@
 			(uuid "1b582eee-f1c8-467e-896c-e6c8f5cddd84")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Cvin1")
 					(unit 1)
@@ -9629,7 +9629,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_8x11.9"
+		(property "Footprint" "Lamoka1-half:CP_Elec_8x11.9_Cout1"
 			(at 136.8552 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -9724,7 +9724,7 @@
 			(uuid "4e3772e1-80b1-431e-a661-72d3a6a6da5a")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Cout1")
 					(unit 1)
@@ -9754,7 +9754,7 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "SK215ATR"
 			(at 113.03 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9848,7 +9848,7 @@
 			(uuid "d752f0a8-445c-4e2b-86c4-70741c6d8360")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "D6")
 					(unit 1)
@@ -9926,7 +9926,7 @@
 			(uuid "5fe820eb-a567-4771-a4b4-ce7d9e17eff6")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR044")
 					(unit 1)
@@ -10005,7 +10005,7 @@
 			(uuid "90b8bf36-54b7-4d91-a6f0-2079e4bc91ae")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#FLG12")
 					(unit 1)
@@ -10044,7 +10044,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CSD17304Q3:DQG0008A"
+		(property "Footprint" "Lamoka1-half:DQG0008A"
 			(at 113.03 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -10118,7 +10118,7 @@
 			(uuid "d0b60694-9db5-43e1-81aa-3970256e156d")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q2")
 					(unit 1)
@@ -10196,7 +10196,7 @@
 			(uuid "85993c88-5036-412e-b983-308b2ad6a2dd")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR053")
 					(unit 1)
@@ -10274,7 +10274,7 @@
 			(uuid "6991c896-9cc8-46c1-acc7-925a8dbf23d0")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR055")
 					(unit 1)
@@ -10409,7 +10409,7 @@
 			(uuid "5db2dfb1-d1f8-4942-ae51-cb8d49ffad2b")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "C33")
 					(unit 1)
@@ -10546,7 +10546,7 @@
 			(uuid "51524904-965d-4adb-b8a2-67e8e33f234e")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Css1")
 					(unit 1)
@@ -10624,7 +10624,7 @@
 			(uuid "baaea28a-1d98-4aef-b667-91bef066e6f3")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR041")
 					(unit 1)
@@ -10760,7 +10760,7 @@
 			(uuid "ae9e337f-f578-425a-844f-fd2aa409077e")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "R12")
 					(unit 1)
@@ -10922,7 +10922,7 @@
 			(uuid "030e9768-65c7-4496-a453-7a84afec7d1c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "U5")
 					(unit 1)
@@ -11057,7 +11057,7 @@
 			(uuid "e1e9a1f6-7060-4386-907c-a72bf49fdd79")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rcomp1")
 					(unit 1)
@@ -11135,7 +11135,7 @@
 			(uuid "04c01d25-9eec-4ac2-a160-c4896a6abdb9")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR051")
 					(unit 1)
@@ -11213,7 +11213,7 @@
 			(uuid "8cbb1155-8521-4d45-b988-2b5bf08f5307")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR045")
 					(unit 1)
@@ -11292,7 +11292,7 @@
 			(uuid "0d76b00f-0782-46d0-81c3-f2708709f88d")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#FLG09")
 					(unit 1)
@@ -11370,7 +11370,7 @@
 			(uuid "50b8d0cf-6654-48d0-9df3-ddac1f313fc9")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR043")
 					(unit 1)
@@ -11379,7 +11379,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Lamoka1_MOSFET:CSD19536KCS")
+		(lib_id "Lamoka1-half_MOSFET:CSD19536KCS")
 		(at 233.68 57.15 270)
 		(unit 1)
 		(body_style 1)
@@ -11508,7 +11508,7 @@
 			(uuid "7864e798-1fe8-41e2-b0c1-dd0812e25cb8")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q6")
 					(unit 1)
@@ -11645,7 +11645,7 @@
 			(uuid "db2e6b1d-4a60-43f4-b563-5c1c12b1f0be")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rt1")
 					(unit 1)
@@ -11684,7 +11684,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CSD16323Q3:DQG0008A"
+		(property "Footprint" "Lamoka1-half:DQG0008A"
 			(at 119.38 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -11758,7 +11758,7 @@
 			(uuid "342282d0-ff5a-404a-9f99-c72b15e755bb")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q1")
 					(unit 1)
@@ -11836,7 +11836,7 @@
 			(uuid "ca5d66f3-a4c9-4e03-aea7-418bcb1eb7e2")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR049")
 					(unit 1)
@@ -11972,7 +11972,7 @@
 			(uuid "62ed8e0d-1c4d-401f-b2a4-a793234cddf4")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Ruvt1")
 					(unit 1)
@@ -12051,7 +12051,7 @@
 			(uuid "dd120a89-cf75-4384-9c61-1bea032ee110")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#FLG08")
 					(unit 1)
@@ -12129,7 +12129,7 @@
 			(uuid "7cc98f16-b1d7-46b4-96a9-e2769d8b17a6")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR042")
 					(unit 1)
@@ -12266,7 +12266,7 @@
 			(uuid "1dc20091-4bda-4074-8603-243f7cdc94d5")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rvin1")
 					(unit 1)
@@ -12401,7 +12401,7 @@
 			(uuid "04ccd35e-715c-44d2-950f-8219e24ae963")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rsense1")
 					(unit 1)
@@ -12443,7 +12443,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_8x11.9"
+		(property "Footprint" "Lamoka1-half:CP_Elec_8x11.9_Cout3"
 			(at 159.7152 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -12538,7 +12538,7 @@
 			(uuid "e860e9b6-3868-4be5-b440-4c8387fbdf45")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Cout3")
 					(unit 1)
@@ -12616,7 +12616,7 @@
 			(uuid "25af16f5-7806-45c2-8582-9859ff14701c")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR052")
 					(unit 1)
@@ -12751,7 +12751,7 @@
 			(uuid "c51ef88d-6d90-4d3a-b712-1c99daaed871")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "L2")
 					(unit 1)
@@ -12830,7 +12830,7 @@
 			(uuid "f7dd7a46-6ac3-4297-9978-af72ea6d5ed5")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#FLG10")
 					(unit 1)
@@ -12908,7 +12908,7 @@
 			(uuid "b4ef1953-0d6b-49ed-82a4-428e2aa88c57")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR054")
 					(unit 1)
@@ -13045,7 +13045,7 @@
 			(uuid "2f69ef9c-9d9c-496d-88e6-44f0840b6730")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rslope1")
 					(unit 1)
@@ -13087,7 +13087,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_8x11.9"
+		(property "Footprint" "Lamoka1-half:CP_Elec_8x11.9_Cout2"
 			(at 148.2852 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -13182,7 +13182,7 @@
 			(uuid "1ea7d27b-8abb-4fbb-a556-4c46338c3e17")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Cout2")
 					(unit 1)
@@ -13261,7 +13261,7 @@
 			(uuid "daf460cc-f3af-4fb0-b66d-685dc358e480")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#FLG11")
 					(unit 1)
@@ -13292,7 +13292,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "SS14-E3/61T"
 			(at 212.09 85.0899 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13387,7 +13387,7 @@
 			(uuid "2f3bb32c-aa75-41b2-a6bc-ad837e3cd921")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "D11")
 					(unit 1)
@@ -13524,7 +13524,7 @@
 			(uuid "bcfec744-fcae-41d2-8ace-1c886d58775f")
 		)
 		(instances
-			(project "Lamoka1"
+			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Rfbt1")
 					(unit 1)
