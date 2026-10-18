@@ -3,56 +3,75 @@
 > [!Warning]
 > This is not verified to be the full BOM for the Lamoka1. For all components, please refer to the official BOM. This is purely for reference and learning, not to be used as a BOM.
 
- NMOS for H-bridge (Inversion-section): CSD19536KCS made by TI  x4
+> Reference designators in parentheses match the schematic. Where the schematic carries no manufacturer field, the manufacturer given here is taken from the part number.
 
- Transformer (Inversion-section): VPT24-4170 made by Triad Magnetics
+ NMOS for H-bridge (Inversion-section): CSD19536KCS made by TI  x4 (Q3, Q4, Q5, Q6)
 
- Main microcontroller for full system: RP2354A made by Raspberry Pi
+ Transformer (Inversion-section): VPT24-4170 made by Triad Magnetics, 100 VA. Mounted off-board and wired to the PCB at J1.
 
- Addressable RGB LEDs: WS2812B made by WorldSemi
+ Main microcontroller for full system: RP2354A made by Raspberry Pi (U1)
 
- Low-side NMOS for boost converter (Inversion-section): CSD17304Q3 made by TI
+ Crystal for the microcontroller: ABM8-272-T3 made by Abracon (X1)
 
- High-side NMOS for boost converter (Inversion-section): CSD16323Q3 made by TI
+ Inductor for the microcontroller's internal core regulator (VREG_LX to 1V1): AOTA-B201610S3R3-101-T made by AOTA, 3.3 uH (L1)
 
- Gate driver for H-bridge NMOSs: UCC27735DR made by TI x2
+ Addressable RGB LEDs: WS2812B made by WorldSemi x5 (D1-D5)
 
- IC for 11-14v to 5v buck converter: TPS62160DSGR made by TI
+ Level shifter on the LED data line (3v3 to 5v): SN74AHCT1G125DBVR made by TI (U3)
 
- Input capacitor for buck converter: TMK212BBJ106KG made by Taiyo Yuden
+ Low-side NMOS for boost converter (Inversion-section): CSD17304Q3 made by TI (Q2)
+
+ High-side NMOS for boost converter (Inversion-section): CSD16323Q3 made by TI (Q1)
+
+ Inductor for boost converter (Inversion-section): XAL1580-182MEB made by Coilcraft, 1.8 uH (L2)
+
+ Current-sense resistor for boost converter (between CSP and CSN): CSNL1206FT2L00 made by Bourns, 2 milliohm (Rsense1)
+
+ Bootstrap diode for boost converter: SK215ATR (D6)
+
+ Gate driver for H-bridge NMOSs: UCC27735DR made by TI x2 (U5, U6)
+
+ IC for 11-14v to 17v boost converter: LM5122QMHX-NOPB made by TI (U4)
+
+ IC for 11-14v to 5v buck converter: TPS62160DSGR made by TI (U7)
+
+ Input capacitor for the 11-14v rail, shared by the boost and the buck converters: TMK212BBJ106KG-T made by Taiyo Yuden, 10 uF (C24)
 
  Cooling fan for unit: FAD1-04010BHLW11 made by Qualtek
 
  Pin header to connect fan to PCB: 0470531000 made by Molex
 
- Output capacitor for buck converter: GRM31CR71A226KE15L made by Murata
+ Output capacitor for buck converter: GRM31CR71A226KE15L made by Murata (C25)
 
- Inductor for buck converter: PA4332.222NLT made by Pulse Electronics
+ Inductor for buck converter: PA4332.222NLT made by Pulse Electronics (L3)
 
- Bottom resistor for buck converter FB: RC0603FR-07180KL made by Yageo
+ Bottom resistor for buck converter FB: RC0603FR-07180KL made by Yageo (R19)
 
- Top resistor for buck converter FB: CRCW0402953KFKED made by Vishay Dale
+ Top resistor for buck converter FB: CRCW0402953KFKED made by Vishay Dale (R20)
 
- Power-good pull-up resistor for buck converter: CRCW0402100KFKED made by Vishay Dale
+ Power-good pull-up resistor for buck converter: CRCW0402100KFKED made by Vishay Dale (R21)
 
- Diode for 5v source to eliminate buck output and USB 5v interactions: SS14-E3/61T made by Vishay x2
+ Diode for 5v source to eliminate buck output and USB 5v interactions: SS14-E3/61T made by Vishay x2 (D11, D12)
 
- Temp sensor for unit: TMP235A2DBZR made by TI x2
+ Temp sensor for unit: TMP235A2DBZR made by TI x2 (U8, U9)
 
- Connector for transformer's connection to the PCB: 2606-1108/010-000 made by Wago
+ Current-sense shunt for source-rail monitoring (+BATT to CSP): CSNL2512FT2L00 made by Bourns, 2 milliohm (RCS1)
 
- Connector for 11-14v DC source: 2606-1352 made by Wago
+ Current-sense amplifier for source-rail monitoring: INA240A2DR made by TI (IC1)
+
+ Connector for transformer's connection to the PCB: 2606-1108/010-000 made by Wago (J1)
+
+ Connector for 11-14v DC source: 2606-1352 made by Wago (J2)
 
  Outlet for inverter (120v AC North American): 3-119-054 made by SCHURTER Inc.
 
- Connector for hooking outlet to PCB: 2604-1103 made by Wago
+ Connector for hooking outlet to PCB: 2604-1103 made by Wago (J5)
 
- Multiplexer for voltage and current monitoring: ADS7128IRTER made by TI
+ Multiplexer for voltage and current monitoring: ADS7128IRTER made by TI (U10)
 
- Tactile button for RP2354A control: B3F-4055 made by Aratas (Formerly Omron Components)
+ Tactile button for RP2354A control: B3F-4055 made by Aratas (Formerly Omron Components) (SW1)
 
- IC for 11-14v to 17v boost converter: LM5122QMHX-NOPB made by TI
+ Converter to go from 5v to 3v3 for control: AMS1117-3.3 made by Advanced Monolithic Systems (U2)
 
- Converter to go from 5v to 3v3 for control: AMS1117-3.3 made by Advanced Monolithic Systems
-
+ USB-C receptacle for 5v input: TYPE-C-31-M-12 made by HRO (J3)
 

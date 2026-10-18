@@ -1,0 +1,62 @@
+name: checks
+
+# Runs the repository checks, static analysis, and a firmware build on every
+# push and pull request. See CONTRIBUTING.md for the local equivalents
+# (`make test`, `make static`, `make firmware`).
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  repo-checks:
+    name: Repository checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run repository checks
+        run: make test
+
+  static-analysis:
+    name: Static analysis (cppcheck)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install cppcheck
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq cppcheck
+      - name: Run cppcheck
+        run: make static
+
+  firmware-build:
+    name: Firmware build (arduino-pico)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache Arduino tooling
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.arduino15
+            ~/Arduino/libraries
+            ~/.cache/arduino/sketches
+          key: arduino-${{ runner.os }}-${{ hashFiles('.github/workflows/checks.yml') }}
+          restore-keys: |
+            arduino-${{ runner.os }}-
+      - name: Install arduino-cli
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR="$HOME/.local/bin" sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Install the arduino-pico core
+        run: |
+          arduino-cli config init --overwrite
+          arduino-cli config add board_manager.additional_urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+          arduino-cli core update-index
+          arduino-cli core install rp2040:rp2040
+      - name: Install FastLED
+        run: arduino-cli lib install FastLED
+      - name: Build the current firmware head
+        run: make firmware

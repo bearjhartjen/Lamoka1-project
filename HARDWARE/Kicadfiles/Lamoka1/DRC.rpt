@@ -1,137 +1,145 @@
 ** Drc report for Lamoka1.kicad_pcb **
-** Created on 2026-10-14T22:55:30 **
+** Created on 2026-10-17T14:15:24 **
 ** Report includes: Errors, Warnings, Exclusions **
 
-** Found 27 DRC violations **
+** Found 28 DRC violations **
+[malformed_courtyard]: Footprint has malformed courtyard (not a closed shape)
+    Local override; error
+    @(138.8776 mm, 122.7926 mm): Footprint U4
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(204.8176 mm, 187.6076 mm): Reference field of Rvin1
-    @(205.5651 mm, 186.8576 mm): Pad 1 [/Inversion-Section/CSP] of Rsense1 on F.Cu
+    @(141.6576 mm, 134.5676 mm): Reference field of Rvin1
+    @(142.4051 mm, 133.8176 mm): Pad 1 [/Inversion-Section/CSP] of Rsense1 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(204.8176 mm, 187.6076 mm): Reference field of Rvin1
-    @(205.3276 mm, 188.5076 mm): Pad 1 [/Inversion-Section/CSP] of Rvin1 on F.Cu
+    @(141.6576 mm, 134.5676 mm): Reference field of Rvin1
+    @(142.1676 mm, 135.4676 mm): Pad 1 [/Inversion-Section/CSP] of Rvin1 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(236.8576 mm, 128.2776 mm): PCB text 'Danger!
+    @(173.6976 mm, 75.2376 mm): PCB text 'Danger!
 High Voltage
 
 ' on B.Silkscreen
-    @(233.8076 mm, 111.7876 mm): PTH pad 3 [/BROWN] of J1
+    @(170.6476 mm, 58.7476 mm): PTH pad 3 [/BROWN] of J1
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(236.8576 mm, 128.2776 mm): PCB text 'Danger!
+    @(173.6976 mm, 75.2376 mm): PCB text 'Danger!
 High Voltage
 
 ' on B.Silkscreen
-    @(218.8076 mm, 111.7876 mm): PTH pad 5 [/BLACK] of J1
+    @(155.6476 mm, 58.7476 mm): PTH pad 5 [/BLACK] of J1
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(164.9076 mm, 171.3276 mm): Reference field of R19
-    @(163.9676 mm, 171.9776 mm): Pad 2 [GND] of C24 on B.Cu
+    @(101.7476 mm, 118.2876 mm): Reference field of R19
+    @(100.8076 mm, 118.9376 mm): Pad 2 [GND] of C24 on B.Cu
 [lib_footprint_mismatch]: Footprint 'CP_Elec_8x11.9' does not match copy in library 'Capacitor_SMD'
     Local override; warning
-    @(232.9476 mm, 180.1576 mm): Footprint Cout3
+    @(169.7876 mm, 127.1176 mm): Footprint Cout3
 [lib_footprint_mismatch]: Footprint 'CONN3_2604-1103_WAG' does not match copy in library '2604-1103'
     Local override; warning
-    @(187.6907 mm, 118.3276 mm): Footprint J5
+    @(124.5307 mm, 65.2876 mm): Footprint J5
 [lib_footprint_mismatch]: Footprint 'CP_Elec_8x11.9' does not match copy in library 'Capacitor_SMD'
     Local override; warning
-    @(241.9051 mm, 180.1576 mm): Footprint Cout2
+    @(178.7451 mm, 127.1176 mm): Footprint Cout2
 [lib_footprint_mismatch]: Footprint 'CONN8_2606-1108&slash_010-000_WAG' does not match copy in library '2606-1108/010-000'
     Local override; warning
-    @(248.8076 mm, 111.7876 mm): Footprint J1
+    @(185.6476 mm, 58.7476 mm): Footprint J1
 [lib_footprint_mismatch]: Footprint 'DQG0008A' does not match copy in library 'CSD17304Q3'
     Local override; warning
-    @(222.2276 mm, 175.7376 mm): Footprint Q2
+    @(159.0676 mm, 122.6976 mm): Footprint Q2
 [lib_footprint_mismatch]: Footprint 'CP_Elec_8x11.9' does not match copy in library 'Capacitor_SMD'
     Local override; warning
-    @(250.8626 mm, 180.1576 mm): Footprint Cout1
+    @(187.7026 mm, 127.1176 mm): Footprint Cout1
 [lib_footprint_mismatch]: Footprint 'DQG0008A' does not match copy in library 'CSD16323Q3'
     Local override; warning
-    @(226.3926 mm, 176.4226 mm): Footprint Q1
+    @(163.2326 mm, 123.3826 mm): Footprint Q1
 [lib_footprint_mismatch]: Footprint 'CONN2_2606-1352_WAG' does not match copy in library '2606-1352'
     Local override; warning
-    @(185.0495 mm, 178.7079 mm): Footprint J2
+    @(121.8895 mm, 125.6679 mm): Footprint J2
 [lib_footprint_mismatch]: Footprint 'DSG8_1P6X0P9' does not match copy in library 'TPS62160DSGR'
     Local override; warning
-    @(166.4476 mm, 173.5576 mm): Footprint U7
+    @(103.2876 mm, 120.5176 mm): Footprint U7
+[lib_footprint_mismatch]: Footprint 'PWP0020A_N' does not match copy in library 'lm5122'
+    Local override; warning
+    @(138.8776 mm, 122.7926 mm): Footprint U4
 [lib_footprint_mismatch]: Footprint 'DO-214AC_VIS' does not match copy in library 'SS14-E3/61T'
     Local override; warning
-    @(171.9376 mm, 146.8676 mm): Footprint CR1
+    @(108.7776 mm, 93.8276 mm): Footprint CR1
 [lib_footprint_mismatch]: Footprint 'R_0603_1608Metric' does not match copy in library 'Resistor_SMD'
     Local override; warning
-    @(220.4508 mm, 136.1876 mm): Footprint R24
+    @(157.2908 mm, 83.1476 mm): Footprint R24
 [lib_footprint_mismatch]: Footprint 'IND_PA4332.222NLT_PUL' does not match copy in library 'PA4332.222NLT'
     Local override; warning
-    @(171.4676 mm, 170.1876 mm): Footprint L3
+    @(108.3076 mm, 117.1476 mm): Footprint L3
 [lib_footprint_mismatch]: Footprint 'DO-214AC_VIS' does not match copy in library 'SS14-E3/61T'
     Local override; warning
-    @(173.5038 mm, 165.8576 mm): Footprint CR2
+    @(110.3438 mm, 112.8176 mm): Footprint CR2
 [lib_footprint_mismatch]: Footprint 'SOT-223-3_TabPin2' does not match copy in library 'Package_TO_SOT_SMD'
     Local override; warning
-    @(184.1400 mm, 165.6300 mm): Footprint U2
+    @(120.9800 mm, 112.5900 mm): Footprint U2
 [silk_edge_clearance]: Silkscreen clipped by board edge
     Rule: board setup constraints silk; warning
-    @(161.8344 mm, 100.8730 mm): Rectangle on Edge.Cuts
-    @(162.7044 mm, 136.7030 mm): Segment of J3 on B.Silkscreen
+    @(98.6744 mm, 47.8330 mm): Rectangle on Edge.Cuts
+    @(99.5444 mm, 83.6630 mm): Segment of J3 on B.Silkscreen
 [silk_edge_clearance]: Silkscreen clipped by board edge
     Rule: board setup constraints silk; warning
-    @(161.8344 mm, 100.8730 mm): Rectangle on Edge.Cuts
-    @(162.7044 mm, 146.1030 mm): Segment of J3 on B.Silkscreen
+    @(98.6744 mm, 47.8330 mm): Rectangle on Edge.Cuts
+    @(99.5444 mm, 93.0630 mm): Segment of J3 on B.Silkscreen
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(195.3976 mm, 139.7576 mm): Via [GND] on F.Cu - B.Cu
+    @(132.2376 mm, 86.7176 mm): Via [GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(196.3200 mm, 140.7300 mm): Via [GND] on F.Cu - B.Cu
+    @(133.1600 mm, 87.6900 mm): Via [GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(196.3200 mm, 138.7300 mm): Via [GND] on F.Cu - B.Cu
+    @(133.1600 mm, 85.6900 mm): Via [GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(194.3200 mm, 138.7300 mm): Via [GND] on F.Cu - B.Cu
-[track_dangling]: Track has unconnected end
-    Local override; warning
-    @(237.0100 mm, 139.7900 mm): Track [/BLUE] on F.Cu, length 1.2300 mm
+    @(131.1600 mm, 85.6900 mm): Via [GND] on F.Cu - B.Cu
 [isolated_copper]: Isolated copper fill
     Local override; warning
-    @(193.1700 mm, 137.5200 mm): Zone '1v1_1' [/Control-Section/1V1] on F.Cu and B.Cu, priority 2
+    @(130.0100 mm, 84.4800 mm): Zone '1v1_1' [/Control-Section/1V1] on F.Cu and B.Cu, priority 2
 
-** Found 7 unconnected pads **
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-    @(199.1876 mm, 178.1076 mm): Pad 2 [GND] of U4 on B.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(204.8876 mm, 175.5076 mm): Pad 15 [GND] of U4 on B.Cu
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(213.1708 mm, 136.5644 mm): Pad 9 [GND] of U10 on B.Cu
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(213.1708 mm, 136.5644 mm): Pad 9 [GND] of U10 on B.Cu
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
-    @(161.8476 mm, 100.8776 mm): Zone 'GND' [GND] on F.Cu and B.Cu, priority 0
+** Found 0 unconnected pads **
 
-** Found 1 Footprint errors **
-[net_conflict]: No pad found for pin 21 (GND) in schematic
+** Found 12 Footprint errors **
+[net_conflict]: No corresponding pin found in schematic
     Local override; warning
-    @(202.0376 mm, 175.8326 mm): Footprint U4
+    @(137.8776 mm, 121.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(137.8776 mm, 122.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(137.8776 mm, 123.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(137.8776 mm, 124.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(138.8776 mm, 121.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(138.8776 mm, 122.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(138.8776 mm, 123.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(138.8776 mm, 124.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(139.8776 mm, 121.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(139.8776 mm, 122.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(139.8776 mm, 123.2926 mm): PTH pad V [GND] of U4
+[net_conflict]: No corresponding pin found in schematic
+    Local override; warning
+    @(139.8776 mm, 124.2926 mm): PTH pad V [GND] of U4
 
 ** Ignored checks **
     - Footprint has no courtyard defined

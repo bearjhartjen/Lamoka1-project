@@ -18,7 +18,7 @@
 
  GPIO9: Connects to ADS7128IRTER made by TI SCL pin for serial clock pulled up to 3v3 by a 4.7k resistor
 
- GPIO11: Goes to a level shifter to get up to 5v, then to a 330 ohm resistor, then connects to a string of ten WS2812B lights made by WorldSemi arranged next to each other from left to right with D1 starting and D10 finishing. The press button (B3F-4055 made by Aratas) is to the left of D1.
+ GPIO11: Goes to a level shifter to get up to 5v, then to a 330 ohm resistor, then connects to a string of five WS2812B lights made by WorldSemi arranged next to each other from left to right with D1 starting and D5 finishing. The press button (B3F-4055 made by Aratas) is to the left of D1.
 
  GPIO26: Output of the TMP235A2DBZR temp sensor made by TI located in the Control-Section
 
@@ -57,10 +57,14 @@
 
  We are refraining from putting in a 5v USB output for the Lamoka1. This is because our 11-14v to 5v buck converter (TPS62160DSGR made by TI) is designed for usage up to one amp. In future Lamoka models, if a USB output (preferably USB-C) is established, the buck converter would have to be beefed up; however, it would be even better if we had a USB-C PD circuit in so the user could get a better experience across a wider range of usage. 
 
- The transformer applied to the Lamoka1 is the VPT24-4170 made by Triad Magnetics, five pounds and around $80. We understand this may be a strong downside to some people; however, we found this was the best widely available option, plus it adds efficiency prospects. 
+ The transformer applied to the Lamoka1 is the VPT24-4170 made by Triad Magnetics, a 100 VA part, five pounds and around $80. It mounts off-board and wires to the PCB at J1. We understand this may be a strong downside to some people; however, we found this was the best widely available option, plus it adds efficiency prospects. 
 
 
-## User interface board
+## User interface
 
-Unfortunately, we had to create a whole separate board for the user interface due to how large the VPT24-4170 transformer is. Both boards will be attached with mouse bites so that they can be easily fabricated and assembled together; then you can simply break them apart when you receive them. The two boards will be attached by a wired connector, allowing us to route in a heatsink and other airflow-conscious design choices, instead of having to accommodate ten RGB LEDs and a button.
+The user interface is on the main board rather than on a board of its own. `User-Interface-Section.kicad_sch` is a hierarchical sheet inside the same project as the control and inversion sections, and the LEDs sit on the main 95 x 95 mm outline. The main board populates **five** WS2812B LEDs (D1-D5) and one button.
+
+An earlier plan split the interface onto a separate board joined to the main board with mouse bites and a wired connector, so that the large VPT24-4170 transformer and the airflow it needs could be accommodated separately. The current layout does not use that split: there are no mouse-bite features and no inter-board connector.
+
+The Lamoka1-DEV-Brain is a standalone development board, not a half of the main board. It carries **ten** WS2812B LEDs (D1-D10), which is the count PIE V1.8 is written for.
 

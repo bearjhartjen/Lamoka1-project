@@ -41,7 +41,10 @@ sym-lib-cache
 *.meas
 *.ac
 *.transient
+# This is ngspice `.step` sweep output. STEP 3D exports are re-included below:
+# HARDWARE/Mechanical/ carries the assembly model for mechanical integration.
 *.step
+!Mechanical/*.step
 *.sweep
 
 ################################

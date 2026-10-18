@@ -15,7 +15,7 @@
 "U2","1","AMS1117-3.3","Package_TO_SOT_SMD:SOT-223-3_TabPin2","AMS1117-3.3","3.3 V SOT-223 linear regulator; output network is 10uF + 4.7uF + 2x100nF ceramic."
 "U1","1","RP2354A","Package_DFN_QFN:QFN-60-1EP_7x7mm_P0.4mm_EP3.4x3.4mm","RP2354A","A microcontroller by Raspberry Pi, dual CPU architecture (ARM Cortex-M33 / RISC-V Hazard3), 150MHz, 2MB flash, 520KB SRAM, 12 PIO state machines, VQFN-60"
 "L3","1","2.2uH","PA4332.222NLT:IND_PA4332.222NLT_PUL","PA4332.222NLT",""
-"U4","1","LM5122MH/NOPB","LM5122QMHX-NOPB:PWP20_3P0X4P2","LM5122MH/NOPB",""
+"U4","1","LM5122MH/NOPB","lm5122:PWP0020A_N","LM5122MH/NOPB",""
 "D1,D2,D3,D4,D5","5","WS2812B","LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm","WS2812B","RGB LED with integrated controller"
 "L2","1","1.8uH","Inductor_SMD:L_Coilcraft_XAL1580-182","XAL1580-182MEB","Inductor"
 "IC1","1","INA240A2DR","INA240A2DR:SOIC127P600X175-8N","INA240A2DR","80V, Low-/High-Side, Bi-Directional, Zero-Drift, Current Sense Amp w/Enhanced PWM Rejection"

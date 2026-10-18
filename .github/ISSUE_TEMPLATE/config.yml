@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security and safety-critical reports
+    url: https://github.com/bearjhartjen/Lamoka1-project/blob/Lamoka1/SECURITY.md
+    about: Do not open a public issue for security or safety-critical problems — see SECURITY.md.
+  - name: Contributing guide
+    url: https://github.com/bearjhartjen/Lamoka1-project/blob/Lamoka1/CONTRIBUTING.md
+    about: Development setup, conventions, testing, and the pull request checklist.

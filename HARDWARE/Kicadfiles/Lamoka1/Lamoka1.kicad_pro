@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.1,
-          "height": 2.0,
-          "width": 1.905
+          "drill": 0.2032,
+          "height": 0.499999,
+          "width": 0.499999
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -158,7 +158,7 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.4,
         "min_text_thickness": 0.1,
-        "min_through_hole_diameter": 0.3,
+        "min_through_hole_diameter": 0.2,
         "min_track_width": 0.15,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
@@ -572,7 +572,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "../../../../../Downloads/",
+      "plot": "../../../../../Desktop/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -777,7 +777,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "Ruvb1,IC1,C1-33,Cin1,Rfbb1,Cvin1,Rt1,TP1-41,Cres1,Coutx1,#PWR1-72,Rfbt1,Cout1-3,Ruvt1,SW1-2,#G1-4,J1-7,Ccomp1,U1-10,X1,D1-12,CR1-2,Css1,L1-3,Rslope1,R1-33,Rcomp1,Q1-7,Rsense1,NT1-2,H1-8,Rvin1",
+    "used_designators": "X1,U1-10,Cout1-3,Rfbt1,Cres1,TP1-41,Rt1,Cvin1,Q1-7,Rcomp1,SW1-2,Coutx1,#PWR1-72,C1-33,D1-12,CR1-2,L1-3,Rslope1,R1-33,Css1,Rfbb1,Cin1,Rvin1,H1-8,Ccomp1,IC1,Ruvb1,Ruvt1,NT1-2,Rsense1,#G1-4,J1-7",
     "variants": []
   },
   "sheets": [

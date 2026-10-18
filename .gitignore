@@ -1,0 +1,7 @@
+# Scratch space used by the Makefile: staged PIE sketches under folder names
+# Arduino requires, and the binaries exported from them. Never committed.
+build/
+
+# Python bytecode cache from the check suite (tests/).
+__pycache__/
+*.pyc

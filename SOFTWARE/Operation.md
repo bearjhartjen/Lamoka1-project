@@ -1,4 +1,7 @@
-When the Lamoka1/2 is connected to USB-C 5v, it will display a similar yet improved version of the PIE v1.8 interface. As soon as the unit's MUX (ADS7128IRTER made by TI) shows a voltage on the input net that is above 11v yet below 14v, the device will commence a boot-up sequence. The unit's fan (FAD1-04010BHLW11 made by Qualtek) is only connected to the buck 5v rail (TPS62160DSGR made by TI). The boot sequence will go upstream to verify everything is working correctly. 
+> [!Warning]
+> This page describes the **intended** boot sequence for the Lamoka1/2. It is a design target, not a description of working behaviour. No firmware implements it yet, and PIE V1.8 does not run on the main board — see [`README.md`](README.md) for what does and does not run where.
+
+When the Lamoka1/2 is connected to USB-C 5v, the intent is for it to present a version of the PIE interface adapted to the main board's five LEDs. As soon as the unit's MUX (ADS7128IRTER made by TI) shows a voltage on the input net that is above 11v yet below 14v, the device will commence a boot-up sequence. The unit's fan (FAD1-04010BHLW11 made by Qualtek) is only connected to the buck 5v rail (TPS62160DSGR made by TI). The boot sequence will go upstream to verify everything is working correctly. 
 
  ## First phase 
 

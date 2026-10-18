@@ -18,6 +18,9 @@ V1.8 directly defines the following hardware connections (per HARDWARE/COMPONENT
 
 The firmware controls **10 WS2812B LEDs** as a single FastLED array. The LEDs are configured for the WS2812B's **GRB** color order.
 
+> [!NOTE]
+> This is DEV-Brain firmware. `NUM_LEDS` is `10`, matching the Lamoka1-DEV-Brain (D1–D10). The main Lamoka1 board fits **five** WS2812B LEDs (D1–D5), and several of the pins used below are wired differently there, so this sketch does not run on the main board unmodified. See [`../README.md`](../README.md) for the pin-by-pin comparison.
+
 The default operating values are:
 
 * **Brightness:** 6
