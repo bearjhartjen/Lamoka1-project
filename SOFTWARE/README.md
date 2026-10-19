@@ -1,14 +1,18 @@
 ## What is the Portal Interface Engine?
 
-PIE is the intended operating system for Lamoka models. It provides simple "portals" to whatever you would like with your unit.
-
+PIE is the operating system for Lamoka models. It gives you simple "portals" to
+whatever you want to do with your unit — lights, games, settings, sleep, USB
+bootloader entry — through one button and a strip of addressable LEDs. Tap to
+move, double-tap to go back, hold to select.
 
 ## Compatibility
 
-PIE **V1.9** is the first revision that runs on the **Lamoka1/2 main board**. It scales
+PIE **V1.9** is the first revision that runs on the **Lamoka1/2**. It scales
 the UI to the main board's five WS2812B LEDs, reads the TMP235 sensors on GPIO 26/27,
 uses the RP2350 hardware TRNG for entropy, and drives the H-bridge power stage
-(see `PIE-v1.9-information.md`).
+(see `PIE-v1.9-information.md`). The V1.9 output target is **105 V RMS
+inferred** (about 96–105 V at the outlet depending on load); 115 V is
+unreachable at the 17 V bus, and the power stage has never been energised.
 
 PIE **V1.8** runs on the **Lamoka1-DEV-Brain** (ten LEDs, analog entropy). It does
 **not** run on the main Lamoka1/2 board unmodified:
@@ -28,5 +32,6 @@ driving ten LEDs would address five that are not fitted. The menu, the brightnes
 speed bars, the binary score display, and the Fireball game all index across the full
 array, so the interface would be truncated rather than merely dimmer.
 
-Earlier PIE revisions (`V1.ino` through `V1.7.ino`) were also written for the DEV-Brain
-and are kept as history. V1.8 remains the reference for the DEV-Brain.
+PIE is now kept as two heads: `V1.8.ino` for the DEV-Brain and `V1.9.ino` for
+the Lamoka1/2. Both are maintained in place, and git history holds the earlier
+`V1.0`–`V1.7` revisions. V1.8 remains the reference for the DEV-Brain.

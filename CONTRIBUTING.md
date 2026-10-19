@@ -121,10 +121,10 @@ Copy [`.env.example`](.env.example) to `.env` to keep local values such as
 gitignored.
 
 Arduino compiles every `.ino` in a sketch folder together and requires the
-folder and main file to share a name, so the PIE revisions cannot be compiled
+folder and main file to share a name, so the two PIE heads cannot be compiled
 straight out of `SOFTWARE/Portal Interface Engine/`. `make firmware` copies the
-chosen revision into its own folder under `build/` and compiles it there with
-warnings enabled (`-Wall -Wextra`), so no revision needs to be renamed or moved
+chosen head into its own folder under `build/` and compiles it there with
+warnings enabled (`-Wall -Wextra`), so no head needs to be renamed or moved
 by hand.
 
 ### Documentation and tooling
@@ -181,12 +181,14 @@ them.
 
 ### Firmware
 
-- Match the existing style: a single `.ino` file per revision, `#define` pin and
-  timing constants at the top in `UPPER_SNAKE_CASE`, `camelCase` functions and
-  variables.
-- Each release is a **new file** (`V1.9.ino`, `V2.0.ino`, …); never edit
-  `V1.0`–`V1.8` in place and never "tidy up" an old revision to match a newer
-  one — the differences between versions are the record of what changed.
+- Match the existing style: a single `.ino` file per firmware head, `#define`
+  pin and timing constants at the top in `UPPER_SNAKE_CASE`, `camelCase`
+  functions and variables.
+- There are two heads: `V1.8.ino` for the DEV-Brain and `V1.9.ino` for the
+  Lamoka1/2. Edit the head that owns the behaviour **in place** and let git
+  history be the revision record; do not create a new `V1.x` file for each
+  change. If a future board needs genuinely divergent firmware, start a new
+  head rather than copying an existing one.
 - If a change affects behavior, update
   [`PIE-v1.8-information.md`](SOFTWARE/Portal%20Interface%20Engine/PIE-v1.8-information.md)
   (or the current version's document) in the same change, and correct

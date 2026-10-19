@@ -51,7 +51,7 @@
 			)
 			(layer "F.Mask"
 				(type "Top Solder Mask")
-				(color "White")
+				(color "Green")
 				(thickness 0.01)
 			)
 			(layer "F.Cu"
@@ -71,7 +71,7 @@
 			)
 			(layer "B.Mask"
 				(type "Bottom Solder Mask")
-				(color "White")
+				(color "Green")
 				(thickness 0.01)
 			)
 			(layer "B.Paste"
@@ -3316,7 +3316,7 @@
 			(uuid "9b7f65e2-d7ae-409a-bb74-9a74040df433")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH-12mm_Wuerth-430476085716.step"
+		(model "${KIPRJMOD}/components/3dmodels/B3F-4055.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -33511,6 +33511,17 @@
 			(remove_unused_layers no)
 			(net "GND")
 			(uuid "30e97533-c505-4b4e-b351-e8298c53a221")
+		)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/Texas_PWP0020A.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
 		)
 		(embedded_fonts no)
 	)

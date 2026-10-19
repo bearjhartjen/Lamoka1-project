@@ -5,7 +5,8 @@ format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 The project versions its artifacts separately: hardware revisions are released
 as GitHub releases (for example `lamoka1_DEV_Brain_v1`), and the Portal Interface
-Engine firmware follows its own revision sequence (`V1.0`–`V1.9`).
+Engine firmware is kept as two in-place heads (`V1.8` and `V1.9`); earlier
+revisions remain in git history.
 
 ## [Unreleased]
 
@@ -51,6 +52,11 @@ Engine firmware follows its own revision sequence (`V1.0`–`V1.9`).
   routing plot of the F.Cu and B.Cu layers, and the two DEV-Brain views (which
   additionally need that board's local 3D models). The pictures could previously
   be reproduced only by hand.
+- `HARDWARE/Lamoka1-half fab files/Lamoka1-half interactive BOM.html` — a
+  self-contained InteractiveHtmlBom view of the Lamoka1/2 assembly, with the
+  BOM, placement outlines, nets and tracks embedded.
+- `U4` now carries the `Texas_PWP0020A` 3D model, so the LM5122 appears in the
+  board renders and in `HARDWARE/Mechanical/Lamoka1-half.step`.
 - `SOFTWARE/Portal Interface Engine/V1.9.ino` and
   `PIE-v1.9-information.md` — the first main-board (Lamoka1/2) firmware: the
   five-LED interface ported from V1.8, RP2350 TRNG entropy, TMP235 reads on
@@ -64,6 +70,11 @@ Engine firmware follows its own revision sequence (`V1.0`–`V1.9`).
 
 ### Changed
 
+- The Lamoka1/2 board stackup now records the ordered finish: green solder mask
+  with black legend on both sides. `tools/make_images.sh` renders both boards
+  with `--use-board-stackup-colors`, so `Images/lamoka1-2-render-*.png` show the
+  green board that PCBWay is building rather than KiCad's default mask colour.
+  The Gerber job file was regenerated with the same colour metadata.
 - Mains isolation: `Lamoka1-half.kicad_dru` now carries a 1.5 mm clearance rule
   around the 120 V transformer secondary (IPC-2221B table 6-1 column B2 asks
   1.25 mm). The BLACK run moved 0.6 mm clear of the control bus on both layers
@@ -81,8 +92,12 @@ Engine firmware follows its own revision sequence (`V1.0`–`V1.9`).
 - Renamed `HARDWARE/Mechanical/Lamoka1.step` to `Lamoka1-half.step`: the folder
   now carries models for more than one board, so each export is named for the
   board it comes from. `make step` regenerates both board exports.
-- Named the main board **Lamoka1/2** in prose and `Lamoka1-half` in files and
-  paths, everywhere: `HARDWARE/Kicadfiles/Lamoka1-half/` with `Lamoka1-half.*`
+- Clarified that **Lamoka1/2** is the model designation, not a prose spelling
+  of "main board"; `Lamoka1-half` is only its path-safe filesystem alias. The
+  naming note in `AGENTS.md` and the fab-package README were rewritten to say
+  so, and the main-board model name is used consistently in documentation.
+- Named the main board model **Lamoka1/2**, with `Lamoka1-half` as the
+  path-safe filesystem alias, everywhere: `HARDWARE/Kicadfiles/Lamoka1-half/` with `Lamoka1-half.*`
   project files, the project-local libraries and their `fp-lib-table` /
   `sym-lib-table` nickname, the backups directory, and the fab and mechanical
   exports. Repository name, branch and the DEV-Brain keep their names. Verified
@@ -112,13 +127,62 @@ Engine firmware follows its own revision sequence (`V1.0`–`V1.9`).
 - Lamoka1/2 main board: routed the control, boost, and inversion sections and
   updated component placement and footprints to match vendor data.
 - Regenerated the board pictures in `Images/` from the current layouts: the
-  Lamoka1/2 views now show the October 2026 revision (the isolation fix, the
+  Lamoka1/2 views now use the green stackup and show the October 2026 revision (the isolation fix, the
   moved references, and the "DANGER! HIGH VOLTAGE" legend between `J1`'s pad
   rows). Each render is trimmed of its transparent border, so the pictures hug
   the boards instead of carrying empty margins.
+- README: simplified for readability. The OpenSSF best-practices and RepoGrade
+  badge links are removed, the page now leads with a plain-language overview and
+  a project-status table, and the specifications, quick-start,
+  build-and-fabrication, firmware, license, and AI-use sections are shorter. The
+  section anchors other documents link to (`#specifications`, `#quick-start`,
+  `#build-and-fabrication`, `#license`, `#usage-of-ai-in-this-repository`) are
+  unchanged.
+
+### Fixed
+
+- PIE V1.9 firmware, before first power-on (the power stage has still never been
+  energised):
+  - The fixed-threshold output-missing check tripped during the soft-start ramp
+    (at m = 0.05 the fundamental is 5.76 V); it now scales with the commanded
+    modulation, runs only above 15 V expected, and uses a 5-tick debounce.
+  - `G_VERY_LONG` now disarms the bridge before its 120 ms blocking delay.
+  - The `Wire` timeout is capped at 2 ms so a stuck I²C bus cannot freeze the
+    bridge; ADS7128 failures reset the probe state, and `powerClearFault` forces
+    a fresh probe and a full sweep.
+  - The Inverter portal's double tap and hold now clear a latched non-over
+    fault; the parser treats the portal as a non-menu so the double tap is
+    produced.
+  - The hardware watchdog is 500 ms and is fed during the boot sweep as well as
+    from the main loop.
+  - The DC-offset trip is 1 V over 3 consecutive ticks.
+  - The 60 Hz sine is written once per 20 kHz carrier from the slice-0 wrap ISR
+    out of a 64-point interpolated table, and the amplitude slew is limited to
+    0.010 per tick. The old main-loop update could make the phase-offset slices
+    latch different duty values and breach the 500 ns dead time.
+  - The output target is 105 V RMS, not 115 V: 115 V needs m ≈ 1.10 at full load
+    on the 17 V bus (`PWM_M_MAX` is 0.9597). The AIN1 bus windows are ±0.4 V,
+    below the 17.56 V clip. Current build: 84,372 B program / 16,204 B globals.
+- `tests/test_v19_pwm.py` and `tests/test_v19_model.py` — host-side models of
+  the three-slice PWM dead time and the protection arithmetic, so these
+  behaviours are no longer checked only by source-text matching.
+- `HARDWARE/revB-changes.md` — the staged Rev B change set (off-board output
+  filter, input and output fuses, reverse-polarity protection, AIN1 divider,
+  gate-driver bypass, C13, Rsense1, J5 earth, TMP235 placement) plus the
+  separate Rev C 115 V option. Nothing in it is applied.
+- `AGENTS.md`, `PIE-v1.9-information.md`, `README.md`, and `SOFTWARE/README.md`
+  now state the 105 V inferred target and the roughly 96–105 V outlet range,
+  correct the gate-driver VDD rail to CSP, and record the open hardware
+  findings.
 
 ### Removed
 
+- PIE revisions `V1.0`–`V1.7` (`V1.ino` and `V1.1.ino`–`V1.7.ino`) are removed
+  from the working tree. PIE is now two in-place heads, `V1.8.ino` for the
+  Lamoka1-DEV-Brain and `V1.9.ino` for the Lamoka1/2, with git history as the
+  revision record. `SOFTWARE/README.md`, `SECURITY.md`, `AGENTS.md`,
+  `CONTRIBUTING.md`, the README, and the repository checks now describe the
+  two-head layout.
 - KiCad library files are no longer committed. The project-local libraries
   (`Lamoka1-half.pretty`, `Lamoka1-half_Parts.kicad_sym`, `Lamoka1-half_MOSFET.kicad_sym`)
   stay local and ignored, like the vendor libraries; the schematics and board

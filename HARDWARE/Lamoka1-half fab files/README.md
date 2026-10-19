@@ -3,13 +3,17 @@
 Fabrication and assembly submission for the **Lamoka1/2 main board** (power and
 control), laid out the same way as
 `Lamoka1-DEV-Brain/Lamoka1-DEV-Brain fab files/`. Generated 2026-10-18 with
-KiCad 10.0.6 from `HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb`.
+KiCad 10.0.6 from `HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb`;
+the green job-file metadata and the interactive BOM were refreshed 2026-10-19.
 
 The folder and its files are named `Lamoka1-half` rather than `Lamoka1/2`
-because a slash cannot appear in a path — the same convention as
-`HARDWARE/Mechanical/Lamoka1-half.step`. The board itself is the Lamoka1/2 in
-prose and on its silkscreen.
+because a slash cannot appear in a path — the same path-safe alias used by
+`HARDWARE/Mechanical/Lamoka1-half.step`. The model is the **Lamoka1/2**, and
+that model name appears on the silkscreen.
 
+We keep this package committed so anyone can order the board exactly as we did,
+without having to regenerate anything first. The board is 95.2 × 95.2 mm of
+open hardware, and the whole point is that you can build one yourself.
 ## Contents
 
 | Path | What it is |
@@ -17,6 +21,7 @@ prose and on its silkscreen.
 | `Lamoka1-half/` | Nine Gerber layers (`F_Cu`, `B_Cu`, `F_Mask`, `B_Mask`, `F_Paste`, `B_Paste`, `F_Silkscreen`, `B_Silkscreen`, `Edge_Cuts`), the Gerber job file, the Excellon drill file, the drill map and the drill report |
 | `Lamoka1-half BOM.csv` | PCBWay 9-column assembly BOM: 70 lines covering 112 placements, no blank fields |
 | `Lamoka1-half Pick and Place.csv` | 112 placements, 57 front / 55 back (`... top.csv` and `... bottom.csv` are the per-side splits) |
+| `Lamoka1-half interactive BOM.html` | Self-contained interactive placement and BOM viewer, generated with [InteractiveHtmlBom](https://github.com/openscopeproject/InteractiveHtmlBom); open it in a browser and click a part to highlight it on the board |
 | `README.md` | This file |
 
 The DEV-Brain package also has a `PCBway files/` folder holding the BOM
@@ -26,7 +31,8 @@ order time; add the equivalent here once the board has been ordered.
 ## The board
 
 - 95.2 x 95.2 mm, 2 copper layers, 1.6 mm FR-4, 1 oz (35 um) outer copper,
-  white solder mask and black legend on both sides (from the job file).
+  green solder mask and black legend on both sides (from the job file; the
+  board renders use the same stackup colour).
   The finish is unset in the job file ("None") — HASL or lead-free HASL is the
   usual choice, select it in the order form.
 - 378 holes. Plated, smallest first: 0.2032 mm x12 (the LM5122 PowerPAD thermal
@@ -150,6 +156,20 @@ kicad-cli pcb export pos --format csv --units mm --side back \
 
 kicad-cli sch export netlist --output /tmp/Lamoka1-half.net "$SCH"
 python3 tools/make_fab_bom.py /tmp/Lamoka1-half.net "$OUT/Lamoka1-half BOM.csv"
+```
+
+The interactive BOM is generated with the upstream
+[InteractiveHtmlBom](https://github.com/openscopeproject/InteractiveHtmlBom)
+plugin, which is not vendored here. From the board directory:
+
+```sh
+cd HARDWARE/Kicadfiles/Lamoka1-half
+INTERACTIVE_HTML_BOM_NO_DISPLAY=1 \
+python3 /path/to/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py \
+  Lamoka1-half.kicad_pcb --no-browser \
+  --dest-dir "../../Lamoka1-half fab files" \
+  --name-format "Lamoka1-half interactive BOM" \
+  --include-nets --include-tracks --checkboxes all
 ```
 
 The zone fills stored in the `.kicad_pcb` are part of the plot, not recomputed

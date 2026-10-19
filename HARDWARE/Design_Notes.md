@@ -1,5 +1,12 @@
-## MCU GPIO pin connections
+# Design notes — the Lamoka1/2
 
+These notes are the design intent behind the Lamoka1/2: why each pin goes where
+it goes, what the constraints are, and what we deliberately left out. The
+schematic and the board are the specification; this file explains them. We
+wrote it so a future version of ourselves — or anyone picking the project up
+— can follow the reasoning instead of rediscovering it.
+
+## MCU GPIO pin connections
  GPIO0: Connected high to 3v3 by a 10k resistor, then goes to a B3F-4055 button made by Aratas that, when pressed, pulls the pin low to ground 
 
  GPIO1: Controls Q3 MOSFET (CSD19536KCS made by TI) through UCC27735DR IC made by TI

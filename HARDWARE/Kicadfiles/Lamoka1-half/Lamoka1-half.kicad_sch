@@ -6022,7 +6022,7 @@
 				)
 			)
 		)
-		(property "MPN" "2606-1352"
+		(property "Description" ""
 			(at 151.13 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -6033,7 +6033,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "MPN" "2606-1352"
 			(at 151.13 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -6155,7 +6155,7 @@
 				)
 			)
 		)
-		(property "MPN" "2604-1103"
+		(property "Description" ""
 			(at 260.35 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -6166,7 +6166,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "MPN" "2604-1103"
 			(at 260.35 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -6294,7 +6294,7 @@
 				)
 			)
 		)
-		(property "MPN" "2606-1108/010-000"
+		(property "Description" ""
 			(at 227.33 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -6305,7 +6305,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "MPN" "2606-1108/010-000"
 			(at 227.33 35.56 0)
 			(hide yes)
 			(show_name no)

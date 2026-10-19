@@ -9,20 +9,20 @@
 # resolves an unknown override to NO language at all (see
 # linguist/lib/linguist/lazy_blob.rb: `Language.find_by_alias` returns nil),
 # so every design file fell out of the language stats. The only countable
-# source left was the 9 Arduino sketches under
+# source left was the nine Arduino sketches then under
 # SOFTWARE/Portal Interface Engine/ (*.ino -> C++, ~300 KB), hence the bar
-# read 100% C++. `linguist-language` can only name an already-existing
+# read 100% C++. PIE is now two heads totalling ~100 KB. `linguist-language` can only name an already-existing
 # language, so a merged "KiCad" entry is impossible - and `linguist-color`
 # is not a real attribute (ignored).
 #
 # Fix: mark the two real KiCad languages detectable instead. Data/prose
 # languages are excluded from the bar by default; `linguist-detectable` opts
 # them back in (linguist docs/overrides.md). Expected bar from tracked bytes
-# (~3.9 MB Layout, ~1.3 MB Schematic, ~0.3 MB C++): ~70% KiCad Layout,
-# ~23% KiCad Schematic, ~6% C++ - one same-coloured KiCad block plus the
-# firmware slice. The Layout/Schematic split is byte-true: the finished
-# 2.4 MB control-board .kicad_pcb dominates because KiCad inlines every
-# track segment and filled-zone polygon.
+# (~3.9 MB Layout, ~1.3 MB Schematic, ~0.1 MB C++ after PIE was consolidated
+# to the V1.8/V1.9 heads): ~73% KiCad Layout, ~25% KiCad Schematic, ~2% C++ -
+# one same-coloured KiCad block plus the firmware slice. The Layout/Schematic
+# split is byte-true: the finished 2.4 MB control-board .kicad_pcb dominates
+# because KiCad inlines every track segment and filled-zone polygon.
 #
 # NOTE: GitHub only honours .gitattributes once it is committed and pushed;
 # the language bar recomputes on push (can take a few minutes).
@@ -61,6 +61,7 @@ sym-lib-table linguist-detectable=true
 
 # InteractiveHtmlBom plugin output
 **/BOM/*.html linguist-generated=true
+**/*interactive BOM.html linguist-generated=true
 
 # kicad-cli sch erc / pcb drc output
 Lamoka1-half-erc.json linguist-generated=true

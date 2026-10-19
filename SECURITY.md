@@ -4,8 +4,8 @@
 
 | Component | Supported |
 | --- | --- |
-| PIE firmware (V1.8 for the DEV-Brain, V1.9 for the main board) | Yes |
-| PIE V1.0–V1.7 | Kept for reference and compatibility; not maintained |
+| PIE firmware (V1.8 for the DEV-Brain, V1.9 for the Lamoka1/2) | Yes |
+| PIE V1.0–V1.7 | Removed from the current tree; retained in git history; not maintained |
 | Lamoka1/2 main board (current `Lamoka1` branch revision) | Yes |
 | Lamoka1-DEV-Brain (current `Lamoka1` branch revision) | Yes |
 

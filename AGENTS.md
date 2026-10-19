@@ -27,13 +27,20 @@ Two boards exist:
 The DEV-Brain exists to develop control-side firmware before the power stage is
 brought up. Treat it as the reference for anything the firmware touches.
 
-**Naming.** The main board is the Lamoka1/2 in prose, and the project as a whole
-is the Lamoka1. A slash cannot appear in a path, so every file, directory and
-library nickname writes it `Lamoka1-half` — `HARDWARE/Kicadfiles/Lamoka1-half/`,
-`Lamoka1-half.kicad_sch`, `Lamoka1-half.pretty`, and footprint references such as
-`Lamoka1-half:PWP0020A_N`. The same convention is behind
-`HARDWARE/Mechanical/Lamoka1-half.step`. Prose documents keep the slash; the
-branch, the repository name and the DEV-Brain keep theirs.
+**Naming.** **Lamoka1/2** is a model designation, not a shorthand for "the main
+board" or a prose convenience: it names the inverter-only model in the Lamoka1
+project, the one committed to the Owego Rotary craft fair. Write it with the
+slash, capitalised exactly that way, wherever the model is named — titles,
+tables, silkscreen, filenames' surrounding text, and prose. The project as a
+whole is the Lamoka1, and the control-board model is the Lamoka1-DEV-Brain.
+
+A slash cannot appear in a filesystem path, so files, directories and library
+nicknames use the filesystem alias `Lamoka1-half` —
+`HARDWARE/Kicadfiles/Lamoka1-half/`, `Lamoka1-half.kicad_sch`,
+`Lamoka1-half.pretty`, `Lamoka1-half:PWP0020A_N`, and
+`HARDWARE/Mechanical/Lamoka1-half.step`. That alias is only a path-safe spelling
+of the model name; it does not replace the name in documentation. The branch,
+the repository name and the DEV-Brain keep their own names.
 
 ## Repository map
 
@@ -42,6 +49,7 @@ HARDWARE/
   COMPONENTS.md            plain-English MPN list (reference only, NOT the BOM)
   Design_Notes.md          design rationale
   Transformer-wiring.md    J1 lead-to-terminal spec (read before wiring)
+  revB-changes.md          Rev B hardware change set (specified, NOT applied)
   Kicadfiles/Lamoka1-half/ main board — KiCad 10 project
     Lamoka1-half.kicad_sch   root sheet (hierarchical)
     Control-section.kicad_sch
@@ -69,17 +77,19 @@ either — see "Repository practice" below.
 ## Firmware
 
 The Portal Interface Engine (PIE) lives in `SOFTWARE/Portal Interface Engine/`
-as ten Arduino sketches, `V1.ino` through `V1.9.ino`.
+as two Arduino sketches, `V1.8.ino` (the DEV-Brain head) and `V1.9.ino` (the
+Lamoka1/2 main-board head). Revisions `V1.0` through `V1.7` are no longer in the
+tree; git history preserves them if an old behaviour has to be consulted.
 
-**`V1.0` through `V1.8` are user-interface firmware only.** They drive an
-addressable WS2812B LED array (`NUM_LEDS = 10`) and the single button through a
-UI state machine (status ball, fireplace, lightsaber, rainbow, a "Fireball"
-game, settings, sleep, USB BOOTSEL). Those nine sketches
-contain no power-conversion code: no references to PWM, dead-time, gate drivers,
-the LM5122 boost converter, the H-bridge, the ADS7128 monitor, the INA240
-current sense, the TMP235 temperature sensors, or I²C. The tenth, `V1.9.ino`,
-is the first main-board firmware and the first to touch the power stage; it has
-never run on hardware, and the power stage has never been energized.
+**`V1.8.ino` is user-interface firmware only.** It drives an addressable
+WS2812B LED array (`NUM_LEDS = 10`) and the single button through a UI state
+machine (status ball, fireplace, lightsaber, rainbow, a "Fireball" game,
+settings, sleep, USB BOOTSEL). It contains no power-conversion code: no
+references to PWM, dead-time, gate drivers, the LM5122 boost converter, the
+H-bridge, the ADS7128 monitor, the INA240 current sense, the TMP235 temperature
+sensors, or I²C. `V1.9.ino` is the first main-board firmware and the first to
+touch the power stage; it has never run on hardware, and the power stage has
+never been energized.
 
 Target: RP2354A (Raspberry Pi), built with the arduino-pico core, using
 `FastLED` for LED output and `pico/bootrom.h` for `reset_usb_boot()`. This is
@@ -89,21 +99,24 @@ either; RP2354A hardware PWM uses the SDK's `pwm_*` API.
 
 ### Versioning convention
 
-Each PIE revision is a **new file**, not an in-place edit. `V1.8.ino` is the
-current DEV-Brain head. `V1.9.ino` is the first revision that runs on the
-main Lamoka1/2 board (five LEDs, TMP235 on GPIO 26/27, RP2350 TRNG entropy,
-plus the H-bridge power stage). It does not run on the DEV-Brain unmodified, and
-V1.8 does not run on the main board unmodified. Every revision from `V1.ino`
-through `V1.8.ino` is DEV-Brain firmware.
+PIE has two heads, and both are **edited in place**: `V1.8.ino` for the
+Lamoka1-DEV-Brain and `V1.9.ino` for the Lamoka1/2. Git history is the record of
+what changed; do not create a new `V1.x` file for every edit. `V1.9.ino` is the
+first revision that runs on the main Lamoka1/2 board (five LEDs, TMP235 on
+GPIO 26/27, RP2350 TRNG entropy, plus the H-bridge power stage). It does not run
+on the DEV-Brain unmodified, and V1.8 does not run on the Lamoka1/2 unmodified.
 
-- Start new work by copying the head you are targeting (V1.8 for the DEV-Brain,
-  V1.9 for the main board) to the next version number.
-- Do not edit `V1.0`–`V1.7`; they are history and compatibility references.
-- Do not "tidy up" an older sketch to match a newer one. The differences between
-  versions are the record of what changed.
-- A revision that has **never run on hardware** may still be corrected in place
-  (V1.9's ADS7128 driver was, on 2026-10-18); git history preserves the original.
-  Once a revision has run on hardware, copy to the next version number instead.
+- Make changes directly in the head that owns the behaviour: V1.8 for the
+  DEV-Brain interface, V1.9 for the Lamoka1/2.
+- Keep each commit to one coherent change. The commit message and diff are the
+  revision record.
+- Do not revive an old `V1.0`–`V1.7` sketch from history into the working tree;
+  read it in git if you need to compare behaviour.
+- A change that alters behaviour must also update the matching
+  `PIE-v1.x-information.md` in the same change, and `SOFTWARE/README.md` if
+  board compatibility changes.
+- If a future board needs a genuinely divergent firmware, start a new head
+  rather than forking the two existing ones into a third copy.
 
 ### Firmware ↔ documentation contract
 
@@ -392,21 +405,85 @@ behaviour. None has been applied.
 - **`C13` is a 10 µF 0402 ceramic on the AMS1117-3.3 output.** The AMS1117
   datasheet asks for 22 µF and names tantalum: the ESR is part of the part's
   frequency compensation, and near-zero-ESR MLCC is the risky condition.
-- **The gate drivers have no local supply bypass.** `U5`/`U6` pin 7 (VDD) sits on
-  the 17 V rail with the nearest bulk capacitor centimetres away; the datasheet
-  asks for about 1 µF at the pin (CVDD ≥ 10 × CBOOT).
-- **No fuse anywhere.** Neither the 11–14 V input nor the 120 V output is fused;
-  the only series element on `+BATT` is a 2 mΩ measurement shunt.
+- **The gate drivers have no local supply bypass.** `U5`/`U6` pin 7 (VDD) and
+  pin 4 (EN) sit on `CSP`, the 11–14 V battery rail — **not** the 17 V bus —
+  and the bootstrap diodes `D11`/`D12` are fed from `CSP` as well (checked
+  against the netlist: `CSP` carries `U5`/`U6` pins 4 and 7 and the `D11`/`D12`
+  anodes). The nearest bulk capacitor is centimetres away; the datasheet asks
+  for about 10 µF at the pin (`CVDD ≥ 10 × CBOOT` with the 1 µF bootstrap
+  capacitors), or reduce `CBOOT` to 100 nF and fit 1 µF. Rev B adds the local
+  bypass (`HARDWARE/revB-changes.md`); the board is unchanged.
+- **No fuse anywhere.** Neither the 11–14 V input nor the high-voltage output is
+  fused; the only series element on `+BATT` is a 2 mΩ measurement shunt. Rev B
+  adds an input fuse and an output fuse in the harness, off-board
+  (`HARDWARE/revB-changes.md`); nothing is fused on the board itself.
+- **No output filter.** The bridge drives the transformer primary directly: the
+  `/BLUE` and `/BROWN` midpoints run from `Q3`/`Q4`/`Q5`/`Q6` to `J1` with no
+  series inductance, no shunt capacitance and no snubber, so the 12 V winding
+  sees the raw 20 kHz square wave and the harmonics go straight to the
+  outlet. Rev B specifies an off-board output filter
+  (`HARDWARE/revB-changes.md`).
+- **The outlet's earth is the board ground.** `J5` poles 3–4 — the earth pole
+  of the outlet — are tied to the board's `GND`, the return of the 12 V drive
+  winding and of the boost converter, so the mains outlet's protective earth
+  and the inverter's low-voltage ground are the same node and the 115 V
+  secondary has no earth of its own. `HARDWARE/Transformer-wiring.md` records
+  the same tie. Rev B specifies the Class I/II decision; for Class I, cut the
+  J5 3/4-to-GND tie and bond J5 3/4 to a PE stud in the harness
+  (`HARDWARE/revB-changes.md`); the board is unchanged.
 
-**Firmware status (V1.9, 2026-10-18).** The first main-board firmware now exists
+**Firmware status (V1.9, 2026-10-19).** The first main-board firmware exists
 (`SOFTWARE/Portal Interface Engine/V1.9.ino`): five-LED UI ported from V1.8, RP2350
 TRNG entropy, TMP235 reads on GPIO 26/27, explicit arming, PWM dead-time scheme
-verified by host-side simulation (500 ns on both edges, both legs, full modulation
-range), soft-start ramp, closed-loop regulation, and supervisory protection. It
-compiles clean (84,964 B program, 15,884 B globals). The power stage is still
-**never energised**; bench verification (scope dead-time check, ADC/current/
+verified by host-side simulation in `tests/test_v19_pwm.py` (500 ns on both
+edges, both legs, full modulation range), soft-start ramp, closed-loop
+regulation, and supervisory protection. It compiles clean (84,372 B program,
+16,204 B globals, on
+`rp2040:rp2040:generic_rp2350`). The power stage is still **never
+energised**; bench verification (scope dead-time check, ADC/current/
 temperature validation, staged energisation) is outstanding. The audit's minimum
-change set (C13, U5/U6 bypass, Rsense1, fusing) is still not applied.
+change set (C13, U5/U6 bypass, Rsense1, fusing) is still not applied to the
+board.
+
+The 2026-10-19 pass applied these firmware fixes. `V1.9` has still never run
+on hardware:
+
+- The output target is **105 V RMS**, not 115 V: 115 V needs m ≈ 1.10 at full
+  load on the 17 V bus with this transformer, while `PWM_M_MAX` is 0.9597, so
+  105 V is the highest target that regulates at both ends of the band. This
+  regulates the **inferred** output (drive winding × 115/12); the transformer's
+  9 % regulation means the actual outlet is about 105 V at no load and about
+  96 V at 100 W. Holding 105 V at full load needs the Rev C 19.4 V bus or an
+  output-sense correction.
+- The bridge-output-missing check is proportional to the commanded modulation
+  (60 % of expected, 5 consecutive ticks) instead of a fixed fraction of the
+  target.
+- `G_VERY_LONG` disarms the bridge before its 120 ms blocking delay.
+- The I²C `Wire` timeout is capped at 2 ms, so a stuck bus cannot freeze the
+  bridge long enough to saturate the transformer.
+- ADS7128 failures clear `adsPresent`/`adsSwept`/`adsPhase`, and
+  `powerClearFault` forces a fresh probe and a full five-channel sweep.
+- `G_DOUBLE` and the hold gesture clear a latched fault in the Inverter
+  portal.
+- The hardware watchdog is 500 ms and is fed during the boot sweep as well as
+  from the main loop, so the boot sequence can no longer trip it.
+- The DC-offset trip is 1 V over 3 ticks, replacing the 2 V threshold.
+- The 60 Hz sine is written once per 20 kHz carrier from the slice-0 wrap ISR
+  out of a 64-point table with interpolation, and the amplitude slew is limited
+  to 0.010 per tick.
+- The `AIN1` bus windows are ±0.4 V, below the 17.56 V clip of the present
+  43.2 k / 10 k divider, so a clipped reading cannot pass as a valid bus
+  voltage.
+
+The dead-time and PWM behaviour is checked by host-side simulation in
+`tests/test_v19_pwm.py`; `tests/test_v19_model.py` is the new model-level
+test. The older `tests/test_repo.py` only greps the sketch's source text — it
+is a consistency check, not a behaviour check.
+
+Nothing on the board has changed. Still open, and specified but **not
+applied**: `C13`, the `U5`/`U6` local bypass, `Rsense1`, fusing, the output
+filter, the `J5` earth, the TMP235 relocation and the `AIN1` 68 k divider
+(see `HARDWARE/revB-changes.md`).
 
 The V1.9 ADS7128 driver was corrected on 2026-10-18 to use the opcode framing
 the part requires (write 0x08 / read 0x10 / set-bits 0x18 / block-read 0x30):
@@ -417,7 +494,11 @@ NACKed or returned garbage. The corrected driver is still **unverified against
 silicon** — a register-level bench check is the first monitor item at bring-up.
 
 - **Dead time is entirely firmware's job.** The UCC27735 has interlock but no
-  built-in dead time (datasheet §6.3.1); no hardware prevents overlap.
+  built-in dead time (datasheet §6.3.1); no hardware prevents overlap. V1.9
+  writes the sine once per 20 kHz carrier from the slice-0 wrap ISR, so
+  main-loop jitter cannot make the two phase-offset slices latch different duty
+  values and breach the 500 ns gap — the interlock remains the last line of
+  defence, not a substitute for the firmware dead time.
 - **The bridge must stay gated off until the boost has finished start-up.**
   `Css1` (33 nF) is far below LM5122 Eq. 12 for a pre-loaded 587 µF bus; the
   design relies on the load being absent during soft start.
@@ -426,10 +507,18 @@ silicon** — a register-level bench check is the first monitor item at bring-up
 - **The AC output is not measured directly.** The monitor chain is the battery
   rail (`AIN0`), the 17 V rail (`AIN1`), the two bridge midpoints
   (`AIN2`/`AIN3`), load current (`AIN4`, INA240) and two TMP235s. Firmware infers
-  the output from the drive winding and the 115:12 ratio.
+  the output from the drive winding and the 115:12 ratio. V1.9's
+  "bridge output missing" check compares the midpoint differential against the
+  commanded modulation, so it watches the **bridge**, not the outlet: an open
+  transformer secondary, a missing output filter or a disconnected load is
+  invisible to it.
 - **No USB ESD protection** on `USB-5v`, D+/D− or CC.
 - **`AIN1` headroom.** The 17 V divider (`R27` 43.2 k / `R28` 10 k) puts 3.195 V
-  on a 3.3 V input and clips at 17.7 V; a 68 k top resistor would restore margin.
+  on a 3.3 V input and clips at 17.56 V; a 68 k top resistor would restore
+  margin. Rev B changes `R27` to 68 k and `DIV_AIN1` to 10/78
+  (`HARDWARE/revB-changes.md`). Until both change together the firmware keeps
+  its bus windows at ±0.4 V, so a clipped reading cannot pass as a valid bus
+  voltage.
 - **The isolation barrier has no slack.** The closest approach is 1.5005 mm
   against the 1.5 mm rule (IPC-2221B asks 1.25 mm at 151–300 V); any future
   copper edit near `/BLACK`/`/RED` needs the barrier scan re-run.
@@ -469,6 +558,31 @@ silicon** — a register-level bench check is the first monitor item at bring-up
 The stale board `Value` fields the same reviews flagged (`D6`, `D11`, `D12`,
 `CR1`, `CR2`) were synced to the schematic on 2026-10-18 and no longer apply.
 
+#### Rev B hardware change set (specified, not applied)
+
+`HARDWARE/revB-changes.md` is the written change set for the next board
+revision. It covers the off-board output filter, the input and output fuses,
+reverse-polarity protection on the battery input, the `AIN1` divider change
+(`R27` 43.2 k → 68 k), the local `U5`/`U6` VDD bypass, the `C13` change to a
+22 µF part with the ESR the AMS1117 needs, the `Rsense1` value, the `J5`
+earth bond, and the TMP235 placement. **None of it is applied.** The board in
+`HARDWARE/Kicadfiles/Lamoka1-half/` is still the 2026-10-18 revision, and the
+fuses, the output filter and the earth bond are harness or off-board items
+rather than copper, so the open findings above stand as written.
+
+**115 V is Rev C, not Rev B.** Reaching 115 V needs the bus at 19.4 V. The
+TPS62160 3.3 V buck runs from `CSP` (11–14 V), not the 17 V bus (U7 pins 2/3
+in the netlist), so the bus raise does not reach it in the present
+architecture; a Rev C that keeps that architecture does not need a new buck.
+Rev C does need a 30 V `Q1` (today a 25 V part on the switching node),
+`Rfbt1` at 57.6 k with `Rfbb1` unchanged at 3.79 k (the LM5122's 1.2 V
+reference sets the bus: 1.2 × (1 + Rfbt/Rfbb) = 19.44 V), and a 150 VA
+transformer or a documented 100 W derating: 115 V/100 W draws about 112 VA
+and raises the 12 V winding to 13.2 V RMS (9.75 % over 12 V, flux ≈ 1.65 T).
+It also needs the `AIN1` 68 k divider (or the bus clips) and a check of the
+19.4 V bus against the 25 V output capacitors. Rev B keeps the 17 V bus,
+which is why V1.9's target is 105 V RMS.
+
 ## Documentation
 
 The prose documentation lags the design in places. `HARDWARE/COMPONENTS.md`
@@ -495,4 +609,4 @@ intent, not as a description of working behaviour.
   explaining a past mistake with `linguist-language=KiCad`. The language bar
   depends on it being committed and pushed. Read the comments before changing it.
 - Write Arduino sketches in the existing style: C++ with `#define` pin
-  constants, one file per revision.
+  constants, one file per firmware head (V1.8 or V1.9), edited in place.

@@ -87,6 +87,7 @@ class DocumentationTests(unittest.TestCase):
         "HARDWARE/Mechanical/Lamoka1-half.step",
         "HARDWARE/Mechanical/Lamoka1-DEV-Brain.step",
         "HARDWARE/Mechanical/README.md",
+        "HARDWARE/Lamoka1-half fab files/Lamoka1-half interactive BOM.html",
         "SOFTWARE/Portal Interface Engine/PIE-v1.8-information.md",
         "SOFTWARE/Portal Interface Engine/PIE-v1.9-information.md",
     ]
@@ -200,6 +201,22 @@ class HardwareReportTests(unittest.TestCase):
         self.assertIsNotNone(match, "DRC report has no unconnected-pads summary; regenerate it")
         self.assertEqual(0, int(match.group(1)), "the PCB has unconnected pads")
 
+    def test_interactive_bom_is_present_and_self_contained(self):
+        path = repo_path("HARDWARE", "Lamoka1-half fab files", "Lamoka1-half interactive BOM.html")
+        text = read_text(path)
+        self.assertGreater(os.path.getsize(path), 100_000, "interactive BOM looks truncated")
+        self.assertIn("Interactive BOM", text)
+        self.assertNotIn("<script src=", text, "interactive BOM must not need external scripts")
+
+    def test_board_has_green_mask_and_the_lm5122_model(self):
+        # The renders take the stackup colour, and U4 must carry the PWP0020A
+        # body so the LM5122 is visible in the bottom view and the STEP export.
+        text = read_text(
+            repo_path("HARDWARE", "Kicadfiles", "Lamoka1-half", "Lamoka1-half.kicad_pcb")
+        )
+        self.assertEqual(2, text.count('(color "Green")'), "both solder masks should be green")
+        self.assertIn("Package_SO.3dshapes/Texas_PWP0020A.step", text)
+
     def test_step_models_are_present(self):
         for name in (
             "Lamoka1-half.step",
@@ -211,13 +228,15 @@ class HardwareReportTests(unittest.TestCase):
 
 
 class FirmwareTests(unittest.TestCase):
-    """The firmware revisions and the documented pin contract are intact."""
+    """The two firmware heads and the documented pin contracts are intact."""
 
-    def test_all_pie_revisions_present(self):
-        names = ["V1.ino"] + [f"V1.{n}.ino" for n in range(1, 10)]
-        for name in names:
-            with self.subTest(sketch=name):
-                self.assertTrue(os.path.isfile(os.path.join(PIE_DIR, name)), f"{name} is missing")
+    def test_only_the_two_pie_heads_are_present(self):
+        # PIE is maintained as two heads, V1.8 (DEV-Brain) and V1.9 (Lamoka1/2),
+        # edited in place. Older revisions live in git history, not the tree.
+        sketches = sorted(
+            name for name in os.listdir(PIE_DIR) if re.fullmatch(r"V\d+(?:\.\d+)?\.ino", name)
+        )
+        self.assertEqual(["V1.8.ino", "V1.9.ino"], sketches)
 
     def test_pin_contract_of_dev_brain_head(self):
         # Keep in sync with PIE-v1.8-information.md and AGENTS.md: GPIO 11 is

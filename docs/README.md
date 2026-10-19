@@ -1,9 +1,10 @@
 # Documentation index
 
-This folder is the entry point to the Lamoka1 documentation. The authoritative
-sources live next to the design files and firmware they describe; this page
-links to them.
-
+This folder is the door into the Lamoka1 documentation. The authoritative
+sources live next to the design files and firmware they describe — the KiCad
+schematics, the firmware, and the reports are the specification — and this page
+links to them. Nothing about how the Lamoka works is hidden; you just have to
+know where to look.
 ## Getting started
 
 - [Quick start](../README.md#quick-start) — clone the repository, open the
@@ -37,8 +38,12 @@ links to them.
   control board.
 - 3D models: [`HARDWARE/Mechanical/`](../HARDWARE/Mechanical) — STEP exports of
   both boards (main board and DEV-Brain) with component bodies.
-- Board pictures: [`Images/`](../Images) — ray-traced views of both boards and
-  the Lamoka1/2 routing plot; `make images` regenerates them from the layouts.
+- Board pictures: [`Images/`](../Images) — ray-traced views of both boards
+  (the Lamoka1/2 in its ordered green mask) and the Lamoka1/2 routing plot;
+  `make images` regenerates them from the layouts.
+- Assembly: [`HARDWARE/Lamoka1-half fab files/`](../HARDWARE/Lamoka1-half%20fab%20files)
+  — fabrication package, BOM, pick-and-place and the
+  [interactive BOM](../HARDWARE/Lamoka1-half%20fab%20files/Lamoka1-half%20interactive%20BOM.html).
 
 ## Security and safety
 

@@ -4,6 +4,7 @@
 #include "pico/bootrom.h"
 #include "pico/rand.h"
 #include "hardware/pwm.h"
+#include "hardware/irq.h"
 #include "hardware/adc.h"
 #include "hardware/watchdog.h"
 
@@ -969,6 +970,7 @@ void handleUI(Gesture g) {
 
   // Very-long → force idle
   if (g == G_VERY_LONG) {
+    powerSetArmed(false);   // stop the bridge before any blocking delay
     fill_solid(leds, NUM_LEDS, COLOR_HOT_PINK);
     FastLED.show();
     delay(120);
@@ -1235,6 +1237,7 @@ void handleUI(Gesture g) {
     }
     if (g == G_HOLD) {
       if (powerFaulted()) {
+        powerClearFault();
         touchMenu();
         return;
       }
@@ -1291,8 +1294,11 @@ void renderUI() {
  *  ---------------------------------------------------------------
  *  Battery 11–14 V → Rsense1 → LM5122 boost → 17 V bus → UCC27735
  *  gate drivers → Q3/Q4/Q5/Q6 H-bridge → 12 V transformer winding →
- *  115 V outlet.  The MCU only generates PWM; the LM5122 runs in
- *  hardware.
+ *  105 V inferred outlet (about 96 V at 100 W).  U5/U6 VDD and the bootstrap
+ *  diodes run from CSP (the 11–14 V battery rail), not the 17 V bus.  The MCU
+ *  only generates PWM; the LM5122 runs in hardware.  115 V is not reachable
+ *  on a 17 V bus with this transformer; it needs the Rev C changes in
+ *  HARDWARE/revB-changes.md.
  *
  *  Safety rules
  *  ------------
@@ -1303,13 +1309,17 @@ void renderUI() {
  *    proof the hardware is safe to switch.
  *  - The bridge is never enabled before AIN1 confirms the 17 V bus.
  *  - Dead time is ≥ 500 ns on both edges by construction (phase-offset
- *    slices plus delayed inverted-channel compare).
+ *    slices plus delayed inverted-channel compare).  The sine is written
+ *    from the 20 kHz carrier-wrap ISR, once per period, so loop jitter
+ *    cannot make the two slices latch different duty values.
  *  - Any fault latches POWER_FAULT and parks the gates low.  Non-critical
- *    faults can be cleared from the Inverter portal (double tap); over-current
- *    and over-temperature require an MCU reset.  Clearing disarms the bridge.
+ *    faults can be cleared from the Inverter portal (double tap or hold);
+ *    over-current and over-temperature require an MCU reset.  Clearing
+ *    disarms the bridge.
  *  - Sleep mode and BOOTSEL entry disarm the bridge before acting.
- *  - A hardware watchdog (≈ 200 ms) is fed from the main loop.  If the
- *    MCU resets, the UCC27735 input pull-downs bring the gates low.
+ *  - A hardware watchdog (500 ms) is fed from the main loop and during the
+ *    boot sweep.  If the MCU resets, the UCC27735 input pull-downs bring
+ *    the gates low.
  *
  *  PWM dead-time scheme (from brief, kept in comments)
  *  ---------------------------------------------------
@@ -1366,23 +1376,38 @@ void renderUI() {
 #define ADS7128_OP_BLK_READ    0x30   // read a continuous register block
 
 // Divider ratios (bottom / (top + bottom)) from the schematic.
+// AIN1 with R27 = 43.2 kΩ clips at 17.56 V.  Until R27 is changed to 68 kΩ
+// (Rev B), the bus windows below stay under that clip so a clipped reading
+// cannot be mistaken for a valid bus voltage.
 #define DIV_AIN0           (10.0f / (36.5f + 10.0f))   // input rail 11–14 V
-#define DIV_AIN1           (10.0f / (43.2f + 10.0f))   // 17 V bus
+#define DIV_AIN1           (10.0f / (43.2f + 10.0f))   // 17 V bus, 17.56 V FS
 #define DIV_AIN2           (10.0f / (45.3f + 10.0f))   // bridge midpoint A
 #define DIV_AIN3           (10.0f / (45.3f + 10.0f))   // bridge midpoint B
 #define INA240_V_PER_A     0.1f                         // AIN4, 0.1 V/A
 
 // Transformer 115 V winding / 12 V winding.
 #define TRANSFORMER_RATIO  (115.0f / 12.0f)
-#define OUTPUT_TARGET_RMS  115.0f
+
+// 115 V RMS is unreachable on a 17 V bus: m = 115*sqrt(2)/(17*9.583) = 0.998
+// no-load and about 1.10 at full load with the VPT24-4170's 9 % regulation.
+// PWM_M_MAX is 0.9597, so the achievable band is about 101-110.6 V.  105 V is
+// the highest target that keeps regulating at both ends without changing the
+// transformer or raising the bus.  This is the INFERRED output (drive winding
+// * 9.583), not the outlet: the 9 % regulation leaves about 96 V at the outlet
+// at 100 W.  See HARDWARE/revB-changes.md (Rev C for 115 V).
+#define OUTPUT_TARGET_RMS  105.0f
+#define OUTPUT_OV_FACTOR   1.15f    // supervisory only at 17 V
+#define OUT_MISSING_FRACTION 0.60f  // bridge output vs commanded modulation
+#define DC_TRIP_V          1.0f     // primary DC offset; ~90 ms to saturate
+#define AMP_SLEW_MAX       0.010f   // per 10 ms tick, below dead-time step
 
 // State-machine thresholds.
 #define VIN_LOW            11.0f
 #define VIN_HIGH           14.0f
 #define VIN_HYST           0.2f
 #define VBUS_NOMINAL       17.0f
-#define VBUS_START_WINDOW  0.75f
-#define VBUS_RUN_WINDOW    1.5f
+#define VBUS_START_WINDOW  0.40f
+#define VBUS_RUN_WINDOW    0.40f
 #define IIN_WARN           15.0f
 #define IIN_TRIP           20.0f
 #define TEMP_WARN_C        60.0f
@@ -1423,13 +1448,24 @@ static float iIn     = 0.0f;
 static float tempCtrl = 0.0f;
 static float tempInv  = 0.0f;
 
-static float modulation = 0.0f;    // instantaneous m(t)
+static float modulation = 0.0f;    // amplitude (mRamp or mTarget)
 static float mTarget    = 0.0f;    // amplitude loop output
 static float mRamp      = 0.0f;    // ramped setpoint during start
 static uint32_t rampStartMs = 0;
 static uint32_t lastCtrlMs  = 0;
-static uint32_t sineOriginUs = 0;
-static bool     sinePhaseStarted = false;
+
+// Carrier-synchronous modulation.  The slice-0 wrap ISR advances the 60 Hz
+// phase and writes all four compares once per 20 kHz carrier.  Updating from
+// the main loop lets the two phase-offset slices latch different duty values
+// and breach the 500 ns dead time when the loop is slow.
+#define SINE_TABLE_SIZE   64
+#define SINE_PHASE_INC    12884902UL   // 60 Hz / 20 kHz * 2^32
+static volatile uint32_t sinePhase = 0;
+static volatile float    modAmp    = 0.0f;
+static volatile bool     bridgeModulating = false;
+static uint8_t outMissingCount = 0;
+static uint8_t dcFaultCount = 0;
+static uint32_t lastProbeMs = 0;
 
 // RMS / output inference.
 static float  rmsBuf[RMS_RING_SIZE];
@@ -1564,6 +1600,12 @@ static bool adsReadResult(uint8_t ch, uint16_t *code) {
 static bool adsProbe() {
   uint8_t status = 0;
   uint8_t cfg = 0;
+  // A probe is also the recovery path: abandon any half-finished conversion
+  // and force a fresh five-channel sweep after a bus glitch.
+  adsPhase = ADS_IDLE;
+  adsConvStartUs = 0;
+  adsChannel = 0;
+  adsSwept = false;
   if (!adsReadReg(ADS7128_SYSTEM_STATUS, &status)) return false;
   // Force DATA_CFG to not append status bits, so reads are pure 16-bit codes.
   if (!adsWriteReg(ADS7128_DATA_CFG, 0x00)) return false;
@@ -1578,11 +1620,12 @@ static float adsCodeToVolts(uint16_t code) {
   return (float)code * 3.3f / 4096.0f;
 }
 
-static void adsStartConversion(uint8_t ch) {
-  adsWriteReg(ADS7128_CHANNEL_SEL, ch & 0x0F);
-  adsSetBits(ADS7128_GENERAL_CFG, 0x08);  // CNVST; STATS_EN is left set
+static bool adsStartConversion(uint8_t ch) {
+  if (!adsWriteReg(ADS7128_CHANNEL_SEL, ch & 0x0F)) return false;
+  if (!adsSetBits(ADS7128_GENERAL_CFG, 0x08)) return false;  // CNVST; STATS_EN stays set
   adsConvStartUs = micros();
   adsPhase = ADS_WAITING;
+  return true;
 }
 
 static void adsService() {
@@ -1592,22 +1635,28 @@ static void adsService() {
     // Poll OSR_DONE (bit 3).  Typical conversion < 2 us; timeout 5 ms.
     uint8_t status = 0;
     if (!adsReadReg(ADS7128_SYSTEM_STATUS, &status)) {
+      adsPresent = false;
+      adsPhase = ADS_IDLE;
+      adsSwept = false;
       if (pArmed) setFault("ADS7128 NACK");
-      else        adsPresent = false;
       return;
     }
     if (status & 0x08) {
       // OSR_DONE is sticky; write 1 to clear it so the next channel's poll
       // sees only the next conversion's completion (datasheet §8.6.1).
       if (!adsSetBits(ADS7128_SYSTEM_STATUS, 0x08)) {
+        adsPresent = false;
+        adsPhase = ADS_IDLE;
+        adsSwept = false;
         if (pArmed) setFault("ADS7128 NACK");
-        else        adsPresent = false;
         return;
       }
       adsPhase = ADS_READING;
     } else if (micros() - adsConvStartUs > 5000) {
+      adsPresent = false;
+      adsPhase = ADS_IDLE;
+      adsSwept = false;
       if (pArmed) setFault("ADS7128 timeout");
-      else        adsPresent = false;
     }
     return;
   }
@@ -1615,8 +1664,10 @@ static void adsService() {
   if (adsPhase == ADS_READING) {
     uint16_t code = 0;
     if (!adsReadResult(adsChannel, &code)) {
+      adsPresent = false;
+      adsPhase = ADS_IDLE;
+      adsSwept = false;
       if (pArmed) setFault("ADS7128 read");
-      else        adsPresent = false;
       return;
     }
     float volts = adsCodeToVolts(code);
@@ -1637,7 +1688,12 @@ static void adsService() {
     // Throttle slightly to keep the loop responsive; each channel is still
     // read many times per mains cycle.
     if (micros() - adsLastConvUs >= 200) {
-      adsStartConversion(adsChannel);
+      if (!adsStartConversion(adsChannel)) {
+        adsPresent = false;
+        adsPhase = ADS_IDLE;
+        adsSwept = false;
+        if (pArmed) setFault("ADS7128 NACK");
+      }
     }
   }
 }
@@ -1692,7 +1748,7 @@ static void updateRmsAndDc() {
   outputRms = primaryRms * TRANSFORMER_RATIO;
 }
 
-static void writeBridgeDuty(float m) {
+static void __not_in_flash_func(writeBridgeDuty)(float m) {
   // m is the modulation index, clamped so duty stays inside dead-time band.
   m = clampf(m, -PWM_M_MAX, PWM_M_MAX);
 
@@ -1716,11 +1772,47 @@ static void writeBridgeDuty(float m) {
   pwm_set_chan_level(PWM_SLICE_B_LO, PWM_CHAN_B_LO, ccBlo);
 }
 
+/* 60 Hz sine, 64 points plus the wrap entry.  The carrier ISR interpolates
+ * between entries, so the per-carrier step follows the 60 Hz derivative
+ * (~0.0189 at m=1) instead of the coarser table step, staying below the
+ * 4*dt/T dead-time band. */
+static const float kSineTable[SINE_TABLE_SIZE + 1] = {
+  +0.000000000f, +0.098017140f, +0.195090322f, +0.290284677f, +0.382683432f, +0.471396737f, +0.555570233f, +0.634393284f,
+  +0.707106781f, +0.773010453f, +0.831469612f, +0.881921264f, +0.923879533f, +0.956940336f, +0.980785280f, +0.995184727f,
+  +1.000000000f, +0.995184727f, +0.980785280f, +0.956940336f, +0.923879533f, +0.881921264f, +0.831469612f, +0.773010453f,
+  +0.707106781f, +0.634393284f, +0.555570233f, +0.471396737f, +0.382683432f, +0.290284677f, +0.195090322f, +0.098017140f,
+  +0.000000000f, -0.098017140f, -0.195090322f, -0.290284677f, -0.382683432f, -0.471396737f, -0.555570233f, -0.634393284f,
+  -0.707106781f, -0.773010453f, -0.831469612f, -0.881921264f, -0.923879533f, -0.956940336f, -0.980785280f, -0.995184727f,
+  -1.000000000f, -0.995184727f, -0.980785280f, -0.956940336f, -0.923879533f, -0.881921264f, -0.831469612f, -0.773010453f,
+  -0.707106781f, -0.634393284f, -0.555570233f, -0.471396737f, -0.382683432f, -0.290284677f, -0.195090322f, -0.098017140f,
+  +0.000000000f,
+};
+
+// Once per 20 kHz carrier, on the slice-0 wrap: advance 60 Hz phase and
+// write all four compares.  Slice 0 wraps last in the three-slice sequence,
+// so this leaves nearly a full carrier before the next slice wrap and all
+// three slices latch the same value at their next wraps.
+static void __not_in_flash_func(onPwmWrap)() {
+  pwm_clear_irq(PWM_SLICE_A_HI);
+  if (!bridgeModulating) return;
+  sinePhase += SINE_PHASE_INC;
+  uint32_t idx = (sinePhase >> 26) & 0x3F;
+  uint32_t frac = (sinePhase >> 18) & 0xFF;
+  float s0 = kSineTable[idx];
+  float s1 = kSineTable[idx + 1];
+  float s = s0 + (s1 - s0) * ((float)frac * (1.0f / 256.0f));
+  writeBridgeDuty(modAmp * s);
+}
+
 static void stopBridge() {
+  bridgeModulating = false;
+  modAmp = 0.0f;
   parkGatesLow();
   modulation = 0.0f;
   mTarget = 0.0f;
   mRamp = 0.0f;
+  outMissingCount = 0;
+  dcFaultCount = 0;
 }
 
 static void enablePwmSlices() {
@@ -1759,6 +1851,19 @@ static void enablePwmSlices() {
   gpio_set_function(GATE_A_LO_PIN, GPIO_FUNC_PWM);
   gpio_set_function(GATE_B_HI_PIN, GPIO_FUNC_PWM);
   gpio_set_function(GATE_B_LO_PIN, GPIO_FUNC_PWM);
+
+  // Carrier-synchronous modulation: the slice-0 wrap ISR advances the sine
+  // and writes all four compares once per 20 kHz period.
+  sinePhase = 0;
+  modAmp = 0.0f;
+  static bool pwmIrqReady = false;
+  if (!pwmIrqReady) {
+    irq_set_exclusive_handler(PWM_IRQ_WRAP, onPwmWrap);
+    irq_set_enabled(PWM_IRQ_WRAP, true);
+    pwmIrqReady = true;
+  }
+  pwm_set_irq_enabled(PWM_SLICE_A_HI, true);
+  bridgeModulating = true;
 }
 
 static void startBridge() {
@@ -1770,8 +1875,6 @@ static void startBridge() {
   rampStartMs = millis();
   mRamp = 0.0f;
   mTarget = 0.0f;
-  sineOriginUs = micros();
-  sinePhaseStarted = true;
   pState = POWER_STARTING;
 }
 
@@ -1806,22 +1909,35 @@ static void runControl(uint32_t nowMs) {
     if (pState == POWER_RUNNING || pState == POWER_STARTING) {
       if (!busValidForRun()) { setFault("bus voltage"); return; }
 
-      // Plausibility: output must be roughly proportional to modulation.
+      // Plausibility: the bridge midpoint differential must track the
+      // commanded modulation.  This monitors the BRIDGE, not the outlet: an
+      // open transformer secondary is invisible to these dividers.
       if (rmsValid) {
-        if (outputRms > OUTPUT_TARGET_RMS * 1.25f) {
+        if (outputRms > OUTPUT_TARGET_RMS * OUTPUT_OV_FACTOR) {
           setFault("output overvoltage");
           return;
         }
-        if (mRamp > 0.05f && outputRms < OUTPUT_TARGET_RMS * 0.10f) {
-          setFault("output missing");
-          return;
+        float busForCheck = (vBus > 1.0f) ? vBus : VBUS_NOMINAL;
+        float expected = modulation * busForCheck * TRANSFORMER_RATIO / 1.41421356f;
+        if (expected > 15.0f &&
+            outputRms < OUT_MISSING_FRACTION * expected) {
+          if (++outMissingCount >= 5) {
+            setFault("bridge output missing");
+            return;
+          }
+        } else {
+          outMissingCount = 0;
         }
-        // DC offset on the primary implies a DC component across the transformer.
-        // ASSUMPTION: 2 V DC-offset threshold; verify with scope/data before first
-        // energised test.
-        if (fabsf(primaryDc) > 2.0f) {
-          setFault("DC offset");
-          return;
+        // Primary DC offset: a 1 V offset saturates the transformer in ~90 ms.
+        // Tripping in 30 ms (3 ticks) is conservative and stays clear of the
+        // 90 ms saturation time.
+        if (fabsf(primaryDc) > DC_TRIP_V) {
+          if (++dcFaultCount >= 3) {
+            setFault("DC offset");
+            return;
+          }
+        } else {
+          dcFaultCount = 0;
         }
       }
     }
@@ -1842,7 +1958,10 @@ static void runControl(uint32_t nowMs) {
   // Amplitude regulation once running.
   if (pState == POWER_RUNNING && rmsValid) {
     float error = OUTPUT_TARGET_RMS - outputRms;
-    mTarget += error * AMP_KI;
+    float step = error * AMP_KI;
+    if (step > AMP_SLEW_MAX) step = AMP_SLEW_MAX;
+    if (step < -AMP_SLEW_MAX) step = -AMP_SLEW_MAX;
+    mTarget += step;
     mTarget = clampf(mTarget, 0.0f, PWM_M_MAX);
     mRamp = mTarget;
   }
@@ -1850,22 +1969,7 @@ static void runControl(uint32_t nowMs) {
   modulation = mRamp;
   if (modulation > PWM_M_MAX) modulation = PWM_M_MAX;
   if (modulation < 0.0f) modulation = 0.0f;
-}
-
-static void updateSineModulation(uint32_t nowUs) {
-  if (pState != POWER_STARTING && pState != POWER_RUNNING) return;
-
-  // 60 Hz phase, continuous in time so phase is not disturbed by loop jitter.
-  // ASSUMPTION: float sinf is acceptable here because this runs once per main
-  // loop (kHz-rate), not once per 20 kHz PWM carrier period.
-  if (!sinePhaseStarted) {
-    sineOriginUs = nowUs;
-    sinePhaseStarted = true;
-  }
-  uint32_t dt = nowUs - sineOriginUs;
-  float theta = 2.0f * (float)PI * 60.0f * ((float)dt / 1.0e6f);
-  float m = modulation * sinf(theta);
-  writeBridgeDuty(m);
+  modAmp = modulation;   // read by the 20 kHz wrap ISR
 }
 
 void powerBegin() {
@@ -1879,9 +1983,12 @@ void powerBegin() {
   digitalWrite(GATE_B_HI_PIN, LOW);
   digitalWrite(GATE_B_LO_PIN, LOW);
 
-  // I2C for ADS7128 at 400 kHz, fall back to 100 kHz.
+  // I2C for ADS7128 at 400 kHz, fall back to 100 kHz.  The default Wire
+  // timeout is the inherited Stream 1000 ms; cap it at 2 ms so a stuck bus
+  // cannot freeze the bridge long enough to saturate the transformer.
   Wire.setSDA(8);
   Wire.setSCL(9);
+  Wire.setTimeout(2);
   Wire.begin();
   Wire.setClock(400000);
   adsPresent = adsProbe();
@@ -1899,15 +2006,16 @@ void powerBegin() {
   adc_gpio_init(TEMP_INV);
 
   // Hardware watchdog.  Safe because the UCC27735 inputs have internal
-  // pull-downs that bring the gates low while the MCU is in reset.
-  watchdog_enable(200, true);
+  // pull-downs that bring the gates low while the MCU is in reset.  The
+  // boot sweep and entropy init together are under 200 ms, but 500 ms keeps
+  // margin without weakening runtime hang detection.
+  watchdog_enable(500, true);
 }
 
 void powerService(uint32_t nowMs) {
   watchdog_update();
 
   // Throttled ADS7128 probe retry (only while disarmed / not faulted).
-  static uint32_t lastProbeMs = 0;
   if (!adsPresent && !pFault && (nowMs - lastProbeMs >= 500)) {
     lastProbeMs = nowMs;
     if (Wire.setClock(400000), adsProbe()) {
@@ -1923,7 +2031,6 @@ void powerService(uint32_t nowMs) {
   readTemperatures();
   updateRmsAndDc();
   runControl(nowMs);
-  updateSineModulation(micros());
 
   // sensorsOk = probe succeeded AND at least one full sweep completed.
   sensorsOk = adsPresent && adsSwept;
@@ -2012,6 +2119,13 @@ void powerClearFault() {
   pArmed = false;
   pState = POWER_IDLE;
   memset(pFaultReason, 0, sizeof(pFaultReason));
+  // Force a fresh probe and a full sweep; a bus glitch may have left the
+  // ADS7128 mid-sequence even though the MCU kept running.
+  adsPresent = false;
+  adsSwept = false;
+  adsPhase = ADS_IDLE;
+  adsConvStartUs = 0;
+  lastProbeMs = 0;
   stopBridge();
   if (Serial) Serial.println("Fault cleared (disarmed)");
 }
@@ -2078,8 +2192,10 @@ void setup() {
     leds[i] = CHSV(i * 51, 230, 210);
     FastLED.show();
     delay(18);
+    watchdog_update();
   }
   delay(70);
+  watchdog_update();
   clearLeds();
   FastLED.show();
 
@@ -2111,7 +2227,10 @@ void loop() {
     returnToIdle();
   }
 
-  Gesture g = button.poll(inAnyMenu() || uiState == UI_IN_GAME);
+  // Treat the Inverter portal as a non-menu for gesture synthesis so its
+  // double-tap (fault clear) is produced; other menus keep immediate taps.
+  Gesture g = button.poll((inAnyMenu() && uiState != UI_INVERTER) ||
+                          uiState == UI_IN_GAME);
   if (g != G_NONE) handleUI(g);
 
   if (now - lastFrame >= FRAME_MS) {
@@ -2152,7 +2271,7 @@ void renderInverter() {
 
   if (st == 2) { // POWER_STARTING
     float v = powerBusVolts();
-    float frac = v / 17.0f;
+    float frac = v / VBUS_NOMINAL;
     if (frac < 0.0f) frac = 0.0f;
     if (frac > 1.0f) frac = 1.0f;
     uint8_t lit = (uint8_t)(frac * NUM_LEDS);
@@ -2163,7 +2282,7 @@ void renderInverter() {
   }
 
   if (st == 3) { // POWER_RUNNING
-    float frac = powerOutputVolts() / 115.0f;
+    float frac = powerOutputVolts() / OUTPUT_TARGET_RMS;
     if (frac < 0.0f) frac = 0.0f;
     if (frac > 1.0f) frac = 1.0f;
     uint8_t lit = (uint8_t)(frac * NUM_LEDS);

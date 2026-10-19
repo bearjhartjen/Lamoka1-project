@@ -1,10 +1,17 @@
-## Exact manufacturer part numbers used in the schematic explained in plain English (component alternatives may be used) 
+## Parts on the Lamoka1/2, in plain English
+
+(component alternatives may be used — this is a reference, not a shopping list)
 
 > [!Warning]
 > This is not verified to be the full BOM for the Lamoka1/2. For all components, please refer to the official BOM. This is purely for reference and learning, not to be used as a BOM.
 
 > Reference designators in parentheses match the schematic. Where the schematic carries no manufacturer field, the manufacturer given here is taken from the part number.
 
+We put this list together so anyone can read the schematic without a datasheet
+in hand. It is not the BOM, and it is not the order list — the KiCad BOM and
+`HARDWARE/Lamoka1-half fab files/Lamoka1-half BOM.csv` are. But if you want to
+know what the CSD19536KCS is, or why the boost inductor is a Coilcraft
+XAL1580, this is the place.
  NMOS for H-bridge (Inversion-section): CSD19536KCS made by TI  x4 (Q3, Q4, Q5, Q6)
 
  Transformer (Inversion-section): VPT24-4170 made by Triad Magnetics, 100 VA. Mounted off-board and wired to the PCB at J1; `HARDWARE/Transformer-wiring.md` records which lead goes on which terminal. Its 12 V winding is the one the H-bridge drives and the 115 V winding feeds the outlet, so the lead colours must not be matched to the J1 net names.

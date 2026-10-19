@@ -1,9 +1,9 @@
 # HARDWARE/Mechanical
 
 Mechanical models for the Lamoka1 project. Everything in this folder is an
-export: the KiCad layouts are the sources, and every file here can be
-regenerated from them.
-
+export — the KiCad layouts are the sources, and every file here can be
+regenerated from them. We keep them here so enclosure and fit checks are a
+download away, and so nobody has to guess at the board outline.
 | File | What it is |
 | --- | --- |
 | `Lamoka1-half.step` | Lamoka1/2 main board — outline, holes, and component bodies |
@@ -18,8 +18,9 @@ after any layout change:
 make step        # both boards, via kicad-cli
 ```
 
-Component bodies come from the vendor 3D models that the layouts reference
-under `${KIPRJMOD}/components/3dmodels/`. Those files are not redistributed
+Component bodies come from KiCad's stock 3D libraries and from the vendor
+models that the layouts reference under `${KIPRJMOD}/components/3dmodels/`.
+The vendor files are not redistributed
 (see [License](../../README.md#license)), so a fresh clone exports the bare
 board until you supply your own copies — the export itself always works, only
 the component bodies depend on them.
