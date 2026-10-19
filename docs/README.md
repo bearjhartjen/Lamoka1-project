@@ -7,7 +7,7 @@ links to them.
 ## Getting started
 
 - [Quick start](../README.md#quick-start) — clone the repository, open the
-  KiCad project, and build the current firmware.
+  KiCad project, and build the firmware.
 - [Build and fabrication](../README.md#build-and-fabrication) — toolchain
   installation, ordering the PCB, assembling the board, staged bring-up, and
   flashing the firmware onto the Lamoka1-DEV-Brain.
@@ -19,7 +19,11 @@ links to them.
   boot-sequence behavior.
 - [PIE v1.8 information](../SOFTWARE/Portal%20Interface%20Engine/PIE-v1.8-information.md)
   — button gestures, UI states, brightness and speed tables, and timings of the
-  current firmware.
+  DEV-Brain firmware.
+- [PIE v1.9 information](../SOFTWARE/Portal%20Interface%20Engine/PIE-v1.9-information.md)
+  — the main-board firmware: the five-LED interface plus arming, PWM dead-time,
+  soft start, closed-loop regulation, and supervisory protection. Never run on
+  hardware.
 - [Lamoka1-DEV-Brain guide](../Lamoka1-DEV-Brain/Readme.md) — the control
   board, its test results, and how to order it.
 
@@ -43,8 +47,9 @@ links to them.
 - [Safety notes](../README.md#build-and-fabrication) — the Lamoka1/2 produces
   mains voltage. Never energize a board you built without completing the staged
   bring-up, and never leave a powered unit unattended.
-- The firmware is developed against the Lamoka1-DEV-Brain; the power stage has
-  no control firmware yet, so a freshly built Lamoka1/2 will not produce output
+- The DEV-Brain firmware (PIE V1.8) is bench-tested; the main-board firmware
+  (PIE V1.9) compiles clean but has never run on hardware, and the power stage
+  has never been energized — a freshly built Lamoka1/2 will not produce output
   in its current state.
 
 ## Contributing

@@ -89,5 +89,7 @@ jobs:
           arduino-cli core install rp2040:rp2040@6.1.1
       - name: Install FastLED
         run: arduino-cli lib install FastLED@3.10.5
-      - name: Build the current firmware head
+      - name: Build the DEV-Brain firmware head (V1.8)
         run: make firmware
+      - name: Build the main-board firmware head (V1.9)
+        run: make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.9.ino"

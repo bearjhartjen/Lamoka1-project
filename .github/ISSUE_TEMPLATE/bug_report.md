@@ -21,7 +21,7 @@ assignees: ''
 
 - Board: <!-- Lamoka1/2 main board, Lamoka1-DEV-Brain, or other -->
 - Hardware revision / order date:
-- Firmware version (e.g. PIE V1.8) or "not firmware":
+- Firmware version (e.g. PIE V1.8 on the DEV-Brain, PIE V1.9 on the main board) or "not firmware":
 
 ## Tooling
 

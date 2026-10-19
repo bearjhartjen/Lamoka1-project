@@ -13,8 +13,9 @@ SHELL := /bin/bash
 
 # --- Configuration -----------------------------------------------------------
 
-# Current PIE firmware revision. Point this at another revision when needed:
-#   make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.7.ino"
+# Default PIE firmware revision: the DEV-Brain head (V1.8), the only head that
+# runs on a bench-tested board. Point this at another revision when needed:
+#   make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.9.ino"   # main board
 SKETCH ?= SOFTWARE/Portal Interface Engine/V1.8.ino
 # Shell-expanded so the space in "Portal Interface Engine" survives.
 SKETCH_NAME := $(shell basename "$(SKETCH)" .ino)
@@ -49,12 +50,12 @@ SKETCH_DIR := $(BUILD_DIR)/$(SKETCH_NAME)
 help:
 	@echo "Lamoka1 development tasks"
 	@echo ""
-	@echo "  make firmware   Compile the current PIE sketch (SKETCH=... to pick a revision)"
+	@echo "  make firmware   Compile the default PIE sketch (DEV-Brain head, V1.8; SKETCH=... to pick a revision)"
 	@echo "  make upload     Compile and flash to a connected DEV-Brain (PORT=... to pick a port)"
 	@echo "  make test       Run the repository checks (pytest; 'uv sync' first)"
 	@echo "  make lint       Run ruff check and format check over the Python tooling"
 	@echo "  make check      Run 'test' plus the KiCad ERC and DRC reports"
-	@echo "  make static     Run cppcheck over the current PIE sketch"
+	@echo "  make static     Run cppcheck over the selected PIE sketch"
 	@echo "  make erc        Regenerate the schematic ERC report"
 	@echo "  make drc        Regenerate the PCB DRC report (with schematic parity)"
 	@echo "  make step       Regenerate the board STEP models in HARDWARE/Mechanical/"

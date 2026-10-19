@@ -69,16 +69,17 @@ either — see "Repository practice" below.
 ## Firmware
 
 The Portal Interface Engine (PIE) lives in `SOFTWARE/Portal Interface Engine/`
-as nine Arduino sketches, `V1.ino` through `V1.8.ino`.
+as ten Arduino sketches, `V1.ino` through `V1.9.ino`.
 
-**The firmware is user-interface firmware only.** It drives an addressable
-WS2812B LED array (`NUM_LEDS = 10`) and the single button through a UI state
-machine (status ball, fireplace, lightsaber, rainbow, a "Fireball" game,
-settings, sleep, USB BOOTSEL). It
-contains no power-conversion code: across all nine sketches there are no
-references to PWM, dead-time, gate drivers, the LM5122 boost converter, the
-H-bridge, the ADS7128 monitor, the INA240 current sense, the TMP235 temperature
-sensors, or I²C. Power-stage control firmware does not exist yet.
+**`V1.0` through `V1.8` are user-interface firmware only.** They drive an
+addressable WS2812B LED array (`NUM_LEDS = 10`) and the single button through a
+UI state machine (status ball, fireplace, lightsaber, rainbow, a "Fireball"
+game, settings, sleep, USB BOOTSEL). Those nine sketches
+contain no power-conversion code: no references to PWM, dead-time, gate drivers,
+the LM5122 boost converter, the H-bridge, the ADS7128 monitor, the INA240
+current sense, the TMP235 temperature sensors, or I²C. The tenth, `V1.9.ino`,
+is the first main-board firmware and the first to touch the power stage; it has
+never run on hardware, and the power stage has never been energized.
 
 Target: RP2354A (Raspberry Pi), built with the arduino-pico core, using
 `FastLED` for LED output and `pico/bootrom.h` for `reset_usb_boot()`. This is
@@ -95,20 +96,26 @@ plus the H-bridge power stage). It does not run on the DEV-Brain unmodified, and
 V1.8 does not run on the main board unmodified. Every revision from `V1.ino`
 through `V1.8.ino` is DEV-Brain firmware.
 
-- Start new work by copying the current head to the next version number.
+- Start new work by copying the head you are targeting (V1.8 for the DEV-Brain,
+  V1.9 for the main board) to the next version number.
 - Do not edit `V1.0`–`V1.7`; they are history and compatibility references.
 - Do not "tidy up" an older sketch to match a newer one. The differences between
   versions are the record of what changed.
+- A revision that has **never run on hardware** may still be corrected in place
+  (V1.9's ADS7128 driver was, on 2026-10-18); git history preserves the original.
+  Once a revision has run on hardware, copy to the next version number instead.
 
 ### Firmware ↔ documentation contract
 
 `SOFTWARE/Portal Interface Engine/PIE-v1.8-information.md` is a behavioural
 description of `V1.8.ino` written for readers of the firmware. It documents the
 button gestures, the UI states, the brightness and speed tables, the entropy
-service, timings, and the main loop.
+service, timings, and the main loop. `PIE-v1.9-information.md` does the same for
+`V1.9.ino` (main-board pin map, five-LED interface, arming, PWM dead-time,
+soft start, regulation, and protection).
 
-If you change firmware behaviour, update that document in the same change. A
-behaviour change with a stale description is a defect.
+If you change firmware behaviour, update the matching document in the same
+change. A behaviour change with a stale description is a defect.
 
 `SOFTWARE/README.md` records which PIE versions are compatible with which board.
 Correct it if compatibility changes.
@@ -396,10 +403,18 @@ behaviour. None has been applied.
 TRNG entropy, TMP235 reads on GPIO 26/27, explicit arming, PWM dead-time scheme
 verified by host-side simulation (500 ns on both edges, both legs, full modulation
 range), soft-start ramp, closed-loop regulation, and supervisory protection. It
-compiles clean (84.7 kB program, 15.9 kB globals). The power stage is still
+compiles clean (84,964 B program, 15,884 B globals). The power stage is still
 **never energised**; bench verification (scope dead-time check, ADC/current/
 temperature validation, staged energisation) is outstanding. The audit's minimum
 change set (C13, U5/U6 bypass, Rsense1, fusing) is still not applied.
+
+The V1.9 ADS7128 driver was corrected on 2026-10-18 to use the opcode framing
+the part requires (write 0x08 / read 0x10 / set-bits 0x18 / block-read 0x30):
+`STATS_EN` is set and verified before `RECENT_CHx` is trusted, `OSR_DONE` is
+cleared write-1-to-clear after each conversion, and the result is read as a block
+so both bytes belong to one conversion. The original transactions would have
+NACKed or returned garbage. The corrected driver is still **unverified against
+silicon** — a register-level bench check is the first monitor item at bring-up.
 
 - **Dead time is entirely firmware's job.** The UCC27735 has interlock but no
   built-in dead time (datasheet §6.3.1); no hardware prevents overlap.

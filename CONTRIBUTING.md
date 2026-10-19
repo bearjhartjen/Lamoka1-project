@@ -111,9 +111,9 @@ arduino-cli core install rp2040:rp2040 \
   --additional-urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 arduino-cli lib install FastLED
 
-make firmware                     # compile the current revision
+make firmware                     # compile the default sketch (DEV-Brain head, V1.8)
 make upload PORT=/dev/ttyACM0     # compile and flash
-make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.7.ino"   # another revision
+make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.9.ino"   # the main-board head
 ```
 
 Copy [`.env.example`](.env.example) to `.env` to keep local values such as
@@ -192,8 +192,11 @@ them.
   (or the current version's document) in the same change, and correct
   [`SOFTWARE/README.md`](SOFTWARE/README.md) if board compatibility changes.
   A behavior change with stale documentation is a defect.
-- There is no power-stage firmware yet. PIE V1.8 is DEV-Brain firmware (LEDs and
-  button); the main board's power stage has no control code.
+- There are two firmware heads: PIE V1.8 for the DEV-Brain (LEDs and button,
+  bench-tested) and PIE V1.9 for the main board. V1.9 is the first power-stage
+  firmware — arming, PWM dead-time, soft start, closed-loop regulation, and
+  supervisory protection — but it has never run on hardware, and neither has the
+  power stage. Bench verification is outstanding before either is trusted.
 
 ### Python tooling
 
@@ -218,17 +221,18 @@ uv sync        # one-time: create .venv/ from uv.lock
 make test      # repository checks (pytest)
 make lint      # ruff check and format check
 make check     # 'test' plus the KiCad ERC and DRC reports (needs kicad-cli)
-make static    # cppcheck over the current firmware
-make firmware  # compile the current firmware with warnings enabled
+make static    # cppcheck over the selected firmware sketch
+make firmware  # compile the default firmware sketch (V1.8) with warnings enabled
+make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.9.ino"   # the main-board head
 ```
 
 The same checks run in CI on every push and pull request
 ([`.github/workflows/checks.yml`](.github/workflows/checks.yml)), together with
 ruff and cppcheck; a red CI run blocks a merge. The repository checks run on
-Python 3.11 and 3.14, and the firmware build pins the Arduino toolchain
-versions noted at the top of the workflow. `tests/` holds the check suite:
-markdown links, BOM contents, the ERC and DRC reports, the firmware pin
-contract, and a credentials scan.
+Python 3.11 and 3.14, the firmware build compiles both heads and pins the
+Arduino toolchain versions noted at the top of the workflow. `tests/` holds the
+check suite: markdown links, BOM contents, the ERC and DRC reports, the two
+firmware pin contracts, and a credentials scan.
 
 **Policy:** major new functionality must come with tests, or with an update to
 the existing checks, in the same change. A test that only re-states the
@@ -267,10 +271,12 @@ from the manufacturer datasheet and say so in the pull request.
 
 ### Firmware changes
 
-- Build the current revision with `make firmware` (or the Arduino IDE) and keep
-  it free of warnings. CI compiles the head with `--warnings all`
-  (`-Wall -Wextra`); warnings from the third-party FastLED library are upstream
-  and are noted, but warnings from project code should be fixed, not ignored.
+- Build both firmware heads with `make firmware` and
+  `make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.9.ino"` (or the
+  Arduino IDE) and keep them free of warnings. CI compiles V1.8 and V1.9 with
+  `--warnings all` (`-Wall -Wextra`); warnings from the third-party FastLED
+  library are upstream and are noted, but warnings from project code should be
+  fixed, not ignored.
 - Test on real hardware when you can — the DEV-Brain is the reference board,
   and anything that touches the user interface should at least be exercised on
   it (button gestures, menus, brightness/speed, sleep) before you claim it
@@ -281,9 +287,9 @@ from the manufacturer datasheet and say so in the pull request.
 ### Static analysis
 
 `make static` runs [cppcheck](https://cppcheck.sourceforge.io/) (warning,
-performance, and portability checks) over the current firmware, and CI runs the
-same command on every change. Fix findings rather than silencing them. If a
-finding is a confirmed false positive, add a file-scoped suppression in the
+performance, and portability checks) over the selected firmware sketch, and CI
+runs the same command on every change. Fix findings rather than silencing them.
+If a finding is a confirmed false positive, add a file-scoped suppression in the
 `Makefile` with a comment explaining why — the existing
 `uninitMemberVarNoCtor` suppression for `ModeFire::heat[]` is the example: the
 array is `memset()`-cleared by `enter()` before any read, so the finding is a

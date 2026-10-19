@@ -5,7 +5,7 @@ format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 The project versions its artifacts separately: hardware revisions are released
 as GitHub releases (for example `lamoka1_DEV_Brain_v1`), and the Portal Interface
-Engine firmware follows its own revision sequence (`V1.0`–`V1.8`).
+Engine firmware follows its own revision sequence (`V1.0`–`V1.9`).
 
 ## [Unreleased]
 
@@ -51,6 +51,16 @@ Engine firmware follows its own revision sequence (`V1.0`–`V1.8`).
   routing plot of the F.Cu and B.Cu layers, and the two DEV-Brain views (which
   additionally need that board's local 3D models). The pictures could previously
   be reproduced only by hand.
+- `SOFTWARE/Portal Interface Engine/V1.9.ino` and
+  `PIE-v1.9-information.md` — the first main-board (Lamoka1/2) firmware: the
+  five-LED interface ported from V1.8, RP2350 TRNG entropy, TMP235 reads on
+  GPIO 26/27, and the power stage — explicit arming, PWM dead-time, soft start,
+  closed-loop regulation, and supervisory protection. The ADS7128 monitor is
+  driven with opcode-framed transactions, which the part requires (a bare
+  register address is not a valid access). Compiles clean (84,964 B program,
+  15,884 B globals); it has never run on hardware and the bench checks
+  (dead-time scope verification, ADC/current/temperature validation, staged
+  energisation) are outstanding.
 
 ### Changed
 

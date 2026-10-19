@@ -37,7 +37,7 @@ We use a Qualtek FAD1-04010BHLW11 fan powered from the 5V buck rail for cooling.
 
 ## Quick start
 
-The repository is source-first: KiCad 10 projects, Arduino firmware, and design documents. You can open the design with nothing but KiCad installed, and build the current firmware for the Lamoka1-DEV-Brain control board.
+The repository is source-first: KiCad 10 projects, Arduino firmware, and design documents. You can open the design with nothing but KiCad installed, and build the firmware for the Lamoka1-DEV-Brain control board (PIE V1.8, bench-tested) or for the main board (PIE V1.9, which compiles clean but has never run on hardware).
 
 ```bash
 # 1. Clone the repository
@@ -55,14 +55,15 @@ kicad-cli pcb export drill   --output ~/lamoka-fab/ "HARDWARE/Kicadfiles/Lamoka1
 ```
 
 The repository also ships a [`Makefile`](Makefile) that wraps the common tasks
-(`make help` lists them): `make firmware` builds the current PIE sketch for the
-DEV-Brain, `make test` runs the repository checks, `make check` adds the KiCad
+(`make help` lists them): `make firmware` builds the default PIE sketch (the
+DEV-Brain head, V1.8 — pass `SKETCH=` for another revision, such as the main
+board's V1.9), `make test` runs the repository checks, `make check` adds the KiCad
 ERC and DRC reports, `make static` runs cppcheck over the firmware, and
 `make lint` runs ruff over the Python tooling. The checks and the linter use
 the pinned environment in [`pyproject.toml`](pyproject.toml) / `uv.lock`:
 install [uv](https://docs.astral.sh/uv/) and run `uv sync` once.
 
-The Portal Interface Engine (PIE) firmware drives the ten WS2812B LEDs and the single button on the Lamoka1-DEV-Brain. Every revision is a separate sketch file, and V1.8 is the current head:
+The Portal Interface Engine (PIE) is the firmware line. Every revision is a separate sketch file, and there are two current heads: **V1.8** for the Lamoka1-DEV-Brain (ten LEDs and the single button, bench-tested) and **V1.9** for the Lamoka1/2 main board (five LEDs plus the power stage — explicit arming, PWM dead-time, soft start, closed-loop regulation, and supervisory protection). V1.9 compiles clean but has never run on hardware, and the power stage has never been energized:
 
 ```cpp
 // SOFTWARE/Portal Interface Engine/V1.8.ino (excerpt) — targets the Lamoka1-DEV-Brain
@@ -78,7 +79,7 @@ void setup() {
 }
 ```
 
-One button drives the whole interface: tap to move, double-tap to go back, hold to select. The full gesture map is in [PIE-v1.8-information.md](SOFTWARE/Portal%20Interface%20Engine/PIE-v1.8-information.md). Flashing instructions are in [Build and fabrication](#build-and-fabrication).
+One button drives the whole interface: tap to move, double-tap to go back, hold to select. The gesture map and UI behavior are described in [PIE-v1.8-information.md](SOFTWARE/Portal%20Interface%20Engine/PIE-v1.8-information.md) for the DEV-Brain and [PIE-v1.9-information.md](SOFTWARE/Portal%20Interface%20Engine/PIE-v1.9-information.md) for the main board. Flashing instructions are in [Build and fabrication](#build-and-fabrication).
 
 ---
 
@@ -113,7 +114,7 @@ Design documentation lives alongside the sources:
 ## Build and fabrication
 
 > [!WARNING]
-> The Lamoka1/2 produces mains voltage (120V AC, North American outlet). Treat the output as live at all times and never leave a powered unit unattended. The power stage has been laid out but has never been energized, and power-stage control firmware does not exist yet — this revision is a development platform, not a finished product.
+> The Lamoka1/2 produces mains voltage (120V AC, North American outlet). Treat the output as live at all times and never leave a powered unit unattended. The power stage has been laid out but has never been energized, and its control firmware (PIE V1.9) has never run on hardware — this revision is a development platform, not a finished product.
 
 ### 1. Order the PCB
 
@@ -165,11 +166,11 @@ The transformer, DC input, and the AC outlet wire into the Wago connectors on th
 5. **Transformer and output last** — connect the transformer and the outlet only after the low-voltage side checks out, and treat the output as live AC from that point on. The lead-to-terminal map is [`HARDWARE/Transformer-wiring.md`](HARDWARE/Transformer-wiring.md); read it first, because the `J1` net names are lead colours and this transformer's BLUE/BROWN leads are its 115 V winding, so the leads must not be fitted colour-for-colour.
 
 > [!NOTE]
-> Power-stage control firmware has not been written yet: PIE V1.8 is DEV-Brain firmware for the LEDs and button, not inverter control. Don't expect the board to produce output in its current state.
+> PIE V1.9 is the first main-board firmware (arming, PWM dead-time, soft start, closed-loop regulation, supervisory protection) and compiles clean, but it has never run on hardware and the power stage has never been energized. Do not expect the board to produce output until the staged bring-up above and the firmware bench checks are complete.
 
 ### 5. Flash the firmware (Lamoka1-DEV-Brain)
 
-PIE V1.8 runs on the DEV-Brain and is built with the [arduino-pico](https://github.com/earlephilhower/arduino-pico) core (RP2350 support) and the FastLED library.
+PIE V1.8 runs on the DEV-Brain and is built with the [arduino-pico](https://github.com/earlephilhower/arduino-pico) core (RP2350 support) and the FastLED library. (The main board uses PIE V1.9 instead: `make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.9.ino"`. It has never been flashed to hardware, so treat the first flash as part of the staged bring-up.)
 
 With the Arduino IDE:
 
@@ -186,7 +187,8 @@ arduino-cli core install rp2040:rp2040 \
   --additional-urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 arduino-cli lib install FastLED
 
-make firmware                    # compile the current revision
+make firmware                    # compile the default revision (DEV-Brain head, V1.8)
+make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.9.ino"   # compile the main-board head
 make upload PORT=/dev/ttyACM0    # compile and flash
 ```
 
@@ -219,7 +221,7 @@ Component bodies come from the vendor 3D models that the layouts reference; thos
 
 ## Firmware
 
-The Portal Interface Engine (PIE) is Lamoka's operating-system firmware. It is a one-button LED interface (status ball, fireplace, lightsaber, rainbow, the Fireball game, settings, sleep, USB BOOTSEL) written as Arduino sketches with `#define` pin constants, FastLED for the LEDs, and `pico/bootrom.h` for bootloader entry. V1.8 is the current head, and each revision is a new file — see [SOFTWARE/README.md](SOFTWARE/README.md) for board compatibility and [PIE-v1.8-information.md](SOFTWARE/Portal%20Interface%20Engine/PIE-v1.8-information.md) for the full behavioral description.
+The Portal Interface Engine (PIE) is Lamoka's operating-system firmware. It is a one-button LED interface (status ball, fireplace, lightsaber, rainbow, the Fireball game, settings, sleep, USB BOOTSEL) written as Arduino sketches with `#define` pin constants, FastLED for the LEDs, and `pico/bootrom.h` for bootloader entry. Each revision is a new file, and there are two current heads: **V1.8** for the Lamoka1-DEV-Brain and **V1.9**, the first main-board firmware, which adds the power stage (explicit arming, PWM dead-time, soft start, closed-loop regulation, supervisory protection) but has never run on hardware — see [SOFTWARE/README.md](SOFTWARE/README.md) for board compatibility, [PIE-v1.8-information.md](SOFTWARE/Portal%20Interface%20Engine/PIE-v1.8-information.md) and [PIE-v1.9-information.md](SOFTWARE/Portal%20Interface%20Engine/PIE-v1.9-information.md) for the full behavioral descriptions.
 
 ---
 

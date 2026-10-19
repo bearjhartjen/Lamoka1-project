@@ -18,7 +18,7 @@ RP2354A made by Raspberry Pi):
 
 * **GPIO 11** — WS2812B LED data (D1–D5, five LEDs)
 * **GPIO 0** — User button (B3F-4055), `INPUT_PULLUP`
-* **GPIO 8 / 9** — I²C0 SDA/SCL to the ADS7128 (U? monitor MUX), 400 kHz
+* **GPIO 8 / 9** — I²C0 SDA/SCL to the ADS7128 monitor (U10), 400 kHz
 * **GPIO 26** — `TEMP_CTRL`, TMP235 output (control-section temperature)
 * **GPIO 27** — `TEMP_INV`, TMP235 output (inversion-section temperature)
 * **GPIO 1–4** — Gate-driver inputs to the UCC27735 (Q3–Q6 H-bridge)

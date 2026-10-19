@@ -1357,6 +1357,14 @@ void renderUI() {
 #define ADS7128_CHANNEL_SEL    0x11
 #define ADS7128_RECENT_CH0_LSB 0xA0
 
+// ADS7128 command opcodes (datasheet SBAS868A Table 9): every I2C access is
+// opcode-framed — the first data byte of a frame is the opcode, then the
+// register address, then data where applicable.
+#define ADS7128_OP_WRITE       0x08   // single register write
+#define ADS7128_OP_READ        0x10   // single register read
+#define ADS7128_OP_SET_BITS    0x18   // set masked bits only
+#define ADS7128_OP_BLK_READ    0x30   // read a continuous register block
+
 // Divider ratios (bottom / (top + bottom)) from the schematic.
 #define DIV_AIN0           (10.0f / (36.5f + 10.0f))   // input rail 11–14 V
 #define DIV_AIN1           (10.0f / (43.2f + 10.0f))   // 17 V bus
@@ -1508,16 +1516,28 @@ static bool busValidForRun() {
   return true;
 }
 
-// ADS7128 register primitives.
+// ADS7128 register primitives (opcode-framed, datasheet SBAS868A §8.5).
 static bool adsWriteReg(uint8_t reg, uint8_t val) {
   Wire.beginTransmission(ADS7128_ADDR);
+  Wire.write(ADS7128_OP_WRITE);
   Wire.write(reg);
   Wire.write(val);
   return Wire.endTransmission() == 0;
 }
 
+static bool adsSetBits(uint8_t reg, uint8_t mask) {
+  // Sets only the masked bits, so starting a conversion (CNVST) cannot clear
+  // the statistics-module enable (STATS_EN).
+  Wire.beginTransmission(ADS7128_ADDR);
+  Wire.write(ADS7128_OP_SET_BITS);
+  Wire.write(reg);
+  Wire.write(mask);
+  return Wire.endTransmission() == 0;
+}
+
 static bool adsReadReg(uint8_t reg, uint8_t *dst) {
   Wire.beginTransmission(ADS7128_ADDR);
+  Wire.write(ADS7128_OP_READ);
   Wire.write(reg);
   if (Wire.endTransmission(false) != 0) return false;
   if (Wire.requestFrom((uint8_t)ADS7128_ADDR, (uint8_t)1) != 1) return false;
@@ -1526,9 +1546,12 @@ static bool adsReadReg(uint8_t reg, uint8_t *dst) {
 }
 
 static bool adsReadResult(uint8_t ch, uint16_t *code) {
+  // Block read: a single-register-read frame repeats the same byte for every
+  // extra clock (datasheet Figure 34), so the LSB/MSB pair needs opcode 0x30.
   uint8_t lsb, msb;
   uint8_t base = ADS7128_RECENT_CH0_LSB + 2 * ch;
   Wire.beginTransmission(ADS7128_ADDR);
+  Wire.write(ADS7128_OP_BLK_READ);
   Wire.write(base);
   if (Wire.endTransmission(false) != 0) return false;
   if (Wire.requestFrom((uint8_t)ADS7128_ADDR, (uint8_t)2) != 2) return false;
@@ -1540,10 +1563,15 @@ static bool adsReadResult(uint8_t ch, uint16_t *code) {
 
 static bool adsProbe() {
   uint8_t status = 0;
+  uint8_t cfg = 0;
   if (!adsReadReg(ADS7128_SYSTEM_STATUS, &status)) return false;
   // Force DATA_CFG to not append status bits, so reads are pure 16-bit codes.
   if (!adsWriteReg(ADS7128_DATA_CFG, 0x00)) return false;
-  return true;
+  // RECENT_CHx only records while the statistics module is enabled
+  // (datasheet §8.3.6 and §8.3.14); set STATS_EN once and read it back.
+  if (!adsSetBits(ADS7128_GENERAL_CFG, 0x20)) return false;
+  if (!adsReadReg(ADS7128_GENERAL_CFG, &cfg)) return false;
+  return (cfg & 0x20) != 0;
 }
 
 static float adsCodeToVolts(uint16_t code) {
@@ -1552,7 +1580,7 @@ static float adsCodeToVolts(uint16_t code) {
 
 static void adsStartConversion(uint8_t ch) {
   adsWriteReg(ADS7128_CHANNEL_SEL, ch & 0x0F);
-  adsWriteReg(ADS7128_GENERAL_CFG, 0x08);  // CNVST
+  adsSetBits(ADS7128_GENERAL_CFG, 0x08);  // CNVST; STATS_EN is left set
   adsConvStartUs = micros();
   adsPhase = ADS_WAITING;
 }
@@ -1569,6 +1597,13 @@ static void adsService() {
       return;
     }
     if (status & 0x08) {
+      // OSR_DONE is sticky; write 1 to clear it so the next channel's poll
+      // sees only the next conversion's completion (datasheet §8.6.1).
+      if (!adsSetBits(ADS7128_SYSTEM_STATUS, 0x08)) {
+        if (pArmed) setFault("ADS7128 NACK");
+        else        adsPresent = false;
+        return;
+      }
       adsPhase = ADS_READING;
     } else if (micros() - adsConvStartUs > 5000) {
       if (pArmed) setFault("ADS7128 timeout");

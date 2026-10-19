@@ -20,6 +20,10 @@ sym-lib-cache
 *.kicad_pcb.lock
 *.Kicad_pro.Ick
 
+# KiCad plug-in session artifacts (regenerated locally, not design sources)
+*.round-tracks-config
+report.txt
+
 ################################
 # KiCad Backups
 ################################

@@ -88,6 +88,7 @@ class DocumentationTests(unittest.TestCase):
         "HARDWARE/Mechanical/Lamoka1-DEV-Brain.step",
         "HARDWARE/Mechanical/README.md",
         "SOFTWARE/Portal Interface Engine/PIE-v1.8-information.md",
+        "SOFTWARE/Portal Interface Engine/PIE-v1.9-information.md",
     ]
 
     def test_required_files_exist(self):
@@ -213,12 +214,12 @@ class FirmwareTests(unittest.TestCase):
     """The firmware revisions and the documented pin contract are intact."""
 
     def test_all_pie_revisions_present(self):
-        names = ["V1.ino"] + [f"V1.{n}.ino" for n in range(1, 9)]
+        names = ["V1.ino"] + [f"V1.{n}.ino" for n in range(1, 10)]
         for name in names:
             with self.subTest(sketch=name):
                 self.assertTrue(os.path.isfile(os.path.join(PIE_DIR, name)), f"{name} is missing")
 
-    def test_pin_contract_of_current_head(self):
+    def test_pin_contract_of_dev_brain_head(self):
         # Keep in sync with PIE-v1.8-information.md and AGENTS.md: GPIO 11 is
         # LED data, GPIO 0 is the button, and the DEV-Brain fits ten LEDs.
         text = read_text(os.path.join(PIE_DIR, "V1.8.ino"))
@@ -229,6 +230,28 @@ class FirmwareTests(unittest.TestCase):
         ):
             with self.subTest(pattern=pattern):
                 self.assertRegex(text, pattern)
+        self.assertIn("FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);", text)
+
+    def test_pin_contract_of_main_board_head(self):
+        # Keep in sync with PIE-v1.9-information.md and AGENTS.md, and with the
+        # main-board netlist: five LEDs, GPIO 0 button, GPIO 1-4 to the
+        # UCC27735 gate-driver inputs, I2C on GPIO 8/9, TMP235 on GPIO 26/27.
+        text = read_text(os.path.join(PIE_DIR, "V1.9.ino"))
+        for pattern in (
+            r"#define\s+LED_PIN\s+11\b",
+            r"#define\s+BUTTON_PIN\s+0\b",
+            r"#define\s+NUM_LEDS\s+5\b",
+            r"#define\s+TEMP_CTRL\s+26\b",
+            r"#define\s+TEMP_INV\s+27\b",
+            r"#define\s+GATE_A_HI_PIN\s+1\b",
+            r"#define\s+GATE_A_LO_PIN\s+2\b",
+            r"#define\s+GATE_B_HI_PIN\s+3\b",
+            r"#define\s+GATE_B_LO_PIN\s+4\b",
+        ):
+            with self.subTest(pattern=pattern):
+                self.assertRegex(text, pattern)
+        self.assertIn("Wire.setSDA(8);", text)
+        self.assertIn("Wire.setSCL(9);", text)
         self.assertIn("FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);", text)
 
 
