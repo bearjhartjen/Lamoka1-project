@@ -49,7 +49,7 @@ HARDWARE/
   COMPONENTS.md            plain-English MPN list (reference only, NOT the BOM)
   Design_Notes.md          design rationale
   Transformer-wiring.md    J1 lead-to-terminal spec (read before wiring)
-  revB-changes.md          Rev B hardware change set (specified, NOT applied)
+  revB-changes.md          Rev B and Rev C change sets (found, and what was applied)
   Kicadfiles/Lamoka1-half/ main board — KiCad 10 project
     Lamoka1-half.kicad_sch   root sheet (hierarchical)
     Control-section.kicad_sch
@@ -198,14 +198,16 @@ footprint update from that library fails with "pad 21 not found" and breaks the
 PowerPAD connection. U4 must stay on `Lamoka1-half:PWP0020A_N`, the local copy
 of the corrected footprint.
 
-**Transformer.** The fitted part is a `VPT24-4170`, rated **100 VA**, mounted
+**Transformer.** The fitted part is a `VPT24-6670`, rated **160 VA**, mounted
 off-board and wired to the board at J1. `HARDWARE/Transformer-wiring.md` records
 the lead-to-terminal map. Read it before wiring anything: J1's eight poles are
 four pairs, one pair per parallel-connected winding, and the lead colours must
 **not** be matched to the net names — `/BLUE`, `/BROWN`, `/BLACK` and `/RED` are
 lead colours, and this transformer's BLUE/BROWN leads are its 115 V winding,
-while the board's bridge sits on the `/BLUE`/`/BROWN` nets. Confirm the map
-against the physical unit before the power stage is energized.
+while the board's bridge sits on the `/BLUE`/`/BROWN` nets. The `-6670` has the
+same eight-lead colour map as the `-4170` it replaces, so the J1 harness map
+does not change; the harness current capability does. Confirm the map against
+the physical unit before the power stage is energized.
 
 **Manufacturer data is sparse.** Every symbol carries a `Manufacturer` field but
 it is populated on exactly one: SW1's button (`Aratas (Formerly Omron
@@ -290,9 +292,10 @@ Do not use "Update from library" to revert a deliberate change; edit the copy in
 `Lamoka1-half.kicad_dru` carries a custom rule that holds the 120 V transformer
 secondary (`/BLACK`, `/RED`) 1.5 mm clear of every other net. IPC-2221B table
 6-1 column B2 asks for 1.25 mm at 151-300 V working, so 1.5 mm has margin.
-Everything else on the board is 17 V or below and stays on the 0.18 mm netclass.
-The rule is what pulls the GND pour back from the secondary: **refill the zones
-after any copper edit**, or the plotted pour will not obey it.
+Everything else on the board is 21.75 V or below and stays on the 0.18 mm
+netclass. The rule is what pulls the GND pour back from the secondary:
+**refill the zones after any copper edit**, or the plotted pour will not obey
+it.
 
 Before the rule existed the secondary ran as close as 0.93 mm to control-side
 copper (three `/GPIO1` pairs) and 1.41 mm to `/GPIO2`. The same revision lifted
@@ -352,8 +355,9 @@ without new evidence:
   nets on all four devices.
 - **LM5122 PowerPAD.** The footprint is properly implemented.
 - **LM5122 buck feedback reference.** The LM5122 feedback reference is 1.2 V, not
-  0.8 V. The 17 V rail calculation is correct as designed. (The TPS62160 buck
-  *does* use 0.8 V — the two differ, and that is not an error.)
+  0.8 V. The bus calculation is correct as designed: on the Rev C board
+  `1.2 × (1 + 64.9/3.79) = 21.749 V`. (The TPS62160 buck *does* use 0.8 V — the
+  two differ, and that is not an error.)
 
 ## The power stage
 
@@ -378,83 +382,143 @@ Recorded in the project history are a number of genuine findings, plus some
 retractions. Because the retractions matter as much as the findings, verify
 against `Lamoka1-half.kicad_pcb` and the schematics rather than against notes.
 
-#### Open findings from the 2026-10-18 reviews
+#### Third-party review — Tomachie, 2026-10-19
+
+The Lamoka1/2 schematic (4 sheets, 117 components, 495 pins, 84 nets) was
+submitted to Tomachie and came back **93/100** on the free preliminary pass
+(job `0a968485-5479-41e2-b24f-00a293061b1e`, report
+<https://tomachie.com/r/0a968485-5479-41e2-b24f-00a293061b1e/Lamoka1-half_report.html>,
+copy in `HARDWARE/Kicadfiles/Lamoka1-half/Reviews/`). The AI-enriched pass — the
+datasheet-level functional and power analysis, the AI findings list, the
+EMC/IEC checks — is a **paid** Tomachie add-on (13 coins ≈ US$13 via Stripe) and
+was not bought; one-page designs get it free, this one does not. So the report
+is the preliminary one, and it has no AI findings in it.
+
+What it confirms, and what it adds:
+
+- It independently confirms the **USB ESD gap**: `CC1`, `CC2` and the USB-C
+  shell ground are listed as connector-facing nets with no ESD/TVS protection.
+  That is the same item already listed below.
+- **11 unconnected pins**, all benign: `IC1.4` and `U5`/`U6` NC pins, the USB-C
+  shield pad, and `R9.1`. Nothing to change.
+- **"4 power symbols connect nothing"** is a false positive: they are the four
+  `Flamingo&Cactus-logo:LOGO` graphic placements, not rails.
+- The **footprint-naming** deduction is the same IPC-7351B item as the DEV-Brain
+  report had; it needs new part numbers, not a schematic edit.
+- It inserted **18 test points** into a modified design. That modified schematic
+  can be resubmitted for a better fault-coverage score, and the score they
+  quote is a net-coverage figure, not a correctness judgement.
+
+#### Findings from the 2026-10-18 reviews, and what Rev C did about them
 
 Two electrical reviews read the netlist, `COMPONENTS.md`, `Operation.md` and the
 LM5122, UCC27735, INA240, ADS7128, TMP235, AMS1117, TPS62160 and Triad
 datasheets. Their findings are recorded here so the next pass re-derives and
-decides rather than rediscovers. They are **unverified by measurement and not yet
-acted on** — the usual rule applies, re-derive from the source before acting.
+decides rather than rediscovers. Several were **acted on in Rev C**; the
+derivations are kept in `HARDWARE/revB-changes.md`, and the values below are
+what is fitted. The usual rule still applies: re-derive from the source before
+acting.
 
-**Decisions for the maintainer, before the board is ordered or energised.** Each
-of these is a schematic-and-layout change, or a decision to accept present
-behaviour. None has been applied.
+**Applied in Rev C.** These are in the schematic and the board now:
 
-- **Transformer hook-up (the serious one).** The board's bridge sits on the
-  `/BLUE`, `/BROWN` nets and the outlet on `/BLACK`, `/RED`, but the
-  VPT24-4170's BLUE/BROWN leads are its 115 V winding and its 12 V winding is
-  BLACK/YELLOW/RED/ORANGE. Fitted colour-for-colour, the bridge drives the 115 V
-  winding and the outlet gets about 1.9 V instead of ~120 V. The eight-pole
-  connector is already wired for the parallel connection of both windings, so
-  the fix is a harness spec, not copper: `HARDWARE/Transformer-wiring.md`.
-- **`Rsense1` is 2 mΩ, so the boost's cycle-by-cycle limit is 37.5 A** — about
-  three times the 12.1 A peak the 100 VA design draws, and above the
-  `XAL1580-182MEB` saturation class, so the inductor can saturate before the
-  limit trips. The LM5122 procedure wants 4.1–5.6 mΩ, and any replacement has to
-  respect the shunt's power rating (2 mΩ at 12 A is already 0.29 W).
-- **`C13` is a 10 µF 0402 ceramic on the AMS1117-3.3 output.** The AMS1117
-  datasheet asks for 22 µF and names tantalum: the ESR is part of the part's
-  frequency compensation, and near-zero-ESR MLCC is the risky condition.
-- **The gate drivers have no local supply bypass.** `U5`/`U6` pin 7 (VDD) and
-  pin 4 (EN) sit on `CSP`, the 11–14 V battery rail — **not** the 17 V bus —
-  and the bootstrap diodes `D11`/`D12` are fed from `CSP` as well (checked
+- **Transformer hook-up (the serious one) — harness, unchanged by the
+  revision.** The board's bridge sits on the `/BLUE`, `/BROWN` nets and the
+  outlet on `/BLACK`, `/RED`, but the transformer's BLUE/BROWN leads are its
+  115 V winding and its 12 V winding is BLACK/YELLOW/RED/ORANGE. Fitted
+  colour-for-colour, the bridge drives the 115 V winding and the outlet gets
+  about 1.9 V instead of ~120 V. The eight-pole connector is already wired for
+  the parallel connection of both windings, so the fix is a harness spec, not
+  copper: `HARDWARE/Transformer-wiring.md`. The part is now the
+  `VPT24-6670`; the eight-lead colour map is identical, so the harness map
+  does not change.
+- **`Rsense1` stays 2 mΩ — the 5 mΩ finding was wrong.** The earlier finding
+  proposed 5 mΩ (the LM5122 procedure wants 4.1–5.6 mΩ) on the grounds that a
+  2 mΩ shunt lets the inductor saturate before the current limit trips. That
+  is wrong for a 100 W single-phase load: the 120 Hz bus-current pulsation
+  gives an inductor crest of about 27 A, so a 5 mΩ shunt would clip the output
+  to roughly 57 W. The shunt is 2 mΩ (`IPEAK(CL) = 75 mV / RS`, datasheet
+  Eq. 13 — the ×10 gain belongs to the control-loop sense path, not to the
+  current-limit comparator), and it moves from a 1206 to a **2512 2 W** part
+  (`CSNL2512FT2L00`, Stackpole) purely for thermal headroom: the 1206 ran at
+  68 % of its derated rating at a 120 °C ambient, the 2512 runs at 38 %. The
+  part is a two-terminal device, so **no Kelvin sensing** is implemented.
+- **`C13` was a 10 µF 0402 ceramic on the AMS1117-3.3 output; it is now a
+  22 µF tantalum A case** (`T491A226K010AT`). The AMS1117 datasheet asks for
+  22 µF and names tantalum: the ESR is part of the part's frequency
+  compensation, and near-zero-ESR MLCC is the risky condition. This is a
+  stability fix, not a nicety.
+- **The gate drivers now have a local supply bypass.** `U5`/`U6` pin 7 (VDD) and
+  pin 4 (EN) sit on `CSP`, the 11–14 V battery rail — **not** the 21.75 V bus
+  — and the bootstrap diodes `D11`/`D12` are fed from `CSP` as well (checked
   against the netlist: `CSP` carries `U5`/`U6` pins 4 and 7 and the `D11`/`D12`
-  anodes). The nearest bulk capacitor is centimetres away; the datasheet asks
+  anodes). The nearest bulk capacitor was 49–84 mm away; the datasheet asks
   for about 10 µF at the pin (`CVDD ≥ 10 × CBOOT` with the 1 µF bootstrap
-  capacitors), or reduce `CBOOT` to 100 nF and fit 1 µF. Rev B adds the local
-  bypass (`HARDWARE/revB-changes.md`); the board is unchanged.
+  capacitors). Each driver now has a 10 µF 0805 (`C34`, `C36`) and a 100 nF
+  0603 (`C35`, `C37`) at its VDD pin.
+- **The outlet's earth is no longer the board ground.** `J5` pins 3/4 — the
+  earth pole of the outlet — are on their own `/PE` net, not on the board's
+  `GND`. The old tie made every GND point on the board an earth conductor: the
+  mains outlet's protective earth and the inverter's low-voltage ground were
+  the same node, and the 115 V secondary had no earth of its own. The cut is
+  in both the schematic and the board; on the board, pads 3 and 4 are joined
+  by a 2.40 mm track matching the `/BLACK` and `/RED` pole links, and the GND
+  pour was refilled and pulled back from them. The harness side of it is not
+  closed — see the open findings below.
+
+**Still open.** These are harness, mechanical or design-intent items that Rev C
+does not close:
+
 - **No fuse anywhere.** Neither the 11–14 V input nor the high-voltage output is
-  fused; the only series element on `+BATT` is a 2 mΩ measurement shunt. Rev B
-  adds an input fuse and an output fuse in the harness, off-board
+  fused; the only series element on `+BATT` is a 2 mΩ measurement shunt. The
+  input fuse and the output fuse are harness items, off-board
   (`HARDWARE/revB-changes.md`); nothing is fused on the board itself.
 - **No output filter.** The bridge drives the transformer primary directly: the
   `/BLUE` and `/BROWN` midpoints run from `Q3`/`Q4`/`Q5`/`Q6` to `J1` with no
   series inductance, no shunt capacitance and no snubber, so the 12 V winding
   sees the raw 20 kHz square wave and the harmonics go straight to the
-  outlet. Rev B specifies an off-board output filter
-  (`HARDWARE/revB-changes.md`).
-- **The outlet's earth is the board ground.** `J5` poles 3–4 — the earth pole
-  of the outlet — are tied to the board's `GND`, the return of the 12 V drive
-  winding and of the boost converter, so the mains outlet's protective earth
-  and the inverter's low-voltage ground are the same node and the 115 V
-  secondary has no earth of its own. `HARDWARE/Transformer-wiring.md` records
-  the same tie. Rev B specifies the Class I/II decision; for Class I, cut the
-  J5 3/4-to-GND tie and bond J5 3/4 to a PE stud in the harness
-  (`HARDWARE/revB-changes.md`); the board is unchanged.
+  outlet. The off-board output filter (series 38 mH, shunt 470 nF, damper,
+  bleeder) is specified but not built.
+- **The outlet's earth bond is a harness item.** The board's `J5` pins 3/4 are
+  on their own `/PE` net, so the board no longer earths the outlet —
+  `HARDWARE/Transformer-wiring.md` records the same map. The harness has to
+  bond that net to a chassis PE stud for Class I (metal enclosure) or leave it
+  unbonded and mark the unit double-insulated for Class II (plastic
+  enclosure). A three-prong outlet must never ship with its earth floating or
+  tied to the board's logic ground.
+- **The TMP235 relocation** (`U9` closer to `Q4`/`Q6`, thermal vias under
+  `Q1`/`Q2`) is still open; the sensors report board temperature, not FET
+  junction temperature.
+- **A direct isolated output sense (AMC1311B) is designed but not in this
+  revision.** The outlet is regulated from the droop-compensated estimate,
+  which needs a per-unit calibration at bring-up.
 
-**Firmware status (V1.9, 2026-10-19).** The first main-board firmware exists
+**Firmware status (V1.9, Rev C).** The first main-board firmware exists
 (`SOFTWARE/Portal Interface Engine/V1.9.ino`): five-LED UI ported from V1.8, RP2350
 TRNG entropy, TMP235 reads on GPIO 26/27, explicit arming, PWM dead-time scheme
 verified by host-side simulation in `tests/test_v19_pwm.py` (500 ns on both
 edges, both legs, full modulation range), soft-start ramp, closed-loop
-regulation, and supervisory protection. It compiles clean (84,372 B program,
-16,204 B globals, on
-`rp2040:rp2040:generic_rp2350`). The power stage is still **never
+regulation, and supervisory protection. The power stage is still **never
 energised**; bench verification (scope dead-time check, ADC/current/
-temperature validation, staged energisation) is outstanding. The audit's minimum
-change set (C13, U5/U6 bypass, Rsense1, fusing) is still not applied to the
-board.
+temperature validation, staged energisation) is outstanding. The audit's
+minimum change set — `C13`, the `U5`/`U6` bypass and the `Rsense1` value —
+is applied in Rev C; the fusing is not.
 
-The 2026-10-19 pass applied these firmware fixes. `V1.9` has still never run
-on hardware:
+The 2026-10-19 pass applied these firmware fixes, and Rev C retargeted the
+regulation. `V1.9` has still never run on hardware:
 
-- The output target is **105 V RMS**, not 115 V: 115 V needs m ≈ 1.10 at full
-  load on the 17 V bus with this transformer, while `PWM_M_MAX` is 0.9597, so
-  105 V is the highest target that regulates at both ends of the band. This
-  regulates the **inferred** output (drive winding × 115/12); the transformer's
-  9 % regulation means the actual outlet is about 105 V at no load and about
-  96 V at 100 W. Holding 105 V at full load needs the Rev C 19.4 V bus or an
-  output-sense correction.
+- The output target is **120.0 V RMS at the outlet**, on a **21.75 V bus**. The
+  firmware regulates the **estimated** outlet, not the drive-side value:
+  `V_out_est = A_DROOP × V_drive_rms − B_DROOP × I_sec_est`, with
+  `A_DROOP = 8.8735` (the transformer's true no-load ratio, 115 / 12.96 — the
+  nameplate 12.0 V is a *full-load* rating, so the no-load secondary is
+  12.96 V) and `B_DROOP = 5.666 Ω`. The earlier `115/12 = 9.583` was the
+  full-load ratio and made the firmware believe the outlet was 120 V when it
+  was really about 111.5 V. Both constants are fitted per unit at bring-up:
+  `A_DROOP` from the no-load ratio measured with a DMM, `B_DROOP` from two
+  load points.
+- A new **output out of reach** fault fires when the modulator is pinned at
+  the PWM dead-time clamp (`m = 0.959733`) while the estimated outlet is still
+  more than 0.5 V short of the target.
 - The bridge-output-missing check is proportional to the commanded modulation
   (60 % of expected, 5 consecutive ticks) instead of a fixed fraction of the
   target.
@@ -467,23 +531,24 @@ on hardware:
   portal.
 - The hardware watchdog is 500 ms and is fed during the boot sweep as well as
   from the main loop, so the boot sequence can no longer trip it.
-- The DC-offset trip is 1 V over 3 ticks, replacing the 2 V threshold.
+- The DC-offset trip is 1 V over 3 ticks, replacing the 2 V threshold. The
+  firmware's "~90 ms to saturate" comment predates the Rev C flux
+  re-derivation, which puts the knee at roughly 11–13 ms at the operating
+  point; the threshold is unchanged in Rev C and re-deriving it is an open
+  item.
 - The 60 Hz sine is written once per 20 kHz carrier from the slice-0 wrap ISR
   out of a 64-point table with interpolation, and the amplitude slew is limited
   to 0.010 per tick.
-- The `AIN1` bus windows are ±0.4 V, below the 17.56 V clip of the present
-  43.2 k / 10 k divider, so a clipped reading cannot pass as a valid bus
-  voltage.
+- The `AIN1` bus windows are **±0.90 V at start and ±1.5 V while running**,
+  against the 25.74 V full scale of the new 68 kΩ divider.
 
 The dead-time and PWM behaviour is checked by host-side simulation in
 `tests/test_v19_pwm.py`; `tests/test_v19_model.py` is the new model-level
 test. The older `tests/test_repo.py` only greps the sketch's source text — it
 is a consistency check, not a behaviour check.
 
-Nothing on the board has changed. Still open, and specified but **not
-applied**: `C13`, the `U5`/`U6` local bypass, `Rsense1`, fusing, the output
-filter, the `J5` earth, the TMP235 relocation and the `AIN1` 68 k divider
-(see `HARDWARE/revB-changes.md`).
+Still open on the board side: fusing, the output filter and the TMP235
+relocation (see `HARDWARE/revB-changes.md`).
 
 The V1.9 ADS7128 driver was corrected on 2026-10-18 to use the opcode framing
 the part requires (write 0x08 / read 0x10 / set-bits 0x18 / block-read 0x30):
@@ -505,23 +570,27 @@ silicon** — a register-level bench check is the first monitor item at bring-up
 - **No gate-source bleed resistors on `Q1`–`Q6`.** The drivers hold the gates low
   while powered; a dead driver leaves them floating.
 - **The AC output is not measured directly.** The monitor chain is the battery
-  rail (`AIN0`), the 17 V rail (`AIN1`), the two bridge midpoints
-  (`AIN2`/`AIN3`), load current (`AIN4`, INA240) and two TMP235s. Firmware infers
-  the output from the drive winding and the 115:12 ratio. V1.9's
-  "bridge output missing" check compares the midpoint differential against the
-  commanded modulation, so it watches the **bridge**, not the outlet: an open
-  transformer secondary, a missing output filter or a disconnected load is
-  invisible to it.
+  rail (`AIN0`), the 21.75 V bus (`AIN1`), the two bridge midpoints
+  (`AIN2`/`AIN3`), load current (`AIN4`, INA240) and two TMP235s. The firmware
+  estimates the outlet from the drive winding and the droop model, not from a
+  measurement of it. V1.9's "bridge output missing" check compares the midpoint
+  differential against the commanded modulation, so it watches the **bridge**,
+  not the outlet: an open transformer secondary, a missing output filter or a
+  disconnected load is invisible to it.
 - **No USB ESD protection** on `USB-5v`, D+/D− or CC.
-- **`AIN1` headroom.** The 17 V divider (`R27` 43.2 k / `R28` 10 k) puts 3.195 V
-  on a 3.3 V input and clips at 17.56 V; a 68 k top resistor would restore
-  margin. Rev B changes `R27` to 68 k and `DIV_AIN1` to 10/78
-  (`HARDWARE/revB-changes.md`). Until both change together the firmware keeps
-  its bus windows at ±0.4 V, so a clipped reading cannot pass as a valid bus
-  voltage.
+- **`AIN1` headroom — resolved.** The old divider (`R27` 43.2 k / `R28` 10 k)
+  put 3.195 V on a 3.3 V input and clipped at 17.56 V, and the old midpoint
+  dividers (`R29`/`R31` 45.3 k) clipped at 18.25 V — both below the Rev C bus,
+  which is why they changed. `R27`, `R29` and `R31` are all **68 kΩ** now
+  (`RC0603FR-0768KL`), giving a 25.74 V full scale, and the firmware's
+  `DIV_AIN1`/`DIV_AIN2`/`DIV_AIN3` are `10/(68 + 10)`. The bus sits at 2.79 V,
+  well below the 3.3 V clip.
 - **The isolation barrier has no slack.** The closest approach is 1.5005 mm
   against the 1.5 mm rule (IPC-2221B asks 1.25 mm at 151–300 V); any future
-  copper edit near `/BLACK`/`/RED` needs the barrier scan re-run.
+  copper edit near `/BLACK`/`/RED` needs the barrier scan re-run. That figure
+  was re-measured on the Rev C layout: nothing closer than 2.1 mm to any
+  track, pad or via, and 1.5005 mm to the pulled-back GND zone fill, which is
+  where the rule bites.
 
 **Boost-converter observations.**
 
@@ -532,21 +601,28 @@ silicon** — a register-level bench check is the first monitor item at bring-up
 - **No off switch.** `U4` has no enable pin and the UVLO divider is passive,
   although datasheet §7.3.1 offers the UVLO pin as a remote shutdown; the rail
   sits at ~VIN whenever a battery is attached, with no designed bleeder.
-- **`Q1` voltage margin.** A 25 V part on the 17 V switching node at ~495 kHz
-  with no snubber, while `Q2` is 30 V. The LM5122 drives both gates directly, as
-  its typical application does; the asymmetry is recorded nowhere.
+- **`Q1` voltage margin — resolved.** `Q1` was a 25 V part on the switching
+  node at ~495 kHz with no snubber; on the Rev C bus that left only about 3 V
+  of headroom for ringing. `Q1` is now `CSD17304Q3` (30 V), the same part as
+  `Q2` and in the same DQG0008A footprint, which leaves about 8 V at the
+  nominal bus and 7.6 V at the top of the tolerance band. No 40 V part exists
+  in that footprint. The LM5122 drives both gates directly, as its typical
+  application does.
 - **Ripple.** 1.8 µH at ~495 kHz gives about 4.4 A pk-pk on a 5 A average
   (≈88 %), so the converter enters DCM below roughly 1.4 A at 14 V input.
-- **Derived-but-undocumented values.** Re-derivation puts `Rslope1` at K = 0.857
-  (valid) and the `COMP` network at ~2.3 kHz with a 22 kHz right-half-plane zero
-  (plausible); `Cres1` is datasheet-consistent. `Css1` is the exception above.
+- **Derived-but-undocumented values.** The Rev C compensation is now derived
+  and written down: `Rslope1` 49.9 kΩ (the datasheet wants a slope
+  compensation factor K ≥ 1; the old 105 kΩ gave 0.525), `Rcomp1` 80.6 kΩ,
+  `Ccomp1` 15 nF, `Ccomp2` 44.8 pF, for a cross-over of about 9.3–11.8 kHz
+  with roughly 80° of phase margin. `Cres1` is datasheet-consistent. `Css1`
+  is the exception above.
 - **Grounding.** `AGND`, `PGND` and the low-side returns are one `GND` net in the
   schematic; the star point is not expressed anywhere (`NT1` is a board net tie).
 - **`MODE` strap.** `MODE` is tied to GND: diode emulation with the skip-cycle
   comparator disabled, i.e. pulse skipping at light load. Valid, but the choice
   is recorded nowhere.
-- **Net names.** The input rail is `/Inversion-Section/CSP` and the 17 V rail is
-  `/Inversion-Section/G4D` — named after unrelated pins, which makes the boost
+- **Net names.** The input rail is `/Inversion-Section/CSP` and the 21.75 V bus
+  is `/Inversion-Section/G4D` — named after unrelated pins, which makes the boost
   and the `.kicad_dru` rules that key on net names harder to audit.
 - **Polarisation.** The electrolytic and polymer output capacitors are drawn with
   `Device:C`, whose description reads "Unpolarized capacitor".
@@ -558,30 +634,60 @@ silicon** — a register-level bench check is the first monitor item at bring-up
 The stale board `Value` fields the same reviews flagged (`D6`, `D11`, `D12`,
 `CR1`, `CR2`) were synced to the schematic on 2026-10-18 and no longer apply.
 
-#### Rev B hardware change set (specified, not applied)
+#### Rev B and Rev C change sets (what was found, and what was applied)
 
-`HARDWARE/revB-changes.md` is the written change set for the next board
-revision. It covers the off-board output filter, the input and output fuses,
-reverse-polarity protection on the battery input, the `AIN1` divider change
-(`R27` 43.2 k → 68 k), the local `U5`/`U6` VDD bypass, the `C13` change to a
-22 µF part with the ESR the AMS1117 needs, the `Rsense1` value, the `J5`
-earth bond, and the TMP235 placement. **None of it is applied.** The board in
-`HARDWARE/Kicadfiles/Lamoka1-half/` is still the 2026-10-18 revision, and the
-fuses, the output filter and the earth bond are harness or off-board items
-rather than copper, so the open findings above stand as written.
+`HARDWARE/revB-changes.md` holds the written change set: what the 2026-10-18
+reviews found, the derivations behind each item, and the Rev C section. It now
+reads as a record rather than a forward plan.
 
-**115 V is Rev C, not Rev B.** Reaching 115 V needs the bus at 19.4 V. The
-TPS62160 3.3 V buck runs from `CSP` (11–14 V), not the 17 V bus (U7 pins 2/3
-in the netlist), so the bus raise does not reach it in the present
-architecture; a Rev C that keeps that architecture does not need a new buck.
-Rev C does need a 30 V `Q1` (today a 25 V part on the switching node),
-`Rfbt1` at 57.6 k with `Rfbb1` unchanged at 3.79 k (the LM5122's 1.2 V
-reference sets the bus: 1.2 × (1 + Rfbt/Rfbb) = 19.44 V), and a 150 VA
-transformer or a documented 100 W derating: 115 V/100 W draws about 112 VA
-and raises the 12 V winding to 13.2 V RMS (9.75 % over 12 V, flux ≈ 1.65 T).
-It also needs the `AIN1` 68 k divider (or the bus clips) and a check of the
-19.4 V bus against the 25 V output capacitors. Rev B keeps the 17 V bus,
-which is why V1.9's target is 105 V RMS.
+Rev B's items split cleanly. The **board** items are applied in Rev C: the
+`AIN1`/`AIN2`/`AIN3` divider change (`R27`, `R29`, `R31` 43.2 k / 45.3 k → 68 k),
+the local `U5`/`U6` VDD bypass, the `C13` change to a 22 µF part with the ESR
+the AMS1117 needs, and the `Q1` voltage rating. The **`Rsense1` value does not
+change** — the 5 mΩ proposal was wrong and is withdrawn (see above). The
+**harness** items are not applied and are still open: the off-board output
+filter, the input and output fuses, the reverse-polarity protection, the `J5`
+earth bond, and the TMP235 placement.
+
+#### Rev C (applied)
+
+The revision moves the board from a 17 V boost bus to a **21.75 V bus** and
+from a 105 V inferred outlet target to a **120.0 V RMS outlet**, with a
+160 VA transformer.
+
+| Item | Rev B | Rev C | Why |
+| --- | --- | --- | --- |
+| `Rfbt1` | 49.9 kΩ | **64.9 kΩ** (`CRCW040264K9FKED`), `Rfbb1` 3.79 kΩ unchanged | The LM5122's 1.2 V reference sets the bus: `1.2 × (1 + 64.9/3.79) = 21.749 V`; band 21.13–22.39 V with 1 % resistors and a 1 % reference |
+| `U7` TPS62160 | on `CSP` (11–14 V) | **no change** | U7 pins 2/3 are on `CSP`, not the bus, so the bus raise does not reach the 3.3 V buck in the present architecture. No new buck is needed |
+| `Q1` | 25 V `CSD16323Q3` | **30 V `CSD17304Q3`** | Same DQG0008A footprint as `Q2`; about 8 V of headroom on the switching node. No 40 V part exists in that footprint |
+| Transformer | `VPT24-4170`, 100 VA, 9 % | **`VPT24-6670`, 160 VA, 8 %**, 12.0 V @ 13.34 A | 100 W at 89 % efficiency is about 111 VA through the transformer, which is 111 % of a 100 VA rating. The 160 VA part runs at 69 %, and 100 W is 60 % of it instead of over 100 %. The eight-lead colour map is identical, so the J1 harness map does not change |
+| `R27`/`R29`/`R31` | 68 kΩ | **68 kΩ** (as Rev B) | 25.74 V full scale covers the 21.75 V bus; the old 45.3 kΩ clipped at 18.25 V and read 74 % of the truth |
+| Bus windows | ±0.75 V / ±1.5 V (as specified) | **±0.90 V / ±1.5 V** (as flashed) | The start window was widened from the specified ±0.75 V because the tolerance band is ±0.63 V, which left only 0.12 V of slack |
+| Compensation | 105 k / 28.7 k / 3.9 nF / 130 pF | **49.9 k / 80.6 k / 15 nF / 44.8 pF** | Re-derived for the new operating point; cross-over about 9.3–11.8 kHz with roughly 80° of phase margin |
+| Bus capacitors | 25 V 180 µF | **35 V 180 µF** (`35SVPK180M`), `Coutx1` 22 µF 35 V 1206 | The 25 V parts ran at 89.5 % of their rating on the new bus |
+| `Rsense1` | 2 mΩ 1206 | **2 mΩ 2512 2 W** (`CSNL2512FT2L00`) | The value does not change; the package does, for thermal headroom. No Kelvin sensing |
+| `C13` | 22 µF tantalum | **as Rev B** | The AMS1117 needs 22 µF with ESR |
+| `U5`/`U6` bypass | 10 µF + 100 nF | **as Rev B** | `CVDD ≥ 10 × CBOOT` with the 1 µF bootstrap capacitors |
+| `J5` earth | cut the 3/4-to-GND tie | **cut, applied** — `J5` pins 3/4 are on their own `/PE` net | Board GND is not protective earth; the harness provides the bond |
+
+**The corrected transformer ratio.** The outlet is regulated from an estimate,
+and the estimate depends on the transformer's *no-load* ratio. The nameplate
+12.0 V is a **full-load** secondary rating, so the open-circuit secondary is
+12.0 × 1.08 = 12.96 V and the true ratio is `115 / 12.96 = 8.8735`. Using
+`115 / 12 = 9.583` — the full-load ratio — overstates the outlet by 8 %, and
+the firmware would believe the outlet was 120 V when it was really about
+111.5 V. The firmware now uses `A_DROOP = 8.8735` and `B_DROOP = 5.666 Ω`, and
+both are fitted per unit at bring-up.
+
+**What is still open after Rev C.** The off-board output filter, the outlet
+fuse and MOV, and the input harness fuse, reverse-polarity protection and TVS
+are harness items, not board copper. A direct isolated output sense (AMC1311B)
+is designed but not in this revision, so the outlet is regulated from the
+droop-compensated estimate, which needs a per-unit calibration. The `J5` earth
+cut is on the board; the harness bond to a chassis PE stud is not. The
+transformer's actual regulation is 8 % **TYP with no published limit**, and
+the modulation headroom at the worst bus corner is about 2 %, so the bring-up
+must measure the real transformer. The board has still never been energised.
 
 ## Documentation
 

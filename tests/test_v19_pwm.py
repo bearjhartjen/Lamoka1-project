@@ -15,6 +15,11 @@ phase-offset slices could latch different duty values and open a notch in the
 dead time.  The fixed test target is the 60 Hz zero crossing at full
 modulation, where the per-carrier sine step is largest.
 
+It also checks the Rev C operating point: 120.0 V at the outlet needs
+m = 0.941 at the bottom of the 21.75 V bus band, against a clamp of
+0.959733, so the dead time has to hold at the modulation the target
+actually commands — not only at the clamp.
+
 Run with ``python3 -m unittest tests.test_v19_pwm`` or let pytest discover it.
 """
 
@@ -126,6 +131,45 @@ def sine_from_table(phase):
     s0 = math.sin(2.0 * math.pi * index / 64.0)
     s1 = math.sin(2.0 * math.pi * (index + 1) / 64.0)
     return s0 + (s1 - s0) * (frac / 256.0)
+
+
+# --- The Rev C operating point ----------------------------------------------
+#
+# The drive the VPT24-6670 needs to hold 120.0 V at 100 W is 14.0556 V RMS
+# (the regulation model in tests/test_v19_model.py), and the 21.75 V bus has
+# a tolerance band of 21.1285 V to 22.3856 V.  The modulation the regulator
+# commands therefore runs from 0.888 to 0.941 across that band, against the
+# 0.959733 clamp.
+DRIVE_RMS_AT_TARGET = 14.0556
+BUS_BAND_MIN = 21.1285
+BUS_BAND_MAX = 22.3856
+SQRT2 = math.sqrt(2.0)
+
+
+def operating_modulation(vbus):
+    """The modulation the 120 V target needs on this bus."""
+    return DRIVE_RMS_AT_TARGET * SQRT2 / vbus
+
+
+def _check_dead_time(m, carriers=2):
+    """No overlap on either leg and a gap of at least dt on every edge."""
+    cc = cc_values(m)
+    samples = [outputs_at(t, *cc) for t in range(carriers * PWM_T)]
+    a_hi = [s[0] for s in samples]
+    a_lo = [s[1] for s in samples]
+    b_hi = [s[2] for s in samples]
+    b_lo = [s[3] for s in samples]
+
+    assert not any(a and b for a, b in zip(a_hi, a_lo, strict=False))
+    assert not any(a and b for a, b in zip(b_hi, b_lo, strict=False))
+
+    gap_a = _min_gap(a_hi, a_lo, PWM_T, carriers * PWM_T)
+    gap_b = _min_gap(b_hi, b_lo, PWM_T, carriers * PWM_T)
+    assert gap_a is not None
+    assert gap_b is not None
+    assert gap_a >= PWM_DT_TICKS
+    assert gap_b >= PWM_DT_TICKS
+    return gap_a, gap_b
 
 
 class StaticPwmTests(unittest.TestCase):
@@ -245,6 +289,65 @@ class SineStepTests(unittest.TestCase):
     def test_phase_increment_matches_60_hz_at_20_khz(self):
         expected = round(60.0 / 20000.0 * 2**32)
         self.assertEqual(expected, SINE_PHASE_INC)
+
+
+class OperatingPointTests(unittest.TestCase):
+    """The dead time has to hold at the modulation the target commands.
+
+    On the Rev C operating point the modulation is much closer to the
+    clamp than it used to be: 120.0 V at 100 W needs m = 0.941 at the
+    bottom of the bus band against a clamp of 0.959733, so the 500 ns gap
+    is being used at 98 % of the available band.
+    """
+
+    def test_the_operating_modulation_is_inside_the_clamp(self):
+        for vbus in (BUS_BAND_MIN, BUS_BAND_MAX):
+            with self.subTest(vbus=vbus):
+                m = operating_modulation(vbus)
+                self.assertLessEqual(m, PWM_M_MAX)
+        self.assertAlmostEqual(operating_modulation(BUS_BAND_MIN), 0.9408, places=3)
+        self.assertAlmostEqual(operating_modulation(BUS_BAND_MAX), 0.8880, places=3)
+
+    def test_the_margin_at_the_worst_corner_is_under_two_percent(self):
+        margin = PWM_M_MAX - operating_modulation(BUS_BAND_MIN)
+        self.assertAlmostEqual(margin, 0.0189, places=3)
+        self.assertLess(margin / PWM_M_MAX, 0.02)
+
+    def test_the_dead_time_holds_at_the_operating_modulation(self):
+        for vbus in (BUS_BAND_MIN, BUS_BAND_MAX):
+            with self.subTest(vbus=vbus):
+                gap_a, gap_b = _check_dead_time(operating_modulation(vbus))
+                self.assertGreaterEqual(gap_a, PWM_DT_TICKS)
+                self.assertGreaterEqual(gap_b, PWM_DT_TICKS)
+
+    def test_the_dead_time_holds_across_the_whole_operating_range(self):
+        # Every modulation between the no-load target and the clamp.
+        low = operating_modulation(BUS_BAND_MAX)
+        high = operating_modulation(BUS_BAND_MIN)
+        step = (high - low) / 10.0
+        for i in range(11):
+            with self.subTest(m=low + i * step):
+                _check_dead_time(low + i * step)
+
+    def test_the_per_carrier_step_is_inside_the_band_at_the_operating_point(self):
+        limit = 2.0 * PWM_DT_TICKS / PWM_T
+        previous = None
+        worst = 0.0
+        amplitude = operating_modulation(BUS_BAND_MIN)
+        for k in range(340):
+            phase = (k * SINE_PHASE_INC) & 0xFFFFFFFF
+            m = amplitude * sine_from_table(phase)
+            if previous is not None:
+                worst = max(worst, abs(m - previous))
+            previous = m
+        self.assertLess(worst, limit)
+
+    def test_the_clamp_is_still_the_whole_dead_time_band(self):
+        # The clamp formula itself: 500 ns on each of the four edges of
+        # the two legs costs 4*dt ticks of the 7500-tick period, plus the
+        # two ticks the compare rounding costs.
+        self.assertAlmostEqual(PWM_M_MAX, 7198 / 7500, places=9)
+        self.assertAlmostEqual(PWM_M_MAX, 0.9597, places=3)
 
 
 if __name__ == "__main__":

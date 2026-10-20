@@ -3948,6 +3948,16 @@
 	)
 	(wire
 		(pts
+			(xy 271.78 86.36) (xy 275.59 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "017cb5da-ec45-4fb8-9966-6272a1022532")
+	)
+	(wire
+		(pts
 			(xy 227.33 59.69) (xy 228.6 59.69)
 		)
 		(stroke
@@ -4488,6 +4498,16 @@
 	)
 	(wire
 		(pts
+			(xy 265.43 119.38) (xy 271.78 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68d427ca-ac51-429f-bf3d-68d1581f1864")
+	)
+	(wire
+		(pts
 			(xy 233.68 157.48) (xy 223.52 157.48)
 		)
 		(stroke
@@ -4535,6 +4555,16 @@
 			(type default)
 		)
 		(uuid "6e61c947-af7b-45a2-9acc-db9e94c88c7f")
+	)
+	(wire
+		(pts
+			(xy 271.78 93.98) (xy 275.59 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "705f912a-cf86-471c-a5ed-2ef61818a6a5")
 	)
 	(wire
 		(pts
@@ -4645,6 +4675,16 @@
 			(type default)
 		)
 		(uuid "84ea0fc6-2772-4e15-affe-64c3f4a3f6e6")
+	)
+	(wire
+		(pts
+			(xy 265.43 86.36) (xy 271.78 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84f52bcd-e63a-4ef0-b170-1aaa16dedae9")
 	)
 	(wire
 		(pts
@@ -4948,6 +4988,16 @@
 	)
 	(wire
 		(pts
+			(xy 275.59 93.98) (xy 275.59 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cecea198-86cc-41cf-9c2f-527c85caac58")
+	)
+	(wire
+		(pts
 			(xy 107.95 60.96) (xy 110.49 60.96)
 		)
 		(stroke
@@ -5015,6 +5065,16 @@
 			(type default)
 		)
 		(uuid "e537e4f5-7d71-478e-935a-adf06879a581")
+	)
+	(wire
+		(pts
+			(xy 271.78 127) (xy 275.59 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5ac4ffc-0410-43ea-b68f-b37a490c1718")
 	)
 	(wire
 		(pts
@@ -5125,6 +5185,26 @@
 			(type default)
 		)
 		(uuid "f6f1e334-a4f0-4fec-ad75-355888b77870")
+	)
+	(wire
+		(pts
+			(xy 275.59 127) (xy 275.59 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8c421ba-7d6e-47cb-9ab8-37189ac5d1ba")
+	)
+	(wire
+		(pts
+			(xy 271.78 119.38) (xy 275.59 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa925dd1-7a35-40e6-b592-111de117f0a9")
 	)
 	(label "SW"
 		(at 73.66 96.52 0)
@@ -6293,6 +6373,121 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 271.78 123.19 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "04c6375a-8468-418c-850e-9a1b7719d98a")
+		(property "Reference" "C36"
+			(at 269.24 124.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 269.24 121.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 271.78 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 271.78 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM21BZ71E106KE15L"
+			(at 271.78 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 271.78 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 271.78 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b83dcfec-8b90-4ad9-a89a-4aa3d17c574e")
+		)
+		(pin "2"
+			(uuid "79d968f9-93d3-40d0-bae3-de53bc7116cd")
+		)
+		(instances
+			(project "Lamoka1-half"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Lamoka1-half_MOSFET:CSD19536KCS")
 		(at 213.36 39.37 270)
 		(unit 1)
@@ -7371,7 +7566,7 @@
 				)
 			)
 		)
-		(property "Value" "130pF"
+		(property "Value" "44.8pF"
 			(at 146.05 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7414,7 +7609,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM1555C1H131GA01D"
+		(property "MPN" "GRM1555C1H448JA01D"
 			(at 146.05 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -7764,6 +7959,121 @@
 			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 275.59 90.17 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e0ce592-c18e-45db-8665-d6e593f715df")
+		(property "Reference" "C35"
+			(at 273.05 91.1399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 273.05 88.5999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 275.59 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 275.59 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 275.59 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 275.59 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 275.59 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275.59 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "611a5a2c-a8a3-4fb4-90c0-1572c240d2a0")
+		)
+		(pin "2"
+			(uuid "7539fcd3-b267-406b-8b53-5d03d4f15cf1")
+		)
+		(instances
+			(project "Lamoka1-half"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "C35")
 					(unit 1)
 				)
 			)
@@ -8656,7 +8966,7 @@
 				)
 			)
 		)
-		(property "Value" "3.9nF"
+		(property "Value" "15nF"
 			(at 149.86 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8699,7 +9009,7 @@
 				)
 			)
 		)
-		(property "MPN" "CGA4C2C0G1H392J060AA"
+		(property "MPN" "CGA4F1C0G2A153J085AE"
 			(at 149.86 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -9081,7 +9391,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47uF"
+		(property "Value" "22uF"
 			(at 175.26 43.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9125,7 +9435,7 @@
 				)
 			)
 		)
-		(property "MPN" "C3216X5R1E476M160AC"
+		(property "MPN" "C3216X5R1V226M160AC"
 			(at 171.45 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9662,7 +9972,7 @@
 				)
 			)
 		)
-		(property "MPN" "25SVPF180M"
+		(property "MPN" "35SVPK180M"
 			(at 135.89 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -10014,6 +10324,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 275.59 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7611ba87-5772-498a-84df-04dcac9266c8")
+		(property "Reference" "#PWR0601"
+			(at 275.59 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 275.59 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 275.59 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 275.59 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 275.59 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0623ec55-2a0e-400b-9f81-51c72158c1e2")
+		)
+		(instances
+			(project "Lamoka1-half"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "#PWR0601")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Lamoka1_Q1Q2_8pin:CSD17304Q3_8PIN")
 		(at 113.03 55.88 90)
 		(unit 1)
@@ -10121,6 +10509,236 @@
 			(project "Lamoka1-half"
 				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
 					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 275.59 123.19 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76fb0ae6-eea2-488d-826f-7b2bb72e0b29")
+		(property "Reference" "C37"
+			(at 273.05 124.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 273.05 121.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 275.59 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 275.59 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 275.59 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 275.59 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 275.59 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275.59 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "525357b0-dbbd-4ed1-af56-aa0e062d0a98")
+		)
+		(pin "2"
+			(uuid "0c290a97-3d51-49cf-9e5b-7bc45089f1d0")
+		)
+		(instances
+			(project "Lamoka1-half"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "C37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 271.78 90.17 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77d471dc-e083-42bf-84fb-d36e9b653db2")
+		(property "Reference" "C34"
+			(at 269.24 91.1399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 269.24 88.5999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 271.78 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 271.78 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM21BZ71E106KE15L"
+			(at 271.78 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 271.78 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 271.78 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "146e8bda-2877-4232-abc8-9eabb8901c54")
+		)
+		(pin "2"
+			(uuid "13c57618-24ac-435c-a310-00d9542d3369")
+		)
+		(instances
+			(project "Lamoka1-half"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -10931,6 +11549,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 275.59 129.54 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9985a820-3747-42f4-95db-4ac299041e9f")
+		(property "Reference" "#PWR0602"
+			(at 275.59 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 275.59 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 275.59 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 275.59 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 275.59 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "262a3906-b566-48d4-9c4c-9175d3c7cadb")
+		)
+		(instances
+			(project "Lamoka1-half"
+				(path "/c7bb62b6-932f-49c1-a356-0286e905fc0a/33a0e173-cd9f-43d8-aaa7-b518880f6e90"
+					(reference "#PWR0602")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 142.24 81.28 90)
 		(unit 1)
@@ -10952,7 +11648,7 @@
 				)
 			)
 		)
-		(property "Value" "28.7k"
+		(property "Value" "80.6k"
 			(at 142.24 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10995,7 +11691,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0201FR-0728K7L"
+		(property "MPN" "RC0201FR-0780K6L"
 			(at 142.24 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -11674,7 +12370,7 @@
 				)
 			)
 		)
-		(property "Value" "25V 60A N-Ch"
+		(property "Value" "30V 56A N-Ch"
 			(at 123.444 31.496 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11719,7 +12415,7 @@
 				)
 			)
 		)
-		(property "MPN" "CSD16323Q3"
+		(property "MPN" "CSD17304Q3"
 			(at 119.38 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -12306,7 +13002,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 			(at 92.71 39.878 90)
 			(hide yes)
 			(show_name no)
@@ -12339,7 +13035,7 @@
 				)
 			)
 		)
-		(property "MPN" "CSNL1206FT2L00"
+		(property "MPN" "CSNL2512FT2L00"
 			(at 92.71 38.1 90)
 			(hide yes)
 			(show_name no)
@@ -12350,7 +13046,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Stackpole"
 			(at 92.71 38.1 90)
 			(hide yes)
 			(show_name no)
@@ -12476,7 +13172,7 @@
 				)
 			)
 		)
-		(property "MPN" "25SVPF180M"
+		(property "MPN" "35SVPK180M"
 			(at 158.75 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -12939,7 +13635,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "105k"
+		(property "Value" "49.9k"
 			(at 57.15 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12983,7 +13679,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0201FR-07105KL"
+		(property "MPN" "RC0201FR-0749K9L"
 			(at 54.61 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -13120,7 +13816,7 @@
 				)
 			)
 		)
-		(property "MPN" "25SVPF180M"
+		(property "MPN" "35SVPK180M"
 			(at 147.32 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13418,7 +14114,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "49.9k"
+		(property "Value" "64.9k"
 			(at 132.08 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13462,7 +14158,7 @@
 				)
 			)
 		)
-		(property "MPN" "CRCW040249K9FKED"
+		(property "MPN" "CRCW040264K9FKED"
 			(at 129.54 50.8 0)
 			(hide yes)
 			(show_name no)

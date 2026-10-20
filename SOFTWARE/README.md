@@ -10,9 +10,11 @@ move, double-tap to go back, hold to select.
 PIE **V1.9** is the first revision that runs on the **Lamoka1/2**. It scales
 the UI to the main board's five WS2812B LEDs, reads the TMP235 sensors on GPIO 26/27,
 uses the RP2350 hardware TRNG for entropy, and drives the H-bridge power stage
-(see `PIE-v1.9-information.md`). The V1.9 output target is **105 V RMS
-inferred** (about 96–105 V at the outlet depending on load); 115 V is
-unreachable at the 17 V bus, and the power stage has never been energised.
+(see `PIE-v1.9-information.md`). The V1.9 output target is **120.0 V RMS at
+the outlet**, on a **21.75 V bus**. The board has no isolated output sense, so
+the firmware regulates a droop-compensated *estimate* of the outlet —
+`V_out = A_DROOP × V_drive_rms − B_DROOP × I_sec_est` — with the constants
+fitted per unit at bring-up. The power stage has never been energised.
 
 PIE **V1.8** runs on the **Lamoka1-DEV-Brain** (ten LEDs, analog entropy). It does
 **not** run on the main Lamoka1/2 board unmodified:

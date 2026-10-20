@@ -50,7 +50,10 @@ how to test your changes, and how to get a change merged.
 - **Safety first.** The Lamoka1/2 produces mains voltage. Do not energize the
   power stage of a board you built until you have completed the staged bring-up
   in the [README](README.md#build-and-fabrication), and never work on live
-  mains wiring alone.
+  mains wiring alone. The outlet is a 120 V socket whose earth pole is not the
+  board's logic ground; the harness has to provide the protective-earth bond,
+  and a three-prong outlet must never ship with its earth left floating or
+  tied to logic ground.
 
 ## Setup
 
@@ -194,6 +197,13 @@ them.
   (or the current version's document) in the same change, and correct
   [`SOFTWARE/README.md`](SOFTWARE/README.md) if board compatibility changes.
   A behavior change with stale documentation is a defect.
+- The main board is on the **Rev C** revision: a 21.75 V boost bus and a
+  120.0 V RMS outlet target. The derivations, and the findings that were
+  applied and the ones that were not, are in
+  [`HARDWARE/revB-changes.md`](HARDWARE/revB-changes.md); read it before
+  changing a component value, because several of the values in the schematic
+  exist because of it and one published finding (the 5 mΩ shunt) was wrong and
+  is withdrawn.
 - There are two firmware heads: PIE V1.8 for the DEV-Brain (LEDs and button,
   bench-tested) and PIE V1.9 for the main board. V1.9 is the first power-stage
   firmware — arming, PWM dead-time, soft start, closed-loop regulation, and
@@ -254,6 +264,14 @@ kicad-cli sch erc --output "HARDWARE/Kicadfiles/Lamoka1-half/ERC.rpt" \
 kicad-cli pcb drc --schematic-parity --output "HARDWARE/Kicadfiles/Lamoka1-half/DRC.rpt" \
   "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pcb"
 ```
+
+The main board is on the Rev C revision and the fabrication package in
+`HARDWARE/Lamoka1-half fab files/` is regenerated from the current layout
+(gerbers, drill, BOM, pick-and-place and interactive BOM). If you change the
+schematic or the layout, regenerate the package with the commands in that
+folder's README and update the counts in it — the BOM is built from a netlist
+by `tools/make_fab_bom.py`, and the pick-and-place comes straight from the
+layout.
 
 **Verify connectivity by netlist, not by eye.** A change that preserves the
 netlist is provably connectivity-neutral. Export the netlist before and after

@@ -1,6 +1,6 @@
 ** Drc report for Lamoka1-half.kicad_pcb **
-** Created on 2026-10-19T16:32:07 **
-** Report includes: Errors, Warnings **
+** Created on 2026-10-20T08:01:17 **
+** Report includes: Errors, Warnings, Exclusions **
 
 ** Found 7 DRC violations **
 [silk_edge_clearance]: Silkscreen clipped by board edge
@@ -29,19 +29,10 @@
 
 ** Found 0 unconnected pads **
 
-** Found 17 Footprint errors **
-[footprint_symbol_field_mismatch]: Missing symbol field 'MPN' in footprint
-    Local override; warning
-    @(185.6476 mm, 58.7476 mm): Footprint J1
-[footprint_symbol_field_mismatch]: Missing symbol field 'MPN' in footprint
-    Local override; warning
-    @(121.8895 mm, 125.6679 mm): Footprint J2
+** Found 14 Footprint errors **
 [footprint_symbol_mismatch]: Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ
     Local override; warning
     @(103.2800 mm, 100.9600 mm): Footprint J4
-[footprint_symbol_field_mismatch]: Missing symbol field 'MPN' in footprint
-    Local override; warning
-    @(124.5307 mm, 65.2876 mm): Footprint J5
 [footprint_symbol_mismatch]: Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ
     Local override; warning
     @(103.2800 mm, 105.5100 mm): Footprint J6

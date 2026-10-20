@@ -1,6 +1,6 @@
 > [!Warning]
 > This page describes the **intended** boot sequence for the Lamoka1/2. Parts of it are now
-> implemented by **PIE V1.9** (input-rail and 17 V bus validation, soft-start of the
+> implemented by **PIE V1.9** (input-rail and 21.75 V bus validation, soft-start of the
 > H-bridge, closed-loop regulation, fault latching); other parts (phase-4 output
 > measurement, the fan has no PWM/tach, etc.) remain design targets. PIE V1.8 does not
 > run on the main board — see [`README.md`](README.md).
@@ -26,7 +26,7 @@ until the low-voltage side proves it is alive.
 
  ## Third phase
 
- Up next, the MUX (ADS7128IRTER) will detect the output of the 11-14v to 17v boost converter (LM5122MHX/NOPB made by TI). If this rail is within 3/4 of a volt of 17v, this stage will be verified as correctly operating. 
+ Up next, the MUX (ADS7128IRTER) will detect the output of the 11-14v to 21.75v boost converter (LM5122MHX/NOPB made by TI). If this rail is within 0.9 of a volt of 21.75v, this stage will be verified as correctly operating. Once the bridge is running, the window widens to ±1.5 V.
 
  ## Fourth phase
 

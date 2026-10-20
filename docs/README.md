@@ -23,8 +23,10 @@ know where to look.
   DEV-Brain firmware.
 - [PIE v1.9 information](../SOFTWARE/Portal%20Interface%20Engine/PIE-v1.9-information.md)
   — the main-board firmware: the five-LED interface plus arming, PWM dead-time,
-  soft start, closed-loop regulation, and supervisory protection. Never run on
-  hardware.
+  soft start, closed-loop regulation, and supervisory protection. Rev C
+  retargets that regulation to 120.0 V RMS at the outlet on a 21.75 V bus, from
+  a droop-compensated estimate of the outlet rather than a direct measurement.
+  Never run on hardware.
 - [Lamoka1-DEV-Brain guide](../Lamoka1-DEV-Brain/Readme.md) — the control
   board, its test results, and how to order it.
 
@@ -56,6 +58,12 @@ know where to look.
   (PIE V1.9) compiles clean but has never run on hardware, and the power stage
   has never been energized — a freshly built Lamoka1/2 will not produce output
   in its current state.
+- The outlet is a 120 V mains socket. Its earth pole is not the board's
+  ground: the harness has to provide the protective-earth bond (or the unit
+  has to be marked double-insulated), and a three-prong outlet must never be
+  shipped with its earth left floating or tied to logic ground. See
+  [`HARDWARE/Transformer-wiring.md`](../HARDWARE/Transformer-wiring.md) and
+  [`HARDWARE/revB-changes.md`](../HARDWARE/revB-changes.md).
 
 ## Contributing
 

@@ -119,8 +119,15 @@ class DocumentationTests(unittest.TestCase):
         for path in tracked_files():
             if not path.lower().endswith(".md"):
                 continue
-            directory = os.path.dirname(repo_path(*path.split("/")))
-            text = read_text(repo_path(*path.split("/")))
+            # A file can be deleted in the worktree before the deletion is
+            # staged, which leaves it in the index but not on disk.  There is
+            # nothing to check in that case; the same guard appears in the
+            # credential scan below.
+            full = repo_path(*path.split("/"))
+            if not os.path.isfile(full):
+                continue
+            directory = os.path.dirname(full)
+            text = read_text(full)
             # Markdown destinations come in two shapes: `](plain/path)` and
             # `](<path with spaces>)`.
             targets = re.findall(r"\]\(<([^>]+)>", text)

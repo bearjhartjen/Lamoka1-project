@@ -1,16 +1,17 @@
 # Transformer wiring at J1
 
-> Status: derived 2026-10-18 from the Triad Magnetics VPT24-4170 catalogue sheet
-> (published 2021-10-12), the as-built netlist
-> (`HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_sch`) and the board. The
-> board has never been energised. Confirm the lead map against the physical unit
-> (nameplate plus a continuity check) before the first power-up.
+> Status: derived 2026-10-18 from the Triad Magnetics VPT24-4170 catalogue
+> sheet (published 2021-10-12), the as-built netlist
+> (`HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_sch`) and the board;
+> revised 2026-10-20 for **Rev C**, which fits the **VPT24-6670**. The
+> board has never been energised. Confirm the lead map against the physical
+> unit (nameplate plus a continuity check) before the first power-up.
 
 ## Why this file exists
 
-`J1` takes the off-board VPT24-4170 transformer, and until now the repository
-recorded nothing about which lead goes on which terminal. The net names at `J1`
-are **lead colours**, and on the Triad sheet the same colours are called "Input"
+`J1` takes the off-board transformer, and until now the repository recorded
+nothing about which lead goes on which terminal. The net names at `J1` are
+**lead colours**, and on the Triad sheet the same colours are called "Input"
 and "Output" — because the transformer is sold to step 115 V *down* to 12 V. This
 board runs it the other way, as a step-up inverter, so the roles are reversed.
 Wiring the leads colour-for-colour gives a board that makes about 1.9 V at the
@@ -18,10 +19,29 @@ outlet instead of ~120 V. Build from this file instead.
 
 ## The part
 
-Triad Magnetics `VPT24-4170`: 100 VA toroidal, dual primary and dual secondary,
-eight leads, 9 % regulation typical and a 45 °C temperature rise. The sheet
-notes that the windings are designed to be series- or parallel-connected and are
-not intended to be used independently.
+Triad Magnetics `VPT24-6670`: 160 VA toroidal, dual primary and dual
+secondary, eight leads, 8 % regulation typical (from full load to no load),
+89 % efficiency at full load, a 50 °C temperature rise, 4 kV hipot and a Class
+B (130 °C) insulation system. The sheet notes that the windings are designed to
+be series- or parallel-connected and are not intended to be used
+independently.
+
+| Property | Value |
+| --- | --- |
+| Maximum power | 160 VA |
+| Input | Series 230 VAC / Parallel 115 VAC, 50/60 Hz |
+| Output | Series 24 VAC CT @ 6.67 A / Parallel 12.0 VAC @ 13.34 A |
+| Regulation | 8 % TYP from full load to no load (no maximum published) |
+| Temperature rise | 50 °C TYP |
+| Hipot | 4000 VAC, primary to secondary |
+| Efficiency | 89 % TYP at full load |
+| Insulation | Class B (130 °C) |
+| Mechanical | Ø106 × 52 mm, 1.6 kg, M6 × 60 mm bolt, 8 in UL 1015 leads (primaries 22 AWG, secondaries 16 AWG) |
+
+The `-6670` has the **same eight leads in the same colours** as the
+`VPT24-4170` it replaces, and the same jumper scheme, so the `J1` harness map
+below is unchanged. What changes is the current the harness has to carry, the
+enclosure volume (Ø88 × 51 mm and 1.0 kg before), and the mounting bolt.
 
 | Winding | Leads | Series connection | Parallel connection |
 | --- | --- | --- | --- |
@@ -40,13 +60,23 @@ the two leads of one parallel-connected winding:
 | 5, 6 | `/BLACK` | Outlet, J5 poles 1–2 |
 | 7, 8 | `/RED` | Outlet, J5 poles 5–6 |
 
-(`J5` is the three-pole outlet block: 1–2 = `/BLACK`, 3–4 = `GND`/earth,
-5–6 = `/RED`.)
+(`J5` is the three-pole outlet block: 1–2 = `/BLACK`, 3–4 = the earth pole
+on its own `/PE` net, 5–6 = `/RED`.)
 
-The bridge runs on the 17 V rail, so it must drive the **12 V winding**; the
-outlet must take the **115 V winding**. That gives 17 V × 115/12 ≈ 163 V RMS open
-circuit and about 148 V at the full 100 VA load, leaving the headroom the
-firmware needs to hold 120 V.
+The bridge runs on the **21.75 V bus**, so it must drive the **12 V winding**;
+the outlet must take the **115 V winding**. At the PWM dead-time clamp
+(`m = 0.959733`) the drive winding sees about 14.8 V RMS on a nominal bus, and
+the transformer's true no-load ratio (115 / 12.96 = 8.8735) puts the no-load
+outlet at about **131 V**. At the top of the bus tolerance band it reaches
+about 135 V. The working ceiling is the firmware's own `OUTLET_V_MAX` = 125 V
+on the estimated outlet.
+
+The 12.0 V nameplate is a **full-load** rating. The open-circuit secondary is
+12.0 × 1.08 = 12.96 V, so the true no-load turns ratio is 8.8735, not
+`115/12 = 9.583`. The firmware uses the no-load ratio (and the series
+impedance referred to the 115 V side, 5.666 Ω) to estimate the outlet; both
+constants are fitted per unit at bring-up. See
+[`HARDWARE/revB-changes.md`](revB-changes.md).
 
 ## The connection
 
@@ -73,28 +103,46 @@ colour-for-colour, the bridge drives the 115 V winding and the outlet gets the
 
 ## Hazards
 
-- Fitted as in the table, the drive side never sees more than the 17 V rail, and
-  the outlet side never sees more than ~163 V RMS — which is the side the 1.5 mm
-  isolation rule in `Lamoka1-half.kicad_dru` covers.
+- Fitted as in the table, the drive side never sees more than the 21.75 V bus,
+  and the outlet side never sees more than about 135 V RMS — which is the side
+  the 1.5 mm isolation rule in `Lamoka1-half.kicad_dru` covers.
+- **60 Hz only.** 138 V RMS at 60 Hz on the 115 V winding is 100 % of this
+  transformer's design flux (the design point is 230 V at 50 Hz). At 50 Hz the
+  same outlet voltage would over-excite the core, so the firmware must not
+  offer a 50 Hz mode.
 - Never feed the mains into `J1`. The 12 V winding is a low-voltage winding:
   mains across it puts the H-bridge directly across the line.
 - Do not use the 230 V series connection for the outlet. Series-connecting the
-  primaries (jumper GRAY–VIOLET, taking the outlet at BLUE and BROWN) raises the
-  step-up ratio to 230:12, and the outlet would see about 326 V RMS instead of
-  163 V. That is past the 300 V line where IPC-2221B asks 2.5 mm of separation,
-  while the board's isolation rule and layout are built for 1.5 mm at 151–300 V.
-- `J5`'s earth poles are tied to board `GND`, so board `GND` is protective
-  earth. A mis-wire that puts the outlet potential onto the bridge leads shorts
-  to earth through the bridge.
+  primaries (jumper GRAY–VIOLET, taking the outlet at BLUE and BROWN) doubles
+  the step-up ratio, so the no-load outlet would be about 262 V RMS instead of
+  about 131 V — a 370 V peak, past the 300 V line where IPC-2221B asks 2.5 mm
+  of separation, while the board's isolation rule and layout are built for
+  1.5 mm at 151–300 V.
+- **The outlet's earth pole.** Rev C cuts the old `J5` 3/4-to-`GND` tie, and
+  that cut is in the sources: `J5` pins 3/4 sit on their own `/PE` net, not on
+  board `GND`. The old tie made every GND point on the board an earth
+  conductor, so a mis-wire that put the outlet potential onto the bridge leads
+  shorted to earth through the bridge — see
+  [`HARDWARE/revB-changes.md`](revB-changes.md). Board `GND` is therefore no
+  longer the outlet earth, and the 115 V secondary has no earth of its own
+  until the harness provides one: bond `J5` 3/4 to a chassis PE stud (M3) for
+  a metal enclosure (Class I), or leave it unbonded and mark the unit
+  double-insulated (Class II) for a plastic one. A three-prong outlet must
+  never ship with its earth floating or tied to the board's logic ground.
 
 ## Verify before first power-up
 
 1. Identify the windings on the physical unit by continuity: the 12 V winding is
-   the low-resistance one (a 100 VA mains winding is several ohms; the 12 V
+   the low-resistance one (a 160 VA mains winding is several ohms; the 12 V
    winding is a small fraction of an ohm).
 2. Confirm the lead colours against the nameplate or catalogue sheet.
 3. Buzz out `J1` to the bridge and to `J5` to confirm the net map above.
-4. Record any deviation here.
+4. With the transformer disconnected from the board, apply **115.00 V RMS at
+   60 Hz** to the 115 V winding and measure the **open-circuit** 12 V winding.
+   About 12.96 V confirms the full-load convention and the no-load ratio of
+   8.8735; about 12.00 V would mean the other convention and every outlet
+   number would shift. Record the reading here.
+5. Record any deviation here.
 
 ## The cleaner long-term fix (not done)
 

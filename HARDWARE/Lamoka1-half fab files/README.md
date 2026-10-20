@@ -19,8 +19,8 @@ open hardware, and the whole point is that you can build one yourself.
 | Path | What it is |
 | --- | --- |
 | `Lamoka1-half/` | Nine Gerber layers (`F_Cu`, `B_Cu`, `F_Mask`, `B_Mask`, `F_Paste`, `B_Paste`, `F_Silkscreen`, `B_Silkscreen`, `Edge_Cuts`), the Gerber job file, the Excellon drill file, the drill map and the drill report |
-| `Lamoka1-half BOM.csv` | PCBWay 9-column assembly BOM: 70 lines covering 112 placements, no blank fields |
-| `Lamoka1-half Pick and Place.csv` | 112 placements, 57 front / 55 back (`... top.csv` and `... bottom.csv` are the per-side splits) |
+| `Lamoka1-half BOM.csv` | PCBWay 9-column assembly BOM: 70 lines covering 116 placements, no blank fields |
+| `Lamoka1-half Pick and Place.csv` | 116 placements, 57 front / 59 back (`... top.csv` and `... bottom.csv` are the per-side splits) |
 | `Lamoka1-half interactive BOM.html` | Self-contained interactive placement and BOM viewer, generated with [InteractiveHtmlBom](https://github.com/openscopeproject/InteractiveHtmlBom); open it in a browser and click a part to highlight it on the board |
 | `README.md` | This file |
 
@@ -53,10 +53,11 @@ order time; add the equivalent here once the board has been ordered.
 
 ## Assembly
 
-- 112 placements: 57 front, 55 back.
-- Mostly 0402 / 0603 / 0805 / 1206 chip parts, two VSON-8 MOSFETs, two SMA
-  diodes, four SMD radial electrolytic cans (`Cin1`, `Cout1`-`Cout3`) and one
-  USB-C receptacle (`J3`: SMT pads plus a through-hole shield).
+- 116 placements: 57 front, 59 back.
+- Mostly 0402 / 0603 / 0805 / 1206 chip parts, one 2512 current-sense shunt,
+  one 3216 tantalum capacitor, two VSON-8 MOSFETs, two SMA diodes, four SMD
+  radial electrolytic cans (`Cin1`, `Cout1`-`Cout3`) and one USB-C receptacle
+  (`J3`: SMT pads plus a through-hole shield).
 - Through-hole / hand-fit lines in the BOM: `J1` (transformer), `J2`, `J5`
   (Wago terminals), `SW1` (button) and `Q3`-`Q6` (TO-220 H-bridge MOSFETs).
 - Deliberately absent from the BOM and CPL, because they are board features
@@ -73,29 +74,67 @@ order time; add the equivalent here once the board has been ordered.
    again, refill the zones (`B` in pcbnew) or the plotted pour will not obey
    the rule. The stored fills were checked against a fresh refill before this
    package was plotted.
-2. Everything except the secondary runs at 17 V or below (11-14 V input, 17 V
-   boost rail, 5 V / 3v3 / 1V1 logic), so the 0.18 mm netclass clearance is
-   correct there. The secondary also stays 3.4 mm inside the board edge.
+2. Everything except the secondary runs at 21.75 V or below (11-14 V input,
+   21.75 V boost bus, 5 V / 3v3 / 1V1 logic), so the 0.18 mm netclass
+   clearance is correct there. The secondary also stays 3.4 mm inside the
+   board edge.
 3. **Before first power-up** — not a fabrication item, but the same folder will
-   be used on the bench: the VPT24-4170 transformer is mounted off-board, and
+   be used on the bench: the VPT24-6670 transformer is mounted off-board, and
    the lead-to-terminal map is in `HARDWARE/Transformer-wiring.md`. Read it
    before wiring: the `J1` net names are lead colours, and this transformer's
    BLUE/BROWN leads are its 115 V winding while the bridge sits on the
    `/BLUE`/`/BROWN` nets, so matching colours gives about 1.9 V at the outlet.
-4. **Read the 2026-10-18 electrical reviews before ordering.** Together they
-   recommend a minimum change set for the board itself: `C13` to 22 µF, a supply
-   bypass at `U5`/`U6` pin 7, `Rsense1` re-derived from 2 mΩ, and a fusing
-   decision. The transformer wiring above is the fifth item, and that one is
-   documented rather than changed. Nothing in this folder reflects those
-   proposals yet — as it stands the package matches the board as designed and
-   drawn. The reviews' bench and firmware items (plug-in inrush before the first
-   battery connection, dead time, start-up sequencing) live in the same section
-   of `AGENTS.md`, "Open findings from the 2026-10-18 reviews".
+   The eight-lead colour map is the same as the 100 VA part it replaces, so
+   the harness map does not change — but the harness current capability rises
+   and the part is 1.6 kg rather than 1.0 kg, so the enclosure and the
+   strain relief have to be re-dimensioned.
+4. **The 2026-10-18 electrical reviews have been acted on in Rev C.** The
+   board now carries the 22 µF tantalum `C13`, the local bypass at `U5`/`U6`
+   pin 7, the 68 kΩ AIN dividers, the 30 V `Q1`, the 35 V bus capacitors and
+   the 2512 shunt. Two things in the reviews are **not** on the board: the
+   `Rsense1` value stays at 2 mΩ (the 5 mΩ proposal was wrong for a 100 W
+   single-phase load), and the fusing decision is a harness item. The `J5`
+   earth cut is made in Rev C — see the Rev C section below. The derivations
+   live in `HARDWARE/revB-changes.md`; the open items live in the same section
+   of `AGENTS.md`, "Findings from the 2026-10-18 reviews".
+5. **A third-party schematic review is in the repository.** Tomachie scored the
+   design **93/100** on its free pass; the report and a screenshot are in
+   `HARDWARE/Kicadfiles/Lamoka1-half/Reviews/`, and the live report is at
+   <https://tomachie.com/r/0a968485-5479-41e2-b24f-00a293061b1e/Lamoka1-half_report.html>.
+   It carries no AI findings — that pass is a paid add-on and was not bought.
+   It does confirm the missing USB ESD protection on `CC1`/`CC2` and the
+   USB-C shell, and its remaining deductions are footprint naming and
+   test-point coverage, not circuit errors.
+
+## Rev C
+
+The revision applied to the schematic and the board. Every entry below is in
+the design files in this repository, and this package was re-plotted from them
+after the change:
+
+| Reference | Was | Now |
+| --- | --- | --- |
+| `Rfbt1` | 49.9 kΩ | 64.9 kΩ — the 21.75 V bus |
+| `Rslope1`, `Rcomp1` | 105 kΩ, 28.7 kΩ | 49.9 kΩ, 80.6 kΩ |
+| `Ccomp1`, `Ccomp2` | 3.9 nF, 130 pF | 15 nF, 44.8 pF |
+| `R27`, `R29`, `R31` | 43.2 kΩ, 45.3 kΩ, 45.3 kΩ | 68 kΩ each |
+| `Q1` | `CSD16323Q3` (25 V) | `CSD17304Q3` (30 V) |
+| `Rsense1` | 2 mΩ 1206 | 2 mΩ 2512 2 W (`CSNL2512FT2L00`) |
+| `Cout1`–`Cout3` | 25 V 180 µF | 35 V 180 µF (`35SVPK180M`) |
+| `Coutx1` | 47 µF 1206 | 22 µF 1206 35 V (`C3216X5R1V226M160AC`) |
+| `C13` | 10 µF 0402 MLCC | 22 µF 3216 tantalum (`T491A226K010AT`) |
+| `C34`/`C36`, `C35`/`C37` | — | 10 µF 0805 and 100 nF 0603 at each gate driver's VDD pin (four new placements) |
+| `J5` pins 3/4 | on `GND` | their own `/PE` net — the outlet earth is no longer the board's logic ground |
+
+The regenerated package has **70 BOM lines covering 116 placements**,
+and a pick-and-place of **116 placements, 57 front and 59 back**. The board
+outline, the drill table (372 plated and 6 unplated holes) and the via count
+(322) are unchanged.
 
 ## Known warnings, reviewed and accepted
 
 `kicad-cli pcb drc --schematic-parity` on this board reports **7 DRC warnings,
-no errors, no unconnected items, and 17 schematic-parity warnings**:
+no errors, no unconnected items, and 14 schematic-parity warnings**:
 
 - 2 x silkscreen clipped by the board edge — two segments of `J3`'s outline
   cross the edge because the USB-C receptacle overhangs it. Cosmetic.
@@ -109,7 +148,7 @@ no errors, no unconnected items, and 17 schematic-parity warnings**:
   have no room for larger text, and the connector references plus the
   "DANGER! HIGH VOLTAGE" legend are 1.0-1.6 mm.
 
-The 17 parity warnings compare the schematic symbols with the board footprints.
+The 14 parity warnings compare the schematic symbols with the board footprints.
 All of them are long-standing, none of them affects a fabrication or assembly
 file, and the project keeps `footprint_symbol_mismatch`,
 `footprint_symbol_field_mismatch` and `net_conflict` at *warning* severity for
@@ -119,13 +158,14 @@ of the same kind. They are:
 - 12 x `net_conflict` on `U4` — the LM5122 footprint carries twelve `V`
   through-hole thermal-via pads inside the PowerPAD. The symbol deliberately
   has no such pins; the pads are part of the footprint's thermal design.
-- 3 x "Missing symbol field 'MPN' in footprint" (`J1`, `J2`, `J5`) — MPN data
-  lives on the schematic symbols, which is what feeds the assembly BOM. The
-  board footprints do not need to repeat it.
 - 2 x "Exclude from bill of materials settings differ" (`J4`, `J6`) — the board
   footprints carry the exclude-from-BOM attribute that keeps the fan wire pads
   out of the BOM and CPL. The schematic symbols do not, because the schematic
   is also the reference of what is drawn.
+
+(Three further warnings — "Missing symbol field 'MPN' in footprint" on `J1`,
+`J2` and `J5` — were resolved in Rev C: the MPN data now lives on the board
+footprints as well as on the schematic symbols.)
 
 A parity check that is not asked for reports nothing: `kicad-cli pcb drc`
 without `--schematic-parity` prints "0 Footprint errors" and hides all of the

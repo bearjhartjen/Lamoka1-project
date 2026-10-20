@@ -128,10 +128,10 @@ the five LEDs and is the only place the bridge can be armed or disarmed:
 * **Faulted** — pulsing red (all five LEDs).
 * **No sensors** (ADS7128 not responding) — amber dot on LED 0.
 * **Disarmed** — dim blue standby dot on LED 0.
-* **Waiting for bus** (armed, 17 V rail not yet valid) — amber pulse on LED 0.
+* **Waiting for bus** (armed, 21.75 V bus not yet valid) — amber pulse on LED 0.
 * **Starting** (soft-start ramp) — green bar growing left to right, tracking the
   bus voltage.
-* **Running** — green bar whose height tracks the output regulation (0–105 V RMS).
+* **Running** — green bar whose height tracks the output regulation (0–120 V RMS).
 * **Armed, input rail invalid** — dim amber on LED 0.
 
 Gestures in the Inverter portal:
@@ -241,20 +241,79 @@ On every iteration:
 
 #### Topology
 
-Battery 11–14 V → `Rsense1` → LM5122 boost → 17 V bus → UCC27735 gate drivers →
-Q3/Q4/Q5/Q6 H-bridge → 12 V transformer winding → 105 V nominal outlet. The LM5122
-runs in hardware; the MCU only generates PWM. The U5/U6 VDD rails and the
-bootstrap diodes run from CSP (the 11–14 V battery rail), not the 17 V bus. 115 V
-RMS is unreachable on a 17 V bus with this transformer — full load needs m ≈ 1.10
-allowing for the 9 % regulation, and `PWM_M_MAX` is 0.9597 — so 105 V is the
-target for this board revision. 115 V would need the Rev C bus/transformer
-changes. The Rev B change set (`HARDWARE/revB-changes.md`) stays open.
+Battery 11–14 V → `Rsense1` → LM5122 boost → **21.75 V bus** → UCC27735 gate
+drivers → Q3/Q4/Q5/Q6 H-bridge → 12 V winding of a Triad **VPT24-6670** → 115 V
+winding → **120.0 V RMS regulated outlet**. The LM5122 runs in hardware; the MCU
+only generates PWM. The U5/U6 VDD rails and the bootstrap diodes run from CSP
+(the 11–14 V battery rail), not the 21.75 V bus.
 
-The firmware regulates the **inferred** output (the drive-winding differential
-× 9.583) to 105 V. The transformer's 9 % regulation means the actual outlet is
-about 105 V at no load and about 96 V at 100 W; the board has no direct output
-sense. Holding 105 V at full load would need the Rev C 19.4 V bus or an
-output-sense correction.
+The bus is set by the LM5122's own 1.2 V feedback reference:
+`1.2 × (1 + 64.9/3.79) = 21.749 V`, with `Rfbt1` = 64.9 kΩ and `Rfbb1` =
+3.79 kΩ. With 1 % resistors and a 1.188/1.2/1.212 V reference the tolerance
+band is 21.13 V to 22.39 V.
+
+#### How the outlet is regulated
+
+**The board has no isolated output sense**, so the firmware regulates an
+*estimate* of the outlet rather than a measurement of it. It:
+
+1. measures the **drive winding** (12 V) RMS from the bridge midpoint
+   differential (`AIN2 − AIN3`);
+2. estimates the output power from the battery-side power (`AIN0` × `AIN4`),
+   less the auxiliary load, times an efficiency constant;
+3. estimates the outlet from the drive and the load with the transformer's
+   series impedance (droop compensation):
+
+   ```
+   V_out_est = A_DROOP × V_drive_rms − B_DROOP × I_sec_est
+   ```
+
+   solved in closed form (see `outletEstimate()`);
+4. closes the loop on `V_out_est`.
+
+`A_DROOP` is the transformer's **no-load** ratio and `B_DROOP` its series
+impedance referred to the 115 V secondary. The nameplate 12.0 V is a
+**full-load** rating, so the open-circuit secondary is 12.0 × 1.08 = 12.96 V and
+
+```
+A_DROOP = 115 / 12.96 = 8.8735
+B_DROOP = (12.96 − 12.0)/13.34 × A_DROOP² = 5.666 Ω
+```
+
+`115/12 = 9.583` is the *full-load* ratio and is wrong here: it overstates the
+outlet by 8 %, so the firmware would believe the outlet was at 120 V when it
+was really at about 111.5 V.
+
+**Both constants are per-unit.** The 8 % regulation is a TYP with no published
+maximum, so the catalogue values are only the starting point. The bring-up
+procedure fits both of them:
+
+- **No load.** Arm the inverter with nothing connected to the outlet and let it
+  settle. Read the drive winding RMS from the serial report (`VPRI=`) and
+  measure the open-circuit outlet with a DMM at the receptacle (`V_out0`).
+  Then `A_DROOP = V_out0 / V_drive_rms`. This measures the no-load ratio
+  directly, so it does not depend on the catalogue figure at all.
+- **Two load points.** Connect a known resistive load, say 50 W and then 100 W.
+  For each, measure the outlet voltage (`V_out1`, `V_out2`) with the DMM and
+  the secondary current (`I_sec1`, `I_sec2`) with a clamp meter on the 115 V
+  winding, and record the drive RMS (`V_drive_rms1`, `V_drive_rms2`) from the
+  report. With `x_i = A_DROOP × V_drive_rms_i` the two load points give
+  `B_DROOP = (x1 − x2)/(I_sec1 − I_sec2)` — the slope of `V_out` against
+  `I_sec`, not against the load current on the 12 V side.
+- Enter `A_DROOP` and `B_DROOP` in `V1.9.ino` and rebuild.
+
+A DMM reads to about 0.5 %, and the two load points span most of the droop, so
+`A_DROOP` comes out to about 0.5 % and `B_DROOP` to about 2 %. That puts the
+estimated outlet within roughly 1 % of the measured one across the load range —
+which is the accuracy the 120 V target is actually held to, because there is no
+isolated output measurement for the loop to close on. The estimate of the output
+*power* is about 10 % high (`ETA_BUCK_HBRIDGE` assumes 0.92 for the whole
+chain where the transformer alone is 0.89); that error is proportional to the
+load, so it is absorbed exactly by the fitted `B_DROOP`.
+
+A direct isolated output sense (an AMC1311B) is designed but **not in this
+revision**. Until it is, the 125 V receptacle ceiling is enforced on the
+estimate.
 
 #### PWM dead-time scheme
 
@@ -311,11 +370,11 @@ The bridge is disarmed at boot and can only be armed from the Inverter portal.
 Once armed it sequences automatically:
 
 `POWER_IDLE` → (sensors valid and input rail in range) → `POWER_WAIT_BUS`
-→ (17 V bus within ±0.40 V of 17 V) → `POWER_STARTING` (soft-start ramp over
-1.5 s, raising m from 0 to 0.30) → `POWER_RUNNING` (closed-loop regulation toward
-105 V RMS).
+→ (21.75 V bus within ±0.90 V of 21.75 V) → `POWER_STARTING` (soft-start ramp
+over 1.5 s, raising m from 0 to 0.30) → `POWER_RUNNING` (closed-loop regulation
+toward 120.0 V RMS at the outlet).
 
-While running, the bus must stay within 17 ± 0.40 V; the first out-of-range
+While running, the bus must stay within 21.75 ± 1.5 V; the first out-of-range
 sample gets a one-cycle grace before the fault latches. While disarmed and not
 faulted, the ADS7128 probe is retried every 500 ms, so a recovered chip is picked
 up without a reset. Clearing a fault forces a fresh probe and a full five-channel
@@ -332,15 +391,34 @@ absent:
 * Over-current: input current ≥ 20 A (warning at 15 A).
 * Over-temperature: either TMP235 ≥ 85 °C (warning at 60 °C).
 * Input rail out of 11–14 V (±0.2 V hysteresis).
-* Bus voltage out of 17 ± 0.40 V while running (the start window is the same).
-* Output over-voltage: inferred output > 120.75 V RMS (105 V × 1.15).
+* Bus voltage out of 21.75 ± 1.5 V while running (the start window is ±0.90 V).
+* Output over-voltage: estimated outlet > 126.0 V RMS (120.0 V × 1.05). The hard
+  ceiling is `OUTLET_V_MAX` = 125 V, the NEMA 5-15R receptacle rating; this
+  trip is the backstop above it.
+* Output out of reach: the regulator is pinned at the PWM clamp
+  (`PWM_M_MAX` = 0.959733) and the estimated outlet is still more than 0.5 V
+  below the target, for 20 consecutive control ticks (200 ms). The check comes
+  first so that no other fault masks it, and it is debounced because the
+  integrator needs about 100 ms to walk into the clamp after a load step. Only
+  the PWM clamp counts: the drive ceiling also carries the `OUTLET_V_MAX`
+  receptacle limit, which binds at low load, and sitting at that ceiling is
+  correct behaviour rather than a failure.
+* Load too heavy: estimated output power > 150 W for 50 consecutive control
+  ticks (500 ms). The VPT24-6670 is 160 VA, and above that limit the outlet is
+  asking for more than the winding can pass continuously. The estimate runs
+  about 10 % high, so this is roughly 135 W at the outlet. It is only
+  evaluated while the bridge is running, never during the soft-start ramp.
 * Output missing: a proportional plausibility check — expected output =
-  m·vBus·9.583/√2; if the expected value exceeds 15 V and the measured output
-  stays below 60 % of it for 5 consecutive 100 Hz ticks, the fault
+  m·vBus·`A_DROOP`/√2; if the expected value exceeds 15 V and the measured
+  output stays below 60 % of it for 5 consecutive 100 Hz ticks, the fault
   `bridge output missing` latches. This monitors the bridge midpoints, not the
   outlet: an open transformer secondary is invisible to these dividers.
-* DC offset on the primary > 1.0 V for 3 consecutive 100 Hz ticks (a 1 V offset
-  saturates the transformer in ~90 ms).
+* DC offset on the primary > 1.0 V for 3 consecutive 100 Hz ticks. The
+  firmware's comment gives about 90 ms from a 1 V offset to saturation, but that
+  figure predates the Rev C flux re-derivation, which puts the knee at roughly
+  11–13 ms at the operating point. The threshold is unchanged in this
+  revision; re-deriving it is an open item, not something this change silently
+  alters.
 * ADS7128 communication failure while armed (NACK, conversion timeout, or read
   error).
 
@@ -352,19 +430,31 @@ recovery does not need an MCU reset.
 #### Measurements
 
 The ADS7128 (7-bit address `0x10`, ADDR open) is scanned in round-robin across
-five channels (AIN0 input rail, AIN1 17 V bus, AIN2/AIN3 bridge midpoints, AIN4
-INA240 current at 0.1 V/A), with conversions throttled to one per 200 µs — each
-channel updates at roughly 1 kHz. The I²C timeout is capped at 2 ms so a stuck bus
-cannot block the loop for the default 1000 ms. The bridge-midpoint differential is
-accumulated into a 128-sample ring at a minimum 130 µs cadence (≈ 16.6 ms, about
-one mains cycle); the RMS and DC estimates are considered valid once 96 samples
-have been collected. Dividers: AIN0 ×0.2151, AIN1 ×0.1880, AIN2/3 ×0.1808. AIN1
-with R27 = 43.2 kΩ clips at 17.56 V; until R27 is changed to 68 kΩ and
-`DIV_AIN1` is updated to 10/78 (`HARDWARE/revB-changes.md`) the bus windows stay
-under that clip so a clipped reading cannot be mistaken for a valid bus
-voltage. Output RMS is inferred as
-`(AIN2 − AIN3) × 9.583` (transformer 115:12). Regulation gain: 0.0003 per 10 ms
-tick per volt of error, with the amplitude step slew-limited to 0.010 per tick.
+five channels (AIN0 input rail, AIN1 21.75 V bus, AIN2/AIN3 bridge midpoints,
+AIN4 INA240 current at 0.1 V/A), with conversions throttled to one per 200 µs —
+each channel updates at roughly 1 kHz. The I²C timeout is capped at 2 ms so a
+stuck bus cannot block the loop for the default 1000 ms. The bridge-midpoint
+differential is accumulated into a 128-sample ring at a minimum 130 µs cadence
+(≈ 16.6 ms, about one mains cycle); the RMS and DC estimates are considered
+valid once 96 samples have been collected.
+
+Dividers: AIN0 ×0.2151, AIN1 ×0.1282, AIN2/3 ×0.1282. `R27`, `R29` and `R31`
+are all 68 kΩ against 10 kΩ bottoms, so every one of them has a 25.74 V full
+scale; the bus sits at 2.79 V, well below the 3.3 V clip. (The old 43.2 kΩ bus
+divider clipped at 17.56 V and the old 45.3 kΩ midpoint dividers at 18.25 V —
+both below the Rev C bus, which is why they changed.)
+
+The drive RMS is measured from the bridge midpoint differential and the outlet
+is **estimated**, not measured: `V_out_est = A_DROOP × V_drive_rms −
+B_DROOP × I_sec_est` with `A_DROOP` = 8.8735 and `B_DROOP` = 5.666 Ω, fitted per
+unit at bring-up — see "How the outlet is regulated" above. Regulation gain:
+0.0003 per 10 ms tick per volt of error, with the amplitude step slew-limited
+to 0.010 per tick. The drive the target needs at a given load is
+`m = (V_target + B_DROOP × I_sec) × √2 / (A_DROOP × V_bus)`: 120 V needs
+m = 0.879 at no load, 0.897 at 50 W and 0.914 at 100 W on a nominal 21.75 V
+bus, and 0.941 at 100 W at the bottom of the bus band — about 2 % of headroom
+against the 0.959733 clamp, and only if the fitted transformer really regulates
+8 %.
 
 > [!WARNING]
 > The output-voltage, output-missing and DC-offset checks are **supervisory**, not
@@ -407,21 +497,27 @@ power stage:
 * A firmware-generated H-bridge PWM with 500 ns dead time on both edges, the sine
   advanced by a 20 kHz carrier-wrap ISR on slice 0 with a 64-point interpolated
   table
-* Autonomous boost start-up sequencing, closed-loop regulation toward a 105 V RMS
-  target
+* Autonomous boost start-up sequencing, closed-loop regulation toward a
+  120.0 V RMS target at the outlet, from a droop-compensated estimate of the
+  outlet rather than a direct measurement
 * Over-current, over-temperature, bus-voltage, output over-voltage /
-  output-missing, DC-offset and ADS7128 communication protection; non-over faults
-  clear from the portal with an automatic ADS re-probe and full sweep
+  output-missing, output-out-of-reach, load-too-heavy, DC-offset and ADS7128
+  communication protection; non-over faults clear from the portal with an
+  automatic ADS re-probe and full sweep
 * A 500 ms hardware watchdog
 
-The power stage has still never been energised. The 105 V target is a firmware
-derating made alongside the open Rev B change set, not a hardware fix. Known open
-limitations: no output LC filter on the board (an off-board Rev B filter is
-specified in `HARDWARE/revB-changes.md`), no input or output fuse and no
-reverse-polarity protection, J5 pins 3/4 are tied to GND and not protective earth,
-the TMP235s sense board temperature rather than FET junction temperature, AIN1
-clips at 17.56 V, there are no gate-source bleed resistors, and the C13 / U5-U6
-bypass / `Rsense1` findings are still open. Treat every claim in this document,
-including the dead-time and protection logic above, as something to re-derive from
-the KiCad source and verify on a scope before the board is powered. See
-`AGENTS.md` ("The power stage") for the open findings and bench requirements.
+The power stage has still never been energised. The 120 V target is regulated
+from an **estimate** of the outlet, which has to be calibrated per unit at
+bring-up; the board has no isolated output sense. Known open limitations: no
+output LC filter on the board (an off-board filter is specified in
+`HARDWARE/revB-changes.md`), no input or output fuse and no
+reverse-polarity protection, the board's logic ground is not protective earth
+— `J5` pins 3/4 are on their own `/PE` net and the harness has to bond that
+to a chassis PE stud (Class I) or the unit has to be marked double-insulated
+(Class II) — the TMP235s sense board temperature rather than
+FET junction temperature, there are no gate-source bleed resistors, and the
+direct isolated output sense (AMC1311B) that would replace the estimate is not
+in this revision. Treat every claim in this document, including the dead-time
+and protection logic above, as something to re-derive from the KiCad source and
+verify on a scope before the board is powered. See `AGENTS.md` ("The power
+stage") for the open findings and bench requirements.

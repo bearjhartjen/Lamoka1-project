@@ -54,11 +54,8 @@ PARTS = {
     "CSD19536KCS": ("Texas Instruments", "N-channel NexFET power MOSFET, TO-220, H-bridge switch"),
     "CSD17304Q3": (
         "Texas Instruments",
-        "N-channel NexFET power MOSFET with thermal pad, VSON-8, buck high-side switch",
-    ),
-    "CSD16323Q3": (
-        "Texas Instruments",
-        "N-channel NexFET power MOSFET with thermal pad, VSON-8, buck low-side switch",
+        "N-channel NexFET power MOSFET with thermal pad, VSON-8, 30 V, "
+        "boost converter switching pair",
     ),
     "SN74AHCT1G125DBVR": (
         "Texas Instruments",
@@ -90,10 +87,9 @@ PARTS = {
     ),
     "ABM8-272-T3": ("Abracon", "Crystal, 27.12 MHz, 18 pF load, 3.2 x 2.5 mm"),
     # --- current sense resistors -------------------------------------------
-    "CSNL2512FT2L00": ("Bourns", "Current-sense resistor, 2 mOhm, 1 %, 2512 (input monitor shunt)"),
-    "CSNL1206FT2L00": (
-        "Bourns",
-        "Current-sense resistor, 2 mOhm, 1 %, 1206 (boost converter shunt)",
+    "CSNL2512FT2L00": (
+        "Stackpole",
+        "Current-sense resistor, 2 mOhm, 1 %, 2 W, 2512 (boost switch and input monitor shunts)",
     ),
     # --- resistors ----------------------------------------------------------
     "RC1206FR-0710RL": ("Yageo", "Resistor, 10 Ohm, 1 %, 1206"),
@@ -103,50 +99,58 @@ PARTS = {
     "RC0603FR-07330RL": ("Yageo", "Resistor, 330 Ohm, 1 %, 0603"),
     "RC0603FR-0733RL": ("Yageo", "Resistor, 33 Ohm, 1 %, 0603"),
     "RC0603FR-0736K5L": ("Yageo", "Resistor, 36.5 kOhm, 1 %, 0603"),
-    "RC0603FR-0743K2L": ("Yageo", "Resistor, 43.2 kOhm, 1 %, 0603"),
-    "RC0603FR-0745K3L": ("Yageo", "Resistor, 45.3 kOhm, 1 %, 0603"),
+    "RC0603FR-0768KL": ("Yageo", "Resistor, 68 kOhm, 1 %, 0603"),
     "RC0603FR-074K7L": ("Yageo", "Resistor, 4.7 kOhm, 1 %, 0603"),
     "RC0603FR-07180KL": ("Yageo", "Resistor, 180 kOhm, 1 %, 0603"),
     "RC0603FR-075K1L": ("Yageo", "Resistor, 5.1 kOhm, 1 %, 0603, USB-C CC pull-down"),
     "RC0402FR-071KL": ("Yageo", "Resistor, 1 kOhm, 1 %, 0402"),
-    "RC0201FR-07105KL": ("Yageo", "Resistor, 105 kOhm, 1 %, 0201, slope compensation"),
-    "RC0201FR-0728K7L": ("Yageo", "Resistor, 28.7 kOhm, 1 %, 0201, boost loop compensation"),
+    "RC0201FR-0749K9L": ("Yageo", "Resistor, 49.9 kOhm, 1 %, 0201, slope compensation"),
+    "RC0201FR-0780K6L": ("Yageo", "Resistor, 80.6 kOhm, 1 %, 0201, boost loop compensation"),
     "CRCW040218K2FKED": ("Vishay", "Resistor, 18.2 kOhm, 1 %, 0402"),
     "CRCW04023K79FKED": ("Vishay", "Resistor, 3.79 kOhm, 1 %, 0402"),
     "CRCW04023R01FKED": ("Vishay", "Resistor, 3.01 Ohm, 1 %, 0402"),
     "CRCW040249K9FKED": ("Vishay", "Resistor, 49.9 kOhm, 1 %, 0402"),
+    "CRCW040264K9FKED": ("Vishay", "Resistor, 64.9 kOhm, 1 %, 0402, boost bus feedback divider"),
     "CRCW04027K15FKED": ("Vishay", "Resistor, 7.15 kOhm, 1 %, 0402"),
     "CRCW0402953KFKED": ("Vishay", "Resistor, 953 kOhm, 1 %, 0402"),
     "CRCW0402100KFKED": ("Vishay", "Resistor, 100 kOhm, 1 %, 0402"),
     # --- ceramic capacitors -------------------------------------------------
     "CL10B104KO8NNNC": ("Samsung Electro-Mechanics", "Capacitor, 100 nF, 0603"),
-    "CL10B104KB8NNNC": ("Samsung Electro-Mechanics", "Capacitor, 100 nF, 0603"),
+    "CL10B104KB8NNNC": (
+        "Samsung Electro-Mechanics",
+        "Capacitor, 100 nF, 50 V X7R, 0603, gate driver VDD bypass and monitor-input filter",
+    ),
     "CL10A105KA8NNNC": ("Samsung Electro-Mechanics", "Capacitor, 1 uF, 0603"),
     "CL10A475KP8NNNC": ("Samsung Electro-Mechanics", "Capacitor, 4.7 uF, 0603"),
     "CL10B473KB8NNNC": ("Samsung Electro-Mechanics", "Capacitor, 47 nF, 0603"),
-    "CL05A106MQ5NUNC": ("Samsung Electro-Mechanics", "Capacitor, 10 uF, 0402"),
+    "CL05A106MQ5NUNC": ("Samsung Electro-Mechanics", "Capacitor, 10 uF, 0402, AMS1117 5 V input"),
     "CL05B104KO5NNNC": ("Samsung Electro-Mechanics", "Capacitor, 100 nF, 0402"),
     "GRM155R71A333KA01D": ("Murata", "Capacitor, 33 nF, 0402"),
-    "GRM1555C1H131GA01D": ("Murata", "Capacitor, 130 pF, C0G, 0402"),
+    "GRM1555C1H448JA01D": ("Murata", "Capacitor, 44.8 pF, C0G, 0402, boost loop compensation"),
     "GRM21BR71H105KA12L": ("Murata", "Capacitor, 1 uF, 0805"),
+    "GRM21BZ71E106KE15L": ("Murata", "Capacitor, 10 uF, 25 V X7R, 0805, gate driver VDD bypass"),
     "GRM31CR61A107MEA8K": ("Murata", "Capacitor, 100 uF, 1206"),
     "GRM31CR71A226KE15L": ("Murata", "Capacitor, 22 uF, 1206"),
     "0402CG150J500NT": ("Fenghua (Guangdong Fenghua Advanced Tech)", "Capacitor, 15 pF, C0G, 0402"),
     "C1005X5R1V474K050BC": ("TDK", "Capacitor, 470 nF, 0402"),
-    "C3216X5R1E476M160AC": ("TDK", "Capacitor, 47 uF, 1206"),
-    "CGA4C2C0G1H392J060AA": ("TDK", "Capacitor, 3.9 nF, C0G, 0805, boost loop compensation"),
+    "C3216X5R1V226M160AC": ("TDK", "Capacitor, 22 uF, 35 V X5R, 1206, boost output bus"),
+    "CGA4F1C0G2A153J085AE": ("TDK", "Capacitor, 15 nF, C0G, 0805, boost loop compensation"),
     "TMK212BBJ106KG-T": ("Taiyo Yuden", "Capacitor, 10 uF, 0805"),
     "TMK212BJ474KD-T": ("Taiyo Yuden", "Capacitor, 470 nF, 0805"),
     "MSAST21GAB5475MTNAO1": ("Taiyo Yuden", "Capacitor, 4.7 uF, 0805"),
     "08053C104KAT2A": ("KYOCERA AVX", "Capacitor, 100 nF, 0805"),
-    # --- electrolytic / polymer capacitors ----------------------------------
-    "25SVPF180M": (
+    # --- electrolytic / polymer / tantalum capacitors ------------------------
+    "35SVPK180M": (
         "Panasonic Industry",
-        "Polymer aluminium capacitor, 180 uF, 25 V, 8 x 11.9 mm, boost output",
+        "Polymer aluminium capacitor, 180 uF, 35 V, 8 x 11.9 mm, boost output",
     ),
     "20SVPF56MX": (
         "Panasonic Industry",
         "Polymer aluminium capacitor, 56 uF, 20 V, 5 x 5.9 mm, boost input",
+    ),
+    "T491A226K010AT": (
+        "KEMET",
+        "Tantalum capacitor, 22 uF, 10 V, 3216 (A case), 3.3 V rail output",
     ),
     # --- connectors, switch, electromechanical ------------------------------
     "2606-1108/010-000": ("WAGO", "8-pin THT terminal block, 3.5 mm pitch, transformer interface"),
@@ -166,10 +170,18 @@ PARTS = {
 VALUE_ALIASES = {
     ("4.7k", "R_0603_1608Metric"): "RC0603FR-074K7L",
     ("36.5k", "R_0603_1608Metric"): "RC0603FR-0736K5L",
-    ("43.2k", "R_0603_1608Metric"): "RC0603FR-0743K2L",
-    ("45.3k", "R_0603_1608Metric"): "RC0603FR-0745K3L",
+    ("68k", "R_0603_1608Metric"): "RC0603FR-0768KL",
+    ("49.9k", "R_0402_1005Metric"): "CRCW040249K9FKED",
+    ("64.9k", "R_0402_1005Metric"): "CRCW040264K9FKED",
+    ("49.9k", "R_0201_0603Metric"): "RC0201FR-0749K9L",
+    ("80.6k", "R_0201_0603Metric"): "RC0201FR-0780K6L",
     ("1uF", "C_0603_1608Metric"): "CL10A105KA8NNNC",
     ("47nF", "C_0603_1608Metric"): "CL10B473KB8NNNC",
+    ("100nF", "C_0603_1608Metric"): "CL10B104KB8NNNC",
+    ("44.8pF", "C_0402_1005Metric"): "GRM1555C1H448JA01D",
+    ("15nF", "C_0805_2012Metric"): "CGA4F1C0G2A153J085AE",
+    ("10uF", "C_0805_2012Metric"): "GRM21BZ71E106KE15L",
+    ("22uF", "C_1206_3216Metric"): "C3216X5R1V226M160AC",
 }
 
 # Footprint (without library prefix) -> (Package as printed on the BOM, assembly type)
@@ -193,6 +205,7 @@ FOOTPRINT_MAP = {
     "CP_Elec_8x11.9_Cout2": ("SMD radial can 8 x 11.9 mm", "SMT"),
     "CP_Elec_8x11.9_Cout3": ("SMD radial can 8 x 11.9 mm", "SMT"),
     "CP_Elec_5x5.9": ("SMD radial can 5 x 5.9 mm", "SMT"),
+    "CP_EIA-3216-18_Kemet-A": ("3216 (A case)", "SMT"),
     "LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm": ("PLCC-4 5.0 x 5.0 mm", "SMT"),
     "DO-214AC_VIS": ("SMA (DO-214AC)", "SMT"),
     "D_SMA": ("SMA (DO-214AC)", "SMT"),

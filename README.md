@@ -28,25 +28,44 @@ us back from building, and it will not.
 
 | Board | What it is | Where it stands |
 | --- | --- | --- |
-| **Lamoka1/2** (the main board) | The full inverter — battery power in, 105 V AC nominal out (120 V design target) | Designed and laid out; the power stage has never been powered up |
+| **Lamoka1/2** (the main board) | The full inverter — battery power in, 120 V AC nominal out at the outlet | Designed and laid out; the power stage has never been powered up |
 | **Lamoka1-DEV-Brain** (the control board) | The microcontroller, button, and LEDs, on a small board for firmware development | Built, assembled, and bench-tested — a 72-hour burn-in passed |
 
 The Lamoka1/2 is what Flamingo and Cactus are showing at the Owego Rotary craft
 fair: Elks Lodge, Owego, NY, November 14, 9am–3pm.
+
+This board was run through [Tomachie](https://tomachie.com) to get the design
+checked; the report is [here](https://tomachie.com/r/0a968485-5479-41e2-b24f-00a293061b1e/Lamoka1-half_report.html#design-summary),
+and a copy of it is kept in the repository under
+[`HARDWARE/Kicadfiles/Lamoka1-half/Reviews/`](HARDWARE/Kicadfiles/Lamoka1-half/Reviews).
+
+<p align="center">
+  <img src="Images/lamoka1-2-render-top.png" alt="Lamoka1/2 top view" width="420">
+  <img src="Images/lamoka1-2-render-bottom.png" alt="Lamoka1/2 bottom view" width="420">
+  <br><em>3D renders of the current layout — exported with <code>kicad-cli pcb render</code>.</em>
+</p>
 
 ## Specifications
 
 | | |
 | --- | --- |
 | **Input** | 11–14 V DC (a 12 V battery) |
-| **Output** | 105 V AC nominal, inferred (about 96–105 V at the outlet depending on load); 120 V is the design target and needs the Rev C changes |
-| **How it works** | A boost converter raises the battery voltage to 17 V, an H-bridge switches that into an AC waveform, and a transformer steps it up to 105 V nominal (120 V design target) |
+| **Output** | 120 V AC nominal at the outlet. The board has no isolated output sense, so the firmware regulates a droop-compensated *estimate* of the outlet (see below), fitted per unit at bring-up |
+| **How it works** | A boost converter raises the battery voltage to a 21.75 V bus, an H-bridge switches that into an AC waveform, and a transformer steps it up to 120 V nominal at the outlet |
 | **Brain** | An RP2354A (Raspberry Pi) microcontroller |
-| **Transformer** | VPT24-4170, 100 VA, mounted off the board and wired to it |
+| **Transformer** | Triad VPT24-6670, 160 VA, mounted off the board and wired to it |
 | **Interface** | One button and addressable RGB LEDs — five on the main board, ten on the DEV-Brain |
 | **Cooling** | A small 5 V fan on the 5 V rail — runs whenever that rail is up; no speed control |
-| **Monitoring** | Input, rail, and bridge voltages; load current; two temperature sensors |
+| **Monitoring** | Input, bus, and bridge voltages; load current; two temperature sensors |
 | **Charging** | Planned; not implemented yet |
+
+The 120 V outlet is regulated from an *estimate*, not a measurement: the
+firmware measures the 12 V drive winding across the bridge midpoints,
+estimates the load, and applies the transformer's droop to infer the outlet.
+The transformer's true no-load turns ratio and series impedance are fitted per
+unit at bring-up — a direct isolated output sense (an AMC1311B) is designed but
+is not in this revision. See
+[`SOFTWARE/Portal Interface Engine/PIE-v1.9-information.md`](SOFTWARE/Portal%20Interface%20Engine/PIE-v1.9-information.md).
 
 The full parts list is in [`HARDWARE/COMPONENTS.md`](HARDWARE/COMPONENTS.md)
 (plain English, and not the BOM), and the design intent is in
@@ -88,7 +107,7 @@ More places to look:
 ## Build and fabrication
 
 > [!WARNING]
-> The Lamoka1/2 produces up to about 105 V AC at its output — the same kind of
+> The Lamoka1/2 produces up to about 120 V AC at its output — the same kind of
 > voltage as a wall outlet. Treat the output as live at all times, and never leave a powered
 > unit unattended. This revision is a development platform: the power stage has
 > never been energized and its firmware (PIE V1.9) has never run on hardware, so
@@ -103,6 +122,18 @@ together with notes on what to check when ordering. The board is 2 layers,
 1.6 mm FR-4, and 95.2 × 95.2 mm. The folder also carries an
 [interactive BOM](HARDWARE/Lamoka1-half%20fab%20files/Lamoka1-half%20interactive%20BOM.html)
 for placing and checking parts.
+
+> [!NOTE]
+> The committed package was plotted from the Rev C layout, so it matches the
+> design files in this repository. The Gerbers, drill file, BOM, pick-and-place
+> files, interactive BOM and the 3D renders are all regenerated from the same
+> board, and the fab README carries the counts to check them against.
+
+<p align="center">
+  <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/bearjhartjen/Lamoka1-project/Lamoka1/HARDWARE/Kicadfiles/Lamoka1-half/BOM/Lamoka1-half.html">
+    <strong>View Interactive BOM</strong>
+  </a>
+</p>
 
 To export the Gerbers and drill file yourself:
 
@@ -142,7 +173,7 @@ and the outlet until last:
    alone, the 5 V rail is fed through the OR-ing diodes (CR1/CR2) and the buck
    stays off.
 3. **11–14 V from a current-limited bench supply**, starting around half an amp
-   — confirm the 17 V boost rail and watch the current draw.
+   — confirm the 21.75 V boost bus and watch the current draw.
 4. **Gate-drive check** — verify the gate-driver outputs at the MOSFET gates
    before the transformer is connected.
 5. **Transformer and outlet last** — connect them only after the low-voltage
@@ -150,6 +181,13 @@ and the outlet until last:
    [`HARDWARE/Transformer-wiring.md`](HARDWARE/Transformer-wiring.md) before
    wiring: the `J1` net names are lead colours, so the transformer leads must
    **not** be fitted colour-for-colour.
+6. **Earth** — the outlet's earth pole is not the board's logic ground. The
+   harness has to bond it to a chassis PE stud for a metal enclosure (Class I)
+   or leave it unbonded and mark the unit double-insulated for a plastic one
+   (Class II). A three-prong outlet must never ship with its earth floating or
+   tied to logic ground. See
+   [`HARDWARE/Transformer-wiring.md`](HARDWARE/Transformer-wiring.md) and
+   [`HARDWARE/revB-changes.md`](HARDWARE/revB-changes.md).
 
 ### 5. Flash the firmware
 

@@ -39,8 +39,16 @@ In scope:
   transformer secondary (`/BLACK`, `/RED`) and every other net — above the
   1.25 mm that IPC-2221B table 6-1 column B2 asks for at 151-300 V working —
   enforced by a rule in `HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_dru`.
-  Everything else on the board runs at 17 V or below on a 0.18 mm netclass.
+  Everything else on the board runs at 21.75 V or below on a 0.18 mm netclass.
   Creepage and clearance reports are welcome against that target.
+
+  The outlet is a 120 V mains socket, and its earth pole is **not** the
+  board's logic ground. Rev C cuts the `J5` 3/4-to-`GND` tie, and that cut is
+  in the sources: `J5` pins 3/4 are on their own `/PE` net. That net has to
+  be bonded in the harness to a chassis PE stud (Class I) or left unbonded
+  with the unit marked double-insulated (Class II), so a report on the earth
+  handling, or on a unit shipped with a floating or logic-ground-tied earth,
+  is in scope and treated as high priority.
 
 Out of scope: issues in third-party tools or libraries, unmodified vendor
 components (report those to the manufacturer), and forks of this project.

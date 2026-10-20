@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <FastLED.h>
 #include <Wire.h>
+#include <math.h>
 #include "pico/bootrom.h"
 #include "pico/rand.h"
 #include "hardware/pwm.h"
@@ -31,6 +32,18 @@ void renderInverter();
  * the H-bridge power stage.  Derived from V1.8 (DEV-Brain UI firmware);
  * the UI gestures, effects and style are preserved and scaled to the
  * main board's five WS2812B LEDs.
+ *
+ * POWER TOPOLOGY
+ * --------------
+ * 11-14 V in -> Rsense1 -> LM5122 boost -> 21.75 V bus -> UCC27735
+ * gate drivers -> Q3/Q4/Q5/Q6 H-bridge -> 12 V winding of a Triad
+ * VPT24-6670 -> 115 V winding -> 120.0 V RMS regulated outlet.
+ *
+ * The outlet is regulated by ESTIMATE: a droop-compensated feed forward
+ * from the measured drive winding and the estimated load, closed by a
+ * slow integral loop on that estimate.  The board has no isolated output
+ * sense, so a direct isolated measurement of the outlet is a later
+ * revision.
  *
  * HOME
  * ----
@@ -1292,12 +1305,48 @@ void renderUI() {
  *
  *  Power topology (autonomous boost, firmware-controlled H-bridge)
  *  ---------------------------------------------------------------
- *  Battery 11–14 V → Rsense1 → LM5122 boost → 17 V bus → UCC27735
- *  gate drivers → Q3/Q4/Q5/Q6 H-bridge → 12 V transformer winding →
- *  105 V inferred outlet (about 96 V at 100 W).  U5/U6 VDD and the bootstrap
- *  diodes run from CSP (the 11–14 V battery rail), not the 17 V bus.  The MCU
- *  only generates PWM; the LM5122 runs in hardware.  115 V is not reachable
- *  on a 17 V bus with this transformer; it needs the Rev C changes in
+ *  Battery 11–14 V → Rsense1 → LM5122 boost → 21.75 V bus → UCC27735
+ *  gate drivers → Q3/Q4/Q5/Q6 H-bridge → 12 V winding of a Triad
+ *  VPT24-6670 → 115 V winding → 120.0 V RMS outlet.
+ *
+ *  The transformer is a Triad VPT24-6670: 160 VA, 115 V primary,
+ *  12.0 V @ 13.34 A secondary on the parallel connection, 8 % TYP
+ *  regulation from full load to no load, 89 % efficiency at full load.
+ *  The 12 V winding is DRIVEN by the bridge; the 115 V winding is the
+ *  outlet.  Its nameplate 12.0 V is the FULL-LOAD secondary voltage, so
+ *  the open-circuit secondary is 12.0 × 1.08 = 12.96 V and the true
+ *  no-load turns ratio is 115/12.96 = 8.8735 — not 115/12, which is
+ *  the full-load ratio and 8 % high.
+ *
+ *  The outlet is regulated by ESTIMATE, not measured.  The board has no
+ *  isolated output sense: the monitor chain is the battery rail (AIN0),
+ *  the bus (AIN1), the two bridge midpoints (AIN2/AIN3), the input
+ *  current (AIN4) and two TMP235s.  The firmware therefore
+ *
+ *    1. measures the DRIVE winding (12 V) RMS from the bridge midpoint
+ *       differential (AIN2 - AIN3);
+ *    2. estimates the output power from the battery-side power
+ *       (AIN0 x AIN4), less the auxiliary load, times an efficiency
+ *       constant;
+ *    3. estimates the OUTLET from the drive and the load with the
+ *       transformer's series impedance (droop compensation):
+ *
+ *           V_out_est = A_DROOP * V_drive_rms - B_DROOP * I_sec_est
+ *
+ *       solved in closed form (see outletEstimate());
+ *    4. closes the loop on V_out_est.  The compensation is a feed
+ *       forward, so a small error in B_DROOP shows up as a small
+ *       steady-state error at load, not as instability.
+ *
+ *  A future revision may add a direct isolated output sense, which would
+ *  replace the estimate with a measurement.  Until then the 125 V
+ *  receptacle ceiling is enforced on the estimate.
+ *
+ *  U5/U6 VDD and the bootstrap diodes run from CSP (the 11–14 V battery
+ *  rail), not the 21.75 V bus.  The MCU only generates PWM; the LM5122
+ *  runs in hardware.  The 21.75 V bus is a board revision: the LM5122's
+ *  1.2 V feedback reference sets it, 1.2 × (1 + Rfbt1/Rfbb1) = 21.749 V,
+ *  i.e. Rfbt1 = 64.9 kΩ with Rfbb1 = 3.79 kΩ.  See
  *  HARDWARE/revB-changes.md.
  *
  *  Safety rules
@@ -1307,7 +1356,7 @@ void renderUI() {
  *  - The bridge is never enabled before the user explicitly arms it (the
  *    Inverter portal in the UI).  A valid voltage reading alone is not
  *    proof the hardware is safe to switch.
- *  - The bridge is never enabled before AIN1 confirms the 17 V bus.
+ *  - The bridge is never enabled before AIN1 confirms the 21.75 V bus.
  *  - Dead time is ≥ 500 ns on both edges by construction (phase-offset
  *    slices plus delayed inverted-channel compare).  The sine is written
  *    from the 20 kHz carrier-wrap ISR, once per period, so loop jitter
@@ -1376,38 +1425,195 @@ void renderUI() {
 #define ADS7128_OP_BLK_READ    0x30   // read a continuous register block
 
 // Divider ratios (bottom / (top + bottom)) from the schematic.
-// AIN1 with R27 = 43.2 kΩ clips at 17.56 V.  Until R27 is changed to 68 kΩ
-// (Rev B), the bus windows below stay under that clip so a clipped reading
-// cannot be mistaken for a valid bus voltage.
+// R27 (AIN1), R29 and R31 (AIN2/AIN3) are all 68 kΩ on the 21.75 V bus
+// revision, so every one of them has a 25.74 V full scale.  The old
+// 45.3 kΩ midpoint dividers clipped at 18.25 V and the old 43.2 kΩ bus
+// divider clipped at 17.56 V — both below the 21.75 V bus, which is why
+// they change.  The bus now sits at 2.79 V, well below the 3.3 V clip,
+// and the ±0.90 V start and ±1.5 V run windows stay inside that headroom.
 #define DIV_AIN0           (10.0f / (36.5f + 10.0f))   // input rail 11–14 V
-#define DIV_AIN1           (10.0f / (43.2f + 10.0f))   // 17 V bus, 17.56 V FS
-#define DIV_AIN2           (10.0f / (45.3f + 10.0f))   // bridge midpoint A
-#define DIV_AIN3           (10.0f / (45.3f + 10.0f))   // bridge midpoint B
+#define DIV_AIN1           (10.0f / (68.0f + 10.0f))   // 21.75 V bus, 25.74 V FS
+#define DIV_AIN2           (10.0f / (68.0f + 10.0f))   // bridge midpoint A
+#define DIV_AIN3           (10.0f / (68.0f + 10.0f))   // bridge midpoint B
 #define INA240_V_PER_A     0.1f                         // AIN4, 0.1 V/A
 
-// Transformer 115 V winding / 12 V winding.
-#define TRANSFORMER_RATIO  (115.0f / 12.0f)
+// AIN2/AIN3 filter (recorded, not corrected).
+//
+// C29 and C30 (47 nF) sit ACROSS the 10 kΩ bottom resistor of each
+// divider, so the corner is
+//
+//     f = 1 / (2*pi*10k*47n) = 339 Hz
+//
+// — NOT the 74.8 Hz that a 47 nF part in series with the divider would
+// give.  At the 60 Hz output that is a 1.5 % gain error (the divider
+// reads 1.5 % low) and a 10° lag on the measured drive voltage.
+//
+// The error is NOT corrected in firmware.  Both dividers are identical,
+// so the error and the lag are common to AIN2 and AIN3 and largely
+// cancel in the AIN2 − AIN3 difference the drive RMS is computed from;
+// what is left is not exactly predictable (the divider's source
+// impedance, the ADS7128's input impedance and the sampling all
+// perturb it), and a 1.5 % correction would be smaller than the
+// per-unit fit error it would be applied to.  It is absorbed by the
+// per-unit A_DROOP fit instead — see the calibration procedure below.
 
-// 115 V RMS is unreachable on a 17 V bus: m = 115*sqrt(2)/(17*9.583) = 0.998
-// no-load and about 1.10 at full load with the VPT24-4170's 9 % regulation.
-// PWM_M_MAX is 0.9597, so the achievable band is about 101-110.6 V.  105 V is
-// the highest target that keeps regulating at both ends without changing the
-// transformer or raising the bus.  This is the INFERRED output (drive winding
-// * 9.583), not the outlet: the 9 % regulation leaves about 96 V at the outlet
-// at 100 W.  See HARDWARE/revB-changes.md (Rev C for 115 V).
-#define OUTPUT_TARGET_RMS  105.0f
-#define OUTPUT_OV_FACTOR   1.15f    // supervisory only at 17 V
+// Transformer: Triad VPT24-6670 — 160 VA, 115 V primary, 12.0 V @ 13.34 A
+// secondary on the parallel connection, 8 % TYP regulation from full load
+// to no load, 89 % efficiency at full load.
+//
+// The nameplate 12.0 V is the FULL-LOAD secondary voltage, so the
+// open-circuit (no-load) secondary is 12.0 × 1.08 = 12.96 V and the true
+// no-load turns ratio is
+//
+//     k = 115 / 12.96 = 8.8735
+//
+// 115/12 = 9.5833 is the FULL-LOAD ratio; using it over-states the outlet
+// by 8 % (the firmware would believe the outlet is at 120 V when it is
+// really at 111 V).  Every outlet number in this firmware is referred
+// to the NO-LOAD (open-circuit) value.
+#define TRANSFORMER_NOLOAD_RATIO (115.0f / 12.96f)
+
+// Droop compensation.  The transformer's series impedance makes the outlet
+// sag with load, so the outlet cannot be inferred from the drive voltage
+// alone: the no-load ratio over-states the loaded outlet by the droop
+// (8 % regulation is about 4.7 V at 100 W).  The firmware therefore
+// estimates the outlet as
+//
+//     V_out_est = A_DROOP * V_drive_rms - B_DROOP * I_sec_est
+//
+// with V_drive_rms the 12 V winding RMS (measured at the bridge
+// midpoints) and I_sec_est the 115 V winding current.  A_DROOP is the
+// no-load ratio; B_DROOP is the series impedance referred to the 115 V
+// secondary, in ohms:
+//
+//     Z1 = (12.96 - 12.0) / 13.34 * k^2 = 5.666 Ω
+//
+// BOTH constants are PER-UNIT.  The 8 % regulation is a TYP with no
+// published maximum, and the fitted unit's actual turns ratio is only
+// known to the same precision, so the catalogue values below are only
+// the starting point.  The bring-up procedure fits both of them:
+//
+//   1. NO LOAD.  Arm the inverter with nothing connected to the outlet
+//      and let it settle.  Read the drive winding RMS from the serial
+//      report (VPRI=) and measure the open-circuit outlet with a DMM at
+//      the receptacle (V_out0).  Then
+//
+//          A_DROOP = V_out0 / V_drive_rms
+//
+//      This measures the no-load ratio directly, so it does not depend
+//      on the catalogue figure at all.  For a VPT24-6670 it comes out
+//      near 8.8735 (115 V / 12.96 V).
+//   2. LIGHT LOAD.  Connect a known resistive load, say 50 W.  Measure
+//      the outlet voltage (V_out1) with the DMM and the secondary
+//      current (I_sec1) with a clamp meter on the 115 V winding, and
+//      record the drive RMS (V_drive_rms1) from the report.
+//   3. HEAVY LOAD.  Repeat at a second, heavier load, say 100 W
+//      (V_out2, I_sec2, V_drive_rms2).
+//   4. The droop model is V_out = A_DROOP * V_drive - B_DROOP * I_sec, so
+//      with x_i = A_DROOP * V_drive_rms_i the two load points give
+//
+//          B_DROOP = (x1 - x2) / (I_sec1 - I_sec2)
+//
+//      i.e. it is the slope of V_out against I_sec, not against the load
+//      current on the 12 V side.
+//   5. Enter A_DROOP and B_DROOP in this file and rebuild.
+//
+//   Accuracy.  A DMM reads to about 0.5 %, and the two load points span
+//   most of the droop, so A_DROOP comes out to about 0.5 % and B_DROOP
+//   to about 2 %.  That puts the estimated outlet within roughly 1 % of
+//   the measured one across the load range — which is the accuracy the
+//   120 V target is actually held to, because there is no isolated output
+//   measurement for the loop to close on.
+//
+//   The estimate of the output POWER is also about 10 % high:
+//   ETA_BUCK_HBRIDGE assumes 0.92 for the whole chain where the
+//   transformer alone is 0.89.  That error is proportional to the load,
+//   so it is absorbed exactly by the fitted B_DROOP and needs no separate
+//   correction.
+//
+// Without the fit, a unit that regulates 9 % instead of 8 % reads about
+// 118.4 V at 100 W and one that regulates 10 % about 116.8 V, because
+// the firmware's 8 % constants ask for too little drive.  With the fit
+// each unit reads 120.0 V — but only if the unit's own regulation is
+// also within the modulation budget, which is what the "output out of
+// reach" fault below reports.
+#define A_DROOP            TRANSFORMER_NOLOAD_RATIO
+#define B_DROOP            5.666f              // secondary-referred series impedance
+
+// Load estimate.  The MCU has no direct outlet measurement, so the load is
+// inferred from the battery-side power and an efficiency constant.
+#define P_AUX_WATTS        3.0f     // 5 V buck, MCU, LEDs and fans
+#define ETA_BUCK_HBRIDGE   0.92f    // battery -> bus -> bridge -> transformer
+
+// sqrt(2), used to convert between the bridge fundamental RMS and peak.
+#define SQRT2              1.41421356f
+
+// Output regulation.  The regulator drives the ESTIMATED OUTLET (see the
+// droop compensation above) to 120.0 V RMS.
+//
+// The modulation needed is m = x * sqrt(2) / (A_DROOP * Vbus), with
+// x = OUTPUT_TARGET_RMS + B_DROOP * I_sec the drive the transformer needs
+// to hold the target at the load:
+//   120 V at no load on the 21.75 V bus needs m = 0.879;
+//   120 V at 50 W needs m = 0.897;
+//   120 V at 100 W needs m = 0.914;
+//   at the bottom of the bus band (21.13 V) 100 W needs m = 0.941, so
+//   there is 1.97 % of modulation left against the 0.9597 clamp — and
+//   that is only if the fitted transformer really regulates 8 %.  A unit
+//   that regulates 10 % needs m = 0.966 at that corner, which the clamp
+//   rejects: the "output out of reach" fault below reports it.
+//   The no-load ceiling at the PWM clamp is 131 V, so the outlet ceiling
+//   is enforced separately by OUTLET_V_MAX below.
+#define OUTPUT_TARGET_RMS  120.0f
+#define OUTPUT_OV_FACTOR   1.05f    // 126 V on the estimated outlet
+#define OUTLET_V_MAX       125.0f   // NEMA 5-15R receptacle rating
 #define OUT_MISSING_FRACTION 0.60f  // bridge output vs commanded modulation
 #define DC_TRIP_V          1.0f     // primary DC offset; ~90 ms to saturate
 #define AMP_SLEW_MAX       0.010f   // per 10 ms tick, below dead-time step
+
+// "Output out of reach": the regulator is pinned at the PWM clamp and the
+// estimated outlet is still below the target, so the target cannot be
+// reached at this load with this transformer.  It is debounced over
+// OUT_OF_REACH_TICKS control ticks (200 ms at the 100 Hz loop) because
+// the integrator needs about 100 ms to walk into the clamp after a load
+// step, and the outlet estimate is noisy.
+#define OUT_OF_REACH_TICKS  20
+#define OUT_OF_REACH_BAND_V 0.5f    // V below the target that counts
+
+// The transformer's power capability.  The VPT24-6670 is 160 VA, so at
+// the 120 V target it passes 160/120 = 1.333 A on the 115 V winding and
+// up to 11.8 A on the 12 V winding.  The product rating is 100 W
+// continuous (about 111 VA through the transformer, 69 % of the rating).
+// The firmware's limit is 150 W of ESTIMATED output power: the estimate
+// runs about 10 % high (ETA_BUCK_HBRIDGE assumes 0.92 for the whole
+// chain where the transformer alone is 0.89), so that is about 135 W at
+// the outlet — 84 % of the transformer's VA rating and 75 % of the 12 V
+// winding's current rating.  Above that the transformer, not the
+// modulator, is the limit.
+#define LOAD_LIMIT_W        150.0f
+#define LOAD_HEAVY_TICKS    50      // 500 ms debounce
 
 // State-machine thresholds.
 #define VIN_LOW            11.0f
 #define VIN_HIGH           14.0f
 #define VIN_HYST           0.2f
-#define VBUS_NOMINAL       17.0f
-#define VBUS_START_WINDOW  0.40f
-#define VBUS_RUN_WINDOW    0.40f
+// 21.75 V boost bus.  The LM5122's 1.2 V feedback reference with
+// Rfbt1 = 64.9 kΩ and Rfbb1 = 3.79 kΩ sets it:
+// 1.2 x (1 + 64.9/3.79) = 21.749 V.  With 1 % resistors and a
+// 1.188/1.2/1.212 V reference the tolerance band is 21.13 V to 22.39 V,
+// i.e. ±0.63 V about the nominal, so the start window is ±0.90 V — it has
+// to accept the whole band plus the reference tolerance.  The run window
+// is ±1.5 V, which also has to absorb the load-dump droop and the 120 Hz
+// bus ripple.  Both are inside the 25.74 V full scale of the 68 kΩ AIN1
+// divider.
+//
+// Note the run window is WIDER than the modulation budget allows at full
+// load: 120 V at 100 W needs m = 0.941 at the bottom of the bus band but
+// m = 0.982 at the bottom of the run window (20.25 V), which the clamp
+// rejects.  The "output out of reach" fault is what reports that.
+#define VBUS_NOMINAL       21.75f
+#define VBUS_START_WINDOW  0.90f
+#define VBUS_RUN_WINDOW    1.50f
 #define IIN_WARN           15.0f
 #define IIN_TRIP           20.0f
 #define TEMP_WARN_C        60.0f
@@ -1467,14 +1673,45 @@ static uint8_t outMissingCount = 0;
 static uint8_t dcFaultCount = 0;
 static uint32_t lastProbeMs = 0;
 
-// RMS / output inference.
+// RMS measurement of the bridge midpoint differential, and the outlet
+// estimate derived from it.
 static float  rmsBuf[RMS_RING_SIZE];
 static uint8_t rmsIndex = 0;
 static uint8_t rmsCount = 0;
-static float   outputRms = 0.0f;
-static float   primaryDc = 0.0f;   // DC offset check
+static float   primaryRms = 0.0f;        // measured 12 V winding RMS
+static float   primaryDc = 0.0f;         // DC offset check
+static float   inferredOutletRms = 0.0f; // drive * no-load ratio (bridge check)
+static float   outletEstRms = 0.0f;      // droop-compensated OUTLET estimate
+static float   secCurrentEst = 0.0f;     // estimated 115 V winding current
+static bool    loadUnsupported = false;  // the drive cannot support the load
 static uint32_t rmsLastSampleUs = 0;
 static bool    rmsValid = false;
+
+// Regulator state kept for the serial report, so the bench can see the
+// margin between the modulation that is commanded, the modulation the
+// target needs and the modulation ceiling.  mReqNow is what the target
+// needs at the present load and bus; driveLimitNow is the ceiling the
+// regulator is held to; regSaturated says the regulator is pinned at that
+// ceiling and atPwmClamp says the ceiling is the PWM clamp itself (as
+// opposed to the 125 V receptacle ceiling, which binds at low load).
+static float   mReqNow       = 0.0f;
+static float   driveLimitNow = 0.0f;
+static bool    regSaturated  = false;
+static bool    atPwmClamp    = false;
+static uint8_t outOfReachCount = 0;   // debounce for "output out of reach"
+static uint8_t loadHeavyCount  = 0;  // debounce for "load too heavy"
+
+// Measured RMS of the drive winding (the 12 V transformer primary).
+static float drivePrimaryRms() {
+  return primaryRms;
+}
+
+// Droop-compensated estimate of the OUTLET (the 115 V secondary), in RMS.
+// This is what the regulator controls; it is an estimate, not a
+// measurement — see the power-stage header comment.
+static float outletEstimate() {
+  return outletEstRms;
+}
 
 // ADS7128 scanning state.
 #define ADS_CH_COUNT       5
@@ -1738,14 +1975,115 @@ static void updateRmsAndDc() {
   for (uint8_t i = 0; i < rmsCount; i++) sum += rmsBuf[i];
   primaryDc = sum / (float)rmsCount;
 
-  // RMS of primary differential; outlet RMS scales by transformer ratio.
+  // RMS of the primary differential: the 12 V winding drive voltage.
   float sq = 0.0f;
   for (uint8_t i = 0; i < rmsCount; i++) {
     float d = rmsBuf[i] - primaryDc;
     sq += d * d;
   }
-  float primaryRms = sqrtf(sq / (float)rmsCount);
-  outputRms = primaryRms * TRANSFORMER_RATIO;
+  primaryRms = sqrtf(sq / (float)rmsCount);
+  // The NO-LOAD (open-circuit) ratio applied to the drive.  This
+  // OVER-estimates the outlet under load (that is what the droop
+  // compensation corrects), so it is used for the bridge plausibility
+  // check only.  It is the same no-load ratio the droop model uses, so
+  // the two never disagree about what the transformer does at no load.
+  inferredOutletRms = primaryRms * TRANSFORMER_NOLOAD_RATIO;
+}
+
+/* ================================================================
+ * OUTLET ESTIMATE
+ * ================================================================
+ *
+ * The board has no isolated output sense, so the outlet cannot be
+ * measured.  It is estimated from the measured drive winding and the
+ * estimated load.
+ */
+
+// Estimated power reaching the outlet, in watts.  AIN4 measures the
+// BATTERY current (through the INA240 and Rsense1), so vIn * iIn is the
+// power the battery supplies; the auxiliary load (5 V buck, MCU, LEDs,
+// fans) comes off the top and the remainder is bus power, of which
+// ETA_BUCK_HBRIDGE reaches the outlet.
+static float outputPowerEstimate() {
+  float pBatt = vIn * iIn;
+  if (pBatt < 0.0f) pBatt = 0.0f;
+  float pBus = pBatt - P_AUX_WATTS;
+  if (pBus < 0.0f) pBus = 0.0f;
+  return pBus * ETA_BUCK_HBRIDGE;
+}
+
+// Droop-compensated estimate of the outlet voltage.
+//
+// The droop model is V_out = A_DROOP * V_drive - B_DROOP * I_sec with
+// I_sec = P_out / V_out, so V_out satisfies
+//
+//     V_out^2 - x * V_out + y = 0,   x = A_DROOP * V_drive,  y = B_DROOP * P_out
+//
+// which is solved in closed form — no iteration, no fixed-point loop:
+//
+//     V_out = (x + sqrt(x*x - 4*y)) / 2
+//
+// The physical root is the LARGER one.  The smaller root is the
+// degenerate branch: at y = 0 it collapses to 0 V, which is not a
+// no-load voltage, and under load it collapses to a few volts, which
+// would make the regulator slam the modulation into the clamp.
+//
+// If x*x < 4*y the load is too heavy for this drive and the quadratic has
+// no real root.  The load is then treated as zero (V_out = x) and
+// loadUnsupported is raised.  That guard is a REPORTED condition only, not
+// a fault trigger: at the end of the soft-start ramp the drive is still
+// small, and the guard would trip on every load above about 74 W.  The
+// faults that do trigger are the regulator's own "output out of reach"
+// (the modulator cannot deliver the drive the target needs) and the
+// "load too heavy" limit on the transformer's VA rating.
+static void updateOutletEstimate() {
+  loadUnsupported = false;
+
+  float pOut = outputPowerEstimate();
+  float x = A_DROOP * drivePrimaryRms();
+  float y = B_DROOP * pOut;
+  if (y < 0.0f) y = 0.0f;
+
+  float v;
+  if (y <= 0.0f) {
+    v = x;                    // no load: the outlet is the no-load value
+  } else if (x * x < 4.0f * y) {
+    // The drive cannot support the load.  With no drive at all (the
+    // bridge parked) this is not a condition, it is simply "off".
+    loadUnsupported = (x > 0.0f);
+    v = x;                    // treat the load as zero
+  } else {
+    v = 0.5f * (x + sqrtf(x * x - 4.0f * y));
+  }
+  if (v < 0.0f) v = 0.0f;
+  outletEstRms = v;
+
+  float iSec = pOut / ((v > 1.0f) ? v : 1.0f);
+  if (iSec < 0.0f) iSec = 0.0f;
+  secCurrentEst = iSec;
+}
+
+// The largest drive whose ESTIMATED outlet stays at or below
+// OUTLET_V_MAX (the receptacle rating).  This is the hard ceiling that
+// keeps the outlet inside 125 V even if the load drops away while the
+// regulator is still over-driving.
+//
+// The estimate's own quadratic gives the drive: at V = OUTLET_V_MAX,
+//   x = OUTLET_V_MAX + y / OUTLET_V_MAX
+// and the modulation that produces a drive of x is
+//   m = x * sqrt(2) / (A_DROOP * Vbus).
+// At zero load (y = 0) this reduces to the plain no-load bound
+// OUTLET_V_MAX * sqrt(2) / (A_DROOP * Vbus) — 0.916 on a 21.75 V bus.
+//
+// The limit is load-aware on purpose.  A no-load bound applied at every
+// load would cap the drive BELOW what is needed to hold 120 V once the
+// load passes about 106 W (the droop needs MORE drive at load, not less),
+// so the outlet could not hold its target at the heavier end of its range.
+static float outletDriveLimit(float y) {
+  float bus = (vBus > 1.0f) ? vBus : VBUS_NOMINAL;
+  float xMax = OUTLET_V_MAX + ((y > 0.0f) ? (y / OUTLET_V_MAX) : 0.0f);
+  float mMax = xMax * SQRT2 / (A_DROOP * bus);
+  return clampf(mMax, 0.0f, PWM_M_MAX);
 }
 
 static void __not_in_flash_func(writeBridgeDuty)(float m) {
@@ -1813,6 +2151,12 @@ static void stopBridge() {
   mRamp = 0.0f;
   outMissingCount = 0;
   dcFaultCount = 0;
+  outOfReachCount = 0;
+  loadHeavyCount = 0;
+  mReqNow = 0.0f;
+  driveLimitNow = 0.0f;
+  regSaturated = false;
+  atPwmClamp = false;
 }
 
 static void enablePwmSlices() {
@@ -1882,6 +2226,11 @@ static void runControl(uint32_t nowMs) {
   if (nowMs - lastCtrlMs < CTRL_INTERVAL_MS) return;
   lastCtrlMs = nowMs;
 
+  // Refresh the droop-compensated outlet estimate once per control tick.
+  // Everything below (the overvoltage trip and the amplitude regulator)
+  // works on this estimate; it is the only outlet number the board has.
+  updateOutletEstimate();
+
   // Warnings (do not trip).
   static bool warnedCurrent = false;
   static bool warnedTemp = false;
@@ -1913,14 +2262,22 @@ static void runControl(uint32_t nowMs) {
       // commanded modulation.  This monitors the BRIDGE, not the outlet: an
       // open transformer secondary is invisible to these dividers.
       if (rmsValid) {
-        if (outputRms > OUTPUT_TARGET_RMS * OUTPUT_OV_FACTOR) {
+        // Overvoltage on the ESTIMATED outlet.  The estimate is
+        // droop-compensated, so this is the receptacle voltage the
+        // estimate believes is present; the hard ceiling is
+        // OUTLET_V_MAX (125 V) and this trip is the backstop above it.
+        if (outletEstimate() > OUTPUT_TARGET_RMS * OUTPUT_OV_FACTOR) {
           setFault("output overvoltage");
           return;
         }
         float busForCheck = (vBus > 1.0f) ? vBus : VBUS_NOMINAL;
-        float expected = modulation * busForCheck * TRANSFORMER_RATIO / 1.41421356f;
+        // Expected bridge fundamental on the outlet scale, using the
+        // NO-LOAD ratio — the same ratio the droop model uses, so the
+        // two never disagree.  (The ratio cancels in the comparison
+        // below; it is spelled out so the check is readable.)
+        float expected = modulation * busForCheck * TRANSFORMER_NOLOAD_RATIO / SQRT2;
         if (expected > 15.0f &&
-            outputRms < OUT_MISSING_FRACTION * expected) {
+            inferredOutletRms < OUT_MISSING_FRACTION * expected) {
           if (++outMissingCount >= 5) {
             setFault("bridge output missing");
             return;
@@ -1956,14 +2313,106 @@ static void runControl(uint32_t nowMs) {
   }
 
   // Amplitude regulation once running.
+  //
+  // The regulator drives the ESTIMATED OUTLET to OUTPUT_TARGET_RMS.  The
+  // estimate is a droop-compensated feed forward (the drive and the load
+  // both feed it) closed by an integral action on the estimate itself, so
+  // an error in B_DROOP shows up as a small steady-state error at load
+  // rather than as instability.
+  //
+  // The estimate is refreshed once per control tick (CTRL_INTERVAL_MS =
+  // 10 ms, so 100 Hz) and the 120 Hz load pulsation is filtered out by
+  // that loop.  The loop is therefore slower than the estimate can track,
+  // which is what keeps the feed forward from exciting the loop.
   if (pState == POWER_RUNNING && rmsValid) {
-    float error = OUTPUT_TARGET_RMS - outputRms;
+    float pOut = outputPowerEstimate();
+    float y = B_DROOP * pOut;
+    if (y < 0.0f) y = 0.0f;
+
+    // Hard ceiling: the drive may not push the estimated outlet past
+    // OUTLET_V_MAX (the 125 V receptacle rating).  At zero load this is
+    // the plain no-load bound; at load the droop allows more drive,
+    // because the estimate falls with the load.
+    float driveLimit = outletDriveLimit(y);
+
+    // The modulation that WOULD hold OUTPUT_TARGET_RMS at the estimated
+    // load: holding the target needs
+    //     x_req = OUTPUT_TARGET_RMS + y / OUTPUT_TARGET_RMS
+    // of drive, and the modulation that makes that drive is
+    //     m = x_req * sqrt(2) / (A_DROOP * Vbus).
+    // It is kept for the serial report so the bench can see the margin
+    // to the clamp.
+    float busForCalc = (vBus > 1.0f) ? vBus : VBUS_NOMINAL;
+    float mReq = (OUTPUT_TARGET_RMS + y / OUTPUT_TARGET_RMS) * SQRT2 /
+                 (A_DROOP * busForCalc);
+    mReqNow = mReq;
+    driveLimitNow = driveLimit;
+
+    // ---- OUTPUT OUT OF REACH --------------------------------------
+    // The modulation ceiling is tight on this design: 120.0 V at 100 W
+    // needs m = 0.941 at the bottom of the bus band against a clamp of
+    // 0.9597, so a transformer that regulates worse than the 8 %
+    // catalogue figure, or a bus that has sagged towards the bottom of
+    // its run window with a heavy load attached, simply cannot reach
+    // the target.  When the regulator is pinned at the PWM CLAMP and
+    // the estimated outlet is still below the target, the target is out
+    // of reach: latch a fault instead of silently saturating.
+    //
+    // The check comes FIRST so that no other fault masks it, and it is
+    // debounced (200 ms) because the integrator needs about 100 ms to
+    // walk into the clamp after a load step.
+    //
+    // Only the PWM clamp counts.  The drive ceiling also carries the
+    // OUTLET_V_MAX receptacle limit, which binds at low load; sitting
+    // at that ceiling is correct behaviour, not a failure.
+    bool clampBound  = (driveLimit >= PWM_M_MAX - 1e-4f);
+    bool atCeiling   = (mTarget >= driveLimit - 1e-4f);
+    bool belowTarget = (outletEstimate() < OUTPUT_TARGET_RMS - OUT_OF_REACH_BAND_V);
+    regSaturated = atCeiling;
+    atPwmClamp = clampBound;
+    if (clampBound && atCeiling && belowTarget) {
+      if (++outOfReachCount >= OUT_OF_REACH_TICKS) {
+        setFault("output out of reach");
+        return;
+      }
+    } else {
+      outOfReachCount = 0;
+    }
+
+    // ---- LOAD TOO HEAVY -------------------------------------------
+    // The transformer, not the modulator, is the limit: the VPT24-6670
+    // is 160 VA, and above LOAD_LIMIT_W the outlet is asking for more
+    // than the winding can pass continuously.  The output power is an
+    // ESTIMATE (battery current times an efficiency constant), so the
+    // limit is debounced (500 ms) and it is only evaluated once the
+    // bridge is running — never during the soft-start ramp, where the
+    // inrush would trip it.
+    if (pOut > LOAD_LIMIT_W) {
+      if (++loadHeavyCount >= LOAD_HEAVY_TICKS) {
+        setFault("load too heavy");
+        return;
+      }
+    } else {
+      loadHeavyCount = 0;
+    }
+
+    // Integral action on the estimated outlet.  mTarget is re-clamped to
+    // the drive limit on every tick, so the integrator cannot wind up
+    // against the ceiling.
+    float error = OUTPUT_TARGET_RMS - outletEstimate();
     float step = error * AMP_KI;
     if (step > AMP_SLEW_MAX) step = AMP_SLEW_MAX;
     if (step < -AMP_SLEW_MAX) step = -AMP_SLEW_MAX;
     mTarget += step;
-    mTarget = clampf(mTarget, 0.0f, PWM_M_MAX);
+    mTarget = clampf(mTarget, 0.0f, driveLimit);
     mRamp = mTarget;
+  } else {
+    // The regulator is not running (still ramping, or the RMS window is
+    // not yet full): there is no margin to report.
+    mReqNow = 0.0f;
+    driveLimitNow = 0.0f;
+    regSaturated = false;
+    atPwmClamp = false;
   }
 
   modulation = mRamp;
@@ -2095,7 +2544,8 @@ const char *powerStateName() {
 
 float powerInputVolts()  { return vIn; }
 float powerBusVolts()    { return vBus; }
-float powerOutputVolts() { return outputRms; }
+// The ESTIMATED outlet voltage (droop-compensated), not a measurement.
+float powerOutputVolts() { return outletEstimate(); }
 float powerOutputAmps()  { return iIn; }
 
 float powerTempC(uint8_t index) {
@@ -2163,11 +2613,26 @@ void powerSerialReport() {
   Serial.print(" SENS=");  Serial.print(powerSensorsOk() ? "Y" : "N");
   Serial.print(" VIN=");   Serial.print(vIn);
   Serial.print(" VBUS=");  Serial.print(vBus);
-  Serial.print(" VOUT=");  Serial.print(outputRms);
+  Serial.print(" VOUT=");  Serial.print(outletEstimate());
+  Serial.print(" VPRI=");  Serial.print(drivePrimaryRms());
+  Serial.print(" POUT=");  Serial.print(outputPowerEstimate());
+  Serial.print(" ISEC=");  Serial.print(secCurrentEst);
+  Serial.print(" UNSUP="); Serial.print(loadUnsupported ? 1 : 0);
   Serial.print(" IIN=");   Serial.print(iIn);
   Serial.print(" Tctrl="); Serial.print(tempCtrl);
   Serial.print(" Tinv=");  Serial.print(tempInv);
-  Serial.print(" m=");     Serial.println(modulation, 3);
+  // The modulation margin.  m is what the bridge is actually doing,
+  // MMAX is the hard clamp, MREQ is what the target needs at the present
+  // load and bus, DLIM is the ceiling the regulator is held to (the
+  // 125 V receptacle limit, or the clamp), SAT says the regulator is
+  // pinned at that ceiling and CLAMP says the ceiling is the clamp.
+  Serial.print(" m=");     Serial.print(modulation, 3);
+  Serial.print(" MMAX=");  Serial.print(PWM_M_MAX, 4);
+  Serial.print(" MREQ=");  Serial.print(mReqNow, 3);
+  Serial.print(" DLIM=");  Serial.print(driveLimitNow, 3);
+  Serial.print(" SAT=");   Serial.print(regSaturated ? 1 : 0);
+  Serial.print(" CLAMP="); Serial.print(atPwmClamp ? 1 : 0);
+  Serial.println();
 }
 
 /* ================================================================
@@ -2282,6 +2747,7 @@ void renderInverter() {
   }
 
   if (st == 3) { // POWER_RUNNING
+    // Bar shows the ESTIMATED outlet against the 120 V target.
     float frac = powerOutputVolts() / OUTPUT_TARGET_RMS;
     if (frac < 0.0f) frac = 0.0f;
     if (frac > 1.0f) frac = 1.0f;

@@ -10763,7 +10763,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "45.3k"
+		(property "Value" "68k"
 			(at 90.17 199.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10840,7 +10840,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-0745K3L"
+		(property "MPN" "RC0603FR-0768KL"
 			(at 87.63 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -12023,7 +12023,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "22uF"
 			(at 138.43 148.5899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12034,7 +12034,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A"
 			(at 135.5852 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -12067,7 +12067,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A106MQ5NUNC"
+		(property "MPN" "T491A226K010AT"
 			(at 134.62 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -13130,7 +13130,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "43.2k"
+		(property "Value" "68k"
 			(at 62.23 198.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13207,7 +13207,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-0743K2L"
+		(property "MPN" "RC0603FR-0768KL"
 			(at 59.69 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -13267,7 +13267,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "45.3k"
+		(property "Value" "68k"
 			(at 118.11 199.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13344,7 +13344,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-0745K3L"
+		(property "MPN" "RC0603FR-0768KL"
 			(at 115.57 198.12 0)
 			(hide yes)
 			(show_name no)

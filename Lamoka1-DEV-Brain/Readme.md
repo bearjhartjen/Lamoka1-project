@@ -40,6 +40,11 @@ The DEV-Brain brings the Lamoka1’s MCU, lights, and simplicity into a 70x30mm 
 
 We are using the DEV-Brain to get an idea of how things work on the control side. We can use this model board to develop code for the lights and button. The DEV-Brain carries ten RGB LEDs (D1-D10) and one button. The main board's interface uses five LEDs (D1-D5) and one button, so the LED count is a per-board difference to keep in mind when porting firmware.
 
+The DEV-Brain is a control-only board: it carries no power stage and is unaffected
+by the Lamoka1/2's Rev C revision (the 21.75 V boost bus and the 120.0 V outlet
+target on the main board). PIE V1.8 stays the DEV-Brain head; the main board
+runs PIE V1.9.
+
 
 This board was run through Tomachie to get the design checked; the link is [here](https://tomachie.com/r/a1f3f256-a8ca-43de-aa92-e70ef981c3c2/Lamoka1-DEV-board_report.html#design-summary).
 

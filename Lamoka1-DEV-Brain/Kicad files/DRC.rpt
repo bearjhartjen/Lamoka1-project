@@ -1,8 +1,8 @@
 ** Drc report for Lamoka1-DEV-board.kicad_pcb **
-** Created on 2026-09-29T21:09:02 **
-** Report includes: Errors, Exclusions **
+** Created on 2026-10-20T07:58:42 **
+** Report includes: Errors, Warnings **
 
-** Found 7 DRC violations **
+** Found 74 DRC violations **
 [malformed_courtyard]: Footprint has malformed courtyard (self-intersecting)
     Local override; error
     @(164.3670 mm, 96.7177 mm): Footprint X1
@@ -26,10 +26,455 @@
     Local override; error
     @(161.4000 mm, 90.7414 mm): Track [/3V3] on F.Cu, length 0.7530 mm
     @(160.9368 mm, 90.7787 mm): Track (arc) [/5V] on F.Cu, length 0.6897 mm
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(137.9551 mm, 98.9772 mm): Circle of U2 on F.Silkscreen
+    @(138.3900 mm, 98.5700 mm): PTH pad SH [GND] of J3
+[text_thickness]: Text thickness out of range (TrueType font characters with insufficient stroke weight)
+    Rule: board setup constraints silk text thickness; warning
+    @(183.9600 mm, 107.2600 mm): PCB text 'Lamoka1-DEV-Brain' on F.Silkscreen
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(162.2200 mm, 99.7800 mm): Reference field of C21
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(153.2100 mm, 99.3200 mm): Reference field of R7
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(167.9200 mm, 96.4700 mm): Reference field of C20
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(166.1400 mm, 94.4600 mm): Reference field of R11
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(150.9800 mm, 89.4700 mm): Reference field of L1
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(196.8700 mm, 89.1100 mm): Reference field of C9
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(148.9100 mm, 89.1200 mm): Reference field of C1
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(172.8900 mm, 89.0900 mm): Reference field of C5
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(149.9200 mm, 98.9700 mm): Reference field of C15
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(178.8900 mm, 89.0900 mm): Reference field of C6
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(146.4900 mm, 99.8100 mm): Reference field of C13
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(160.9000 mm, 89.1300 mm): Reference field of C3
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(184.8500 mm, 89.1200 mm): Reference field of C7
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(166.9500 mm, 89.0800 mm): Reference field of C4
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(140.2500 mm, 107.9000 mm): Reference field of C12
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(150.7900 mm, 95.2700 mm): Reference field of C19
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(154.8270 mm, 89.1000 mm): Reference field of C2
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(175.9150 mm, 98.4900 mm): Reference field of C17
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(203.0900 mm, 89.1000 mm): Reference field of C10
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(153.4800 mm, 102.7800 mm): Reference field of R9
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(170.4850 mm, 101.7000 mm): Reference field of C16
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(168.0600 mm, 103.1600 mm): Reference field of C14
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(190.9000 mm, 89.0800 mm): Reference field of C8
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(177.4050 mm, 101.6100 mm): Reference field of C18
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.5000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(173.6900 mm, 99.2900 mm): Reference field of R4
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(154.4500 mm, 100.1600 mm): Footprint R7
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(146.2900 mm, 92.2700 mm): Footprint R2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(141.2500 mm, 86.0000 mm): Footprint SW1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(164.1100 mm, 94.4400 mm): Footprint R11
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(151.3000 mm, 92.3800 mm): Footprint L1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(195.1293 mm, 89.1000 mm): Footprint C9
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(147.1707 mm, 89.1000 mm): Footprint C1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(171.1500 mm, 89.1000 mm): Footprint C5
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(151.1600 mm, 97.6700 mm): Footprint C15
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(177.1293 mm, 89.1000 mm): Footprint C6
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(164.3670 mm, 96.7177 mm): Footprint X1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(145.5207 mm, 100.8000 mm): Footprint C13
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(145.5200 mm, 97.7300 mm): Footprint R3
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(169.8900 mm, 94.0400 mm): Footprint R8
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(159.1707 mm, 89.1000 mm): Footprint C3
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(183.1293 mm, 89.1000 mm): Footprint C7
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(165.1707 mm, 89.1000 mm): Footprint C4
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(138.3207 mm, 107.8000 mm): Footprint C12
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(150.8300 mm, 96.2000 mm): Footprint C19
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(153.1293 mm, 89.1000 mm): Footprint C2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(141.6000 mm, 103.6000 mm): Footprint U2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(175.9150 mm, 100.0107 mm): Footprint C17
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(201.1293 mm, 89.1000 mm): Footprint C10
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(154.4100 mm, 101.6100 mm): Footprint R9
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(170.5403 mm, 100.4900 mm): Footprint C16
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(168.1050 mm, 101.2253 mm): Footprint C14
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(189.1707 mm, 89.1000 mm): Footprint C8
+[lib_footprint_issues]: The current configuration does not include the footprint library 'components'
+    Local override; warning
+    @(177.3150 mm, 99.9693 mm): Footprint C18
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(136.5100 mm, 79.1200 mm): Rectangle on Edge.Cuts
+    @(137.4400 mm, 89.5500 mm): Segment of J3 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(136.5100 mm, 79.1200 mm): Rectangle on Edge.Cuts
+    @(137.4400 mm, 98.9500 mm): Segment of J3 on F.Silkscreen
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(137.1900 mm, 100.5810 mm): Track [/5V] on F.Cu, length 0.0424 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(144.5339 mm, 99.5998 mm): Track [/5V] on F.Cu, length 0.0168 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(151.4500 mm, 91.3800 mm): Track (arc) [Net-(U1-VREG_LX)] on F.Cu, length 0.0000 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(159.9300 mm, 96.8700 mm): Via [/1V1] on F.Cu - B.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(154.9982 mm, 94.8018 mm): Track (arc) [/3V3] on F.Cu, length 0.0000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(158.5300 mm, 101.8200 mm): Track [/GPIO7] on F.Cu, length 0.0649 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(165.8414 mm, 105.8586 mm): Track (arc) [/GPIO8] on F.Cu, length 0.2681 mm
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(136.6400 mm, 90.2300 mm): Zone 'Ground' [GND] on F.Cu and B.Cu, priority 0
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(136.6400 mm, 90.2300 mm): Zone 'Ground' [GND] on F.Cu and B.Cu, priority 0
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(136.6400 mm, 90.2300 mm): Zone 'Ground' [GND] on F.Cu and B.Cu, priority 0
 
 ** Found 0 unconnected pads **
 
-** Found 0 Footprint errors **
+** Found 94 Footprint errors **
+[net_conflict]: Pad net (Net-(U1-VREG_AVDD)) doesn't match net given by schematic (/VREG_AVDD)
+    Local override; warning
+    @(171.3150 mm, 100.4900 mm): Pad 1 [Net-(U1-VREG_AVDD)] of C16 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'MPN' in footprint
+    Local override; warning
+    @(167.0300 mm, 96.4300 mm): Footprint C20
+[net_conflict]: Pad net (Net-(C20-Pad1)) doesn't match net given by schematic (/XTAL_RETURN)
+    Local override; warning
+    @(167.0300 mm, 95.9500 mm): Pad 1 [Net-(C20-Pad1)] of C20 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'MPN' in footprint
+    Local override; warning
+    @(163.3100 mm, 98.9000 mm): Footprint C21
+[net_conflict]: Pad net (Net-(D1-DOUT)) doesn't match net given by schematic (/LED_D1_DOUT)
+    Local override; warning
+    @(150.4500 mm, 87.2500 mm): Pad 2 [Net-(D1-DOUT)] of D1 on F.Cu
+[net_conflict]: Pad net (Net-(D1-DIN)) doesn't match net given by schematic (/LED_DATA_IN)
+    Local override; warning
+    @(147.1500 mm, 82.3500 mm): Pad 4 [Net-(D1-DIN)] of D1 on F.Cu
+[net_conflict]: Pad net (Net-(D2-DOUT)) doesn't match net given by schematic (/LED_D2_DOUT)
+    Local override; warning
+    @(156.4500 mm, 87.2500 mm): Pad 2 [Net-(D2-DOUT)] of D2 on F.Cu
+[net_conflict]: Pad net (Net-(D1-DOUT)) doesn't match net given by schematic (/LED_D1_DOUT)
+    Local override; warning
+    @(153.1500 mm, 82.3500 mm): Pad 4 [Net-(D1-DOUT)] of D2 on F.Cu
+[net_conflict]: Pad net (Net-(D3-DOUT)) doesn't match net given by schematic (/LED_D3_DOUT)
+    Local override; warning
+    @(162.4500 mm, 87.2500 mm): Pad 2 [Net-(D3-DOUT)] of D3 on F.Cu
+[net_conflict]: Pad net (Net-(D2-DOUT)) doesn't match net given by schematic (/LED_D2_DOUT)
+    Local override; warning
+    @(159.1500 mm, 82.3500 mm): Pad 4 [Net-(D2-DOUT)] of D3 on F.Cu
+[net_conflict]: Pad net (Net-(D4-DOUT)) doesn't match net given by schematic (/LED_D4_DOUT)
+    Local override; warning
+    @(168.4500 mm, 87.2500 mm): Pad 2 [Net-(D4-DOUT)] of D4 on F.Cu
+[net_conflict]: Pad net (Net-(D3-DOUT)) doesn't match net given by schematic (/LED_D3_DOUT)
+    Local override; warning
+    @(165.1500 mm, 82.3500 mm): Pad 4 [Net-(D3-DOUT)] of D4 on F.Cu
+[net_conflict]: Pad net (Net-(D5-DOUT)) doesn't match net given by schematic (/LED_D5_DOUT)
+    Local override; warning
+    @(174.4500 mm, 87.2500 mm): Pad 2 [Net-(D5-DOUT)] of D5 on F.Cu
+[net_conflict]: Pad net (Net-(D4-DOUT)) doesn't match net given by schematic (/LED_D4_DOUT)
+    Local override; warning
+    @(171.1500 mm, 82.3500 mm): Pad 4 [Net-(D4-DOUT)] of D5 on F.Cu
+[net_conflict]: Pad net (Net-(D6-DOUT)) doesn't match net given by schematic (/LED_D6_DOUT)
+    Local override; warning
+    @(180.4500 mm, 87.2500 mm): Pad 2 [Net-(D6-DOUT)] of D6 on F.Cu
+[net_conflict]: Pad net (Net-(D5-DOUT)) doesn't match net given by schematic (/LED_D5_DOUT)
+    Local override; warning
+    @(177.1500 mm, 82.3500 mm): Pad 4 [Net-(D5-DOUT)] of D6 on F.Cu
+[net_conflict]: Pad net (Net-(D7-DOUT)) doesn't match net given by schematic (/LED_D7_DOUT)
+    Local override; warning
+    @(186.4500 mm, 87.2500 mm): Pad 2 [Net-(D7-DOUT)] of D7 on F.Cu
+[net_conflict]: Pad net (Net-(D6-DOUT)) doesn't match net given by schematic (/LED_D6_DOUT)
+    Local override; warning
+    @(183.1500 mm, 82.3500 mm): Pad 4 [Net-(D6-DOUT)] of D7 on F.Cu
+[net_conflict]: Pad net (Net-(D8-DOUT)) doesn't match net given by schematic (/LED_D8_DOUT)
+    Local override; warning
+    @(192.4500 mm, 87.2500 mm): Pad 2 [Net-(D8-DOUT)] of D8 on F.Cu
+[net_conflict]: Pad net (Net-(D7-DOUT)) doesn't match net given by schematic (/LED_D7_DOUT)
+    Local override; warning
+    @(189.1500 mm, 82.3500 mm): Pad 4 [Net-(D7-DOUT)] of D8 on F.Cu
+[net_conflict]: Pad net (Net-(D10-DIN)) doesn't match net given by schematic (/LED_D9_DOUT)
+    Local override; warning
+    @(198.4500 mm, 87.2500 mm): Pad 2 [Net-(D10-DIN)] of D9 on F.Cu
+[net_conflict]: Pad net (Net-(D8-DOUT)) doesn't match net given by schematic (/LED_D8_DOUT)
+    Local override; warning
+    @(195.1500 mm, 82.3500 mm): Pad 4 [Net-(D8-DOUT)] of D9 on F.Cu
+[net_conflict]: Pad net (Net-(D10-DIN)) doesn't match net given by schematic (/LED_D9_DOUT)
+    Local override; warning
+    @(201.1500 mm, 82.3500 mm): Pad 4 [Net-(D10-DIN)] of D10 on F.Cu
+[footprint_symbol_mismatch]: Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ
+    Local override; warning
+    @(147.9200 mm, 106.2000 mm): Footprint J1
+[footprint_symbol_field_mismatch]: Field 'Notes' differs (PCB: '', Schematic: 'Populated 13-pin GPIO/power breakout. Counts as external IO test access; 5V input through this header directly parallels USB VBUS and must not be driven while USB is connected.')
+    Local override; warning
+    @(147.9200 mm, 106.2000 mm): Footprint J1
+[net_conflict]: Pad net (Net-(J3-D+-PadA6)) doesn't match net given by schematic (/USB_CONN_DP)
+    Local override; warning
+    @(143.4850 mm, 94.0000 mm): Pad A6 [Net-(J3-D+-PadA6)] of J3 on F.Cu
+[net_conflict]: Pad net (Net-(J3-D--PadA7)) doesn't match net given by schematic (/USB_CONN_DM)
+    Local override; warning
+    @(143.4850 mm, 94.5000 mm): Pad A7 [Net-(J3-D--PadA7)] of J3 on F.Cu
+[net_conflict]: Pad net (Net-(J3-CC2)) doesn't match net given by schematic (/USB_CC2)
+    Local override; warning
+    @(143.4850 mm, 96.0000 mm): Pad B5 [Net-(J3-CC2)] of J3 on F.Cu
+[net_conflict]: Pad net (Net-(J3-D+-PadA6)) doesn't match net given by schematic (/USB_CONN_DP)
+    Local override; warning
+    @(143.4850 mm, 95.0000 mm): Pad B6 [Net-(J3-D+-PadA6)] of J3 on F.Cu
+[net_conflict]: Pad net (Net-(J3-D--PadA7)) doesn't match net given by schematic (/USB_CONN_DM)
+    Local override; warning
+    @(143.4850 mm, 93.5000 mm): Pad B7 [Net-(J3-D--PadA7)] of J3 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/SHIELD_GND_TYPE_C)
+    Local override; warning
+    @(142.5700 mm, 89.9300 mm): PTH pad SH [GND] of J3
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/SHIELD_GND_TYPE_C)
+    Local override; warning
+    @(138.3900 mm, 89.9300 mm): PTH pad SH [GND] of J3
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/SHIELD_GND_TYPE_C)
+    Local override; warning
+    @(142.5700 mm, 98.5700 mm): PTH pad SH [GND] of J3
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/SHIELD_GND_TYPE_C)
+    Local override; warning
+    @(138.3900 mm, 98.5700 mm): PTH pad SH [GND] of J3
+[net_conflict]: Pad net (Net-(U1-VREG_LX)) doesn't match net given by schematic (/VREG_LX)
+    Local override; warning
+    @(151.3000 mm, 91.3800 mm): Pad 1 [Net-(U1-VREG_LX)] of L1 on F.Cu
+[net_conflict]: Pad net (Net-(D1-DIN)) doesn't match net given by schematic (/LED_DATA_IN)
+    Local override; warning
+    @(145.2000 mm, 82.2000 mm): Pad 1 [Net-(D1-DIN)] of R1 on F.Cu
+[net_conflict]: Pad net (Net-(R1-Pad2)) doesn't match net given by schematic (/LED_DATA_5V_BUF)
+    Local override; warning
+    @(143.5500 mm, 82.2000 mm): Pad 2 [Net-(R1-Pad2)] of R1 on F.Cu
+[net_conflict]: Pad net (Net-(J3-CC2)) doesn't match net given by schematic (/USB_CC2)
+    Local override; warning
+    @(145.5200 mm, 96.9553 mm): Pad 1 [Net-(J3-CC2)] of R3 on F.Cu
+[net_conflict]: Pad net (Net-(U1-VREG_AVDD)) doesn't match net given by schematic (/VREG_AVDD)
+    Local override; warning
+    @(172.8650 mm, 100.4900 mm): Pad 2 [Net-(U1-VREG_AVDD)] of R4 on F.Cu
+[net_conflict]: Pad net (Net-(J3-D--PadA7)) doesn't match net given by schematic (/USB_CONN_DM)
+    Local override; warning
+    @(145.4950 mm, 93.7900 mm): Pad 1 [Net-(J3-D--PadA7)] of R5 on F.Cu
+[net_conflict]: Pad net (Net-(J3-D+-PadA6)) doesn't match net given by schematic (/USB_CONN_DP)
+    Local override; warning
+    @(145.5350 mm, 95.4000 mm): Pad 1 [Net-(J3-D+-PadA6)] of R6 on F.Cu
+[net_conflict]: Pad net (Net-(U1-~{QSPI_SS})) doesn't match net given by schematic (/QSPI_SS_N)
+    Local override; warning
+    @(153.8972 mm, 100.1600 mm): Pad 2 [Net-(U1-~{QSPI_SS})] of R7 on F.Cu
+[net_conflict]: Pad net (Net-(U1-RUN)) doesn't match net given by schematic (/RUN_N)
+    Local override; warning
+    @(169.2169 mm, 94.0400 mm): Pad 2 [Net-(U1-RUN)] of R8 on F.Cu
+[net_conflict]: Pad net (Net-(C20-Pad1)) doesn't match net given by schematic (/XTAL_RETURN)
+    Local override; warning
+    @(164.6628 mm, 94.4400 mm): Pad 1 [Net-(C20-Pad1)] of R11 on F.Cu
+[missing_footprint]: Missing footprint TP1 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP2 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP3 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP4 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP5 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP6 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP7 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP8 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP9 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP10 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP11 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP12 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP13 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP14 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP15 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP16 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP17 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP18 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP19 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP20 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP21 (Tomachie_TP_E)
+    Local override; warning
+[missing_footprint]: Missing footprint TP22 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP23 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP24 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP25 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP26 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP27 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP28 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP29 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP30 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP31 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP32 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP33 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP34 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP35 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP36 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP37 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP38 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP39 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP40 (Tomachie_TP_W)
+    Local override; warning
+[missing_footprint]: Missing footprint TP41 (Tomachie_TP_W)
+    Local override; warning
+[net_conflict]: Pad net (Net-(U1-GPIO11)) doesn't match net given by schematic (/LED_DATA_3V3)
+    Local override; warning
+    @(160.5300 mm, 98.1200 mm): Pad 15 [Net-(U1-GPIO11)] of U1 on F.Cu
+[net_conflict]: Pad net (Net-(U1-RUN)) doesn't match net given by schematic (/RUN_N)
+    Local override; warning
+    @(161.1800 mm, 93.4700 mm): Pad 26 [Net-(U1-RUN)] of U1 on F.Cu
+[net_conflict]: Pad net (Net-(U1-VREG_AVDD)) doesn't match net given by schematic (/VREG_AVDD)
+    Local override; warning
+    @(154.2800 mm, 91.8700 mm): Pad 46 [Net-(U1-VREG_AVDD)] of U1 on F.Cu
+[net_conflict]: Pad net (Net-(U1-VREG_LX)) doesn't match net given by schematic (/VREG_LX)
+    Local override; warning
+    @(154.2800 mm, 92.6700 mm): Pad 48 [Net-(U1-VREG_LX)] of U1 on F.Cu
+[net_conflict]: Pad net (Net-(U1-~{QSPI_SS})) doesn't match net given by schematic (/QSPI_SS_N)
+    Local override; warning
+    @(154.2800 mm, 97.4700 mm): Pad 60 [Net-(U1-~{QSPI_SS})] of U1 on F.Cu
+[footprint_symbol_field_mismatch]: Field 'Notes' differs (PCB: '', Schematic: 'Exact EVVO AMS1117-3.3 stability requirement must be verified against the fitted manufacturer datasheet; do not substitute a generic AMS1117 capacitor requirement without checking the actual device.')
+    Local override; warning
+    @(141.6000 mm, 103.6000 mm): Footprint U2
+[net_conflict]: Pad net (Net-(U1-GPIO11)) doesn't match net given by schematic (/LED_DATA_3V3)
+    Local override; warning
+    @(165.3475 mm, 91.4500 mm): Pad 2 [Net-(U1-GPIO11)] of U3 on F.Cu
+[net_conflict]: Pad net (Net-(R1-Pad2)) doesn't match net given by schematic (/LED_DATA_5V_BUF)
+    Local override; warning
+    @(163.0725 mm, 90.5000 mm): Pad 4 [Net-(R1-Pad2)] of U3 on F.Cu
+[net_conflict]: Pad net (Net-(C20-Pad1)) doesn't match net given by schematic (/XTAL_RETURN)
+    Local override; warning
+    @(165.4670 mm, 95.9177 mm): Pad 3 [Net-(C20-Pad1)] of X1 on F.Cu
 
 ** Ignored checks **
     - Footprint has no courtyard defined

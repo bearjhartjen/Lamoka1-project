@@ -777,7 +777,7 @@
         "uuid": "c7bb62b6-932f-49c1-a356-0286e905fc0a"
       }
     ],
-    "used_designators": "Rsense1,NT1-2,Cin1,Rfbb1,Rfbt1,Cout1-3,SW1-2,Coutx1,#PWR1-72,Cvin1,Rt1,TP1-41,Cres1,Rvin1,H1-8,Ccomp1,Rcomp1,Q1-7,IC1,Ruvb1,Ruvt1,C1-33,#G1-4,J1-7,U1-10,X1,D1-12,CR1-2,L1-3,Rslope1,R1-33,Css1",
+    "used_designators": "#G1-4,J1-7,C1-33,Cout1-3,Rfbt1,#PWR1-72,Coutx1,Cvin1,Rt1,TP1-41,Cres1,L1-3,R1-33,Rslope1,X1,U1-10,CR1-2,D1-12,Css1,Rfbb1,Cin1,SW1-2,NT1-2,Rsense1,Rvin1,H1-8,Ccomp1,Rcomp1,Q1-7,IC1,Ruvb1,Ruvt1",
     "variants": []
   },
   "sheets": [
