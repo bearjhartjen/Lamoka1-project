@@ -30,8 +30,8 @@ the rest of `HARDWARE/`.
 
 ## The transformer is not modelled here
 
-The off-board transformer is not part of either STEP model. On the Rev C
-revision the fitted part is the Triad `VPT24-6670` — 160 VA, Ø106 × 52 mm,
+The off-board transformer is not part of either STEP model. The fitted part is
+the Triad `VPT24-6670` — 160 VA, Ø106 × 52 mm,
 1.6 kg, on an M6 × 60 mm bolt — which is larger and heavier than the 100 VA
 `VPT24-4170` it replaces (Ø88 × 51 mm, 1.0 kg, M6 × 55 mm). The enclosure has
 to be re-dimensioned for it, and the extra 0.6 kg on 200 mm leads wants a

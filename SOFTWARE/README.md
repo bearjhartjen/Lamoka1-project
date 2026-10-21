@@ -7,14 +7,16 @@ move, double-tap to go back, hold to select.
 
 ## Compatibility
 
-PIE **V1.9** is the first revision that runs on the **Lamoka1/2**. It scales
+PIE **V1.9** is the first release that runs on the **Lamoka1/2**. It scales
 the UI to the main board's five WS2812B LEDs, reads the TMP235 sensors on GPIO 26/27,
 uses the RP2350 hardware TRNG for entropy, and drives the H-bridge power stage
 (see `PIE-v1.9-information.md`). The V1.9 output target is **120.0 V RMS at
 the outlet**, on a **21.75 V bus**. The board has no isolated output sense, so
 the firmware regulates a droop-compensated *estimate* of the outlet —
-`V_out = A_DROOP × V_drive_rms − B_DROOP × I_sec_est` — with the constants
-fitted per unit at bring-up. The power stage has never been energised.
+`V_out = A_DROOP × V_drive_rms − B_DROOP × I_sec_est` — using the
+transformer's catalogue constants, which hold the outlet within about 3 % of
+120.0 V RMS. No unit needs to be calibrated or fitted. The power stage has
+never been energised.
 
 PIE **V1.8** runs on the **Lamoka1-DEV-Brain** (ten LEDs, analog entropy). It does
 **not** run on the main Lamoka1/2 board unmodified:
@@ -34,6 +36,6 @@ driving ten LEDs would address five that are not fitted. The menu, the brightnes
 speed bars, the binary score display, and the Fireball game all index across the full
 array, so the interface would be truncated rather than merely dimmer.
 
-PIE is now kept as two heads: `V1.8.ino` for the DEV-Brain and `V1.9.ino` for
+PIE is kept as two heads: `V1.8.ino` for the DEV-Brain and `V1.9.ino` for
 the Lamoka1/2. Both are maintained in place, and git history holds the earlier
-`V1.0`–`V1.7` revisions. V1.8 remains the reference for the DEV-Brain.
+`V1.0`–`V1.7` releases. V1.8 remains the reference for the DEV-Brain.

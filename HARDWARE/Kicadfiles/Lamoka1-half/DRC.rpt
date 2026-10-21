@@ -1,6 +1,6 @@
 ** Drc report for Lamoka1-half.kicad_pcb **
-** Created on 2026-10-20T08:01:17 **
-** Report includes: Errors, Warnings, Exclusions **
+** Created on 2026-10-20T20:08:03 **
+** Report includes: Errors, Warnings **
 
 ** Found 7 DRC violations **
 [silk_edge_clearance]: Silkscreen clipped by board edge

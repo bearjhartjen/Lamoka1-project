@@ -82,7 +82,7 @@
   "MaterialStackup": [
     {
       "Type": "Legend",
-      "Color": "Black",
+      "Color": "White",
       "Name": "Top Silk Screen"
     },
     {
@@ -124,7 +124,7 @@
     },
     {
       "Type": "Legend",
-      "Color": "Black",
+      "Color": "White",
       "Name": "Bottom Silk Screen"
     }
   ]

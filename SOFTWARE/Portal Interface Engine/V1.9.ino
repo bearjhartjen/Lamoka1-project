@@ -21,6 +21,7 @@ uint8_t powerState();
 const char *powerStateName();
 float powerBusVolts();
 float powerOutputVolts();
+float powerInputAmps();
 void renderInverter();
 
 /*
@@ -28,7 +29,7 @@ void renderInverter();
  * LAMOKA1/2 MAIN BOARD — PORTAL INTERFACE ENGINE V1.9
  * ================================================================
  *
- * First PIE revision that runs on the main Lamoka1/2 board and drives
+ First PIE release that runs on the main Lamoka1/2 board
  * the H-bridge power stage.  Derived from V1.8 (DEV-Brain UI firmware);
  * the UI gestures, effects and style are preserved and scaled to the
  * main board's five WS2812B LEDs.
@@ -42,23 +43,25 @@ void renderInverter();
  * The outlet is regulated by ESTIMATE: a droop-compensated feed forward
  * from the measured drive winding and the estimated load, closed by a
  * slow integral loop on that estimate.  The board has no isolated output
- * sense, so a direct isolated measurement of the outlet is a later
- * revision.
+ *  sense, so a direct isolated measurement of the outlet comes with a
+ *  later Lamoka1 model.
  *
  * HOME
  * ----
+ * Seven items:
  * 0 = BLUE STATUS BALL
  * 1 = FIREPLACE
  * 2 = LIGHTSABER
  * 3 = RAINBOW
- * 4 = GAMES
- * 5 = SETTINGS
+ * 4 = INVERTER (the power-stage portal, new in V1.9)
+ * 5 = GAMES
+ * 6 = SETTINGS
  *
  * HOME COLORS
  * -----------
- * 0-3 = exact cactus green
- * 4   = games orange
- * 5   = settings blue
+ * 0-4 = exact cactus green
+ * 5   = games orange
+ * 6   = settings blue
  *
  * CURSOR
  * ------
@@ -1318,10 +1321,28 @@ void renderUI() {
  *  no-load turns ratio is 115/12.96 = 8.8735 — not 115/12, which is
  *  the full-load ratio and 8 % high.
  *
- *  The outlet is regulated by ESTIMATE, not measured.  The board has no
- *  isolated output sense: the monitor chain is the battery rail (AIN0),
- *  the bus (AIN1), the two bridge midpoints (AIN2/AIN3), the input
- *  current (AIN4) and two TMP235s.  The firmware therefore
+ *  ---------------------------------------------------------------------
+ *  WARNING: nothing on this board senses the 120 V RMS side.
+ *  ---------------------------------------------------------------------
+ *  The monitor chain is the battery rail (AIN0), the bus (AIN1), the two
+ *  bridge midpoints (AIN2/AIN3), the input current (AIN4) and two
+ *  TMP235s.  There is NO voltage and NO current measurement after the
+ *  transformer: nothing in this firmware can see what the 115 V winding
+ *  is doing.  The outlet voltage is an ESTIMATE, and the only way to
+ *  know the real outlet voltage is to measure it with a meter.
+ *
+ *  The estimate is good - it holds the outlet within about 3 % of
+ *  120.0 V RMS for a transformer regulating 6-10 % - but it is still an
+ *  estimate.  Proceed with care: treat the output as live mains, verify
+ *  it with a meter, and do not expect the firmware to notice a fault on
+ *  the 115 V side.
+ *
+ *  A later Lamoka1 model may add a direct isolated output sense (an
+ *  AMC1311B) and replace the estimate with a measurement.  This
+ *  prototype does not have one.  Until it does, the 125 V receptacle
+ *  ceiling is enforced on the estimate.
+ *
+ *  How the estimate is built:
  *
  *    1. measures the DRIVE winding (12 V) RMS from the bridge midpoint
  *       differential (AIN2 - AIN3);
@@ -1338,16 +1359,11 @@ void renderUI() {
  *       forward, so a small error in B_DROOP shows up as a small
  *       steady-state error at load, not as instability.
  *
- *  A future revision may add a direct isolated output sense, which would
- *  replace the estimate with a measurement.  Until then the 125 V
- *  receptacle ceiling is enforced on the estimate.
- *
  *  U5/U6 VDD and the bootstrap diodes run from CSP (the 11–14 V battery
  *  rail), not the 21.75 V bus.  The MCU only generates PWM; the LM5122
- *  runs in hardware.  The 21.75 V bus is a board revision: the LM5122's
- *  1.2 V feedback reference sets it, 1.2 × (1 + Rfbt1/Rfbb1) = 21.749 V,
- *  i.e. Rfbt1 = 64.9 kΩ with Rfbb1 = 3.79 kΩ.  See
- *  HARDWARE/revB-changes.md.
+ *  runs in hardware.  The 21.75 V bus is set by the LM5122's 1.2 V
+ *  feedback reference: 1.2 × (1 + Rfbt1/Rfbb1) = 21.749 V, i.e. Rfbt1 =
+ *  64.9 kΩ with Rfbb1 = 3.79 kΩ.
  *
  *  Safety rules
  *  ------------
@@ -1386,6 +1402,26 @@ void renderUI() {
  *  Combined with the delayed inverted-channel compares, this gives each leg
  *  a dt gap on both edges for any duty d in [2*dt/T, 1 - 2*dt/T], so we
  *  clamp |m| ≤ 1 - 4*dt/T.
+ *
+ *  WHAT THE WINDING ACTUALLY SEES
+ *  ------------------------------
+ *  The two legs are NOT 180 degrees apart.  Slice 1 carries leg A's low
+ *  side AND leg B's high side, and the three counters are only dt and 2dt
+ *  apart, so the legs are nearly in phase.  The differential across the
+ *  primary is therefore a one-sided 20 kHz pulse train whose average is
+ *  m * Vbus -- not a bipolar 20 kHz square wave.  That average is the 60 Hz
+ *  fundamental the regulation model uses (drive RMS = m * Vbus / sqrt(2)),
+ *  and the firmware measures it correctly because the 339 Hz filter on the
+ *  two midpoints removes the carrier before the ADC sees it.
+ *
+ *  What the transformer and the outlet see is the whole waveform: about
+ *  1.47 times the fundamental in RMS.  The off-board output filter (38 mH
+ *  series, 470 nF shunt, damper, bleeder) is what turns that into a clean
+ *  60 Hz sine at the receptacle, and it is not built yet.  A later board
+ *  that puts each leg on its own slice
+ *  (leg A on slice 1 = GPIO2/GPIO3, leg B on slice 2 = GPIO4/GPIO5, with
+ *  the slices 180 degrees apart) would give a true bipolar drive; that is
+ *  a pin-assignment change, not a firmware change.
  * ================================================================ */
 
 // PWM constants.  150 MHz / 7500 = 20 kHz carrier; dt = 75 ticks = 500 ns.
@@ -1424,17 +1460,32 @@ void renderUI() {
 #define ADS7128_OP_SET_BITS    0x18   // set masked bits only
 #define ADS7128_OP_BLK_READ    0x30   // read a continuous register block
 
+// SYSTEM_STATUS bit positions (datasheet Table 12).
+#define ADS7128_OSR_DONE       0x08   // bit 3: conversion/averaging complete
+
+// How long the driver waits for OSR_DONE before it stops believing in it.
+// The conversion itself takes about 2 us at the internal oscillator, so
+// 200 us is a hundred times the conversion time and still well inside the
+// 200 us sweep throttle -- the sweep rate does not change.
+#define ADS7128_OSR_TIMEOUT_US 200UL
+
 // Divider ratios (bottom / (top + bottom)) from the schematic.
-// R27 (AIN1), R29 and R31 (AIN2/AIN3) are all 68 kΩ on the 21.75 V bus
-// revision, so every one of them has a 25.74 V full scale.  The old
-// 45.3 kΩ midpoint dividers clipped at 18.25 V and the old 43.2 kΩ bus
-// divider clipped at 17.56 V — both below the 21.75 V bus, which is why
-// they change.  The bus now sits at 2.79 V, well below the 3.3 V clip,
-// and the ±0.90 V start and ±1.5 V run windows stay inside that headroom.
+// R27 (AIN1), R29 and R31 (AIN2/AIN3) are all 68 kΩ, so every one of them
+// has a 25.74 V full scale.  45.3 kΩ on the midpoints would clip at
+// 18.25 V and 43.2 kΩ on the bus at 17.56 V — both below the 21.75 V bus,
+// which is why they are 68 kΩ.  The bus now sits at 2.79 V, well below the
+// 3.3 V clip, and the ±0.90 V start and ±1.5 V run windows stay inside that
+// headroom.
 #define DIV_AIN0           (10.0f / (36.5f + 10.0f))   // input rail 11–14 V
 #define DIV_AIN1           (10.0f / (68.0f + 10.0f))   // 21.75 V bus, 25.74 V FS
 #define DIV_AIN2           (10.0f / (68.0f + 10.0f))   // bridge midpoint A
 #define DIV_AIN3           (10.0f / (68.0f + 10.0f))   // bridge midpoint B
+// AIN4 is the INA240A2 (gain 50) across Rsense1 (2 mΩ): 0.1 V/A.  The
+// INA240's reference pins are grounded, so its output cannot go below
+// ground: a REVERSE current through Rsense1 reads as 0 A and is invisible
+// to the over-current trip.  The input-rail check still refuses to arm
+// with a reversed battery, but the current direction itself is not
+// observable.
 #define INA240_V_PER_A     0.1f                         // AIN4, 0.1 V/A
 
 // AIN2/AIN3 filter (recorded, not corrected).
@@ -1453,9 +1504,8 @@ void renderUI() {
 // cancel in the AIN2 − AIN3 difference the drive RMS is computed from;
 // what is left is not exactly predictable (the divider's source
 // impedance, the ADS7128's input impedance and the sampling all
-// perturb it), and a 1.5 % correction would be smaller than the
-// per-unit fit error it would be applied to.  It is absorbed by the
-// per-unit A_DROOP fit instead — see the calibration procedure below.
+// perturb it).  At 1.5 % it sits inside the ±3 % outlet bound below,
+// so it is left alone rather than corrected.
 
 // Transformer: Triad VPT24-6670 — 160 VA, 115 V primary, 12.0 V @ 13.34 A
 // secondary on the parallel connection, 8 % TYP regulation from full load
@@ -1488,55 +1538,43 @@ void renderUI() {
 //
 //     Z1 = (12.96 - 12.0) / 13.34 * k^2 = 5.666 Ω
 //
-// BOTH constants are PER-UNIT.  The 8 % regulation is a TYP with no
-// published maximum, and the fitted unit's actual turns ratio is only
-// known to the same precision, so the catalogue values below are only
-// the starting point.  The bring-up procedure fits both of them:
+// Both constants are the transformer's CATALOGUE values, used as they come.
+// Nobody has to fit them, and nobody has to calibrate a unit.
 //
-//   1. NO LOAD.  Arm the inverter with nothing connected to the outlet
-//      and let it settle.  Read the drive winding RMS from the serial
-//      report (VPRI=) and measure the open-circuit outlet with a DMM at
-//      the receptacle (V_out0).  Then
+// How far off can that be?  The one thing the model does not know is the
+// unit's own regulation r: the catalogue says 8 % TYP with no published
+// maximum.  For a transformer regulating r, the no-load secondary is
+// 12.0 * (1 + r) V, the no-load ratio is k = 115 / (12.0 * (1 + r)) and the
+// series impedance referred to the 115 V winding is
+// Z = (12.0 * r / 13.34) * k^2.  The firmware asks for the drive that
+// satisfies the model at 120.0 V, and the real outlet is then
+// k * V_drive - Z * I_sec:
 //
-//          A_DROOP = V_out0 / V_drive_rms
+//     r      k        Z        0 W      25 W      50 W      75 W     100 W
+//     6 %  9.0409   4.412   122.26   122.55   122.83   123.11   123.40
+//     7 %  8.9564   5.051   121.12   121.26   121.40   121.54   121.68
+//     8 %  8.8735   5.666   120.00   120.00   120.00   120.00   120.00
+//     9 %  8.7920   6.258   118.90   118.76   118.63   118.50   118.36
+//    10 %  8.7121   6.828   117.82   117.55   117.29   117.03   116.76
+//    11 %  8.6336   7.376   116.76   116.37   115.98   115.59   115.20
 //
-//      This measures the no-load ratio directly, so it does not depend
-//      on the catalogue figure at all.  For a VPT24-6670 it comes out
-//      near 8.8735 (115 V / 12.96 V).
-//   2. LIGHT LOAD.  Connect a known resistive load, say 50 W.  Measure
-//      the outlet voltage (V_out1) with the DMM and the secondary
-//      current (I_sec1) with a clamp meter on the 115 V winding, and
-//      record the drive RMS (V_drive_rms1) from the report.
-//   3. HEAVY LOAD.  Repeat at a second, heavier load, say 100 W
-//      (V_out2, I_sec2, V_drive_rms2).
-//   4. The droop model is V_out = A_DROOP * V_drive - B_DROOP * I_sec, so
-//      with x_i = A_DROOP * V_drive_rms_i the two load points give
+// So the catalogue constants hold the outlet within 3 % of 120.0 V RMS
+// across the whole load range for any transformer regulating between 6 %
+// and 10 %, which brackets the 8 % TYP value and covers the spread between
+// units out of the same box.  At 11 % the error reaches -4 %.
 //
-//          B_DROOP = (x1 - x2) / (I_sec1 - I_sec2)
+// The estimate of the output POWER is about 12 % high: ETA_BUCK_HBRIDGE
+// assumes 0.92 for the whole chain where the transformer alone is 0.89.
+// That error is proportional to the load, so it lands in the same place as
+// the droop error and needs no separate correction.  It is NOT absorbed by
+// the "load too heavy" limit, which is compared against the same estimate
+// -- see LOAD_LIMIT_W.
 //
-//      i.e. it is the slope of V_out against I_sec, not against the load
-//      current on the 12 V side.
-//   5. Enter A_DROOP and B_DROOP in this file and rebuild.
-//
-//   Accuracy.  A DMM reads to about 0.5 %, and the two load points span
-//   most of the droop, so A_DROOP comes out to about 0.5 % and B_DROOP
-//   to about 2 %.  That puts the estimated outlet within roughly 1 % of
-//   the measured one across the load range — which is the accuracy the
-//   120 V target is actually held to, because there is no isolated output
-//   measurement for the loop to close on.
-//
-//   The estimate of the output POWER is also about 10 % high:
-//   ETA_BUCK_HBRIDGE assumes 0.92 for the whole chain where the
-//   transformer alone is 0.89.  That error is proportional to the load,
-//   so it is absorbed exactly by the fitted B_DROOP and needs no separate
-//   correction.
-//
-// Without the fit, a unit that regulates 9 % instead of 8 % reads about
-// 118.4 V at 100 W and one that regulates 10 % about 116.8 V, because
-// the firmware's 8 % constants ask for too little drive.  With the fit
-// each unit reads 120.0 V — but only if the unit's own regulation is
-// also within the modulation budget, which is what the "output out of
-// reach" fault below reports.
+// This is the accuracy the 120.0 V target is actually held to, because there
+// is no isolated output measurement for the loop to close on.  If a unit
+// reads outside roughly 116-124 V RMS, the transformer wiring and the boost
+// bus are the things to check -- not the constants.
+
 #define A_DROOP            TRANSFORMER_NOLOAD_RATIO
 #define B_DROOP            5.666f              // secondary-referred series impedance
 
@@ -1559,7 +1597,7 @@ void renderUI() {
 //   120 V at 100 W needs m = 0.914;
 //   at the bottom of the bus band (21.13 V) 100 W needs m = 0.941, so
 //   there is 1.97 % of modulation left against the 0.9597 clamp — and
-//   that is only if the fitted transformer really regulates 8 %.  A unit
+//   that is only for a transformer regulating 8 %.  A unit
 //   that regulates 10 % needs m = 0.966 at that corner, which the clamp
 //   rejects: the "output out of reach" fault below reports it.
 //   The no-load ceiling at the PWM clamp is 131 V, so the outlet ceiling
@@ -1568,8 +1606,55 @@ void renderUI() {
 #define OUTPUT_OV_FACTOR   1.05f    // 126 V on the estimated outlet
 #define OUTLET_V_MAX       125.0f   // NEMA 5-15R receptacle rating
 #define OUT_MISSING_FRACTION 0.60f  // bridge output vs commanded modulation
-#define DC_TRIP_V          1.0f     // primary DC offset; ~90 ms to saturate
 #define AMP_SLEW_MAX       0.010f   // per 10 ms tick, below dead-time step
+
+// Primary DC offset.
+//
+// The trip threshold is 0.5 V and the trip is evaluated on every RMS sample
+// (every 130 us), NOT once per control tick.  Both follow from the
+// transformer's flux budget, which puts the saturation knee at 11-13 ms for
+// a 1 V offset -- a flux budget of about 0.011 V.s.
+//
+//   saturation time for an offset X     11/X ms
+//   detection time for an offset X      16.64 * (T/X) + 0.26 ms
+//
+// The detection time is dominated by the one-mains-cycle window the DC
+// estimate needs: the mean of that window is what rejects the 60 Hz
+// fundamental, and after a step of X volts it only reaches T once
+// 128 * T / X samples have gone in.  With the old T = 1.0 V that window
+// alone (16.64 ms) is longer than the knee (11-13 ms), so the trip could
+// never be fast enough no matter when it was evaluated.
+//
+// With T = 0.5 V the detection beats the saturation time for every offset
+// between 0.5 V and 10 V:
+//
+//   X = 0.5 V   detect 16.9 ms   saturate 22.0 ms
+//   X = 1.0 V   detect  8.6 ms   saturate 11.0 ms
+//   X = 2.0 V   detect  4.4 ms   saturate  5.5 ms
+//   X = 5.0 V   detect  1.9 ms   saturate  2.2 ms
+//
+// Below 0.5 V the transformer does not saturate at all, so the lower
+// threshold costs nothing.  The noise margin is large: the residual
+// aliased ripple on the DC estimate is about 0.01 V, so the threshold sits
+// 50x above the noise.
+//
+// The trip is armed only once the measurement window is FULL (see
+// updateRmsAndDc()).  That means an offset which appears DURING a run is
+// caught 8.5 ms after it appears -- inside the saturation window -- but an
+// offset that is already there when the bridge starts is not caught until
+// the window has filled (16.64 ms) and then filled with the offset (a
+// further 8.3 ms at 1 V), i.e. at about 25 ms, after the 11-13 ms knee.
+// Detecting that case faster needs a phase reference for the 60 Hz
+// fundamental, which this measurement chain does not have.  It is recorded
+// as a limitation rather than papered over.
+//
+// DC_TRIP_SAMPLES is the number of consecutive samples above the threshold
+// that trip it.  One sample is enough -- the estimate is already the mean
+// of 128 samples, so a single wild reading moves it by 1/128 of its
+// magnitude -- but two are used, which costs 260 us and still leaves the
+// detection ahead of the knee.
+#define DC_TRIP_V          0.5f
+#define DC_TRIP_SAMPLES    2
 
 // "Output out of reach": the regulator is pinned at the PWM clamp and the
 // estimated outlet is still below the target, so the target cannot be
@@ -1582,14 +1667,25 @@ void renderUI() {
 
 // The transformer's power capability.  The VPT24-6670 is 160 VA, so at
 // the 120 V target it passes 160/120 = 1.333 A on the 115 V winding and
-// up to 11.8 A on the 12 V winding.  The product rating is 100 W
-// continuous (about 111 VA through the transformer, 69 % of the rating).
-// The firmware's limit is 150 W of ESTIMATED output power: the estimate
-// runs about 10 % high (ETA_BUCK_HBRIDGE assumes 0.92 for the whole
-// chain where the transformer alone is 0.89), so that is about 135 W at
-// the outlet — 84 % of the transformer's VA rating and 75 % of the 12 V
-// winding's current rating.  Above that the transformer, not the
-// modulator, is the limit.
+// 13.34 A on the 12 V winding.
+//
+// The drive is NOT a 60 Hz sine: the bridge is a 20 kHz unipolar PWM with
+// the 60 Hz fundamental riding on it, so the primary winding sees a
+// waveform whose total RMS is about 1.47 times its 60 Hz fundamental
+// (21.3 V total against 14.5 V fundamental at the design point).  What the
+// transformer is rated on -- the winding currents -- is set by the load and
+// stays sinusoidal: at 100 W the primary carries 6.9 A RMS of its 13.34 A
+// rating (52 %) and the secondary 0.83 A of its 1.333 A (62 %).  The extra
+// voltage is 20 kHz carrier, which adds core loss but not flux: the
+// carrier's volt-seconds balance over every carrier period, so the core
+// does not walk up.
+//
+// The product rating is 100 W continuous.  The firmware's limit is 150 W of
+// ESTIMATED output power: the estimate runs about 12 % high
+// (ETA_BUCK_HBRIDGE assumes 0.92 for the whole chain where the
+// transformer alone is 0.89), so that is about 135 W at the outlet -- 85 %
+// of the 115 V winding's current rating and 70 % of the 12 V winding's.
+// Above that the transformer, not the modulator, is the limit.
 #define LOAD_LIMIT_W        150.0f
 #define LOAD_HEAVY_TICKS    50      // 500 ms debounce
 
@@ -1614,6 +1710,7 @@ void renderUI() {
 #define VBUS_NOMINAL       21.75f
 #define VBUS_START_WINDOW  0.90f
 #define VBUS_RUN_WINDOW    1.50f
+#define BUS_RUN_GRACE_TICKS 3       // 30 ms of out-of-range bus tolerated
 #define IIN_WARN           15.0f
 #define IIN_TRIP           20.0f
 #define TEMP_WARN_C        60.0f
@@ -1626,6 +1723,18 @@ void renderUI() {
 #define AMP_KI             0.0003f // integrator gain per 10 ms tick per volt of error
 
 // RMS measurement cadence.
+//
+// The ring is sampled every RMS_SAMPLE_US, but the ADS7128 sweep refreshes
+// each channel only once per round-robin pass, so the ring holds about 16.6
+// INDEPENDENT samples per mains cycle rather than 128.  That is enough: the
+// window is 16.64 ms against a 16.667 ms mains period, so the time-weighted
+// mean of the squared waveform over it is the mean over a whole cycle, and
+// the computed RMS is within about 0.2 % of the true value (the modelled
+// error over the sweep phase is 0.00-0.16 %).
+//
+// The same window is what rejects the 60 Hz fundamental from the DC
+// estimate: a one-cycle mean of a sinusoid is zero.  That is why the window
+// cannot simply be shortened -- see DC_TRIP_V.
 #define RMS_RING_SIZE      128
 #define RMS_MIN_SAMPLES    96
 #define RMS_SAMPLE_US      130
@@ -1719,6 +1828,7 @@ static uint8_t  adsChannel = 0;
 static bool     adsPresent = false;
 static uint32_t adsLastConvUs = 0;
 static uint32_t adsConvStartUs = 0;
+static bool     adsOsrWarned = false;   // OSR_DONE never asserted, reported once
 enum AdsPhase : uint8_t { ADS_IDLE, ADS_WAITING, ADS_READING };
 static AdsPhase adsPhase = ADS_IDLE;
 
@@ -1773,20 +1883,24 @@ static bool busValidForStart() {
 }
 
 static bool busValidForRun() {
-  static bool wasValid = false;
+  // The bus can be disturbed by a load step and by the 120 Hz ripple, so a
+  // single out-of-range sample is not a fault.  BUS_RUN_GRACE_TICKS
+  // consecutive out-of-range samples (30 ms at the 100 Hz control loop)
+  // are tolerated before the bridge is stopped; the sample after that
+  // faults.  One tick of grace was not enough: a 20 ms excursion, which
+  // the bus can produce on a load dump, used to stop the inverter.
+  static uint8_t badTicks = 0;
   bool ok = (vBus >= VBUS_NOMINAL - VBUS_RUN_WINDOW) &&
             (vBus <= VBUS_NOMINAL + VBUS_RUN_WINDOW);
-  if (!ok) {
-    // Require the bus to be out of range persistently; single-sample noise
-    // is ignored by checking again on the next control tick.
-    if (wasValid) {
-      wasValid = false;
-      return true;   // one-cycle grace
-    }
-    return false;
+  if (ok) {
+    badTicks = 0;
+    return true;
   }
-  wasValid = true;
-  return true;
+  if (badTicks < BUS_RUN_GRACE_TICKS) {
+    badTicks++;
+    return true;    // grace
+  }
+  return false;
 }
 
 // ADS7128 register primitives (opcode-framed, datasheet SBAS868A §8.5).
@@ -1869,7 +1983,7 @@ static void adsService() {
   if (!adsPresent) return;
 
   if (adsPhase == ADS_WAITING) {
-    // Poll OSR_DONE (bit 3).  Typical conversion < 2 us; timeout 5 ms.
+    // Poll OSR_DONE (bit 3).  Typical conversion < 2 us.
     uint8_t status = 0;
     if (!adsReadReg(ADS7128_SYSTEM_STATUS, &status)) {
       adsPresent = false;
@@ -1878,10 +1992,13 @@ static void adsService() {
       if (pArmed) setFault("ADS7128 NACK");
       return;
     }
-    if (status & 0x08) {
-      // OSR_DONE is sticky; write 1 to clear it so the next channel's poll
-      // sees only the next conversion's completion (datasheet §8.6.1).
-      if (!adsSetBits(ADS7128_SYSTEM_STATUS, 0x08)) {
+    if (status & ADS7128_OSR_DONE) {
+      // OSR_DONE is a WRITE-1-TO-CLEAR bit (datasheet Table 12: "Clear this
+      // bit by writing 1b to this bit"), so it is cleared with a plain
+      // register write.  The "set bit" opcode (0x18) is documented to SET
+      // bits (datasheet 8.5.2.2), which is not the same operation on a
+      // write-1-to-clear bit.
+      if (!adsWriteReg(ADS7128_SYSTEM_STATUS, ADS7128_OSR_DONE)) {
         adsPresent = false;
         adsPhase = ADS_IDLE;
         adsSwept = false;
@@ -1889,11 +2006,19 @@ static void adsService() {
         return;
       }
       adsPhase = ADS_READING;
-    } else if (micros() - adsConvStartUs > 5000) {
-      adsPresent = false;
-      adsPhase = ADS_IDLE;
-      adsSwept = false;
-      if (pArmed) setFault("ADS7128 timeout");
+    } else if (micros() - adsConvStartUs > ADS7128_OSR_TIMEOUT_US) {
+      // OSR_DONE has not asserted.  With the averaging filter disabled
+      // (OSR_CFG = 0, the reset value, which the datasheet defines as "No
+      // averaging") the datasheet describes this bit as the AVERAGING
+      // status, so it may never assert at all.  The conversion itself took
+      // about 2 us, so the result is long since ready: read it, and report
+      // the condition once instead of faulting.  A genuinely dead chip is
+      // still caught -- the read below fails and raises "ADS7128 read".
+      if (!adsOsrWarned) {
+        adsOsrWarned = true;
+        if (Serial) Serial.println("WARN: ADS7128 OSR_DONE did not assert");
+      }
+      adsPhase = ADS_READING;
     }
     return;
   }
@@ -1936,6 +2061,14 @@ static void adsService() {
 }
 
 static float readTempAdc(uint8_t adcInput) {
+  // The TMP235 is an ANALOGUE sensor on this board: the netlist has its
+  // VOUT pin (not an I2C device) on GPIO26/ADC0 and GPIO27/ADC1.  Its
+  // transfer function is 10 mV/degC with 500 mV at 0 degC, so the reading
+  // below is the datasheet's own equation.
+  //
+  // adc_read() is a single-shot conversion with a short busy-wait (96 ADC
+  // clock cycles, about 0.8 us), so it is not a real stall in the power
+  // path; the 20 kHz carrier runs from the ISR and is unaffected.
   adc_select_input(adcInput);
   uint16_t raw = adc_read();
   float volts = (float)raw * 3.3f / 4096.0f;
@@ -1974,6 +2107,33 @@ static void updateRmsAndDc() {
   float sum = 0.0f;
   for (uint8_t i = 0; i < rmsCount; i++) sum += rmsBuf[i];
   primaryDc = sum / (float)rmsCount;
+
+  // The DC-offset trip lives here, not in the control loop.  The estimate
+  // only becomes meaningful once the window is full of drive samples, and
+  // the whole point of the lower threshold (see DC_TRIP_V above) is that the
+  // trip has to react within the same millisecond that the offset appears.
+  // Evaluating it here, on every 130 us sample, instead of on the 100 Hz
+  // control tick, is what makes the detection beat the saturation knee.
+  //
+  // It is only evaluated once the window is FULL.  A part-full window is
+  // shorter than a mains cycle, so the 60 Hz fundamental does not cancel in
+  // it: at 96 samples the mean of the fundamental can be 0.79 V, which is
+  // above the trip threshold and would fire on every start-up.  At the full
+  // 128 samples (16.64 ms against a 16.667 ms period) the same figure is
+  // 0.004 V.
+  if (pArmed && rmsCount >= RMS_RING_SIZE &&
+      (pState == POWER_RUNNING || pState == POWER_STARTING)) {
+    if (fabsf(primaryDc) > DC_TRIP_V) {
+      if (++dcFaultCount >= DC_TRIP_SAMPLES) {
+        setFault("DC offset");
+        return;
+      }
+    } else {
+      dcFaultCount = 0;
+    }
+  } else {
+    dcFaultCount = 0;
+  }
 
   // RMS of the primary differential: the 12 V winding drive voltage.
   float sq = 0.0f;
@@ -2142,6 +2302,21 @@ static void __not_in_flash_func(onPwmWrap)() {
   writeBridgeDuty(modAmp * s);
 }
 
+static void resetMeasurementWindow() {
+  // Drop the measurement window.  It holds the difference between the two
+  // bridge midpoints, and the tail of a run that has just ended (or the
+  // idle samples that preceded one) is not a measurement of anything:
+  // keeping it would let the filter's settling transient look like a DC
+  // offset to the trip in updateRmsAndDc().  The window refills from the
+  // new run.
+  rmsCount = 0;
+  rmsIndex = 0;
+  rmsValid = false;
+  primaryDc = 0.0f;
+  primaryRms = 0.0f;
+  inferredOutletRms = 0.0f;
+}
+
 static void stopBridge() {
   bridgeModulating = false;
   modAmp = 0.0f;
@@ -2157,6 +2332,7 @@ static void stopBridge() {
   driveLimitNow = 0.0f;
   regSaturated = false;
   atPwmClamp = false;
+  resetMeasurementWindow();
 }
 
 static void enablePwmSlices() {
@@ -2215,6 +2391,7 @@ static void startBridge() {
   if (!pArmed) return;
   if (!sensorsOk) return;
   if (!busValidForStart()) return;
+  resetMeasurementWindow();
   enablePwmSlices();
   rampStartMs = millis();
   mRamp = 0.0f;
@@ -2285,17 +2462,10 @@ static void runControl(uint32_t nowMs) {
         } else {
           outMissingCount = 0;
         }
-        // Primary DC offset: a 1 V offset saturates the transformer in ~90 ms.
-        // Tripping in 30 ms (3 ticks) is conservative and stays clear of the
-        // 90 ms saturation time.
-        if (fabsf(primaryDc) > DC_TRIP_V) {
-          if (++dcFaultCount >= 3) {
-            setFault("DC offset");
-            return;
-          }
-        } else {
-          dcFaultCount = 0;
-        }
+        // The DC-offset trip is NOT here.  It is evaluated in
+        // updateRmsAndDc(), on every RMS sample, because it has to react
+        // within the same millisecond the offset appears -- see the
+        // DC_TRIP_V comment.
       }
     }
   }
@@ -2546,7 +2716,9 @@ float powerInputVolts()  { return vIn; }
 float powerBusVolts()    { return vBus; }
 // The ESTIMATED outlet voltage (droop-compensated), not a measurement.
 float powerOutputVolts() { return outletEstimate(); }
-float powerOutputAmps()  { return iIn; }
+// The BATTERY current, measured by the INA240 across Rsense1 -- not an
+// output current.  The board has no output current measurement.
+float powerInputAmps()   { return iIn; }
 
 float powerTempC(uint8_t index) {
   if (index == 0) return tempCtrl;
@@ -2728,13 +2900,13 @@ void renderInverter() {
   }
 
   uint8_t st = powerState();
-  if (st == 1) { // POWER_WAIT_BUS
+  if (st == POWER_WAIT_BUS) {
     uint8_t p = beatsin8(4, 30, 180);
     leds[0] = CRGB(p, p / 2, 0);
     return;
   }
 
-  if (st == 2) { // POWER_STARTING
+  if (st == POWER_STARTING) {
     float v = powerBusVolts();
     float frac = v / VBUS_NOMINAL;
     if (frac < 0.0f) frac = 0.0f;
@@ -2746,7 +2918,7 @@ void renderInverter() {
     return;
   }
 
-  if (st == 3) { // POWER_RUNNING
+  if (st == POWER_RUNNING) {
     // Bar shows the ESTIMATED outlet against the 120 V target.
     float frac = powerOutputVolts() / OUTPUT_TARGET_RMS;
     if (frac < 0.0f) frac = 0.0f;

@@ -94,6 +94,9 @@ OUTPUT_OV_FACTOR = _float("OUTPUT_OV_FACTOR")
 OUTLET_V_MAX = _float("OUTLET_V_MAX")
 OUT_MISSING_FRACTION = _float("OUT_MISSING_FRACTION")
 DC_TRIP_V = _float("DC_TRIP_V")
+DC_TRIP_SAMPLES = _int("DC_TRIP_SAMPLES")
+RMS_RING_SIZE = _int("RMS_RING_SIZE")
+RMS_SAMPLE_US = _int("RMS_SAMPLE_US")
 AMP_SLEW_MAX = _float("AMP_SLEW_MAX")
 VBUS_NOMINAL = _float("VBUS_NOMINAL")
 VBUS_START_WINDOW = _float("VBUS_START_WINDOW")
@@ -507,8 +510,8 @@ class ModulationCeilingTests(unittest.TestCase):
         self.assertLess(OUT_OF_REACH_BAND_V, 1.0)
 
 
-class PerUnitFitTests(unittest.TestCase):
-    """The catalogue constants and the per-unit fit that replaces them."""
+class CatalogueConstantTests(unittest.TestCase):
+    """What the fixed catalogue constants deliver on a real transformer."""
 
     def test_the_catalogue_constants_give_120_v_on_an_eight_percent_unit(self):
         k, z1 = transformer_model(0.08)
@@ -525,7 +528,7 @@ class PerUnitFitTests(unittest.TestCase):
                     places=2,
                 )
 
-    def test_a_nine_percent_unit_reads_low_without_the_fit(self):
+    def test_a_nine_percent_unit_reads_low_with_the_catalogue_constants(self):
         # With the 8 % constants, a unit that actually regulates 9 % is
         # driven too lightly and the outlet reads low.
         k, z1 = transformer_model(0.09)
@@ -538,7 +541,7 @@ class PerUnitFitTests(unittest.TestCase):
         self.assertLess(outlet, 119.0)
         self.assertAlmostEqual(outlet, 118.36, places=1)
 
-    def test_a_ten_percent_unit_reads_low_without_the_fit(self):
+    def test_a_ten_percent_unit_reads_low_with_the_catalogue_constants(self):
         k, z1 = transformer_model(0.10)
         drive = (
             modulation_for_outlet(OUTPUT_TARGET_RMS, FULL_LOAD_W, VBUS_NOMINAL)
@@ -549,20 +552,43 @@ class PerUnitFitTests(unittest.TestCase):
         self.assertLess(outlet, 118.0)
         self.assertAlmostEqual(outlet, 116.76, places=1)
 
-    def test_the_per_unit_fit_recovers_120_v(self):
-        # Fitting A_DROOP and B_DROOP to the unit itself brings every
-        # regulation back to the target.
-        for regulation in (0.08, 0.09, 0.10):
+    def test_the_catalogue_constants_hold_the_outlet_within_three_percent(self):
+        # The contract the firmware ships against: the fixed constants keep
+        # the real outlet within 3 % of 120.0 V RMS across the load range
+        # for a transformer regulating 6-10 %, which brackets the 8 % TYP
+        # catalogue value.  No unit has to be fitted or calibrated.
+        for regulation in (0.06, 0.07, 0.08, 0.09, 0.10):
             k, z1 = transformer_model(regulation)
-            for p_out in (0.0, 50.0, 100.0):
+            for p_out in (0.0, 25.0, 50.0, 75.0, 100.0):
                 with self.subTest(regulation=regulation, p_out=p_out):
-                    i_sec = p_out / OUTPUT_TARGET_RMS if p_out > 0.0 else 0.0
-                    drive = (OUTPUT_TARGET_RMS + z1 * i_sec) / k
-                    self.assertAlmostEqual(
-                        physical_outlet(k, z1, drive, p_out),
-                        OUTPUT_TARGET_RMS,
-                        places=6,
+                    drive = (
+                        modulation_for_outlet(
+                            OUTPUT_TARGET_RMS, p_out, VBUS_NOMINAL
+                        )
+                        * VBUS_NOMINAL
+                        / math.sqrt(2.0)
                     )
+                    outlet = physical_outlet(k, z1, drive, p_out)
+                    self.assertAlmostEqual(
+                        outlet,
+                        OUTPUT_TARGET_RMS,
+                        delta=0.03 * OUTPUT_TARGET_RMS,
+                    )
+
+    def test_the_eight_percent_catalogue_unit_lands_on_the_target(self):
+        k, z1 = transformer_model(0.08)
+        for p_out in (0.0, 25.0, 50.0, 75.0, 100.0):
+            with self.subTest(p_out=p_out):
+                drive = (
+                    modulation_for_outlet(OUTPUT_TARGET_RMS, p_out, VBUS_NOMINAL)
+                    * VBUS_NOMINAL
+                    / math.sqrt(2.0)
+                )
+                self.assertAlmostEqual(
+                    physical_outlet(k, z1, drive, p_out),
+                    OUTPUT_TARGET_RMS,
+                    places=2,
+                )
 
     def test_the_old_constants_would_have_run_the_outlet_seven_percent_low(self):
         # On the record: A = 115/12 and B = 6.6 Ω asked for too little
@@ -776,17 +802,42 @@ class DividerFilterTests(unittest.TestCase):
 
 class DcOffsetTests(unittest.TestCase):
     def test_detection_precedes_saturation(self):
-        # 0.09 V*s of flux budget / 1 V = 90 ms to saturation.
-        # NOTE: the 90 ms figure predates the Rev C flux re-derivation,
-        # which puts the knee at ~11-13 ms at the operating point.  The
-        # threshold below is unchanged in this revision; re-deriving it is
-        # an open item, not something this change silently alters.
-        saturation_ms = 0.09 / DC_TRIP_V * 1000.0
-        self.assertAlmostEqual(saturation_ms, 90.0, places=3)
-        # 128 samples at 130 us = 16.64 ms, plus 3 control ticks.
-        detect_ms = 128 * 130e-6 * 1000.0 + 3 * CTRL_INTERVAL_MS
-        self.assertAlmostEqual(detect_ms, 46.64, places=2)
-        self.assertLess(detect_ms, saturation_ms)
+        # The Rev C flux re-derivation puts the knee at 11-13 ms at the
+        # operating point, a flux budget of about 0.011 V.s, so an offset of
+        # X volts saturates the transformer in 11/X ms.
+        #
+        # The DC estimate is the mean of a one-mains-cycle window -- that is
+        # what rejects the 60 Hz fundamental -- and after a step of X it
+        # only reaches the threshold once 128 * T / X samples have gone in.
+        # The trip is evaluated on every RMS sample, not on the control
+        # tick, and needs two consecutive samples.
+        saturation_ms = 0.011 / DC_TRIP_V * 1000.0
+        self.assertAlmostEqual(saturation_ms, 22.0, places=3)
+
+        for offset in (0.55, 1.0, 2.0, 5.0, 10.0):
+            with self.subTest(offset=offset):
+                samples = math.ceil(RMS_RING_SIZE * (DC_TRIP_V / offset))
+                detect_ms = (
+                    samples * RMS_SAMPLE_US / 1000.0
+                    + (DC_TRIP_SAMPLES - 1) * RMS_SAMPLE_US / 1000.0
+                )
+                saturate_ms = 0.011 / offset * 1000.0
+                self.assertLess(detect_ms, saturate_ms)
+
+    def test_the_threshold_is_below_the_old_one(self):
+        # The old 1.0 V threshold with a 100 Hz trip could not react in
+        # time: the window alone (16.64 ms) is longer than the knee.
+        self.assertLess(DC_TRIP_V, 1.0)
+        window_ms = RMS_RING_SIZE * RMS_SAMPLE_US * 1000.0
+        self.assertGreater(window_ms, 11.0)
+
+    def test_the_trip_is_evaluated_on_every_rms_sample(self):
+        # Not in the control loop: a 100 Hz tick would add 10 ms, which is
+        # most of the saturation window.
+        block = SOURCE[SOURCE.index("static void updateRmsAndDc()") :]
+        block = block[: block.index("/* ====")]
+        self.assertIn("if (fabsf(primaryDc) > DC_TRIP_V)", block)
+        self.assertIn('setFault("DC offset")', block)
 
 
 class SlewTests(unittest.TestCase):
@@ -876,7 +927,8 @@ class SourceContractTests(unittest.TestCase):
     def test_constants_and_fault_string(self):
         self.assertRegex(SOURCE, r"#define\s+OUTPUT_TARGET_RMS\s+120\.0f")
         self.assertRegex(SOURCE, r"#define\s+OUT_MISSING_FRACTION\s+0\.60f")
-        self.assertRegex(SOURCE, r"#define\s+DC_TRIP_V\s+1\.0f")
+        self.assertRegex(SOURCE, r"#define\s+DC_TRIP_V\s+0\.5f")
+        self.assertRegex(SOURCE, r"#define\s+DC_TRIP_SAMPLES\s+2")
         self.assertRegex(SOURCE, r"#define\s+AMP_SLEW_MAX\s+0\.010f")
         self.assertRegex(SOURCE, r"#define\s+VBUS_START_WINDOW\s+0\.90f")
         self.assertRegex(SOURCE, r"#define\s+VBUS_RUN_WINDOW\s+1\.50f")
@@ -1032,17 +1084,23 @@ class HeaderTopologyTests(unittest.TestCase):
     def test_the_header_names_the_boost_feedback_divider(self):
         self.assertIn("64.9 kΩ", SOURCE)
 
-    def test_the_calibration_procedure_fits_both_constants(self):
-        self.assertIn("A_DROOP = V_out0 / V_drive_rms", SOURCE)
-        self.assertIn("B_DROOP = (x1 - x2) / (I_sec1 - I_sec2)", SOURCE)
+    def test_the_constants_are_the_catalogue_values_with_no_per_unit_fit(self):
+        # Nobody fits A_DROOP and B_DROOP to their own unit.  The sketch
+        # uses the transformer's catalogue values as they come.
+        self.assertIn("Both constants are the transformer's CATALOGUE values", SOURCE)
+        self.assertNotIn("A_DROOP = V_out0 / V_drive_rms", SOURCE)
+        self.assertNotIn("B_DROOP = (x1 - x2) / (I_sec1 - I_sec2)", SOURCE)
 
-    def test_the_calibration_procedure_names_the_bench_readings(self):
-        for token in ("VPRI=", "V_out0", "I_sec1", "I_sec2", "DMM", "clamp meter"):
+    def test_the_header_says_nothing_senses_the_outlet(self):
+        for token in ("NO voltage and NO current measurement after the", "ESTIMATE"):
             with self.subTest(token=token):
                 self.assertIn(token, SOURCE)
 
-    def test_the_calibration_procedure_states_the_accuracy(self):
-        self.assertIn("Accuracy.", SOURCE)
+    def test_the_sketch_states_the_three_percent_bound(self):
+        self.assertIn("within 3 % of 120.0 V RMS", SOURCE)
+        for token in ("6 %", "10 %", "120.00", "116.76"):
+            with self.subTest(token=token):
+                self.assertIn(token, SOURCE)
 
 
 if __name__ == "__main__":

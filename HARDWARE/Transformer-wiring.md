@@ -1,21 +1,19 @@
 # Transformer wiring at J1
 
-> Status: derived 2026-10-18 from the Triad Magnetics VPT24-4170 catalogue
-> sheet (published 2021-10-12), the as-built netlist
-> (`HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_sch`) and the board;
-> revised 2026-10-20 for **Rev C**, which fits the **VPT24-6670**. The
-> board has never been energised. Confirm the lead map against the physical
-> unit (nameplate plus a continuity check) before the first power-up.
+> Read this before you connect the transformer. The board has never been
+> energised, so confirm the lead map against the physical unit (nameplate plus
+> a continuity check) before the first power-up.
 
 ## Why this file exists
 
-`J1` takes the off-board transformer, and until now the repository recorded
-nothing about which lead goes on which terminal. The net names at `J1` are
-**lead colours**, and on the Triad sheet the same colours are called "Input"
-and "Output" — because the transformer is sold to step 115 V *down* to 12 V. This
-board runs it the other way, as a step-up inverter, so the roles are reversed.
-Wiring the leads colour-for-colour gives a board that makes about 1.9 V at the
-outlet instead of ~120 V. Build from this file instead.
+`J1` takes the off-board transformer, and the net names there are **lead
+colours**. On the Triad catalogue sheet those same colours are called "Input"
+and "Output" — because the transformer is sold to step 115 V *down* to 12 V.
+This board runs it the other way, as a step-up inverter, so the roles are
+reversed.
+
+Wiring the leads colour-for-colour gives you a board that makes about 1.9 V at
+the outlet instead of ~120 V. Build from this file instead.
 
 ## The part
 
@@ -37,11 +35,6 @@ independently.
 | Efficiency | 89 % TYP at full load |
 | Insulation | Class B (130 °C) |
 | Mechanical | Ø106 × 52 mm, 1.6 kg, M6 × 60 mm bolt, 8 in UL 1015 leads (primaries 22 AWG, secondaries 16 AWG) |
-
-The `-6670` has the **same eight leads in the same colours** as the
-`VPT24-4170` it replaces, and the same jumper scheme, so the `J1` harness map
-below is unchanged. What changes is the current the harness has to carry, the
-enclosure volume (Ø88 × 51 mm and 1.0 kg before), and the mounting bolt.
 
 | Winding | Leads | Series connection | Parallel connection |
 | --- | --- | --- | --- |
@@ -74,9 +67,9 @@ on the estimated outlet.
 The 12.0 V nameplate is a **full-load** rating. The open-circuit secondary is
 12.0 × 1.08 = 12.96 V, so the true no-load turns ratio is 8.8735, not
 `115/12 = 9.583`. The firmware uses the no-load ratio (and the series
-impedance referred to the 115 V side, 5.666 Ω) to estimate the outlet; both
-constants are fitted per unit at bring-up. See
-[`HARDWARE/revB-changes.md`](revB-changes.md).
+impedance referred to the 115 V side, 5.666 Ω) to estimate the outlet. Both are
+the transformer's catalogue values, used as they come — no unit has to be
+fitted or calibrated.
 
 ## The connection
 
@@ -101,6 +94,14 @@ must not be split across nets.
 colour-for-colour, the bridge drives the 115 V winding and the outlet gets the
 12 V winding, and the inverter makes about 1.9 V.
 
+## Nothing measures the output
+
+> [!CAUTION]
+> There is no voltage or current sensing on the 115 V side of this board. The
+> firmware regulates an estimate of the outlet, and the only way to know what
+> the transformer is really doing is to measure it yourself. Treat everything
+> past `J1` as live mains.
+
 ## Hazards
 
 - Fitted as in the table, the drive side never sees more than the 21.75 V bus,
@@ -118,17 +119,12 @@ colour-for-colour, the bridge drives the 115 V winding and the outlet gets the
   about 131 V — a 370 V peak, past the 300 V line where IPC-2221B asks 2.5 mm
   of separation, while the board's isolation rule and layout are built for
   1.5 mm at 151–300 V.
-- **The outlet's earth pole.** Rev C cuts the old `J5` 3/4-to-`GND` tie, and
-  that cut is in the sources: `J5` pins 3/4 sit on their own `/PE` net, not on
-  board `GND`. The old tie made every GND point on the board an earth
-  conductor, so a mis-wire that put the outlet potential onto the bridge leads
-  shorted to earth through the bridge — see
-  [`HARDWARE/revB-changes.md`](revB-changes.md). Board `GND` is therefore no
-  longer the outlet earth, and the 115 V secondary has no earth of its own
-  until the harness provides one: bond `J5` 3/4 to a chassis PE stud (M3) for
-  a metal enclosure (Class I), or leave it unbonded and mark the unit
-  double-insulated (Class II) for a plastic one. A three-prong outlet must
-  never ship with its earth floating or tied to the board's logic ground.
+- **The outlet's earth pole.** `J5` pins 3/4 sit on their own `/PE` net, not on
+  board `GND`. Board `GND` is not the outlet earth, and the 115 V secondary has
+  no earth of its own until the harness provides one: bond `J5` 3/4 to a chassis
+  PE stud (M3) for a metal enclosure (Class I), or leave it unbonded and mark
+  the unit double-insulated (Class II) for a plastic one. A three-prong outlet
+  must never ship with its earth floating or tied to the board's logic ground.
 
 ## Verify before first power-up
 
@@ -141,7 +137,7 @@ colour-for-colour, the bridge drives the 115 V winding and the outlet gets the
    60 Hz** to the 115 V winding and measure the **open-circuit** 12 V winding.
    About 12.96 V confirms the full-load convention and the no-load ratio of
    8.8735; about 12.00 V would mean the other convention and every outlet
-   number would shift. Record the reading here.
+   number would shift.
 5. Record any deviation here.
 
 ## The cleaner long-term fix (not done)

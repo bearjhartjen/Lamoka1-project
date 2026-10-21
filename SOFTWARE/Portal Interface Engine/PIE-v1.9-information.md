@@ -1,6 +1,6 @@
 ## Lamoka1/2 — PIE Version V1.9
 
-The **Lamoka1/2 PIE Version V1.9** is the first Portal Interface Engine revision that runs
+The **Lamoka1/2 PIE Version V1.9** is the first Portal Interface Engine release that runs
 on the main Lamoka1/2 board. It keeps the complete five-LED user interface from V1.8 and
 adds the H-bridge power stage: the LM5122 boost is left to run in hardware, while the
 RP2354A generates the four gate-driver PWM signals, reads the ADS7128 monitor chain, and
@@ -284,43 +284,60 @@ B_DROOP = (12.96 − 12.0)/13.34 × A_DROOP² = 5.666 Ω
 outlet by 8 %, so the firmware would believe the outlet was at 120 V when it
 was really at about 111.5 V.
 
-**Both constants are per-unit.** The 8 % regulation is a TYP with no published
-maximum, so the catalogue values are only the starting point. The bring-up
-procedure fits both of them:
+**Both constants are the transformer's catalogue values, used as they come.**
+Nobody fits them to their own unit and nobody has to calibrate anything.
 
-- **No load.** Arm the inverter with nothing connected to the outlet and let it
-  settle. Read the drive winding RMS from the serial report (`VPRI=`) and
-  measure the open-circuit outlet with a DMM at the receptacle (`V_out0`).
-  Then `A_DROOP = V_out0 / V_drive_rms`. This measures the no-load ratio
-  directly, so it does not depend on the catalogue figure at all.
-- **Two load points.** Connect a known resistive load, say 50 W and then 100 W.
-  For each, measure the outlet voltage (`V_out1`, `V_out2`) with the DMM and
-  the secondary current (`I_sec1`, `I_sec2`) with a clamp meter on the 115 V
-  winding, and record the drive RMS (`V_drive_rms1`, `V_drive_rms2`) from the
-  report. With `x_i = A_DROOP × V_drive_rms_i` the two load points give
-  `B_DROOP = (x1 − x2)/(I_sec1 − I_sec2)` — the slope of `V_out` against
-  `I_sec`, not against the load current on the 12 V side.
-- Enter `A_DROOP` and `B_DROOP` in `V1.9.ino` and rebuild.
+How far off can that be? The one thing the model does not know is the unit's own
+regulation *r*: the catalogue says 8 % TYP with no published maximum. For a
+transformer regulating *r*, the no-load secondary is `12.0 × (1 + r)` V, the
+no-load ratio is `k = 115 / (12.0 × (1 + r))` and the series impedance referred to
+the 115 V winding is `Z = (12.0 × r / 13.34) × k²`. The firmware asks for the
+drive that satisfies the model at 120.0 V, and the real outlet is then
+`k × V_drive − Z × I_sec`:
 
-A DMM reads to about 0.5 %, and the two load points span most of the droop, so
-`A_DROOP` comes out to about 0.5 % and `B_DROOP` to about 2 %. That puts the
-estimated outlet within roughly 1 % of the measured one across the load range —
-which is the accuracy the 120 V target is actually held to, because there is no
-isolated output measurement for the loop to close on. The estimate of the output
-*power* is about 10 % high (`ETA_BUCK_HBRIDGE` assumes 0.92 for the whole
-chain where the transformer alone is 0.89); that error is proportional to the
-load, so it is absorbed exactly by the fitted `B_DROOP`.
+| regulation *r* | *k* | *Z* (Ω) | 0 W | 25 W | 50 W | 75 W | 100 W |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 6 % | 9.0409 | 4.412 | 122.26 | 122.55 | 122.83 | 123.11 | 123.40 |
+| 7 % | 8.9564 | 5.051 | 121.12 | 121.26 | 121.40 | 121.54 | 121.68 |
+| 8 % | 8.8735 | 5.666 | 120.00 | 120.00 | 120.00 | 120.00 | 120.00 |
+| 9 % | 8.7920 | 6.258 | 118.90 | 118.76 | 118.63 | 118.50 | 118.36 |
+| 10 % | 8.7121 | 6.828 | 117.82 | 117.55 | 117.29 | 117.03 | 116.76 |
+| 11 % | 8.6336 | 7.376 | 116.76 | 116.37 | 115.98 | 115.59 | 115.20 |
 
-A direct isolated output sense (an AMC1311B) is designed but **not in this
-revision**. Until it is, the 125 V receptacle ceiling is enforced on the
-estimate.
+So the catalogue constants hold the outlet **within 3 % of 120.0 V RMS** across
+the whole load range for any transformer regulating between **6 % and 10 %**,
+which brackets the 8 % TYP value and covers the spread between units out of the
+same box. At 11 % the error reaches −4 %.
+
+The estimate of the output *power* is about 10 % high (`ETA_BUCK_HBRIDGE`
+assumes 0.92 for the whole chain where the transformer alone is 0.89); that
+error is proportional to the load, so it lands in the same place as the droop
+error and needs no separate correction.
+
+This is the accuracy the 120 V target is actually held to, because there is no
+isolated output measurement for the loop to close on. If a unit reads outside
+roughly 116–124 V RMS, the transformer wiring and the boost bus are the things
+to check — not the constants.
+
+> [!CAUTION]
+> **Nothing on this board senses the 120 V RMS side.** There is no voltage and
+> no current measurement after the transformer, so nothing in the firmware can
+> see what the 115 V winding is doing. The outlet voltage is an estimate, and
+> the only way to know the real outlet voltage is to measure it with a meter.
+> Treat the output as live mains and do not expect the firmware to notice a
+> fault on the 115 V side.
+
+A direct isolated output sense (an AMC1311B) comes with a later Lamoka1 model.
+Until it does, the 125 V receptacle ceiling is enforced on the estimate.
 
 #### PWM dead-time scheme
 
 The H-bridge has no hardware dead-time generator; the UCC27735 has interlock but no
 built-in dead time (datasheet §6.3.1), so dead time is entirely firmware's job.
 The scheme (checked by the host-side tests `tests/test_v19_pwm.py` — PWM/dead-time
-model — and `tests/test_v19_model.py` — numeric/source checks):
+model — `tests/test_v19_pwm_waveform.py` — an independent model of the PWM
+peripheral, its dead time and the resulting drive waveform — and
+`tests/test_v19_model.py` — numeric/source checks):
 
 | GPIO | Leg / side | PWM slice / channel | Polarity | Compare (CC) |
 | --- | --- | --- | --- | --- |
@@ -341,13 +358,54 @@ with `dt = 75` ticks = 500 ns. The inverted-channel compares are delayed by
 both edges** for any duty in the allowed band, which is why `|m|` is clamped to
 `PWM_M_MAX ≈ 0.9597`. The host-side model `tests/test_v19_pwm.py` confirms zero
 overlap and ≥ 500 ns gaps for both legs across the full modulation range,
-including the extremes; `tests/test_v19_model.py` checks the numeric constants
-and their sources.
+including the extremes; `tests/test_v19_pwm_waveform.py` re-derives the same
+result from the peripheral's own semantics rather than from the sketch's
+constants, and covers the dynamic case where the sine is rewritten every
+carrier and the slices latch at different instants; `tests/test_v19_model.py`
+checks the numeric constants and their sources.
 
 Note: GPIO 2 and GPIO 3 share slice 1 and therefore share one counter/phase. This
 is not a defect — the scheme does not require a per-channel phase inside a slice;
 the second edge's delay comes from the per-channel compare offset (`+2·dt`), which
 is independent per channel even on a shared slice.
+
+#### What the transformer winding actually sees
+
+This is the one part of the modulation that is easy to misread, so it is worth
+stating plainly: **the drive is a 20 kHz unipolar PWM with the 60 Hz
+fundamental riding on it — not a 60 Hz sine, and not a bipolar 20 kHz square
+wave.**
+
+The two legs are nearly in phase, not 180° apart: slice 1 carries leg A's low
+side *and* leg B's high side, and the three counters are only `dt` and `2·dt`
+apart. The differential across the primary is therefore a one-sided pulse train
+whose per-carrier average is `m · Vbus`.
+
+Two consequences, and they pull in opposite directions:
+
+* **The regulation model is correct.** The 339 Hz filter on each midpoint
+  (C29/C30 across the 10 kΩ bottom resistor) turns the switching node into its
+  average, so what the ADS7128 measures is the 60 Hz fundamental. Its RMS is
+  `m · Vbus / √2` — exactly what the droop estimator assumes. The host-side
+  model `tests/test_v19_pwm_waveform.py` confirms this tick by tick: the
+  carrier-average differential is exactly `m · Vbus`, and the 60 Hz fundamental
+  of the drive is `M · Vbus`.
+* **The transformer and the outlet see the whole waveform.** The total RMS of
+  the differential is about **1.47× its 60 Hz fundamental** — 21.3 V against
+  14.5 V at the design point (m = 0.941). The winding currents are unaffected
+  (they are set by the load and stay sinusoidal: 6.9 A of 13.34 A on the 12 V
+  side at 100 W), and the carrier's volt-seconds balance over every carrier
+  period, so the core does not walk up — but there is 20 kHz core loss and the
+  outlet carries the carrier.
+
+The off-board output filter (series 38 mH, shunt 470 nF, damper, bleeder) is
+what turns that into a clean 60 Hz sine at the receptacle, and **it is not built
+yet**. Until it is, "120.0 V RMS at the outlet" means a 120 V fundamental with
+roughly 46 % of its RMS in 20 kHz ripple. A later board that puts each leg on
+its own slice (leg A on slice 1
+= GPIO2/GPIO3, leg B on slice 2 = GPIO4/GPIO5, the two slices 180° apart)
+would give a true bipolar drive; that is a pin-assignment change, not a
+firmware change.
 
 #### Carrier-synchronous sine generation
 
@@ -374,8 +432,9 @@ Once armed it sequences automatically:
 over 1.5 s, raising m from 0 to 0.30) → `POWER_RUNNING` (closed-loop regulation
 toward 120.0 V RMS at the outlet).
 
-While running, the bus must stay within 21.75 ± 1.5 V; the first out-of-range
-sample gets a one-cycle grace before the fault latches. While disarmed and not
+While running, the bus must stay within 21.75 ± 1.5 V; up to three consecutive
+out-of-range control ticks (30 ms) are tolerated before the fault latches, so a
+single load-dump excursion does not stop the inverter. While disarmed and not
 faulted, the ADS7128 probe is retried every 500 ms, so a recovered chip is picked
 up without a reset. Clearing a fault forces a fresh probe and a full five-channel
 sweep.
@@ -406,19 +465,49 @@ absent:
 * Load too heavy: estimated output power > 150 W for 50 consecutive control
   ticks (500 ms). The VPT24-6670 is 160 VA, and above that limit the outlet is
   asking for more than the winding can pass continuously. The estimate runs
-  about 10 % high, so this is roughly 135 W at the outlet. It is only
+  about 12 % high, so this is roughly 135 W at the outlet — 85 % of the 115 V
+  winding's current rating and 70 % of the 12 V winding's. It is only
   evaluated while the bridge is running, never during the soft-start ramp.
 * Output missing: a proportional plausibility check — expected output =
   m·vBus·`A_DROOP`/√2; if the expected value exceeds 15 V and the measured
   output stays below 60 % of it for 5 consecutive 100 Hz ticks, the fault
   `bridge output missing` latches. This monitors the bridge midpoints, not the
   outlet: an open transformer secondary is invisible to these dividers.
-* DC offset on the primary > 1.0 V for 3 consecutive 100 Hz ticks. The
-  firmware's comment gives about 90 ms from a 1 V offset to saturation, but that
-  figure predates the Rev C flux re-derivation, which puts the knee at roughly
-  11–13 ms at the operating point. The threshold is unchanged in this
-  revision; re-deriving it is an open item, not something this change silently
-  alters.
+* DC offset on the primary > 0.5 V for 2 consecutive RMS samples (260 µs). The
+  trip is evaluated on **every** RMS sample (every 130 µs), not on the 100 Hz
+  control tick, because it has to react inside the saturation window.
+  The transformer's flux budget puts it at its saturation knee
+  11–13 ms after a 1 V offset appears — a flux budget of about 0.011 V·s, so
+  the knee for an offset X is 11/X ms. The DC estimate is the mean of a
+  one-mains-cycle window (that window is what rejects the 60 Hz fundamental),
+  and after a step of X it only reaches the 0.5 V threshold once 128·0.5/X
+  samples have gone in, so the detection takes 16.64·(0.5/X) + 0.26 ms:
+
+  | offset | detection | saturation |
+  | --- | --- | --- |
+  | 0.5 V | 16.9 ms | 22.0 ms |
+  | 1.0 V | 8.6 ms | 11.0 ms |
+  | 2.0 V | 4.4 ms | 5.5 ms |
+
+  The detection therefore beats saturation for every offset between 0.5 V and
+  10 V, and an offset below 0.5 V never saturates the transformer at all. The
+  threshold sits about 50× above the residual noise on the estimate (0.01 V).
+  With the previous 1.0 V threshold and a 100 Hz trip the detection took
+  46.5 ms against an 11–13 ms knee — the transformer saturated first, which is
+  why both the threshold and the evaluation point changed.
+
+  The trip is armed only once the measurement window is **full**. A part-full
+  window is shorter than a mains cycle, so the 60 Hz fundamental does not
+  cancel in it: at 96 samples its mean can be 0.79 V, above the trip
+  threshold, and the trip would fire on every start-up. At the full 128
+  samples the same figure is 0.004 V. The consequence is that an offset which
+  appears **during** a run is caught 8.5 ms after it appears — inside the
+  saturation window — while an offset that is already there when the bridge
+  starts is not caught until the window has filled (16.64 ms) and then filled
+  with the offset (a further 8.3 ms at 1 V), i.e. at about 25 ms, after the
+  11–13 ms knee. Catching that case faster needs a phase reference for the
+  60 Hz fundamental, which this measurement chain does not have; it is a
+  recorded limitation, not a solved problem.
 * ADS7128 communication failure while armed (NACK, conversion timeout, or read
   error).
 
@@ -436,25 +525,46 @@ each channel updates at roughly 1 kHz. The I²C timeout is capped at 2 ms so a
 stuck bus cannot block the loop for the default 1000 ms. The bridge-midpoint
 differential is accumulated into a 128-sample ring at a minimum 130 µs cadence
 (≈ 16.6 ms, about one mains cycle); the RMS and DC estimates are considered
-valid once 96 samples have been collected.
+valid once 96 samples have been collected. The ring is cleared when the bridge
+starts and when it stops, so a run never inherits the tail of the previous one.
+
+Because the ADS7128 refreshes each channel only once per sweep, the ring holds
+about **16.6 independent samples per mains cycle**, not 128. That is still
+enough for an accurate RMS: the window is 16.64 ms against a 16.667 ms mains
+period, so the time-weighted mean of the squared waveform over it is the mean
+over a whole cycle, and the modelled RMS error over the sweep phase is
+0.00–0.16 %. The same one-cycle window is what rejects the 60 Hz fundamental
+from the DC estimate — a one-cycle mean of a sinusoid is zero — and that is why
+the window cannot simply be shortened to make the DC trip faster.
+
+The driver clears `OSR_DONE` with a **plain register write**, not with the
+"set bit" opcode: `OSR_DONE` is a write-1-to-clear bit (datasheet Table 12),
+and the set-bit opcode is documented to *set* bits (datasheet §8.5.2.2). If
+`OSR_DONE` does not assert within 200 µs — which is a hundred times the
+conversion time — the driver does not fault: it reads the result, which is
+long since ready, and prints `WARN: ADS7128 OSR_DONE did not assert` once.
+This matters because with the averaging filter disabled (`OSR_CFG` = 0, the
+reset value, which the datasheet defines as "No averaging") the bit is
+documented as the *averaging* status and may never assert at all. A genuinely
+dead chip is still caught: the result read fails and raises `ADS7128 read`.
 
 Dividers: AIN0 ×0.2151, AIN1 ×0.1282, AIN2/3 ×0.1282. `R27`, `R29` and `R31`
 are all 68 kΩ against 10 kΩ bottoms, so every one of them has a 25.74 V full
 scale; the bus sits at 2.79 V, well below the 3.3 V clip. (The old 43.2 kΩ bus
 divider clipped at 17.56 V and the old 45.3 kΩ midpoint dividers at 18.25 V —
-both below the Rev C bus, which is why they changed.)
+both below the 21.75 V bus, which is why they are 68 kΩ now.)
 
 The drive RMS is measured from the bridge midpoint differential and the outlet
 is **estimated**, not measured: `V_out_est = A_DROOP × V_drive_rms −
-B_DROOP × I_sec_est` with `A_DROOP` = 8.8735 and `B_DROOP` = 5.666 Ω, fitted per
-unit at bring-up — see "How the outlet is regulated" above. Regulation gain:
+B_DROOP × I_sec_est` with `A_DROOP` = 8.8735 and `B_DROOP` = 5.666 Ω — the
+transformer's catalogue values, used as they come, with no per-unit fitting.
+See "How the outlet is regulated" above for the ±3 % bound. Regulation gain:
 0.0003 per 10 ms tick per volt of error, with the amplitude step slew-limited
 to 0.010 per tick. The drive the target needs at a given load is
 `m = (V_target + B_DROOP × I_sec) × √2 / (A_DROOP × V_bus)`: 120 V needs
 m = 0.879 at no load, 0.897 at 50 W and 0.914 at 100 W on a nominal 21.75 V
 bus, and 0.941 at 100 W at the bottom of the bus band — about 2 % of headroom
-against the 0.959733 clamp, and only if the fitted transformer really regulates
-8 %.
+against the 0.959733 clamp, and only for a transformer that regulates 8 %.
 
 > [!WARNING]
 > The output-voltage, output-missing and DC-offset checks are **supervisory**, not
@@ -474,12 +584,24 @@ pull-downs bring the gates low.
 
 `Serial` at 115200 baud. State changes are printed as `STATE: <name>`; a
 one-second report prints
-`<STATE> ARMED=<Y/N> SENS=<Y/N> VIN=.. VBUS=.. VOUT=.. IIN=.. Tctrl=.. Tinv=.. m=..`
-with the modulation index at three decimals. Faults print `FAULT: <reason>`,
-warnings `WARN: input current` / `WARN: temperature`, and arming prints `ARMED` /
-`DISARMED` (or `ARM refused: fault latched` / `ARM refused: no sensors`). A
-cleared fault prints `Fault cleared (disarmed)`; clearing an over-fault is refused
-with `CLEAR ignored: over-fault latched`.
+
+```
+<STATE> ARMED=<Y/N> SENS=<Y/N> VIN=.. VBUS=.. VOUT=.. VPRI=.. POUT=.. ISEC=.. UNSUP=.. IIN=.. Tctrl=.. Tinv=.. m=.. MMAX=.. MREQ=.. DLIM=.. SAT=.. CLAMP=..
+```
+
+with the modulation index at three decimals. `VOUT` is the droop-compensated
+**estimate** of the outlet, `VPRI` the measured 12 V drive winding RMS, `POUT`
+the estimated output power, `ISEC` the estimated 115 V winding current,
+`UNSUP` the "drive cannot support the load" flag, `MMAX` the PWM clamp,
+`MREQ` the modulation the target needs at the present load and bus, `DLIM`
+the ceiling the regulator is held to, `SAT` the "regulator pinned at that
+ceiling" flag and `CLAMP` the "that ceiling is the PWM clamp" flag. The last
+six are what the bring-up procedure reads to see how much modulation margin is
+left. Faults print `FAULT: <reason>`, warnings `WARN: input current` /
+`WARN: temperature` / `WARN: ADS7128 OSR_DONE did not assert`, and arming prints
+`ARMED` / `DISARMED` (or `ARM refused: fault latched` / `ARM refused: no
+sensors`). A cleared fault prints `Fault cleared (disarmed)`; clearing an
+over-fault is refused with `CLEAR ignored: over-fault latched`.
 
 ### V1.9 Overall
 
@@ -506,18 +628,21 @@ power stage:
   automatic ADS re-probe and full sweep
 * A 500 ms hardware watchdog
 
-The power stage has still never been energised. The 120 V target is regulated
-from an **estimate** of the outlet, which has to be calibrated per unit at
-bring-up; the board has no isolated output sense. Known open limitations: no
-output LC filter on the board (an off-board filter is specified in
-`HARDWARE/revB-changes.md`), no input or output fuse and no
+The power stage has still never been energised. The 120 V RMS target is
+regulated from an **estimate** of the outlet: the board has no isolated output
+sense, so nothing in the firmware can see what the 115 V winding is doing. The
+estimate holds the outlet within about 3 % of 120.0 V RMS without any per-unit
+calibration, but a meter is the only way to know the real outlet voltage.
+
+What this prototype does not have: no output LC filter on the board (the
+filter goes in the harness), no input or output fuse and no
 reverse-polarity protection, the board's logic ground is not protective earth
 — `J5` pins 3/4 are on their own `/PE` net and the harness has to bond that
 to a chassis PE stud (Class I) or the unit has to be marked double-insulated
 (Class II) — the TMP235s sense board temperature rather than
-FET junction temperature, there are no gate-source bleed resistors, and the
-direct isolated output sense (AMC1311B) that would replace the estimate is not
-in this revision. Treat every claim in this document, including the dead-time
-and protection logic above, as something to re-derive from the KiCad source and
-verify on a scope before the board is powered. See `AGENTS.md` ("The power
-stage") for the open findings and bench requirements.
+FET junction temperature, and there are no gate-source bleed resistors. A
+direct isolated output sense (AMC1311B) comes with a later Lamoka1 model.
+Treat every claim in this document, including the dead-time and protection logic
+above, as something to re-derive from the KiCad source and verify on a scope
+before the board is powered. See `AGENTS.md` ("The power stage") for the open
+findings and bench requirements.

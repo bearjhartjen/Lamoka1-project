@@ -27,35 +27,125 @@
   </a>
 </p>
 
-
 ---
 
-> [!CAUTION]
-> This device is purely for testing. Many decisions were made due to cost and time constraints. The component layout does not follow Raspberry Pi’s recommended layout guidance. Utilize these files at your own discretion.
+## What this board is
 
+The DEV-Brain brings the Lamoka1's MCU, lights and simplicity into a 70 × 30 mm
+laminated sandwich (PCB). It carries the RP2354A microcontroller, one button,
+ten addressable RGB LEDs (D1–D10) and a USB-C port.
 
- Flamingo and Cactus have paid PCBway to manufacture and assemble the DEV Brain. It has arrived and works much better than expected. It does, however, make some high-frequency audible noise when plugged into low-quality power sources, so it is quite sensitive to low-quality sources. 
+It is a **prototype of the Lamoka1's control section**, and a product in its own
+right — not a throwaway test jig. We develop the PIE firmware on it, because
+the control side is where the creativity lives, and because it means we can
+work on the lights and the button without ever having the power stage on the
+bench.
 
-The DEV-Brain brings the Lamoka1’s MCU, lights, and simplicity into a 70x30mm laminated sandwich (PCB).
+Flamingo and Cactus have paid PCBWay to manufacture and assemble the DEV-Brain.
+It has arrived and works much better than expected. It does, however, make some
+high-frequency audible noise when plugged into low-quality power sources, so it
+is quite sensitive to low-quality sources.
 
-We are using the DEV-Brain to get an idea of how things work on the control side. We can use this model board to develop code for the lights and button. The DEV-Brain carries ten RGB LEDs (D1-D10) and one button. The main board's interface uses five LEDs (D1-D5) and one button, so the LED count is a per-board difference to keep in mind when porting firmware.
+The main board's interface uses five LEDs (D1–D5) and one button, so the LED
+count is a per-board difference to keep in mind when porting firmware.
 
-The DEV-Brain is a control-only board: it carries no power stage and is unaffected
-by the Lamoka1/2's Rev C revision (the 21.75 V boost bus and the 120.0 V outlet
-target on the main board). PIE V1.8 stays the DEV-Brain head; the main board
-runs PIE V1.9.
+> [!NOTE]
+> The DEV-Brain is a control-only board: it carries no power stage at all.
+> PIE V1.8 stays the DEV-Brain head; the Lamoka1/2 runs PIE V1.9.
 
+This board was run through Tomachie to get the design checked; the link is
+[here](https://tomachie.com/r/a1f3f256-a8ca-43de-aa92-e70ef981c3c2/Lamoka1-DEV-board_report.html#design-summary).
 
-This board was run through Tomachie to get the design checked; the link is [here](https://tomachie.com/r/a1f3f256-a8ca-43de-aa92-e70ef981c3c2/Lamoka1-DEV-board_report.html#design-summary).
+## How to order one
 
+We have published the board to PCBWay's share projects platform
+[here](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html).
+There, you will be able to order the Lamoka1-DEV-Brain exactly as we did.
 
-## Why did we develop the Lamoka1-DEV-Brain?
+### 1. Open the shared project
 
-We need an easy platform to better understand how and where to work on the Lamoka1 control. Without a doubt, the control and logic side of the Lamoka1 is extremely important, as it allows us to expose our creativity and community for free, and to just truly have fun. The DEV-Brain also just progresses the project quite a bit and gets us moving; we don't know what to do on designing the inverter and charger sections without getting control down.
- 
-## How does one reproduce the Lamoka1-DEV-Brain?
+Go to the share-project link above. Everything we used is on that page:
 
- We have published the board to PCBway's share projects platform [here](https://www.pcbway.com/project/shareproject/Lamoka1_DEV_Brain_49e4fd0a.html). There, you will be able to order the Lamoka1-DEV-Brain exactly as we did. 
+- **Standard PCB** — the project itself
+- **Download Gerber file** — the fabrication data
+- **BOM (Bill of materials)** — the parts list
+- **Centroid file** — the pick-and-place, for assembly
+
+### 2. Choose what you want
+
+| | |
+| --- | --- |
+| **Only PCB** | Bare boards, you fit the parts yourself |
+| **PCB + Assembly** | PCBWay sources and fits the parts for you |
+
+Either way it is the same board: 70 × 30 mm, 2 layers, 1.6 mm FR-4, black
+solder mask, white legend, RP2354A, ten WS2812B LEDs, one button.
+
+### 3. Fill in the order form
+
+| Option | Choose |
+| --- | --- |
+| Base material | FR-4, 1.6 mm, 2 layers |
+| Solder mask | **Black** |
+| Silkscreen / legend | **White** |
+| Surface finish | HASL (or lead-free HASL) |
+| Copper | 1 oz / 35 µm |
+| Quantity | 5 is a sensible first run |
+
+If you are ordering it assembled, upload the BOM and the centroid file from the
+project page — they are the ones we sent, and the
+[PCBWay assembly file](<Lamoka1-DEV-Brain fab files/PCBway files/T-1N4W1065266A-1units-Lamoka1-DEV-board+BOM(2026-07-15).xls>)
+we used is in the repository.
+
+## How do I get the firmware on it?
+
+The DEV-Brain runs **PIE V1.8**, the bench-tested head. It is built with the
+[arduino-pico](https://github.com/earlephilhower/arduino-pico) core and the
+[FastLED](https://github.com/FastLED/FastLED) library.
+
+### With the Arduino IDE
+
+1. **File → Preferences → Additional Boards Manager URLs**, and add:
+   `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`
+2. **Tools → Manage Boards**, search for and install **Raspberry Pi
+   Pico/RP2040/RP2350**.
+3. **Tools → Manage Libraries**, install **FastLED**.
+4. **File → Open**, and open
+   [`V1.8.ino`](../SOFTWARE/Portal%20Interface%20Engine/V1.8.ino).
+5. **Tools → Board**, pick **Raspberry Pi RP2350**.
+6. **Tools → Port**, pick the port that appeared when you plugged the board in.
+7. Click **Upload**.
+
+### With the command line
+
+```bash
+arduino-cli core install rp2040:rp2040 \
+  --additional-urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+arduino-cli lib install FastLED
+
+make firmware                    # compile the DEV-Brain head (V1.8)
+make upload PORT=/dev/ttyACM0    # compile and flash it
+```
+
+`make firmware` compiles PIE V1.8 — the DEV-Brain head — by default. To build
+the Lamoka1/2 head instead:
+
+```bash
+make firmware SKETCH="SOFTWARE/Portal Interface Engine/V1.9.ino"
+```
+
+### If the port does not show up
+
+The RP2354A can also come up in USB bootloader mode on its own. In the board's
+own UI, go to **Settings → BOOTSEL**. The DEV-Brain has no BOOTSEL button of
+its own — you pick it from the menu. The port then reappears as a new device,
+and you upload again.
+
+### What you should see
+
+The status ball and the Fireball game, and a button that responds to a tap, a
+double-tap and a hold. The gesture guide is in
+[`PIE-v1.8-information.md`](../SOFTWARE/Portal%20Interface%20Engine/PIE-v1.8-information.md).
 
 ## Project files
 
@@ -71,6 +161,4 @@ We need an easy platform to better understand how and where to work on the Lamok
 
 ## Tests
 
-We were able to run the Lamoka1-DEV-Brain for 72 hours running the idle blue dot bouncing animation seen in [PIE v1.8](<../SOFTWARE/Portal Interface Engine/V1.8.ino>). The environment was an average of 70 degrees Fahrenheit, and an average humidity of 70 percent. We stopped the test early (there were no signs of issues) because we needed to use the Lamoka1-DEV-Brain to test the HTML file creation concept for getting diagnostic data on the Lamoka1. 
-
-
+We were able to run the Lamoka1-DEV-Brain for 72 hours running the idle blue dot bouncing animation seen in [PIE v1.8](<../SOFTWARE/Portal Interface Engine/V1.8.ino>). The environment was an average of 70 degrees Fahrenheit, and an average humidity of 70 percent. We stopped the test early (there were no signs of issues) because we needed to use the Lamoka1-DEV-Brain to test the HTML file creation concept for getting diagnostic data on the Lamoka1.

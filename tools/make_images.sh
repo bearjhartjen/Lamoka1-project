@@ -7,8 +7,15 @@
 #     ray-traced with `kicad-cli pcb render` on a transparent background with
 #     the floor shadow on, then trimmed of the transparent border so the board
 #     fills the frame. Both boards render with `--use-board-stackup-colors`:
-#     the Lamoka1/2 stackup is green mask with black legend, matching the
-#     PCBWay order, and the DEV-Brain stackup is black mask with gold pads;
+#     the Lamoka1/2 stackup is green mask with a white legend, matching the
+#     PCBWay order, and the DEV-Brain stackup is black mask with a white
+#     legend;
+#   * the renders use `--quality high`, not `--quality user`. The "user" preset
+#     blows the solder mask out to near-white under the default lighting; the
+#     "high" preset keeps the mask the colour it really is, and its camera
+#     framing fits the whole board *including* the tall parts (the Wago
+#     connectors, the electrolytic cans and the TO-220 devices) inside the
+#     frame, so nothing is cropped;
 #   * Images/lamoka1-2-routing-copper.png is a 2D plot of the F.Cu and B.Cu
 #     layers in KiCad's default colours (front red, back blue), rasterised with
 #     ImageMagick and reduced to a 256-colour palette.
@@ -59,20 +66,20 @@ echo "Lamoka1/2 ($MAIN_KICAD)"
 # Isometric hero: the top view tilted -60 degrees about X and -45 about Z,
 # orthographic (no --perspective), on a 2200x1600 canvas.
 "$KICAD_CLI" pcb render --side top --rotate -60,0,-45 \
-    --quality user --preset follow_pcb_editor --floor --background transparent --use-board-stackup-colors \
+    --quality high --preset follow_pcb_editor --floor --background transparent --use-board-stackup-colors \
     --width 2200 --height 1600 -o "$TMP/iso.png" "$MAIN_KICAD"
 "$MAGICK" "$TMP/iso.png" -trim +repage "Images/lamoka1-2-render-iso.png"
 wrote "Images/lamoka1-2-render-iso.png"
 
 # Straight-on top and bottom views on a square canvas.
 "$KICAD_CLI" pcb render --side top \
-    --quality user --preset follow_pcb_editor --floor --background transparent --use-board-stackup-colors \
+    --quality high --preset follow_pcb_editor --floor --background transparent --use-board-stackup-colors \
     --width 1900 --height 1900 -o "$TMP/top.png" "$MAIN_KICAD"
 "$MAGICK" "$TMP/top.png" -trim +repage "Images/lamoka1-2-render-top.png"
 wrote "Images/lamoka1-2-render-top.png"
 
 "$KICAD_CLI" pcb render --side bottom \
-    --quality user --preset follow_pcb_editor --floor --background transparent --use-board-stackup-colors \
+    --quality high --preset follow_pcb_editor --floor --background transparent --use-board-stackup-colors \
     --width 1900 --height 1900 -o "$TMP/bottom.png" "$MAIN_KICAD"
 "$MAGICK" "$TMP/bottom.png" -trim +repage "Images/lamoka1-2-render-bottom.png"
 wrote "Images/lamoka1-2-render-bottom.png"
@@ -105,13 +112,13 @@ if [ -d "$DEV_DIR/components" ]; then
     # A long, narrow board: the camera zooms out to fit it, and the render
     # takes the board's own stackup colours (black mask).
     "$KICAD_CLI" pcb render --side top --rotate -30,0,30 --perspective \
-        --quality user --preset follow_pcb_editor --floor --use-board-stackup-colors \
+        --quality high --preset follow_pcb_editor --floor --use-board-stackup-colors \
         --width 2400 --height 1800 --zoom 0.85 -o "$TMP/dev-iso.png" "$DEV_KICAD"
     "$MAGICK" "$TMP/dev-iso.png" -trim +repage "Images/lamoka1-dev-brain-render-iso.png"
     wrote "Images/lamoka1-dev-brain-render-iso.png"
 
     "$KICAD_CLI" pcb render --side top \
-        --quality user --preset follow_pcb_editor --floor --use-board-stackup-colors \
+        --quality high --preset follow_pcb_editor --floor --use-board-stackup-colors \
         --width 1880 --height 1880 --zoom 0.9 -o "$TMP/dev-top.png" "$DEV_KICAD"
     "$MAGICK" "$TMP/dev-top.png" -trim +repage "Images/lamoka1-dev-brain-render-top.png"
     wrote "Images/lamoka1-dev-brain-render-top.png"

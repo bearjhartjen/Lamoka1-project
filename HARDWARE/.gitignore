@@ -16,6 +16,9 @@ _autosave-*
 # Cache and lock files
 fp-info-cache
 sym-lib-cache
+# KiCad 10 names its GUI lock files "~<project>.lck"; older versions used
+# ".lock". Both are per-session state, never design source.
+*.lck
 *.kicad_sch.lock
 *.kicad_pcb.lock
 *.Kicad_pro.Ick

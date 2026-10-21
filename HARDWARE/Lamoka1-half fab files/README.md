@@ -31,7 +31,7 @@ order time; add the equivalent here once the board has been ordered.
 ## The board
 
 - 95.2 x 95.2 mm, 2 copper layers, 1.6 mm FR-4, 1 oz (35 um) outer copper,
-  green solder mask and black legend on both sides (from the job file; the
+  green solder mask and white legend on both sides (from the job file; the
   board renders use the same stackup colour).
   The finish is unset in the job file ("None") — HASL or lead-free HASL is the
   usual choice, select it in the order form.
@@ -88,15 +88,14 @@ order time; add the equivalent here once the board has been ordered.
    the harness map does not change — but the harness current capability rises
    and the part is 1.6 kg rather than 1.0 kg, so the enclosure and the
    strain relief have to be re-dimensioned.
-4. **The 2026-10-18 electrical reviews have been acted on in Rev C.** The
-   board now carries the 22 µF tantalum `C13`, the local bypass at `U5`/`U6`
-   pin 7, the 68 kΩ AIN dividers, the 30 V `Q1`, the 35 V bus capacitors and
-   the 2512 shunt. Two things in the reviews are **not** on the board: the
-   `Rsense1` value stays at 2 mΩ (the 5 mΩ proposal was wrong for a 100 W
-   single-phase load), and the fusing decision is a harness item. The `J5`
-   earth cut is made in Rev C — see the Rev C section below. The derivations
-   live in `HARDWARE/revB-changes.md`; the open items live in the same section
-   of `AGENTS.md`, "Findings from the 2026-10-18 reviews".
+4. **The board carries the fixes from the 2026-10-18 electrical reviews.** It
+   has the 22 µF tantalum `C13`, the local bypass at `U5`/`U6` pin 7, the
+   68 kΩ AIN dividers, the 30 V `Q1`, the 35 V bus capacitors and the 2512
+   shunt. Two things from those reviews are **not** on the board: the
+   `Rsense1` value stays at 2 mΩ (a 5 mΩ shunt would clip the output to about
+   57 W on a 100 W single-phase load), and the fusing is a harness item. The
+   `J5` earth cut is made in the board — see the table below. The derivations
+   live in `AGENTS.md`, "The power stage".
 5. **A third-party schematic review is in the repository.** Tomachie scored the
    design **93/100** on its free pass; the report and a screenshot are in
    `HARDWARE/Kicadfiles/Lamoka1-half/Reviews/`, and the live report is at
@@ -106,30 +105,29 @@ order time; add the equivalent here once the board has been ordered.
    USB-C shell, and its remaining deductions are footprint naming and
    test-point coverage, not circuit errors.
 
-## Rev C
+## The key design values on this board
 
-The revision applied to the schematic and the board. Every entry below is in
-the design files in this repository, and this package was re-plotted from them
-after the change:
+Everything below is in the design files in this repository, and this package was
+plotted from them:
 
-| Reference | Was | Now |
-| --- | --- | --- |
-| `Rfbt1` | 49.9 kΩ | 64.9 kΩ — the 21.75 V bus |
-| `Rslope1`, `Rcomp1` | 105 kΩ, 28.7 kΩ | 49.9 kΩ, 80.6 kΩ |
-| `Ccomp1`, `Ccomp2` | 3.9 nF, 130 pF | 15 nF, 44.8 pF |
-| `R27`, `R29`, `R31` | 43.2 kΩ, 45.3 kΩ, 45.3 kΩ | 68 kΩ each |
-| `Q1` | `CSD16323Q3` (25 V) | `CSD17304Q3` (30 V) |
-| `Rsense1` | 2 mΩ 1206 | 2 mΩ 2512 2 W (`CSNL2512FT2L00`) |
-| `Cout1`–`Cout3` | 25 V 180 µF | 35 V 180 µF (`35SVPK180M`) |
-| `Coutx1` | 47 µF 1206 | 22 µF 1206 35 V (`C3216X5R1V226M160AC`) |
-| `C13` | 10 µF 0402 MLCC | 22 µF 3216 tantalum (`T491A226K010AT`) |
-| `C34`/`C36`, `C35`/`C37` | — | 10 µF 0805 and 100 nF 0603 at each gate driver's VDD pin (four new placements) |
-| `J5` pins 3/4 | on `GND` | their own `/PE` net — the outlet earth is no longer the board's logic ground |
+| Reference | Value |
+| --- | --- |
+| `Rfbt1`, `Rfbb1` | 64.9 kΩ, 3.79 kΩ — the 21.75 V bus |
+| `Rslope1`, `Rcomp1` | 49.9 kΩ, 80.6 kΩ |
+| `Ccomp1`, `Ccomp2` | 15 nF, 44.8 pF |
+| `R27`, `R29`, `R31` | 68 kΩ each — 25.74 V full scale |
+| `Q1` | `CSD17304Q3` (30 V) |
+| `Rsense1` | 2 mΩ 2512 2 W (`CSNL2512FT2L00`) |
+| `Cout1`–`Cout3` | 35 V 180 µF (`35SVPK180M`) |
+| `Coutx1` | 22 µF 1206 35 V (`C3216X5R1V226M160AC`) |
+| `C13` | 22 µF 3216 tantalum (`T491A226K010AT`) |
+| `C34`/`C36`, `C35`/`C37` | 10 µF 0805 and 100 nF 0603 at each gate driver's VDD pin (four new placements) |
+| `J5` pins 3/4 | their own `/PE` net — the outlet earth is not the board's logic ground |
 
-The regenerated package has **70 BOM lines covering 116 placements**,
-and a pick-and-place of **116 placements, 57 front and 59 back**. The board
-outline, the drill table (372 plated and 6 unplated holes) and the via count
-(322) are unchanged.
+The package has **70 BOM lines covering 116 placements**, and a pick-and-place
+of **116 placements, 57 front and 59 back**. The board outline, the drill
+table (372 plated and 6 unplated holes) and the via count (322) are
+unchanged.
 
 ## Known warnings, reviewed and accepted
 
@@ -164,7 +162,7 @@ of the same kind. They are:
   is also the reference of what is drawn.
 
 (Three further warnings — "Missing symbol field 'MPN' in footprint" on `J1`,
-`J2` and `J5` — were resolved in Rev C: the MPN data now lives on the board
+`J2` and `J5` — are resolved: the MPN data now lives on the board
 footprints as well as on the schematic symbols.)
 
 A parity check that is not asked for reports nothing: `kicad-cli pcb drc`

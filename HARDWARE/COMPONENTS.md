@@ -12,7 +12,9 @@ in hand. It is not the BOM, and it is not the order list — the KiCad BOM and
 `HARDWARE/Lamoka1-half fab files/Lamoka1-half BOM.csv` are. But if you want to
 know what the CSD19536KCS is, or why the boost inductor is a Coilcraft
 XAL1580, this is the place.
- NMOS for H-bridge (Inversion-section): CSD19536KCS made by TI  x4 (Q3, Q4, Q5, Q6)
+ 
+
+NMOS for H-bridge (Inversion-section): CSD19536KCS made by TI  x4 (Q3, Q4, Q5, Q6)
 
  Transformer (Inversion-section): VPT24-6670 made by Triad Magnetics, 160 VA, 8 % regulation. Mounted off-board and wired to the PCB at J1; `HARDWARE/Transformer-wiring.md` records which lead goes on which terminal. Its 12 V winding is the one the H-bridge drives and the 115 V winding feeds the outlet, so the lead colours must not be matched to the J1 net names. The eight-lead colour map is the same as the 100 VA VPT24-4170 it replaces, so the J1 harness map does not change; the harness current capability does, and the part is 1.6 kg instead of 1.0 kg.
 
@@ -26,7 +28,7 @@ XAL1580, this is the place.
 
  Level shifter on the LED data line (3v3 to 5v): SN74AHCT1G125DBVR made by TI (U3)
 
- High-side NMOS for boost converter (Inversion-section): CSD17304Q3 made by TI (Q1). The same 30 V part as Q2, on the same DQG0008A footprint; the 25 V CSD16323Q3 it replaces left only about 3 V of headroom on the Rev C bus's switching node
+ High-side NMOS for boost converter (Inversion-section): CSD17304Q3 made by TI (Q1). The same 30 V part as Q2, on the same DQG0008A footprint; the 25 V CSD16323Q3 it replaces left only about 3 V of headroom on the 21.75 V bus's switching node
 
  Low-side NMOS for boost converter (Inversion-section): CSD17304Q3 made by TI (Q2)
 
@@ -46,7 +48,7 @@ XAL1580, this is the place.
 
  Compensation capacitor for the boost converter: GRM1555C1H448JA01D made by Murata, 44.8 pF, C0G, 0402 (Ccomp2). With the values above the boost loop crosses over at about 9.3-11.8 kHz with roughly 80 degrees of phase margin
 
- Output capacitors for the boost converter bus: 35SVPK180M made by Panasonic Industry, 180 uF, 35 V, 8 x 11.9 mm, x3 (Cout1, Cout2, Cout3). The 25 V parts they replace ran at 89.5 % of their rating on the Rev C bus
+ Output capacitors for the boost converter bus: 35SVPK180M made by Panasonic Industry, 180 uF, 35 V, 8 x 11.9 mm, x3 (Cout1, Cout2, Cout3). The 25 V parts they replace ran at 89.5 % of their rating on the 21.75 V bus
 
  Output capacitor for the boost converter bus: C3216X5R1V226M160AC made by TDK, 22 uF, 35 V, X5R, 1206 (Coutx1). A 47 uF 1206 at 35 V does not exist
 
