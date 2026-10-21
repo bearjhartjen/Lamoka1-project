@@ -396,16 +396,10 @@ Two consequences, and they pull in opposite directions:
   (they are set by the load and stay sinusoidal: 6.9 A of 13.34 A on the 12 V
   side at 100 W), and the carrier's volt-seconds balance over every carrier
   period, so the core does not walk up — but there is 20 kHz core loss and the
-  outlet carries the carrier.
-
-The off-board output filter (series 38 mH, shunt 470 nF, damper, bleeder) is
-what turns that into a clean 60 Hz sine at the receptacle, and **it is not built
-yet**. Until it is, "120.0 V RMS at the outlet" means a 120 V fundamental with
-roughly 46 % of its RMS in 20 kHz ripple. A later board that puts each leg on
-its own slice (leg A on slice 1
-= GPIO2/GPIO3, leg B on slice 2 = GPIO4/GPIO5, the two slices 180° apart)
-would give a true bipolar drive; that is a pin-assignment change, not a
-firmware change.
+  outlet carries the carrier. A later board that puts each leg on its own
+  slice (leg A on slice 1 = GPIO2/GPIO3, leg B on slice 2 = GPIO4/GPIO5, the
+  two slices 180° apart) would give a true bipolar drive; that is a
+  pin-assignment change, not a firmware change.
 
 #### Carrier-synchronous sine generation
 
@@ -570,8 +564,7 @@ against the 0.959733 clamp, and only for a transformer that regulates 8 %.
 > The output-voltage, output-missing and DC-offset checks are **supervisory**, not
 > fast protection: each ADS7128 channel updates at roughly 1 kHz and the control
 > loop runs at 100 Hz. Final protection against fast faults is the LM5122's
-> hardware current limit and the external fusing that the board still needs. Do not
-> rely on this firmware as the sole protection.
+> hardware current limit. Do not rely on this firmware as the sole protection.
 
 #### Watchdog
 
@@ -634,9 +627,8 @@ sense, so nothing in the firmware can see what the 115 V winding is doing. The
 estimate holds the outlet within about 3 % of 120.0 V RMS without any per-unit
 calibration, but a meter is the only way to know the real outlet voltage.
 
-What this prototype does not have: no output LC filter on the board (the
-filter goes in the harness), no input or output fuse and no
-reverse-polarity protection, the board's logic ground is not protective earth
+What this prototype does not have: no reverse-polarity protection, the
+board's logic ground is not protective earth
 — `J5` pins 3/4 are on their own `/PE` net and the harness has to bond that
 to a chassis PE stud (Class I) or the unit has to be marked double-insulated
 (Class II) — the TMP235s sense board temperature rather than

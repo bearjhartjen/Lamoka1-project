@@ -261,12 +261,6 @@ Straightforward, so there are no surprises later:
 - **No charger.** That comes in a later Lamoka1 model.
 - **No voltage or current measurement after the transformer.** This is the one
   that matters — see the caution boxes above.
-- **No fuse on the board.** Not on the input, not on the output. Fuses live in
-  the wiring harness: a slow-blow (2 A or so) on the 11–14 V input, and a
-  proper mains fuse plus a MOV on the 120 V output.
-- **No output filter on the board.** The filter (series 38 mH, shunt 470 nF, a
-  damper and a bleeder) goes in the harness, between the board and the
-  outlet.
 - **The temperature sensors read board temperature**, not FET junction
   temperature.
 

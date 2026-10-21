@@ -1415,9 +1415,7 @@ void renderUI() {
  *  two midpoints removes the carrier before the ADC sees it.
  *
  *  What the transformer and the outlet see is the whole waveform: about
- *  1.47 times the fundamental in RMS.  The off-board output filter (38 mH
- *  series, 470 nF shunt, damper, bleeder) is what turns that into a clean
- *  60 Hz sine at the receptacle, and it is not built yet.  A later board
+ *  1.47 times the fundamental in RMS.  A later board
  *  that puts each leg on its own slice
  *  (leg A on slice 1 = GPIO2/GPIO3, leg B on slice 2 = GPIO4/GPIO5, with
  *  the slices 180 degrees apart) would give a true bipolar drive; that is

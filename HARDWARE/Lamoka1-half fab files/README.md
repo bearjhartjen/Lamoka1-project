@@ -91,11 +91,11 @@ order time; add the equivalent here once the board has been ordered.
 4. **The board carries the fixes from the 2026-10-18 electrical reviews.** It
    has the 22 µF tantalum `C13`, the local bypass at `U5`/`U6` pin 7, the
    68 kΩ AIN dividers, the 30 V `Q1`, the 35 V bus capacitors and the 2512
-   shunt. Two things from those reviews are **not** on the board: the
+   shunt. One thing from those reviews is **not** on the board: the
    `Rsense1` value stays at 2 mΩ (a 5 mΩ shunt would clip the output to about
-   57 W on a 100 W single-phase load), and the fusing is a harness item. The
-   `J5` earth cut is made in the board — see the table below. The derivations
-   live in `AGENTS.md`, "The power stage".
+   57 W on a 100 W single-phase load). The `J5` earth cut is made in the board
+   — see the table below. The derivations live in `AGENTS.md`, "The power
+   stage".
 5. **A third-party schematic review is in the repository.** Tomachie scored the
    design **93/100** on its free pass; the report and a screenshot are in
    `HARDWARE/Kicadfiles/Lamoka1-half/Reviews/`, and the live report is at

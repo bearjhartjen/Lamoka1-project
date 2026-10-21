@@ -432,16 +432,6 @@ Two rules:
 
 These are harness, mechanical or design-intent items the board does not close:
 
-- **No fuse anywhere.** Neither the 11–14 V input nor the high-voltage output is
-  fused; the only series element on `+BATT` is a 2 mΩ measurement shunt. The
-  input fuse and the output fuse are harness items, off-board; nothing is fused
-  on the board itself.
-- **No output filter.** The bridge drives the transformer primary directly: the
-  `/BLUE` and `/BROWN` midpoints run from `Q3`/`Q4`/`Q5`/`Q6` to `J1` with no
-  series inductance, no shunt capacitance and no snubber, so the 12 V winding
-  sees the raw 20 kHz square wave and the harmonics go straight to the
-  outlet. The off-board output filter (series 38 mH, shunt 470 nF, damper,
-  bleeder) is specified but not built.
 - **The outlet's earth bond is a harness item.** The board's `J5` pins 3/4 are
   on their own `/PE` net, so the board does not earth the outlet. The harness has
   to bond that net to a chassis PE stud for Class I (metal enclosure) or leave
@@ -542,7 +532,7 @@ changed the firmware where the derivation did not support it. What changed:
   documented as what it is: a **20 kHz unipolar PWM with a 60 Hz envelope**,
   not a 60 Hz sine. See the waveform section of
   `PIE-v1.9-information.md` — the total RMS of the drive is about 1.47× its
-  60 Hz fundamental, so the off-board output filter is not optional.
+  60 Hz fundamental.
 
 Two of those changes are *not* closed by firmware and need the bench: the
 ADS7128's `OSR_DONE` behaviour with the averaging filter disabled, and the
@@ -567,8 +557,8 @@ transformer actually regulating 8 %.
   estimates the outlet from the drive winding and the droop model, not from a
   measurement of it. V1.9's "bridge output missing" check compares the midpoint
   differential against the commanded modulation, so it watches the **bridge**,
-  not the outlet: an open transformer secondary, a missing output filter or a
-  disconnected load is invisible to it.
+  not the outlet: an open transformer secondary or a disconnected load is
+  invisible to it.
 - **No USB ESD protection** on `USB-5v`, D+/D− or CC.
 - **`AIN1` headroom.** `R27`, `R29` and `R31` are all **68 kΩ**
   (`RC0603FR-0768KL`), giving a 25.74 V full scale, and the firmware's
@@ -584,8 +574,8 @@ transformer actually regulating 8 %.
 
 - **Plug-in inrush.** With a battery connected, the 587 µF bus charges through
   `Rsense1` → `L2` → `Q1`'s body diode with only milliohms of limiting, because
-  the converter is unpowered and `Css1` cannot soft-start it. There is no fuse,
-  NTC, precharge or hot-swap on `+BATT`.
+  the converter is unpowered and `Css1` cannot soft-start it. There is no NTC,
+  precharge or hot-swap on `+BATT`.
 - **No off switch.** `U4` has no enable pin and the UVLO divider is passive,
   although datasheet §7.3.1 offers the UVLO pin as a remote shutdown; the rail
   sits at ~VIN whenever a battery is attached, with no designed bleeder.
