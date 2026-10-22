@@ -20,7 +20,7 @@ firmware is kept as two in-place heads (`V1.8` and `V1.9`).
   edges of both legs (statically and with the per-carrier re-latch), that the
   carrier-average differential is exactly `m·Vbus` — the model the droop
   estimator relies on — and that the drive is a 20 kHz PWM whose total RMS is
-  about 1.47× its 60 Hz fundamental.
+  about 1.16× its 60 Hz fundamental at the design point.
 - `tests/test_v19_protection_latency.py` — the latency of every protection
   trip, measured from the code's own constants against the transformer's
   saturation knee, plus the ADS7128 register contract (opcodes, addresses and
@@ -80,6 +80,14 @@ firmware is kept as two in-place heads (`V1.8` and `V1.9`).
 
 ### Fixed
 
+- The V1.9 measurement window is time-based (16.667 ms of `micros()`
+  timestamps) rather than 128 samples. The old count-based window ran 21–26 ms
+  at the loop's real 130–260 µs cadence, and the uncancelled 60 Hz fundamental
+  false-tripped the DC-offset check during soft start. The firmware now reaches
+  its 120 V regulation target instead of stopping at 12–13 V.
+- The V1.9 build fails at compile time unless `F_CPU` is 150 MHz: the PWM
+  constants produce 60 Hz only at that clock, and a board-menu frequency change
+  would otherwise silently give 50 Hz or 80 Hz.
 - The DC-offset trip now reacts inside the transformer's saturation window:
   the threshold is 0.5 V and the trip is evaluated on every RMS sample, not on
   the 100 Hz control tick. See the V1.9 audit record for the derivation.

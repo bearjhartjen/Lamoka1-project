@@ -309,15 +309,22 @@ the whole load range for any transformer regulating between **6 % and 10 %**,
 which brackets the 8 % TYP value and covers the spread between units out of the
 same box. At 11 % the error reaches −4 %.
 
+That is the **droop-model term only**, and it assumes the drive RMS is measured
+accurately. It is not the as-built accuracy: the ADS7128 sweep adds a few
+percent (see Measurements), the 3.3 V rail is ±1–2 %, and the dividers are 1 %,
+so the total without a per-unit calibration is about **±8 %**, not ±3 %. A
+meter on the outlet is the only way to know the real voltage, and a per-unit
+calibration is the only way to tighten it.
+
 The estimate of the output *power* is about 10 % high (`ETA_BUCK_HBRIDGE`
 assumes 0.92 for the whole chain where the transformer alone is 0.89); that
 error is proportional to the load, so it lands in the same place as the droop
 error and needs no separate correction.
 
-This is the accuracy the 120 V target is actually held to, because there is no
-isolated output measurement for the loop to close on. If a unit reads outside
-roughly 116–124 V RMS, the transformer wiring and the boost bus are the things
-to check — not the constants.
+The droop model is the largest single term, but the measurement chain is not
+calibrated. Until a unit is checked against a meter, treat the outlet as
+accurate to about **±8 %**, not ±3 %. If it reads outside that, check the
+transformer wiring and the boost bus before blaming the constants.
 
 > [!CAUTION]
 > **Nothing on this board senses the 120 V RMS side.** There is no voltage and
@@ -390,9 +397,12 @@ Two consequences, and they pull in opposite directions:
   model `tests/test_v19_pwm_waveform.py` confirms this tick by tick: the
   carrier-average differential is exactly `m · Vbus`, and the 60 Hz fundamental
   of the drive is `M · Vbus`.
-* **The transformer and the outlet see the whole waveform.** The total RMS of
-  the differential is about **1.47× its 60 Hz fundamental** — 21.3 V against
-  14.5 V at the design point (m = 0.941). The winding currents are unaffected
+* **The transformer and the outlet see the whole waveform.** Over a mains
+  cycle the modulation is a sine, so the cycle mean square is
+  `Vbus² · mean|m| = Vbus² · 2A/π` and the total RMS of the differential is
+  about **1.16× its 60 Hz fundamental** at the design point — 16.8 V against
+  14.5 V at m = 0.941. (A constant-m carrier gives a larger ratio, √(2/m),
+  which is not the operating case.) The winding currents are unaffected
   (they are set by the load and stay sinusoidal: 6.9 A of 13.34 A on the 12 V
   side at 100 W), and the carrier's volt-seconds balance over every carrier
   period, so the core does not walk up — but there is 20 kHz core loss and the
@@ -467,41 +477,53 @@ absent:
   output stays below 60 % of it for 5 consecutive 100 Hz ticks, the fault
   `bridge output missing` latches. This monitors the bridge midpoints, not the
   outlet: an open transformer secondary is invisible to these dividers.
-* DC offset on the primary > 0.5 V for 2 consecutive RMS samples (260 µs). The
-  trip is evaluated on **every** RMS sample (every 130 µs), not on the 100 Hz
-  control tick, because it has to react inside the saturation window.
-  The transformer's flux budget puts it at its saturation knee
+* DC offset on the primary > 0.5 V for 2 consecutive RMS samples (one sample
+  interval, 130–260 µs). The trip is evaluated on **every** RMS sample, not on
+  the 100 Hz control tick, because it has to react inside the saturation
+  window. The transformer's flux budget puts it at its saturation knee
   11–13 ms after a 1 V offset appears — a flux budget of about 0.011 V·s, so
   the knee for an offset X is 11/X ms. The DC estimate is the mean of a
-  one-mains-cycle window (that window is what rejects the 60 Hz fundamental),
-  and after a step of X it only reaches the 0.5 V threshold once 128·0.5/X
-  samples have gone in, so the detection takes 16.64·(0.5/X) + 0.26 ms:
+  one-mains-cycle window **measured in time** (16.667 ms; that window is what
+  rejects the 60 Hz fundamental), and after a step of X it only reaches the
+  0.5 V threshold once a fraction 0.5/X of the window has been filled with the
+  offset, so the detection takes 16.667·(0.5/X) ms plus one sample:
 
   | offset | detection | saturation |
   | --- | --- | --- |
   | 0.5 V | 16.9 ms | 22.0 ms |
-  | 1.0 V | 8.6 ms | 11.0 ms |
+  | 1.0 V | 8.5 ms | 11.0 ms |
   | 2.0 V | 4.4 ms | 5.5 ms |
 
   The detection therefore beats saturation for every offset between 0.5 V and
   10 V, and an offset below 0.5 V never saturates the transformer at all. The
-  threshold sits about 50× above the residual noise on the estimate (0.01 V).
-  With the previous 1.0 V threshold and a 100 Hz trip the detection took
-  46.5 ms against an 11–13 ms knee — the transformer saturated first, which is
-  why both the threshold and the evaluation point changed.
+  sample noise on the estimate is about 0.01 V, but the systematic residual
+  from the ADS7128 staircase is larger — about 0.1 V at full modulation — so
+  the threshold sits about 5× above the worst residual, not 50×. With the
+  previous 1.0 V threshold and a 100 Hz trip the detection took 46.5 ms against
+  an 11–13 ms knee — the transformer saturated first, which is why both the
+  threshold and the evaluation point changed.
+
+  The window is time-based because the main loop shares the I²C bus with the
+  ADS7128: the sample interval is 130–260 µs, not a fixed 130 µs. Counting
+  128 samples therefore ran the window out to 21–26 ms, a whole number of
+  mains cycles plus a fraction, which leaves a 60 Hz residual of up to 4 V at
+  full modulation. That residual false-tripped the 0.5 V check 0.5–0.6 s into
+  soft start, at m ≈ 0.11 and an outlet of 12–13 V. The window is now the
+  samples whose timestamps fall inside 16.667 ms, and it is armed only when
+  the next older sample would fall outside it.
 
   The trip is armed only once the measurement window is **full**. A part-full
   window is shorter than a mains cycle, so the 60 Hz fundamental does not
-  cancel in it: at 96 samples its mean can be 0.79 V, above the trip
-  threshold, and the trip would fire on every start-up. At the full 128
-  samples the same figure is 0.004 V. The consequence is that an offset which
-  appears **during** a run is caught 8.5 ms after it appears — inside the
-  saturation window — while an offset that is already there when the bridge
-  starts is not caught until the window has filled (16.64 ms) and then filled
-  with the offset (a further 8.3 ms at 1 V), i.e. at about 25 ms, after the
-  11–13 ms knee. Catching that case faster needs a phase reference for the
-  60 Hz fundamental, which this measurement chain does not have; it is a
-  recorded limitation, not a solved problem.
+  cancel in it: in a 12.5 ms window its mean can be 0.79 V, above the trip
+  threshold, and the trip would fire on every start-up. At the full 16.667 ms
+  window the same figure is under 0.01 V. The consequence is that an offset
+  which appears **during** a run is caught 8.5 ms after it appears — inside
+  the saturation window — while an offset that is already there when the
+  bridge starts is not caught until the window has filled (16.667 ms) and
+  then filled with the offset (a further 8.3 ms at 1 V), i.e. at about 25 ms,
+  after the 11–13 ms knee. Catching that case faster needs a phase reference
+  for the 60 Hz fundamental, which this measurement chain does not have; it is
+  a recorded limitation, not a solved problem.
 * ADS7128 communication failure while armed (NACK, conversion timeout, or read
   error).
 
@@ -514,22 +536,36 @@ recovery does not need an MCU reset.
 
 The ADS7128 (7-bit address `0x10`, ADDR open) is scanned in round-robin across
 five channels (AIN0 input rail, AIN1 21.75 V bus, AIN2/AIN3 bridge midpoints,
-AIN4 INA240 current at 0.1 V/A), with conversions throttled to one per 200 µs —
-each channel updates at roughly 1 kHz. The I²C timeout is capped at 2 ms so a
-stuck bus cannot block the loop for the default 1000 ms. The bridge-midpoint
-differential is accumulated into a 128-sample ring at a minimum 130 µs cadence
-(≈ 16.6 ms, about one mains cycle); the RMS and DC estimates are considered
-valid once 96 samples have been collected. The ring is cleared when the bridge
-starts and when it stops, so a run never inherits the tail of the previous one.
+AIN4 INA240 current at 0.1 V/A), with conversions throttled to one per 200 µs.
+Each channel costs five I²C transactions, so a full sweep takes about 3.7 ms
+and each channel updates at roughly **270 Hz** — about 4.5 samples per mains
+cycle. The I²C timeout is capped at 2 ms so a stuck bus cannot block the loop
+for the default 1000 ms. The bridge-midpoint differential is accumulated into a
+160-entry ring with a `micros()` timestamp, sampled at a minimum 130 µs
+cadence; the RMS and DC estimates are computed over the entries that fall
+inside **16.667 ms** — one mains period measured in time, not a fixed sample
+count. The ring is cleared when the bridge starts and when it stops, so a run
+never inherits the tail of the previous one.
 
-Because the ADS7128 refreshes each channel only once per sweep, the ring holds
-about **16.6 independent samples per mains cycle**, not 128. That is still
-enough for an accurate RMS: the window is 16.64 ms against a 16.667 ms mains
-period, so the time-weighted mean of the squared waveform over it is the mean
-over a whole cycle, and the modelled RMS error over the sweep phase is
-0.00–0.16 %. The same one-cycle window is what rejects the 60 Hz fundamental
-from the DC estimate — a one-cycle mean of a sinusoid is zero — and that is why
-the window cannot simply be shortened to make the DC trip faster.
+The window is time-based because the loop cadence is not fixed: the main loop
+shares the I²C bus with the ADS7128, so samples arrive every 130–260 µs. A
+count-based 128-sample window therefore ran 21–26 ms — not a whole number of
+mains cycles — and the uncancelled 60 Hz fundamental false-tripped the 0.5 V DC
+check during soft start. The window is armed only when the next older sample
+would fall outside the period.
+
+The RMS accuracy is limited by the sweep, not by the window: with 4.5 samples
+per cycle the staircase of held midpoint values gives a modelled RMS error of
+about **3–6 %**, and it is a bias rather than noise. The loop regulates the
+measured value, so that bias lands on the outlet: without calibration the unit
+runs a few percent high, and the droop model's ±3 % does not cancel it. Reading
+all five channels in auto-sequence mode (one block read per sweep, well under
+1 ms) would remove it. That change is not in this firmware and needs a bench
+check against silicon.
+
+The same one-cycle window is what rejects the 60 Hz fundamental from the DC
+estimate — a one-cycle mean of a sinusoid is zero — and that is why the window
+cannot simply be shortened to make the DC trip faster.
 
 The driver clears `OSR_DONE` with a **plain register write**, not with the
 "set bit" opcode: `OSR_DONE` is a write-1-to-clear bit (datasheet Table 12),
@@ -562,9 +598,9 @@ against the 0.959733 clamp, and only for a transformer that regulates 8 %.
 
 > [!WARNING]
 > The output-voltage, output-missing and DC-offset checks are **supervisory**, not
-> fast protection: each ADS7128 channel updates at roughly 1 kHz and the control
-> loop runs at 100 Hz. Final protection against fast faults is the LM5122's
-> hardware current limit. Do not rely on this firmware as the sole protection.
+> fast protection: the ADS7128 sweep is about 3.7 ms and the control loop runs at
+> 100 Hz. Final protection against fast faults is the LM5122's hardware current
+> limit. Do not rely on this firmware as the sole protection.
 
 #### Watchdog
 
@@ -624,8 +660,10 @@ power stage:
 The power stage has still never been energised. The 120 V RMS target is
 regulated from an **estimate** of the outlet: the board has no isolated output
 sense, so nothing in the firmware can see what the 115 V winding is doing. The
-estimate holds the outlet within about 3 % of 120.0 V RMS without any per-unit
-calibration, but a meter is the only way to know the real outlet voltage.
+transformer model alone holds the outlet within about 3 % of 120.0 V RMS
+without per-unit calibration, but the measurement chain adds a few percent, so
+treat the as-built unit as about ±8 % until it is calibrated against a meter. A
+meter is the only way to know the real outlet voltage.
 
 What this prototype does not have: no reverse-polarity protection, the
 board's logic ground is not protective earth

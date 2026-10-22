@@ -1415,7 +1415,8 @@ void renderUI() {
  *  two midpoints removes the carrier before the ADC sees it.
  *
  *  What the transformer and the outlet see is the whole waveform: about
- *  1.47 times the fundamental in RMS.  A later board
+ *  1.16 times the fundamental in RMS at the design point (16.8 V total
+ *  against 14.5 V fundamental at m = 0.941).  A later board
  *  that puts each leg on its own slice
  *  (leg A on slice 1 = GPIO2/GPIO3, leg B on slice 2 = GPIO4/GPIO5, with
  *  the slices 180 degrees apart) would give a true bipolar drive; that is
@@ -1423,6 +1424,13 @@ void renderUI() {
  * ================================================================ */
 
 // PWM constants.  150 MHz / 7500 = 20 kHz carrier; dt = 75 ticks = 500 ns.
+// The dead time and the 60 Hz phase increment are integer constants, so the
+// carrier frequency and the output frequency are only correct at 150 MHz.
+// Fail the build rather than silently produce 50 Hz or 80 Hz from a board
+// menu with a different CPU frequency.
+static_assert(F_CPU == 150000000UL,
+              "PIE V1.9 PWM timing assumes a 150 MHz clock; "
+              "do not change the board's CPU frequency");
 #define PWM_TOP            7499
 #define PWM_DT_TICKS       75
 #define PWM_CARRIER_HZ     20000UL
@@ -1478,9 +1486,9 @@ void renderUI() {
 #define DIV_AIN1           (10.0f / (68.0f + 10.0f))   // 21.75 V bus, 25.74 V FS
 #define DIV_AIN2           (10.0f / (68.0f + 10.0f))   // bridge midpoint A
 #define DIV_AIN3           (10.0f / (68.0f + 10.0f))   // bridge midpoint B
-// AIN4 is the INA240A2 (gain 50) across Rsense1 (2 mΩ): 0.1 V/A.  The
+// AIN4 is the INA240A2 (gain 50) across RCS1 (2 mΩ): 0.1 V/A.  The
 // INA240's reference pins are grounded, so its output cannot go below
-// ground: a REVERSE current through Rsense1 reads as 0 A and is invisible
+// ground: a REVERSE current through RCS1 reads as 0 A and is invisible
 // to the over-current trip.  The input-rail check still refuses to arm
 // with a reversed battery, but the current direction itself is not
 // observable.
@@ -1608,39 +1616,41 @@ void renderUI() {
 
 // Primary DC offset.
 //
-// The trip threshold is 0.5 V and the trip is evaluated on every RMS sample
-// (every 130 us), NOT once per control tick.  Both follow from the
-// transformer's flux budget, which puts the saturation knee at 11-13 ms for
-// a 1 V offset -- a flux budget of about 0.011 V.s.
+// The trip threshold is 0.5 V and the trip is evaluated on every RMS sample,
+// NOT once per control tick.  Both follow from the transformer's flux
+// budget, which puts the saturation knee at 11-13 ms for a 1 V offset -- a
+// flux budget of about 0.011 V.s.
 //
 //   saturation time for an offset X     11/X ms
-//   detection time for an offset X      16.64 * (T/X) + 0.26 ms
+//   detection time for an offset X      16.667 * (T/X) + one sample
 //
 // The detection time is dominated by the one-mains-cycle window the DC
 // estimate needs: the mean of that window is what rejects the 60 Hz
-// fundamental, and after a step of X volts it only reaches T once
-// 128 * T / X samples have gone in.  With the old T = 1.0 V that window
-// alone (16.64 ms) is longer than the knee (11-13 ms), so the trip could
-// never be fast enough no matter when it was evaluated.
+// fundamental, and after a step of X volts it only reaches T once a
+// fraction T/X of the window has been filled with the offset.  The window is
+// measured in TIME (16.667 ms), not in samples -- see RMS_WINDOW_US.  With
+// the old T = 1.0 V that window alone is longer than the knee (11-13 ms), so
+// the trip could never be fast enough no matter when it was evaluated.
 //
 // With T = 0.5 V the detection beats the saturation time for every offset
 // between 0.5 V and 10 V:
 //
 //   X = 0.5 V   detect 16.9 ms   saturate 22.0 ms
-//   X = 1.0 V   detect  8.6 ms   saturate 11.0 ms
+//   X = 1.0 V   detect  8.5 ms   saturate 11.0 ms
 //   X = 2.0 V   detect  4.4 ms   saturate  5.5 ms
 //   X = 5.0 V   detect  1.9 ms   saturate  2.2 ms
 //
 // Below 0.5 V the transformer does not saturate at all, so the lower
-// threshold costs nothing.  The noise margin is large: the residual
-// aliased ripple on the DC estimate is about 0.01 V, so the threshold sits
-// 50x above the noise.
+// threshold costs nothing.  The sample noise on the DC estimate is about
+// 0.01 V, but the systematic residual from the ADS7128 staircase is larger:
+// about 0.1 V at full modulation.  The threshold sits 5x above that worst
+// residual, and 50x above the noise.
 //
-// The trip is armed only once the measurement window is FULL (see
-// updateRmsAndDc()).  That means an offset which appears DURING a run is
-// caught 8.5 ms after it appears -- inside the saturation window -- but an
-// offset that is already there when the bridge starts is not caught until
-// the window has filled (16.64 ms) and then filled with the offset (a
+// The trip is armed only once the measurement window holds a full mains
+// period (see updateRmsAndDc()).  That means an offset which appears DURING
+// a run is caught 8.5 ms after it appears -- inside the saturation window --
+// but an offset that is already there when the bridge starts is not caught
+// until the window has filled (16.667 ms) and then filled with the offset (a
 // further 8.3 ms at 1 V), i.e. at about 25 ms, after the 11-13 ms knee.
 // Detecting that case faster needs a phase reference for the 60 Hz
 // fundamental, which this measurement chain does not have.  It is recorded
@@ -1648,9 +1658,9 @@ void renderUI() {
 //
 // DC_TRIP_SAMPLES is the number of consecutive samples above the threshold
 // that trip it.  One sample is enough -- the estimate is already the mean
-// of 128 samples, so a single wild reading moves it by 1/128 of its
-// magnitude -- but two are used, which costs 260 us and still leaves the
-// detection ahead of the knee.
+// of the whole window, so a single wild reading moves it by 1/n of its
+// magnitude -- but two are used, which costs one sample interval (130-260 us)
+// and still leaves the detection ahead of the knee.
 #define DC_TRIP_V          0.5f
 #define DC_TRIP_SAMPLES    2
 
@@ -1669,14 +1679,16 @@ void renderUI() {
 //
 // The drive is NOT a 60 Hz sine: the bridge is a 20 kHz unipolar PWM with
 // the 60 Hz fundamental riding on it, so the primary winding sees a
-// waveform whose total RMS is about 1.47 times its 60 Hz fundamental
-// (21.3 V total against 14.5 V fundamental at the design point).  What the
-// transformer is rated on -- the winding currents -- is set by the load and
-// stays sinusoidal: at 100 W the primary carries 6.9 A RMS of its 13.34 A
-// rating (52 %) and the secondary 0.83 A of its 1.333 A (62 %).  The extra
-// voltage is 20 kHz carrier, which adds core loss but not flux: the
-// carrier's volt-seconds balance over every carrier period, so the core
-// does not walk up.
+// waveform whose total RMS is about 1.16 times its 60 Hz fundamental at the
+// design point (16.8 V total against 14.5 V fundamental at m = 0.941).
+// Per carrier the differential is +Vbus for a fraction m of the period, so
+// the cycle mean square is Vbus^2 * mean|m| = Vbus^2 * 2A/pi and the ratio
+// is 2/sqrt(pi*A).  What the transformer is rated on -- the winding
+// currents -- is set by the load and stays sinusoidal: at 100 W the primary
+// carries 6.9 A RMS of its 13.34 A rating (52 %) and the secondary 0.83 A
+// of its 1.333 A (62 %).  The extra voltage is 20 kHz carrier, which adds
+// core loss but not flux: the carrier's volt-seconds balance over every
+// carrier period, so the core does not walk up.
 //
 // The product rating is 100 W continuous.  The firmware's limit is 150 W of
 // ESTIMATED output power: the estimate runs about 12 % high
@@ -1722,20 +1734,29 @@ void renderUI() {
 
 // RMS measurement cadence.
 //
-// The ring is sampled every RMS_SAMPLE_US, but the ADS7128 sweep refreshes
-// each channel only once per round-robin pass, so the ring holds about 16.6
-// INDEPENDENT samples per mains cycle rather than 128.  That is enough: the
-// window is 16.64 ms against a 16.667 ms mains period, so the time-weighted
-// mean of the squared waveform over it is the mean over a whole cycle, and
-// the computed RMS is within about 0.2 % of the true value (the modelled
-// error over the sweep phase is 0.00-0.16 %).
+// The window is one mains period measured in TIME, not a fixed number of
+// samples.  The main loop shares the bus with the ADS7128, so the interval
+// between samples is not the 130 us floor -- it is whatever the I2C state
+// machine costs, 130-260 us.  A count-based window therefore runs long
+// (21-26 ms instead of 16.67 ms), the 60 Hz fundamental no longer cancels in
+// it, and the residual (up to 4 V at full modulation) false-trips the 0.5 V
+// DC-offset check during the soft-start ramp.
 //
-// The same window is what rejects the 60 Hz fundamental from the DC
-// estimate: a one-cycle mean of a sinusoid is zero.  That is why the window
-// cannot simply be shortened -- see DC_TRIP_V.
-#define RMS_RING_SIZE      128
-#define RMS_MIN_SAMPLES    96
+// RMS_RING_SIZE is sized for the fastest cadence the loop can produce
+// (130 us): 160 * 130 us = 20.8 ms, comfortably more than one period.
+//
+// The one-cycle window is also what rejects the 60 Hz fundamental from the
+// DC estimate: a one-cycle mean of a sinusoid is zero.  That is why the
+// window cannot simply be shortened -- see DC_TRIP_V.
+//
+// The ring stores one entry per loop pass, but the ADS7128 refreshes one
+// channel per round-robin step, so only a few entries per cycle carry new
+// midpoint data.  The window length is still exact; the RMS accuracy is
+// limited by the ~3.7 ms sweep, not by the window.
+#define RMS_RING_SIZE      160
+#define RMS_MIN_SAMPLES    32     // sanity floor only; the time window gates
 #define RMS_SAMPLE_US      130
+#define RMS_WINDOW_US      16667UL   // one 60 Hz period
 
 enum PowerState : uint8_t {
   POWER_IDLE,
@@ -1782,7 +1803,8 @@ static uint32_t lastProbeMs = 0;
 
 // RMS measurement of the bridge midpoint differential, and the outlet
 // estimate derived from it.
-static float  rmsBuf[RMS_RING_SIZE];
+static float    rmsBuf[RMS_RING_SIZE];
+static uint32_t rmsTime[RMS_RING_SIZE];   // micros() stamp for each entry
 static uint8_t rmsIndex = 0;
 static uint8_t rmsCount = 0;
 static float   primaryRms = 0.0f;        // measured 12 V winding RMS
@@ -2092,34 +2114,54 @@ static void updateRmsAndDc() {
 
   float diff = vMidA - vMidB;            // transformer primary differential
   rmsBuf[rmsIndex] = diff;
+  rmsTime[rmsIndex] = nowUs;
   rmsIndex = (uint8_t)((rmsIndex + 1) % RMS_RING_SIZE);
   if (rmsCount < RMS_RING_SIZE) rmsCount++;
 
-  if (rmsCount < RMS_MIN_SAMPLES) {
+  // Walk back over the samples that fall inside one mains period.  The
+  // window is TIME-based: the main loop shares the bus with the ADS7128, so
+  // the sample interval is 130-260 us and a fixed sample count is not a
+  // fixed length of time.
+  uint8_t n = 0;
+  float sum = 0.0f;
+  float sq = 0.0f;
+  uint32_t oldestUs = nowUs;
+  for (uint8_t i = 0; i < rmsCount; i++) {
+    uint8_t idx =
+        (uint8_t)((rmsIndex + RMS_RING_SIZE - 1 - i) % RMS_RING_SIZE);
+    uint32_t age = nowUs - rmsTime[idx];
+    if (age > RMS_WINDOW_US) break;
+    float v = rmsBuf[idx];
+    sum += v;
+    sq += v * v;
+    oldestUs = rmsTime[idx];
+    n++;
+  }
+
+  // The window is full when the next older sample would fall outside it.
+  uint32_t spanUs = nowUs - oldestUs;
+  if (n < RMS_MIN_SAMPLES || spanUs + RMS_SAMPLE_US < RMS_WINDOW_US) {
     rmsValid = false;
     return;
   }
   rmsValid = true;
 
   // DC offset over the same window.
-  float sum = 0.0f;
-  for (uint8_t i = 0; i < rmsCount; i++) sum += rmsBuf[i];
-  primaryDc = sum / (float)rmsCount;
+  primaryDc = sum / (float)n;
 
   // The DC-offset trip lives here, not in the control loop.  The estimate
-  // only becomes meaningful once the window is full of drive samples, and
+  // only becomes meaningful once the window holds a full mains period, and
   // the whole point of the lower threshold (see DC_TRIP_V above) is that the
   // trip has to react within the same millisecond that the offset appears.
-  // Evaluating it here, on every 130 us sample, instead of on the 100 Hz
+  // Evaluating it here, on every RMS sample, instead of on the 100 Hz
   // control tick, is what makes the detection beat the saturation knee.
   //
   // It is only evaluated once the window is FULL.  A part-full window is
   // shorter than a mains cycle, so the 60 Hz fundamental does not cancel in
-  // it: at 96 samples the mean of the fundamental can be 0.79 V, which is
-  // above the trip threshold and would fire on every start-up.  At the full
-  // 128 samples (16.64 ms against a 16.667 ms period) the same figure is
-  // 0.004 V.
-  if (pArmed && rmsCount >= RMS_RING_SIZE &&
+  // it: in a 12.5 ms window the mean of the fundamental can be 0.79 V, which
+  // is above the trip threshold and would fire on every start-up.  With the
+  // full 16.667 ms window the fundamental cancels.
+  if (pArmed && rmsValid &&
       (pState == POWER_RUNNING || pState == POWER_STARTING)) {
     if (fabsf(primaryDc) > DC_TRIP_V) {
       if (++dcFaultCount >= DC_TRIP_SAMPLES) {
@@ -2133,13 +2175,11 @@ static void updateRmsAndDc() {
     dcFaultCount = 0;
   }
 
-  // RMS of the primary differential: the 12 V winding drive voltage.
-  float sq = 0.0f;
-  for (uint8_t i = 0; i < rmsCount; i++) {
-    float d = rmsBuf[i] - primaryDc;
-    sq += d * d;
-  }
-  primaryRms = sqrtf(sq / (float)rmsCount);
+  // RMS of the primary differential.  Var = E[x^2] - E[x]^2; the values are
+  // around 20 V so the subtraction is well conditioned.
+  float variance = sq / (float)n - primaryDc * primaryDc;
+  if (variance < 0.0f) variance = 0.0f;
+  primaryRms = sqrtf(variance);
   // The NO-LOAD (open-circuit) ratio applied to the drive.  This
   // OVER-estimates the outlet under load (that is what the droop
   // compensation corrects), so it is used for the bridge plausibility
@@ -2158,7 +2198,7 @@ static void updateRmsAndDc() {
  */
 
 // Estimated power reaching the outlet, in watts.  AIN4 measures the
-// BATTERY current (through the INA240 and Rsense1), so vIn * iIn is the
+// BATTERY current (through the INA240 and RCS1), so vIn * iIn is the
 // power the battery supplies; the auxiliary load (5 V buck, MCU, LEDs,
 // fans) comes off the top and the remainder is bus power, of which
 // ETA_BUCK_HBRIDGE reaches the outlet.
@@ -2714,7 +2754,7 @@ float powerInputVolts()  { return vIn; }
 float powerBusVolts()    { return vBus; }
 // The ESTIMATED outlet voltage (droop-compensated), not a measurement.
 float powerOutputVolts() { return outletEstimate(); }
-// The BATTERY current, measured by the INA240 across Rsense1 -- not an
+// The BATTERY current, measured by the INA240 across RCS1 -- not an
 // output current.  The board has no output current measurement.
 float powerInputAmps()   { return iIn; }
 

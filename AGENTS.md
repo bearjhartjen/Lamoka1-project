@@ -424,9 +424,12 @@ Two rules:
   and the firmware would believe the outlet was 120 V when it was really about
   111.5 V. The firmware uses `A_DROOP = 8.8735` and `B_DROOP = 5.666 Ω`, the
   transformer's catalogue values, and **no unit is fitted or calibrated**. A
-  host-side test proves the bound: the catalogue constants hold the real outlet
-  within 3 % of 120.0 V RMS across the load range for a transformer regulating
-  6–10 %, which brackets the 8 % TYP catalogue value.
+  host-side test proves the model bound: the catalogue constants hold the real
+  outlet within 3 % of 120.0 V RMS across the load range for a transformer
+  regulating 6–10 %, which brackets the 8 % TYP catalogue value. That is the
+  droop-model term only. The measurement chain adds a few percent (the ADS7128
+  sweep bias is the largest part), so treat the as-built unit as about ±8 %
+  until it is calibrated against a meter.
 
 ### Still open
 
@@ -508,10 +511,20 @@ changed the firmware where the derivation did not support it. What changed:
   transformer saturated first, and the test that "proved" the opposite
   (`test_detection_precedes_saturation`) was pinned to a stale 90 ms figure.
   The threshold is now **0.5 V** and the trip is evaluated **on every RMS
-  sample** (every 130 µs) in `updateRmsAndDc()`, not in the control loop.
-  The detection time is 16.64·(0.5/X) + 0.13 ms, which beats the 11/X ms
-  saturation time for every offset between 0.5 V and 10 V (1 V: 8.6 ms against
-  11 ms). The threshold sits ≥10× above the residual noise on the estimate.
+  sample** in `updateRmsAndDc()`, not in the control loop. The detection time
+  is 16.667·(0.5/X) ms plus one sample, which beats the 11/X ms saturation
+  time for every offset between 0.5 V and 10 V (1 V: 8.5 ms against 11 ms).
+  The threshold sits 5× above the worst systematic residual from the ADS7128
+  staircase (0.1 V at full modulation) and ≥10× above the sample noise.
+- **The measurement window is time-based, not sample-counted** (2026-10-22).
+  The main loop shares the I²C bus with the ADS7128, so samples arrive every
+  130–260 µs. Counting 128 of them ran the window to 21–26 ms, not one mains
+  period; the uncancelled 60 Hz fundamental reached the 0.5 V trip during soft
+  start and stopped the inverter at m ≈ 0.11 (12–13 V outlet). The window is
+  now the entries whose `micros()` timestamps fall inside 16.667 ms, with a
+  160-entry ring and a full-period arming condition. `rmsValid` means "window
+  full", not "64 samples seen". The regression test drives the real cadence
+  `(190, 215, 142, 130, 260)` µs and fails on the old count-based window.
 - **The measurement window is cleared when the bridge starts and stops**
   (`resetMeasurementWindow()`), so a run never inherits the tail of the
   previous one — the midpoint filter's settling transient is not a DC offset.
@@ -531,8 +544,8 @@ changed the firmware where the derivation did not support it. What changed:
   has, the transformer's loading figures were corrected, and the drive is now
   documented as what it is: a **20 kHz unipolar PWM with a 60 Hz envelope**,
   not a 60 Hz sine. See the waveform section of
-  `PIE-v1.9-information.md` — the total RMS of the drive is about 1.47× its
-  60 Hz fundamental.
+  `PIE-v1.9-information.md` — the total RMS of the drive is about 1.16× its
+  60 Hz fundamental at the design point (16.8 V against 14.5 V).
 
 Two of those changes are *not* closed by firmware and need the bench: the
 ADS7128's `OSR_DONE` behaviour with the averaging filter disabled, and the

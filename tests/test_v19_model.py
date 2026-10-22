@@ -97,6 +97,7 @@ DC_TRIP_V = _float("DC_TRIP_V")
 DC_TRIP_SAMPLES = _int("DC_TRIP_SAMPLES")
 RMS_RING_SIZE = _int("RMS_RING_SIZE")
 RMS_SAMPLE_US = _int("RMS_SAMPLE_US")
+RMS_WINDOW_US = _int("RMS_WINDOW_US")
 AMP_SLEW_MAX = _float("AMP_SLEW_MAX")
 VBUS_NOMINAL = _float("VBUS_NOMINAL")
 VBUS_START_WINDOW = _float("VBUS_START_WINDOW")
@@ -562,9 +563,7 @@ class CatalogueConstantTests(unittest.TestCase):
             for p_out in (0.0, 25.0, 50.0, 75.0, 100.0):
                 with self.subTest(regulation=regulation, p_out=p_out):
                     drive = (
-                        modulation_for_outlet(
-                            OUTPUT_TARGET_RMS, p_out, VBUS_NOMINAL
-                        )
+                        modulation_for_outlet(OUTPUT_TARGET_RMS, p_out, VBUS_NOMINAL)
                         * VBUS_NOMINAL
                         / math.sqrt(2.0)
                     )
@@ -808,7 +807,9 @@ class DcOffsetTests(unittest.TestCase):
         #
         # The DC estimate is the mean of a one-mains-cycle window -- that is
         # what rejects the 60 Hz fundamental -- and after a step of X it
-        # only reaches the threshold once 128 * T / X samples have gone in.
+        # only reaches the threshold once a fraction T/X of the window has
+        # been filled with the offset.  The window is measured in TIME, not
+        # in samples: the loop cadence varies with the ADS7128 transactions.
         # The trip is evaluated on every RMS sample, not on the control
         # tick, and needs two consecutive samples.
         saturation_ms = 0.011 / DC_TRIP_V * 1000.0
@@ -816,9 +817,8 @@ class DcOffsetTests(unittest.TestCase):
 
         for offset in (0.55, 1.0, 2.0, 5.0, 10.0):
             with self.subTest(offset=offset):
-                samples = math.ceil(RMS_RING_SIZE * (DC_TRIP_V / offset))
                 detect_ms = (
-                    samples * RMS_SAMPLE_US / 1000.0
+                    RMS_WINDOW_US / 1000.0 * (DC_TRIP_V / offset)
                     + (DC_TRIP_SAMPLES - 1) * RMS_SAMPLE_US / 1000.0
                 )
                 saturate_ms = 0.011 / offset * 1000.0
@@ -826,9 +826,10 @@ class DcOffsetTests(unittest.TestCase):
 
     def test_the_threshold_is_below_the_old_one(self):
         # The old 1.0 V threshold with a 100 Hz trip could not react in
-        # time: the window alone (16.64 ms) is longer than the knee.
+        # time: the window alone (16.667 ms) is longer than the knee.
         self.assertLess(DC_TRIP_V, 1.0)
-        window_ms = RMS_RING_SIZE * RMS_SAMPLE_US * 1000.0
+        window_ms = RMS_WINDOW_US / 1000.0
+        self.assertAlmostEqual(window_ms, 16.667, places=3)
         self.assertGreater(window_ms, 11.0)
 
     def test_the_trip_is_evaluated_on_every_rms_sample(self):
@@ -934,7 +935,14 @@ class SourceContractTests(unittest.TestCase):
         self.assertRegex(SOURCE, r"#define\s+VBUS_RUN_WINDOW\s+1\.50f")
         self.assertRegex(SOURCE, r"#define\s+SINE_TABLE_SIZE\s+64")
         self.assertRegex(SOURCE, r"#define\s+SINE_PHASE_INC\s+12884902UL")
+        self.assertRegex(SOURCE, r"#define\s+RMS_WINDOW_US\s+16667UL")
         self.assertIn('"bridge output missing"', SOURCE)
+
+    def test_the_build_is_pinned_to_the_150_mhz_clock(self):
+        # The PWM and sine constants produce 60 Hz only at 150 MHz.  A board
+        # menu that changes the CPU frequency must fail the build, not shift
+        # the output frequency.
+        self.assertIn("static_assert(F_CPU == 150000000UL", SOURCE)
 
     def test_new_topology_constants(self):
         self.assertRegex(SOURCE, r"#define\s+VBUS_NOMINAL\s+21\.75f")

@@ -228,38 +228,61 @@ class ResidualRippleTests(unittest.TestCase):
         self.assertLess(residual_at_adc / signal_at_adc, 0.05)
 
     def test_the_aliased_ripple_stays_far_below_the_dc_trip(self):
-        """Averaged over the 128-sample window the aliased ripple adds a
-        random component of about residual/sqrt(128) to the measured DC
-        offset, which must stay well under the 1.0 V trip."""
+        """Averaged over the measurement window the aliased ripple adds a
+        random component of about residual/sqrt(N) to the measured DC
+        offset, which must stay well under the 0.5 V trip."""
         ripple = self._ripple(0.9)
         residual_at_adc = ripple * FILTER_HZ / CARRIER_HZ * self.DIVIDER
-        dc_error = residual_at_adc / math.sqrt(128)
+        dc_error = residual_at_adc / math.sqrt(160)
         self.assertLess(dc_error, 0.01)
 
     def test_the_drive_is_a_carrier_pwm_not_a_sine(self):
-        """The total RMS of the differential is much larger than the RMS of
-        its 60 Hz fundamental.  The estimator measures the fundamental (the
-        midpoint filter removes the carrier), but the transformer and the
-        outlet see the whole waveform."""
-        for m in (0.879, 0.941, 0.9597):
-            with self.subTest(m=m):
-                cc = cc_values(m)
-                raw = [differential(t, cc) for t in range(PWM_T)]
-                total_rms = math.sqrt(sum(v * v for v in raw) / len(raw))
-                fundamental_rms = m * VBUS / SQRT2
-                self.assertGreater(total_rms, 1.4 * fundamental_rms)
-                self.assertLess(total_rms, 1.6 * fundamental_rms)
+        """Over a mains cycle the modulation is a sine, so the cycle mean
+        square is Vbus^2 * mean|m| = Vbus^2 * 2A/pi, while the fundamental is
+        A*Vbus/sqrt(2).  The total-to-fundamental ratio is therefore
+        2/sqrt(pi*A): at the design point 1.16, not the 1.47 that a
+        constant-m carrier would give."""
+        for amplitude in (0.879, 0.941, 0.9597):
+            with self.subTest(amplitude=amplitude):
+                carriers = 2000
+                mean_abs_m = sum(
+                    abs(amplitude * math.sin(2.0 * math.pi * k / carriers))
+                    for k in range(carriers)
+                ) / carriers
+                self.assertAlmostEqual(
+                    mean_abs_m, 2.0 * amplitude / math.pi, places=3
+                )
+
+                total_rms = VBUS * math.sqrt(mean_abs_m)
+                fundamental_rms = amplitude * VBUS / SQRT2
+                ratio = total_rms / fundamental_rms
+                self.assertAlmostEqual(
+                    ratio, 2.0 / math.sqrt(math.pi * amplitude), places=3
+                )
+                self.assertGreater(ratio, 1.15)
+                self.assertLess(ratio, 1.22)
 
     def test_the_carrier_average_is_what_the_estimator_measures(self):
         """The estimator's model -- drive RMS = m * Vbus / sqrt(2) -- is the
-        fundamental of the filtered waveform, not its total RMS."""
+        fundamental of the filtered waveform, not its total RMS.  For a
+        constant m the unipolar carrier gives mean square Vbus^2 * m, while
+        the carrier average is m * Vbus."""
         for m in (0.5, 0.8, 0.94):
             with self.subTest(m=m):
                 cc = cc_values(m)
                 raw = [differential(t, cc) for t in range(PWM_T)]
-                total_rms = math.sqrt(sum(v * v for v in raw) / len(raw))
-                fundamental_rms = m * VBUS / SQRT2
-                self.assertGreater(total_rms / fundamental_rms, 1.4)
+                mean_square = sum(v * v for v in raw) / len(raw)
+                total_rms = math.sqrt(mean_square)
+                # Unipolar drive: the mean square is close to Vbus^2 * m; the
+                # 2 % spread is the 500 ns dead time and the slice phase
+                # offsets, which the ideal formula does not model.
+                self.assertAlmostEqual(
+                    total_rms / (m * VBUS / SQRT2),
+                    math.sqrt(2.0 / m),
+                    delta=0.08,
+                )
+                avg = sum(raw) / len(raw)
+                self.assertAlmostEqual(avg, m * VBUS, delta=0.02)
 
 
 if __name__ == "__main__":

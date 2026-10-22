@@ -49,6 +49,7 @@ def _float(name):
 RMS_RING_SIZE = _int("RMS_RING_SIZE")
 RMS_MIN_SAMPLES = _int("RMS_MIN_SAMPLES")
 RMS_SAMPLE_US = _int("RMS_SAMPLE_US")
+RMS_WINDOW_US = _int("RMS_WINDOW_US")
 CTRL_INTERVAL_MS = _int("CTRL_INTERVAL_MS")
 DC_TRIP_V = _float("DC_TRIP_V")
 DC_TRIP_SAMPLES = _int("DC_TRIP_SAMPLES")
@@ -66,26 +67,28 @@ SATURATION_KNEE_MS = 11.0
 def dc_detection_latency_ms(offset_v=1.01, window_full=True):
     """How long a step DC offset of ``offset_v`` takes to trip.
 
-    The firmware's DC estimate is the mean of the 128-sample window, so a
-    step offset of X volts only reaches the threshold T once 128 * T / X
-    samples have gone in; the trip then needs DC_TRIP_SAMPLES consecutive
+    The firmware's DC estimate is the mean of a one-mains-cycle window
+    measured in TIME (``RMS_WINDOW_US``), so a step offset of X volts only
+    reaches the threshold T once a fraction T/X of the window has been
+    filled with the offset.  The trip then needs DC_TRIP_SAMPLES consecutive
     samples above the threshold, and the trip is evaluated on every RMS
-    sample (every 130 us), not on the control tick.
+    sample, not on the control tick.
 
     ``window_full`` is the normal case: the offset appears while the bridge
     is already running and the window already holds a full mains cycle.
-    With ``window_full`` false the estimate is not even computed until
-    RMS_MIN_SAMPLES samples have been collected -- that is the start-up
-    corner case, where the offset appears in the first milliseconds of a
-    run.
+    With ``window_full`` false the estimate is not even computed until the
+    window holds a full period -- that is the start-up corner case, where
+    the offset appears in the first milliseconds of a run.
     """
     if offset_v <= DC_TRIP_V:
         return math.inf  # the mean never reaches the threshold
-    n_needed = math.ceil(RMS_RING_SIZE * (DC_TRIP_V / offset_v))
+    window_ms = RMS_WINDOW_US / 1000.0
     if not window_full:
-        n_needed = max(n_needed, RMS_MIN_SAMPLES)
-    window_ms = n_needed * RMS_SAMPLE_US / 1000.0
-    return window_ms + (DC_TRIP_SAMPLES - 1) * RMS_SAMPLE_US / 1000.0
+        # The window has to fill with the offset before it can trip.
+        window_ms += RMS_WINDOW_US / 1000.0
+    return window_ms * (DC_TRIP_V / offset_v) + (
+        DC_TRIP_SAMPLES - 1
+    ) * RMS_SAMPLE_US / 1000.0
 
 
 class DcOffsetLatencyTests(unittest.TestCase):
@@ -108,10 +111,10 @@ class DcOffsetLatencyTests(unittest.TestCase):
 
     def test_the_old_threshold_could_never_be_fast_enough(self):
         """With a 1.0 V threshold the one-mains-cycle window the DC estimate
-        needs (16.64 ms) is longer than the 11 ms knee on its own, so no
+        needs (16.667 ms) is longer than the 11 ms knee on its own, so no
         evaluation point could have beaten it.  This is why the threshold
         moved, and it is the property the change rests on."""
-        window_ms = RMS_RING_SIZE * RMS_SAMPLE_US / 1000.0
+        window_ms = RMS_WINDOW_US / 1000.0
         self.assertGreater(window_ms, SATURATION_KNEE_MS)
         # And with the new threshold the window still fits inside the knee
         # for the offsets that trip it.
@@ -138,30 +141,83 @@ class DcOffsetLatencyTests(unittest.TestCase):
 
     def test_the_trip_is_armed_only_once_the_window_is_full(self):
         """A part-full window is shorter than a mains cycle, so the 60 Hz
-        fundamental does not cancel in it: at 96 samples its mean can be
-        0.79 V, which is above the trip threshold.  Evaluating the trip
-        before the window is full would fire on every start-up."""
+        fundamental does not cancel in it: a 12.5 ms window can have a mean
+        above the trip threshold.  Evaluating the trip before the window is
+        full would fire on every start-up."""
         block = SOURCE[SOURCE.index("static void updateRmsAndDc()") :]
         block = block[: block.index("/* ==")]
-        self.assertIn("rmsCount >= RMS_RING_SIZE", block)
+        self.assertIn("spanUs + RMS_SAMPLE_US < RMS_WINDOW_US", block)
+        self.assertIn("rmsValid = true", block)
+        self.assertNotIn("rmsCount >= RMS_RING_SIZE", block)
 
     def test_a_part_full_window_would_false_trip(self):
-        """The arithmetic behind the rule above: at the 96 samples where the
-        estimate first becomes "valid", the mean of the 60 Hz fundamental can
-        still be 0.79 V -- above the trip threshold -- so the trip must not
-        be armed until the window is full."""
+        """The arithmetic behind the rule above: a window shorter than one
+        mains period leaves a residual mean of the 60 Hz fundamental.  At
+        12.5 ms the worst-case mean is above the trip threshold; at a full
+        period it cancels."""
         amplitude = 0.94 * 21.75 * 0.128  # differential amplitude at the ADC
         omega = 2.0 * math.pi * 60.0
 
-        def worst_mean(samples):
-            length = samples * RMS_SAMPLE_US * 1e-6
-            return (amplitude / omega) * 2.0 * math.sin(omega * length / 2.0) / length
+        def worst_mean(length_s):
+            return (amplitude / omega) * 2.0 * math.sin(omega * length_s / 2.0) / length_s
 
-        # The first window the estimator is computed on would false-trip.
-        self.assertGreater(worst_mean(RMS_MIN_SAMPLES), DC_TRIP_V)
+        self.assertGreater(worst_mean(0.0125), DC_TRIP_V)
         # A full window cancels the fundamental.
-        self.assertLess(worst_mean(RMS_RING_SIZE), 0.01)
-        self.assertLess(worst_mean(RMS_RING_SIZE), DC_TRIP_V / 10.0)
+        self.assertLess(worst_mean(RMS_WINDOW_US * 1e-6), 0.01)
+        self.assertLess(worst_mean(RMS_WINDOW_US * 1e-6), DC_TRIP_V / 10.0)
+
+    def test_the_time_window_survives_the_real_loop_cadence(self):
+        """The 2026-10-21 regression: the main loop shares the bus with the
+        ADS7128, so the sample cadence is 130-260 us, not 130 us.  A
+        count-based window then runs 21-26 ms and the 60 Hz residual
+        false-trips the 0.5 V DC check during the soft-start ramp.  This
+        models the cadence the loop actually produces and pins both the old
+        failure and the new behaviour."""
+        amplitude = 0.94 * 21.75 * 0.128  # differential amplitude at the ADC
+        cadence_us = (190, 215, 142, 130, 260)  # one ADS7128 sweep pattern
+
+        def samples(cycles=4):
+            out = []
+            t_us = 0
+            i = 0
+            while t_us <= cycles * RMS_WINDOW_US:
+                out.append((t_us, amplitude * math.sin(2.0 * math.pi * 60.0 * t_us * 1e-6)))
+                t_us += cadence_us[i % len(cadence_us)]
+                i += 1
+            return out
+
+        def mean(rows):
+            return sum(v for _, v in rows) / len(rows)
+
+        rows = samples()
+        # The old count-based window (128 samples) runs long and trips.  Take
+        # the worst over every window position, not one lucky phase.
+        old = max(
+            abs(mean(rows[k - 127 : k + 1])) for k in range(128, len(rows))
+        )
+        self.assertGreater(old, DC_TRIP_V)
+
+        # The new time window holds one period and does not.  Sweep the window
+        # position too, and apply the firmware's own arming condition.
+        new = 0.0
+        for k in range(64, len(rows)):
+            now = rows[k][0]
+            window = [
+                (t, v)
+                for t, v in rows[max(0, k - 200) : k + 1]
+                if now - t <= RMS_WINDOW_US * 1e-6
+            ]
+            if len(window) < RMS_MIN_SAMPLES:
+                continue
+            span = now - min(t for t, _ in window)
+            if span + RMS_SAMPLE_US * 1e-6 < RMS_WINDOW_US * 1e-6:
+                continue
+            new = max(new, abs(sum(v for _, v in window) / len(window)))
+        self.assertLess(new, DC_TRIP_V / 2.0)
+        self.assertLess(new, old / 5.0)
+
+        # And the window the code builds is long enough to be armed at all.
+        self.assertGreaterEqual(RMS_RING_SIZE * RMS_SAMPLE_US, RMS_WINDOW_US)
 
     def test_the_measurement_window_is_cleared_between_runs(self):
         """Otherwise the tail of the previous run, and the filter's settling
