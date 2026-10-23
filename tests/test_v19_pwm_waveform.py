@@ -32,6 +32,8 @@ Run with ``python3 -m pytest tests/test_v19_pwm_waveform.py``.
 """
 
 import math
+import os
+import re
 import unittest
 
 PWM_TOP = 7499
@@ -41,6 +43,38 @@ SQRT2 = math.sqrt(2.0)
 VBUS = 21.75
 CARRIER_HZ = 20000.0
 
+SKETCH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "SOFTWARE",
+    "Portal Interface Engine",
+    "V1.9.ino",
+)
+with open(SKETCH, encoding="utf-8") as _handle:
+    _SOURCE = _handle.read()
+
+
+def _sketch_int(name):
+    return int(re.search(rf"#define\s+{name}\s+([0-9]+)", _SOURCE).group(1))
+
+
+def _sketch_float(name):
+    return float(
+        re.search(rf"#define\s+{name}\s+([-+]?[0-9]*\.?[0-9]+)f", _SOURCE).group(1)
+    )
+
+
+# Hardcoded design numbers must track the sketch.  If the sketch changes and
+# this file does not, the failure below names the drift instead of the file
+# silently testing the old design point.
+class SketchSyncTests(unittest.TestCase):
+    def test_hardcoded_numbers_match_the_sketch(self):
+        self.assertEqual(PWM_TOP, _sketch_int("PWM_TOP"))
+        self.assertEqual(PWM_DT, _sketch_int("PWM_DT_TICKS"))
+        self.assertAlmostEqual(VBUS, _sketch_float("VBUS_NOMINAL"))
+        self.assertAlmostEqual(
+            CARRIER_HZ, 150e6 / (_sketch_int("PWM_TOP") + 1)
+        )
+
 # The midpoint RC filter: 10 kOhm bottom resistor with 47 nF across it.
 FILTER_HZ = 1.0 / (2.0 * math.pi * 10000.0 * 47e-9)
 
@@ -49,10 +83,10 @@ def cc_values(m):
     """The four compare values, recomputed the way writeBridgeDuty() does."""
     d_a = (1.0 + m) * 0.5
     d_b = (1.0 - m) * 0.5
-    cc_a_hi = int(d_a * PWM_T)
-    cc_a_lo = int(d_a * PWM_T + 2.0 * PWM_DT)
-    cc_b_hi = int(d_b * PWM_T)
-    cc_b_lo = int(d_b * PWM_T + 2.0 * PWM_DT)
+    cc_a_hi = int(d_a * PWM_T + 0.5)
+    cc_a_lo = int(d_a * PWM_T + 2.0 * PWM_DT + 0.5)
+    cc_b_hi = int(d_b * PWM_T + 0.5)
+    cc_b_lo = int(d_b * PWM_T + 2.0 * PWM_DT + 0.5)
     cc_a_lo = min(cc_a_lo, PWM_TOP)
     cc_b_lo = min(cc_b_lo, PWM_TOP)
     cc_a_hi = max(cc_a_hi, 2 * PWM_DT)

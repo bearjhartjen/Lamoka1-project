@@ -24,7 +24,7 @@
  *
  * CURSOR
  * ------
- * Every selected item is hot pink (breathing).
+ * Every selected item is a steady hot pink (no pulse, no hue variation).
  * Cursors now remember the last selected item
  * (Games menu stays on Fireball after exit, etc.).
  *
@@ -164,11 +164,12 @@ CRGB blendColor(const CRGB &a, const CRGB &b, uint8_t amount) {
   );
 }
 
-void renderCursor(uint8_t index, uint8_t minimumBrightness = 180) {
+void renderCursor(uint8_t index) {
   if (index >= NUM_LEDS) return;
-  CRGB c = COLOR_HOT_PINK;
-  c.nscale8(beatsin8(7, minimumBrightness, 255));
-  leds[index] = c;
+  // The cursor is a fixed hot pink, always: no hue variation and no
+  // brightness breathing.  A drifting pink reads as a system bug, and
+  // selection must never look like a fault.
+  leds[index] = COLOR_HOT_PINK;
 }
 
 /* ================================================================
@@ -341,13 +342,13 @@ public:
     if (millis() - last >= iv) {
       last = millis();
       p += d;
-      if (p >= 9) { p = 9; d = -1; }
+      if (p >= NUM_LEDS - 1) { p = NUM_LEDS - 1; d = -1; }
       if (p <= 0) { p = 0; d = 1; }
     }
 
     for (int t = 0; t < 3; t++) {
       int q = p - d * t;
-      if (q >= 0 && q < 10) {
+      if (q >= 0 && q < NUM_LEDS) {
         leds[q] = CRGB(0, 25 + t * 35, 70 + t * 55);
       }
     }
@@ -378,7 +379,7 @@ public:
     sourceVel = 0;
     lastMove = millis();
     flare = 0;
-    for (uint8_t i = 0; i < 10; i++) {
+    for (uint8_t i = 0; i < NUM_LEDS; i++) {
       heat[i] = (uint8_t)(30 + entropy.range(50));
     }
   }
@@ -418,7 +419,7 @@ public:
     int8_t drift = (int8_t)(((int)wind1 - 128) / 28 + ((int)wind2 - 128) / 40);
 
     // Height-aware cooling (hotter at base, cooler higher)
-    for (uint8_t i = 0; i < 10; i++) {
+    for (uint8_t i = 0; i < NUM_LEDS; i++) {
       uint8_t cooling = (uint8_t)(2 + entropy.range(3) + (i * 3) / 8);
       heat[i] = heat[i] > cooling ? heat[i] - cooling : 0;
     }
@@ -426,18 +427,18 @@ public:
     // Source injection with organic fuel
     int16_t rawSource = source + drift;
     if (rawSource < 0) rawSource = 0;
-    if (rawSource > 9) rawSource = 9;
+    if (rawSource > NUM_LEDS - 1) rawSource = NUM_LEDS - 1;
     uint8_t sourcePos = (uint8_t)rawSource;
 
     uint8_t fuel = (uint8_t)(120 + entropy.range(70) + (flare ? 40 : 0));
     heat[sourcePos] = qadd8(heat[sourcePos], fuel);
     if (sourcePos > 0) heat[sourcePos - 1] = qadd8(heat[sourcePos - 1], fuel / 2);
-    if (sourcePos < 9) heat[sourcePos + 1] = qadd8(heat[sourcePos + 1], fuel / 3);
+    if (sourcePos < NUM_LEDS - 1) heat[sourcePos + 1] = qadd8(heat[sourcePos + 1], fuel / 3);
 
     // Stronger diffusion
-    uint8_t old[10];
+    uint8_t old[NUM_LEDS];
     memcpy(old, heat, sizeof(heat));
-    for (uint8_t i = 1; i < 9; i++) {
+    for (uint8_t i = 1; i < NUM_LEDS - 1; i++) {
       uint16_t average = (uint16_t)old[i - 1] + (old[i] * 2) + old[i + 1];
       heat[i] = lerp8by8(old[i], (uint8_t)(average / 4), 160);
     }
@@ -469,7 +470,7 @@ public:
     // Dramatic flare decay
     if (flare) {
       heat[sourcePos] = qadd8(heat[sourcePos], flare);
-      if (sourcePos < 9) heat[sourcePos + 1] = qadd8(heat[sourcePos + 1], flare * 2 / 3);
+      if (sourcePos < NUM_LEDS - 1) heat[sourcePos + 1] = qadd8(heat[sourcePos + 1], flare * 2 / 3);
       if (sourcePos < 8) heat[sourcePos + 2] = qadd8(heat[sourcePos + 2], flare / 3);
       flare = flare > 9 ? flare - 9 : 0;
     }
@@ -478,7 +479,7 @@ public:
     if (heat[0] < 40) heat[0] = 40 + entropy.range(20);
 
     // Rich realistic palette
-    for (uint8_t i = 0; i < 10; i++) {
+    for (uint8_t i = 0; i < NUM_LEDS; i++) {
       uint8_t noise = inoise8(now / 32 + i * 41);
       heat[i] = scale8(heat[i], (uint8_t)(210 + (noise >> 4)));
       uint8_t h = heat[i];
@@ -660,7 +661,7 @@ class AppFireball {
   uint32_t  stateStart   = 0;
 
   uint8_t displayedScore() const {
-    return score > 10 ? 10 : (uint8_t)score;
+    return score > NUM_LEDS ? NUM_LEDS : (uint8_t)score;
   }
 
   void drawGame() {
@@ -718,7 +719,7 @@ class AppFireball {
   void renderScore() {
     clearLeds();
     uint8_t shown = displayedScore();
-    for (uint8_t i = 0; i < 10; i++) {
+    for (uint8_t i = 0; i < NUM_LEDS; i++) {
       if (shown & (1U << i)) leds[i] = COLOR_CACTUS;
     }
   }
@@ -787,7 +788,7 @@ public:
       uint8_t pulse = beatsin8(4, 30, 180);
       fill_solid(leds, NUM_LEDS, CRGB(pulse, 0, 0));
       uint8_t shown = displayedScore();
-      for (uint8_t i = 0; i < 10; i++) {
+      for (uint8_t i = 0; i < NUM_LEDS; i++) {
         if (shown & (1U << i)) leds[i] = COLOR_CACTUS;
       }
     }
@@ -823,8 +824,8 @@ void renderMainMenu() {
   leds[3] = COLOR_CACTUS;
   leds[4] = COLOR_GAMES;
   leds[5] = COLOR_SETTINGS;
-  for (uint8_t i = 6; i < 10; i++) leds[i] = CRGB::Black;
-  renderCursor(mainCursor, 180);
+  for (uint8_t i = 6; i < NUM_LEDS; i++) leds[i] = CRGB::Black;
+  renderCursor(mainCursor);
 }
 
 /* ================================================================
@@ -834,7 +835,7 @@ void renderGamesMenu() {
   clearLeds();
   leds[0] = CRGB(255, 100, 0);   // Back
   leds[1] = CRGB(255, 0, 0);     // Fireball
-  renderCursor(gamesCursor, 180);
+  renderCursor(gamesCursor);
 }
 
 /* ================================================================
@@ -850,7 +851,7 @@ void renderSettingsMenu() {
   leds[3] = COLOR_CACTUS;                 // Info
   leds[4] = CRGB(180, 120, 0);            // Bootsel
   leds[5] = CRGB(255, 0, 0);              // Shutdown
-  renderCursor(settingsCursor, 180);
+  renderCursor(settingsCursor);
 }
 
 /* ================================================================
@@ -860,7 +861,7 @@ const uint8_t brightVals[10] = {6, 12, 20, 30, 42, 56, 72, 88, 106, 125};
 uint8_t brightLevel = 0;
 
 void renderBrightness() {
-  for (uint8_t i = 0; i < 10; i++) {
+  for (uint8_t i = 0; i < NUM_LEDS; i++) {
     leds[i] = (i <= brightLevel) ? COLOR_HOT_PINK : COLOR_CACTUS;
   }
 }
@@ -872,7 +873,7 @@ const uint8_t speedVals[10] = {40, 55, 70, 85, 100, 120, 145, 170, 200, 240};
 uint8_t speedLevel = 4;
 
 void renderSpeed() {
-  for (uint8_t i = 0; i < 10; i++) {
+  for (uint8_t i = 0; i < NUM_LEDS; i++) {
     leds[i] = (i <= speedLevel) ? COLOR_HOT_PINK : COLOR_CACTUS;
   }
 }
@@ -888,8 +889,8 @@ void renderInfo() {
     fill_solid(leds, NUM_LEDS, COLOR_CACTUS);
     leds[0] = COLOR_HOT_PINK;
   } else if (infoPage == 1) {
-    uint8_t n = (uint8_t)((millis() / 1000UL) % 11UL);
-    for (uint8_t i = 0; i < 10; i++) {
+    uint8_t n = (uint8_t)((millis() / 1000UL) % (NUM_LEDS + 1));
+    for (uint8_t i = 0; i < NUM_LEDS; i++) {
       leds[i] = (i < n) ? COLOR_CACTUS : CRGB::Black;
     }
   } else {
@@ -1106,7 +1107,7 @@ void handleUI(Gesture g) {
       if (settingsCursor == 1) {
         settingsReturnCursor = 1;
         uint8_t best = 255;
-        for (uint8_t i = 0; i < 10; i++) {
+        for (uint8_t i = 0; i < sizeof(brightVals); i++) {
           uint8_t difference = (uint8_t)abs((int)brightVals[i] - (int)globalBrightness);
           if (difference < best) {
             best = difference;
@@ -1120,7 +1121,7 @@ void handleUI(Gesture g) {
       if (settingsCursor == 2) {
         settingsReturnCursor = 2;
         uint8_t best = 255;
-        for (uint8_t i = 0; i < 10; i++) {
+        for (uint8_t i = 0; i < sizeof(speedVals); i++) {
           uint8_t difference = (uint8_t)abs((int)speedVals[i] - (int)globalSpeed);
           if (difference < best) {
             best = difference;
@@ -1252,7 +1253,7 @@ void setup() {
   button.begin();
 
   // Known-good startup sweep
-  for (uint8_t i = 0; i < 10; i++) {
+  for (uint8_t i = 0; i < NUM_LEDS; i++) {
     leds[i] = CHSV(i * 25, 230, 210);
     FastLED.show();
     delay(18);

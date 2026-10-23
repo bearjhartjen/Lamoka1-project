@@ -505,26 +505,12 @@ check, not a behaviour check.
 source, the TI ADS7128 datasheet (SBAS868A) and the TI TMP235 data, and
 changed the firmware where the derivation did not support it. What changed:
 
-- **The DC-offset trip now reacts inside the saturation window.** The old
-  threshold (1 V) and the old evaluation point (the 100 Hz control tick) gave a
-  detection time of 46.5 ms against an 11–13 ms saturation knee — the
-  transformer saturated first, and the test that "proved" the opposite
-  (`test_detection_precedes_saturation`) was pinned to a stale 90 ms figure.
-  The threshold is now **0.5 V** and the trip is evaluated **on every RMS
-  sample** in `updateRmsAndDc()`, not in the control loop. The detection time
-  is 16.667·(0.5/X) ms plus one sample, which beats the 11/X ms saturation
-  time for every offset between 0.5 V and 10 V (1 V: 8.5 ms against 11 ms).
-  The threshold sits 5× above the worst systematic residual from the ADS7128
-  staircase (0.1 V at full modulation) and ≥10× above the sample noise.
-- **The measurement window is time-based, not sample-counted** (2026-10-22).
-  The main loop shares the I²C bus with the ADS7128, so samples arrive every
-  130–260 µs. Counting 128 of them ran the window to 21–26 ms, not one mains
-  period; the uncancelled 60 Hz fundamental reached the 0.5 V trip during soft
-  start and stopped the inverter at m ≈ 0.11 (12–13 V outlet). The window is
-  now the entries whose `micros()` timestamps fall inside 16.667 ms, with a
-  160-entry ring and a full-period arming condition. `rmsValid` means "window
-  full", not "64 samples seen". The regression test drives the real cadence
-  `(190, 215, 142, 130, 260)` µs and fails on the old count-based window.
+- **The DC-offset trip is a per-channel least-squares fit, not a window mean** (2026-10-22 revision). The old mean-based estimator differenced two held midpoint values, so the 60 Hz fundamental aliased against the ADS7128 sweep and a count-based window ran 21-26 ms; the residual false-tripped the 0.5 V check during soft start at m ~ 0.11. The estimator is now `v = DC + a*sin + b*cos` per channel over the last 16.667 ms, with the carrier phase captured at conversion start; each midpoint is sampled about every 2.1 ms on a weighted 15-step ADS sweep (12 of 15 conversions are midpoints; host-model cadence, bench to confirm). Detection is about 9.0 ms at 1 V against the 11 ms knee in the host model (margin about 2 ms); 5-10 V steps are supervisory-only. `rmsValid` means "fit valid" (4+ samples, 12.5+ ms span, conditioned matrix), and a fit older than 5 ms is dropped.
+- **Dual personality (5V vs inverter), switched by the input rail.** USB 5 V alone reads ~0 V on AIN0: 5V mode with the V1.8 toy set (Status, Fireplace, Lightsaber, Rainbow, Settings). A battery >=10.0 V flips to inverter mode (Status blue, Inverter purple, Settings amber); exit below 9.0 V or on a stale sample. Either flip disarms and returns to idle; arming is refused in 5V mode. Leaving inverter mode disarms and latches nothing; a sag that stays between 9.0 and 10.8 V latches an input-rail fault after 30 ms. Arming is refused outside 11-14 V (`ARM refused: input rail out of 11-14 V`), so a refused arm latches nothing.
+- **Silent-death detection (sim-found).** A frozen ADS7128 (answers I2C, never converts) used to misfire "DC offset" on phase-mismatched stale samples. Three identical 12-bit midpoint codes in a row while driving now faults "sensor stale" at sample time, and the DC trip stands down on a pending repeat. Host-simulated end to end.
+- **Rail hysteresis starts wide, rail fault debounced (sim-found).** A battery at exactly 11.0 V coin-flipped an instant "input rail" fault: the first evaluation was strict. The memory now starts in the wide window (a bad rail still fails it) and the fault is debounced 3 ticks. Host-simulated.
+- **Arming requires the 400 kHz bus, fresh channels and plausible temperatures.** A 100 kHz ADS7128 is detected but cannot be armed; `sensorsOk` needs a full sweep with every channel under 50 ms old plus both TMP235 inside -40..150 C. While driving, a stale channel faults ("sensor stale") and a run with no valid fit faults after 500 ms. Over-temperature and invalid-temperature are debounced 30 ms; over-voltage 20 ms. A fault always disarms; leaving the portal, the menu timeout, sleep and BOOTSEL disarm too. Arming is idempotent.
+- **Spark review fixes (2026-10-22).** A full third-party-model pass found one real bug and several robustness nits, all fixed: `enterBootsel()` now disables the watchdog before `reset_usb_boot()` (it would otherwise reset out of BOOTSEL ~500 ms later); PWM compares round instead of truncating (truncation shaved the dead-time gap to 493 ns worst case); over-current is debounced 2 ticks like the other fast trips; sensor-liveness is checked before the rail/bus comparisons so a dead bus reports "sensor stale"; current/temperature warnings re-arm after a stop; the disarmed/wrong-state fit exit zeroes the stale display values.
 - **The measurement window is cleared when the bridge starts and stops**
   (`resetMeasurementWindow()`), so a run never inherits the tail of the
   previous one — the midpoint filter's settling transient is not a DC offset.
@@ -630,8 +616,10 @@ What it confirms, and what it adds:
 - It independently confirms the **USB ESD gap**: `CC1`, `CC2` and the USB-C
   shell ground are listed as connector-facing nets with no ESD/TVS protection.
   That is the same item already listed above.
-- **11 unconnected pins**, all benign: `IC1.4` and `U5`/`U6` NC pins, the USB-C
-  shield pad, and `R9.1`. Nothing to change.
+- **11 unconnected pins**, all benign: `IC1.4` and `U5`/`U6` NC pins and the
+  USB-C `J3` shield pad (the Oct-19 Tomachie submission predates the
+  schematic fixes that connected `J3.SH` to GND and `R9.1` to 3V3; the
+  report's list is stale on those two). Nothing to change.
 - **"4 power symbols connect nothing"** is a false positive: they are the four
   `Flamingo&Cactus-logo:LOGO` graphic placements, not rails.
 - The **footprint-naming** deduction is the same IPC-7351B item as the DEV-Brain

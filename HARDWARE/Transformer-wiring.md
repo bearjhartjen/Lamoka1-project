@@ -12,7 +12,7 @@ and "Output" — because the transformer is sold to step 115 V *down* to 12 V.
 This board runs it the other way, as a step-up inverter, so the roles are
 reversed.
 
-Wiring the leads colour-for-colour gives you a board that makes about 1.9 V at
+Wiring the leads colour-for-colour gives you a board that makes about 1.5 V at
 the outlet instead of ~120 V. Build from this file instead.
 
 ## The part
@@ -92,7 +92,7 @@ must not be split across nets.
 
 **Do not match colours.** The `/BLUE` net carries the BLACK lead. Fitted
 colour-for-colour, the bridge drives the 115 V winding and the outlet gets the
-12 V winding, and the inverter makes about 1.9 V.
+12 V winding, and the inverter makes about 1.5 V.
 
 ## Nothing measures the output
 

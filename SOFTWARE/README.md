@@ -15,8 +15,10 @@ the outlet**, on a **21.75 V bus**. The board has no isolated output sense, so
 the firmware regulates a droop-compensated *estimate* of the outlet —
 `V_out = A_DROOP × V_drive_rms − B_DROOP × I_sec_est` — using the
 transformer's catalogue constants, which hold the outlet within about 3 % of
-120.0 V RMS. No unit needs to be calibrated or fitted. The power stage has
-never been energised.
+120.0 V RMS for the droop-model term alone. The sweep, the 3.3 V rail and the
+dividers add a few percent, so treat the as-built unit as about ±8 % until it
+is calibrated against a meter. No unit needs to be calibrated or fitted to run.
+The power stage has never been energised.
 
 PIE **V1.8** runs on the **Lamoka1-DEV-Brain** (ten LEDs, analog entropy). It does
 **not** run on the main Lamoka1/2 board unmodified:

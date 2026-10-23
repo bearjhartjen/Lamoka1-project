@@ -64,10 +64,10 @@ def cc_values(m):
     duty_a = (1.0 + m) * 0.5
     duty_b = (1.0 - m) * 0.5
 
-    cc_a_hi = int(duty_a * PWM_T)
-    cc_a_lo = int(duty_a * PWM_T + 2.0 * PWM_DT_TICKS)
-    cc_b_hi = int(duty_b * PWM_T)
-    cc_b_lo = int(duty_b * PWM_T + 2.0 * PWM_DT_TICKS)
+    cc_a_hi = int(duty_a * PWM_T + 0.5)
+    cc_a_lo = int(duty_a * PWM_T + 2.0 * PWM_DT_TICKS + 0.5)
+    cc_b_hi = int(duty_b * PWM_T + 0.5)
+    cc_b_lo = int(duty_b * PWM_T + 2.0 * PWM_DT_TICKS + 0.5)
 
     cc_a_lo = min(cc_a_lo, PWM_TOP)
     cc_b_lo = min(cc_b_lo, PWM_TOP)
@@ -135,14 +135,34 @@ def sine_from_table(phase):
 
 # --- The Rev C operating point ----------------------------------------------
 #
-# The drive the VPT24-6670 needs to hold 120.0 V at 100 W is 14.0556 V RMS
-# (the regulation model in tests/test_v19_model.py), and the 21.75 V bus has
-# a tolerance band of 21.1285 V to 22.3856 V.  The modulation the regulator
-# commands therefore runs from 0.888 to 0.941 across that band, against the
-# 0.959733 clamp.
-DRIVE_RMS_AT_TARGET = 14.0556
-BUS_BAND_MIN = 21.1285
-BUS_BAND_MAX = 22.3856
+# The Rev C operating point is derived from the sketch's own constants, not
+# hardcoded: if the bus, the droop or the target changes, the point follows.
+def _xfloat(name):
+    return float(
+        re.search(rf"#define\s+{name}\s+([-+]?[0-9]*\.?[0-9]+)f", SOURCE).group(1)
+    )
+
+
+_B_DROOP_OP = _xfloat("B_DROOP")
+_OUTPUT_TARGET_OP = _xfloat("OUTPUT_TARGET_RMS")
+_ratio = re.search(
+    r"#define\s+TRANSFORMER_NOLOAD_RATIO\s+\(([0-9.]+)f\s*/\s*([0-9.]+)f\)",
+    SOURCE,
+)
+_A_DROOP_OP = float(_ratio.group(1)) / float(_ratio.group(2))
+DRIVE_RMS_AT_TARGET = (_OUTPUT_TARGET_OP + _B_DROOP_OP * 100.0 / _OUTPUT_TARGET_OP) / _A_DROOP_OP
+# The bus tolerance band from the boost divider (sketch header: 1 % resistors
+# on Rfbt1/Rfbb1 and a 1.188/1.2/1.212 V reference give 21.13-22.39 V).
+# It is hardware, not a firmware window, so the test pins the band the
+# sketch's own comment states rather than recomputing resistor math.
+_band = re.search(
+    r"tolerance band is (21\.[0-9]+) V to (22\.[0-9]+) V", SOURCE
+)
+assert _band, "bus tolerance band comment missing from sketch header"
+BUS_BAND_MIN = float(_band.group(1))
+BUS_BAND_MAX = float(_band.group(2))
+assert abs(DRIVE_RMS_AT_TARGET - 14.0556) < 0.01, DRIVE_RMS_AT_TARGET
+assert abs(BUS_BAND_MIN - 21.1285) < 0.01 and abs(BUS_BAND_MAX - 22.3856) < 0.01
 SQRT2 = math.sqrt(2.0)
 
 

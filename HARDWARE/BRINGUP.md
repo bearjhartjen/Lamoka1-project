@@ -269,7 +269,7 @@ Straightforward, so there are no surprises later:
 | Symptom | Look here |
 | --- | --- |
 | No 5 V from USB | The USB-C receptacle's solder joints; the CR1/CR2 OR-ing diodes |
-| 5 V but no 3.3 V | The buck converter (U7) and its inductor; the AMS1117 (U8) and `C13` |
+| 5 V but no 3.3 V | The buck converter (U7) and its inductor; the AMS1117 (U2) and `C13` |
 | No 3.3 V, no 1.1 V | The RP2354A supply path |
 | The boost bus does not come up | The LM5122 (U4), `Rfbt1`/`Rfbb1`, and the `CSS1` soft-start capacitor |
 | The input current runs away | Disconnect and stop. That is the boost stage, not a firmware problem |

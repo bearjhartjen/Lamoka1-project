@@ -6,8 +6,11 @@
 # IPC-2221B table 6-1 column B2 (external conductors, uncoated, sea level to
 # 3050 m) asks for 1.25 mm at 151-300 V working; 1.5 mm covers that and is the
 # usual target for a 120 V mains-referenced circuit. The 11-14 V input, the
-# 17 V boost rail and the 3v3/1V1 logic rails are all far below 151 V, so the
+# 21.75 V bus and the 3v3/1V1 logic rails are all far below 151 V, so the
 # 0.18 mm default netclass clearance is correct everywhere else.
+# /PE (J5 pins 3/4, outlet earth) has no routed copper on this board; if a
+# later revision routes it, give it its own isolation rule -- the 0.18 mm
+# default is not enough for an earth fault-current path near /BLACK//RED.
 #
 # This rule is what pulls the GND pour back from the secondary. Refill the
 # zones after editing copper, or the plotted pour will not obey it.

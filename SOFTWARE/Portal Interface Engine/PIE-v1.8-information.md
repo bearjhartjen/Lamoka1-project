@@ -80,7 +80,9 @@ The main menu contains six positions:
 
 The first four menu positions use the cactus-green menu color. Games is orange and Settings is blue.
 
-The currently selected position is displayed in **hot pink** and uses a breathing brightness animation. This makes the cursor visually distinct from the menu items.
+The currently selected position is displayed in steady **hot pink** — no pulse,
+no hue variation. A drifting pink reads as a system bug, so selection never
+modulates. This makes the cursor visually distinct from the menu items.
 
 A tap moves forward through the menu, while a double tap moves backward. A hold selects the highlighted item.
 

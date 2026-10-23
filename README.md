@@ -124,11 +124,8 @@ the [Code of Conduct](CODE_OF_CONDUCT.md), and security reports go through
 # Clone the repository
 git clone https://github.com/bearjhartjen/Lamoka1-project.git
 cd Lamoka1-project
-
-# Open the main board (Lamoka1/2) in KiCad 10
-kicad "HARDWARE/Kicadfiles/Lamoka1-half/Lamoka1-half.kicad_pro"
 ```
-Paste the commands above into your terminal to open up and edit our files 
+Paste the commands above into your terminal to download this full repository to your computers Home folder, running this command should also open Kicad with this project so you can modify or view the Lamoka1/2. 
 
 ## Licensing
 

@@ -1,11 +1,15 @@
 ## Lamoka1/2 — PIE Version V1.9
 
 The **Lamoka1/2 PIE Version V1.9** is the first Portal Interface Engine release that runs
-on the main Lamoka1/2 board. It keeps the complete five-LED user interface from V1.8 and
-adds the H-bridge power stage: the LM5122 boost is left to run in hardware, while the
-RP2354A generates the four gate-driver PWM signals, reads the ADS7128 monitor chain, and
-runs the inverter's control and protection loops. V1.9 is **not** DEV-Brain firmware and
-does not run unmodified on the Lamoka1-DEV-Brain.
+on the main Lamoka1/2 board. It has two personalities, switched automatically by the
+measured input rail: on USB 5 V alone (rail ~0 V) it is the V1.8 toy set on five LEDs
+(Status, Fireplace, Lightsaber, Rainbow, Settings); with a battery on the rail
+(>=10 V) the toy modes are replaced by the Inverter portal and the home menu becomes
+Status, Inverter, Settings. The H-bridge power stage only exists in inverter mode:
+the LM5122 boost is left to run in hardware, while the RP2354A generates the four
+gate-driver PWM signals, reads the ADS7128 monitor chain, and runs the inverter's
+control and protection loops. V1.9 is **not** DEV-Brain firmware and does not run
+unmodified on the Lamoka1-DEV-Brain.
 
 The firmware is written in Arduino C++ using the **FastLED** library for LED output,
 the Raspberry Pi Pico SDK (`hardware/pwm`, `hardware/adc`, `hardware/watchdog`) for the
@@ -59,38 +63,44 @@ as a selection gesture.
 
 ### User Interface State Machine
 
-V1.9 is organised around ten UI states:
+V1.9 is organised around eight UI states:
 
-* **Mode** — normal lighting operation
+* **Mode** — status display (the only lighting mode fitted)
 * **Main Menu**
-* **Games Menu**
 * **Settings Menu**
 * **Brightness**
 * **Speed**
 * **Info**
 * **Inverter** (new in V1.9 — the power-stage portal)
-* **In Game**
 * **Sleep**
 
-Menus remember their previous cursor positions, so returning to Games or Settings does
+The settings menu remembers its cursor position, so returning to Settings does
 not reset the cursor.
 
 ### Main Menu
 
-The main menu contains seven positions:
+The main menu depends on the power mode.
+
+Inverter mode (battery on the rail) has three positions, each with its own
+colour in D1–D3 order:
+
+1. **Status** — blue
+2. **Inverter** — purple
+3. **Settings** — yellow-orange
+
+5V mode (USB power alone) has five positions in V1.8 colours:
 
 1. **Status**
 2. **Fireplace**
 3. **Lightsaber**
 4. **Rainbow**
-5. **Inverter**
-6. **Games**
-7. **Settings**
+5. **Settings**
 
-Positions 0–4 use the cactus-green menu colour, Games is orange and Settings is blue.
-The selected position is displayed in **hot pink** with a breathing brightness
-animation. A tap moves forward, a double tap moves backward, a hold selects, and a
-long hold returns to the default idle state. With seven items on five LEDs the menu
+Positions 0–3 use the cactus-green menu colour and Settings is blue.
+The selected position is displayed in steady **hot pink** — no pulse, no hue
+variation. (The DEV-Brain cursor was seen drifting toward near-white, which
+reads as a system bug; on this board selection must never look like a fault.) A tap moves forward, a double tap moves backward, a hold selects, and a
+long hold returns to the default idle state. Neither menu needs scrolling on five LEDs
 window scrolls so the cursor is always visible.
 
 ### Default Status Mode
@@ -99,26 +109,6 @@ The default idle display is a **blue bouncing ball** moving across the five LEDs
 with two trailing LEDs for a short blue trail. The movement rate is affected by the
 global speed setting. Status mode is selected automatically at startup and on return
 from shutdown, menu timeout, or the appropriate long-hold action.
-
-### Fireplace Mode
-
-Unchanged from V1.8 in behaviour, scaled to five LEDs: a 5-element heat model with
-cooling, source injection, neighbour injection, diffusion, rising heat, random flame
-licks, high sparks, base glow, noise modulation and flare effects. Colour progresses
-dark red → red → orange → yellow → white-hot. A tap flares; a double tap flares
-harder and re-targets the source.
-
-### Lightsaber Mode
-
-Unchanged from V1.8, scaled to five LEDs: a coloured blade that extends outward,
-with random hue (never the same as the previous launch), saturation, pattern and
-instability; a white core blend; an ignition flash on LED 0 for the first 170 ms; tap
-to stop/relaunch, double tap to relaunch, hold for a clash effect.
-
-### Rainbow Mode
-
-Unchanged from V1.8, scaled to five LEDs: `fill_rainbow()` across the five LEDs, ten
-tap-cycled speeds, double tap to reverse direction, randomised starting hue on entry.
 
 ### Inverter Portal (new in V1.9)
 
@@ -137,24 +127,59 @@ the five LEDs and is the only place the bridge can be armed or disarmed:
 Gestures in the Inverter portal:
 
 * **Hold** — if a fault is latched, clear it (over-faults are refused); otherwise
-  arm (sensors required) or disarm.
+  arm (sensors required, inverter mode only) or disarm.
 * **Double tap** — clear a non-over fault.
-* **Long hold** — return to the home menu (cursor stays on Inverter).
+* **Long hold** — disarm, then return to the home menu (cursor stays on Inverter).
 * **Tap** — no action (status display only). The portal is treated as a non-menu
   for gesture synthesis, so a tap here is delayed by the 380 ms double-tap window;
   this is what produces the double-tap fault clear.
 
 The bridge is **never energised without an explicit arm action**. A valid voltage
-reading is not treated as permission to switch. Sleep mode and BOOTSEL entry both
-disarm the bridge before acting.
+reading is not treated as permission to switch. Idle means disarmed: leaving the
+portal, the menu timeout, sleep mode and BOOTSEL entry all disarm the bridge
+before acting. The only exception is a latched fault, where the state stays
+`FAULT` until it is cleared or the MCU is reset.
 
-### Fireball Game
+### Power modes (5V vs inverter)
 
-Unchanged from V1.8, scaled to five LEDs: the fireball starts at LED 4 and travels
-toward LED 0 (the target). Three lives, 115 ms movement interval, 10 ms speed-up per
-catch, 30 ms minimum. The score is displayed as a 5-bit binary value (maximum 31) on
-the five LEDs. A tap catches when the fireball is on LED 0; a long hold exits to the
-Games menu.
+The board has two personalities, switched automatically by the measured input
+rail. USB 5 V alone runs the MCU, the LEDs and the ADS7128, but the rail reads
+~0 V: that is **5V mode** (Status, Fireplace, Lightsaber, Rainbow, Settings —
+the V1.8 toy set in V1.8 colours). A battery on the rail flips the board into
+**inverter mode** (Status blue, Inverter purple, Settings amber), where the toy
+modes are replaced by the Inverter portal.
+
+The flip has hysteresis. Entering inverter mode needs 10.0 V or more on a fresh
+AIN0 sample. Leaving it needs AIN0 below 9.0 V, or no AIN0 reading for 0.5 s
+(`RAIL_MODE_STALE_US`). The 0.5 s bound is looser than the 50 ms sensor limit on
+purpose: a loop stall such as the 120 ms very-long-hold flash cannot flip the
+mode. At boot, before the first sweep, the board is in 5V mode, which is the
+safe side. Either flip disarms the bridge and returns to idle, because the home
+menu has a different item count per mode and no cursor survives it. A flip
+while asleep changes the mode but does not wake the board.
+
+A battery removed or drained below 9.0 V is not a fault: the bridge disarms and
+nothing latches, so re-inserting the battery needs no fault clear. A sag that
+stays between 9.0 V and 10.8 V while armed latches an input-rail fault after
+30 ms; clear it from the Inverter portal.
+
+Arming is refused in 5V mode (`ARM refused: no battery (5V mode)`); the
+Inverter portal is unreachable there. The one-second serial report carries
+`MODE=5V` or `MODE=INV`.
+
+### Lighting modes (5V mode only)
+
+Fireplace, Lightsaber and Rainbow behave as in V1.8, scaled to five LEDs:
+a 5-element heat model with flares, a hue-guaranteed-different blade with
+patterns and clash, and `fill_rainbow()` with ten tap-cycled speeds. They are
+only offered while no battery is on the input rail; a battery replaces them with
+the Inverter portal. As in V1.8, the fire's source stays off the top LED, which
+is reserved for sparks: the source and the fire's targets both stay on LEDs 1-3.
+
+### Games
+
+There are none anywhere in V1.9: no Fireball game, no Games menu. (V1.8 on the
+DEV-Brain keeps them.)
 
 ### Settings Menu
 
@@ -181,11 +206,15 @@ Inverter portal.
 
 ### Entropy and Randomness
 
-V1.9 uses the RP2354A's hardware TRNG (`get_rand_64()`) instead of the analog
-channels (which are TMP235 sensors on this board). An `EntropyService` mixes the
-hardware value with `micros()` using XOR and shifts, providing 32-bit, 8-bit, ranged
-and boolean random values. It is initialised with **300 mixing operations** and
-updated every loop iteration.
+V1.9 uses the RP2354A's hardware TRNG (`get_rand_64()`); the TMP235 analog
+channels are temperature sensors, not entropy sources. An `EntropyService`
+mixes the hardware value with `micros()` (300 mixing operations at init,
+updated every loop) and provides 32-bit, 8-bit, ranged and boolean values.
+
+Entropy stays in the 5V lighting modes only — fireplace flames, lightsaber
+hue and flicker, rainbow start hue. It never touches selection (the cursor is
+a fixed hot pink) and never touches the power stage: no protection threshold,
+trip, measurement or modulation value reads the entropy service.
 
 ### Menu Timeout
 
@@ -200,12 +229,15 @@ A 2.8 s hold disarms the bridge first, then fills all five LEDs with hot pink fo
 ### Shutdown Mode
 
 Software sleep: LEDs cleared, brightness zero, wait for button release, then wake on
-a 1.5 s hold, restoring brightness and Status mode. The bridge is disarmed on entry.
+a 1.5 s hold, restoring brightness and Status mode. The bridge is disarmed on entry. The loop is not throttled while asleep, so the
+input sensors keep sweeping and a battery arriving during sleep is noticed; the
+power mode changes, but only the 1.5 s hold wakes the board.
 
 ### USB BOOTSEL Mode
 
-Clears the LEDs, waits 40 ms, and calls `reset_usb_boot(0, 0)`. The bridge is
-disarmed first.
+Clears the LEDs, waits 40 ms, disables the hardware watchdog (otherwise it
+would reset the chip out of BOOTSEL ~500 ms later), and calls
+`reset_usb_boot(0, 0)`. The bridge is disarmed first.
 
 ### Startup Sequence
 
@@ -213,14 +245,17 @@ disarmed first.
    anything else.
 2. FastLED is initialised for the five WS2812B LEDs; dither disabled; brightness
    applied; LEDs cleared.
-3. The entropy and button services are initialised.
+3. The entropy and button services are initialised (entropy feeds the 5V toy modes only).
 4. A short startup sweep across all five LEDs (HSV hues, 18 ms per LED), feeding
    the watchdog after each step, then a 70 ms delay with a final watchdog feed.
 5. The interface enters the default Status mode.
 
-The ADS7128 is probed at 400 kHz (falling back to 100 kHz) with the I²C timeout
-capped at 2 ms so a stuck bus cannot block the loop; a missing chip is reported
-on Serial and disables arming but does not latch a fault.
+The ADS7128 is probed at 400 kHz first. A chip that answers only at 100 kHz is
+detected and reported (`WARN: ADS7128 only at 100 kHz; arming disabled`), but the
+bridge cannot be armed on that bus; the 400 kHz probe is retried every 500 ms
+while the bridge is disarmed. The I²C timeout is capped at 2 ms so a stuck bus
+cannot block the loop. A missing chip is reported on Serial and disables arming
+but does not latch a fault.
 
 ### Main Program Loop
 
@@ -316,7 +351,7 @@ so the total without a per-unit calibration is about **±8 %**, not ±3 %. A
 meter on the outlet is the only way to know the real voltage, and a per-unit
 calibration is the only way to tighten it.
 
-The estimate of the output *power* is about 10 % high (`ETA_BUCK_HBRIDGE`
+The estimate of the output *power* is about 12 % high (`ETA_BUCK_HBRIDGE`
 assumes 0.92 for the whole chain where the transformer alone is 0.89); that
 error is proportional to the load, so it lands in the same place as the droop
 error and needs no separate correction.
@@ -361,8 +396,9 @@ clock), up-counting mode. Before enabling, the counters are phased:
 * slice 2 CTR = +2·dt (150 ticks)
 
 with `dt = 75` ticks = 500 ns. The inverted-channel compares are delayed by
-`2·dt`. Combined with the phase offsets this gives each leg a **500 ns gap on
-both edges** for any duty in the allowed band, which is why `|m|` is clamped to
+`2·dt` and rounded to whole ticks (truncation would shave up to a tick off the
+programmed gap). Combined with the phase offsets this gives each leg a **500 ns
+gap on both edges** for any duty in the allowed band, which is why `|m|` is clamped to
 `PWM_M_MAX ≈ 0.9597`. The host-side model `tests/test_v19_pwm.py` confirms zero
 overlap and ≥ 500 ns gaps for both legs across the full modulation range,
 including the extremes; `tests/test_v19_pwm_waveform.py` re-derives the same
@@ -429,6 +465,21 @@ step, keeping the duty inside the dead-time band.
 #### Arming and state machine
 
 The bridge is disarmed at boot and can only be armed from the Inverter portal.
+An arm request is accepted only when **all** of the following are true:
+
+* no fault is latched;
+* the input rail reads inside 11–14 V (otherwise the arm is refused);
+* the ADS7128 answered a probe made at **400 kHz**;
+* a full weighted sweep of all five ADS7128 channels has completed, and every
+  channel is fresh (less than 50 ms old);
+* both TMP235 readings are inside their −40…150 °C specified range.
+
+Otherwise the request is refused with `ARM refused: fault latched`,
+`ARM refused: no sensors`, `ARM refused: I2C not at 400 kHz` or
+`ARM refused: sensors not ready` or `ARM refused: input rail out of 11-14 V`.
+Arming is **idempotent**: a second arm request
+does not reset the state machine, so it cannot stop a running bridge.
+
 Once armed it sequences automatically:
 
 `POWER_IDLE` → (sensors valid and input rail in range) → `POWER_WAIT_BUS`
@@ -438,31 +489,50 @@ toward 120.0 V RMS at the outlet).
 
 While running, the bus must stay within 21.75 ± 1.5 V; up to three consecutive
 out-of-range control ticks (30 ms) are tolerated before the fault latches, so a
-single load-dump excursion does not stop the inverter. While disarmed and not
-faulted, the ADS7128 probe is retried every 500 ms, so a recovered chip is picked
-up without a reset. Clearing a fault forces a fresh probe and a full five-channel
-sweep.
+single load-dump excursion does not stop the inverter. The grace counter, the
+input-rail hysteresis and every debounce counter are file-scope state cleared by
+`startBridge()` and `stopBridge()`; a new run never inherits them from the
+previous one.
 
-Disarming at any time parks the gates low and returns to `POWER_IDLE`. Sleep mode
-and BOOTSEL entry disarm first.
+While disarmed and not faulted, the ADS7128 probe is retried every 500 ms — the
+400 kHz probe first, every time — so a recovered chip is picked up without a
+reset. Clearing a fault forces a fresh 400 kHz probe and a full five-channel
+sweep, and clears the clock flag so the high-speed bus has to be proved again
+before the next arm.
+
+Disarming at any time parks the gates low and returns to `POWER_IDLE`. Disarm is
+idempotent too. A fault always clears the armed flag before it parks, so `FAULT`
+and `ARMED=Y` can never both be true. Sleep mode, BOOTSEL entry, the 16 s menu
+timeout and leaving the Inverter portal all disarm first.
 
 #### Protections
 
 Evaluated only while armed; the bridge is inhibited (not faulted) when sensors are
 absent:
 
-* Over-current: input current ≥ 20 A (warning at 15 A).
+* Over-current: input current ≥ 20 A for 2 consecutive control ticks (20 ms),
+  so a single noisy INA240 sample cannot stop the inverter (warning at 15 A).
 * Over-temperature: either TMP235 ≥ 85 °C (warning at 60 °C).
-* Input rail out of 11–14 V (±0.2 V hysteresis).
+* Input rail out of 11–14 V (±0.2 V hysteresis, debounced 30 ms like the
+  other trips). The hysteresis memory starts in the wide window: a strict
+  first sample at exactly 11.0 V plus a millivolt of noise would coin-flip an
+  instant fault on a good battery, while a truly bad rail fails even the wide
+  window — so the wide start loses nothing.
 * Bus voltage out of 21.75 ± 1.5 V while running (the start window is ±0.90 V).
-* Output over-voltage: estimated outlet > 126.0 V RMS (120.0 V × 1.05). The hard
-  ceiling is `OUTLET_V_MAX` = 125 V, the NEMA 5-15R receptacle rating; this
-  trip is the backstop above it.
+* Output over-voltage: estimated outlet > 126.0 V RMS (120.0 V × 1.05), debounced
+  over 2 consecutive control ticks (20 ms) — one tick rejects a single fit
+  outlier, twenty milliseconds still keeps the drive inside the receptacle
+  rating. The hard ceiling is `OUTLET_V_MAX` = 125 V, the NEMA 5-15R
+  receptacle rating; this trip is the backstop above it.
 * Output out of reach: the regulator is pinned at the PWM clamp
   (`PWM_M_MAX` = 0.959733) and the estimated outlet is still more than 0.5 V
-  below the target, for 20 consecutive control ticks (200 ms). The check comes
-  first so that no other fault masks it, and it is debounced because the
-  integrator needs about 100 ms to walk into the clamp after a load step. Only
+  below the target, for 20 consecutive control ticks (200 ms). It is
+  evaluated before the load limit below, and neither the overvoltage check
+  (which needs the estimate above 126 V, the opposite of below-target) nor
+  the bridge-missing check (which needs the measured drive far below the
+  commanded drive, where this needs it tracking the clamp) can mask it; it
+  is debounced because the integrator needs about 100 ms to walk into the
+  clamp after a load step. Only
   the PWM clamp counts: the drive ceiling also carries the `OUTLET_V_MAX`
   receptacle limit, which binds at low load, and sitting at that ceiling is
   correct behaviour rather than a failure.
@@ -477,55 +547,54 @@ absent:
   output stays below 60 % of it for 5 consecutive 100 Hz ticks, the fault
   `bridge output missing` latches. This monitors the bridge midpoints, not the
   outlet: an open transformer secondary is invisible to these dividers.
-* DC offset on the primary > 0.5 V for 2 consecutive RMS samples (one sample
-  interval, 130–260 µs). The trip is evaluated on **every** RMS sample, not on
-  the 100 Hz control tick, because it has to react inside the saturation
-  window. The transformer's flux budget puts it at its saturation knee
+* DC offset on the primary > 0.5 V for 2 consecutive least-squares estimates (a new estimate about every millisecond; see Measurements). The trip is evaluated on **every** new fit in `updateRmsAndDc()`, not on the 100 Hz control tick, because it has to react inside the saturation window. The transformer's flux budget puts it at its saturation knee
   11–13 ms after a 1 V offset appears — a flux budget of about 0.011 V·s, so
   the knee for an offset X is 11/X ms. The DC estimate is the mean of a
   one-mains-cycle window **measured in time** (16.667 ms; that window is what
   rejects the 60 Hz fundamental), and after a step of X it only reaches the
   0.5 V threshold once a fraction 0.5/X of the window has been filled with the
-  offset, so the detection takes 16.667·(0.5/X) ms plus one sample:
+  offset, so the detection takes roughly 16.667·(0.5/X) ms plus a few estimate intervals.
+The table gives the measured figures; the simple formula is only an
+approximation, because the fit weights the samples:
 
   | offset | detection | saturation |
   | --- | --- | --- |
-  | 0.5 V | 16.9 ms | 22.0 ms |
-  | 1.0 V | 8.5 ms | 11.0 ms |
-  | 2.0 V | 4.4 ms | 5.5 ms |
+  | 0.5 V | 15.7 ms | 22.0 ms |
+  | 1.0 V | 9.0 ms | 11.0 ms |
+  | 2.0 V | 3.2 ms | 5.5 ms |
 
-  The detection therefore beats saturation for every offset between 0.5 V and
-  10 V, and an offset below 0.5 V never saturates the transformer at all. The
-  sample noise on the estimate is about 0.01 V, but the systematic residual
-  from the ADS7128 staircase is larger — about 0.1 V at full modulation — so
-  the threshold sits about 5× above the worst residual, not 50×. With the
-  previous 1.0 V threshold and a 100 Hz trip the detection took 46.5 ms against
-  an 11–13 ms knee — the transformer saturated first, which is why both the
-  threshold and the evaluation point changed.
+  These are host-model figures from the simulator, which runs the firmware's own
+  sweep with an I2C timing model. The bench must confirm the real figures.
 
-  The window is time-based because the main loop shares the I²C bus with the
-  ADS7128: the sample interval is 130–260 µs, not a fixed 130 µs. Counting
-  128 samples therefore ran the window out to 21–26 ms, a whole number of
-  mains cycles plus a fraction, which leaves a 60 Hz residual of up to 4 V at
-  full modulation. That residual false-tripped the 0.5 V check 0.5–0.6 s into
-  soft start, at m ≈ 0.11 and an outlet of 12–13 V. The window is now the
-  samples whose timestamps fall inside 16.667 ms, and it is armed only when
-  the next older sample would fall outside it.
+  A 1 V step at full modulation therefore trips at about 9.0 ms against an
+  11 ms knee -- roughly 2 ms of margin in the host model, checked in
+  `tests/test_v19_protection_latency.py` against an independent fit, not the
+  sketch's own code. A 5 V or 10 V step saturates in 2.2 ms or 1.1 ms, faster
+  than any windowed 60 Hz estimate can resolve; those are supervisory-only,
+  and the hardware has to survive them. The same applies to an offset already
+  present at start-up: it is caught during the soft start, where the
+  modulation (and the AC flux) is still low and the offset has more flux
+  margin -- not at full modulation.
 
-  The trip is armed only once the measurement window is **full**. A part-full
-  window is shorter than a mains cycle, so the 60 Hz fundamental does not
-  cancel in it: in a 12.5 ms window its mean can be 0.79 V, above the trip
-  threshold, and the trip would fire on every start-up. At the full 16.667 ms
-  window the same figure is under 0.01 V. The consequence is that an offset
-  which appears **during** a run is caught 8.5 ms after it appears — inside
-  the saturation window — while an offset that is already there when the
-  bridge starts is not caught until the window has filled (16.667 ms) and
-  then filled with the offset (a further 8.3 ms at 1 V), i.e. at about 25 ms,
-  after the 11–13 ms knee. Catching that case faster needs a phase reference
-  for the 60 Hz fundamental, which this measurement chain does not have; it is
-  a recorded limitation, not a solved problem.
-* ADS7128 communication failure while armed (NACK, conversion timeout, or read
-  error).
+  The fit's DC noise is about 0.1 V at full modulation (the 20 kHz carrier
+  aliases into the 339 Hz midpoint filters), so the 0.5 V threshold sits
+  about 5x above the noise, and two consecutive estimates make a false trip
+  unlikely without slowing the resolvable cases.
+
+  The window is inherently least-squares, not a mean: AIN2 and AIN3 are
+  sampled at different instants and held until the next sweep, so differencing
+  the held values gives a staircase whose 60 Hz content aliases against the
+  sweep. The old count-based window made this concrete: counting 128 samples
+  ran 21-26 ms, not one mains period, and the uncancelled fundamental put up
+  to 4 V of false DC into the estimate and stopped the inverter at m ~ 0.11
+  during soft start. A plain mean over the same samples cannot be fixed by
+  counting in time instead -- it still sees the staircase. The per-channel fit
+  removes the fundamental exactly, on any span of 12.5 ms or more, because
+  each sample carries the carrier phase its conversion started at.
+* Sensor stale: checked before the rail/bus comparisons so a dead bus is attributed to the sensor; while driving, any ADS7128 channel older than 50 ms faults the bridge. A chip whose ADC has stopped but whose I2C still answers is caught a second way: three identical 12-bit codes in a row on either midpoint while the bridge is switching means the data is dead (a healthy switching bridge moves the code by more than a hundred LSB between consecutive samples, even at the peak of the 60 Hz swing). The DC-offset trip stands down while a repeat is pending, so the stale samples cannot misname the fault as a DC offset first. A chip that stops converting without NACKing would otherwise leave the protections comparing frozen data.
+* No drive measurement: the fit is allowed to be invalid for the milliseconds it takes to fill at the start of a run, but a run that never regains one faults after 500 ms -- without it the DC, over-voltage and bridge-plausibility checks are all blind at once.
+* Temperature sensor invalid: either TMP235 outside its -40...150 C specified range (an open or shorted sensor, not a temperature), debounced 30 ms. Over-temperature itself (>= 85 C on either sensor) is debounced 30 ms too; a converter glitch is shorter than that, a real thermal event is far longer.
+* ADS7128 communication failure while armed (NACK or read error; every failure path goes through one `adsFail()` so the presence flag, the 400 kHz flag and the sweep state can never drift apart).
 
 Over-current and over-temperature faults are latched and require an MCU reset.
 Any other fault can be cleared from the Inverter portal (double tap or hold),
@@ -534,71 +603,76 @@ recovery does not need an MCU reset.
 
 #### Measurements
 
-The ADS7128 (7-bit address `0x10`, ADDR open) is scanned in round-robin across
-five channels (AIN0 input rail, AIN1 21.75 V bus, AIN2/AIN3 bridge midpoints,
-AIN4 INA240 current at 0.1 V/A), with conversions throttled to one per 200 µs.
-Each channel costs five I²C transactions, so a full sweep takes about 3.7 ms
-and each channel updates at roughly **270 Hz** — about 4.5 samples per mains
-cycle. The I²C timeout is capped at 2 ms so a stuck bus cannot block the loop
-for the default 1000 ms. The bridge-midpoint differential is accumulated into a
-160-entry ring with a `micros()` timestamp, sampled at a minimum 130 µs
-cadence; the RMS and DC estimates are computed over the entries that fall
-inside **16.667 ms** — one mains period measured in time, not a fixed sample
-count. The ring is cleared when the bridge starts and when it stops, so a run
-never inherits the tail of the previous one.
+The ADS7128 (7-bit address `0x10`, ADDR open) is scanned on a 15-step weighted
+schedule: 12 of the 15 conversions are the two bridge midpoints (AIN2/AIN3),
+and the slow channels (AIN0 input rail, AIN1 21.75 V bus, AIN4 INA240 current
+at 0.1 V/A) are each read once per sequence. In the host I2C model (400 kHz,
+the firmware's own transaction sequence) a conversion costs about 0.84 ms, so a
+sequence takes about 12.6 ms, each slow channel is sampled about every 12.6 ms,
+and each midpoint about every 2.1 ms (about every millisecond combined, since
+the two midpoints alternate). These are model numbers, not silicon
+measurements; the bench must measure them. A plain five-channel round-robin
+gave the midpoints only 270 Hz and made the DC estimate need a full cycle of
+held values; the weighted sweep gives each midpoint a fresh sample every ~2 ms.
+The I2C
+timeout is capped at 2 ms so a stuck bus cannot block the loop for the default
+1000 ms.
 
-The window is time-based because the loop cadence is not fixed: the main loop
-shares the I²C bus with the ADS7128, so samples arrive every 130–260 µs. A
-count-based 128-sample window therefore ran 21–26 ms — not a whole number of
-mains cycles — and the uncancelled 60 Hz fundamental false-tripped the 0.5 V DC
-check during soft start. The window is armed only when the next older sample
-would fall outside the period.
+Each midpoint channel keeps its own 32-entry ring of `(time, volts, sin, cos)`
+samples, with the 60 Hz carrier phase captured when the conversion *started*
+(the conversion is ~2 us but the I2C frame around it is hundreds of
+microseconds). `updateRmsAndDc()` fits each ring separately to
+`v = DC + a*sin + b*cos` over the last 16.667 ms and differences the two DC
+intercepts (the DC estimate) and the two fundamentals (the drive RMS). The fit
+needs at least 4 samples spanning at least 12.5 ms of phase, and its normal
+matrix must be well conditioned; otherwise it reports invalid and the run
+counts toward the 500 ms "no drive measurement" fault. A fit older than 5 ms
+with no new sample is dropped rather than trusted. Both rings are cleared when
+the bridge starts and when it stops, so a run never inherits the tail of the
+previous one.
 
-The RMS accuracy is limited by the sweep, not by the window: with 4.5 samples
-per cycle the staircase of held midpoint values gives a modelled RMS error of
-about **3–6 %**, and it is a bias rather than noise. The loop regulates the
-measured value, so that bias lands on the outlet: without calibration the unit
-runs a few percent high, and the droop model's ±3 % does not cancel it. Reading
-all five channels in auto-sequence mode (one block read per sweep, well under
-1 ms) would remove it. That change is not in this firmware and needs a bench
-check against silicon.
+The same 16.667 ms window is what rejects the 60 Hz fundamental from the DC
+estimate -- but by least squares, not by averaging: a one-cycle mean only
+cancels a sinusoid sampled uniformly, while the held midpoint staircase
+aliases against the sweep and can leave volts of false DC in the mean. The fit
+removes the fundamental exactly on any span of 12.5 ms or more, which is why
+the window cannot simply be shortened to make the DC trip faster.
 
-The same one-cycle window is what rejects the 60 Hz fundamental from the DC
-estimate — a one-cycle mean of a sinusoid is zero — and that is why the window
-cannot simply be shortened to make the DC trip faster.
+A full weighted sweep completes only when every channel has been seen at least
+once (`adsSeenMask`); `sensorsOk` additionally requires the 400 kHz bus, every
+channel fresh within 50 ms, and both temperatures plausible. While driving, the
+same freshness is re-checked every control tick and a stale channel faults.
 
 The driver clears `OSR_DONE` with a **plain register write**, not with the
 "set bit" opcode: `OSR_DONE` is a write-1-to-clear bit (datasheet Table 12),
 and the set-bit opcode is documented to *set* bits (datasheet §8.5.2.2). If
-`OSR_DONE` does not assert within 200 µs — which is a hundred times the
-conversion time — the driver does not fault: it reads the result, which is
+`OSR_DONE` does not assert within 200 µs -- which is a hundred times the
+conversion time -- the driver does not fault: it reads the result, which is
 long since ready, and prints `WARN: ADS7128 OSR_DONE did not assert` once.
 This matters because with the averaging filter disabled (`OSR_CFG` = 0, the
 reset value, which the datasheet defines as "No averaging") the bit is
 documented as the *averaging* status and may never assert at all. A genuinely
 dead chip is still caught: the result read fails and raises `ADS7128 read`.
 
-Dividers: AIN0 ×0.2151, AIN1 ×0.1282, AIN2/3 ×0.1282. `R27`, `R29` and `R31`
+Dividers: AIN0 x0.2151, AIN1 x0.1282, AIN2/3 x0.1282. `R27`, `R29` and `R31`
 are all 68 kΩ against 10 kΩ bottoms, so every one of them has a 25.74 V full
-scale; the bus sits at 2.79 V, well below the 3.3 V clip. (The old 43.2 kΩ bus
-divider clipped at 17.56 V and the old 45.3 kΩ midpoint dividers at 18.25 V —
-both below the 21.75 V bus, which is why they are 68 kΩ now.)
+scale; the bus sits at 2.79 V, well below the 3.3 V clip.
 
 The drive RMS is measured from the bridge midpoint differential and the outlet
-is **estimated**, not measured: `V_out_est = A_DROOP × V_drive_rms −
-B_DROOP × I_sec_est` with `A_DROOP` = 8.8735 and `B_DROOP` = 5.666 Ω — the
+is **estimated**, not measured: `V_out_est = A_DROOP x V_drive_rms -
+B_DROOP x I_sec_est` with `A_DROOP` = 8.8735 and `B_DROOP` = 5.666 ohm -- the
 transformer's catalogue values, used as they come, with no per-unit fitting.
 See "How the outlet is regulated" above for the ±3 % bound. Regulation gain:
 0.0003 per 10 ms tick per volt of error, with the amplitude step slew-limited
 to 0.010 per tick. The drive the target needs at a given load is
-`m = (V_target + B_DROOP × I_sec) × √2 / (A_DROOP × V_bus)`: 120 V needs
+`m = (V_target + B_DROOP x I_sec) x sqrt(2) / (A_DROOP x V_bus)`: 120 V needs
 m = 0.879 at no load, 0.897 at 50 W and 0.914 at 100 W on a nominal 21.75 V
-bus, and 0.941 at 100 W at the bottom of the bus band — about 2 % of headroom
+bus, and 0.941 at 100 W at the bottom of the bus band -- about 2 % of headroom
 against the 0.959733 clamp, and only for a transformer that regulates 8 %.
 
 > [!WARNING]
 > The output-voltage, output-missing and DC-offset checks are **supervisory**, not
-> fast protection: the ADS7128 sweep is about 3.7 ms and the control loop runs at
+> fast protection: the ADS7128 sweep is millisecond-scale and the control loop runs at
 > 100 Hz. Final protection against fast faults is the LM5122's hardware current
 > limit. Do not rely on this firmware as the sole protection.
 
@@ -615,10 +689,10 @@ pull-downs bring the gates low.
 one-second report prints
 
 ```
-<STATE> ARMED=<Y/N> SENS=<Y/N> VIN=.. VBUS=.. VOUT=.. VPRI=.. POUT=.. ISEC=.. UNSUP=.. IIN=.. Tctrl=.. Tinv=.. m=.. MMAX=.. MREQ=.. DLIM=.. SAT=.. CLAMP=..
+<STATE> ARMED=<Y/N> SENS=<Y/N> MODE=.. I2C=.. VIN=.. VBUS=.. VOUT=.. VPRI=.. VDC=.. RMSV=.. POUT=.. ISEC=.. UNSUP=.. IIN=.. Tctrl=.. Tinv=.. m=.. MMAX=.. MREQ=.. DLIM=.. SAT=.. CLAMP=..
 ```
 
-with the modulation index at three decimals. `VOUT` is the droop-compensated
+with the modulation index at three decimals. The wire tokens are `I2C=` (the bus the ADS7128 answered on: 400, 100, or 0), `VDC=` (the differential DC intercept in volts), `RMSV=` (1 while the fit is valid, 0 otherwise); `VOUT` is the droop-compensated
 **estimate** of the outlet, `VPRI` the measured 12 V drive winding RMS, `POUT`
 the estimated output power, `ISEC` the estimated 115 V winding current,
 `UNSUP` the "drive cannot support the load" flag, `MMAX` the PWM clamp,
@@ -627,9 +701,10 @@ the ceiling the regulator is held to, `SAT` the "regulator pinned at that
 ceiling" flag and `CLAMP` the "that ceiling is the PWM clamp" flag. The last
 six are what the bring-up procedure reads to see how much modulation margin is
 left. Faults print `FAULT: <reason>`, warnings `WARN: input current` /
-`WARN: temperature` / `WARN: ADS7128 OSR_DONE did not assert`, and arming prints
+`WARN: temperature` / `WARN: ADS7128 OSR_DONE did not assert` / `WARN: ADS7128 only at 100 kHz; arming disabled` (current and temperature warnings re-print after a stop or fault clear while the condition persists), and arming prints
 `ARMED` / `DISARMED` (or `ARM refused: fault latched` / `ARM refused: no
-sensors`). A cleared fault prints `Fault cleared (disarmed)`; clearing an
+sensors` / `ARM refused: I2C not at 400 kHz` / `ARM refused: sensors not ready` / `ARM refused: no battery (5V mode)` / `ARM refused: input rail out of 11-14 V`).
+A cleared fault prints `Fault cleared (disarmed)`; clearing an
 over-fault is refused with `CLEAR ignored: over-fault latched`.
 
 ### V1.9 Overall
@@ -639,11 +714,12 @@ power stage:
 
 * Five individually controlled WS2812B RGB LEDs
 * Single multi-gesture button interface (five gestures)
-* Persistent menu cursors and a seven-item home menu
-* Four lighting modes (Status, Fireplace, Lightsaber, Rainbow) plus the Fireball game
+* Persistent menu cursors and a mode-dependent home menu (three items in
+  inverter mode, five in 5V mode)
+* Status display plus the V1.8 toy modes in 5V mode; Inverter portal instead
+  in inverter mode; no games anywhere
 * Adjustable brightness and animation speed, an information interface
 * Automatic menu timeout, software shutdown and wake-up, USB BOOTSEL entry
-* Hardware-derived entropy (RP2350 TRNG)
 * An Inverter portal for arming, status display and fault clearing
 * A firmware-generated H-bridge PWM with 500 ns dead time on both edges, the sine
   advanced by a 20 kHz carrier-wrap ISR on slice 0 with a 64-point interpolated
@@ -651,9 +727,9 @@ power stage:
 * Autonomous boost start-up sequencing, closed-loop regulation toward a
   120.0 V RMS target at the outlet, from a droop-compensated estimate of the
   outlet rather than a direct measurement
-* Over-current, over-temperature, bus-voltage, output over-voltage /
-  output-missing, output-out-of-reach, load-too-heavy, DC-offset and ADS7128
-  communication protection; non-over faults clear from the portal with an
+* Over-current, input-rail, bus-voltage, over-temperature and temperature-sensor, output over-voltage /
+  output-missing, output-out-of-reach, load-too-heavy, DC-offset, sensor-stale and
+  no-drive-measurement, and ADS7128 communication protection; non-over faults clear from the portal with an
   automatic ADS re-probe and full sweep
 * A 500 ms hardware watchdog
 

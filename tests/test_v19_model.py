@@ -32,9 +32,13 @@ import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKETCH = os.path.join(ROOT, "SOFTWARE", "Portal Interface Engine", "V1.9.ino")
+SKETCH_V18 = os.path.join(ROOT, "SOFTWARE", "Portal Interface Engine", "V1.8.ino")
 
 with open(SKETCH, encoding="utf-8") as _handle:
     SOURCE = _handle.read()
+
+with open(SKETCH_V18, encoding="utf-8") as _handle:
+    SOURCE_V18 = _handle.read()
 
 
 def _float(name):
@@ -96,13 +100,17 @@ OUT_MISSING_FRACTION = _float("OUT_MISSING_FRACTION")
 DC_TRIP_V = _float("DC_TRIP_V")
 DC_TRIP_SAMPLES = _int("DC_TRIP_SAMPLES")
 RMS_RING_SIZE = _int("RMS_RING_SIZE")
-RMS_SAMPLE_US = _int("RMS_SAMPLE_US")
+RMS_MIN_SAMPLES = _int("RMS_MIN_SAMPLES")
+RMS_MIN_SPAN_US = _int("RMS_MIN_SPAN_US")
 RMS_WINDOW_US = _int("RMS_WINDOW_US")
+RMS_STALE_US = _int("RMS_STALE_US")
+RMS_INVALID_TRIP_MS = _int("RMS_INVALID_TRIP_MS")
 AMP_SLEW_MAX = _float("AMP_SLEW_MAX")
 VBUS_NOMINAL = _float("VBUS_NOMINAL")
 VBUS_START_WINDOW = _float("VBUS_START_WINDOW")
 VBUS_RUN_WINDOW = _float("VBUS_RUN_WINDOW")
 M_START = _float("M_START")
+AMP_KI = _float("AMP_KI")
 RAMP_TIME_MS = _int("RAMP_TIME_MS")
 CTRL_INTERVAL_MS = _int("CTRL_INTERVAL_MS")
 B_DROOP = _float("B_DROOP")
@@ -755,8 +763,12 @@ class OutputMissingTests(unittest.TestCase):
     def test_dead_bridge_trips(self):
         expected = expected_bridge_rms(PWM_M_MAX)
         self.assertLess(0.0, OUT_MISSING_FRACTION * expected)
-        # Five 100 Hz ticks are 50 ms; the counter must reach five.
-        self.assertEqual(5, 5)
+        # The sketch's debounce literal must be 5: five 100 Hz ticks are
+        # 50 ms of missing bridge before the latch.
+        block = SOURCE[SOURCE.index("inferredOutletRms < OUT_MISSING_FRACTION") :]
+        block = block[: block.index("}", block.index("outMissingCount"))]
+        self.assertIn("if (++outMissingCount >= 5)", block)
+        self.assertIn("expected > 15.0f", SOURCE)
 
     def test_overvoltage_is_supervisory(self):
         # The estimate is held at or below 125 V by the drive ceiling, so
@@ -800,45 +812,103 @@ class DividerFilterTests(unittest.TestCase):
 
 
 class DcOffsetTests(unittest.TestCase):
-    def test_detection_precedes_saturation(self):
-        # The Rev C flux re-derivation puts the knee at 11-13 ms at the
-        # operating point, a flux budget of about 0.011 V.s, so an offset of
-        # X volts saturates the transformer in 11/X ms.
-        #
-        # The DC estimate is the mean of a one-mains-cycle window -- that is
-        # what rejects the 60 Hz fundamental -- and after a step of X it
-        # only reaches the threshold once a fraction T/X of the window has
-        # been filled with the offset.  The window is measured in TIME, not
-        # in samples: the loop cadence varies with the ADS7128 transactions.
-        # The trip is evaluated on every RMS sample, not on the control
-        # tick, and needs two consecutive samples.
-        saturation_ms = 0.011 / DC_TRIP_V * 1000.0
-        self.assertAlmostEqual(saturation_ms, 22.0, places=3)
+    def test_the_threshold_and_debounce(self):
+        # The flux knee is 11-13 ms for a 1 V offset at full modulation.  A
+        # 0.5 V threshold with two consecutive estimates is the fastest
+        # windowed 60 Hz estimate the transformer's flux budget allows; see
+        # tests/test_v19_protection_latency.py for the latency model.
+        self.assertAlmostEqual(DC_TRIP_V, 0.5, places=6)
+        self.assertEqual(DC_TRIP_SAMPLES, 2)
 
-        for offset in (0.55, 1.0, 2.0, 5.0, 10.0):
-            with self.subTest(offset=offset):
-                detect_ms = (
-                    RMS_WINDOW_US / 1000.0 * (DC_TRIP_V / offset)
-                    + (DC_TRIP_SAMPLES - 1) * RMS_SAMPLE_US / 1000.0
-                )
-                saturate_ms = 0.011 / offset * 1000.0
-                self.assertLess(detect_ms, saturate_ms)
-
-    def test_the_threshold_is_below_the_old_one(self):
-        # The old 1.0 V threshold with a 100 Hz trip could not react in
-        # time: the window alone (16.667 ms) is longer than the knee.
-        self.assertLess(DC_TRIP_V, 1.0)
-        window_ms = RMS_WINDOW_US / 1000.0
-        self.assertAlmostEqual(window_ms, 16.667, places=3)
-        self.assertGreater(window_ms, 11.0)
-
-    def test_the_trip_is_evaluated_on_every_rms_sample(self):
-        # Not in the control loop: a 100 Hz tick would add 10 ms, which is
-        # most of the saturation window.
+    def test_the_trip_is_evaluated_on_every_rms_fit(self):
+        # Not on the 100 Hz control tick: that alone would add 10 ms, which
+        # is most of the saturation window.
         block = SOURCE[SOURCE.index("static void updateRmsAndDc()") :]
         block = block[: block.index("/* ====")]
-        self.assertIn("if (fabsf(primaryDc) > DC_TRIP_V)", block)
+        self.assertIn("if (!dcSuspect && fabsf(primaryDc) > DC_TRIP_V)", block)
         self.assertIn('setFault("DC offset")', block)
+        control = SOURCE[SOURCE.index("static void runControl(") :]
+        control = control[: control.index("void powerBegin()")]
+        self.assertNotIn('setFault("DC offset")', control)
+
+    def test_the_estimate_is_a_fundamental_fit_not_a_window_mean(self):
+        # The old estimate differenced two HELD midpoint values, so the 60 Hz
+        # fundamental aliased against the sweep.  The fit estimates each
+        # channel's DC and fundamental separately from the carrier phase and
+        # differences the intercepts.
+        block = SOURCE[SOURCE.index("static void updateRmsAndDc()") :]
+        block = block[: block.index("/* ====")]
+        self.assertIn("fitMidRing(midRingA", block)
+        self.assertIn("fitMidRing(midRingB", block)
+        self.assertIn("primaryDc = fa.dc - fb.dc;", block)
+        self.assertNotIn("vMidA - vMidB", block)
+
+    def test_the_fit_needs_enough_samples_and_phase_span(self):
+        # A three-parameter fit needs at least four samples, and a set that
+        # spans too little phase is rejected rather than returning a wild DC.
+        self.assertGreaterEqual(RMS_MIN_SAMPLES, 4)
+        self.assertGreater(RMS_MIN_SPAN_US, 10000)
+        self.assertLess(RMS_MIN_SPAN_US, RMS_WINDOW_US)
+        block = SOURCE[SOURCE.index("static FundamentalFit fitMidRing") :]
+        block = block[: block.index("static void updateRmsAndDc()")]
+        self.assertIn("used < RMS_MIN_SAMPLES", block)
+        self.assertIn("(uint32_t)(newestUs - oldestUs) < RMS_MIN_SPAN_US", block)
+        self.assertIn("fabsf(det) < 1e-3f * scale", block)
+
+    def test_a_fit_older_than_the_stale_limit_is_dropped(self):
+        # rmsValid must not outlive its data: a chip that stops converting
+        # without NACKing would otherwise leave the last fit valid forever.
+        block = SOURCE[SOURCE.index("static void updateRmsAndDc()") :]
+        block = block[: block.index("/* ====")]
+        self.assertIn("(uint32_t)(micros() - midLastSampleUs) > RMS_STALE_US", block)
+        self.assertIn("rmsValid = false;", block)
+        self.assertLess(RMS_STALE_US, RMS_MIN_SPAN_US)
+
+    def test_the_trip_is_armed_only_once_the_fit_is_valid(self):
+        # A part-full ring cannot produce a fit at all; the trip lives after
+        # the `if (!fa.ok || !fb.ok)` guard.
+        block = SOURCE[SOURCE.index("static void updateRmsAndDc()") :]
+        block = block[: block.index("/* ====")]
+        guard = block.index("if (!fa.ok || !fb.ok)")
+        trip = block.index("if (!dcSuspect && fabsf(primaryDc) > DC_TRIP_V)")
+        self.assertGreater(trip, guard)
+        self.assertIn("rmsValid = true;", block)
+
+    def test_silent_death_is_named_not_misdiagnosed(self):
+        # A chip whose ADC has stopped (but whose I2C still answers) returns
+        # the same 12-bit code forever.  Three identical midpoint codes in a
+        # row while the bridge is switching means the data is dead: fault
+        # "sensor stale" at sample time instead of letting the stale samples
+        # trip the DC-offset check with a misleading reason.
+        block = SOURCE[SOURCE.index("float volts = adsCodeToVolts(code);") :]
+        block = block[: block.index("/* ====")]
+        self.assertIn("static uint16_t adsRepCode[2] = {0xFFFF, 0xFFFF};", SOURCE)
+        self.assertIn("if (++adsRepCount[m] >= 3)", block)
+        self.assertIn('adsFail("sensor stale");', block)
+        probe = SOURCE[SOURCE.index("static bool adsProbe(") :]
+        probe = probe[: probe.index("static float adsCodeToVolts")]
+        self.assertIn("adsRepCode[0] = adsRepCode[1] = 0xFFFF;", probe)
+
+    def test_the_trip_stands_down_on_suspect_data(self):
+        # Frozen samples stamped with fresh phases look like an offset to a
+        # fit.  While a midpoint code repeats, the trip must not judge: the
+        # silent-death detector owns that case and names it accurately.
+        block = SOURCE[SOURCE.index("static void updateRmsAndDc()") :]
+        block = block[: block.index("/* ====")]
+        self.assertIn("bool dcSuspect = (adsRepCount[0] >= 1) || (adsRepCount[1] >= 1);", block)
+        self.assertIn("if (!dcSuspect && fabsf(primaryDc) > DC_TRIP_V)", block)
+
+    def test_the_measurement_window_is_cleared_between_runs(self):
+        # Otherwise the tail of the previous run, and the filter's settling
+        # transient, would look like a DC offset.
+        for func in ("static void stopBridge()", "static void startBridge()"):
+            block = SOURCE[SOURCE.index(func) :]
+            block = block[: block.index("}", block.index(func) + len(func))]
+            self.assertIn("resetMeasurementWindow();", block)
+
+    def test_the_sketch_comment_does_not_claim_the_stale_figure(self):
+        self.assertNotIn("~90 ms to saturate", SOURCE)
+        self.assertNotIn("primary DC offset; ~90 ms", SOURCE)
 
 
 class SlewTests(unittest.TestCase):
@@ -902,16 +972,44 @@ class FreezePathTests(unittest.TestCase):
         self.assertIn("powerClearFault();", block)
 
     def test_ads_failure_paths_reset_the_state_machine(self):
-        # Four failure paths inside adsService (status read, OSR clear,
-        # timeout, result read) plus the explicit reset in powerClearFault.
-        self.assertGreaterEqual(SOURCE.count("adsPresent = false;"), 5)
-        self.assertIn("adsSwept = false;", SOURCE)
-        self.assertIn("adsPhase = ADS_IDLE;", SOURCE)
+        # Every failure path inside adsService goes through adsFail(), which
+        # drops the presence and clock flags and forces a fresh sweep.  One
+        # path is deliberate: the four separate resets used to drift apart.
+        fail = SOURCE[SOURCE.index("static void adsFail(") :]
+        fail = fail[: fail.index("static void adsService()")]
+        for name in (
+            "adsPresent = false;",
+            "adsClockOk = false;",
+            "adsPhase = ADS_IDLE;",
+            "adsSwept = false;",
+            "adsSeenMask = 0;",
+        ):
+            with self.subTest(name=name):
+                self.assertIn(name, fail)
+        service = SOURCE[SOURCE.index("static void adsService()") :]
+        service = service[: service.index("// Freshness of one ADS channel")]
+        self.assertGreaterEqual(service.count("adsFail("), 4)
+        self.assertNotIn("adsPresent = false;", service)
+        self.assertNotIn("adsSwept = false;", service)
+        # powerClearFault() re-arms the probe on its own, since it is called
+        # while disarmed and must not rely on a failure path.
+        clear = SOURCE[SOURCE.index("void powerClearFault() {") :]
+        clear = clear[: clear.index("bool powerArmed() {")]
+        self.assertIn("adsPresent = false;", clear)
+        self.assertIn("adsClockOk = false;", clear)
+        self.assertIn("adsSwept = false;", clear)
 
     def test_watchdog_covers_the_boot_sweep(self):
         self.assertIn("watchdog_enable(500, true);", SOURCE)
-        sweep_ms = 5 * 18 + 70
-        self.assertLess(sweep_ms, 500)
+        # Parse the sweep from setup(): NUM_LEDS iterations of delay(N) plus
+        # the closing delay.  Hardcoding 5*18+70 would go stale silently.
+        setup = SOURCE[SOURCE.index("void setup() {") :]
+        setup = setup[: setup.index("/* ====")]
+        import re as _re
+        leds = int(_re.search(r"NUM_LEDS\s+(\d+)", SOURCE).group(1))
+        delays = [int(v) for v in _re.findall(r"delay\((\d+)\);\s*\n\s*watchdog_update", setup)]
+        self.assertGreaterEqual(len(delays), 2)
+        self.assertLess(leds * delays[0] + delays[-1], 500)
         # The watchdog is fed inside the startup sweep as well.
         sweep = SOURCE[SOURCE.index("Known-good startup sweep") :]
         self.assertIn("watchdog_update();", sweep[:500])
@@ -1109,6 +1207,374 @@ class HeaderTopologyTests(unittest.TestCase):
         for token in ("6 %", "10 %", "120.00", "116.76"):
             with self.subTest(token=token):
                 self.assertIn(token, SOURCE)
+
+
+class FirmwareContractTests(unittest.TestCase):
+    """Behaviour the source must exhibit, checked against the source itself.
+
+    These close the gaps the audit listed: the PWM clamp parsed from the
+    sketch's own expression (not a locally recomputed constant), the sine
+    table values, the regulator converging in simulation, every fault path
+    parking the gates, and every arming refusal.
+    """
+
+    def test_pwm_clamp_comes_from_the_sketch_expression(self):
+        match = re.search(
+            r"#define\s+PWM_M_MAX\s+\(\(float\)\(PWM_TOP \+ 1 - 4 \* PWM_DT_TICKS - 2\)"
+            r" / \(float\)\(PWM_TOP \+ 1\)\)",
+            SOURCE,
+        )
+        self.assertIsNotNone(match)
+        self.assertEqual(PWM_TOP, 7499)
+        self.assertEqual(PWM_DT_TICKS, 75)
+        self.assertAlmostEqual(PWM_M_MAX, 0.959733, places=6)
+
+    def test_dead_time_comes_from_the_sketch_expression(self):
+        # 75 ticks at 150 MHz is 500 ns on each edge of each leg; the
+        # inverted-channel compare carries the 2*dt offset, rounded (not
+        # truncated) so the programmed gap never falls below the claim.
+        self.assertIn(
+            "(uint16_t)(dA * (float)(PWM_TOP + 1) + 2.0f * (float)PWM_DT_TICKS + 0.5f);",
+            SOURCE,
+        )
+        self.assertIn("pwm_set_counter(PWM_SLICE_A_LO, (uint16_t)PWM_DT_TICKS);", SOURCE)
+        self.assertIn("pwm_set_counter(PWM_SLICE_B_LO, (uint16_t)(2 * PWM_DT_TICKS));", SOURCE)
+        self.assertAlmostEqual(PWM_DT_TICKS / 150e6, 500e-9, places=12)
+
+    def test_sine_table_values(self):
+        block = SOURCE[SOURCE.index("static const float kSineTable") :]
+        block = block[: block.index("};", block.index("kSineTable"))]
+        values = [float(v) for v in re.findall(r"([+-]?[0-9]+\.[0-9]+)f", block)]
+        self.assertEqual(len(values), 65)
+        for k, v in enumerate(values):
+            with self.subTest(k=k):
+                self.assertAlmostEqual(v, math.sin(2.0 * math.pi * k / 64.0), places=8)
+        self.assertAlmostEqual(values[0], 0.0, places=9)
+        self.assertAlmostEqual(values[16], 1.0, places=8)
+        self.assertAlmostEqual(values[64], values[0], places=9)
+
+    def test_sine_phase_increment_is_60_hz_at_20_khz(self):
+        self.assertRegex(SOURCE, r"#define\s+SINE_PHASE_INC\s+12884902UL")
+        self.assertAlmostEqual(12884902 / 2.0**32 * 20000.0, 60.0, places=1)
+
+    def test_the_regulator_converges_to_the_target(self):
+        # The integral action on the outlet estimate: a fixed-point
+        # iteration of the sketch's own update law drives mTarget to the
+        # modulation the target needs at 100 W on a nominal bus.
+        m = M_START
+        for _ in range(600):
+            drive = bridge_primary_rms(m, VBUS_NOMINAL)
+            x = A_DROOP * drive
+            y = B_DROOP * FULL_LOAD_W
+            v = 0.5 * (x + math.sqrt(x * x - 4.0 * y)) if x * x >= 4.0 * y else x
+            error = OUTPUT_TARGET_RMS - v
+            step = error * AMP_KI
+            step = max(-AMP_SLEW_MAX, min(AMP_SLEW_MAX, step))
+            m = max(0.0, min(PWM_M_MAX, m + step))
+        self.assertAlmostEqual(m, 0.914, delta=0.01)
+
+    def test_the_regulator_cannot_wind_up_against_the_ceiling(self):
+        block = SOURCE[SOURCE.index("float error = OUTPUT_TARGET_RMS - outletEstimate();") :]
+        block = block[: block.index("mRamp = mTarget;")]
+        self.assertIn("mTarget = clampf(mTarget, 0.0f, driveLimit);", block)
+        self.assertIn("float step = error * AMP_KI;", block)
+        self.assertIn("if (step > AMP_SLEW_MAX) step = AMP_SLEW_MAX;", block)
+
+    def test_every_fault_path_parks_the_gates(self):
+        # setFault() always calls stopBridge(), and stopBridge() always
+        # calls parkGatesLow(), which disables the slices and drives all
+        # four gate pins low -- so no fault can leave a gate switching.
+        park = SOURCE[SOURCE.index("static void parkGatesLow()") :]
+        park = park[: park.index("static void setFault(")]
+        self.assertIn("pwm_set_mask_enabled(0);", park)
+        for pin in ("GATE_A_HI_PIN", "GATE_A_LO_PIN", "GATE_B_HI_PIN", "GATE_B_LO_PIN"):
+            with self.subTest(pin=pin):
+                self.assertIn(f"digitalWrite({pin}, LOW);", park)
+        fault = SOURCE[SOURCE.index("static void setFault(") :]
+        fault = fault[: fault.index("// Input-rail hysteresis")]
+        self.assertIn("stopBridge();", fault)
+        stop = SOURCE[SOURCE.index("static void stopBridge()") :]
+        stop = stop[: stop.index("static void enablePwmSlices()")]
+        self.assertIn("parkGatesLow();", stop)
+        self.assertIn("modulation = 0.0f;", stop)
+
+    def test_every_arming_refusal(self):
+        arm = SOURCE[SOURCE.index("bool powerSetArmed(bool on)") :]
+        arm = arm[: arm.index("void powerSerialReport()")]
+        for reason in (
+            "ARM refused: fault latched",
+            "ARM refused: no sensors",
+            "ARM refused: I2C not at 400 kHz",
+            "ARM refused: sensors not ready",
+        ):
+            with self.subTest(reason=reason):
+                self.assertIn(reason, arm)
+        self.assertGreaterEqual(arm.count("return false;"), 3)
+
+    def test_current_rail_and_temperature_thresholds(self):
+        self.assertRegex(SOURCE, r"#define\s+IIN_TRIP\s+20\.0f")
+        self.assertRegex(SOURCE, r"#define\s+IIN_WARN\s+15\.0f")
+        self.assertRegex(SOURCE, r"#define\s+IIN_TRIP_TICKS\s+2\b")
+        self.assertRegex(SOURCE, r"#define\s+VIN_LOW\s+11\.0f")
+        self.assertRegex(SOURCE, r"#define\s+VIN_HIGH\s+14\.0f")
+        self.assertRegex(SOURCE, r"#define\s+VIN_HYST\s+0\.2f")
+        self.assertRegex(SOURCE, r"#define\s+TEMP_TRIP_C\s+85\.0f")
+        self.assertRegex(SOURCE, r"#define\s+TEMP_WARN_C\s+60\.0f")
+        self.assertRegex(SOURCE, r"#define\s+TEMP_VALID_MIN_C\s+-40\.0f")
+        self.assertRegex(SOURCE, r"#define\s+TEMP_VALID_MAX_C\s+150\.0f")
+
+    def test_over_current_is_debounced_like_the_other_fast_trips(self):
+        block = SOURCE[SOURCE.index("if (pArmed) {") :]
+        block = block[: block.index("void powerBegin()")]
+        self.assertIn("if (++iinOverCount >= IIN_TRIP_TICKS)", block)
+        self.assertIn("iinOverCount = 0;", block)
+        stop = SOURCE[SOURCE.index("static void stopBridge()") :]
+        stop = stop[: stop.index("static void enablePwmSlices()")]
+        self.assertIn("iinOverCount = 0;", stop)
+
+    def test_rail_hysteresis_starts_wide_and_debounces(self):
+        # A battery sitting exactly on the 11.0 V edge plus a millivolt of
+        # noise must not instant-fault on the first powered tick: the memory
+        # starts in the wide window (self-correcting on first evaluation),
+        # and the fault itself is debounced like the other trips.
+        decl = SOURCE[SOURCE.index("static bool inputRailWasValid") :]
+        decl = decl[: decl.index("static bool inputRailValid")]
+        self.assertIn("static bool inputRailWasValid = true;", decl)
+        block = SOURCE[SOURCE.index("if (pArmed) {") :]
+        block = block[: block.index("void powerBegin()")]
+        self.assertIn("if (++railBadTicks >= RAIL_TRIP_TICKS)", block)
+        self.assertIn("railBadTicks = 0;", block)
+        self.assertRegex(SOURCE, r"#define\s+RAIL_TRIP_TICKS\s+3\b")
+        stop = SOURCE[SOURCE.index("static void stopBridge()") :]
+        stop = stop[: stop.index("static void enablePwmSlices()")]
+        self.assertIn("railBadTicks = 0;", stop)
+
+    def test_start_does_not_wipe_rail_hysteresis(self):
+        # startBridge() runs only from the WAIT_BUS branch, which proves the
+        # rail live on the same tick, so it must not clear the hysteresis
+        # memory; stopBridge() resets it to the wide (true) side.
+        start = SOURCE[SOURCE.index("static void startBridge()") :]
+        start = start[: start.index("static void runControl(")]
+        self.assertNotIn("inputRailWasValid =", start)
+        stop = SOURCE[SOURCE.index("static void stopBridge()") :]
+        stop = stop[: stop.index("static void enablePwmSlices()")]
+        self.assertIn("inputRailWasValid = true;", stop)
+
+    def test_over_faults_need_a_physical_reset(self):
+        # Safety-critical: "over-" (over-current, over-temp) faults cannot be
+        # cleared from the portal; only a reset clears them.
+        clear = SOURCE[SOURCE.index("void powerClearFault() {") :]
+        clear = clear[: clear.index("bool powerArmed() {")]
+        self.assertIn('strncmp(pFaultReason, "over-", 5)', clear)
+        self.assertIn("CLEAR ignored: over-fault latched", clear)
+        self.assertLess(
+            clear.index("pArmed = false;"), clear.index("CLEAR ignored")
+        )
+
+    def test_the_cursor_is_a_fixed_hot_pink(self):
+        # Selection must never look like a fault: no entropy, no hue shift,
+        # no brightness breathing on the cursor path.
+        cursor = SOURCE[SOURCE.index("void renderCursor(uint8_t index) {") :]
+        cursor = cursor[: cursor.index("\n}\n")]
+        self.assertIn("leds[index] = COLOR_HOT_PINK;", cursor)
+        for banned in ("beatsin8(", "entropy.", "CHSV(", "blendColor(", "nscale8("):
+            with self.subTest(banned=banned):
+                self.assertNotIn(banned, cursor)
+        self.assertNotIn("minimumBrightness", cursor)
+
+    def test_warnings_re_arm_after_a_stop(self):
+        # A persistent over-current or over-temp must re-warn after a fault
+        # clear or disarm, not print once and go silent: the latches live at
+        # file scope and stopBridge() resets them.
+        decl = SOURCE[SOURCE.index("static uint8_t iinOverCount") :]
+        decl = decl[: decl.index("static float   primaryRms")]
+        self.assertIn("static bool warnedCurrent = false;", decl)
+        self.assertIn("static bool warnedTemp = false;", decl)
+        stop = SOURCE[SOURCE.index("static void stopBridge()") :]
+        stop = stop[: stop.index("static void enablePwmSlices()")]
+        self.assertIn("warnedCurrent = false;", stop)
+        self.assertIn("warnedTemp = false;", stop)
+
+    def test_v19_has_no_games(self):
+        # The inverter never plays: no Fireball, no Games menu, no in-game
+        # state.  The 5V mode keeps fireplace/saber/rainbow (not games);
+        # none of the game identifiers may appear.
+        for banned in (
+            "UI_MENU_GAMES",
+            "UI_IN_GAME",
+            "AppFireball",
+            "appFireball",
+            "renderGamesMenu",
+            "gamesCursor",
+            "COLOR_GAMES",
+            "FIRE_GREEN",
+            "FIRE_WHITE",
+        ):
+            with self.subTest(banned=banned):
+                self.assertNotIn(banned, SOURCE)
+
+    def test_dual_personality_switches_on_the_input_rail(self):
+        # USB 5V alone reads ~0V on the rail: toys.  A battery (>=10V, fresh
+        # sample) flips to inverter mode; below 9V (or a stale sample) it
+        # flips back.  Either flip disarms and returns to idle.
+        self.assertRegex(SOURCE, r"#define\s+INVERTER_ENTER_V\s+10\.0f")
+        self.assertRegex(SOURCE, r"#define\s+INVERTER_EXIT_V\s+9\.0f")
+        det = SOURCE[SOURCE.index("Power-mode detection") :]
+        det = det[: det.index("// State transitions (armed only).")]
+        self.assertIn("adsFresh(0, sensorNowUs) && vIn >= INVERTER_ENTER_V", det)
+        self.assertIn("vIn < INVERTER_EXIT_V", det)
+        self.assertIn("powerSetArmed(false);", det)
+        self.assertIn("returnToIdle();", det)
+        self.assertIn("ARM refused: no battery (5V mode)", SOURCE)
+        self.assertIn('" MODE="', SOURCE)
+
+    def test_home_menu_follows_the_power_mode(self):
+        menu = SOURCE[SOURCE.index("void renderMainMenu()") :]
+        menu = menu[: menu.index("/* ====")]
+        self.assertIn("menuWindowBase(mainCursor, 3)", menu)
+        self.assertIn("menuWindowBase(mainCursor, 5)", menu)
+        self.assertIn("COLOR_PORTAL_BLUE", menu)
+        self.assertIn("COLOR_PORTAL_PURPLE", menu)
+        self.assertIn("COLOR_PORTAL_AMBER", menu)
+
+
+class V18ParityTests(unittest.TestCase):
+    """V1.9's 5V interface is V1.8's interface on five LEDs.
+
+    Gestures, timings, tables, bars and the status display must match the
+    perfect V1.8 reference.  The toy modes live on in V1.9's 5V mode; the
+    inverter mode replaces them with the portal.
+    """
+
+    def test_gesture_thresholds_match_v18(self):
+        for token in (
+            "now - debounceStart < 28",
+            "held >= 2800",
+            "held >= 1200",
+            "held >= 550",
+            "held < 400",
+            "now - lastTap < 380",
+            "now - lastTap >= 380",
+            "MENU_TIMEOUT_MS    16000UL",
+        ):
+            with self.subTest(token=token):
+                self.assertIn(token, SOURCE_V18)
+                self.assertIn(token, SOURCE)
+
+    def test_value_tables_match_v18(self):
+        for token in (
+            "{6, 12, 20, 30, 42, 56, 72, 88, 106, 125}",
+            "{40, 55, 70, 85, 100, 120, 145, 170, 200, 240}",
+            "SETTINGS_COUNT = 6",
+        ):
+            with self.subTest(token=token):
+                self.assertIn(token, SOURCE_V18)
+                self.assertIn(token, SOURCE)
+
+    def test_status_ball_matches(self):
+        self.assertIn("28 + 8000 / (globalSpeed + 50)", SOURCE_V18)
+        self.assertIn("28 + 8000 / (globalSpeed + 50)", SOURCE)
+
+    def test_fireplace_spark_zone_is_scaled_not_copied(self):
+        # V1.8 sparks at LEDs 5-8 of ten (upper fire, normalized 0.55-0.89).
+        # A blind copy would put V1.9 sparks at 1-3 (lower-middle); the
+        # scaled zone is LEDs 2-4 of five.
+        self.assertIn("5 + entropy.range(4)", SOURCE_V18)
+        spark = SOURCE[SOURCE.index("uint8_t spark =") :]
+        spark = spark[: spark.index(";") + 1]
+        self.assertIn("2 + entropy.range(2)", spark)
+
+    def test_saber_gradient_is_scaled(self):
+        # V1.8 falls off 11 per LED over ten; V1.9 falls off 22 per LED over
+        # five: the same gradient, not the same constant.
+        self.assertIn("(uint8_t)(i * 11)", SOURCE_V18)
+        self.assertIn("(uint8_t)(i * 22)", SOURCE)
+
+    def test_both_cursors_are_fixed_hot_pink(self):
+        for src in (SOURCE, SOURCE_V18):
+            cursor = src[src.index("void renderCursor(") :]
+            cursor = cursor[: cursor.index("\n}\n")]
+            with self.subTest(src="V1.9" if src is SOURCE else "V1.8"):
+                self.assertIn("leds[index] = COLOR_HOT_PINK;", cursor)
+                for banned in ("beatsin8(", "entropy.", "CHSV("):
+                    self.assertNotIn(banned, cursor)
+
+
+
+class FinalPassTests(unittest.TestCase):
+    """Behaviour the final review found broken, pinned so it cannot return."""
+
+    @staticmethod
+    def _palette(src):
+        start = src.index("uint8_t h = heat[i];")
+        seg = src[start : start + 1500]
+        thresholds = [int(v) for v in re.findall(r"h < (\d+)", seg)]
+        offsets = [int(v) for v in re.findall(r"scale8\(\(uint8_t\)\(h - (\d+)\), 255\)", seg)]
+        return thresholds, offsets
+
+    def test_fireplace_palette_matches_v18(self):
+        # A wrong offset in the h<55 branch (h - 55 instead of h - 20) was
+        # shipped once; the palette must match V1.8 branch for branch.
+        self.assertEqual(self._palette(SOURCE), self._palette(SOURCE_V18))
+        thresholds, offsets = self._palette(SOURCE)
+        self.assertEqual(thresholds, [20, 55, 100, 155, 210])
+        self.assertEqual(offsets, [20, 55, 100, 155, 210])
+
+    def test_toy_selection_leaves_the_home_menu(self):
+        # Fireplace and Lightsaber set the mode but never left UI_MENU_MAIN
+        # until the uiState assignment was added to their 5V branches.
+        home = SOURCE[SOURCE.index("if (uiState == UI_MENU_MAIN) {") :]
+        case1 = home[home.index("case 1:") : home.index("case 2:")]
+        case2 = home[home.index("case 2:") : home.index("case 3:")]
+        self.assertIn("modeFire.enter();", case1)
+        self.assertIn("uiState = UI_MODE;", case1)
+        self.assertIn("modeSaber.enter();", case2)
+        self.assertIn("uiState = UI_MODE;", case2)
+
+    def test_fireplace_keeps_the_top_led_for_sparks(self):
+        self.assertIn("if (source > NUM_LEDS - 2) { source = NUM_LEDS - 2;", SOURCE)
+        self.assertIn("1 + entropy.range(NUM_LEDS - 3)", SOURCE)
+        self.assertRegex(SOURCE_V18, r"if \(source > 8\)\s+\{ source = 8;")
+        self.assertIn("1 + entropy.range(6)", SOURCE_V18)
+
+    def test_a_mode_flip_cannot_wake_the_board(self):
+        flip = SOURCE[SOURCE.index("// Power-mode detection") :]
+        flip = flip[: flip.index("// State transitions (armed only).")]
+        # Both flip directions must be guarded, not just one of them.
+        self.assertEqual(flip.count("if (uiState != UI_SLEEP) returnToIdle();"), 2)
+        self.assertEqual(flip.count("returnToIdle();"), 2)
+
+    def test_the_sleep_loop_is_not_throttled(self):
+        # The ADS7128 state machine advances once per loop pass; a delay in
+        # the sleep branch stretched each sweep to ~225 ms.
+        loop = SOURCE[SOURCE.index("void loop() {") :]
+        branch = loop[loop.index("if (uiState == UI_SLEEP) {") :]
+        branch = branch[: branch.index("return;")]
+        self.assertIn("updateShutdown();", branch)
+        self.assertNotIn("delay(", branch)
+
+    def test_mode_exit_uses_the_looser_rail_bound(self):
+        self.assertRegex(SOURCE, r"#define\s+RAIL_MODE_STALE_US\s+500000UL")
+        self.assertGreater(500000, 50000)
+        self.assertIn("(uint32_t)(sensorNowUs - adsChTime[0]) <= RAIL_MODE_STALE_US", SOURCE)
+        self.assertIn("inverterPower && (!railSeen || vIn < INVERTER_EXIT_V)", SOURCE)
+
+    def test_state_changes_are_printed_once_by_powerservice(self):
+        self.assertNotIn('Serial.println("STATE: WAIT_BUS")', SOURCE)
+        self.assertNotIn('Serial.println("STATE: STARTING")', SOURCE)
+        self.assertIn("Serial.println(powerStateName());", SOURCE)
+
+    def test_arming_is_refused_outside_the_rail_window(self):
+        # Arming with the rail outside 11-14 V used to latch an input-rail
+        # fault 30 ms later, after nothing had been driven.  Refuse up front.
+        arm = SOURCE[SOURCE.index("bool powerSetArmed(bool on)") :]
+        arm = arm[: arm.index("void powerSerialReport()")]
+        self.assertIn("if (!inputRailValid())", arm)
+        self.assertIn("ARM refused: input rail out of 11-14 V", arm)
+        self.assertLess(arm.index("if (!inputRailValid())"), arm.index("pArmed = true;"))
+
+    def test_rand_header_is_explicit(self):
+        self.assertIn('#include "pico/rand.h"', SOURCE)
 
 
 if __name__ == "__main__":

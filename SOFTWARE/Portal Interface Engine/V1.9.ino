@@ -23,6 +23,12 @@ float powerBusVolts();
 float powerOutputVolts();
 float powerInputAmps();
 void renderInverter();
+static float sineAt(uint32_t phase);
+// Forward declarations so the Arduino-generated prototypes (inserted above
+// the first function definition) can name these types before their
+// definitions further down the file.
+struct MidSample;
+struct FundamentalFit;
 
 /*
  * ================================================================
@@ -46,35 +52,28 @@ void renderInverter();
  *  sense, so a direct isolated measurement of the outlet comes with a
  *  later Lamoka1 model.
  *
- * HOME
- * ----
- * Seven items:
- * 0 = BLUE STATUS BALL
- * 1 = FIREPLACE
- * 2 = LIGHTSABER
- * 3 = RAINBOW
- * 4 = INVERTER (the power-stage portal, new in V1.9)
- * 5 = GAMES
- * 6 = SETTINGS
- *
- * HOME COLORS
- * -----------
- * 0-4 = exact cactus green
- * 5   = games orange
- * 6   = settings blue
+ * HOME — DUAL PERSONALITY
+ * ------------------------
+ * USB 5 V alone (input rail ~0 V) is 5V mode: Status, Fireplace,
+ * Lightsaber, Rainbow, Settings — the toys, V1.8 colors.  A battery on
+ * the input rail flips the board into inverter mode: Status (blue),
+ * Inverter (purple), Settings (amber).  The flip disarms and returns to
+ * idle; arming is refused in 5V mode.
  *
  * CURSOR
  * ------
- * Every selected item is hot pink (breathing).
+ * Every selected item is hot pink (steady, no pulse).
  * Cursors remember the last selected item.
  *
  * DEFAULT IDLE
  * ------------
  * Blue bouncing status ball.
  *
- * FIREPLACE / LIGHTSABER / RAINBOW / FIREBALL
- * -------------------------------------------
- * Same behaviour as V1.8, scaled to five LEDs.
+ * 5V MODE TOYS
+ * ------------
+ * USB power alone (no battery) offers Status, Fireplace, Lightsaber,
+ * Rainbow and Settings — the V1.8 set, scaled to five LEDs.  The battery
+ * flips the board into inverter mode, where the portal replaces them.
  *
  * BRIGHTNESS
  * ----------
@@ -115,14 +114,12 @@ CRGB leds[NUM_LEDS];
  * ================================================================ */
 const CRGB COLOR_CACTUS   = CRGB(0, 90, 18);
 const CRGB COLOR_HOT_PINK = CRGB(255, 40, 160);
-const CRGB COLOR_GAMES    = CRGB(255, 90, 0);
 const CRGB COLOR_SETTINGS = CRGB(0, 50, 100);
+// Inverter-mode home items: status blue, inverter purple, settings amber.
+const CRGB COLOR_PORTAL_BLUE   = CRGB(0, 70, 255);
+const CRGB COLOR_PORTAL_PURPLE = CRGB(170, 60, 255);
+const CRGB COLOR_PORTAL_AMBER  = CRGB(255, 150, 20);
 
-const CRGB FIRE_GREEN  = CRGB(0, 180, 40);
-const CRGB FIRE_RED    = CRGB(150, 0, 0);
-const CRGB FIRE_ORANGE = CRGB(255, 45, 0);
-const CRGB FIRE_HOT    = CRGB(255, 130, 10);
-const CRGB FIRE_WHITE  = CRGB(255, 255, 255);
 
 /* ================================================================
  * ENUMERATIONS
@@ -139,13 +136,11 @@ enum Gesture : uint8_t {
 enum UIState : uint8_t {
   UI_MODE,
   UI_MENU_MAIN,
-  UI_MENU_GAMES,
   UI_MENU_SETTINGS,
   UI_BRIGHTNESS,
   UI_SPEED,
   UI_INFO,
   UI_INVERTER,
-  UI_IN_GAME,
   UI_SLEEP
 };
 
@@ -159,7 +154,16 @@ uint8_t globalSpeed      = DEFAULT_SPEED;
  * UI GLOBALS  (cursors now persist)
  * ================================================================ */
 uint8_t mainCursor           = 0;
-uint8_t gamesCursor          = 0;   // remembers last Games selection
+// Dual personality.  USB 5 V alone runs the MCU, the LEDs and the ADS7128,
+// but the input rail reads ~0 V: that is 5V mode (toys, no inverter).  A
+// battery on the input rail flips the board into inverter mode, where the
+// toy modes are replaced by the Inverter portal.  Hysteresis keeps a
+// sagging battery from flapping the UI.  Leaving inverter mode disarms but
+// latches nothing; a sag that stays between 9.0 V and the 10.8 V rail limit
+// latches an input-rail fault instead.
+static bool inverterPower = false;   // latched, hysteresis below
+#define INVERTER_ENTER_V  10.0f
+#define INVERTER_EXIT_V   9.0f
 uint8_t settingsCursor       = 0;   // remembers last Settings selection
 uint8_t currentMainMode      = 0;
 uint8_t settingsReturnCursor = 0;
@@ -187,56 +191,14 @@ CRGB blendColor(const CRGB &a, const CRGB &b, uint8_t amount) {
   );
 }
 
-void renderCursor(uint8_t index, uint8_t minimumBrightness) {
+void renderCursor(uint8_t index) {
   if (index >= NUM_LEDS) return;
-  CRGB c = COLOR_HOT_PINK;
-  c.nscale8(beatsin8(7, minimumBrightness, 255));
-  leds[index] = c;
+  // The cursor is a fixed hot pink, always.  It carries no entropy, no hue
+  // variation and no brightness breathing: on the DEV-Brain the pink was seen
+  // drifting toward near-white, which reads as a system bug.  Selection must
+  // never look like a fault.
+  leds[index] = COLOR_HOT_PINK;
 }
-
-/* ================================================================
- * ENTROPY SERVICE  (RP2350 hardware TRNG)
- * ================================================================ */
-class EntropyService {
-  uint32_t s = 1;
-
-  void mix() {
-    uint32_t r = (uint32_t)get_rand_64();
-    s ^= r;
-    s ^= micros();
-    s ^= s << 13;
-    s ^= s >> 17;
-    s ^= s << 5;
-    s += 0x9E3779B9UL;
-  }
-
-public:
-  void begin() {
-    s ^= micros();
-    for (uint16_t i = 0; i < 300; i++) mix();
-  }
-
-  void update() { mix(); }
-
-  uint32_t next() {
-    mix();
-    s ^= s << 13;
-    s ^= s >> 17;
-    s ^= s << 5;
-    return s;
-  }
-
-  uint8_t next8() { return (uint8_t)(next() & 255UL); }
-
-  uint16_t range(uint16_t maximum) {
-    if (maximum == 0) return 0;
-    return (uint16_t)(next() % ((uint32_t)maximum + 1UL));
-  }
-
-  bool coin() { return (next() & 1UL) != 0; }
-};
-
-EntropyService entropy;
 
 /* ================================================================
  * BUTTON SERVICE
@@ -367,7 +329,55 @@ public:
 };
 
 /* ================================================================
- * FIREPLACE — V1.8 REALISTIC UPGRADE, scaled to five LEDs
+ * ENTROPY SERVICE  (RP2350 hardware TRNG)
+ * ================================================================
+ * Only the 5V lighting modes consume randomness.  The TMP235 analog
+ * channels are temperature sensors, not entropy sources, and nothing in
+ * the power stage or the interface needs randomness.
+ */
+class EntropyService {
+  uint32_t s = 1;
+
+  void mix() {
+    uint32_t r = (uint32_t)get_rand_64();
+    s ^= r;
+    s ^= micros();
+    s ^= s << 13;
+    s ^= s >> 17;
+    s ^= s << 5;
+    s += 0x9E3779B9UL;
+  }
+
+public:
+  void begin() {
+    s ^= micros();
+    for (uint16_t i = 0; i < 300; i++) mix();
+  }
+
+  void update() { mix(); }
+
+  uint32_t next() {
+    mix();
+    s ^= s << 13;
+    s ^= s >> 17;
+    s ^= s << 5;
+    return s;
+  }
+
+  uint8_t next8() { return (uint8_t)(next() & 255UL); }
+
+  uint16_t range(uint16_t maximum) {
+    if (maximum == 0) return 0;
+    return (uint16_t)(next() % ((uint32_t)maximum + 1UL));
+  }
+
+  bool coin() { return (next() & 1UL) != 0; }
+};
+
+EntropyService entropy;
+
+/* ================================================================
+ * FIREPLACE — 5-LED port of the V1.8 fire
  * ================================================================ */
 class ModeFire : public Mode {
   uint8_t heat[NUM_LEDS];
@@ -378,7 +388,7 @@ class ModeFire : public Mode {
   uint8_t flare = 0;
 
   void chooseTarget() {
-    target = (int16_t)(1 + entropy.range(NUM_LEDS - 2));
+    target = (int16_t)(1 + entropy.range(NUM_LEDS - 3));   // targets 1..N-2
   }
 
 public:
@@ -417,7 +427,7 @@ public:
     else if (source > target) source--;
     source += sourceVel;
     if (source < 1)  { source = 1;  sourceVel = 0; }
-    if (source > NUM_LEDS - 2)  { source = NUM_LEDS - 2;  sourceVel = 0; }
+    if (source > NUM_LEDS - 2) { source = NUM_LEDS - 2; sourceVel = 0; }   // top LED: sparks only
     if (sourceVel) sourceVel = sourceVel > 0 ? sourceVel - 1 : sourceVel + 1;
 
     uint8_t wind1 = inoise8(now / 70);
@@ -462,8 +472,10 @@ public:
       if (q < NUM_LEDS - 2 && entropy.coin()) heat[q + 2] = qadd8(heat[q + 2], f / 4);
     }
 
+    // High sparks live in the upper fire, like V1.8's LEDs 5-8 of ten:
+    // normalized 0.55-0.89 of the strip is LEDs 2-4 of five.
     if (entropy.next8() > 245) {
-      uint8_t spark = (uint8_t)(1 + entropy.range(3));
+      uint8_t spark = (uint8_t)(2 + entropy.range(2));
       heat[spark] = qadd8(heat[spark], (uint8_t)(100 + entropy.range(80)));
     }
 
@@ -504,7 +516,7 @@ public:
 };
 
 /* ================================================================
- * LIGHTSABER — never same hue twice in a row
+ * LIGHTSABER — 5-LED port of the V1.8 blade
  * ================================================================ */
 class ModeSaber : public Mode {
   uint8_t hue = 0;
@@ -590,7 +602,7 @@ public:
 };
 
 /* ================================================================
- * RAINBOW
+ * RAINBOW — 5-LED port of the V1.8 rainbow
  * ================================================================ */
 class ModeRainbow : public Mode {
   uint8_t hue = 0;
@@ -631,169 +643,6 @@ Mode* mainModes[] = {
 const uint8_t MAIN_MODE_COUNT = 4;
 
 /* ================================================================
- * FIREBALL GAME
- * ================================================================ */
-class AppFireball {
-  static const int TARGET_LED  = 0;
-  static const int START_SPEED = 115;
-  static const int SPEEDUP     = 10;
-  static const int MIN_SPEED   = 30;
-  static const int MAX_SCORE   = 31;   // 5-bit binary score display
-
-  enum GameState : uint8_t {
-    GAME_RUNNING,
-    GAME_BLAST,
-    GAME_SCORE,
-    GAME_MISSED,
-    GAME_OVER
-  };
-
-  GameState state        = GAME_RUNNING;
-  uint8_t   score        = 0;
-  uint8_t   lives        = 3;
-  int       firePosition = NUM_LEDS - 1;
-  int       fireSpeed    = START_SPEED;
-  uint32_t  lastMove     = 0;
-  uint32_t  stateStart   = 0;
-
-  uint8_t displayedScore() const {
-    return score > MAX_SCORE ? MAX_SCORE : score;
-  }
-
-  void drawGame() {
-    clearLeds();
-    leds[TARGET_LED] = FIRE_GREEN;
-
-    if (firePosition >= 0 && firePosition < NUM_LEDS) {
-      leds[firePosition] = FIRE_WHITE;
-    }
-    if (firePosition + 1 < NUM_LEDS) leds[firePosition + 1] = FIRE_HOT;
-    if (firePosition + 2 < NUM_LEDS) leds[firePosition + 2] = FIRE_ORANGE;
-    if (firePosition + 3 < NUM_LEDS) leds[firePosition + 3] = FIRE_RED;
-  }
-
-  void beginRound() {
-    firePosition = NUM_LEDS - 1;
-    lastMove = millis();
-    state = GAME_RUNNING;
-  }
-
-  void startBlast() {
-    stateStart = millis();
-    state = GAME_BLAST;
-  }
-
-  void catchFireball() {
-    if (score < 255) score++;
-    fireSpeed -= SPEEDUP;
-    if (fireSpeed < MIN_SPEED) fireSpeed = MIN_SPEED;
-    startBlast();
-  }
-
-  void missFireball() {
-    if (lives > 0) lives--;
-    stateStart = millis();
-    state = (lives == 0) ? GAME_OVER : GAME_MISSED;
-  }
-
-  void renderBlast() {
-    clearLeds();
-    uint32_t elapsed = millis() - stateStart;
-    uint8_t frame = (uint8_t)(elapsed / 45UL);
-    if (frame > 7) frame = 7;
-
-    for (int i = 0; i < NUM_LEDS; i++) {
-      int distance = abs(i - TARGET_LED);
-      if (distance <= frame) {
-        int level = 255 - distance * 50 - frame * 18;
-        if (level < 10) level = 10;
-        leds[i] = CRGB((uint8_t)level, (uint8_t)(level / 2), (uint8_t)(level / 12));
-      }
-    }
-  }
-
-  void renderScore() {
-    clearLeds();
-    uint8_t shown = displayedScore();
-    for (uint8_t i = 0; i < NUM_LEDS; i++) {
-      if (shown & (1U << i)) leds[i] = COLOR_CACTUS;
-    }
-  }
-
-public:
-  void enter() {
-    score = 0;
-    lives = 3;
-    fireSpeed = START_SPEED;
-    firePosition = NUM_LEDS - 1;
-    lastMove = millis();
-    state = GAME_RUNNING;
-    stateStart = millis();
-  }
-
-  void update(Gesture g) {
-    if (state == GAME_OVER) {
-      if (g == G_TAP) enter();
-      return;
-    }
-    if (state == GAME_BLAST || state == GAME_SCORE || state == GAME_MISSED) return;
-
-    if (state == GAME_RUNNING && g == G_TAP) {
-      if (firePosition == TARGET_LED) catchFireball();
-    }
-  }
-
-  void render() {
-    if (state == GAME_RUNNING) {
-      uint32_t now = millis();
-      if (now - lastMove >= (uint32_t)fireSpeed) {
-        lastMove = now;
-        firePosition--;
-        if (firePosition < TARGET_LED) missFireball();
-      }
-      if (state == GAME_RUNNING) drawGame();
-      return;
-    }
-
-    if (state == GAME_BLAST) {
-      uint32_t elapsed = millis() - stateStart;
-      renderBlast();
-      if (elapsed >= 360) {
-        state = GAME_SCORE;
-        stateStart = millis();
-      }
-      return;
-    }
-
-    if (state == GAME_SCORE) {
-      renderScore();
-      if (millis() - stateStart >= 750) beginRound();
-      return;
-    }
-
-    if (state == GAME_MISSED) {
-      clearLeds();
-      uint32_t elapsed = millis() - stateStart;
-      if (elapsed < 70) fill_solid(leds, NUM_LEDS, FIRE_RED);
-      if (elapsed >= 140) beginRound();
-      return;
-    }
-
-    if (state == GAME_OVER) {
-      clearLeds();
-      uint8_t pulse = beatsin8(4, 30, 180);
-      fill_solid(leds, NUM_LEDS, CRGB(pulse, 0, 0));
-      uint8_t shown = displayedScore();
-      for (uint8_t i = 0; i < NUM_LEDS; i++) {
-        if (shown & (1U << i)) leds[i] = COLOR_CACTUS;
-      }
-    }
-  }
-};
-
-AppFireball appFireball;
-
-/* ================================================================
  * MENU HELPERS
  * ================================================================ */
 void touchMenu() {
@@ -802,7 +651,6 @@ void touchMenu() {
 
 bool inAnyMenu() {
   return uiState == UI_MENU_MAIN   ||
-         uiState == UI_MENU_GAMES  ||
          uiState == UI_MENU_SETTINGS ||
          uiState == UI_BRIGHTNESS  ||
          uiState == UI_SPEED       ||
@@ -828,24 +676,26 @@ static uint8_t menuCursorLed(uint8_t cursor, uint8_t base) {
  * ================================================================ */
 void renderMainMenu() {
   clearLeds();
-  uint8_t base = menuWindowBase(mainCursor, 7);
+  if (inverterPower) {
+    // D1 blue (status), D2 purple (inverter), D3 amber (settings).
+    uint8_t base = menuWindowBase(mainCursor, 3);
+    for (uint8_t i = 0; i < NUM_LEDS; i++) {
+      uint8_t item = base + i;
+      if (item == 0) leds[i] = COLOR_PORTAL_BLUE;
+      else if (item == 1) leds[i] = COLOR_PORTAL_PURPLE;
+      else leds[i] = COLOR_PORTAL_AMBER;
+    }
+    renderCursor(menuCursorLed(mainCursor, base));
+    return;
+  }
+  // 5V mode: status + the toy modes + settings, V1.8 colors.
+  uint8_t base = menuWindowBase(mainCursor, 5);
   for (uint8_t i = 0; i < NUM_LEDS; i++) {
     uint8_t item = base + i;
-    if (item < 5) leds[i] = COLOR_CACTUS;
-    else if (item == 5) leds[i] = COLOR_GAMES;
-    else if (item == 6) leds[i] = COLOR_SETTINGS;
+    if (item < 4) leds[i] = COLOR_CACTUS;
+    else leds[i] = COLOR_SETTINGS;
   }
-  renderCursor(menuCursorLed(mainCursor, base), 180);
-}
-
-/* ================================================================
- * GAMES MENU
- * ================================================================ */
-void renderGamesMenu() {
-  clearLeds();
-  leds[0] = CRGB(255, 100, 0);   // Back
-  leds[1] = CRGB(255, 0, 0);     // Fireball
-  renderCursor(gamesCursor, 180);
+  renderCursor(menuCursorLed(mainCursor, base));
 }
 
 /* ================================================================
@@ -865,7 +715,7 @@ void renderSettingsMenu() {
     else if (item == 4) leds[i] = CRGB(180, 120, 0); // Bootsel
     else if (item == 5) leds[i] = CRGB(255, 0, 0);   // Shutdown
   }
-  renderCursor(menuCursorLed(settingsCursor, base), 180);
+  renderCursor(menuCursorLed(settingsCursor, base));
 }
 
 /* ================================================================
@@ -929,10 +779,6 @@ void enterShutdown() {
 }
 
 void updateShutdown() {
-  clearLeds();
-  FastLED.setBrightness(0);
-  FastLED.show();
-
   if (sleepWaitRelease) {
     if (digitalRead(BUTTON_PIN) == HIGH) sleepWaitRelease = false;
     return;
@@ -963,6 +809,10 @@ void enterBootsel() {
   FastLED.setBrightness(0);
   FastLED.show();
   delay(40);
+  // The hardware watchdog is still running.  reset_usb_boot() never returns,
+  // so without this the watchdog would reset the chip ~500 ms later, kicking
+  // it out of BOOTSEL mode.
+  watchdog_disable();
   reset_usb_boot(0, 0);
   while (true) delay(1000);
 }
@@ -971,6 +821,10 @@ void enterBootsel() {
  * RETURN TO DEFAULT IDLE
  * ================================================================ */
 void returnToIdle() {
+  // Idle means disarmed.  The UI's resting state must never leave the
+  // inverter able to start on its own after the portal or a menu is left,
+  // and a long hold is one of the documented ways to stop it.
+  powerSetArmed(false);
   uiState = UI_MODE;
   currentMainMode = 0;
   mainCursor = 0;
@@ -994,17 +848,6 @@ void handleUI(Gesture g) {
     return;
   }
 
-  // -------- FIREBALL --------
-  if (uiState == UI_IN_GAME) {
-    if (g == G_LONG_HOLD) {
-      uiState = UI_MENU_GAMES;
-      touchMenu();
-      return;
-    }
-    appFireball.update(g);
-    return;
-  }
-
   // -------- NORMAL MODE --------
   if (uiState == UI_MODE) {
     if (g == G_HOLD) {
@@ -1022,13 +865,16 @@ void handleUI(Gesture g) {
   }
 
   // -------- HOME MENU --------
+  // Inverter mode: Status / Inverter / Settings.  5V mode: Status /
+  // Fireplace / Lightsaber / Rainbow / Settings.
   if (uiState == UI_MENU_MAIN) {
+    uint8_t homeItems = inverterPower ? 3 : 5;
     if (g == G_TAP) {
-      mainCursor = (uint8_t)((mainCursor + 1) % 7);
+      mainCursor = (uint8_t)((mainCursor + 1) % homeItems);
       return;
     }
     if (g == G_DOUBLE) {
-      mainCursor = (mainCursor == 0) ? 6 : mainCursor - 1;
+      mainCursor = (mainCursor == 0) ? homeItems - 1 : mainCursor - 1;
       return;
     }
     if (g == G_HOLD) {
@@ -1039,14 +885,24 @@ void handleUI(Gesture g) {
           uiState = UI_MODE;
           return;
         case 1:
-          currentMainMode = 1;
-          modeFire.enter();
-          uiState = UI_MODE;
+          if (inverterPower) {
+            uiState = UI_INVERTER;
+          } else {
+            currentMainMode = 1;
+            modeFire.enter();
+            uiState = UI_MODE;
+          }
+          touchMenu();
           return;
         case 2:
-          currentMainMode = 2;
-          modeSaber.enter();
-          uiState = UI_MODE;
+          if (inverterPower) {
+            uiState = UI_MENU_SETTINGS;
+          } else {
+            currentMainMode = 2;
+            modeSaber.enter();
+            uiState = UI_MODE;
+          }
+          touchMenu();
           return;
         case 3:
           currentMainMode = 3;
@@ -1054,14 +910,6 @@ void handleUI(Gesture g) {
           uiState = UI_MODE;
           return;
         case 4:
-          uiState = UI_INVERTER;
-          touchMenu();
-          return;
-        case 5:
-          uiState = UI_MENU_GAMES;
-          touchMenu();
-          return;
-        case 6:
           uiState = UI_MENU_SETTINGS;
           touchMenu();
           return;
@@ -1069,38 +917,6 @@ void handleUI(Gesture g) {
     }
     if (g == G_LONG_HOLD) {
       returnToIdle();
-      return;
-    }
-  }
-
-  // -------- GAMES MENU --------
-  if (uiState == UI_MENU_GAMES) {
-    if (g == G_TAP) {
-      gamesCursor = (uint8_t)((gamesCursor + 1) % 2);
-      return;
-    }
-    if (g == G_DOUBLE) {
-      gamesCursor = (gamesCursor == 0) ? 1 : 0;
-      return;
-    }
-    if (g == G_HOLD) {
-      if (gamesCursor == 0) {
-        uiState = UI_MENU_MAIN;
-        mainCursor = 5;
-        touchMenu();
-        return;
-      }
-      if (gamesCursor == 1) {
-        appFireball.enter();
-        uiState = UI_IN_GAME;
-        touchMenu();
-        return;
-      }
-    }
-    if (g == G_LONG_HOLD) {
-      uiState = UI_MENU_MAIN;
-      mainCursor = 5;
-      touchMenu();
       return;
     }
   }
@@ -1118,7 +934,7 @@ void handleUI(Gesture g) {
     if (g == G_HOLD) {
       if (settingsCursor == 0) {
         uiState = UI_MENU_MAIN;
-        mainCursor = 6;
+        mainCursor = inverterPower ? 2 : 4;
         touchMenu();
         return;
       }
@@ -1168,7 +984,7 @@ void handleUI(Gesture g) {
     }
     if (g == G_LONG_HOLD) {
       uiState = UI_MENU_MAIN;
-      mainCursor = 6;
+      mainCursor = inverterPower ? 2 : 4;
       touchMenu();
       return;
     }
@@ -1266,8 +1082,9 @@ void handleUI(Gesture g) {
       return;
     }
     if (g == G_LONG_HOLD) {
+      powerSetArmed(false);   // leaving the portal stops the inverter
       uiState = UI_MENU_MAIN;
-      mainCursor = 4;
+      mainCursor = 1;
       touchMenu();
       return;
     }
@@ -1281,13 +1098,11 @@ void renderUI() {
   switch (uiState) {
     case UI_MODE:          mainModes[currentMainMode]->render(); break;
     case UI_MENU_MAIN:     renderMainMenu();                     break;
-    case UI_MENU_GAMES:    renderGamesMenu();                    break;
     case UI_MENU_SETTINGS: renderSettingsMenu();                 break;
     case UI_BRIGHTNESS:    renderBrightness();                   break;
     case UI_SPEED:         renderSpeed();                        break;
     case UI_INFO:          renderInfo();                         break;
     case UI_INVERTER:      renderInverter();                    break;
-    case UI_IN_GAME:       appFireball.render();                 break;
     case UI_SLEEP:         clearLeds();                          break;
   }
 }
@@ -1486,7 +1301,8 @@ static_assert(F_CPU == 150000000UL,
 #define DIV_AIN1           (10.0f / (68.0f + 10.0f))   // 21.75 V bus, 25.74 V FS
 #define DIV_AIN2           (10.0f / (68.0f + 10.0f))   // bridge midpoint A
 #define DIV_AIN3           (10.0f / (68.0f + 10.0f))   // bridge midpoint B
-// AIN4 is the INA240A2 (gain 50) across RCS1 (2 mΩ): 0.1 V/A.  The
+// AIN4 is the input current at 0.1 V/A: INA240 gain times the RCS1 shunt
+// (as-built A3/100 x 1 mOhm; design A2/50 x 2 mOhm - same 0.1 V/A).  The
 // INA240's reference pins are grounded, so its output cannot go below
 // ground: a REVERSE current through RCS1 reads as 0 A and is invisible
 // to the over-current trip.  The input-rail check still refuses to arm
@@ -1610,57 +1426,51 @@ static_assert(F_CPU == 150000000UL,
 //   is enforced separately by OUTLET_V_MAX below.
 #define OUTPUT_TARGET_RMS  120.0f
 #define OUTPUT_OV_FACTOR   1.05f    // 126 V on the estimated outlet
+#define OUTPUT_OV_TICKS    2        // 20 ms at the 100 Hz control loop
 #define OUTLET_V_MAX       125.0f   // NEMA 5-15R receptacle rating
 #define OUT_MISSING_FRACTION 0.60f  // bridge output vs commanded modulation
 #define AMP_SLEW_MAX       0.010f   // per 10 ms tick, below dead-time step
 
 // Primary DC offset.
 //
-// The trip threshold is 0.5 V and the trip is evaluated on every RMS sample,
-// NOT once per control tick.  Both follow from the transformer's flux
-// budget, which puts the saturation knee at 11-13 ms for a 1 V offset -- a
-// flux budget of about 0.011 V.s.
+// The trip threshold is 0.5 V and the trip is evaluated on every new
+// least-squares DC estimate, NOT once per control tick.  Both follow from the
+// transformer's flux budget, which puts the saturation knee at 11-13 ms for a
+// 1 V offset at full modulation -- a flux budget of about 0.011 V.s.
 //
-//   saturation time for an offset X     11/X ms
-//   detection time for an offset X      16.667 * (T/X) + one sample
+// The estimate is the intercept of the per-channel fit described above, not
+// the mean of a window of held midpoint values.  That distinction matters:
+// AIN2 and AIN3 are sampled at different instants, so differencing the held
+// values produces a staircase, and the 60 Hz fundamental aliases against the
+// sweep.  Depending on the sweep period the mean of that staircase can leak
+// 0.3-3 V of false DC into the estimate -- above the trip threshold.  The
+// fit removes the fundamental exactly and does not have that failure mode.
 //
-// The detection time is dominated by the one-mains-cycle window the DC
-// estimate needs: the mean of that window is what rejects the 60 Hz
-// fundamental, and after a step of X volts it only reaches T once a
-// fraction T/X of the window has been filled with the offset.  The window is
-// measured in TIME (16.667 ms), not in samples -- see RMS_WINDOW_US.  With
-// the old T = 1.0 V that window alone is longer than the knee (11-13 ms), so
-// the trip could never be fast enough no matter when it was evaluated.
+// The fit is still a windowed estimate: after a step of X volts it only
+// reaches the 0.5 V threshold once about 0.5/X of the 16.667 ms window has
+// been filled with the step.  With the weighted ADS sweep a new estimate
+// arrives about every millisecond (the two midpoints alternate; each one is
+// sampled about every 2.1 ms in the host model), so the trip is evaluated
+// roughly every millisecond while the bridge is running.  Two consecutive
+// estimates above the threshold are required, which costs about one more
+// estimate interval.  That is
+// fast enough at the realistic offsets:
 //
-// With T = 0.5 V the detection beats the saturation time for every offset
-// between 0.5 V and 10 V:
+//   X = 0.5 V   window 16.7 ms   knee 22.0 ms   (caught during soft start)
+//   X = 1.0 V   window  8.3 ms   knee 11.0 ms
+//   X = 2.0 V   window  4.2 ms   knee  5.5 ms
 //
-//   X = 0.5 V   detect 16.9 ms   saturate 22.0 ms
-//   X = 1.0 V   detect  8.5 ms   saturate 11.0 ms
-//   X = 2.0 V   detect  4.4 ms   saturate  5.5 ms
-//   X = 5.0 V   detect  1.9 ms   saturate  2.2 ms
+// A 5 V or 10 V step saturates in 2.2 ms or 1.1 ms, which is faster than any
+// windowed 60 Hz estimate can resolve; those are supervisory-only and the
+// hardware has to survive them.  The same is true of an offset already
+// present when the bridge starts: it is caught during the soft start, where
+// the modulation (and therefore the AC flux) is still low and the offset has
+// more flux margin, not at full modulation.
 //
-// Below 0.5 V the transformer does not saturate at all, so the lower
-// threshold costs nothing.  The sample noise on the DC estimate is about
-// 0.01 V, but the systematic residual from the ADS7128 staircase is larger:
-// about 0.1 V at full modulation.  The threshold sits 5x above that worst
-// residual, and 50x above the noise.
-//
-// The trip is armed only once the measurement window holds a full mains
-// period (see updateRmsAndDc()).  That means an offset which appears DURING
-// a run is caught 8.5 ms after it appears -- inside the saturation window --
-// but an offset that is already there when the bridge starts is not caught
-// until the window has filled (16.667 ms) and then filled with the offset (a
-// further 8.3 ms at 1 V), i.e. at about 25 ms, after the 11-13 ms knee.
-// Detecting that case faster needs a phase reference for the 60 Hz
-// fundamental, which this measurement chain does not have.  It is recorded
-// as a limitation rather than papered over.
-//
-// DC_TRIP_SAMPLES is the number of consecutive samples above the threshold
-// that trip it.  One sample is enough -- the estimate is already the mean
-// of the whole window, so a single wild reading moves it by 1/n of its
-// magnitude -- but two are used, which costs one sample interval (130-260 us)
-// and still leaves the detection ahead of the knee.
+// The fit's DC noise is about 0.1 V at full modulation (the 20 kHz carrier
+// aliases into the 339 Hz midpoint filters), so the 0.5 V threshold sits
+// about 5x above the noise.  Two consecutive estimates make a false trip
+// unlikely without slowing the realistic cases.
 #define DC_TRIP_V          0.5f
 #define DC_TRIP_SAMPLES    2
 
@@ -1723,8 +1533,13 @@ static_assert(F_CPU == 150000000UL,
 #define BUS_RUN_GRACE_TICKS 3       // 30 ms of out-of-range bus tolerated
 #define IIN_WARN           15.0f
 #define IIN_TRIP           20.0f
+#define IIN_TRIP_TICKS     2        // 20 ms: a single noisy INA240 sample must not trip
+#define RAIL_TRIP_TICKS      3        // 30 ms: same for a noisy rail sample
 #define TEMP_WARN_C        60.0f
 #define TEMP_TRIP_C        85.0f
+#define TEMP_TRIP_TICKS    3        // 30 ms: a real over-temp is not a spike
+#define TEMP_VALID_MIN_C   -40.0f   // TMP235 specified range
+#define TEMP_VALID_MAX_C   150.0f
 
 // Control-loop timing.
 #define CTRL_INTERVAL_MS   10     // ~100 Hz outer loop
@@ -1732,31 +1547,35 @@ static_assert(F_CPU == 150000000UL,
 #define M_START            0.30f  // modulation at the end of soft start
 #define AMP_KI             0.0003f // integrator gain per 10 ms tick per volt of error
 
-// RMS measurement cadence.
+// RMS and DC measurement, per midpoint channel.
 //
-// The window is one mains period measured in TIME, not a fixed number of
-// samples.  The main loop shares the bus with the ADS7128, so the interval
-// between samples is not the 130 us floor -- it is whatever the I2C state
-// machine costs, 130-260 us.  A count-based window therefore runs long
-// (21-26 ms instead of 16.67 ms), the 60 Hz fundamental no longer cancels in
-// it, and the residual (up to 4 V at full modulation) false-trips the 0.5 V
-// DC-offset check during the soft-start ramp.
+// AIN2 and AIN3 are sampled by the ADS7128 at different instants, and the
+// samples are held until the next sweep.  Differencing the two held values
+// therefore produces a staircase whose mean over a window is NOT the mean of
+// the differential: the 60 Hz fundamental aliases against the sweep and can
+// leave a DC-mean residual larger than the 0.5 V DC trip.  The firmware
+// therefore fits each channel separately to
 //
-// RMS_RING_SIZE is sized for the fastest cadence the loop can produce
-// (130 us): 160 * 130 us = 20.8 ms, comfortably more than one period.
+//     v(t) = DC + a*sin(theta) + b*cos(theta)
 //
-// The one-cycle window is also what rejects the 60 Hz fundamental from the
-// DC estimate: a one-cycle mean of a sinusoid is zero.  That is why the
-// window cannot simply be shortened -- see DC_TRIP_V.
+// over the last mains period, using the carrier ISR's 60 Hz phase at the
+// instant the conversion started.  The fit removes the fundamental exactly,
+// even when the samples are unevenly spaced, so the DC intercept is a true
+// DC estimate rather than a staircase mean.  The differential fundamental is
+// (aA-aB, bA-bB), whose RMS is sqrt(a^2+b^2)/sqrt(2) -- the same quantity the
+// droop model calls the drive RMS.
 //
-// The ring stores one entry per loop pass, but the ADS7128 refreshes one
-// channel per round-robin step, so only a few entries per cycle carry new
-// midpoint data.  The window length is still exact; the RMS accuracy is
-// limited by the ~3.7 ms sweep, not by the window.
-#define RMS_RING_SIZE      160
-#define RMS_MIN_SAMPLES    32     // sanity floor only; the time window gates
-#define RMS_SAMPLE_US      130
-#define RMS_WINDOW_US      16667UL   // one 60 Hz period
+// The ring holds per-channel samples, not one entry per loop pass.  At the
+// weighted sweep a midpoint channel updates about every 2.1 ms (host model),
+// so 32 entries cover roughly four mains periods; 16.667 ms is what the fit
+// actually uses, and the extra entries are there so a late sample does not
+// empty the window.
+#define RMS_RING_SIZE      32
+#define RMS_MIN_SAMPLES    4      // a 3-parameter fit needs at least four
+#define RMS_MIN_SPAN_US    12500UL   // 3/4 of a mains period of phase span
+#define RMS_WINDOW_US      16667UL   // one 60 Hz period (also 2 x 120 Hz)
+#define RMS_STALE_US       5000UL    // a fit older than this is no longer valid
+#define RMS_INVALID_TRIP_MS 500UL    // running with no valid estimate is a fault
 
 enum PowerState : uint8_t {
   POWER_IDLE,
@@ -1781,6 +1600,8 @@ static float vMidB   = 0.0f;
 static float iIn     = 0.0f;
 static float tempCtrl = 0.0f;
 static float tempInv  = 0.0f;
+static bool  tempCtrlValid = false;
+static bool  tempInvValid  = false;
 
 static float modulation = 0.0f;    // amplitude (mRamp or mTarget)
 static float mTarget    = 0.0f;    // amplitude loop output
@@ -1799,21 +1620,50 @@ static volatile float    modAmp    = 0.0f;
 static volatile bool     bridgeModulating = false;
 static uint8_t outMissingCount = 0;
 static uint8_t dcFaultCount = 0;
+// Silent-death detector state: last 12-bit code per midpoint channel and
+// how many times in a row it repeated.  A chip whose ADC has stopped (but
+// whose I2C still answers) returns the same code forever; with the bridge
+// switching, a healthy midpoint channel moves >>1 LSB per millisecond, so
+// three identical codes in a row while driving means the data is dead.
+static uint16_t adsRepCode[2] = {0xFFFF, 0xFFFF};
+static uint8_t  adsRepCount[2] = {0, 0};
+static uint8_t outOvCount = 0;
+static uint8_t iinOverCount = 0;
+static uint8_t railBadTicks = 0;
+static bool warnedCurrent = false;
+static bool warnedTemp = false;
+static uint8_t busBadTicks = 0;
+static uint8_t tempCtrlOverCount = 0;
+static uint8_t tempInvOverCount = 0;
+static uint8_t tempInvalidCount = 0;
+static uint32_t rmsInvalidSinceMs = 0;
 static uint32_t lastProbeMs = 0;
 
-// RMS measurement of the bridge midpoint differential, and the outlet
-// estimate derived from it.
-static float    rmsBuf[RMS_RING_SIZE];
-static uint32_t rmsTime[RMS_RING_SIZE];   // micros() stamp for each entry
-static uint8_t rmsIndex = 0;
-static uint8_t rmsCount = 0;
-static float   primaryRms = 0.0f;        // measured 12 V winding RMS
+// One midpoint sample, with the 60 Hz phase captured when its conversion
+// started.  s and c are that phase's sine and cosine, so the fit below is a
+// plain linear least-squares solve.
+struct MidSample {
+  uint32_t tUs;
+  float v;
+  float s;
+  float c;
+};
+
+static MidSample midRingA[RMS_RING_SIZE];
+static MidSample midRingB[RMS_RING_SIZE];
+static uint8_t midIndexA = 0;
+static uint8_t midIndexB = 0;
+static uint8_t midCountA = 0;
+static uint8_t midCountB = 0;
+static bool    midDirty = false;
+static uint32_t midLastSampleUs = 0;
+
+static float   primaryRms = 0.0f;        // measured 12 V winding fundamental
 static float   primaryDc = 0.0f;         // DC offset check
 static float   inferredOutletRms = 0.0f; // drive * no-load ratio (bridge check)
 static float   outletEstRms = 0.0f;      // droop-compensated OUTLET estimate
 static float   secCurrentEst = 0.0f;     // estimated 115 V winding current
 static bool    loadUnsupported = false;  // the drive cannot support the load
-static uint32_t rmsLastSampleUs = 0;
 static bool    rmsValid = false;
 
 // Regulator state kept for the serial report, so the bench can see the
@@ -1844,11 +1694,40 @@ static float outletEstimate() {
 
 // ADS7128 scanning state.
 #define ADS_CH_COUNT       5
+#define ADS_SCHEDULE_LEN   15
+// Weighted sweep: 12 of the 15 conversions are the two bridge midpoints,
+// because they are the ones the DC and RMS estimate is built from.  The
+// slow channels (rail, bus, current) are each read once per 15-step
+// sequence -- about 12.6 ms in the host model (about 0.84 ms per conversion),
+// which is far faster than any of them can move.  A plain five-channel round-robin
+// gave the midpoints only 270 Hz and made the DC estimate need a full cycle
+// of held values.
+static const uint8_t kAdsSchedule[ADS_SCHEDULE_LEN] = {
+  2, 3, 2, 3, 2, 3, 2, 3,
+  0, 2, 3, 1, 2, 3, 4
+};
+static uint8_t  adsStep = 0;
 static uint8_t  adsChannel = 0;
+static uint8_t  adsSeenMask = 0;
 static bool     adsPresent = false;
+static bool     adsClockOk = false;   // running at 400 kHz; arming needs it
 static uint32_t adsLastConvUs = 0;
 static uint32_t adsConvStartUs = 0;
+static uint32_t adsSamplePhase = 0;
+static uint32_t adsSampleUs = 0;
+static uint32_t adsChTime[ADS_CH_COUNT] = {0};
 static bool     adsOsrWarned = false;   // OSR_DONE never asserted, reported once
+static bool     adsSlowWarned = false;  // running on the 100 kHz fallback
+// Freshness limit for one channel.  The weighted sweep refreshes each
+// midpoint about every 2 ms and the slow channels once per ~13 ms (host model),
+// so 50 ms means several complete sweeps were missed: the chip (or the bus) has stopped
+// delivering rather than merely skipped a slot.
+#define ADS_STALE_US 50000UL
+// Input-rail reading age that still counts as "battery present" for the power
+// mode.  Looser than ADS_STALE_US on purpose: a loop stall (the 120 ms
+// very-long-hold flash, or the sleep pass) must not read as a lost battery
+// and flip the mode.  Entry into inverter mode still needs a fresh sample.
+#define RAIL_MODE_STALE_US 500000UL
 enum AdsPhase : uint8_t { ADS_IDLE, ADS_WAITING, ADS_READING };
 static AdsPhase adsPhase = ADS_IDLE;
 
@@ -1878,6 +1757,11 @@ static void parkGatesLow() {
 static void setFault(const char *reason) {
   if (pFault) return;
   pFault = true;
+  // A fault always leaves the bridge disarmed.  Keeping pArmed true while
+  // faulted made the serial report say ARMED=Y and let a stale arm state
+  // survive into the next arm attempt; the only safe invariant is
+  // FAULT => not armed.
+  pArmed = false;
   pState = POWER_FAULT;
   stopBridge();
   strncpy(pFaultReason, reason, sizeof(pFaultReason) - 1);
@@ -1889,11 +1773,22 @@ static void setFault(const char *reason) {
   }
 }
 
+// Input-rail hysteresis state.  File scope (reset by stopBridge()) so a
+// new run does not inherit the previous run's hysteresis side.  It is NOT
+// cleared by startBridge(): the WAIT_BUS gate proves the rail live on the
+// same tick, and a fresh un-hysteretic sample on the first powered tick
+// would coin-flip a battery sitting exactly on an 11/14 V edge.
+// Starts true: with no prior reading the wide window is the safe default —
+// a truly bad rail (0 V, 20 V) fails even the wide window, while a strict
+// first sample at exactly 11.0 V plus a millivolt of noise faults a good
+// battery half the time.  The state self-corrects on the first evaluation.
+static bool inputRailWasValid = true;
+
 static bool inputRailValid() {
-  static bool wasValid = false;
+  bool wasValid = inputRailWasValid;
   bool ok = (vIn >= VIN_LOW - (wasValid ? VIN_HYST : 0.0f)) &&
             (vIn <= VIN_HIGH + (wasValid ? VIN_HYST : 0.0f));
-  wasValid = ok;
+  inputRailWasValid = ok;
   return ok;
 }
 
@@ -1905,19 +1800,22 @@ static bool busValidForStart() {
 static bool busValidForRun() {
   // The bus can be disturbed by a load step and by the 120 Hz ripple, so a
   // single out-of-range sample is not a fault.  BUS_RUN_GRACE_TICKS
-  // consecutive out-of-range samples (30 ms at the 100 Hz control loop)
-  // are tolerated before the bridge is stopped; the sample after that
-  // faults.  One tick of grace was not enough: a 20 ms excursion, which
-  // the bus can produce on a load dump, used to stop the inverter.
-  static uint8_t badTicks = 0;
+  // consecutive out-of-range control ticks (30 ms at the 100 Hz control
+  // loop) are tolerated before the bridge is stopped; the tick after that
+  // faults.  One tick of grace was not enough: a 20 ms excursion, which the
+  // bus can produce on a load dump, used to stop the inverter.
+  //
+  // badTicks is file scope and is cleared by startBridge()/stopBridge().
+  // As a function-static it survived a fault, so the first run after a clear
+  // could fault on its first out-of-range tick with no grace at all.
   bool ok = (vBus >= VBUS_NOMINAL - VBUS_RUN_WINDOW) &&
             (vBus <= VBUS_NOMINAL + VBUS_RUN_WINDOW);
   if (ok) {
-    badTicks = 0;
+    busBadTicks = 0;
     return true;
   }
-  if (badTicks < BUS_RUN_GRACE_TICKS) {
-    badTicks++;
+  if (busBadTicks < BUS_RUN_GRACE_TICKS) {
+    busBadTicks++;
     return true;    // grace
   }
   return false;
@@ -1968,15 +1866,31 @@ static bool adsReadResult(uint8_t ch, uint16_t *code) {
   return true;
 }
 
-static bool adsProbe() {
+static bool adsProbe(bool fastClock) {
   uint8_t status = 0;
   uint8_t cfg = 0;
+  adsClockOk = false;
   // A probe is also the recovery path: abandon any half-finished conversion
-  // and force a fresh five-channel sweep after a bus glitch.
+  // and force a fresh weighted sweep after a bus glitch.
   adsPhase = ADS_IDLE;
   adsConvStartUs = 0;
-  adsChannel = 0;
+  adsStep = 0;
+  adsChannel = kAdsSchedule[0];
+  adsSeenMask = 0;
   adsSwept = false;
+  adsOsrWarned = false;
+  adsRepCode[0] = adsRepCode[1] = 0xFFFF;
+  adsRepCount[0] = adsRepCount[1] = 0;
+  for (uint8_t i = 0; i < ADS_CH_COUNT; i++) adsChTime[i] = 0;
+  // Drop the measurement window.  Its samples were taken with the old
+  // phase reference and channel state; a fresh run rebuilds it.
+  midIndexA = midIndexB = 0;
+  midCountA = midCountB = 0;
+  midDirty = false;
+  rmsValid = false;
+  primaryDc = 0.0f;
+  primaryRms = 0.0f;
+  inferredOutletRms = 0.0f;
   if (!adsReadReg(ADS7128_SYSTEM_STATUS, &status)) return false;
   // Force DATA_CFG to not append status bits, so reads are pure 16-bit codes.
   if (!adsWriteReg(ADS7128_DATA_CFG, 0x00)) return false;
@@ -1984,19 +1898,56 @@ static bool adsProbe() {
   // (datasheet §8.3.6 and §8.3.14); set STATS_EN once and read it back.
   if (!adsSetBits(ADS7128_GENERAL_CFG, 0x20)) return false;
   if (!adsReadReg(ADS7128_GENERAL_CFG, &cfg)) return false;
-  return (cfg & 0x20) != 0;
+  bool ok = (cfg & 0x20) != 0;
+  // The chip answered.  Only a probe made at 400 kHz counts as a clock the
+  // weighted sweep can run on; a 100 kHz chip is detectable but must not be
+  // armed (see the sweep comment above).
+  adsClockOk = ok && fastClock;
+  return ok;
 }
 
 static float adsCodeToVolts(uint16_t code) {
   return (float)code * 3.3f / 4096.0f;
 }
 
+static void pushMidSample(MidSample *ring, uint8_t *index, uint8_t *count,
+                          float v, uint32_t phase, uint32_t tUs) {
+  MidSample &sample = ring[*index];
+  sample.tUs = tUs;
+  sample.v = v;
+  sample.s = sineAt(phase);
+  sample.c = sineAt(phase + 0x40000000UL);   // +90 degrees in 2^32 units
+  *index = (uint8_t)((*index + 1) % RMS_RING_SIZE);
+  if (*count < RMS_RING_SIZE) (*count)++;
+}
+
 static bool adsStartConversion(uint8_t ch) {
   if (!adsWriteReg(ADS7128_CHANNEL_SEL, ch & 0x0F)) return false;
   if (!adsSetBits(ADS7128_GENERAL_CFG, 0x08)) return false;  // CNVST; STATS_EN stays set
   adsConvStartUs = micros();
+  adsSampleUs = adsConvStartUs;
+  // The 60 Hz phase at the instant the conversion was requested -- or rather,
+  // just after the two I2C writes that request it (~100-200 us later, i.e.
+  // 2-4 degrees at 60 Hz).  That error is common to both midpoint channels,
+  // so it cancels in the differential fit; capturing the phase before the
+  // writes would cost a second read of a volatile the ISR is updating.
+  adsSamplePhase = sinePhase;
   adsPhase = ADS_WAITING;
   return true;
+}
+
+// One failure path for every ADS7128 transaction.  Dropping the 400 kHz
+// flag is deliberate: a chip that has stopped answering at 400 kHz is not a
+// chip to arm the bridge on, even if the 100 kHz probe still succeeds.
+static void adsFail(const char *reason) {
+  adsPresent = false;
+  adsClockOk = false;
+  adsPhase = ADS_IDLE;
+  adsSwept = false;
+  adsSeenMask = 0;
+  adsRepCode[0] = adsRepCode[1] = 0xFFFF;
+  adsRepCount[0] = adsRepCount[1] = 0;
+  if (pArmed) setFault(reason);
 }
 
 static void adsService() {
@@ -2006,10 +1957,7 @@ static void adsService() {
     // Poll OSR_DONE (bit 3).  Typical conversion < 2 us.
     uint8_t status = 0;
     if (!adsReadReg(ADS7128_SYSTEM_STATUS, &status)) {
-      adsPresent = false;
-      adsPhase = ADS_IDLE;
-      adsSwept = false;
-      if (pArmed) setFault("ADS7128 NACK");
+      adsFail("ADS7128 NACK");
       return;
     }
     if (status & ADS7128_OSR_DONE) {
@@ -2019,10 +1967,7 @@ static void adsService() {
       // bits (datasheet 8.5.2.2), which is not the same operation on a
       // write-1-to-clear bit.
       if (!adsWriteReg(ADS7128_SYSTEM_STATUS, ADS7128_OSR_DONE)) {
-        adsPresent = false;
-        adsPhase = ADS_IDLE;
-        adsSwept = false;
-        if (pArmed) setFault("ADS7128 NACK");
+        adsFail("ADS7128 NACK");
         return;
       }
       adsPhase = ADS_READING;
@@ -2044,40 +1989,74 @@ static void adsService() {
   }
 
   if (adsPhase == ADS_READING) {
+    uint8_t ch = adsChannel;
     uint16_t code = 0;
-    if (!adsReadResult(adsChannel, &code)) {
-      adsPresent = false;
-      adsPhase = ADS_IDLE;
-      adsSwept = false;
-      if (pArmed) setFault("ADS7128 read");
+    if (!adsReadResult(ch, &code)) {
+      adsFail("ADS7128 read");
       return;
     }
     float volts = adsCodeToVolts(code);
-    switch (adsChannel) {
+    uint32_t nowUs = micros();
+    if ((ch == 2 || ch == 3) &&
+        (pState == POWER_STARTING || pState == POWER_RUNNING)) {
+      // Silent-death detector, evaluated at sample time so a dead chip is
+      // named before its stale samples can trip the DC-offset check with a
+      // misleading reason.  Three identical 12-bit codes in a row on a
+      // switching bridge is not a measurement; see the declaration above.
+      uint8_t m = (uint8_t)(ch - 2);
+      if (code == adsRepCode[m]) {
+        if (++adsRepCount[m] >= 3) {
+          adsFail("sensor stale");
+          return;
+        }
+      } else {
+        adsRepCode[m] = code;
+        adsRepCount[m] = 0;
+      }
+    }
+    switch (ch) {
       case 0: vIn   = volts / DIV_AIN0; break;
       case 1: vBus  = volts / DIV_AIN1; break;
-      case 2: vMidA = volts / DIV_AIN2; break;
-      case 3: vMidB = volts / DIV_AIN3; break;
+      case 2:
+        vMidA = volts / DIV_AIN2;
+        pushMidSample(midRingA, &midIndexA, &midCountA,
+                      vMidA, adsSamplePhase, adsSampleUs);
+        midDirty = true;
+        midLastSampleUs = nowUs;
+        break;
+      case 3:
+        vMidB = volts / DIV_AIN3;
+        pushMidSample(midRingB, &midIndexB, &midCountB,
+                      vMidB, adsSamplePhase, adsSampleUs);
+        midDirty = true;
+        midLastSampleUs = nowUs;
+        break;
       case 4: iIn   = volts / INA240_V_PER_A; break;
     }
-    if (adsChannel == 4) adsSwept = true;
-    adsChannel = (adsChannel + 1) % ADS_CH_COUNT;
+    adsChTime[ch] = nowUs;
+    adsSeenMask |= (uint8_t)(1u << ch);
+    if (adsSeenMask == (uint8_t)((1u << ADS_CH_COUNT) - 1u)) adsSwept = true;
+    adsStep = (uint8_t)((adsStep + 1) % ADS_SCHEDULE_LEN);
     adsPhase = ADS_IDLE;
-    adsLastConvUs = micros();
+    adsLastConvUs = nowUs;
   }
 
   if (adsPhase == ADS_IDLE) {
-    // Throttle slightly to keep the loop responsive; each channel is still
-    // read many times per mains cycle.
+    // Throttle slightly to keep the loop responsive.  The weighted schedule
+    // still gives each midpoint a sample about every 2 ms.
     if (micros() - adsLastConvUs >= 200) {
+      adsChannel = kAdsSchedule[adsStep];
       if (!adsStartConversion(adsChannel)) {
-        adsPresent = false;
-        adsPhase = ADS_IDLE;
-        adsSwept = false;
-        if (pArmed) setFault("ADS7128 NACK");
+        adsFail("ADS7128 NACK");
       }
     }
   }
+}
+
+// Freshness of one ADS channel, against the millisecond-scale sweep.
+static bool adsFresh(uint8_t ch, uint32_t nowUs) {
+  if (ch >= ADS_CH_COUNT || adsChTime[ch] == 0) return false;
+  return (uint32_t)(nowUs - adsChTime[ch]) <= ADS_STALE_US;
 }
 
 static float readTempAdc(uint8_t adcInput) {
@@ -2095,6 +2074,14 @@ static float readTempAdc(uint8_t adcInput) {
   return (volts - 0.5f) / 0.01f;
 }
 
+static bool tempPlausible(float t) {
+  // The TMP235 is specified over -40..150 C, which is 0.1 V..2.0 V at its
+  // output.  A reading outside that is not a temperature: it is an open or
+  // shorted sensor, and treating it as a temperature would either hide a
+  // real over-temp (a short reads cold) or invent one (an open reads hot).
+  return (t >= TEMP_VALID_MIN_C) && (t <= TEMP_VALID_MAX_C);
+}
+
 static void readTemperatures() {
   // Sample each sensor occasionally; TMP235 is slow and thermal mass is large.
   static uint8_t tempPhase = 0;
@@ -2102,90 +2089,161 @@ static void readTemperatures() {
   uint32_t now = millis();
   if (now - lastTempMs < 100) return;
   lastTempMs = now;
-  if (tempPhase == 0) tempCtrl = readTempAdc(0);
-  else                tempInv  = readTempAdc(1);
+  if (tempPhase == 0) {
+    tempCtrl = readTempAdc(0);
+    tempCtrlValid = tempPlausible(tempCtrl);
+  } else {
+    tempInv = readTempAdc(1);
+    tempInvValid = tempPlausible(tempInv);
+  }
   tempPhase ^= 1;
 }
 
-static void updateRmsAndDc() {
-  uint32_t nowUs = micros();
-  if (nowUs - rmsLastSampleUs < RMS_SAMPLE_US) return;
-  rmsLastSampleUs = nowUs;
+// Least-squares fit of v = dc + a*sin(theta) + b*cos(theta) over the samples
+// that fall inside the last mains period.  Returns ok=false when there are
+// too few samples, when they do not span enough phase, or when the normal
+// matrix is too close to singular to trust.
+struct FundamentalFit {
+  float dc;
+  float a;
+  float b;
+  bool  ok;
+};
 
-  float diff = vMidA - vMidB;            // transformer primary differential
-  rmsBuf[rmsIndex] = diff;
-  rmsTime[rmsIndex] = nowUs;
-  rmsIndex = (uint8_t)((rmsIndex + 1) % RMS_RING_SIZE);
-  if (rmsCount < RMS_RING_SIZE) rmsCount++;
+static FundamentalFit fitMidRing(const MidSample *ring, uint8_t index,
+                                 uint8_t count, uint32_t nowUs) {
+  FundamentalFit fit = {0.0f, 0.0f, 0.0f, false};
+  float n = 0.0f, ss = 0.0f, sc = 0.0f;
+  float sss = 0.0f, scc = 0.0f, ssc = 0.0f;
+  float sy = 0.0f, sys = 0.0f, syc = 0.0f;
+  uint32_t newestUs = 0, oldestUs = 0;
+  uint8_t used = 0;
 
-  // Walk back over the samples that fall inside one mains period.  The
-  // window is TIME-based: the main loop shares the bus with the ADS7128, so
-  // the sample interval is 130-260 us and a fixed sample count is not a
-  // fixed length of time.
-  uint8_t n = 0;
-  float sum = 0.0f;
-  float sq = 0.0f;
-  uint32_t oldestUs = nowUs;
-  for (uint8_t i = 0; i < rmsCount; i++) {
-    uint8_t idx =
-        (uint8_t)((rmsIndex + RMS_RING_SIZE - 1 - i) % RMS_RING_SIZE);
-    uint32_t age = nowUs - rmsTime[idx];
+  for (uint8_t i = 0; i < count; i++) {
+    uint8_t idx = (uint8_t)((index + RMS_RING_SIZE - 1 - i) % RMS_RING_SIZE);
+    uint32_t age = nowUs - ring[idx].tUs;
     if (age > RMS_WINDOW_US) break;
-    float v = rmsBuf[idx];
-    sum += v;
-    sq += v * v;
-    oldestUs = rmsTime[idx];
-    n++;
+    float s = ring[idx].s;
+    float c = ring[idx].c;
+    float v = ring[idx].v;
+    if (used == 0) newestUs = ring[idx].tUs;
+    oldestUs = ring[idx].tUs;
+    used++;
+    n   += 1.0f;
+    ss  += s;
+    sc  += c;
+    sss += s * s;
+    scc += c * c;
+    ssc += s * c;
+    sy  += v;
+    sys += v * s;
+    syc += v * c;
   }
 
-  // The window is full when the next older sample would fall outside it.
-  uint32_t spanUs = nowUs - oldestUs;
-  if (n < RMS_MIN_SAMPLES || spanUs + RMS_SAMPLE_US < RMS_WINDOW_US) {
-    rmsValid = false;
-    return;
-  }
-  rmsValid = true;
+  if (used < RMS_MIN_SAMPLES) return fit;
+  if ((uint32_t)(newestUs - oldestUs) < RMS_MIN_SPAN_US) return fit;
 
-  // DC offset over the same window.
-  primaryDc = sum / (float)n;
+  // Cramer's rule on the 3x3 normal equations.  With phases spread over
+  // most of a cycle the matrix is well conditioned; a collapsed set (all
+  // samples at the same phase) gives a near-zero determinant and is
+  // rejected rather than returning a wild DC.
+  float det = n * (sss * scc - ssc * ssc)
+            - ss * (ss * scc - ssc * sc)
+            + sc * (ss * ssc - sss * sc);
+  float scale = n * n * n;
+  if (fabsf(det) < 1e-3f * scale) return fit;
 
-  // The DC-offset trip lives here, not in the control loop.  The estimate
-  // only becomes meaningful once the window holds a full mains period, and
-  // the whole point of the lower threshold (see DC_TRIP_V above) is that the
-  // trip has to react within the same millisecond that the offset appears.
-  // Evaluating it here, on every RMS sample, instead of on the 100 Hz
-  // control tick, is what makes the detection beat the saturation knee.
-  //
-  // It is only evaluated once the window is FULL.  A part-full window is
-  // shorter than a mains cycle, so the 60 Hz fundamental does not cancel in
-  // it: in a 12.5 ms window the mean of the fundamental can be 0.79 V, which
-  // is above the trip threshold and would fire on every start-up.  With the
-  // full 16.667 ms window the fundamental cancels.
-  if (pArmed && rmsValid &&
-      (pState == POWER_RUNNING || pState == POWER_STARTING)) {
-    if (fabsf(primaryDc) > DC_TRIP_V) {
-      if (++dcFaultCount >= DC_TRIP_SAMPLES) {
-        setFault("DC offset");
-        return;
-      }
-    } else {
+  fit.dc = (sy * (sss * scc - ssc * ssc)
+            - ss * (sys * scc - ssc * syc)
+            + sc * (sys * ssc - sss * syc)) / det;
+  fit.a  = (n * (sys * scc - ssc * syc)
+            - sy * (ss * scc - ssc * sc)
+            + sc * (ss * syc - sys * sc)) / det;
+  fit.b  = (n * (sss * syc - ssc * sys)
+            - ss * (ss * syc - sys * sc)
+            + sy * (ss * ssc - sss * sc)) / det;
+  fit.ok = true;
+  return fit;
+}
+
+static void updateRmsAndDc() {
+  if (!midDirty) {
+    // A fit must not outlive its data.  The weighted sweep normally produces
+    // a new midpoint sample (either channel) about every millisecond; if none has arrived for
+    // RMS_STALE_US the last fit is no longer a measurement of the present
+    // drive, so drop it.  Without this, rmsValid would stay true forever
+    // after the ADS7128 stopped converting without NACKing.
+    if (rmsValid &&
+        (uint32_t)(micros() - midLastSampleUs) > RMS_STALE_US) {
+      rmsValid = false;
+      primaryDc = 0.0f;
+      primaryRms = 0.0f;
+      inferredOutletRms = 0.0f;
       dcFaultCount = 0;
     }
-  } else {
+    return;
+  }
+  midDirty = false;
+
+  // The fit is only meaningful while the bridge is driving: outside a run
+  // sinePhase is frozen, so every sample has the same phase and the fit is
+  // correctly rejected.  The window is also cleared at start and stop.
+  if (!pArmed || (pState != POWER_STARTING && pState != POWER_RUNNING)) {
+    rmsValid = false;
+    primaryDc = 0.0f;
+    primaryRms = 0.0f;
+    inferredOutletRms = 0.0f;
     dcFaultCount = 0;
+    return;
   }
 
-  // RMS of the primary differential.  Var = E[x^2] - E[x]^2; the values are
-  // around 20 V so the subtraction is well conditioned.
-  float variance = sq / (float)n - primaryDc * primaryDc;
-  if (variance < 0.0f) variance = 0.0f;
-  primaryRms = sqrtf(variance);
+  uint32_t nowUs = micros();
+  FundamentalFit fa = fitMidRing(midRingA, midIndexA, midCountA, nowUs);
+  FundamentalFit fb = fitMidRing(midRingB, midIndexB, midCountB, nowUs);
+  if (!fa.ok || !fb.ok) {
+    rmsValid = false;
+    primaryDc = 0.0f;
+    primaryRms = 0.0f;
+    inferredOutletRms = 0.0f;
+    dcFaultCount = 0;
+    return;
+  }
+
+  rmsValid = true;
+
+  // Differential DC and fundamental.  Each channel's fit has already
+  // removed its own 60 Hz term, so this is not the mean of a staircase.
+  primaryDc = fa.dc - fb.dc;
+  float a = fa.a - fb.a;
+  float b = fa.b - fb.b;
+  primaryRms = sqrtf(a * a + b * b) * 0.70710678f;   // 1/sqrt(2)
+
   // The NO-LOAD (open-circuit) ratio applied to the drive.  This
   // OVER-estimates the outlet under load (that is what the droop
   // compensation corrects), so it is used for the bridge plausibility
   // check only.  It is the same no-load ratio the droop model uses, so
   // the two never disagree about what the transformer does at no load.
   inferredOutletRms = primaryRms * TRANSFORMER_NOLOAD_RATIO;
+
+  // The DC-offset trip lives here, not in the control loop.  It is
+  // evaluated on every new fit, which the weighted sweep produces about
+  // every millisecond while the bridge is running.  See DC_TRIP_V for why the
+  // estimate is a fit rather than a window mean, and for the latency this
+  // actually achieves.
+  //
+  // While a code repeat is pending on either midpoint (see the silent-death
+  // detector above), the trip stands down and its counter resets: frozen
+  // data stamped with fresh phases looks like an offset to a fit, and a
+  // judgement made on dead data would only misname the fault.
+  bool dcSuspect = (adsRepCount[0] >= 1) || (adsRepCount[1] >= 1);
+  if (!dcSuspect && fabsf(primaryDc) > DC_TRIP_V) {
+    if (++dcFaultCount >= DC_TRIP_SAMPLES) {
+      setFault("DC offset");
+      return;
+    }
+  } else {
+    dcFaultCount = 0;
+  }
 }
 
 /* ================================================================
@@ -2291,11 +2349,13 @@ static void __not_in_flash_func(writeBridgeDuty)(float m) {
   float dA = (1.0f + m) * 0.5f;
   float dB = (1.0f - m) * 0.5f;
 
-  // Convert to PWM compare values (integer ticks).
-  uint16_t ccAhi = (uint16_t)(dA * (float)(PWM_TOP + 1));
-  uint16_t ccAlo = (uint16_t)(dA * (float)(PWM_TOP + 1) + 2.0f * (float)PWM_DT_TICKS);
-  uint16_t ccBhi = (uint16_t)(dB * (float)(PWM_TOP + 1));
-  uint16_t ccBlo = (uint16_t)(dB * (float)(PWM_TOP + 1) + 2.0f * (float)PWM_DT_TICKS);
+  // Convert to PWM compare values (integer ticks).  Rounded, not truncated:
+  // truncation shaves up to a tick off the programmed gap, leaving 493 ns
+  // worst case against the 500 ns claim.
+  uint16_t ccAhi = (uint16_t)(dA * (float)(PWM_TOP + 1) + 0.5f);
+  uint16_t ccAlo = (uint16_t)(dA * (float)(PWM_TOP + 1) + 2.0f * (float)PWM_DT_TICKS + 0.5f);
+  uint16_t ccBhi = (uint16_t)(dB * (float)(PWM_TOP + 1) + 0.5f);
+  uint16_t ccBlo = (uint16_t)(dB * (float)(PWM_TOP + 1) + 2.0f * (float)PWM_DT_TICKS + 0.5f);
 
   if (ccAlo > PWM_TOP) ccAlo = PWM_TOP;
   if (ccBlo > PWM_TOP) ccBlo = PWM_TOP;
@@ -2324,6 +2384,17 @@ static const float kSineTable[SINE_TABLE_SIZE + 1] = {
   +0.000000000f,
 };
 
+// Look up the sine of a 2^32 phase, with the same linear interpolation the
+// ISR uses.  The fit needs the phase at each ADS7128 conversion; cos is
+// sineAt(phase + 2^30), i.e. +90 degrees.
+static float sineAt(uint32_t phase) {
+  uint32_t idx = (phase >> 26) & 0x3F;
+  uint32_t frac = (phase >> 18) & 0xFF;
+  float s0 = kSineTable[idx];
+  float s1 = kSineTable[idx + 1];
+  return s0 + (s1 - s0) * ((float)frac * (1.0f / 256.0f));
+}
+
 // Once per 20 kHz carrier, on the slice-0 wrap: advance 60 Hz phase and
 // write all four compares.  Slice 0 wraps last in the three-slice sequence,
 // so this leaves nearly a full carrier before the next slice wrap and all
@@ -2341,14 +2412,17 @@ static void __not_in_flash_func(onPwmWrap)() {
 }
 
 static void resetMeasurementWindow() {
-  // Drop the measurement window.  It holds the difference between the two
-  // bridge midpoints, and the tail of a run that has just ended (or the
-  // idle samples that preceded one) is not a measurement of anything:
-  // keeping it would let the filter's settling transient look like a DC
-  // offset to the trip in updateRmsAndDc().  The window refills from the
+  // Drop both midpoint rings.  They hold samples from the previous run (or
+  // the idle period before this one), and the filter's settling transient is
+  // not a measurement of anything: keeping it would let the first fit of a
+  // new run see a step and look like a DC offset.  The rings refill from the
   // new run.
-  rmsCount = 0;
-  rmsIndex = 0;
+  midIndexA = 0;
+  midIndexB = 0;
+  midCountA = 0;
+  midCountB = 0;
+  midDirty = false;
+  midLastSampleUs = 0;
   rmsValid = false;
   primaryDc = 0.0f;
   primaryRms = 0.0f;
@@ -2364,8 +2438,21 @@ static void stopBridge() {
   mRamp = 0.0f;
   outMissingCount = 0;
   dcFaultCount = 0;
+  adsRepCode[0] = adsRepCode[1] = 0xFFFF;
+  adsRepCount[0] = adsRepCount[1] = 0;
+  outOvCount = 0;
+  iinOverCount = 0;
+  railBadTicks = 0;
+  warnedCurrent = false;
+  warnedTemp = false;
   outOfReachCount = 0;
   loadHeavyCount = 0;
+  tempCtrlOverCount = 0;
+  tempInvOverCount = 0;
+  tempInvalidCount = 0;
+  busBadTicks = 0;
+  rmsInvalidSinceMs = 0;
+  inputRailWasValid = true;
   mReqNow = 0.0f;
   driveLimitNow = 0.0f;
   regSaturated = false;
@@ -2430,6 +2517,16 @@ static void startBridge() {
   if (!sensorsOk) return;
   if (!busValidForStart()) return;
   resetMeasurementWindow();
+  busBadTicks = 0;
+  // NOTE: inputRailWasValid is deliberately NOT cleared here.  This function
+  // runs only from the WAIT_BUS branch, which proves the rail live on the
+  // same tick (and every tick while waiting), so there is no stale state to
+  // discard.  Clearing it would force one un-hysteretic sample on the first
+  // powered tick, where a battery sitting exactly on the 11.0 V edge plus a
+  // millivolt of noise coin-flips an instant "input rail" fault.
+  // (stopBridge() still resets it; the next proof happens in IDLE/WAIT_BUS,
+  // where a false reading only inhibits, never faults.)
+  rmsInvalidSinceMs = 0;
   enablePwmSlices();
   rampStartMs = millis();
   mRamp = 0.0f;
@@ -2446,32 +2543,113 @@ static void runControl(uint32_t nowMs) {
   // works on this estimate; it is the only outlet number the board has.
   updateOutletEstimate();
 
-  // Warnings (do not trip).
-  static bool warnedCurrent = false;
-  static bool warnedTemp = false;
+  // Warnings (do not trip).  Latched until the condition clears, and reset
+  // by stopBridge() so a fault clear re-warns if the condition is still
+  // present -- otherwise a persistent over-current would print once and
+  // never again.
   if (iIn >= IIN_WARN && !warnedCurrent) {
     warnedCurrent = true;
     if (Serial) Serial.println("WARN: input current");
   } else if (iIn < IIN_WARN - 1.0f) {
     warnedCurrent = false;
   }
-  if (((tempCtrl >= TEMP_WARN_C) || (tempInv >= TEMP_WARN_C)) && !warnedTemp) {
+  bool ctrlHot = tempCtrlValid && (tempCtrl >= TEMP_WARN_C);
+  bool invHot  = tempInvValid  && (tempInv  >= TEMP_WARN_C);
+  if ((ctrlHot || invHot) && !warnedTemp) {
     warnedTemp = true;
     if (Serial) Serial.println("WARN: temperature");
-  } else if ((tempCtrl < TEMP_WARN_C - 5.0f) && (tempInv < TEMP_WARN_C - 5.0f)) {
+  } else if (!ctrlHot && !invHot &&
+             (!tempCtrlValid || tempCtrl < TEMP_WARN_C - 5.0f) &&
+             (!tempInvValid || tempInv < TEMP_WARN_C - 5.0f)) {
     warnedTemp = false;
   }
 
   // Protections are only evaluated while the bridge is armed.  A voltage
   // reading alone is not proof the hardware is safe to switch.
   if (pArmed) {
-    if (iIn >= IIN_TRIP)      { setFault("over-current"); return; }
-    if (tempCtrl >= TEMP_TRIP_C) { setFault("over-temp CTRL"); return; }
-    if (tempInv  >= TEMP_TRIP_C) { setFault("over-temp INV"); return; }
-    if (!inputRailValid())    { setFault("input rail"); return; }
+    // Sensor liveness first.  A probe that succeeded once is not proof the
+    // chip is still answering: adsFail() catches a NACK, but a chip that
+    // stops converting without NACKing, or a bus that goes quiet, would leave
+    // the last good values in place and the protections comparing stale data.
+    // Checking this before the rail/bus comparisons attributes a dead bus to
+    // the sensor instead of to whichever voltage happened to be checked first.
+    uint32_t nowUs = micros();
+    bool adsAlive = adsPresent &&
+                    adsFresh(0, nowUs) && adsFresh(1, nowUs) &&
+                    adsFresh(2, nowUs) && adsFresh(3, nowUs) &&
+                    adsFresh(4, nowUs);
+    // A lost sensor is a fault while the bridge is driving; while it is
+    // armed but idle, sensorsOk going false simply prevents a start.
+    if ((pState == POWER_RUNNING || pState == POWER_STARTING) && !adsAlive) {
+      setFault("sensor stale");
+      return;
+    }
+    // Over-current, debounced like the other fast trips: a single noisy
+    // INA240 sample must not stop the inverter, and 20 ms is far shorter
+    // than any thermal or magnetic consequence at 20 A.
+    if (iIn >= IIN_TRIP) {
+      if (++iinOverCount >= IIN_TRIP_TICKS) { setFault("over-current"); return; }
+    } else {
+      iinOverCount = 0;
+    }
+    // Input rail, debounced like the other trips: one bad sample with the
+    // bridge armed must not stop the inverter, and 30 ms is far shorter
+    // than any consequence of a genuinely lost input.
+    if (!inputRailValid()) {
+      if (++railBadTicks >= RAIL_TRIP_TICKS) { setFault("input rail"); return; }
+    } else {
+      railBadTicks = 0;
+    }
 
     if (pState == POWER_RUNNING || pState == POWER_STARTING) {
       if (!busValidForRun()) { setFault("bus voltage"); return; }
+
+      // Temperature validity and over-temperature.  A reading outside the
+      // TMP235's -40..150 C range is an open or shorted sensor, not a
+      // temperature: a short reads cold and would hide a real over-temp, an
+      // open reads hot and would invent one.  Both conditions are debounced
+      // over TEMP_TRIP_TICKS (30 ms), which is longer than a converter
+      // glitch and far shorter than any real thermal event.
+      if (!tempCtrlValid || !tempInvValid) {
+        if (++tempInvalidCount >= TEMP_TRIP_TICKS) {
+          setFault("temperature sensor");
+          return;
+        }
+      } else {
+        tempInvalidCount = 0;
+        if (tempCtrl >= TEMP_TRIP_C) {
+          if (++tempCtrlOverCount >= TEMP_TRIP_TICKS) {
+            setFault("over-temp CTRL");
+            return;
+          }
+        } else {
+          tempCtrlOverCount = 0;
+        }
+        if (tempInv >= TEMP_TRIP_C) {
+          if (++tempInvOverCount >= TEMP_TRIP_TICKS) {
+            setFault("over-temp INV");
+            return;
+          }
+        } else {
+          tempInvOverCount = 0;
+        }
+      }
+
+      // Measurement supervision.  The fit is allowed to be invalid for the
+      // few milliseconds it takes to fill at the start of a run, but a run
+      // that never regains a drive measurement has lost its DC, overvoltage
+      // and bridge-plausibility checks at once.  Treat that as a fault after
+      // RMS_INVALID_TRIP_MS rather than regulating on a stale estimate.
+      if (!rmsValid) {
+        if (rmsInvalidSinceMs == 0) {
+          rmsInvalidSinceMs = nowMs ? nowMs : 1;
+        } else if (nowMs - rmsInvalidSinceMs >= RMS_INVALID_TRIP_MS) {
+          setFault("no drive measurement");
+          return;
+        }
+      } else {
+        rmsInvalidSinceMs = 0;
+      }
 
       // Plausibility: the bridge midpoint differential must track the
       // commanded modulation.  This monitors the BRIDGE, not the outlet: an
@@ -2481,9 +2659,15 @@ static void runControl(uint32_t nowMs) {
         // droop-compensated, so this is the receptacle voltage the
         // estimate believes is present; the hard ceiling is
         // OUTLET_V_MAX (125 V) and this trip is the backstop above it.
+        // Two ticks (20 ms) is long enough to reject a single fit outlier
+        // and short enough to keep the drive inside the receptacle rating.
         if (outletEstimate() > OUTPUT_TARGET_RMS * OUTPUT_OV_FACTOR) {
-          setFault("output overvoltage");
-          return;
+          if (++outOvCount >= OUTPUT_OV_TICKS) {
+            setFault("output overvoltage");
+            return;
+          }
+        } else {
+          outOvCount = 0;
         }
         float busForCheck = (vBus > 1.0f) ? vBus : VBUS_NOMINAL;
         // Expected bridge fundamental on the outlet scale, using the
@@ -2505,6 +2689,14 @@ static void runControl(uint32_t nowMs) {
         // within the same millisecond the offset appears -- see the
         // DC_TRIP_V comment.
       }
+    } else {
+      // Armed but not driving: no thermal or measurement supervision is
+      // needed, and the debounce counters must not carry into a later run.
+      tempCtrlOverCount = 0;
+      tempInvOverCount = 0;
+      tempInvalidCount = 0;
+      iinOverCount = 0;
+      railBadTicks = 0;
     }
   }
 
@@ -2566,9 +2758,13 @@ static void runControl(uint32_t nowMs) {
     // the estimated outlet is still below the target, the target is out
     // of reach: latch a fault instead of silently saturating.
     //
-    // The check comes FIRST so that no other fault masks it, and it is
-    // debounced (200 ms) because the integrator needs about 100 ms to
-    // walk into the clamp after a load step.
+    // It is evaluated before the load limit below, and neither of the
+    // checks above can mask it: an overvoltage requires the estimate to
+    // be above 126 V, the opposite of below-target, and the bridge-missing
+    // check requires the measured drive to be far BELOW the commanded
+    // drive, where this check requires it to track the clamp.  The
+    // debounce (200 ms) exists because the integrator needs about 100 ms
+    // to walk into the clamp after a load step.
     //
     // Only the PWM clamp counts.  The drive ceiling also carries the
     // OUTLET_V_MAX receptacle limit, which binds at low load; sitting
@@ -2640,18 +2836,31 @@ void powerBegin() {
   digitalWrite(GATE_B_HI_PIN, LOW);
   digitalWrite(GATE_B_LO_PIN, LOW);
 
-  // I2C for ADS7128 at 400 kHz, fall back to 100 kHz.  The default Wire
-  // timeout is the inherited Stream 1000 ms; cap it at 2 ms so a stuck bus
-  // cannot freeze the bridge long enough to saturate the transformer.
+  // I2C for ADS7128: 400 kHz is the operating bus.  A 100 kHz fallback is
+  // kept for DETECTION only.  The weighted sweep gives each midpoint
+  // channel a conversion about every 2 ms, and at 100 kHz one 3-byte
+  // transfer takes over 300 us, so the sweep would starve and the DC/RMS
+  // fit would not be a one-mains-period estimate.  Arming therefore
+  // requires a confirmed 400 kHz bus (adsClockOk), and powerService keeps
+  // retrying 400 kHz while the bridge is disarmed.
+  //
+  // The default Wire timeout is the inherited Stream 1000 ms; cap it at
+  // 2 ms so a stuck bus cannot freeze the bridge long enough to saturate
+  // the transformer.
   Wire.setSDA(8);
   Wire.setSCL(9);
   Wire.setTimeout(2);
   Wire.begin();
   Wire.setClock(400000);
-  adsPresent = adsProbe();
+  adsPresent = adsProbe(true);
   if (!adsPresent) {
+    // Find out whether the chip is present at all, so the warning is true.
     Wire.setClock(100000);
-    adsPresent = adsProbe();
+    adsPresent = adsProbe(false);
+    if (adsPresent) {
+      adsSlowWarned = true;
+      if (Serial) Serial.println("WARN: ADS7128 only at 100 kHz; arming disabled");
+    }
   }
   if (!adsPresent) {
     if (Serial) Serial.println("WARN: ADS7128 not found at boot");
@@ -2664,7 +2873,7 @@ void powerBegin() {
 
   // Hardware watchdog.  Safe because the UCC27735 inputs have internal
   // pull-downs that bring the gates low while the MCU is in reset.  The
-  // boot sweep and entropy init together are under 200 ms, but 500 ms keeps
+  // boot sweep is well under 200 ms, but 500 ms keeps
   // margin without weakening runtime hang detection.
   watchdog_enable(500, true);
 }
@@ -2672,15 +2881,24 @@ void powerBegin() {
 void powerService(uint32_t nowMs) {
   watchdog_update();
 
-  // Throttled ADS7128 probe retry (only while disarmed / not faulted).
-  if (!adsPresent && !pFault && (nowMs - lastProbeMs >= 500)) {
+  // Throttled ADS7128 probe retry, while disarmed and not faulted.  Try the
+  // 400 kHz operating bus first every time; the 100 kHz probe is only there
+  // to keep detection alive when the high-speed bus fails, and it never
+  // clears the arming refusal.
+  if ((!adsPresent || !adsClockOk) && !pArmed && !pFault &&
+      (nowMs - lastProbeMs >= 500)) {
     lastProbeMs = nowMs;
-    if (Wire.setClock(400000), adsProbe()) {
+    Wire.setClock(400000);
+    if (adsProbe(true)) {
       adsPresent = true;
-      Wire.setClock(400000);
+      adsSlowWarned = false;
     } else {
       Wire.setClock(100000);
-      adsPresent = adsProbe();
+      adsPresent = adsProbe(false);
+      if (adsPresent && !adsSlowWarned) {
+        adsSlowWarned = true;
+        if (Serial) Serial.println("WARN: ADS7128 only at 100 kHz; arming disabled");
+      }
     }
   }
 
@@ -2689,13 +2907,48 @@ void powerService(uint32_t nowMs) {
   updateRmsAndDc();
   runControl(nowMs);
 
-  // sensorsOk = probe succeeded AND at least one full sweep completed.
-  sensorsOk = adsPresent && adsSwept;
+  // sensorsOk = probe succeeded at 400 kHz AND a full weighted sweep has
+  // completed AND every channel is fresh AND both temperature readings are
+  // plausible.  The clock and freshness conditions are deliberate: the
+  // protections and the regulator are only as good as the data behind them,
+  // so a chip that is present but not being read on time is not "sensors
+  // OK" and must not be armed.
+  uint32_t sensorNowUs = micros();
+  sensorsOk = adsPresent && adsClockOk && adsSwept &&
+              adsFresh(0, sensorNowUs) && adsFresh(1, sensorNowUs) &&
+              adsFresh(2, sensorNowUs) && adsFresh(3, sensorNowUs) &&
+              adsFresh(4, sensorNowUs) &&
+              tempCtrlValid && tempInvValid;
 
   // Disarmed → never leave IDLE.
   if (!pArmed) {
     if (pState != POWER_FAULT) pState = POWER_IDLE;
-    if (pState == POWER_IDLE) stopBridge();
+    // Only park when the bridge is actually modulating.  stopBridge() is
+    // already called by setFault(), powerSetArmed(false) and powerClearFault();
+    // re-running it every loop while idle just churns the gate pins.
+    if (pState == POWER_IDLE && bridgeModulating) stopBridge();
+  }
+
+  // Power-mode detection: the input rail measurement decides which
+  // personality the board wears.  Entering inverter mode needs a fresh AIN0
+  // sample; leaving it needs AIN0 to have been read within RAIL_MODE_STALE_US,
+  // so a loop stall cannot flip the UI.  At boot (no sweep yet) the board is
+  // in 5V mode, which is also the safe side to fail toward.  Either transition
+  // parks the bridge and returns to idle: the home menu has a different
+  // item count per mode, so no cursor or mode survives the flip.  A flip
+  // while asleep changes the mode but does not wake the board.
+  bool railSeen = adsChTime[0] != 0 &&
+                  (uint32_t)(sensorNowUs - adsChTime[0]) <= RAIL_MODE_STALE_US;
+  if (!inverterPower && adsFresh(0, sensorNowUs) && vIn >= INVERTER_ENTER_V) {
+    inverterPower = true;
+    if (Serial) Serial.println("MODE: INVERTER");
+    powerSetArmed(false);
+    if (uiState != UI_SLEEP) returnToIdle();   // asleep: only the button wakes it
+  } else if (inverterPower && (!railSeen || vIn < INVERTER_EXIT_V)) {
+    inverterPower = false;
+    if (Serial) Serial.println("MODE: 5V");
+    powerSetArmed(false);
+    if (uiState != UI_SLEEP) returnToIdle();   // asleep: only the button wakes it
   }
 
   // State transitions (armed only).
@@ -2703,14 +2956,12 @@ void powerService(uint32_t nowMs) {
     if (pState == POWER_IDLE) {
       if (sensorsOk && inputRailValid()) {
         pState = POWER_WAIT_BUS;
-        if (Serial) Serial.println("STATE: WAIT_BUS");
       }
     } else if (pState == POWER_WAIT_BUS) {
       if (!inputRailValid()) {
         pState = POWER_IDLE;
       } else if (busValidForStart()) {
         startBridge();
-        if (Serial) Serial.println("STATE: STARTING");
       }
     } else if (pState == POWER_STARTING || pState == POWER_RUNNING) {
       // Handled in runControl(); fault path is a latch.
@@ -2770,21 +3021,27 @@ bool powerFaulted() {
 
 void powerClearFault() {
   if (!pFault) return;
+  // A clear attempt never leaves the bridge armed, even if it is refused:
+  // setFault() already disarmed, and enforcing it again costs nothing.
+  pArmed = false;
   // Over-current and over-temperature require a physical reset for safety.
   if (strncmp(pFaultReason, "over-", 5) == 0) {
     if (Serial) Serial.println("CLEAR ignored: over-fault latched");
     return;
   }
   pFault = false;
-  pArmed = false;
   pState = POWER_IDLE;
   memset(pFaultReason, 0, sizeof(pFaultReason));
-  // Force a fresh probe and a full sweep; a bus glitch may have left the
-  // ADS7128 mid-sequence even though the MCU kept running.
+  // Force a fresh 400 kHz probe and a full sweep; a bus glitch may have left
+  // the ADS7128 mid-sequence even though the MCU kept running.  The clock
+  // flag is cleared too, so the retry path has to prove the high-speed bus
+  // before the next arm.
   adsPresent = false;
+  adsClockOk = false;
   adsSwept = false;
   adsPhase = ADS_IDLE;
   adsConvStartUs = 0;
+  for (uint8_t i = 0; i < ADS_CH_COUNT; i++) adsChTime[i] = 0;
   lastProbeMs = 0;
   stopBridge();
   if (Serial) Serial.println("Fault cleared (disarmed)");
@@ -2796,18 +3053,44 @@ bool powerSensorsOk() { return sensorsOk; }
 
 bool powerSetArmed(bool on) {
   if (!on) {
+    if (!pArmed && pState != POWER_FAULT && !bridgeModulating) {
+      return true;              // already disarmed and parked
+    }
     pArmed = false;
     stopBridge();
     if (pState != POWER_FAULT) pState = POWER_IDLE;
     if (Serial) Serial.println("DISARMED");
     return true;
   }
+  // Arming is idempotent.  Resetting the state machine on a repeated ARM
+  // used to drop a RUNNING bridge back to IDLE, where powerService() parks
+  // the gates: a second "arm" request stopped the inverter.
+  if (pArmed) return true;
+  if (!inverterPower) {
+    if (Serial) Serial.println("ARM refused: no battery (5V mode)");
+    return false;
+  }
   if (pFault) {
     if (Serial) Serial.println("ARM refused: fault latched");
     return false;
   }
   if (!sensorsOk) {
-    if (Serial) Serial.println("ARM refused: no sensors");
+    // Covers the 100 kHz fallback, a stale channel and an implausible
+    // temperature as well as a missing chip.
+    if (!adsPresent) {
+      if (Serial) Serial.println("ARM refused: no sensors");
+    } else if (!adsClockOk) {
+      if (Serial) Serial.println("ARM refused: I2C not at 400 kHz");
+    } else {
+      if (Serial) Serial.println("ARM refused: sensors not ready");
+    }
+    return false;
+  }
+  if (!inputRailValid()) {
+    // Arming with the rail outside 11-14 V would only latch an input-rail
+    // fault 30 ms later, after nothing was ever driven.  Refuse here instead,
+    // where nothing is latched.
+    if (Serial) Serial.println("ARM refused: input rail out of 11-14 V");
     return false;
   }
   pArmed = true;
@@ -2821,10 +3104,14 @@ void powerSerialReport() {
   Serial.print(powerStateName());
   Serial.print(" ARMED="); Serial.print(powerArmed() ? "Y" : "N");
   Serial.print(" SENS=");  Serial.print(powerSensorsOk() ? "Y" : "N");
+  Serial.print(" MODE=");  Serial.print(inverterPower ? "INV" : "5V");
+  Serial.print(" I2C=");   Serial.print(adsClockOk ? 400 : (adsPresent ? 100 : 0));
   Serial.print(" VIN=");   Serial.print(vIn);
   Serial.print(" VBUS=");  Serial.print(vBus);
   Serial.print(" VOUT=");  Serial.print(outletEstimate());
   Serial.print(" VPRI=");  Serial.print(drivePrimaryRms());
+  Serial.print(" VDC=");   Serial.print(primaryDc);
+  Serial.print(" RMSV=");  Serial.print(rmsValid ? 1 : 0);
   Serial.print(" POUT=");  Serial.print(outputPowerEstimate());
   Serial.print(" ISEC=");  Serial.print(secCurrentEst);
   Serial.print(" UNSUP="); Serial.print(loadUnsupported ? 1 : 0);
@@ -2890,13 +3177,17 @@ void loop() {
   // Power-stage service runs every iteration and is strictly non-blocking.
   powerService(now);
 
+  entropy.update();
+
+  // Sleep blanks the LEDs once, in enterShutdown().  The loop itself must not
+  // be throttled here: the ADS7128 state machine advances one step per loop
+  // pass, so a delay() here stretches each sweep to ~225 ms and the battery
+  // reading goes stale.
   if (uiState == UI_SLEEP) {
     updateShutdown();
-    delay(5);
     return;
   }
 
-  entropy.update();
 
   if (inAnyMenu() && now - menuLastActivity > MENU_TIMEOUT_MS) {
     returnToIdle();
@@ -2904,8 +3195,7 @@ void loop() {
 
   // Treat the Inverter portal as a non-menu for gesture synthesis so its
   // double-tap (fault clear) is produced; other menus keep immediate taps.
-  Gesture g = button.poll((inAnyMenu() && uiState != UI_INVERTER) ||
-                          uiState == UI_IN_GAME);
+  Gesture g = button.poll(inAnyMenu() && uiState != UI_INVERTER);
   if (g != G_NONE) handleUI(g);
 
   if (now - lastFrame >= FRAME_MS) {
