@@ -82,6 +82,7 @@ assert abs(SATURATION_KNEE_MS - 11.0) < 0.05, SATURATION_KNEE_MS
 
 # --- an independent model of the firmware's fit ------------------------------
 
+
 class Sample:
     __slots__ = ("t_us", "v", "s", "c")
 
@@ -118,28 +119,18 @@ def fit_samples(samples, now_us):
     sys = sum(s.v * s.s for s in used)
     syc = sum(s.v * s.c for s in used)
 
-    det = (
-        n * (sss * scc - ssc * ssc)
-        - ss * (ss * scc - ssc * sc)
-        + sc * (ss * ssc - sss * sc)
-    )
+    det = n * (sss * scc - ssc * ssc) - ss * (ss * scc - ssc * sc) + sc * (ss * ssc - sss * sc)
     if abs(det) < 1e-3 * n * n * n:
         return None
 
     dc = (
-        sy * (sss * scc - ssc * ssc)
-        - ss * (sys * scc - ssc * syc)
-        + sc * (sys * ssc - sss * syc)
+        sy * (sss * scc - ssc * ssc) - ss * (sys * scc - ssc * syc) + sc * (sys * ssc - sss * syc)
     ) / det
     a = (
-        n * (sys * scc - ssc * syc)
-        - sy * (ss * scc - ssc * sc)
-        + sc * (ss * syc - sys * sc)
+        n * (sys * scc - ssc * syc) - sy * (ss * scc - ssc * sc) + sc * (ss * syc - sys * sc)
     ) / det
     b = (
-        n * (sss * syc - ssc * sys)
-        - ss * (ss * syc - sys * sc)
-        + sy * (ss * ssc - sss * sc)
+        n * (sss * syc - ssc * sys) - ss * (ss * syc - sys * sc) + sy * (ss * ssc - sss * sc)
     ) / det
     return dc, a, b
 
@@ -165,12 +156,12 @@ def channel_samples(
         if jitter_us:
             jitter = ((k * 37) % 11 - 5) / 5.0 * jitter_us
         t_sample = t + jitter
-        v = dc + sign * CHANNEL_PEAK_V * math.sin(phase0 + 2.0 * math.pi * MAINS_HZ * t_sample * 1e-6)
+        v = dc + sign * CHANNEL_PEAK_V * math.sin(
+            phase0 + 2.0 * math.pi * MAINS_HZ * t_sample * 1e-6
+        )
         if step_us is not None and t_sample >= step_us:
             v += step_v
-        out.append(
-            Sample(t_sample, v, phase0 + 2.0 * math.pi * MAINS_HZ * t_sample * 1e-6)
-        )
+        out.append(Sample(t_sample, v, phase0 + 2.0 * math.pi * MAINS_HZ * t_sample * 1e-6))
         t += period_us
         k += 1
     return out
@@ -189,9 +180,7 @@ class FitModelTests(unittest.TestCase):
 
     def test_the_fit_recovers_dc_and_fundamental_from_uneven_samples(self):
         a = channel_samples(dc=0.7, jitter_us=90.0)
-        b = channel_samples(
-            dc=0.0, offset_us=570.0, sign=-1.0, jitter_us=70.0
-        )
+        b = channel_samples(dc=0.0, offset_us=570.0, sign=-1.0, jitter_us=70.0)
         got = differential_fit(33333, a, b)
         self.assertIsNotNone(got)
         dc, x, y = got
@@ -204,13 +193,10 @@ class FitModelTests(unittest.TestCase):
         # the mean of a 60 Hz signal over it was not zero.  The fit removes
         # the fundamental over the SAME 26 ms of samples.
         window_us = 26000.0
-        phase = 0.0
         mean = 0.0
         for k in range(64):
             t = (k + 0.5) / 64.0 * window_us
-            mean += DIFFERENTIAL_PEAK_V * math.sin(
-                2.0 * math.pi * MAINS_HZ * t * 1e-6
-            )
+            mean += DIFFERENTIAL_PEAK_V * math.sin(2.0 * math.pi * MAINS_HZ * t * 1e-6)
         mean /= 64.0
         self.assertGreater(abs(mean), DC_TRIP_V)
 
@@ -226,9 +212,7 @@ class FitModelTests(unittest.TestCase):
 
     def test_too_few_samples_are_rejected(self):
         a = channel_samples(start_us=-1000, stop_us=2000, period_us=1140.0)
-        b = channel_samples(
-            start_us=-1000, stop_us=2000, period_us=1140.0, sign=-1.0
-        )
+        b = channel_samples(start_us=-1000, stop_us=2000, period_us=1140.0, sign=-1.0)
         self.assertIsNone(fit_samples(a, 5000))
         self.assertLess(len(a), RMS_MIN_SAMPLES)
         self.assertIsNone(fit_samples(b, 5000))
@@ -236,8 +220,9 @@ class FitModelTests(unittest.TestCase):
     def test_too_little_phase_span_is_rejected(self):
         # Four samples inside 3 ms: enough count, not enough phase.
         a = [
-            Sample(t, math.sin(2 * math.pi * MAINS_HZ * t * 1e-6),
-                   2 * math.pi * MAINS_HZ * t * 1e-6)
+            Sample(
+                t, math.sin(2 * math.pi * MAINS_HZ * t * 1e-6), 2 * math.pi * MAINS_HZ * t * 1e-6
+            )
             for t in (0.0, 1000.0, 2000.0, 3000.0)
         ]
         self.assertIsNone(fit_samples(a, 3000.0))
@@ -247,10 +232,7 @@ class FitModelTests(unittest.TestCase):
         # Four samples at the same phase span enough TIME but carry no
         # phase information: the normal matrix is singular and the
         # determinant floor rejects it rather than returning a wild DC.
-        a = [
-            Sample(t, 1.0 + 0.01 * k, 0.3)
-            for k, t in enumerate((0.0, 13000.0, 14000.0, 15000.0))
-        ]
+        a = [Sample(t, 1.0 + 0.01 * k, 0.3) for k, t in enumerate((0.0, 13000.0, 14000.0, 15000.0))]
         self.assertIsNone(fit_samples(a, 15000.0))
 
     def test_the_fit_uses_the_phase_at_conversion_start(self):
@@ -378,9 +360,7 @@ class SensorSupervisionTests(unittest.TestCase):
         )
         control = SOURCE[SOURCE.index("static void runControl(") :]
         control = control[: control.index("void powerBegin()")]
-        self.assertLess(
-            control.index("bool adsAlive"), control.index("busValidForRun()")
-        )
+        self.assertLess(control.index("bool adsAlive"), control.index("busValidForRun()"))
 
     def test_the_freshness_limit_is_many_sweeps(self):
         # Host-model cadence: the slow channels are read once per 15-step
@@ -468,9 +448,7 @@ class ArmingTests(unittest.TestCase):
         block = SOURCE[SOURCE.index("void returnToIdle()") :]
         block = block[: block.index("void handleUI(")]
         self.assertIn("powerSetArmed(false);", block)
-        self.assertLess(
-            block.index("powerSetArmed(false);"), block.index("uiState = UI_MODE;")
-        )
+        self.assertLess(block.index("powerSetArmed(false);"), block.index("uiState = UI_MODE;"))
 
     def test_leaving_the_inverter_portal_disarms(self):
         block = SOURCE[SOURCE.index("if (uiState == UI_INVERTER)") :]

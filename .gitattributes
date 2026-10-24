@@ -84,6 +84,7 @@ LICENSES/** linguist-documentation
 
 # --- Third-party artifacts --------------------------------------------------
 *.xls linguist-vendored
+*.xlsx linguist-vendored
 
 # Round-tracks routing plug-in config
 *.round-tracks-config linguist-vendored

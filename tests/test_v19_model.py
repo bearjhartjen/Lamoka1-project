@@ -1006,6 +1006,7 @@ class FreezePathTests(unittest.TestCase):
         setup = SOURCE[SOURCE.index("void setup() {") :]
         setup = setup[: setup.index("/* ====")]
         import re as _re
+
         leds = int(_re.search(r"NUM_LEDS\s+(\d+)", SOURCE).group(1))
         delays = [int(v) for v in _re.findall(r"delay\((\d+)\);\s*\n\s*watchdog_update", setup)]
         self.assertGreaterEqual(len(delays), 2)
@@ -1367,9 +1368,7 @@ class FirmwareContractTests(unittest.TestCase):
         clear = clear[: clear.index("bool powerArmed() {")]
         self.assertIn('strncmp(pFaultReason, "over-", 5)', clear)
         self.assertIn("CLEAR ignored: over-fault latched", clear)
-        self.assertLess(
-            clear.index("pArmed = false;"), clear.index("CLEAR ignored")
-        )
+        self.assertLess(clear.index("pArmed = false;"), clear.index("CLEAR ignored"))
 
     def test_the_cursor_is_a_fixed_hot_pink(self):
         # Selection must never look like a fault: no entropy, no hue shift,
@@ -1498,7 +1497,6 @@ class V18ParityTests(unittest.TestCase):
                 self.assertIn("leds[index] = COLOR_HOT_PINK;", cursor)
                 for banned in ("beatsin8(", "entropy.", "CHSV("):
                     self.assertNotIn(banned, cursor)
-
 
 
 class FinalPassTests(unittest.TestCase):

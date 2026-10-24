@@ -39,9 +39,7 @@ class PinContractTests(unittest.TestCase):
         self.assertEqual(_int("ADC3"), 29)
 
     def test_leds_uses_grb_without_dither(self):
-        self.assertIn(
-            "FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);", SOURCE
-        )
+        self.assertIn("FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);", SOURCE)
         self.assertIn("FastLED.setDither(0);", SOURCE)
 
     def test_no_power_conversion_code(self):
@@ -104,9 +102,7 @@ class ValueTableTests(unittest.TestCase):
         block = SOURCE[SOURCE.index("speedVals[10]") :]
         block = block[block.index("{") : block.index("};")]
         values = [int(v) for v in re.findall(r"\b(\d+)\b", block)]
-        self.assertEqual(
-            values, [40, 55, 70, 85, 100, 120, 145, 170, 200, 240]
-        )
+        self.assertEqual(values, [40, 55, 70, 85, 100, 120, 145, 170, 200, 240])
 
     def test_fireball_timings(self):
         for token in (

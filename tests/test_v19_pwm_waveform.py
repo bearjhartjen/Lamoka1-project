@@ -58,9 +58,7 @@ def _sketch_int(name):
 
 
 def _sketch_float(name):
-    return float(
-        re.search(rf"#define\s+{name}\s+([-+]?[0-9]*\.?[0-9]+)f", _SOURCE).group(1)
-    )
+    return float(re.search(rf"#define\s+{name}\s+([-+]?[0-9]*\.?[0-9]+)f", _SOURCE).group(1))
 
 
 # Hardcoded design numbers must track the sketch.  If the sketch changes and
@@ -71,9 +69,8 @@ class SketchSyncTests(unittest.TestCase):
         self.assertEqual(PWM_TOP, _sketch_int("PWM_TOP"))
         self.assertEqual(PWM_DT, _sketch_int("PWM_DT_TICKS"))
         self.assertAlmostEqual(VBUS, _sketch_float("VBUS_NOMINAL"))
-        self.assertAlmostEqual(
-            CARRIER_HZ, 150e6 / (_sketch_int("PWM_TOP") + 1)
-        )
+        self.assertAlmostEqual(CARRIER_HZ, 150e6 / (_sketch_int("PWM_TOP") + 1))
+
 
 # The midpoint RC filter: 10 kOhm bottom resistor with 47 nF across it.
 FILTER_HZ = 1.0 / (2.0 * math.pi * 10000.0 * 47e-9)
@@ -279,20 +276,19 @@ class ResidualRippleTests(unittest.TestCase):
         for amplitude in (0.879, 0.941, 0.9597):
             with self.subTest(amplitude=amplitude):
                 carriers = 2000
-                mean_abs_m = sum(
-                    abs(amplitude * math.sin(2.0 * math.pi * k / carriers))
-                    for k in range(carriers)
-                ) / carriers
-                self.assertAlmostEqual(
-                    mean_abs_m, 2.0 * amplitude / math.pi, places=3
+                mean_abs_m = (
+                    sum(
+                        abs(amplitude * math.sin(2.0 * math.pi * k / carriers))
+                        for k in range(carriers)
+                    )
+                    / carriers
                 )
+                self.assertAlmostEqual(mean_abs_m, 2.0 * amplitude / math.pi, places=3)
 
                 total_rms = VBUS * math.sqrt(mean_abs_m)
                 fundamental_rms = amplitude * VBUS / SQRT2
                 ratio = total_rms / fundamental_rms
-                self.assertAlmostEqual(
-                    ratio, 2.0 / math.sqrt(math.pi * amplitude), places=3
-                )
+                self.assertAlmostEqual(ratio, 2.0 / math.sqrt(math.pi * amplitude), places=3)
                 self.assertGreater(ratio, 1.15)
                 self.assertLess(ratio, 1.22)
 

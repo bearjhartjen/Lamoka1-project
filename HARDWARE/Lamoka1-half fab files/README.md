@@ -22,11 +22,12 @@ open hardware, and the whole point is that you can build one yourself.
 | `Lamoka1-half BOM.csv` | PCBWay 9-column assembly BOM: 70 lines covering 116 placements, no blank fields |
 | `Lamoka1-half Pick and Place.csv` | 116 placements, 57 front / 59 back (`... top.csv` and `... bottom.csv` are the per-side splits) |
 | `Lamoka1-half interactive BOM.html` | Self-contained interactive placement and BOM viewer, generated with [InteractiveHtmlBom](https://github.com/openscopeproject/InteractiveHtmlBom); open it in a browser and click a part to highlight it on the board |
+| `PCBway files/` | The PCBWay order record: the superseded turnkey BOM quotation, the engineering-question screenshot, and the exact fab package we submitted on 20-Oct-2026 |
+| `DigiKey orders/` | The DigiKey order record: quote 19448680, the cart-upload CSV, the customs spreadsheet sent to PCBWay, and a README with the order history |
 | `README.md` | This file |
 
-The DEV-Brain package also has a `PCBway files/` folder holding the BOM
-spreadsheet PCBWay's uploader produced during ordering. That file is created at
-order time; add the equivalent here once the board has been ordered.
+The DEV-Brain package keeps its order-time BOM spreadsheet the same way, in
+`Lamoka1-DEV-Brain/Lamoka1-DEV-Brain fab files/PCBway files/`.
 
 ## The board
 
@@ -168,6 +169,32 @@ footprints as well as on the schematic symbols.)
 A parity check that is not asked for reports nothing: `kicad-cli pcb drc`
 without `--schematic-parity` prints "0 Footprint errors" and hides all of the
 above. Always pass the flag (as `CONTRIBUTING.md` documents).
+
+## Ordering history (October 2026)
+
+- **Turnkey quote, then kitted.** PCBWay quoted order T-1N10W1065266A
+  (W1065266AS1N9) turnkey on 19-Oct with about a 30-35 day lead, driven by
+  component sourcing, and several out-of-stock lines including the J1
+  transformer WAGO. The quotation spreadsheet is in `PCBway files/`. We
+  switched to kitted service instead and consign the parts from DigiKey.
+- **What we sent PCBWay on 20-Oct.** The zip in `PCBway files/` is the exact
+  fab package submitted that day: 112 placements. The current package above
+  has 116 — the four new placements are the U5/U6 VDD bypass caps
+  (C34/C35/C36/C37). The consigned DigiKey parts already include all four,
+  but the submitted gerbers have no pads for them, so send PCBWay the
+  refreshed gerbers and pick-and-place before assembly, or hand-fit them.
+- **The kitted order** is T-1N12W1065266A, assembled from the DigiKey
+  shipment (sales orders 102445691 and 102445690) sent direct to PCBWay's
+  Hangzhou warehouse. Express assembly was agreed; the finish date depends on
+  when the components arrive.
+- **One engineering question** came back on 23-Oct (order W1065266AS1N11):
+  PCBWay asked to put the PCB order number where the red arrow points in
+  `PCBway files/EQ-W1065266AS1N11-1.png`. We answered the same day.
+- **The transformer and its WAGO are not in any PCBWay-bound shipment.**
+  The transformer, fan, outlet, thermal pad and washers travel separately
+  for local final assembly (see `DigiKey orders/`), and the J1 WAGO
+  (2606-1108/010-000) still has to be sourced separately. Nothing with the
+  transformer on it can be finished until those parts land.
 
 ## Regenerating this folder
 

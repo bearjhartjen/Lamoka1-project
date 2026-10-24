@@ -69,6 +69,12 @@ report.txt
 ImportGuide*.html
 ImportGuide*.htm
 
+# Our own procurement records are not vendor docs: the DigiKey order
+# acknowledgements and the customs spreadsheet we sent PCBWay are authored
+# by us for this build, so they stay tracked despite the rules above.
+!Lamoka1-half fab files/DigiKey orders/*.pdf
+!Lamoka1-half fab files/DigiKey orders/*.xlsx
+
 # Other vendor documentation
 # → Assume any PDFs/Office docs in hardware dirs are vendor-supplied
 **/vendor/**

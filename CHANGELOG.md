@@ -51,6 +51,14 @@ firmware is kept as two in-place heads (`V1.8` and `V1.9`).
   `J1`, with the mis-wire hazards. The `J1` net names are lead colours and the
   transformer's leads do **not** go on colour-for-colour.
 - `tools/make_images.sh` — regenerates the board renders in `Images/`.
+- `HARDWARE/Lamoka1-half fab files/PCBway files/` and `HARDWARE/Lamoka1-half
+  fab files/DigiKey orders/` — the October 2026 order record: the superseded
+  PCBWay turnkey quotation, the submitted 20-Oct fab package (112 placements,
+  predating the four U5/U6 bypass caps), the order-number engineering
+  question, DigiKey quote 19448680 with its cart CSV, and the consigned-parts
+  customs spreadsheet. The quote PDF had the street address redacted before
+  committing. The transformer WAGO (J1) was omitted from the DigiKey shipment
+  and still has to be sourced separately.
 
 ### Changed
 

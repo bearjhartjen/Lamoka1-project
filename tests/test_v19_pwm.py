@@ -138,9 +138,7 @@ def sine_from_table(phase):
 # The Rev C operating point is derived from the sketch's own constants, not
 # hardcoded: if the bus, the droop or the target changes, the point follows.
 def _xfloat(name):
-    return float(
-        re.search(rf"#define\s+{name}\s+([-+]?[0-9]*\.?[0-9]+)f", SOURCE).group(1)
-    )
+    return float(re.search(rf"#define\s+{name}\s+([-+]?[0-9]*\.?[0-9]+)f", SOURCE).group(1))
 
 
 _B_DROOP_OP = _xfloat("B_DROOP")
@@ -155,9 +153,7 @@ DRIVE_RMS_AT_TARGET = (_OUTPUT_TARGET_OP + _B_DROOP_OP * 100.0 / _OUTPUT_TARGET_
 # on Rfbt1/Rfbb1 and a 1.188/1.2/1.212 V reference give 21.13-22.39 V).
 # It is hardware, not a firmware window, so the test pins the band the
 # sketch's own comment states rather than recomputing resistor math.
-_band = re.search(
-    r"tolerance band is (21\.[0-9]+) V to (22\.[0-9]+) V", SOURCE
-)
+_band = re.search(r"tolerance band is (21\.[0-9]+) V to (22\.[0-9]+) V", SOURCE)
 assert _band, "bus tolerance band comment missing from sketch header"
 BUS_BAND_MIN = float(_band.group(1))
 BUS_BAND_MAX = float(_band.group(2))
